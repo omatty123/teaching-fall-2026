@@ -63,9 +63,8 @@
     },
     {
       "label": "Learn the names",
-      "href": "http://localhost:8767/frst-110.html",
-      "private": true,
-      "local": true
+      "href": "https://teaching-fall-2026-roster.pages.dev/frst-110.html",
+      "private": true
     }
   ],
   "prep": {

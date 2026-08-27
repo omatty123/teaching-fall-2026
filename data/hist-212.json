@@ -56,9 +56,8 @@
     },
     {
       "label": "Learn the names",
-      "href": "http://localhost:8767/hist-212.html",
-      "private": true,
-      "local": true
+      "href": "https://teaching-fall-2026-roster.pages.dev/hist-212.html",
+      "private": true
     }
   ],
   "syllabusUrl": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
