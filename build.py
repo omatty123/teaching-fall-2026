@@ -177,7 +177,13 @@ def build_hq(term, courses):
         for link in c.get("links", []):
             cls = "header-link private" if link.get("private") else "header-link"
             lock = '<span aria-hidden="true">\u2022</span> ' if link.get("private") else ""
-            title = ' title="Instructor only"' if link.get("private") else ""
+            if link.get("local"):
+                cls += " local"
+                title = ' title="Instructor only \u00b7 runs on your machine, start it with roster.command"'
+            elif link.get("private"):
+                title = ' title="Instructor only"'
+            else:
+                title = ""
             links.append(f'<a href="{e(link["href"])}" class="{cls}"{title}>'
                          f'{lock}{e(link["label"])}</a>')
 
@@ -496,6 +502,11 @@ def check(term, courses):
             if "chatgpt.site" in link["href"]:
                 note = link.get("pendingMigration", "still hosted on chatgpt.site")
                 problems.append(f"{c['slug']}: GPT-SITE — {link['label']} — {note}")
+            elif link.get("local"):
+                problems.append(
+                    f"{c['slug']}: LOCAL-ONLY — {link['label']} points at "
+                    f"{link['href']}; works only while roster.command is running. "
+                    "Swap for the hosted URL once Cloudflare Access is onboarded.")
     return problems
 
 
