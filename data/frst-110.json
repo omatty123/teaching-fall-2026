@@ -50,8 +50,7 @@
   "links": {
     "syllabus": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit",
     "canvas": "https://lawrence.instructure.com/courses/14726",
-    "roster": "https://teaching-fall-2026-roster.pages.dev/frst-110.html",
-    "people": "courses/frst-110-people.html"
+    "roster": "https://teaching-fall-2026-roster.pages.dev/frst-110.html"
   },
   "prep": {
     "tasks": [
@@ -269,17 +268,5 @@
       "topic": "Rising · Part Three"
     }
   ],
-  "syllabusUrl": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit",
-  "extraPages": [
-    {
-      "slug": "frst-110-people",
-      "title": "Meet FRST 110",
-      "heading": "Meet the class",
-      "navLabel": "Meet the class",
-      "description": "First names and faces for the FRST 110 Fall 2026 seminar.",
-      "fragment": "frst-110-people.html",
-      "wrapperClass": "frst-people frst-people-page",
-      "ogImage": "images/frst/water-worlds/og-water-worlds.jpg"
-    }
-  ]
+  "syllabusUrl": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit"
 }
