@@ -1,0 +1,80 @@
+{
+  "name": "Fall 2026",
+  "shortName": "Fall 2026",
+  "campus": "Appleton Main Campus",
+  "institution": "Lawrence University",
+  "starts": "2026-09-14",
+  "ends": "2026-11-24",
+  "startsLabel": "September 14, 2026",
+  "endsLabel": "November 24, 2026",
+  "gradesDue": "December 1, 2026 at 12:00 p.m.",
+  "baseUrl": "https://omatty123.github.io/teaching-fall-2026",
+  "hqUrl": "https://omatty123.github.io/teaching-fall-2026/",
+  "scheduleWindow": {
+    "startMinutes": 600,
+    "endMinutes": 870
+  },
+  "dates": [
+    {
+      "date": "2026-09-11",
+      "label": "First FRST 110 class meeting",
+      "strip": true,
+      "stripLabel": "September 11",
+      "stripNote": "First FRST meeting"
+    },
+    {
+      "date": "2026-09-14",
+      "label": "First day of fall-term classes",
+      "strip": true,
+      "stripLabel": "September 14",
+      "stripNote": "Fall classes begin"
+    },
+    {
+      "date": "2026-09-18",
+      "label": "Last day to make class changes or select S/U"
+    },
+    {
+      "date": "2026-10-22",
+      "label": "Midterm reading period begins",
+      "through": "2026-10-25",
+      "strip": true,
+      "stripLabel": "October 22–25",
+      "stripNote": "Midterm reading period"
+    },
+    {
+      "date": "2026-11-06",
+      "label": "Last day to withdraw"
+    },
+    {
+      "date": "2026-11-19",
+      "label": "Last day of fall-term classes",
+      "strip": true,
+      "stripLabel": "November 19",
+      "stripNote": "Last day of classes"
+    },
+    {
+      "date": "2026-11-20",
+      "label": "Reading period",
+      "through": "2026-11-21"
+    },
+    {
+      "date": "2026-11-22",
+      "label": "Final examinations",
+      "through": "2026-11-24"
+    },
+    {
+      "date": "2026-12-01",
+      "label": "Grades due at noon"
+    }
+  ],
+  "archive": {
+    "note": "The Spring 2026 prep page is preserved as it was, with its Winter 2026 links below.",
+    "href": "https://omatty123.github.io/teaching-today/spring-2026.html",
+    "label": "Open Spring 2026 archive"
+  },
+  "courseOrder": [
+    "frst-110",
+    "hist-212",
+    "buen-594"
+  ]
+}

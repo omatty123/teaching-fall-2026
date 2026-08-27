@@ -1,0 +1,1444 @@
+/* FRST 110 water-journey styles, lifted from the retired Next.js app.
+   The design tokens below came from that app's :root / .theme-frst blocks;
+   they are scoped to .course-feature so they cannot leak into the kit. */
+
+.course-feature {
+  --bg: oklch(1 0 0);
+  --course: oklch(0.48 0.15 260);
+  --course-ink: oklch(0.29 0.09 260);
+  --course-soft: oklch(0.94 0.035 260);
+  --faint: oklch(0.62 0.018 28);
+  --font-data: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", "Noto Sans", Arial, sans-serif;
+  --ink: oklch(0.2 0.025 28);
+  --line: oklch(0.88 0.008 28);
+  --line-strong: oklch(0.76 0.012 28);
+  --muted: oklch(0.46 0.025 28);
+  --surface: oklch(0.975 0.003 28);
+  --surface-strong: oklch(0.946 0.006 28);
+  --water-blue: oklch(0.5 0.14 244);
+  --water-ice: oklch(0.955 0.026 227);
+  --water-night: oklch(0.22 0.055 248);
+  --water-paper: oklch(0.955 0.035 78);
+  --water-rust: oklch(0.52 0.17 32);
+
+  /* page container the retired app's <main> used to provide */
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+  color: var(--ink);
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  color: var(--course-ink);
+  font-size: 0.76rem;
+  font-weight: 650;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.water-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(480px, 1.18fr);
+  gap: 34px;
+  align-items: stretch;
+  padding: 24px 0 22px;
+  border-top: 5px solid var(--course);
+  border-bottom: 1px solid var(--line);
+}
+
+.water-hero-copy {
+  align-self: center;
+  padding: 14px 0;
+}
+
+.frst-theme-label {
+  margin-bottom: 10px;
+  color: var(--course-ink);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.frst-kicker {
+  margin-bottom: 8px;
+  color: var(--course-ink);
+  font-size: 0.76rem;
+  font-weight: 680;
+}
+
+.water-hero h1 {
+  max-width: 650px;
+  margin-bottom: 13px;
+  color: var(--course-ink);
+  font-size: clamp(2.6rem, 5.2vw, 4.35rem);
+  font-weight: 670;
+  letter-spacing: -0.04em;
+  line-height: 0.91;
+}
+
+.water-hero-lede {
+  max-width: 56ch;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.water-hero-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  padding-top: 13px;
+  border-top: 1px solid var(--line-strong);
+  color: var(--water-rust);
+  font-size: 0.72rem;
+  font-weight: 680;
+}
+
+.water-hero-art figcaption,
+.yu-art figcaption,
+.water-map-figure figcaption,
+.water-wonder figcaption,
+.sea-of-islands figcaption {
+  color: var(--faint);
+  font-size: 0.61rem;
+  line-height: 1.4;
+}
+
+.water-hero-art a,
+.yu-art a,
+.water-map-figure a,
+.sea-of-islands figcaption a,
+.water-wonder a,
+.baikal-feature a,
+.sea-of-islands > div > a,
+.water-contrast a,
+.dujiangyan-note a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.water-flow-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  gap: 24px;
+  min-height: 46px;
+  align-items: center;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  scrollbar-width: none;
+}
+
+.water-flow-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.water-flow-nav a {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 0.71rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color 180ms ease-out;
+}
+
+.water-flow-nav a:hover {
+  color: var(--course-ink);
+}
+
+.water-knowing,
+.world-waters,
+.strange-water,
+.frst-assigned {
+  padding: 46px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.frst-section-heading {
+  display: grid;
+  grid-template-columns: 175px minmax(300px, 0.85fr) minmax(320px, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 26px;
+}
+
+.frst-section-heading > p:first-child {
+  margin-bottom: 0;
+  color: var(--water-rust);
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+.frst-section-heading h2,
+.yu-copy h2,
+.sea-of-islands h2,
+.water-material h2,
+.frst-works-heading h2,
+.frst-arrival-note h2,
+.frst-reading-guide h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+  font-weight: 670;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.frst-section-heading > p:last-child {
+  max-width: 58ch;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.water-contrast {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.water-contrast article {
+  padding: 24px 28px 24px 0;
+}
+
+.water-contrast article + article {
+  padding-right: 0;
+  padding-left: 28px;
+  border-left: 1px solid var(--line);
+}
+
+.water-concept {
+  display: block;
+  margin-bottom: 30px;
+  color: var(--line-strong);
+  font-size: 1.6rem;
+  font-weight: 720;
+  letter-spacing: -0.025em;
+}
+
+.water-contrast-water .water-concept {
+  color: var(--water-blue);
+}
+
+.water-contrast h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 680;
+}
+
+.water-contrast p {
+  max-width: 58ch;
+  margin-bottom: 14px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.58;
+}
+
+.water-contrast a {
+  color: var(--course-ink);
+  font-size: 0.73rem;
+  font-weight: 680;
+}
+
+.yin-maxxer {
+  margin: 18px 0 0 auto;
+  max-width: 750px;
+  padding: 14px 18px;
+  border-top: 3px solid var(--water-blue);
+  background: var(--water-ice);
+  color: var(--water-night);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.yu-story {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: 44px;
+  margin: 48px 0;
+  padding: 34px;
+  background: var(--water-paper);
+}
+
+.yu-art {
+  margin: 0;
+}
+
+.yu-art img {
+  display: block;
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  object-position: 50% 46%;
+}
+
+.yu-art figcaption {
+  margin-top: 7px;
+  color: oklch(0.46 0.03 66);
+}
+
+.yu-copy {
+  align-self: center;
+}
+
+.yu-copy h2 {
+  max-width: 690px;
+  margin-bottom: 16px;
+}
+
+.yu-copy > p {
+  max-width: 69ch;
+  color: oklch(0.4 0.025 55);
+  font-size: 0.87rem;
+  line-height: 1.62;
+}
+
+.yu-copy .yu-lede {
+  color: var(--ink);
+  font-size: 0.97rem;
+}
+
+.yu-sequence {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 22px 0;
+  padding: 12px 0;
+  border-top: 1px solid oklch(0.75 0.035 65);
+  border-bottom: 1px solid oklch(0.75 0.035 65);
+  color: oklch(0.38 0.04 52);
+  font-size: 0.72rem;
+}
+
+.yu-sequence span {
+  white-space: nowrap;
+}
+
+.yu-sequence i {
+  color: oklch(0.58 0.04 63);
+  font-style: normal;
+}
+
+.dujiangyan-note {
+  margin-top: 20px;
+  padding: 17px 18px;
+  border: 1px solid oklch(0.78 0.035 68);
+  background: oklch(0.985 0.018 78);
+}
+
+.dujiangyan-note > span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--water-rust);
+  font-size: 0.65rem;
+  font-weight: 720;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dujiangyan-note h3 {
+  margin-bottom: 7px;
+  font-size: 1rem;
+}
+
+.dujiangyan-note p {
+  margin-bottom: 10px;
+  color: oklch(0.42 0.025 55);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.dujiangyan-note div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+}
+
+.dujiangyan-note a {
+  color: var(--course-ink);
+  font-size: 0.69rem;
+  font-weight: 680;
+}
+
+.yu-copy .water-labor-question {
+  margin: 18px 0 0;
+  padding-top: 15px;
+  border-top: 2px solid var(--water-rust);
+  color: var(--water-rust);
+  font-weight: 680;
+}
+
+.map-heading {
+  margin-bottom: 22px;
+}
+
+.water-map-figure {
+  margin: 0;
+}
+
+.water-map {
+  position: relative;
+  padding: 18px;
+  background: var(--water-night);
+}
+
+.water-map > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.86;
+}
+
+.water-map-markers {
+  position: absolute;
+  inset: 18px;
+}
+
+.water-map-marker {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--bg);
+  border-radius: 50%;
+  background: var(--water-rust);
+  color: var(--bg);
+  font-size: 0.61rem;
+  font-weight: 760;
+  text-decoration: none;
+  transform: translate(-50%, -50%);
+  transition: background 180ms ease-out, transform 180ms ease-out;
+}
+
+.water-map-marker:hover,
+.water-map-marker:focus-visible {
+  background: oklch(0.67 0.19 42);
+  transform: translate(-50%, -50%) scale(1.12);
+}
+
+.water-map-figure figcaption {
+  padding: 8px 10px 0;
+}
+
+.water-map-legend {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 28px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.water-map-legend li {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  gap: 10px;
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 60px;
+}
+
+.water-map-legend li > span {
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--water-rust);
+  color: var(--bg);
+  font-size: 0.59rem;
+  font-weight: 740;
+}
+
+.water-map-legend h3 {
+  margin-bottom: 2px;
+  font-size: 0.85rem;
+  font-weight: 690;
+}
+
+.water-map-legend b {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--course-ink);
+  font-size: 0.63rem;
+  font-weight: 660;
+}
+
+.water-map-legend p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.baikal-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(300px, 0.85fr);
+  min-height: 390px;
+  background: var(--water-ice);
+}
+
+.baikal-feature figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+.baikal-feature img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.baikal-feature > div {
+  align-self: center;
+  padding: 30px;
+}
+
+.baikal-feature > div > span,
+.water-wonder > div > span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--water-blue);
+  font-size: 0.65rem;
+  font-weight: 760;
+  letter-spacing: 0.08em;
+}
+
+.baikal-feature h3,
+.water-wonder h3 {
+  margin-bottom: 10px;
+  font-size: 1.45rem;
+  font-weight: 680;
+  letter-spacing: -0.028em;
+}
+
+.baikal-feature p,
+.water-wonder p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.58;
+}
+
+.feature-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.baikal-feature a,
+.water-wonder a {
+  color: var(--course-ink);
+  font-size: 0.69rem;
+  font-weight: 680;
+}
+
+.strange-water-pair {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.water-wonder {
+  border: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.water-wonder figure {
+  margin: 0;
+  background: var(--water-night);
+}
+
+.water-wonder img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.water-wonder figcaption {
+  padding: 6px 10px;
+  color: oklch(0.78 0.025 235);
+}
+
+.water-wonder > div {
+  padding: 22px 24px 24px;
+}
+
+.nested-islands {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 7px;
+  margin: 14px 0 15px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.nested-islands b {
+  color: var(--water-rust);
+  font-size: 1rem;
+}
+
+.nested-islands i {
+  color: var(--faint);
+  font-size: 0.67rem;
+  font-style: normal;
+}
+
+.sea-of-islands {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, 0.82fr);
+  margin: 48px 0;
+  background: var(--water-night);
+  color: var(--bg);
+}
+
+.sea-of-islands figure {
+  position: relative;
+  min-height: 460px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.sea-of-islands figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 460px;
+  object-fit: cover;
+}
+
+.sea-of-islands figcaption {
+  position: absolute;
+  left: 10px;
+  bottom: 8px;
+  padding: 4px 6px;
+  background: oklch(0.17 0.045 248 / 0.88);
+  color: oklch(0.85 0.025 230);
+}
+
+.sea-of-islands > div {
+  align-self: center;
+  padding: 34px;
+}
+
+.sea-of-islands .frst-kicker {
+  color: oklch(0.75 0.08 220);
+}
+
+.sea-of-islands h2 {
+  margin-bottom: 16px;
+  color: var(--bg);
+}
+
+.sea-of-islands p {
+  color: oklch(0.82 0.025 230);
+  font-size: 0.86rem;
+  line-height: 1.62;
+}
+
+.sea-of-islands .ocean-lede {
+  color: var(--bg);
+  font-size: 0.96rem;
+}
+
+.sea-of-islands blockquote {
+  margin: 21px 0;
+  padding: 14px 0;
+  border-top: 1px solid oklch(0.48 0.06 235);
+  border-bottom: 1px solid oklch(0.48 0.06 235);
+  color: oklch(0.92 0.035 218);
+  font-size: 1rem;
+  font-weight: 620;
+  line-height: 1.45;
+}
+
+.sea-of-islands > div > a {
+  color: oklch(0.78 0.09 220);
+  font-size: 0.74rem;
+  font-weight: 690;
+}
+
+.water-material {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+  gap: 52px;
+  padding: 34px 0 44px;
+  border-top: 4px solid var(--water-rust);
+  border-bottom: 1px solid var(--line);
+}
+
+.water-material h2 {
+  margin-bottom: 12px;
+}
+
+.water-material > div > p:last-child {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.58;
+}
+
+.water-material ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
+}
+
+.water-material li {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.84rem;
+  font-weight: 610;
+}
+
+.water-material li span {
+  color: var(--water-rust);
+  font-size: 0.66rem;
+  font-weight: 740;
+}
+
+.frst-works-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 18px;
+}
+
+.frst-works-heading h2 {
+  margin-bottom: 8px;
+}
+
+.frst-works-heading > div > p:last-child,
+.frst-arrival-note > p:last-child {
+  max-width: 70ch;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.frst-reading-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+  border-top: 1px solid var(--line-strong);
+}
+
+.frst-reading {
+  display: grid;
+  grid-template-columns: 116px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-height: 246px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.frst-reading-index {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  margin-bottom: 7px;
+}
+
+.frst-reading-index span {
+  color: var(--line-strong);
+  font-size: 1.08rem;
+  font-weight: 690;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.frst-reading-index strong {
+  color: var(--course-ink);
+  font-size: 0.62rem;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.frst-reading-visual {
+  width: 116px;
+  margin: 0;
+}
+
+.frst-reading-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  background: var(--surface-strong);
+  box-shadow: 0 2px 6px oklch(0.2 0.025 28 / 0.18);
+  object-fit: cover;
+}
+
+.frst-reading-visual figcaption {
+  margin-top: 6px;
+  color: var(--faint);
+  font-size: 0.56rem;
+  line-height: 1.35;
+}
+
+.frst-reading-visual a {
+  text-decoration-color: var(--line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.frst-reading-copy {
+  align-self: center;
+}
+
+.frst-reading-copy h3 {
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 670;
+  letter-spacing: -0.015em;
+}
+
+.frst-creator {
+  margin-bottom: 8px;
+  color: var(--course-ink);
+  font-size: 0.73rem;
+  font-weight: 630;
+}
+
+.frst-invitation {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.frst-isbn {
+  display: block;
+  margin-top: 9px;
+  color: var(--faint);
+  font-family: var(--font-data);
+  font-size: 0.64rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.frst-end-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.05fr) minmax(260px, 0.75fr);
+  gap: 28px;
+  padding: 40px 0 48px;
+}
+
+.frst-reading-guide,
+.frst-arrival-note {
+  padding: 20px;
+}
+
+.frst-reading-guide {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.frst-reading-guide h2,
+.frst-arrival-note h2 {
+  margin-bottom: 14px;
+  font-size: 1.18rem;
+  line-height: 1.14;
+}
+
+.frst-reading-guide ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: guide;
+}
+
+.frst-reading-guide li {
+  position: relative;
+  counter-increment: guide;
+  padding: 9px 0 9px 28px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
+.frst-reading-guide li::before {
+  position: absolute;
+  left: 0;
+  color: var(--course-ink);
+  content: counter(guide, decimal-leading-zero);
+  font-size: 0.62rem;
+  font-weight: 700;
+}
+
+.frst-reading-guide li span {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.frst-arrival-note {
+  border-top: 3px solid var(--course);
+  background: var(--course-soft);
+}
+
+.frst-arrival-note h2 {
+  color: var(--course-ink);
+}
+
+@media (max-width: 1050px) {
+  .frst-people-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .water-hero {
+    grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
+  }
+
+  .frst-section-heading {
+    grid-template-columns: 140px minmax(0, 1fr);
+  }
+
+  .frst-section-heading > p:last-child {
+    grid-column: 2;
+  }
+
+  .water-map-legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .frst-end-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .frst-facts {
+    grid-column: 1 / -1;
+  }
+
+  .frst-facts dl {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .frst-facts dl > div {
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .portal-intro,
+  .course-content {
+    grid-template-columns: 1fr;
+  }
+
+  .portal-intro {
+    gap: 24px;
+  }
+
+  .course-index-row {
+    grid-template-columns: 10px 1fr 28px;
+    padding: 18px 0;
+  }
+
+  .course-index-meeting {
+    grid-column: 2;
+  }
+
+  .course-arrow {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+  }
+
+  .finals-list {
+    grid-template-columns: 1fr;
+  }
+
+  .finals-list a + a {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .course-content {
+    gap: 40px;
+  }
+
+  .water-hero {
+    grid-template-columns: minmax(0, 0.85fr) minmax(390px, 1.15fr);
+    gap: 24px;
+  }
+
+  .yu-story {
+    grid-template-columns: minmax(240px, 0.65fr) minmax(0, 1.35fr);
+    gap: 30px;
+    padding: 28px;
+  }
+
+  .yu-art img {
+    height: 680px;
+  }
+
+  .strange-water-pair {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sea-of-islands {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  }
+
+  .frst-reading-list {
+    grid-template-columns: 1fr;
+  }
+
+  .frst-reading {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .frst-people-intro {
+    display: block;
+    padding: 22px 0 18px;
+  }
+
+  .frst-people-intro h1 {
+    font-size: 2.65rem;
+  }
+
+  .frst-people-count {
+    margin-top: 12px;
+  }
+
+  .frst-people-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .frst-person {
+    padding: 8px;
+  }
+
+  .frst-person figcaption {
+    padding-top: 8px;
+    font-size: 0.92rem;
+  }
+
+  .frst-people-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .portal-page,
+  .course-page {
+    padding: 0 16px;
+  }
+
+  .portal-header {
+    min-height: 64px;
+  }
+
+  .term-lockup span,
+  .wordmark small {
+    display: none;
+  }
+
+  .portal-intro {
+    padding: 22px 0 20px;
+  }
+
+  .portal-intro h1 {
+    font-size: 1.9rem;
+  }
+
+  .portal-intro > p {
+    font-size: 0.9rem;
+  }
+
+  .section-heading-row {
+    align-items: flex-start;
+  }
+
+  .schedule-range {
+    display: none;
+  }
+
+  .week-schedule-desktop {
+    display: none;
+  }
+
+  .week-schedule-mobile {
+    display: block;
+    border-top: 1px solid var(--line-strong);
+  }
+
+  .mobile-day {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .mobile-day h3 {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.77rem;
+  }
+
+  .mobile-day-classes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mobile-day-classes > p {
+    margin: 12px 0;
+    color: var(--faint);
+    font-size: 0.75rem;
+  }
+
+  .mobile-class {
+    min-height: 68px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px 16px;
+    align-items: center;
+    padding: 12px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .mobile-class-time {
+    grid-column: 1 / -1;
+    font-size: 0.68rem;
+  }
+
+  .mobile-class strong {
+    font-size: 0.84rem;
+  }
+
+  .mobile-class span:last-child {
+    font-size: 0.7rem;
+  }
+
+  .schedule-section,
+  .courses-section,
+  .finals-section {
+    margin-bottom: 36px;
+  }
+
+  .course-index-row {
+    grid-template-columns: 8px 1fr 24px;
+    gap: 14px;
+  }
+
+  .course-color {
+    width: 8px;
+  }
+
+  .course-index-name span {
+    font-size: 0.94rem;
+  }
+
+  .course-banner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px 0 20px;
+  }
+
+  .course-banner h1 {
+    font-size: 1.72rem;
+  }
+
+  .course-meeting-lockup {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    padding-top: 14px;
+    border-top: 1px solid var(--line);
+  }
+
+  .course-meeting-lockup span:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .course-content {
+    padding-top: 28px;
+  }
+
+  .water-hero {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 18px 0;
+  }
+
+  .water-hero-copy {
+    padding: 4px 0 0;
+  }
+
+  .water-hero h1 {
+    font-size: 2.85rem;
+  }
+
+  .water-hero-lede {
+    font-size: 0.9rem;
+  }
+
+  .water-hero-art,
+  .water-hero-art img {
+    min-height: 240px;
+    height: 240px;
+  }
+
+  .water-flow-nav {
+    margin: 0 -16px;
+    padding: 0 16px;
+  }
+
+  .frst-meeting-bar {
+    grid-template-columns: 1fr;
+    background: var(--bg);
+  }
+
+  .frst-meeting-bar > div,
+  .frst-meeting-bar > div:first-child {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .frst-meeting-bar > div + div {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .frst-meeting-bar strong {
+    white-space: normal;
+  }
+
+  .water-knowing,
+  .world-waters,
+  .strange-water,
+  .frst-assigned {
+    padding: 36px 0;
+  }
+
+  .frst-section-heading {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  .frst-section-heading > p:last-child {
+    grid-column: auto;
+  }
+
+  .frst-section-heading h2,
+  .yu-copy h2,
+  .sea-of-islands h2,
+  .water-material h2,
+  .frst-works-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .water-contrast {
+    grid-template-columns: 1fr;
+  }
+
+  .water-contrast article,
+  .water-contrast article + article {
+    padding: 20px 0;
+  }
+
+  .water-contrast article + article {
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .water-concept {
+    margin-bottom: 18px;
+  }
+
+  .yin-maxxer {
+    padding: 13px 15px;
+  }
+
+  .yu-story {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 36px 0;
+    padding: 20px;
+  }
+
+  .yu-art img {
+    height: 430px;
+    object-position: 50% 47%;
+  }
+
+  .yu-sequence {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .yu-sequence i {
+    padding-left: 8px;
+    transform: rotate(90deg);
+  }
+
+  .water-map {
+    padding: 8px;
+  }
+
+  .water-map-markers {
+    display: none;
+  }
+
+  .water-map-legend {
+    grid-template-columns: 1fr;
+    margin-top: 16px;
+  }
+
+  .baikal-feature,
+  .strange-water-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .baikal-feature figure {
+    height: 260px;
+  }
+
+  .baikal-feature > div,
+  .water-wonder > div {
+    padding: 20px;
+  }
+
+  .water-wonder img {
+    height: 230px;
+  }
+
+  .sea-of-islands {
+    grid-template-columns: 1fr;
+    margin: 36px 0;
+  }
+
+  .sea-of-islands figure,
+  .sea-of-islands figure img {
+    min-height: 270px;
+    height: 270px;
+  }
+
+  .sea-of-islands > div {
+    padding: 24px 20px 28px;
+  }
+
+  .water-material {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 0 36px;
+  }
+
+  .frst-works-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .frst-reading {
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 14px;
+    padding: 16px 0;
+  }
+
+  .frst-reading-visual {
+    width: 92px;
+  }
+
+  .frst-reading-index {
+    gap: 7px;
+    margin-bottom: 6px;
+  }
+
+  .frst-reading-index span {
+    font-size: 1rem;
+  }
+
+  .frst-reading-copy h3 {
+    font-size: 0.96rem;
+  }
+
+  .frst-invitation {
+    font-size: 0.75rem;
+  }
+
+  .frst-end-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 32px 0 40px;
+  }
+
+  .frst-facts {
+    grid-column: auto;
+  }
+
+  .frst-facts dl {
+    display: block;
+  }
+
+  .frst-arrival-note {
+    padding: 18px;
+  }
+
+  .workspace-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px 0;
+  }
+
+  .works-heading-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .work-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+    padding: 14px 0;
+  }
+
+  .work-row > span {
+    white-space: normal;
+  }
+
+  .final-callout {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+  }
+}

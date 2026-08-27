@@ -1,0 +1,150 @@
+{
+  "slug": "hist-212",
+  "key": "hist",
+  "code": "HIST 212",
+  "displayCode": "HIST / EAST / GLST 212",
+  "title": "East Asia in the Premodern World",
+  "catalogTitle": "East Asia in Premodern World (G)",
+  "cardName": "East Asia in the Premodern World",
+  "crossListed": "EAST 212, GLST 212",
+  "description": "A teaching workspace for the histories, sources, maps, and discussions that shape premodern East Asia.",
+  "meeting": {
+    "days": [
+      "Tue",
+      "Thu"
+    ],
+    "daysLabel": "Tuesday & Thursday",
+    "start": "10:25",
+    "end": "12:10",
+    "timeLabel": "10:25 a.m.–12:10 p.m.",
+    "location": "Main Hall 211",
+    "shortLocation": "Main 211"
+  },
+  "theme": {
+    "color": "#7a3030",
+    "gradient": "linear-gradient(135deg, #542020 0%, #873a3a 100%)",
+    "banner": {
+      "type": "image",
+      "src": "images/hist-212-banner.jpg",
+      "position": "center 38%",
+      "alt": "Honil gangni yeokdae gukdo jido (1402), a Korean map of the known world",
+      "credit": "Kwon Kun and Yi Hoe, Honil gangni yeokdae gukdo jido, 1402"
+    }
+  },
+  "registrar": {
+    "instructors": [
+      "Matty Wegehaupt"
+    ],
+    "credits": 6,
+    "crn": "5216",
+    "email": "HIST212-202650-5216@lawrence.edu"
+  },
+  "final": {
+    "label": "Online final via Canvas",
+    "day": "Sunday",
+    "date": "November 22, 2026",
+    "time": "3:00–5:30 p.m."
+  },
+  "links": [
+    {
+      "label": "Canvas",
+      "href": "https://lawrence.instructure.com/courses/13411"
+    },
+    {
+      "label": "Syllabus",
+      "href": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing"
+    },
+    {
+      "label": "Instructor roster",
+      "href": "https://hist-212-instructor-roster.tengri-1972.chatgpt.site",
+      "private": true
+    }
+  ],
+  "syllabusUrl": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
+  "prep": {
+    "tasks": [
+      "Lock the textbook pages and short primary-source excerpt.",
+      "Finish the evidence worksheet and visual source.",
+      "Write the provisional answer and strongest counterevidence."
+    ],
+    "build": "Lock the primary-source spine and the Emperor's Great Debate."
+  },
+  "schedule": [
+    {
+      "date": "2026-09-15",
+      "topic": "Was East Asia a natural region—or historically made?"
+    },
+    {
+      "date": "2026-09-17",
+      "topic": "What can objects and inscriptions establish?"
+    },
+    {
+      "date": "2026-09-22",
+      "topic": "Why accept a conquering dynasty?"
+    },
+    {
+      "date": "2026-09-24",
+      "topic": "Can moral formation overcome violence and inequality?"
+    },
+    {
+      "date": "2026-09-29",
+      "topic": "Are people the problem, or political institutions?"
+    },
+    {
+      "date": "2026-10-01",
+      "topic": "Why did Qin unification fail?"
+    },
+    {
+      "date": "2026-10-06",
+      "topic": "Does an empire serve society or extract from it?"
+    },
+    {
+      "date": "2026-10-08",
+      "topic": "Why did empire fragment into durable political worlds?"
+    },
+    {
+      "date": "2026-10-13",
+      "topic": "Why did Buddhism flourish amid political division?"
+    },
+    {
+      "date": "2026-10-15",
+      "topic": "Copying China—or creating new political worlds?"
+    },
+    {
+      "date": "2026-10-20",
+      "topic": "The Emperor's Great Debate"
+    },
+    {
+      "date": "2026-10-27",
+      "topic": "Was Tang cosmopolitanism strength or instability?"
+    },
+    {
+      "date": "2026-10-29",
+      "topic": "Can regional order exist without universal empire?"
+    },
+    {
+      "date": "2026-11-03",
+      "topic": "Who gained from the Song transformation?"
+    },
+    {
+      "date": "2026-11-05",
+      "topic": "Why could the Mongols defeat richer states?"
+    },
+    {
+      "date": "2026-11-10",
+      "topic": "Did Mongol rule connect or harden East Asia?"
+    },
+    {
+      "date": "2026-11-12",
+      "topic": "Why describe innovation as restoration?"
+    },
+    {
+      "date": "2026-11-17",
+      "topic": "Was maritime prohibition really isolation?"
+    },
+    {
+      "date": "2026-11-19",
+      "topic": "Could governments control the markets they needed?"
+    }
+  ]
+}

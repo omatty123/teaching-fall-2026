@@ -1,0 +1,115 @@
+{
+  "slug": "frst-110",
+  "key": "frst",
+  "code": "FRST 110",
+  "displayCode": "FRST 110",
+  "title": "First-Year Studies",
+  "catalogTitle": "First-Year Studies",
+  "cardName": "First-Year Studies · Water",
+  "description": "A shared home for close reading, seminar preparation, writing, and the common intellectual work of the first year.",
+  "feature": "frst-110.html",
+
+  "meeting": {
+    "days": ["Mon", "Wed", "Fri"],
+    "daysLabel": "Monday, Wednesday & Friday",
+    "start": "11:10",
+    "end": "12:20",
+    "timeLabel": "11:10 a.m.–12:20 p.m.",
+    "location": "Memorial Hall 114",
+    "shortLocation": "Memorial 114",
+    "firstMeeting": "2026-09-11",
+    "firstMeetingLabel": "Friday, September 11"
+  },
+
+  "theme": {
+    "color": "#245a8d",
+    "gradient": "linear-gradient(135deg, #173f67 0%, #2d689f 100%)",
+    "banner": { "type": "image", "src": "images/frst-110-banner.jpg", "position": "center 43%", "alt": "Ma Yuan's painting of waves" }
+  },
+
+  "registrar": {
+    "instructors": ["Matty Wegehaupt"],
+    "credits": 6,
+    "crn": "5576",
+    "email": "FRST110-202650-5576@lawrence.edu"
+  },
+
+  "final": {
+    "label": "Final examination",
+    "day": "Sunday",
+    "date": "November 22, 2026",
+    "time": "11:30 a.m.–2:00 p.m."
+  },
+
+  "links": [
+    { "label": "Canvas", "href": "https://lawrence.instructure.com/courses/14726" }
+  ],
+
+  "prep": {
+    "tasks": [
+      "Confirm exact pages or passages in Canvas.",
+      "Set one open, debatable guiding question.",
+      "Prepare the close-reading activity and exit move."
+    ],
+    "build": "Finalize the schedule, syllabus, and opening Canvas module."
+  },
+
+  "currentWorks": {
+    "years": "2024–27",
+    "theme": "Water",
+    "note": "Lawrence provides these works to students free of charge when they arrive on campus. Students reading before arrival should use the editions listed here.",
+    "sourceUrl": "https://inside.lawrence.edu/academics/academic-experience/first-year-studies/current-works",
+    "items": [
+      { "title": "Death and Life of the Great Lakes", "creator": "Dan Egan", "lens": "Ecosystem", "isbn": "978-0393355550",
+        "invitation": "Treat the inland seas as an engineered ecosystem and contested commons: commerce, invasive species, policy, repair, and the question of who gets to govern water.",
+        "image": { "src": "images/frst/death-life-great-lakes.jpg", "alt": "Cover of The Death and Life of the Great Lakes by Dan Egan", "credit": "Cover via Open Library", "creditUrl": "https://openlibrary.org/works/OL20048562W/The_death_and_life_of_the_Great_Lakes" } },
+      { "title": "Flood narratives", "creator": "Gilgamesh and Noah", "lens": "Myth",
+        "invitation": "Set these ancient floods beside Yu and other water traditions: who is warned, what is saved, and what theory of order emerges after the water?",
+        "image": { "src": "images/frst/flood-tablet.jpg", "alt": "The cuneiform Flood Tablet from the Epic of Gilgamesh", "credit": "Nate Loper · CC BY 2.0", "creditUrl": "https://commons.wikimedia.org/wiki/File:Epic_of_Gilgamesh_Flood_Tablet_in_Akkadian_Cuneiform_-_Nate_Loper_(28654515397).jpg" } },
+      { "title": "Selection of music in the Delta Blues tradition", "creator": "Various musical artists", "lens": "Sound",
+        "invitation": "Hear the Mississippi not as scenery but as land, labor, migration, dispossession, love, and loss—made audible in the Delta blues.",
+        "image": { "src": "images/frst/delta-blues.jpg", "alt": "Portrait of Delta blues singer and guitarist Mississippi Fred McDowell", "credit": "Fred Seibert · CC BY-SA 2.0", "creditUrl": "https://commons.wikimedia.org/wiki/File:Mississippi_Fred_McDowell.jpg" } },
+      { "title": "Blood Dazzler", "creator": "Patricia Smith", "lens": "Poetry", "isbn": "978-1566892186",
+        "invitation": "Enter Katrina through shifting voices—including the storm itself—and confront racialized abandonment, failed infrastructure, and what poetry can witness that news cannot.",
+        "image": { "src": "images/frst/blood-dazzler.jpg", "alt": "Cover of Blood Dazzler by Patricia Smith", "credit": "Cover via Open Library", "creditUrl": "https://openlibrary.org/books/OL16700983M/Blood_dazzler" } },
+      { "title": "The Interesting Narrative", "creator": "Olaudah Equiano", "lens": "Testimony", "isbn": "978-0198707523",
+        "invitation": "Cross an Atlantic made into a route for capital and forced migration in an autobiography, maritime adventure, and insurgent argument for abolition.",
+        "image": { "src": "images/frst/interesting-narrative.jpg", "alt": "Oxford World's Classics cover of The Interesting Narrative by Olaudah Equiano", "credit": "Cover via Open Library", "creditUrl": "https://openlibrary.org/isbn/9780198707523" } },
+      { "title": "Rising: New Dispatches from the American Shore", "creator": "Elizabeth Rush", "lens": "Climate", "isbn": "978-1571313812",
+        "invitation": "Meet communities living with rising seas and ask who receives protection, who is told to retreat, and whose loss becomes acceptable policy.",
+        "image": { "src": "images/frst/rising.jpg", "alt": "Cover of Rising by Elizabeth Rush", "credit": "Cover via Open Library", "creditUrl": "https://openlibrary.org/isbn/9781571313812" } }
+    ]
+  },
+
+  "schedule": [
+    { "date": "2026-09-11", "topic": "Community event: The Great Lakes", "detail": "Discussion with Andrew Knudsen and Gregory Hitch" },
+    { "date": "2026-09-14", "topic": "The Death and Life of the Great Lakes" },
+    { "date": "2026-09-16", "topic": "The Death and Life of the Great Lakes" },
+    { "date": "2026-09-18", "topic": "The Death and Life of the Great Lakes" },
+    { "date": "2026-09-21", "topic": "The Death and Life of the Great Lakes" },
+    { "date": "2026-09-23", "topic": "The Death and Life of the Great Lakes" },
+    { "date": "2026-09-25", "topic": "Great Lakes → Flood narratives", "tentative": true },
+    { "date": "2026-09-28", "topic": "Flood narratives" },
+    { "date": "2026-09-30", "topic": "Flood narratives" },
+    { "date": "2026-10-02", "topic": "Community event: Cultural responses to water and floods", "detail": "Discussion with Jeff Clark and Martyn Smith" },
+    { "date": "2026-10-05", "topic": "Flood narratives → Blood Dazzler", "tentative": true },
+    { "date": "2026-10-07", "topic": "Blood Dazzler" },
+    { "date": "2026-10-09", "topic": "Blood Dazzler" },
+    { "date": "2026-10-12", "topic": "Community event: Patricia Smith via Zoom" },
+    { "date": "2026-10-14", "topic": "Blood Dazzler" },
+    { "date": "2026-10-16", "topic": "Blood Dazzler → Delta Blues", "tentative": true },
+    { "date": "2026-10-19", "topic": "Delta Blues selections" },
+    { "date": "2026-10-21", "topic": "Community event: The Blues", "detail": "Lawrence faculty and special guest Preston Parker" },
+    { "date": "2026-10-26", "topic": "Community event: The Betsy, Schlabach, Equiano" },
+    { "date": "2026-10-28", "topic": "The Interesting Narrative · I & II" },
+    { "date": "2026-10-30", "topic": "The Interesting Narrative · III & IV" },
+    { "date": "2026-11-02", "topic": "The Interesting Narrative · V & VI" },
+    { "date": "2026-11-04", "topic": "The Interesting Narrative · VII & VIII" },
+    { "date": "2026-11-06", "topic": "The Interesting Narrative · IX & X" },
+    { "date": "2026-11-09", "topic": "Rising · Part One" },
+    { "date": "2026-11-11", "topic": "Rising · Part Two" },
+    { "date": "2026-11-13", "topic": "Rising · Part Two" },
+    { "date": "2026-11-16", "topic": "Rising · Part Three" },
+    { "date": "2026-11-18", "topic": "Rising · Part Three" }
+  ]
+}

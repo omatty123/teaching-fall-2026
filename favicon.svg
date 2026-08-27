@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="13" fill="#1d1d1f"/>
+  <path d="M8 44c7 0 7-6 14-6s7 6 14 6 7-6 14-6 6 3 6 3" fill="none"
+        stroke="#c59a37" stroke-width="3.4" stroke-linecap="round"/>
+  <text x="32" y="31" font-family="-apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif"
+        font-size="27" font-weight="600" fill="#ffffff" text-anchor="middle">마</text>
+</svg>

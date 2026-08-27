@@ -1,0 +1,209 @@
+/* Course pages. Extends _kit/hq.css with the page-level layout.
+   Every colour here comes from the --course-* custom properties that
+   build.py writes onto <body> from data/<slug>.json. */
+
+.course-body-page { padding-bottom: 40px; }
+
+.breadcrumb {
+  padding: 11px 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.breadcrumb a {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.breadcrumb a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- hero ----
+   .course-hero is a <header>, so it inherits hq.css's HQ-header rule
+   (dark gradient, white text, centred). Reset all three here. */
+.course-hero {
+  background: none;
+  color: var(--text);
+  text-align: left;
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 24px 0;
+  gap: 0;
+}
+.course-hero-art {
+  border-radius: 12px 0 0 12px;
+  background-image: var(--banner-image);
+  background-position: var(--banner-position, center);
+  background-size: cover;
+  background-color: #2a2a2a;
+  min-height: 190px;
+}
+.course-hero-art[data-banner="text"] { background: var(--banner-background, #333); }
+.course-hero-copy {
+  padding: 22px 26px;
+  border-radius: 0 12px 12px 0;
+  background: var(--course-gradient, #333);
+  color: #fff;
+}
+.course-hero-copy .course-code {
+  margin-bottom: 5px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  opacity: 0.78;
+  text-transform: uppercase;
+}
+.course-hero-copy h1 { font-size: 27px; font-weight: 500; line-height: 1.2; }
+.course-lede {
+  max-width: 62ch;
+  margin-top: 9px;
+  color: rgba(255,255,255,0.82);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.course-meeting-lockup {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  padding-top: 13px;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  font-size: 11px;
+}
+.course-meeting-lockup span { color: rgba(255,255,255,0.7); }
+.course-meeting-lockup strong { font-size: 13px; font-weight: 600; }
+
+/* ---- main grid ---- */
+.course-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 24px 0;
+  align-items: start;
+}
+.course-primary { display: grid; gap: 18px; }
+
+.course-workspace,
+.course-schedule,
+.course-facts {
+  overflow: hidden;
+  padding: 17px 20px 19px;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* ---- workspace rows ---- */
+.workspace-list { display: grid; }
+.workspace-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 11px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+  text-decoration: none;
+}
+.workspace-row:last-child { border-bottom: 1px solid var(--border); }
+.workspace-row h3 { font-size: 13px; font-weight: 600; }
+.workspace-row p { margin-top: 2px; color: var(--text-muted); font-size: 11px; line-height: 1.45; }
+.workspace-row > span {
+  flex: none;
+  color: var(--text-muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.workspace-link:hover { background: #fafafa; }
+.workspace-link > span { color: var(--course-color); }
+
+/* ---- schedule table ---- */
+.sched-scroll { overflow-x: auto; }
+.sched-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+.sched-table th,
+.sched-table td { padding: 8px 10px 8px 0; border-top: 1px solid var(--border); text-align: left; vertical-align: top; }
+.sched-table tr:last-child th,
+.sched-table tr:last-child td { border-bottom: 1px solid var(--border); }
+.sched-table th {
+  width: 108px;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.sched-table td { line-height: 1.45; }
+.sched-note { display: block; margin-top: 3px; color: var(--gold); font-size: 10px; }
+.sched-note em { font-style: normal; }
+
+/* ---- final callout ---- */
+.final-callout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 18px;
+  border: 1px solid #ead8ad;
+  border-radius: 12px;
+  background: #fff9eb;
+  color: #765c20;
+}
+.final-callout h2 { font-size: 13px; font-weight: 600; }
+.final-callout p { margin-top: 2px; font-size: 11px; }
+.final-callout strong { flex: none; font-size: 14px; font-weight: 600; }
+
+/* ---- facts sidebar ---- */
+.course-facts h2 {
+  margin-bottom: 11px;
+  color: var(--text-muted);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+.course-facts dl { display: grid; }
+.course-facts dl > div { padding: 9px 0; border-top: 1px solid var(--border); }
+.course-facts dl > div:last-child { border-bottom: 1px solid var(--border); }
+.course-facts dt { color: var(--text-muted); font-size: 10px; font-weight: 600; }
+.course-facts dd { margin-top: 3px; font-size: 12px; line-height: 1.45; word-break: break-word; }
+.course-facts a { color: var(--course-color); text-underline-offset: 3px; }
+
+/* ---- section headings reused from hq.css ---- */
+.course-workspace .section-heading,
+.course-schedule .section-heading { margin-bottom: 6px; }
+
+/* ---- footer ---- */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 24px auto 0;
+  padding: 15px 24px 0;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 11px;
+}
+.site-footer a { color: var(--text); font-weight: 600; text-underline-offset: 3px; }
+
+@media (max-width: 980px) {
+  .course-main { grid-template-columns: 1fr; }
+  .course-hero { grid-template-columns: 1fr; }
+  .course-hero-art { min-height: 150px; border-radius: 12px 12px 0 0; }
+  .course-hero-copy { border-radius: 0 0 12px 12px; }
+}
+@media (max-width: 720px) {
+  .breadcrumb { padding: 10px 14px; }
+  .course-hero { padding: 16px 14px 0; }
+  .course-main { padding: 16px 14px 0; }
+  .course-hero-copy { padding: 18px 16px; }
+  .course-hero-copy h1 { font-size: 22px; }
+  .site-footer { padding: 14px 14px 0; }
+  .final-callout { align-items: flex-start; flex-direction: column; gap: 8px; }
+}
