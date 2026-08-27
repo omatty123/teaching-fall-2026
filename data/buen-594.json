@@ -42,7 +42,11 @@
     "date": "November 24, 2026",
     "time": "11:30 a.m.–2:00 p.m."
   },
-  "links": {},
+  "links": {
+    "syllabus": "https://lawrenceu-my.sharepoint.com/:w:/r/personal/marshalr_lawrence_edu/_layouts/15/Doc.aspx?sourcedoc=%7B2DCC3750-9B47-404A-843F-71E29BF07DF5%7D&file=BUEN594Fall2026Syllabus.docx&fromShare=true&action=default&mobileredirect=true",
+    "canvas": "https://lawrence.instructure.com/courses/13940"
+  },
+  "syllabusUrl": "https://lawrenceu-my.sharepoint.com/:w:/r/personal/marshalr_lawrence_edu/_layouts/15/Doc.aspx?sourcedoc=%7B2DCC3750-9B47-404A-843F-71E29BF07DF5%7D&file=BUEN594Fall2026Syllabus.docx&fromShare=true&action=default&mobileredirect=true",
   "prep": {
     "tasks": [
       "Confirm the preparation item and division of roles.",
