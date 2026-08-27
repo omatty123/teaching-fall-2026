@@ -42,7 +42,7 @@
     "date": "November 24, 2026",
     "time": "11:30 a.m.–2:00 p.m."
   },
-  "links": [],
+  "links": {},
   "prep": {
     "tasks": [
       "Confirm the preparation item and division of roles.",
@@ -52,8 +52,7 @@
     "build": "Resolve syllabus decisions and shape the ten Canvas modules."
   },
   "unverified": [
-    "credits: course-data.ts said 3; the buen594 memory file says 2 units (one third of a standard 6-unit course). These disagree. Confirm against the registrar before this reaches students.",
-    "no Canvas course or syllabus URL recorded, so the HQ card has only a Course page button. Add them to links[] when the team-taught shell exists."
+    "credits: course-data.ts said 3; the buen594 memory file says 2 units (one third of a standard 6-unit course). These disagree. Confirm against the registrar before this reaches students."
   ],
   "schedule": [
     {

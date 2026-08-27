@@ -45,21 +45,11 @@
     "date": "November 22, 2026",
     "time": "3:00–5:30 p.m."
   },
-  "links": [
-    {
-      "label": "Canvas",
-      "href": "https://lawrence.instructure.com/courses/13411"
-    },
-    {
-      "label": "Syllabus",
-      "href": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing"
-    },
-    {
-      "label": "Learn the names",
-      "href": "https://teaching-fall-2026-roster.pages.dev/hist-212.html",
-      "private": true
-    }
-  ],
+  "links": {
+    "syllabus": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
+    "canvas": "https://lawrence.instructure.com/courses/13411",
+    "roster": "https://teaching-fall-2026-roster.pages.dev/hist-212.html"
+  },
   "syllabusUrl": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
   "prep": {
     "tasks": [

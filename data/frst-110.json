@@ -47,26 +47,12 @@
     "date": "November 22, 2026",
     "time": "11:30 a.m.–2:00 p.m."
   },
-  "links": [
-    {
-      "label": "Canvas",
-      "href": "https://lawrence.instructure.com/courses/14726"
-    },
-    {
-      "label": "Syllabus",
-      "href": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit"
-    },
-    {
-      "label": "Meet the class",
-      "href": "courses/frst-110-people.html",
-      "internal": true
-    },
-    {
-      "label": "Learn the names",
-      "href": "https://teaching-fall-2026-roster.pages.dev/frst-110.html",
-      "private": true
-    }
-  ],
+  "links": {
+    "syllabus": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit",
+    "canvas": "https://lawrence.instructure.com/courses/14726",
+    "roster": "https://teaching-fall-2026-roster.pages.dev/frst-110.html",
+    "people": "courses/frst-110-people.html"
+  },
   "prep": {
     "tasks": [
       "Confirm exact pages or passages in Canvas.",

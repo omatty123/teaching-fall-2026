@@ -29,6 +29,16 @@ DAY_ORDER = ["Mon", "Tue", "Wed", "Thu", "Fri"]
 DAY_FULL = {"Mon": "Monday", "Tue": "Tuesday", "Wed": "Wednesday",
             "Thu": "Thursday", "Fri": "Friday"}
 
+# Every course card renders this same set, in this same order, with these same
+# labels. A course that does not have a destination yet simply omits that
+# button — it never gets a different one, and never a dead link.
+LINK_SLOTS = [
+    ("syllabus", "Syllabus",        False),
+    ("canvas",   "Canvas",          False),
+    ("roster",   "Learn the names", True),   # True = instructor only
+    ("people",   "Meet the class",  False),
+]
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -174,18 +184,15 @@ def build_hq(term, courses):
     cards = []
     for c in courses:
         links = [f'<a href="courses/{c["slug"]}.html" class="header-link">Course page</a>']
-        for link in c.get("links", []):
-            cls = "header-link private" if link.get("private") else "header-link"
-            lock = '<span aria-hidden="true">\u2022</span> ' if link.get("private") else ""
-            if link.get("local"):
-                cls += " local"
-                title = ' title="Instructor only \u00b7 runs on your machine, start it with roster.command"'
-            elif link.get("private"):
-                title = ' title="Instructor only"'
-            else:
-                title = ""
-            links.append(f'<a href="{e(link["href"])}" class="{cls}"{title}>'
-                         f'{lock}{e(link["label"])}</a>')
+        slots = c.get("links", {})
+        for key, label, private in LINK_SLOTS:
+            href = slots.get(key)
+            if not href:
+                continue          # not ready yet -> no button, never a dead one
+            cls = "header-link private" if private else "header-link"
+            lock = '<span aria-hidden="true">\u2022</span> ' if private else ""
+            title = ' title="Instructor only"' if private else ""
+            links.append(f'<a href="{e(href)}" class="{cls}"{title}>{lock}{e(label)}</a>')
 
         b = c["theme"].get("banner", {})
         if b.get("type") == "image":
@@ -498,15 +505,15 @@ def check(term, courses):
             problems.append(f"{c['slug']}: banner image {banner['src']} not found")
         for note in c.get("unverified", []):
             problems.append(f"{c['slug']}: UNVERIFIED — {note}")
-        for link in c.get("links", []):
-            if "chatgpt.site" in link["href"]:
-                note = link.get("pendingMigration", "still hosted on chatgpt.site")
-                problems.append(f"{c['slug']}: GPT-SITE — {link['label']} — {note}")
-            elif link.get("local"):
-                problems.append(
-                    f"{c['slug']}: LOCAL-ONLY — {link['label']} points at "
-                    f"{link['href']}; works only while roster.command is running. "
-                    "Swap for the hosted URL once Cloudflare Access is onboarded.")
+        for key, href in (c.get("links") or {}).items():
+            if "chatgpt.site" in href:
+                problems.append(f"{c['slug']}: GPT-SITE — {key} still points at {href}")
+            elif "localhost" in href:
+                problems.append(f"{c['slug']}: LOCAL-ONLY — {key} points at {href}")
+        missing = [lbl for k, lbl, _ in LINK_SLOTS
+                   if k in ("syllabus", "canvas") and not (c.get("links") or {}).get(k)]
+        if missing:
+            problems.append(f"{c['slug']}: no button for {', '.join(missing)} — add to links{{}} when ready")
     return problems
 
 
