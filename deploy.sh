@@ -25,6 +25,15 @@ note() { printf '  %-6s %s\n' "$1" "$2"; }
 
 pages=(index.html courses/*.html)
 
+# 0. GitHub Pages runs Jekyll, which refuses to publish any directory whose
+#    name starts with "_". Without .nojekyll the whole of _kit/ 404s live and
+#    the site renders unstyled, while every local check still passes.
+if [[ -f .nojekyll ]]; then
+  note "ok" ".nojekyll present (publishes _kit/)"
+else
+  note "FAIL" ".nojekyll missing — _kit/ will 404 on GitHub Pages"; fail=1
+fi
+
 # 1. custom favicon, themed, not generic
 if [[ -f favicon.svg ]] && grep -q '마' favicon.svg; then
   note "ok" "custom SVG favicon"
