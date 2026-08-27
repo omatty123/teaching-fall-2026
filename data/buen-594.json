@@ -22,9 +22,13 @@
     "color": "#2d5a50",
     "gradient": "linear-gradient(135deg, #17352e 0%, #3f6a60 100%)",
     "banner": {
-      "type": "text",
-      "text": "Experience → reflection → practice",
-      "background": "radial-gradient(circle at 22% 30%, rgba(255,255,255,0.22) 0 2px, transparent 3px), radial-gradient(circle at 68% 56%, rgba(255,255,255,0.16) 0 3px, transparent 4px), linear-gradient(135deg, #17352e 0%, #4c756b 100%)"
+      "type": "image",
+      "src": "images/buen-594-banner.jpg",
+      "position": "center 36%",
+      "alt": "A young woman learns chair-making in a National Youth Administration workshop, 1943",
+      "credit": "John Vachon, National Youth Administration training program, 1943",
+      "creditUrl": "https://www.loc.gov/pictures/item/2017852383/",
+      "rights": "No known restrictions; Library of Congress FSA/OWI collection"
     }
   },
   "registrar": {
