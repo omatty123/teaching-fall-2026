@@ -175,7 +175,11 @@ def build_hq(term, courses):
     for c in courses:
         links = [f'<a href="courses/{c["slug"]}.html" class="header-link">Course page</a>']
         for link in c.get("links", []):
-            links.append(f'<a href="{e(link["href"])}" class="header-link">{e(link["label"])}</a>')
+            cls = "header-link private" if link.get("private") else "header-link"
+            lock = '<span aria-hidden="true">\u2022</span> ' if link.get("private") else ""
+            title = ' title="Instructor only"' if link.get("private") else ""
+            links.append(f'<a href="{e(link["href"])}" class="{cls}"{title}>'
+                         f'{lock}{e(link["label"])}</a>')
 
         b = c["theme"].get("banner", {})
         if b.get("type") == "image":
@@ -404,6 +408,50 @@ def build_course(term, course):
     (ROOT / "courses" / f"{slug}.html").write_text(doc)
 
 
+def build_extra_page(term, course, page):
+    """A standalone page that belongs to a course but is not the course page."""
+    slug = page["slug"]
+    frag_path = FEATURES / page["fragment"]
+    if not frag_path.exists():
+        print(f"  ! {slug}: fragment {page['fragment']} missing, skipped")
+        return False
+
+    sheet = KIT / f"{slug}.css"
+    extra_css = f'\n<link rel="stylesheet" href="../_kit/{sheet.name}">' if sheet.exists() else ""
+
+    doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{head(term,
+      title=page["title"],
+      description=page["description"],
+      og_image=page.get("ogImage", "images/hist-212-banner.jpg"),
+      rel="../",
+      og_path=f"courses/{slug}.html")}
+<link rel="stylesheet" href="../_kit/course.css">{extra_css}
+</head>
+<body class="course-body-page" style="{theme_vars(course, rel="../")}">
+<nav class="breadcrumb">
+  <a href="../index.html">&larr; Back to {e(term['name'])} Teaching HQ</a>
+  <span class="crumb-sep" aria-hidden="true">/</span>
+  <a href="{course['slug']}.html">{e(course['code'])}</a>
+</nav>
+
+<div class="{e(page.get('wrapperClass', 'course-feature'))}">
+{frag_path.read_text()}
+</div>
+
+<footer class="site-footer">
+  <span>{e(course['code'])} &middot; {e(term['name'])} &middot; {e(term['institution'])}</span>
+  <a href="{course['slug']}.html">&larr; {e(course['code'])} course page</a>
+</footer>
+</body>
+</html>
+"""
+    (ROOT / "courses" / f"{slug}.html").write_text(doc)
+    return True
+
+
 # ---------------------------------------------------------------- favicon
 
 FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
@@ -436,11 +484,18 @@ def check(term, courses):
             problems.append(f"{c['slug']}: schedule dates are out of order")
         if len(dates) != len(set(dates)):
             problems.append(f"{c['slug']}: duplicate dates in schedule")
+        for page in c.get("extraPages", []):
+            if not (FEATURES / page["fragment"]).exists():
+                problems.append(f"{c['slug']}: extra page {page['slug']} has no fragment")
         banner = c["theme"].get("banner", {})
         if banner.get("type") == "image" and not (ROOT / banner["src"]).exists():
             problems.append(f"{c['slug']}: banner image {banner['src']} not found")
         for note in c.get("unverified", []):
             problems.append(f"{c['slug']}: UNVERIFIED — {note}")
+        for link in c.get("links", []):
+            if "chatgpt.site" in link["href"]:
+                note = link.get("pendingMigration", "still hosted on chatgpt.site")
+                problems.append(f"{c['slug']}: GPT-SITE — {link['label']} — {note}")
     return problems
 
 
@@ -449,13 +504,19 @@ def main():
 
     (ROOT / "favicon.svg").write_text(FAVICON)
     n = build_hq(term, courses)
+    extras = []
     for c in courses:
         build_course(term, c)
+        for page in c.get("extraPages", []):
+            if build_extra_page(term, c, page):
+                extras.append((c, page))
 
     print(f"built index.html ({n} course cards)")
     for c in courses:
         feat = " + feature" if c.get("feature") else ""
         print(f"built courses/{c['slug']}.html ({len(c['schedule'])} meetings{feat})")
+    for c, page in extras:
+        print(f"built courses/{page['slug']}.html ({c['code']} · {page['heading']})")
 
     problems = check(term, courses)
     if problems:

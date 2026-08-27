@@ -7,9 +7,10 @@
   "catalogTitle": "Experiential Learning & Professional Preparation",
   "cardName": "Experiential Learning & Professional Preparation",
   "description": "A practical course workspace connecting experiential learning, reflection, and preparation for professional life.",
-
   "meeting": {
-    "days": ["Tue"],
+    "days": [
+      "Tue"
+    ],
     "daysLabel": "Tuesday",
     "start": "12:40",
     "end": "14:25",
@@ -17,30 +18,31 @@
     "location": "Steitz Hall 102",
     "shortLocation": "Steitz 102"
   },
-
   "theme": {
     "color": "#2d5a50",
     "gradient": "linear-gradient(135deg, #17352e 0%, #3f6a60 100%)",
-    "banner": { "type": "text", "text": "Experience → reflection → practice",
-      "background": "radial-gradient(circle at 22% 30%, rgba(255,255,255,0.22) 0 2px, transparent 3px), radial-gradient(circle at 68% 56%, rgba(255,255,255,0.16) 0 3px, transparent 4px), linear-gradient(135deg, #17352e 0%, #4c756b 100%)" }
+    "banner": {
+      "type": "text",
+      "text": "Experience → reflection → practice",
+      "background": "radial-gradient(circle at 22% 30%, rgba(255,255,255,0.22) 0 2px, transparent 3px), radial-gradient(circle at 68% 56%, rgba(255,255,255,0.16) 0 3px, transparent 4px), linear-gradient(135deg, #17352e 0%, #4c756b 100%)"
+    }
   },
-
   "registrar": {
-    "instructors": ["Claudena Skran", "Matty Wegehaupt"],
+    "instructors": [
+      "Claudena Skran",
+      "Matty Wegehaupt"
+    ],
     "credits": 3,
     "crn": "5189",
     "email": "BUEN594-202650-5189@lawrence.edu"
   },
-
   "final": {
     "label": "Registrar-reserved final period",
     "day": "Tuesday",
     "date": "November 24, 2026",
     "time": "11:30 a.m.–2:00 p.m."
   },
-
   "links": [],
-
   "prep": {
     "tasks": [
       "Confirm the preparation item and division of roles.",
@@ -49,21 +51,50 @@
     ],
     "build": "Resolve syllabus decisions and shape the ten Canvas modules."
   },
-
   "unverified": [
-    "credits: course-data.ts said 3; the buen594 memory file says 2 units (one third of a standard 6-unit course). These disagree. Confirm against the registrar before this reaches students."
+    "credits: course-data.ts said 3; the buen594 memory file says 2 units (one third of a standard 6-unit course). These disagree. Confirm against the registrar before this reaches students.",
+    "no Canvas course or syllabus URL recorded, so the HQ card has only a Course page button. Add them to links[] when the team-taught shell exists."
   ],
-
   "schedule": [
-    { "date": "2026-09-15", "topic": "What makes experiential learning different?" },
-    { "date": "2026-09-22", "topic": "How do I explore a life without pretending I can plan all of it?" },
-    { "date": "2026-09-29", "topic": "How do values become criteria for choosing opportunities?" },
-    { "date": "2026-10-06", "topic": "What can other students' internship experiences teach us?" },
-    { "date": "2026-10-13", "topic": "What story does my public professional presence tell?" },
-    { "date": "2026-10-20", "topic": "How can application materials remain specific, human, and mine?" },
-    { "date": "2026-10-27", "topic": "How do I build relationships without treating people transactionally?" },
-    { "date": "2026-11-03", "topic": "How can I turn experience into evidence in an interview?" },
-    { "date": "2026-11-10", "topic": "What does professional judgment require when values conflict?" },
-    { "date": "2026-11-17", "topic": "How do I enter an internship ready to learn?" }
+    {
+      "date": "2026-09-15",
+      "topic": "What makes experiential learning different?"
+    },
+    {
+      "date": "2026-09-22",
+      "topic": "How do I explore a life without pretending I can plan all of it?"
+    },
+    {
+      "date": "2026-09-29",
+      "topic": "How do values become criteria for choosing opportunities?"
+    },
+    {
+      "date": "2026-10-06",
+      "topic": "What can other students' internship experiences teach us?"
+    },
+    {
+      "date": "2026-10-13",
+      "topic": "What story does my public professional presence tell?"
+    },
+    {
+      "date": "2026-10-20",
+      "topic": "How can application materials remain specific, human, and mine?"
+    },
+    {
+      "date": "2026-10-27",
+      "topic": "How do I build relationships without treating people transactionally?"
+    },
+    {
+      "date": "2026-11-03",
+      "topic": "How can I turn experience into evidence in an interview?"
+    },
+    {
+      "date": "2026-11-10",
+      "topic": "What does professional judgment require when values conflict?"
+    },
+    {
+      "date": "2026-11-17",
+      "topic": "How do I enter an internship ready to learn?"
+    }
   ]
 }

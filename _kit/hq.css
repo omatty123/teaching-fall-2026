@@ -315,3 +315,10 @@ header .subtitle {
   .archive-link-card { align-items: flex-start; flex-direction: column; gap: 6px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* instructor-only destinations, marked on the HQ cards */
+.header-link.private {
+  border-style: dashed;
+  border-color: rgba(255,255,255,0.55);
+}
+.header-link.private span { opacity: 0.75; }

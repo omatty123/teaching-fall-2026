@@ -207,3 +207,6 @@
   .site-footer { padding: 14px 14px 0; }
   .final-callout { align-items: flex-start; flex-direction: column; gap: 8px; }
 }
+
+.breadcrumb .crumb-sep { margin: 0 7px; color: var(--border); }
+.breadcrumb a + a { color: var(--text); }

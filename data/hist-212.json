@@ -57,7 +57,8 @@
     {
       "label": "Instructor roster",
       "href": "https://hist-212-instructor-roster.tengri-1972.chatgpt.site",
-      "private": true
+      "private": true,
+      "pendingMigration": "migrating to omatty123/teaching-fall-2026-roster; switch this href once Cloudflare Access is live"
     }
   ],
   "syllabusUrl": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
