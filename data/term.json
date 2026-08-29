@@ -72,6 +72,226 @@
     "href": "https://omatty123.github.io/teaching-today/spring-2026.html",
     "label": "Open Spring 2026 archive"
   },
+  "taskBoard": {
+    "updated": "August 29, 2026",
+    "intro": "One term. Three courses. Clear the decisions that unlock everything else.",
+    "lanes": [
+      {
+        "id": "matty",
+        "label": "Your moves",
+        "tone": "red",
+        "description": "Decisions only Matty can unlock."
+      },
+      {
+        "id": "codex",
+        "label": "Ready for Codex",
+        "tone": "green",
+        "description": "Defined work ready to hand off."
+      },
+      {
+        "id": "later",
+        "label": "Later",
+        "tone": "neutral",
+        "description": "Visible, but not allowed to steal opening-week time."
+      }
+    ],
+    "items": [
+      {
+        "id": "frst-reflection-deadline",
+        "course": "FRST",
+        "lane": "matty",
+        "title": "Choose the opening reflection deadline",
+        "detail": "September 13 or September 14 at 11:59 p.m.",
+        "points": 20
+      },
+      {
+        "id": "frst-publish-canvas",
+        "course": "FRST",
+        "lane": "matty",
+        "title": "Authorize the prepared Canvas course",
+        "detail": "Confirm that the course shell and opening assignments can be published.",
+        "points": 20
+      },
+      {
+        "id": "frst-delta-listening",
+        "course": "FRST",
+        "lane": "matty",
+        "title": "Choose the Delta blues listening selections",
+        "detail": "Select the tracks and decide where students will access them.",
+        "points": 20
+      },
+      {
+        "id": "hist-test-readings",
+        "course": "HIST",
+        "lane": "matty",
+        "title": "Test the first three course-pack readings",
+        "detail": "Open each reading in student context and confirm that access works.",
+        "points": 20
+      },
+      {
+        "id": "hist-scholar-exam",
+        "course": "HIST",
+        "lane": "matty",
+        "title": "Choose the Scholar Exam opening plan",
+        "detail": "Set the release timing and publication sequence.",
+        "points": 20
+      },
+      {
+        "id": "hist-dossier-rules",
+        "course": "HIST",
+        "lane": "matty",
+        "title": "Finish the dossier rules",
+        "detail": "Decide acceptance, resubmission, and late-work rules.",
+        "points": 20
+      },
+      {
+        "id": "buen-decision-bundle",
+        "course": "BUEN",
+        "lane": "matty",
+        "title": "Settle the BUEN syllabus decision bundle",
+        "detail": "Confirm units, final-period use, grading thresholds, career-profile deadlines, late work, participation, and current policy language.",
+        "points": 20
+      },
+      {
+        "id": "buen-sharepoint-access",
+        "course": "BUEN",
+        "lane": "matty",
+        "title": "Confirm student access to the BUEN syllabus",
+        "detail": "Open the SharePoint link with an enrolled-student account or equivalent view.",
+        "points": 20
+      },
+      {
+        "id": "buen-student-view",
+        "course": "BUEN",
+        "lane": "matty",
+        "title": "Verify BUEN Canvas in Student View",
+        "detail": "Check course 13940 for navigation, visibility, and opening-week access.",
+        "points": 20
+      },
+      {
+        "id": "term-retire-old-portal",
+        "course": "TERM",
+        "lane": "matty",
+        "title": "Decide the old portal's future",
+        "detail": "Choose retirement, redirect, or clearly labeled archive status for the previous portal.",
+        "points": 20
+      },
+      {
+        "id": "buen-syllabus-edition",
+        "course": "BUEN",
+        "lane": "codex",
+        "title": "Make the publication-ready BUEN syllabus",
+        "detail": "Apply the decision bundle and produce a clean student-facing edition.",
+        "points": 10
+      },
+      {
+        "id": "frst-public-record",
+        "course": "FRST",
+        "lane": "codex",
+        "title": "Reconcile the FRST public course record",
+        "detail": "Resolve the remaining wording and date mismatch across student-facing surfaces.",
+        "points": 10
+      },
+      {
+        "id": "frst-canvas-polish",
+        "course": "FRST",
+        "lane": "codex",
+        "title": "Finish first-day Canvas polish",
+        "detail": "Tighten navigation and verify front-page links.",
+        "points": 10
+      },
+      {
+        "id": "hist-debate-handoff",
+        "course": "HIST",
+        "lane": "codex",
+        "title": "Synchronize the debate title and roster handoff",
+        "detail": "Make the student-facing labels and workflow agree.",
+        "points": 10
+      },
+      {
+        "id": "hist-source-kit",
+        "course": "HIST",
+        "lane": "codex",
+        "title": "Finish the opening source kit",
+        "detail": "Verify remaining sources and create the reusable daily worksheet.",
+        "points": 10
+      },
+      {
+        "id": "buen-canvas-modules",
+        "course": "BUEN",
+        "lane": "codex",
+        "title": "Draft ten Canvas-ready BUEN modules",
+        "detail": "Build them after the syllabus decisions are settled.",
+        "points": 10
+      },
+      {
+        "id": "portal-safety-guard",
+        "course": "TERM",
+        "lane": "codex",
+        "title": "Make unsafe uncertainty block publication",
+        "detail": "Add a release check so unresolved privacy questions cannot slip onto the public site.",
+        "points": 10
+      },
+      {
+        "id": "buen-links-live",
+        "course": "BUEN",
+        "lane": "codex",
+        "title": "Put the BUEN syllabus and Canvas links on HQ",
+        "detail": "Student-facing buttons are live.",
+        "points": 10,
+        "done": true
+      },
+      {
+        "id": "buen-image-live",
+        "course": "BUEN",
+        "lane": "codex",
+        "title": "Give the BUEN card a relevant image",
+        "detail": "The experiential-learning image is live with source credit.",
+        "points": 10,
+        "done": true
+      },
+      {
+        "id": "frst-common-event",
+        "course": "FRST",
+        "lane": "later",
+        "title": "Confirm common-event details",
+        "detail": "Verify speakers, titles, locations, and tutors.",
+        "points": 5
+      },
+      {
+        "id": "frst-teaching-briefs",
+        "course": "FRST",
+        "lane": "later",
+        "title": "Write FRST teaching briefs",
+        "detail": "Develop them in instructional order.",
+        "points": 5
+      },
+      {
+        "id": "hist-daily-frames",
+        "course": "HIST",
+        "lane": "later",
+        "title": "Prepare daily HIST teaching frames",
+        "detail": "For each session: question, evidence, answer, counterevidence, and visual.",
+        "points": 5
+      },
+      {
+        "id": "buen-ethics-session",
+        "course": "BUEN",
+        "lane": "later",
+        "title": "Develop the November 10 ethics session",
+        "detail": "Return to it after the course spine is stable.",
+        "points": 5
+      },
+      {
+        "id": "term-private-backup",
+        "course": "TERM",
+        "lane": "later",
+        "title": "Create a private backup strategy",
+        "detail": "Choose a remote only after a privacy scan.",
+        "points": 5
+      }
+    ]
+  },
   "courseOrder": [
     "frst-110",
     "hist-212",

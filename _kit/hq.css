@@ -6,6 +6,8 @@
   --text: #1d1d1f;
   --text-muted: #77777c;
   --gold: #c59a37;
+  --decision: #a33a43;
+  --delegate: #347458;
 }
 html { scroll-behavior: smooth; }
 body {
@@ -62,7 +64,8 @@ header .subtitle {
 }
 .hq-nav a:hover { background: rgba(255,255,255,0.12); }
 .week-section,
-.archive-section {
+.archive-section,
+.todo-section {
   max-width: 1400px;
   margin: 0 auto;
   padding: 24px 24px 0;
@@ -263,6 +266,77 @@ header .subtitle {
 .up-next-date { margin-bottom: 3px; color: var(--text-muted); font-size: 10px; }
 .up-next-topic { font-size: 12px; font-weight: 500; line-height: 1.4; }
 .archive-section { padding-top: 0; padding-bottom: 32px; }
+.todo-section { padding-top: 0; padding-bottom: 24px; }
+.todo-shell {
+  overflow: hidden;
+  padding: 24px;
+  border: 1px solid #2f3331;
+  border-radius: 12px;
+  background: #191c1b;
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+}
+.todo-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 300px);
+  gap: 32px;
+  align-items: end;
+}
+.todo-kicker {
+  margin-bottom: 7px;
+  color: #d9b968;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+.todo-top h2 { margin-bottom: 7px; font-size: 22px; font-weight: 500; }
+.todo-top p { max-width: 650px; color: rgba(255,255,255,0.64); font-size: 12px; line-height: 1.5; }
+.momentum-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.momentum-heading span { color: rgba(255,255,255,0.68); font-size: 10px; font-weight: 600; letter-spacing: 0.7px; text-transform: uppercase; }
+.momentum-heading strong { color: #f1d991; font-size: 20px; font-weight: 600; }
+.momentum-track { height: 7px; margin: 8px 0 7px; overflow: hidden; border-radius: 999px; background: rgba(255,255,255,0.12); }
+.momentum-track span { display: block; width: 100%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #3d8c69, #d3ae52); transform: scaleX(0); transform-origin: left; transition: transform 220ms ease; }
+.momentum-count { color: rgba(255,255,255,0.52); font-size: 9px; }
+.todo-filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 14px; }
+.todo-filter,
+.todo-action {
+  min-height: 38px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  font-weight: 650;
+}
+.todo-filter { padding: 8px 13px; background: rgba(255,255,255,0.07); }
+.todo-filter:hover { background: rgba(255,255,255,0.13); }
+.todo-filter--red[aria-pressed="true"] { border-color: #d26770; background: var(--decision); }
+.todo-filter--green[aria-pressed="true"] { border-color: #69a889; background: var(--delegate); }
+.todo-filter--neutral[aria-pressed="true"] { border-color: #8e9490; background: #555b58; }
+.todo-filter--all[aria-pressed="true"] { border-color: #e3c36c; background: #735f2d; }
+.todo-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; overflow: hidden; border: 1px solid rgba(255,255,255,0.11); border-radius: 9px; background: rgba(255,255,255,0.11); }
+.todo-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px; align-items: center; min-height: 128px; padding: 18px; background: #232625; border-left: 3px solid #6c736f; transition: opacity 160ms ease, background 160ms ease; }
+.todo-item[data-tone="red"] { border-left-color: #c7535d; }
+.todo-item[data-tone="green"] { border-left-color: #4f9874; }
+.todo-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; margin-bottom: 8px; color: rgba(255,255,255,0.48); font-size: 8px; font-weight: 650; letter-spacing: 0.7px; text-transform: uppercase; }
+.course-chip { padding: 3px 6px; border-radius: 4px; background: #5d6461; color: #fff; }
+.course-chip[data-course="FRST"] { background: #315f8c; }
+.course-chip[data-course="HIST"] { background: #8a3f43; }
+.course-chip[data-course="BUEN"] { background: #39705a; }
+.course-chip[data-course="TERM"] { background: #806b34; }
+.todo-item h3 { margin-bottom: 5px; font-size: 13px; font-weight: 600; line-height: 1.35; }
+.todo-item p { color: rgba(255,255,255,0.6); font-size: 10px; line-height: 1.5; }
+.todo-action { min-width: 82px; padding: 8px 11px; background: #347458; }
+.todo-item[data-tone="red"] .todo-action { background: #a33a43; }
+.todo-item[data-tone="neutral"] .todo-action { background: #58605c; }
+.todo-action:hover { filter: brightness(1.12); }
+.todo-item.is-done { background: #202321; opacity: 0.58; }
+.todo-item.is-done h3 { text-decoration: line-through; text-decoration-thickness: 1px; }
+.todo-item.is-done .todo-action { border-color: rgba(255,255,255,0.3); background: transparent; }
+.todo-storage-note { margin-top: 11px; color: rgba(255,255,255,0.42); font-size: 9px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 .archive-link-card {
   display: flex;
   align-items: center;
@@ -279,11 +353,12 @@ header .subtitle {
 @media (max-width: 980px) {
   .container { grid-template-columns: repeat(2, minmax(290px, 1fr)); }
   .course-card:last-child { grid-column: 1 / -1; max-width: calc(50% - 10px); }
+  .todo-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
   header { padding: 21px 16px 19px; }
   header h1 { font-size: 24px; }
-  .week-section, .archive-section { padding-right: 14px; padding-left: 14px; }
+  .week-section, .archive-section, .todo-section { padding-right: 14px; padding-left: 14px; }
   .section-heading { align-items: flex-start; flex-direction: column; gap: 3px; }
   .week-desktop { display: none; }
   .week-mobile { display: block; }
@@ -313,8 +388,16 @@ header .subtitle {
   .container { grid-template-columns: 1fr; padding: 18px 14px; }
   .course-card:last-child { grid-column: auto; max-width: none; }
   .archive-link-card { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .todo-shell { padding: 18px 14px; }
+  .todo-top { grid-template-columns: 1fr; gap: 20px; }
+  .todo-filter { flex: 1 1 auto; }
+  .todo-item { grid-template-columns: 1fr; gap: 14px; min-height: 0; }
+  .todo-action { width: 100%; }
 }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .momentum-track span, .todo-item { transition: none; }
+}
 
 /* instructor-only destinations, marked on the HQ cards */
 .header-link.private {

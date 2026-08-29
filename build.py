@@ -226,6 +226,7 @@ def build_hq(term, courses):
     }
 
     archive = term.get("archive")
+    task_board = term.get("taskBoard", {})
     archive_html = ""
     nav_archive = ""
     if archive:
@@ -251,6 +252,7 @@ def build_hq(term, courses):
   <h1 id="headerTitle">{e(term['name'])} Teaching HQ</h1>
   <div class="subtitle" id="headerSubtitle">Next class, prep queue, and the whole week</div>
   <nav class="hq-nav" aria-label="Teaching HQ">
+    <a href="#todo">Term Leader board</a>
     <a href="#courses">Course prep</a>
     <a href="#week">Week schedule</a>
     {nav_archive}
@@ -268,10 +270,36 @@ def build_hq(term, courses):
 <main class="container" id="courses">
 {"".join(cards)}
 </main>
+<section class="todo-section" id="todo" aria-labelledby="todoTitle">
+  <div class="todo-shell">
+    <div class="todo-top">
+      <div>
+        <div class="todo-kicker">Updated {e(task_board.get('updated', ''))}</div>
+        <h2 id="todoTitle">Term Leader Board</h2>
+        <p>{e(task_board.get('intro', ''))}</p>
+      </div>
+      <div class="momentum" aria-labelledby="momentumLabel">
+        <div class="momentum-heading">
+          <span id="momentumLabel">Term momentum</span>
+          <strong id="todoScore">0%</strong>
+        </div>
+        <div class="momentum-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="momentumLabel">
+          <span id="todoProgress"></span>
+        </div>
+        <span class="momentum-count" id="todoCount">Loading tasks…</span>
+      </div>
+    </div>
+    <div class="todo-filters" id="todoFilters" role="group" aria-label="Filter the task board"></div>
+    <div class="todo-list" id="todoList"></div>
+    <p class="todo-storage-note">Checks are saved only in this browser. The shared list stays unchanged.</p>
+    <div class="sr-only" id="todoAnnouncement" aria-live="polite"></div>
+  </div>
+</section>
 {archive_html}
 <script>
 const courseConfig = {json.dumps(config, ensure_ascii=False, indent=2)};
 const termName = {json.dumps(term['name'])};
+const taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
 </script>
 <script src="_kit/hq.js"></script>
 </body>
