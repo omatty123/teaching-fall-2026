@@ -65,7 +65,7 @@
       "wrapperClass": "water-news-page",
       "config": {
         "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScQcxkBPjn8YZZZ_CnuAN3JXXoHwPohT_tybEZahWuRtXEM9g/viewform",
-        "feedUrl": "",
+        "feedUrl": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSrFSdjVmEaQBD3b59STr_wOfGc_aAEQjiD5TcLuP8TmuRCf4Z8tSFPm-JRtddrA1M8rQ_VEwJZc46C/pub?gid=20260911&single=true&output=csv",
         "categories": [
           "Flood & storm",
           "Drought & scarcity",
