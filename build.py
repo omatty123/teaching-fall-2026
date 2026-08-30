@@ -35,6 +35,7 @@ DAY_FULL = {"Mon": "Monday", "Tue": "Tuesday", "Wed": "Wednesday",
 LINK_SLOTS = [
     ("syllabus", "Syllabus",        False),
     ("canvas",   "Canvas",          False),
+    ("waterNews", "Water in the News", False),
     ("roster",   "Learn the names", True),   # True = instructor only
     ("people",   "Meet the class",  False),
 ]
@@ -322,6 +323,13 @@ def workspace_rows(course):
          f"{len(course['currentWorks']['items'])} current works added"
          if course.get("currentWorks") else "Ready for materials"),
     ]
+    if course.get("waterNewsPage"):
+        rows.insert(1, (
+            "Water in the News",
+            "Share and browse current stories about water",
+            course["waterNewsPage"],
+            "Open the class current",
+        ))
     out = []
     for label, detail, href, status in rows:
         inner = (f'<div><h3>{e(label)}</h3><p>{e(detail)}</p></div>'
@@ -459,6 +467,13 @@ def build_extra_page(term, course, page):
 
     sheet = KIT / f"{slug}.css"
     extra_css = f'\n<link rel="stylesheet" href="../_kit/{sheet.name}">' if sheet.exists() else ""
+    script = KIT / f"{slug}.js"
+    extra_script = ""
+    if script.exists():
+        config = page.get("config", {})
+        extra_script = (f'\n<script>window.pageConfig = '
+                        f'{json.dumps(config, ensure_ascii=False)};</script>'
+                        f'\n<script src="../_kit/{script.name}"></script>')
 
     doc = f"""<!DOCTYPE html>
 <html lang="en">
@@ -486,6 +501,7 @@ def build_extra_page(term, course, page):
   <span>{e(course['code'])} &middot; {e(term['name'])} &middot; {e(term['institution'])}</span>
   <a href="{course['slug']}.html">&larr; {e(course['code'])} course page</a>
 </footer>
+{extra_script}
 </body>
 </html>
 """
