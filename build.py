@@ -12,6 +12,7 @@ If a fact about a course is wrong on the site, it is wrong in data/.
 """
 
 import html
+import hashlib
 import json
 import pathlib
 import re
@@ -466,14 +467,18 @@ def build_extra_page(term, course, page):
         return False
 
     sheet = KIT / f"{slug}.css"
-    extra_css = f'\n<link rel="stylesheet" href="../_kit/{sheet.name}">' if sheet.exists() else ""
+    extra_css = ""
+    if sheet.exists():
+        version = hashlib.sha256(sheet.read_bytes()).hexdigest()[:10]
+        extra_css = f'\n<link rel="stylesheet" href="../_kit/{sheet.name}?v={version}">'
     script = KIT / f"{slug}.js"
     extra_script = ""
     if script.exists():
         config = page.get("config", {})
+        version = hashlib.sha256(script.read_bytes()).hexdigest()[:10]
         extra_script = (f'\n<script>window.pageConfig = '
                         f'{json.dumps(config, ensure_ascii=False)};</script>'
-                        f'\n<script src="../_kit/{script.name}"></script>')
+                        f'\n<script src="../_kit/{script.name}?v={version}"></script>')
 
     doc = f"""<!DOCTYPE html>
 <html lang="en">

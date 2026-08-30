@@ -66,6 +66,7 @@ for page in "${pages[@]}"; do
   dir=$(dirname "$page")
   while read -r ref; do
     [[ -z "$ref" ]] && continue
+    ref="${ref%%\?*}"
     [[ -f "$dir/$ref" ]] || { note "FAIL" "$page -> $ref not found"; missing=1; }
   done < <(grep -oE '(src|href)="[^":]+"' "$page" | sed 's/.*="//;s/"//' | grep -v '^#')
 done
