@@ -2,7 +2,7 @@
   const config = window.pageConfig || {};
   const stream = document.querySelector("#newsStream");
   const filters = document.querySelector("#newsFilters");
-  const submitLinks = [document.querySelector("#newsSubmit"), document.querySelector("#newsSubmitBottom")];
+  const submitLinks = [document.querySelector("#newsSubmit")];
   const fallback = Array.isArray(config.stories) ? config.stories : [];
   let stories = fallback;
   let active = "All";
@@ -79,7 +79,8 @@
   }
 
   function renderFilters() {
-    const categories = ["All", ...new Set(stories.map(story => story.category || "Other"))];
+    const configured = Array.isArray(config.categories) ? config.categories : [];
+    const categories = ["All", ...new Set([...configured, ...stories.map(story => story.category || "Other")])];
     filters.replaceChildren();
     categories.forEach(label => {
       const button = document.createElement("button");

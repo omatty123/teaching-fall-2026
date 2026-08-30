@@ -66,6 +66,16 @@
       "config": {
         "formUrl": "https://docs.google.com/forms/d/e/1FAIpQLScQcxkBPjn8YZZZ_CnuAN3JXXoHwPohT_tybEZahWuRtXEM9g/viewform",
         "feedUrl": "",
+        "categories": [
+          "Flood & storm",
+          "Drought & scarcity",
+          "Borders, names & ownership",
+          "Infrastructure & labor",
+          "Pollution & public health",
+          "Ice, oceans & climate",
+          "Water in culture",
+          "Other"
+        ],
         "stories": [
           {
             "date": "2026-08-30T09:30:00-05:00",
