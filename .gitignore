@@ -11,3 +11,5 @@ __pycache__/
 teaching-notes/
 roster/
 students.json
+.private-build/
+.wrangler/

@@ -23,6 +23,7 @@ ROOT = pathlib.Path(__file__).parent
 DATA = ROOT / "data"
 KIT = ROOT / "_kit"
 FEATURES = ROOT / "features"
+PRIVATE_OUT = ROOT / ".private-build"
 
 # Week-grid geometry. Matches the hand-built grid these values replaced:
 # HIST 10:25 landed at top:18px, FRST 11:10 at 49px, BUEN 12:40 at 112px.
@@ -376,7 +377,8 @@ window.taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
 </body>
 </html>
 """
-    (ROOT / "index.html").write_text(doc)
+    PRIVATE_OUT.mkdir(exist_ok=True)
+    (PRIVATE_OUT / "index.html").write_text(doc)
     return len(dispatches)
 
 
@@ -390,7 +392,7 @@ def build_student_index(term, courses):
 <head>
 {head(term, title=f"{term['name']} Student Courses",
       description=f"Student course homes, schedules, syllabi, and Canvas links for {term['name']}.",
-      og_image="images/frst-110-banner.jpg", og_path="students.html")}
+      og_image="images/frst-110-banner.jpg")}
 </head>
 <body class="student-index-page">
 {DIRECTION_CONTRACT}
@@ -410,12 +412,13 @@ def build_student_index(term, courses):
 <script src="_kit/hq.js"></script>
 </body>
 </html>"""
+    (ROOT / "index.html").write_text(doc)
     (ROOT / "students.html").write_text(doc)
 
 
 # ---------------------------------------------------------------- course page
 
-def workspace_rows(course):
+def workspace_items(course):
     links = course.get("links", {})
     rows = [
         ("Canvas", "Assignments, announcements, and current course activity", links.get("canvas"), "Open Canvas"),
@@ -435,10 +438,12 @@ def workspace_rows(course):
             f"{course['slug']}-atlas.html",
             "Open the course atlas",
         ))
+    return [row for row in rows if row[2]]
+
+
+def workspace_rows(course):
     out = []
-    for label, detail, href, status in rows:
-        if not href:
-            continue
+    for label, detail, href, status in workspace_items(course):
         inner = (f'<div><h3>{e(label)}</h3><p>{e(detail)}</p></div>'
                  f'<span>{e(status)}</span>')
         out.append(f'<a class="workspace-row workspace-link" href="{e(href)}">{inner}</a>')
@@ -512,6 +517,10 @@ def build_course(term, course):
     focus_label, focus_title, focus_copy = course_pattern(course)
     current = upcoming(course, 1)[0]
     current_label = format_course_date(current["date"])
+    console_tools = "".join(
+        f'<a href="{e(href)}">{e(label)}</a>'
+        for label, _detail, href, _status in workspace_items(course)
+    )
     notice = ""
     if course.get("unverified"):
         notice = """<aside class="course-notice" aria-label="Course information notice"><strong>Details are still being reconciled.</strong><p>Use the linked syllabus and Canvas course for current student instructions.</p></aside>"""
@@ -530,52 +539,54 @@ def build_course(term, course):
 <body class="course-body-page" style="{theme_vars(course, rel="../")}">
 {DIRECTION_CONTRACT}
 <a class="skip-link" href="#course-main">Skip to course materials</a>
-<nav class="breadcrumb"><a href="../students.html">{e(term['name'])} student courses</a></nav>
-
-<header class="course-hero">
-  {banner_figure(course, rel='../', class_name='course-hero-art')}
-  <div class="course-hero-copy">
-    <h1>{e(course['title'])}</h1>
-    <p class="course-code">{e(course['displayCode'])}</p>
-    <p class="course-lede">{e(course['description'])}</p>
-    <div class="course-meeting-lockup">
-      <span>{e(m['daysLabel'])}</span>
-      <strong>{e(m['timeLabel'])}</strong>
-      <span>{e(m['location'])}</span>
-    </div>
-  </div>
+<header class="course-console">
+  <nav class="breadcrumb"><a class="course-console-brand" href="../students.html"><span>{e(course['displayCode'])}</span><strong>{e(course['title'])}</strong></a></nav>
+  <div class="course-console-meeting"><span>Next meeting</span><strong>{e(current_label)}</strong><a href="#schedule">All meetings</a></div>
+  <nav class="course-console-tools" aria-label="Course tools">{console_tools}</nav>
 </header>
 
-<main class="course-main" id="course-main">
-  <div class="course-primary">
-    <section class="course-current" aria-labelledby="current-title">
-      <div><h2 id="current-title">{e(current['topic'])}</h2>
-      <p class="current-context">Next meeting · {e(current_label)}</p>
-      <p>{e(current.get('detail', 'Come ready to test the day’s question with evidence and conversation.'))}</p></div>
-      <a href="#schedule">See the schedule</a>
-    </section>
+<main class="course-dashboard" id="course-main">
+  <section class="session-card" aria-labelledby="current-title">
+    <header class="session-header">
+      <div><h1 id="current-title">{e(current['topic'])}</h1><p>{e(current_label)}</p></div>
+      <div class="session-meets"><span>{e(m['daysLabel'])}</span><strong>{e(m['timeLabel'])}</strong><span>{e(m['location'])}</span></div>
+    </header>
+    <div class="session-body">
+      <div class="session-primary">
+        {banner_figure(course, rel='../', class_name='session-art')}
+        <div class="session-brief">
+          <p class="course-lede">{e(course['description'])}</p>
+          <p class="session-detail">{e(current.get('detail', 'Come ready to test the day’s question with evidence and conversation.'))}</p>
+          <div class="course-pattern"><h2>{e(focus_title)}</h2><p class="pattern-context">{e(focus_label)}</p><p>{e(focus_copy)}</p></div>
+        </div>
+      </div>
+      <aside class="session-next" aria-label="Coming meetings">
+        <div class="section-heading"><h2>Coming next</h2><p>{len(course['schedule'])} meetings</p></div>
+        <div class="sched-scroll"><table class="sched-table"><tbody>{schedule_rows(upcoming(course, 3))}</tbody></table></div>
+      </aside>
+    </div>
+  </section>
 
-    <section class="course-workspace" aria-labelledby="ws-title">
-      <div class="section-heading"><h2 id="ws-title">Start here</h2><p>Current student destinations</p></div>
-      <div class="workspace-list">{workspace_rows(course)}</div>
-    </section>
+  <section class="course-workspace" aria-labelledby="ws-title">
+    <div class="section-heading"><h2 id="ws-title">Course tools</h2><p>Student destinations</p></div>
+    <div class="workspace-list">{workspace_rows(course)}</div>
+  </section>
 
-    <section class="course-pattern" aria-labelledby="pattern-title"><h2 id="pattern-title">{e(focus_title)}</h2><p class="pattern-context">{e(focus_label)}</p><p>{e(focus_copy)}</p></section>
-
-    <div id="schedule">{schedule_table(course)}</div>
-
-    <section class="final-callout" aria-labelledby="final-title">
-      <div><h2 id="final-title">{e(course['final']['label'])}</h2>
-      <p>{e(course['final']['day'])}, {e(course['final']['date'])}</p></div>
-      <strong>{e(course['final']['time'])}</strong>
-    </section>
-  </div>
-
-  <aside class="course-facts" aria-labelledby="facts-title">
-    <h2 id="facts-title">Course record</h2>
-    <dl>{facts_html}</dl>
+  <div class="course-lower">
+    <div class="course-primary">
+      <div id="schedule">{schedule_table(course)}</div>
+      <section class="final-callout" aria-labelledby="final-title">
+        <div><h2 id="final-title">{e(course['final']['label'])}</h2>
+        <p>{e(course['final']['day'])}, {e(course['final']['date'])}</p></div>
+        <strong>{e(course['final']['time'])}</strong>
+      </section>
+    </div>
+    <aside class="course-facts" aria-labelledby="facts-title">
+      <h2 id="facts-title">Course record</h2>
+      <dl>{facts_html}</dl>
 {notice}
-  </aside>
+    </aside>
+  </div>
 </main>
 
 <footer class="site-footer">
@@ -742,8 +753,8 @@ def main():
             if build_extra_page(term, c, page):
                 extras.append((c, page))
 
-    print(f"built index.html ({n} course dispatches)")
-    print(f"built students.html ({n} student course dispatches)")
+    print(f"built .private-build/index.html ({n} instructor course dispatches)")
+    print(f"built index.html + students.html ({n} student course dispatches)")
     for c in courses:
         feat = " + feature" if c.get("feature") else ""
         print(f"built courses/{c['slug']}.html ({len(c['schedule'])} meetings{feat})")
