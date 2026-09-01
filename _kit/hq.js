@@ -71,11 +71,14 @@
     const nowDetail = document.getElementById("nowDetail");
     const nextTitle = document.getElementById("nextTitle");
     const nextDetail = document.getElementById("nextDetail");
+    const railAgenda = document.getElementById("railAgenda");
 
     if (nowTitle && nowDetail) {
       if (todaySessions.length) {
         nowTitle.textContent = `${todaySessions.length} course${todaySessions.length === 1 ? "" : "s"} meeting today`;
-        nowDetail.textContent = todaySessions.map((item) => item.config.code).join(" · ");
+        nowDetail.textContent = todaySessions.map((item) =>
+          `${item.config.code} · ${item.config.timeLabel} · ${item.config.location}`
+        ).join(" / ");
       } else {
         nowTitle.textContent = "No course meeting today";
         nowDetail.textContent = "Use the priority move to prepare the next teaching day.";
@@ -85,6 +88,17 @@
     if (nextTitle && nextDetail && next) {
       nextTitle.textContent = `${next.config.code} · ${formatDate(next.meeting.date)}`;
       nextDetail.textContent = next.meeting.topic || "Open the course home for the current question.";
+    }
+
+    if (railAgenda) {
+      railAgenda.innerHTML = sorted.slice(0, 3).map((item) => {
+        const when = item.meeting.date === today ? "Today" : formatDate(item.meeting.date);
+        return `<a class="rail-agenda-item" href="${escapeHtml(item.config.href)}">
+          <strong>${escapeHtml(item.config.code)} · ${escapeHtml(when)}</strong>
+          <span>${escapeHtml(item.config.timeLabel)} · ${escapeHtml(item.config.location)}</span>
+          <small>${escapeHtml(item.meeting.topic || "Open the course home")}</small>
+        </a>`;
+      }).join("");
     }
   }
 

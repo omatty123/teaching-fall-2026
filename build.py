@@ -51,6 +51,13 @@ FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->"""
 
+HQ_DIRECTION_CONTRACT = DIRECTION_CONTRACT.replace(
+    "FIRST VIEWPORT: A slim masthead sits above four equal situation columns and one prioritized move; course dispatches begin before the fold ends.\n"
+    "FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.",
+    "FIRST VIEWPORT: A persistent day rail supports one consequential move, a compact three-part situation ledger, and course dispatches without a dead tools column.\n"
+    "FORM: Field Desk day rail with a dense editorial workspace, grounded direction 7, seed e7d8328d."
+)
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -250,6 +257,8 @@ def build_hq(term, courses):
             "code": c["code"],
             "schedule": c["schedule"],
             "endMinutes": c["meeting"]["endMinutes"],
+            "timeLabel": c["meeting"]["timeLabel"],
+            "location": c["meeting"]["shortLocation"],
             "tasks": c["prep"]["tasks"],
             "build": c["prep"]["build"],
             "href": f"courses/{c['slug']}.html",
@@ -286,29 +295,37 @@ def build_hq(term, courses):
       og_image="images/hist-212-banner.jpg")}
 </head>
 <body class="hq-page">
-{DIRECTION_CONTRACT}
+{HQ_DIRECTION_CONTRACT}
 <a class="skip-link" href="#main">Skip to teaching situation</a>
-<header class="site-masthead">
-  <div>
+<div class="hq-shell">
+<aside class="hq-rail" aria-label="Teaching day overview">
+  <header class="site-masthead">
     <h1>{e(term['name'])} Teaching HQ</h1>
-    <p id="dateLabel">Loading date…</p>
-  </div>
-  <nav aria-label="Teaching HQ">
-    <a href="students.html">Student course index</a>
-    <a href="#week">Week</a>
-    <a href="#decisions">All decisions</a>
-    {nav_archive}
-  </nav>
-</header>
-
-<main id="main">
-  <section class="situation-ledger" aria-labelledby="situationTitle">
-    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
-    <div><h3>Now</h3><strong id="nowTitle">Orienting…</strong><p id="nowDetail">Checking today’s teaching schedule.</p></div>
-    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
-    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">{e(risk)}</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
-    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">{e(changed)}</strong><p>Queue projection updated {e(task_board.get('updated', ''))}.</p></div>
+    <p>Instructor field desk</p>
+  </header>
+  <section class="rail-now" aria-labelledby="railNowTitle">
+    <h2 id="railNowTitle">Now</h2>
+    <strong id="nowTitle">Orienting…</strong>
+    <p id="nowDetail">Checking today’s teaching schedule.</p>
   </section>
+  <section class="rail-agenda" aria-labelledby="railAgendaTitle">
+    <h2 id="railAgendaTitle">Next on the calendar</h2>
+    <div class="rail-agenda-list" id="railAgenda"><p>Loading upcoming meetings…</p></div>
+  </section>
+  <nav class="rail-nav" aria-label="Teaching HQ sections">
+    <a href="#courses">Course dispatches</a>
+    <a href="#week">Recurring week</a>
+    <a href="#decisions">All decisions</a>
+  </nav>
+</aside>
+
+<div class="hq-workspace">
+  <header class="workspace-masthead">
+    <p id="dateLabel">Loading date…</p>
+    <nav aria-label="Teaching HQ destinations"><a href="students.html">Student course index</a>{nav_archive}</nav>
+  </header>
+
+  <main id="main">
 
   <section class="priority-move" aria-labelledby="priorityTitle">
     <div>
@@ -318,8 +335,15 @@ def build_hq(term, courses):
     <a class="primary-action" href="#decisions">Open the decision queue</a>
   </section>
 
+  <section class="situation-ledger" aria-labelledby="situationTitle">
+    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
+    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
+    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">{e(risk)}</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
+    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">{e(changed)}</strong><p>Queue projection updated {e(task_board.get('updated', ''))}.</p></div>
+  </section>
+
   <section class="dispatch-section" id="courses" aria-labelledby="coursesTitle">
-    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><p>Current meeting and working destinations</p></div>
+    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><a href="students.html">Student course index</a></div>
     <div class="dispatch-list">{"".join(dispatches)}</div>
   </section>
 
@@ -339,8 +363,10 @@ def build_hq(term, courses):
       </div>
     </details>
   </section>
-</main>
+  </main>
 {archive_html}
+</div>
+</div>
 <script>
 window.courseConfig = {json.dumps(config, ensure_ascii=False, indent=2)};
 window.termName = {json.dumps(term['name'])};

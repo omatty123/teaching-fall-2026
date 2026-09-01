@@ -25,32 +25,40 @@
 THESIS: A teaching day is a situation to read, not a dashboard to admire; the surface refuses generic cards, points, and inventory-first hierarchy.
 OWN-WORLD: Warm paper, navy ink, fine rules, square checks, restrained rust/moss/ochre signals, documentary strips, and compact sans-serif type.
 STORY: Orient to now, see the next consequential move, notice risk and change, then open the right course or system.
-FIRST VIEWPORT: A slim masthead sits above four equal situation columns and one prioritized move; course dispatches begin before the fold ends.
-FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.
+FIRST VIEWPORT: A persistent day rail supports one consequential move, a compact three-part situation ledger, and course dispatches without a dead tools column.
+FORM: Field Desk day rail with a dense editorial workspace, grounded direction 7, seed e7d8328d.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <a class="skip-link" href="#main">Skip to teaching situation</a>
-<header class="site-masthead">
-  <div>
+<div class="hq-shell">
+<aside class="hq-rail" aria-label="Teaching day overview">
+  <header class="site-masthead">
     <h1>Fall 2026 Teaching HQ</h1>
-    <p id="dateLabel">Loading date…</p>
-  </div>
-  <nav aria-label="Teaching HQ">
-    <a href="students.html">Student course index</a>
-    <a href="#week">Week</a>
-    <a href="#decisions">All decisions</a>
-    <a href="https://omatty123.github.io/teaching-today/spring-2026.html">Previous term</a>
-  </nav>
-</header>
-
-<main id="main">
-  <section class="situation-ledger" aria-labelledby="situationTitle">
-    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
-    <div><h3>Now</h3><strong id="nowTitle">Orienting…</strong><p id="nowDetail">Checking today’s teaching schedule.</p></div>
-    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
-    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">Choose the Delta blues listening selections</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
-    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">Give the BUEN card a relevant image</strong><p>Queue projection updated September 1, 2026.</p></div>
+    <p>Instructor field desk</p>
+  </header>
+  <section class="rail-now" aria-labelledby="railNowTitle">
+    <h2 id="railNowTitle">Now</h2>
+    <strong id="nowTitle">Orienting…</strong>
+    <p id="nowDetail">Checking today’s teaching schedule.</p>
   </section>
+  <section class="rail-agenda" aria-labelledby="railAgendaTitle">
+    <h2 id="railAgendaTitle">Next on the calendar</h2>
+    <div class="rail-agenda-list" id="railAgenda"><p>Loading upcoming meetings…</p></div>
+  </section>
+  <nav class="rail-nav" aria-label="Teaching HQ sections">
+    <a href="#courses">Course dispatches</a>
+    <a href="#week">Recurring week</a>
+    <a href="#decisions">All decisions</a>
+  </nav>
+</aside>
+
+<div class="hq-workspace">
+  <header class="workspace-masthead">
+    <p id="dateLabel">Loading date…</p>
+    <nav aria-label="Teaching HQ destinations"><a href="students.html">Student course index</a><a href="https://omatty123.github.io/teaching-today/spring-2026.html">Previous term</a></nav>
+  </header>
+
+  <main id="main">
 
   <section class="priority-move" aria-labelledby="priorityTitle">
     <div>
@@ -60,8 +68,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <a class="primary-action" href="#decisions">Open the decision queue</a>
   </section>
 
+  <section class="situation-ledger" aria-labelledby="situationTitle">
+    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
+    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
+    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">Choose the Delta blues listening selections</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
+    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">Give the BUEN card a relevant image</strong><p>Queue projection updated September 1, 2026.</p></div>
+  </section>
+
   <section class="dispatch-section" id="courses" aria-labelledby="coursesTitle">
-    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><p>Current meeting and working destinations</p></div>
+    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><a href="students.html">Student course index</a></div>
     <div class="dispatch-list"><article class="course-dispatch" id="frstDispatch" style="--course-color:#245a8d;--course-gradient:linear-gradient(135deg, #173f67 0%, #2d689f 100%)">
   <figure class="dispatch-image"><img src="images/frst-110-banner.jpg" alt="Ma Yuan&#x27;s Waving Surface of the Autumn Flood, a study of layered curling waves" style="object-position:center 43%"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Ma_Yuan_-_Water_Album_-_The_Waving_Surface_of_the_Autumn_Flood.jpg">Ma Yuan, The Waving Surface of the Autumn Flood, c. 1200 · public domain</a></figcaption></figure>
   <div class="dispatch-identity">
@@ -130,12 +145,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
     </details>
   </section>
-</main>
+  </main>
 
 <section class="archive-section" aria-label="Previous terms">
   <div class="archive-link-card"><span>The Spring 2026 prep page is preserved as it was, with its Winter 2026 links below.</span>
   <a href="https://omatty123.github.io/teaching-today/spring-2026.html">Open Spring 2026 archive</a></div>
 </section>
+</div>
+</div>
 <script>
 window.courseConfig = {
   "frst": {
@@ -265,6 +282,8 @@ window.courseConfig = {
       }
     ],
     "endMinutes": 740,
+    "timeLabel": "11:10 a.m.–12:20 p.m.",
+    "location": "Memorial 114",
     "tasks": [
       "Confirm exact pages or passages in Canvas.",
       "Set one open, debatable guiding question.",
@@ -354,6 +373,8 @@ window.courseConfig = {
       }
     ],
     "endMinutes": 730,
+    "timeLabel": "10:25 a.m.–12:10 p.m.",
+    "location": "Main 211",
     "tasks": [
       "Lock the textbook pages and short primary-source excerpt.",
       "Finish the evidence worksheet and visual source.",
@@ -407,6 +428,8 @@ window.courseConfig = {
       }
     ],
     "endMinutes": 865,
+    "timeLabel": "12:40–2:25 p.m.",
+    "location": "Steitz 102",
     "tasks": [
       "Confirm the preparation item and division of roles.",
       "Ready the in-class practice and student artifact.",
