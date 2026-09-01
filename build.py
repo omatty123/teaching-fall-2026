@@ -17,6 +17,7 @@ import json
 import pathlib
 import re
 import sys
+import datetime
 
 ROOT = pathlib.Path(__file__).parent
 DATA = ROOT / "data"
@@ -41,6 +42,15 @@ LINK_SLOTS = [
     ("people",   "Meet the class",  False),
 ]
 
+DIRECTION_CONTRACT = """<!--
+THESIS: A teaching day is a situation to read, not a dashboard to admire; the surface refuses generic cards, points, and inventory-first hierarchy.
+OWN-WORLD: Warm paper, navy ink, fine rules, square checks, restrained rust/moss/ochre signals, documentary strips, and compact sans-serif type.
+STORY: Orient to now, see the next consequential move, notice risk and change, then open the right course or system.
+FIRST VIEWPORT: A slim masthead sits above four equal situation columns and one prioritized move; course dispatches begin before the fold ends.
+FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->"""
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -60,6 +70,13 @@ def clock(mins):
     hour, minute = divmod(mins, 60)
     hour = hour - 12 if hour > 12 else hour
     return f"{hour}:{minute:02d}"
+
+
+def format_course_date(iso):
+    """Public course-page date label without a machine-like ISO string."""
+    year, month, day = (int(part) for part in iso.split("-"))
+    value = datetime.date(year, month, day)
+    return value.strftime("%A, %B ") + str(value.day)
 
 
 def load():
@@ -118,7 +135,6 @@ def head(term, *, title, description, og_image, rel="", og_path=""):
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(description)}">
 <meta name="twitter:image" content="{base}/{og_image}">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{rel}_kit/hq.css">"""
 
 
@@ -182,48 +198,61 @@ def week_grid(term, courses):
 
 # ---------------------------------------------------------------- HQ page
 
-def build_hq(term, courses):
-    cards = []
-    for c in courses:
-        links = [f'<a href="courses/{c["slug"]}.html" class="header-link">Course page</a>']
-        slots = c.get("links", {})
-        for key, label, private in LINK_SLOTS:
-            href = slots.get(key)
-            if not href:
-                continue          # not ready yet -> no button, never a dead one
-            cls = "header-link private" if private else "header-link"
-            lock = '<span aria-hidden="true">\u2022</span> ' if private else ""
-            title = ' title="Instructor only"' if private else ""
-            links.append(f'<a href="{e(href)}" class="{cls}"{title}>{lock}{e(label)}</a>')
+def public_links(course, *, rel="", instructor=False):
+    links = [f'<a href="{rel}courses/{course["slug"]}.html">Course home</a>']
+    slots = course.get("links", {})
+    for key, label, private in LINK_SLOTS:
+        href = slots.get(key)
+        if not href or (private and not instructor):
+            continue
+        suffix = ' <span class="access-tag">Authenticated</span>' if private else ""
+        links.append(f'<a href="{e(href)}">{e(label)}{suffix}</a>')
+    return "".join(links)
 
-        b = c["theme"].get("banner", {})
-        if b.get("type") == "image":
-            banner = (f'<div class="card-banner" data-banner="image" role="img"'
-                      f' style="{banner_style(c)}"'
-                      f' aria-label="{e(b.get("alt", ""))}"></div>')
+
+def banner_figure(course, *, rel="", class_name="dispatch-image"):
+    b = course["theme"].get("banner", {})
+    if b.get("type") != "image":
+        return f'<div class="{class_name} dispatch-image--text">{e(b.get("text", course["code"]))}</div>'
+    credit = ""
+    if b.get("credit"):
+        if b.get("creditUrl"):
+            credit = f'<figcaption><a href="{e(b["creditUrl"])}">{e(b["credit"])}</a></figcaption>'
         else:
-            banner = f'<div class="card-banner" data-banner="text">{e(b.get("text", ""))}</div>'
+            credit = f'<figcaption>{e(b["credit"])}</figcaption>'
+    position = b.get("position", "center")
+    return (f'<figure class="{class_name}"><img src="{e(rel + b["src"])}" '
+            f'alt="{e(b.get("alt", ""))}" style="object-position:{e(position)}">{credit}</figure>')
 
-        cards.append(f"""<article class="course-card" id="{c['key']}Card" style="{theme_vars(c)}">
-  {banner}
-  <div class="course-header">
-    <div class="course-code">{e(c['displayCode'])}</div>
-    <div class="course-name">{e(c['cardName'])}</div>
-    <div class="header-links">{"".join(links)}</div>
-  </div>
-  <div class="session-info">
-    <div class="class-date" id="{c['key']}Date"></div>
-    <div class="class-topic" id="{c['key']}Topic"></div>
-  </div>
-  <div class="course-body" id="{c['key']}Body"></div>
-</article>""")
 
+def course_dispatch(course, *, rel="", instructor=False):
+    m = course["meeting"]
+    return f"""<article class="course-dispatch" id="{course['key']}Dispatch" style="{theme_vars(course)}">
+  {banner_figure(course, rel=rel)}
+  <div class="dispatch-identity">
+    <h3>{e(course['title'])}</h3>
+    <p class="course-code">{e(course['displayCode'])}</p>
+    <p>{e(m['daysLabel'])} · {e(m['timeLabel'])}</p>
+  </div>
+  <div class="dispatch-session">
+    <span>Next meeting</span>
+    <strong id="{course['key']}Date">Loading schedule…</strong>
+    <p id="{course['key']}Topic"></p>
+  </div>
+  <nav class="dispatch-links" aria-label="{e(course['code'])} destinations">{public_links(course, rel=rel, instructor=instructor)}</nav>
+</article>"""
+
+
+def build_hq(term, courses):
+    dispatches = [course_dispatch(c, instructor=True) for c in courses]
     config = {
         c["key"]: {
+            "code": c["code"],
             "schedule": c["schedule"],
             "endMinutes": c["meeting"]["endMinutes"],
             "tasks": c["prep"]["tasks"],
             "build": c["prep"]["build"],
+            "href": f"courses/{c['slug']}.html",
         } for c in courses
     }
 
@@ -235,9 +264,17 @@ def build_hq(term, courses):
         archive_html = f"""
 <section class="archive-section" aria-label="Previous terms">
   <div class="archive-link-card"><span>{e(archive['note'])}</span>
-  <a href="{e(archive['href'])}">{e(archive['label'])} →</a></div>
+  <a href="{e(archive['href'])}">{e(archive['label'])}</a></div>
 </section>"""
-        nav_archive = f'<a href="{e(archive["href"])}">Archive</a>'
+        nav_archive = f'<a href="{e(archive["href"])}">Previous term</a>'
+
+    open_items = [item for item in task_board.get("items", []) if not item.get("done")]
+    priority = next((item for item in open_items if item.get("lane") == "matty"), open_items[0] if open_items else None)
+    completed = [item for item in task_board.get("items", []) if item.get("done")]
+    priority_title = priority["title"] if priority else "Opening preparation is clear"
+    priority_detail = priority["detail"] if priority else "No unresolved term decision is currently published here."
+    changed = completed[-1]["title"] if completed else f"Public projection reviewed {task_board.get('updated', '')}"
+    risk = priority_title if priority else "No blocking decision recorded"
 
     doc = f"""<!DOCTYPE html>
 <html lang="en">
@@ -248,105 +285,144 @@ def build_hq(term, courses):
                   f"{term['name']} at {term['institution']}.",
       og_image="images/hist-212-banner.jpg")}
 </head>
-<body>
-<header>
-  <div class="date-label" id="dateLabel">Loading…</div>
-  <h1 id="headerTitle">{e(term['name'])} Teaching HQ</h1>
-  <div class="subtitle" id="headerSubtitle">Next class, prep queue, and the whole week</div>
-  <nav class="hq-nav" aria-label="Teaching HQ">
-    <a href="#todo">Term Leader board</a>
-    <a href="#courses">Course prep</a>
-    <a href="#week">Week schedule</a>
+<body class="hq-page">
+{DIRECTION_CONTRACT}
+<a class="skip-link" href="#main">Skip to teaching situation</a>
+<header class="site-masthead">
+  <div>
+    <h1>{e(term['name'])} Teaching HQ</h1>
+    <p id="dateLabel">Loading date…</p>
+  </div>
+  <nav aria-label="Teaching HQ">
+    <a href="students.html">Student course index</a>
+    <a href="#week">Week</a>
+    <a href="#decisions">All decisions</a>
     {nav_archive}
   </nav>
 </header>
 
-<section class="week-section" id="week" aria-labelledby="weekTitle">
-  <div class="section-heading">
-    <h2 id="weekTitle">Week at a glance</h2>
-    <p>Recurring meetings · {e(term['campus'])}</p>
-  </div>
-  {week_grid(term, courses)}
-</section>
+<main id="main">
+  <section class="situation-ledger" aria-labelledby="situationTitle">
+    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
+    <div><h3>Now</h3><strong id="nowTitle">Orienting…</strong><p id="nowDetail">Checking today’s teaching schedule.</p></div>
+    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
+    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">{e(risk)}</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
+    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">{e(changed)}</strong><p>Queue projection updated {e(task_board.get('updated', ''))}.</p></div>
+  </section>
 
-<main class="container" id="courses">
-{"".join(cards)}
-</main>
-<section class="todo-section" id="todo" aria-labelledby="todoTitle">
-  <div class="todo-shell">
-    <div class="todo-top">
-      <div>
-        <div class="todo-kicker">Updated {e(task_board.get('updated', ''))}</div>
-        <h2 id="todoTitle">Term Leader Board</h2>
-        <p>{e(task_board.get('intro', ''))}</p>
-      </div>
-      <div class="momentum" aria-labelledby="momentumLabel">
-        <div class="momentum-heading">
-          <span id="momentumLabel">Term momentum</span>
-          <strong id="todoScore">0%</strong>
-        </div>
-        <div class="momentum-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="momentumLabel">
-          <span id="todoProgress"></span>
-        </div>
-        <span class="momentum-count" id="todoCount">Loading tasks…</span>
-      </div>
+  <section class="priority-move" aria-labelledby="priorityTitle">
+    <div>
+      <h2 id="priorityTitle"><span id="priorityTask">{e(priority_title)}</span></h2>
+      <p><strong>Before the next class.</strong> {e(priority_detail)}</p>
     </div>
-    <div class="todo-filters" id="todoFilters" role="group" aria-label="Filter the task board"></div>
-    <div class="todo-list" id="todoList"></div>
-    <p class="todo-storage-note">Checks are saved only in this browser. The shared list stays unchanged.</p>
-    <div class="sr-only" id="todoAnnouncement" aria-live="polite"></div>
-  </div>
-</section>
+    <a class="primary-action" href="#decisions">Open the decision queue</a>
+  </section>
+
+  <section class="dispatch-section" id="courses" aria-labelledby="coursesTitle">
+    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><p>Current meeting and working destinations</p></div>
+    <div class="dispatch-list">{"".join(dispatches)}</div>
+  </section>
+
+  <section class="week-section" id="week" aria-labelledby="weekTitle">
+    <div class="section-heading"><h2 id="weekTitle">Recurring week</h2><p>{e(term['campus'])}</p></div>
+    {week_grid(term, courses)}
+  </section>
+
+  <section class="decision-section" id="decisions" aria-labelledby="todoTitle">
+    <details class="decision-disclosure">
+      <summary><span><strong id="todoTitle">All term decisions</strong><small>{e(task_board.get('intro', ''))}</small></span><span id="todoCount">Loading queue…</span></summary>
+      <div class="decision-body">
+        <div class="todo-filters" id="todoFilters" role="group" aria-label="Filter the decision queue"></div>
+        <div class="todo-list" id="todoList"></div>
+        <p class="todo-storage-note">Personal checks stay in this browser. Course status files remain authoritative.</p>
+        <div class="sr-only" id="todoAnnouncement" aria-live="polite"></div>
+      </div>
+    </details>
+  </section>
+</main>
 {archive_html}
 <script>
-const courseConfig = {json.dumps(config, ensure_ascii=False, indent=2)};
-const termName = {json.dumps(term['name'])};
-const taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
+window.courseConfig = {json.dumps(config, ensure_ascii=False, indent=2)};
+window.termName = {json.dumps(term['name'])};
+window.taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
 </script>
 <script src="_kit/hq.js"></script>
 </body>
 </html>
 """
     (ROOT / "index.html").write_text(doc)
-    return len(cards)
+    return len(dispatches)
+
+
+def build_student_index(term, courses):
+    dispatches = [course_dispatch(c, instructor=False) for c in courses]
+    config = {c["key"]: {"code": c["code"], "schedule": c["schedule"],
+              "endMinutes": c["meeting"]["endMinutes"], "tasks": [], "build": "",
+              "href": f"courses/{c['slug']}.html"} for c in courses}
+    doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{head(term, title=f"{term['name']} Student Courses",
+      description=f"Student course homes, schedules, syllabi, and Canvas links for {term['name']}.",
+      og_image="images/frst-110-banner.jpg", og_path="students.html")}
+</head>
+<body class="student-index-page">
+{DIRECTION_CONTRACT}
+<a class="skip-link" href="#courses">Skip to courses</a>
+<header class="student-masthead">
+  <div><h1>{e(term['name'])} courses</h1><p>{e(term['institution'])} · Find your next meeting and course materials.</p></div>
+</header>
+<main id="courses" class="student-index-main">
+  <section class="student-intro" aria-labelledby="studentIntro">
+    <h2 id="studentIntro">Three courses. One clear way in.</h2>
+    <p>Open your course home for the current question, Canvas, syllabus, and full meeting schedule.</p>
+  </section>
+  <div class="dispatch-list student-dispatches">{"".join(dispatches)}</div>
+</main>
+<footer class="site-footer"><span>{e(term['name'])} · {e(term['institution'])}</span></footer>
+<script>window.courseConfig = {json.dumps(config, ensure_ascii=False)}; window.termName = {json.dumps(term['name'])}; window.taskBoardConfig = {{"items": []}};</script>
+<script src="_kit/hq.js"></script>
+</body>
+</html>"""
+    (ROOT / "students.html").write_text(doc)
 
 
 # ---------------------------------------------------------------- course page
 
 def workspace_rows(course):
+    links = course.get("links", {})
     rows = [
-        ("Syllabus", "Course policies, outcomes, and term plan",
-         course.get("syllabusUrl"), "Open syllabus" if course.get("syllabusUrl") else "Ready for materials"),
-        ("Class sessions", "Daily plans, slides, activities, and preparation", None,
-         f"{len(course['schedule'])} meetings scheduled"),
-        ("Attendance", "Roster and class-meeting record", None, "Ready for materials"),
-        ("Resources", "Readings, handouts, media, and reference material", None,
-         f"{len(course['currentWorks']['items'])} current works added"
-         if course.get("currentWorks") else "Ready for materials"),
+        ("Canvas", "Assignments, announcements, and current course activity", links.get("canvas"), "Open Canvas"),
+        ("Syllabus", "Policies, outcomes, assignments, and the term plan", links.get("syllabus") or course.get("syllabusUrl"), "Open syllabus"),
     ]
     if course.get("waterNewsPage"):
-        rows.insert(1, (
+        rows.append((
             "Water in the News",
             "Share and browse current stories about water",
             course["waterNewsPage"],
             "Open the class current",
         ))
+    if course.get("feature"):
+        rows.append((
+            "Water Makes Worlds",
+            "Explore the course atlas, shared works, maps, and questions",
+            f"{course['slug']}-atlas.html",
+            "Open the course atlas",
+        ))
     out = []
     for label, detail, href, status in rows:
+        if not href:
+            continue
         inner = (f'<div><h3>{e(label)}</h3><p>{e(detail)}</p></div>'
-                 f'<span>{e(status)}{" ↗" if href else ""}</span>')
-        if href:
-            out.append(f'<a class="workspace-row workspace-link" href="{e(href)}">{inner}</a>')
-        else:
-            out.append(f'<div class="workspace-row">{inner}</div>')
+                 f'<span>{e(status)}</span>')
+        out.append(f'<a class="workspace-row workspace-link" href="{e(href)}">{inner}</a>')
     return "".join(out)
 
 
-def schedule_table(course):
+def schedule_rows(items):
     rows = []
-    for s in course["schedule"]:
+    for s in items:
         y, mth, d = s["date"].split("-")
-        import datetime
         dt = datetime.date(int(y), int(mth), int(d))
         label = dt.strftime("%a %b ") + str(dt.day)
         flags = []
@@ -356,23 +432,49 @@ def schedule_table(course):
             flags.append(e(s["detail"]))
         note = f'<span class="sched-note">{" · ".join(flags)}</span>' if flags else ""
         rows.append(f'<tr><th scope="row">{e(label)}</th><td>{e(s["topic"])}{note}</td></tr>')
+    return "".join(rows)
+
+
+def upcoming(course, limit=3):
+    today = datetime.date.today().isoformat()
+    future = [item for item in course["schedule"] if item["date"] >= today]
+    return (future or course["schedule"][-limit:])[:limit]
+
+
+def schedule_table(course):
+    next_rows = upcoming(course, 3)
     return f"""<section class="course-schedule" aria-labelledby="sched-title">
-  <div class="section-heading"><h2 id="sched-title">Meeting schedule</h2>
-  <p>{len(course['schedule'])} meetings</p></div>
-  <div class="sched-scroll"><table class="sched-table"><tbody>{"".join(rows)}</tbody></table></div>
+  <div class="section-heading"><h2 id="sched-title">Coming meetings</h2><p>{len(course['schedule'])} total</p></div>
+  <div class="sched-scroll"><table class="sched-table"><tbody>{schedule_rows(next_rows)}</tbody></table></div>
+  <details class="full-schedule"><summary>View all {len(course['schedule'])} meetings</summary>
+    <div class="sched-scroll"><table class="sched-table"><tbody>{schedule_rows(course['schedule'])}</tbody></table></div>
+  </details>
 </section>"""
+
+
+def course_pattern(course):
+    first = upcoming(course, 1)[0]
+    if course["key"] == "hist":
+        return ("Question and evidence", first["topic"],
+                "Each meeting begins with a historical problem and tests it against sources, maps, and counterevidence.")
+    if course["key"] == "buen":
+        return ("Practice cycle", "Try → Reflect → Adjust",
+                "Each Tuesday moves from a question to preparation, practice, an artifact, and a brief reflection.")
+    return ("Current inquiry", first["topic"],
+            "Close reading, shared works, seminar preparation, and writing move through the term’s water questions.")
 
 
 def build_course(term, course):
     slug = course["slug"]
     m = course["meeting"]
     reg = course["registrar"]
+    credits_label = reg.get("creditsLabel", f"{reg['credits']} credits")
 
     facts = [
         ("Instructor" + ("s" if len(reg["instructors"]) > 1 else ""), " · ".join(reg["instructors"])),
         ("Meets", f"{m['daysLabel']}<br>{m['timeLabel']}<br>{m['location']}"),
         ("Term", f"{term['startsLabel']}–{term['endsLabel']}"),
-        ("Credits · CRN", f"{reg['credits']} · {reg['crn']}"),
+        ("Registrar record", f"{credits_label} · CRN {reg['crn']}"),
     ]
     if course.get("crossListed"):
         facts.append(("Cross-listed", course["crossListed"]))
@@ -380,20 +482,13 @@ def build_course(term, course):
     facts.append(("Grades due", term["gradesDue"]))
     facts_html = "".join(f"<div><dt>{e(k)}</dt><dd>{v}</dd></div>" for k, v in facts)
 
-    feature_html = ""
-    feature_css = ""
-    feature_file = course.get("feature")
-    if feature_file:
-        path = FEATURES / feature_file
-        if path.exists():
-            feature_html = f'<div class="course-feature">{path.read_text()}</div>'
-        else:
-            print(f"  ! {slug}: feature file {feature_file} missing, skipped")
-        sheet = KIT / f"{slug}-feature.css"
-        if sheet.exists():
-            feature_css = f'\n<link rel="stylesheet" href="../_kit/{sheet.name}">'
-
     og_image = course["theme"].get("banner", {}).get("src", "images/hist-212-banner.jpg")
+    focus_label, focus_title, focus_copy = course_pattern(course)
+    current = upcoming(course, 1)[0]
+    current_label = format_course_date(current["date"])
+    notice = ""
+    if course.get("unverified"):
+        notice = """<aside class="course-notice" aria-label="Course information notice"><strong>Details are still being reconciled.</strong><p>Use the linked syllabus and Canvas course for current student instructions.</p></aside>"""
 
     doc = f"""<!DOCTYPE html>
 <html lang="en">
@@ -404,16 +499,18 @@ def build_course(term, course):
       og_image=og_image,
       rel="../",
       og_path=f"courses/{slug}.html")}
-<link rel="stylesheet" href="../_kit/course.css">{feature_css}
+<link rel="stylesheet" href="../_kit/course.css">
 </head>
 <body class="course-body-page" style="{theme_vars(course, rel="../")}">
-<nav class="breadcrumb"><a href="../index.html">← Back to {e(term['name'])} Teaching HQ</a></nav>
+{DIRECTION_CONTRACT}
+<a class="skip-link" href="#course-main">Skip to course materials</a>
+<nav class="breadcrumb"><a href="../students.html">{e(term['name'])} student courses</a></nav>
 
 <header class="course-hero">
-  <div class="course-hero-art" data-banner="{e(course['theme'].get('banner', {}).get('type', 'text'))}" style="{banner_style(course, '../')}"></div>
+  {banner_figure(course, rel='../', class_name='course-hero-art')}
   <div class="course-hero-copy">
-    <p class="course-code">{e(course['displayCode'])}</p>
     <h1>{e(course['title'])}</h1>
+    <p class="course-code">{e(course['displayCode'])}</p>
     <p class="course-lede">{e(course['description'])}</p>
     <div class="course-meeting-lockup">
       <span>{e(m['daysLabel'])}</span>
@@ -423,17 +520,23 @@ def build_course(term, course):
   </div>
 </header>
 
-{feature_html}
-
-<main class="course-main">
+<main class="course-main" id="course-main">
   <div class="course-primary">
+    <section class="course-current" aria-labelledby="current-title">
+      <div><h2 id="current-title">{e(current['topic'])}</h2>
+      <p class="current-context">Next meeting · {e(current_label)}</p>
+      <p>{e(current.get('detail', 'Come ready to test the day’s question with evidence and conversation.'))}</p></div>
+      <a href="#schedule">See the schedule</a>
+    </section>
+
     <section class="course-workspace" aria-labelledby="ws-title">
-      <div class="section-heading"><h2 id="ws-title">Course workspace</h2>
-      <p>Ready to fill as the term develops</p></div>
+      <div class="section-heading"><h2 id="ws-title">Start here</h2><p>Current student destinations</p></div>
       <div class="workspace-list">{workspace_rows(course)}</div>
     </section>
 
-    {schedule_table(course)}
+    <section class="course-pattern" aria-labelledby="pattern-title"><h2 id="pattern-title">{e(focus_title)}</h2><p class="pattern-context">{e(focus_label)}</p><p>{e(focus_copy)}</p></section>
+
+    <div id="schedule">{schedule_table(course)}</div>
 
     <section class="final-callout" aria-labelledby="final-title">
       <div><h2 id="final-title">{e(course['final']['label'])}</h2>
@@ -443,19 +546,49 @@ def build_course(term, course):
   </div>
 
   <aside class="course-facts" aria-labelledby="facts-title">
-    <h2 id="facts-title">Course details</h2>
+    <h2 id="facts-title">Course record</h2>
     <dl>{facts_html}</dl>
+{notice}
   </aside>
 </main>
 
 <footer class="site-footer">
   <span>{e(course['code'])} · {e(term['name'])} · {e(term['institution'])}</span>
-  <a href="../index.html">← {e(term['name'])} Teaching HQ</a>
+  <a href="../students.html">All student courses</a>
 </footer>
 </body>
 </html>
 """
     (ROOT / "courses" / f"{slug}.html").write_text(doc)
+
+
+def build_feature_page(term, course):
+    feature_file = course.get("feature")
+    if not feature_file:
+        return False
+    feature_path = FEATURES / feature_file
+    if not feature_path.exists():
+        print(f"  ! {course['slug']}: feature file {feature_file} missing, skipped")
+        return False
+    sheet = KIT / f"{course['slug']}-feature.css"
+    feature_css = f'<link rel="stylesheet" href="../_kit/{sheet.name}">' if sheet.exists() else ""
+    og_image = course["theme"].get("banner", {}).get("src", "images/frst-110-banner.jpg")
+    doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{head(term, title=f"Water Makes Worlds · {course['code']}", description=course['description'],
+      og_image=og_image, rel="../", og_path=f"courses/{course['slug']}-atlas.html")}
+<link rel="stylesheet" href="../_kit/course.css">{feature_css}
+</head>
+<body class="course-body-page course-atlas-page" style="{theme_vars(course, rel='../')}">
+{DIRECTION_CONTRACT}
+<nav class="breadcrumb"><a href="../students.html">Student courses</a><span class="crumb-sep">/</span><a href="{course['slug']}.html">{e(course['code'])}</a><span class="crumb-sep">/</span><span>Course atlas</span></nav>
+<div class="course-feature">{feature_path.read_text()}</div>
+<footer class="site-footer"><span>{e(course['code'])} course atlas · {e(term['name'])}</span><a href="{course['slug']}.html">{e(course['code'])} course home</a></footer>
+</body>
+</html>"""
+    (ROOT / "courses" / f"{course['slug']}-atlas.html").write_text(doc)
+    return True
 
 
 def build_extra_page(term, course, page):
@@ -492,8 +625,9 @@ def build_extra_page(term, course, page):
 <link rel="stylesheet" href="../_kit/course.css">{extra_css}
 </head>
 <body class="course-body-page" style="{theme_vars(course, rel="../")}">
+{DIRECTION_CONTRACT}
 <nav class="breadcrumb">
-  <a href="../index.html">&larr; Back to {e(term['name'])} Teaching HQ</a>
+  <a href="../students.html">{e(term['name'])} student courses</a>
   <span class="crumb-sep" aria-hidden="true">/</span>
   <a href="{course['slug']}.html">{e(course['code'])}</a>
 </nav>
@@ -504,7 +638,7 @@ def build_extra_page(term, course, page):
 
 <footer class="site-footer">
   <span>{e(course['code'])} &middot; {e(term['name'])} &middot; {e(term['institution'])}</span>
-  <a href="{course['slug']}.html">&larr; {e(course['code'])} course page</a>
+  <a href="{course['slug']}.html">{e(course['code'])} course page</a>
 </footer>
 {extra_script}
 </body>
@@ -529,7 +663,7 @@ FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
 # ---------------------------------------------------------------- checks
 
 def check(term, courses):
-    """Deploy checklist, run every build. Warnings only, never blocks."""
+    """Return publication problems. Normal builds report; --strict blocks."""
     problems = []
     for c in courses:
         m = c["meeting"]
@@ -571,19 +705,26 @@ def main():
 
     (ROOT / "favicon.svg").write_text(FAVICON)
     n = build_hq(term, courses)
+    build_student_index(term, courses)
     extras = []
+    atlases = []
     for c in courses:
         build_course(term, c)
+        if build_feature_page(term, c):
+            atlases.append(c)
         for page in c.get("extraPages", []):
             if build_extra_page(term, c, page):
                 extras.append((c, page))
 
-    print(f"built index.html ({n} course cards)")
+    print(f"built index.html ({n} course dispatches)")
+    print(f"built students.html ({n} student course dispatches)")
     for c in courses:
         feat = " + feature" if c.get("feature") else ""
         print(f"built courses/{c['slug']}.html ({len(c['schedule'])} meetings{feat})")
     for c, page in extras:
         print(f"built courses/{page['slug']}.html ({c['code']} · {page['heading']})")
+    for c in atlases:
+        print(f"built courses/{c['slug']}-atlas.html ({c['code']} course atlas)")
 
     problems = check(term, courses)
     if problems:
@@ -592,6 +733,10 @@ def main():
             print(f"  · {p}")
     else:
         print("\ncheck: clean")
+    strict = "--strict" in sys.argv
+    if strict and problems:
+        print("\nstrict publication check failed")
+        return 1
     return 0
 
 

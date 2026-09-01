@@ -2,6 +2,8 @@
   const config = window.pageConfig || {};
   const stream = document.querySelector("#newsStream");
   const filters = document.querySelector("#newsFilters");
+  const filterSelect = document.querySelector("#newsFilterSelect");
+  const status = document.querySelector("#newsStatus");
   const submitLinks = [document.querySelector("#newsSubmit")];
   const fallback = Array.isArray(config.stories) ? config.stories : [];
   let stories = fallback;
@@ -72,7 +74,7 @@
       meta.append(category, place, date);
       const title = document.createElement("div");
       const h3 = document.createElement("h3"); const a = document.createElement("a"); a.href = href; a.target = "_blank"; a.rel = "noopener"; a.textContent = story.headline || "Untitled story"; h3.append(a);
-      const source = document.createElement("span"); source.className = "news-source"; source.textContent = sourceName(href) + " ↗"; title.append(h3, source);
+      const source = document.createElement("span"); source.className = "news-source"; source.textContent = sourceName(href); title.append(h3, source);
       const note = document.createElement("p"); note.className = "news-note"; note.textContent = story.note || "";
       article.append(meta, title, note); stream.append(article);
     });
@@ -82,12 +84,24 @@
     const configured = Array.isArray(config.categories) ? config.categories : [];
     const categories = ["All", ...new Set([...configured, ...stories.map(story => story.category || "Other")])];
     filters.replaceChildren();
+    if (filterSelect) filterSelect.replaceChildren();
     categories.forEach(label => {
       const button = document.createElement("button");
       button.type = "button"; button.className = "news-filter"; button.textContent = label;
       button.setAttribute("aria-pressed", String(label === active));
       button.addEventListener("click", () => { active = label; renderFilters(); render(); });
       filters.append(button);
+      if (filterSelect) {
+        const option = document.createElement("option");
+        option.value = label; option.textContent = label; option.selected = label === active;
+        filterSelect.append(option);
+      }
+    });
+  }
+
+  if (filterSelect) {
+    filterSelect.addEventListener("change", () => {
+      active = filterSelect.value; renderFilters(); render();
     });
   }
 
@@ -97,10 +111,20 @@
         const response = await fetch(config.feedUrl, { cache: "no-store" });
         if (!response.ok) throw new Error("feed unavailable");
         const fresh = parseCsv(await response.text()).filter(story => safeUrl(story.url));
-        if (fresh.length) stories = fresh;
+        if (fresh.length) {
+          stories = fresh;
+          if (status) { status.textContent = `Live feed · ${fresh.length} approved ${fresh.length === 1 ? "story" : "stories"}`; status.dataset.state = "live"; }
+        } else if (status) {
+          status.textContent = "Cached approved stories · the live feed is currently empty";
+          status.dataset.state = "cached";
+        }
       } catch {
         stream.setAttribute("aria-label", "Live feed unavailable; showing the last approved stories.");
+        if (status) { status.textContent = "Cached approved stories · live feed unavailable"; status.dataset.state = "cached"; }
       }
+    } else if (status) {
+      status.textContent = "Cached approved stories";
+      status.dataset.state = "cached";
     }
     stories.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
     renderFilters(); render();

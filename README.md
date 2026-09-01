@@ -2,97 +2,75 @@
 
 Lawrence University · FRST 110, HIST 212, BUEN 594.
 
-Static HTML on GitHub Pages. No npm, no build server, no framework.
-`python3 build.py` and you are done.
+A framework-free static site for GitHub Pages. It has two entry surfaces:
 
-## The one rule
+- `index.html` is Matty’s instructor Field Desk: current situation, priority move, course dispatches, recurring week, and the personal decision queue.
+- `students.html` is the public student index: course homes, next meetings, syllabi, Canvas, and public course features. It intentionally omits roster destinations.
 
-**Every fact about a course lives in `data/<slug>.json`, once.**
+## Sources of truth
 
-If a room number, meeting time, reading, or CRN is wrong on the site, it is wrong
-in `data/`. Fix it there and rebuild. Never edit `index.html` or `courses/*.html`
-by hand — they are generated and your edit will be overwritten on the next build.
+The Google Docs syllabi and Canvas courses remain authoritative for student instructions. `data/` is the site’s public-safe projection of those sources—not a replacement for them.
+
+Edit `data/term.json` or `data/<slug>.json`, then rebuild. Never hand-edit `index.html`, `students.html`, `courses/*.html`, or `favicon.svg`; they are generated and will be overwritten.
+
+Facts that are not confirmed belong in a course’s `unverified` array. A normal build prints them. A strict build refuses publication until they are resolved.
 
 ## Run it
 
 ```bash
-python3 build.py                 # regenerate index.html + courses/*.html
+python3 build.py                 # regenerate all public HTML
+python3 build.py --strict        # publication gate; nonzero on unresolved facts
 python3 -m http.server 8765      # preview at http://localhost:8765/
-./deploy.sh                      # run the deploy checklist (never pushes)
-./deploy.sh --push               # checklist, confirm you previewed, commit, push
+./deploy.sh                      # strict checklist; never pushes
+./deploy.sh --push               # checklist, preview confirmation, commit, push
 ```
 
 ## Layout
 
-```
-data/term.json          term dates, campus, schedule window, archive link
-data/<slug>.json        ONE course: identity, meeting, theme, registrar,
-                        final, links, prep tasks, schedule[]
-features/<slug>.html    optional editorial block for a course that earns one
-_kit/hq.css             shared design system (the HQ look)
-_kit/course.css         course-page layout
-_kit/hq.js              next-session logic for the HQ cards
-_kit/<slug>-feature.css optional styles for that course's feature
-images/                 all images, both HQ and course pages
-build.py                the only build step
-deploy.sh               checklist + push
+```text
+data/term.json             term dates, navigation, public-safe decision projection
+data/<slug>.json           course identity, meeting, registrar, links, schedule
+features/*.fragment        editorial source fragments (not standalone public pages)
+_kit/hq.css                Field Desk design system and responsive index layouts
+_kit/course.css            utility-first course-home layout
+_kit/hq.js                 next-session logic and browser-local decision checks
+_kit/*-feature.css         course-feature and Water in the News styles
+images/                    credited course imagery and editorial media
+build.py                   sole generator
+deploy.sh                  strict publication checklist and optional push
 ```
 
-Generated, do not edit: `index.html`, `courses/*.html`, `favicon.svg`.
+Generated outputs include:
+
+- `index.html`
+- `students.html`
+- `courses/<slug>.html`
+- `courses/frst-110-atlas.html`
+- `courses/water-in-the-news.html`
+- `favicon.svg`
 
 ## Adding a course
 
-1. `cp data/buen-594.json data/new-course.json` and edit it.
+1. Copy an existing `data/<slug>.json` and replace every public fact.
 2. Add its slug to `courseOrder` in `data/term.json`.
-3. Drop a banner image in `images/` and point `theme.banner.src` at it.
-4. `python3 build.py`.
+3. Add a real banner image with alt text and a visible source credit.
+4. Add only working, public-safe links. Roster links are instructor-only and must be Access-gated.
+5. Run `python3 build.py --strict`, preview desktop and mobile, then use `./deploy.sh`.
 
-No CSS changes are needed. Course colour, gradient, and banner all come from
-`theme` in the JSON and are injected as custom properties. A fourth course costs
-one file and one line.
+The shared layout is intentionally rule-based rather than card-based: warm paper, navy ink, fine ledger rules, documentary image strips, and restrained course colors. Add new course content through the data schema before adding one-off components.
 
-## Starting a new term
+## Publication checks
 
-1. Copy this repo to `teaching-<term>-<year>`.
-2. Rewrite `data/term.json`.
-3. For each course, update `meeting`, `registrar`, `final`, and `schedule`.
-4. Keep or drop `features/` per course.
+Every strict build checks:
 
-The previous term's repo stays live at its own URL, frozen, as the archive.
+- meeting geometry, known weekdays, and ordered unique dates;
+- missing banners and feature fragments;
+- unresolved `unverified` facts;
+- missing syllabus or Canvas destinations;
+- stale `chatgpt.site` or local-only URLs.
 
-## What `build.py` computes so you don't
+`deploy.sh` additionally checks `.nojekyll`, metadata, breadcrumbs, navigation reachability, and local asset resolution. It cannot verify registrar facts or private-system access; those must be confirmed at their authority before removing an `unverified` entry.
 
-- Week-grid block positions from `meeting.start`/`meeting.end`. No hand-typed
-  pixel offsets. `PX_PER_MIN` reproduces the geometry of the hand-built grid
-  this replaced.
-- 12-hour clock labels from 24-hour times.
-- Meeting counts, day-of-week labels, workspace readiness states.
-- Every `<head>`: favicon, OG tags, Twitter tags, absolute `og:image`.
-- Breadcrumbs on every course page.
+## Privacy boundary
 
-## Checks that run on every build
-
-`build.py` warns (never blocks) about: meeting times outside the week-grid
-window, unknown meeting days, out-of-order or duplicate schedule dates, missing
-banner images, and anything listed in a course's `unverified` array.
-
-Put a fact you have not confirmed in `unverified` rather than silently shipping
-it. It will be printed on every single build until you resolve it.
-
-## Gotcha worth remembering
-
-Do not put `url()` inside a CSS custom property. Chrome resolves it against the
-stylesheet that substitutes the variable, not the document, so a relative path
-silently 404s. `build.py` writes `background-image` directly onto the element
-for this reason — see `banner_style()`.
-
-## What this replaced
-
-Three courses were previously described in four places at once: a TypeScript
-file in a Next.js app deployed to `*.chatgpt.site` with no git remote, inline JS
-in a separate GitHub Pages repo (with the meeting times re-encoded a second time
-as hand-computed pixel offsets), the per-course `STATUS.md` files, and the
-Google Docs syllabi. Changing a room meant remembering all four.
-
-The Google Docs syllabi and Canvas remain the authoritative student-facing
-documents. This site is the launch surface, and `data/` is its single source.
+Do not put student names, roster data, private repository URLs, local filesystem paths, medical information, or non-public planning notes in `data/`, generated HTML, or screenshots. The student index never renders roster links. The instructor surface labels any authorized roster destination as **Authenticated**.

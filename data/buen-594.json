@@ -36,7 +36,8 @@
       "Claudena Skran",
       "Matty Wegehaupt"
     ],
-    "credits": 3,
+    "credits": 2,
+    "creditsLabel": "2 units",
     "crn": "5189",
     "email": "BUEN594-202650-5189@lawrence.edu"
   },
@@ -59,9 +60,6 @@
     ],
     "build": "Resolve syllabus decisions and shape the ten Canvas modules."
   },
-  "unverified": [
-    "credits: course-data.ts said 3; the buen594 memory file says 2 units (one third of a standard 6-unit course). These disagree. Confirm against the registrar before this reaches students."
-  ],
   "schedule": [
     {
       "date": "2026-09-15",

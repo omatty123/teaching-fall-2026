@@ -28,7 +28,8 @@
       "src": "images/hist-212-banner.jpg",
       "position": "center 38%",
       "alt": "Honil gangni yeokdae gukdo jido (1402), a Korean map of the known world",
-      "credit": "Kwon Kun and Yi Hoe, Honil gangni yeokdae gukdo jido, 1402"
+      "credit": "Kwon Kun and Yi Hoe, Honil gangni yeokdae gukdo jido, 1402 · public domain",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:KangnidoMap.jpg"
     }
   },
   "registrar": {
@@ -57,7 +58,7 @@
       "Finish the evidence worksheet and visual source.",
       "Write the provisional answer and strongest counterevidence."
     ],
-    "build": "Lock the primary-source spine and the Emperor's Great Debate."
+    "build": "Lock the primary-source spine and 馬大王之清談."
   },
   "schedule": [
     {
@@ -102,7 +103,7 @@
     },
     {
       "date": "2026-10-20",
-      "topic": "The Emperor's Great Debate"
+      "topic": "馬大王之清談"
     },
     {
       "date": "2026-10-27",

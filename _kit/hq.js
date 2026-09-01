@@ -1,199 +1,186 @@
-/* Teaching HQ — next-session logic.
-   Expects `courseConfig` and `termName` to be defined by the page (build.py emits them
-   from data/*.json). Nothing here knows the name of any particular course. */
+/* Fall 2026 Field Desk runtime.
+ * Generated markup owns the facts; this file only answers "what is next?"
+ * and stores optional personal queue checks in this browser.
+ */
+(function () {
+  "use strict";
 
-function localIso(now) {
-  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-}
+  const DAY = 24 * 60 * 60 * 1000;
+  const stateKey = "fall-2026-teaching-hq-task-state-v2";
 
-function formatDate(value) {
-  return new Date(value + "T12:00:00").toLocaleDateString("en-US", {
-    weekday: "long", month: "long", day: "numeric",
-  });
-}
-
-function nextIndex(schedule, now, endMinutes) {
-  const today = localIso(now);
-  const minutes = now.getHours() * 60 + now.getMinutes();
-  return schedule.findIndex(
-    (item) => item.date > today || (item.date === today && minutes < endMinutes)
-  );
-}
-
-function taskMarkup(key, session, tasks) {
-  return tasks
-    .map((task, index) => {
-      const storageKey = `${termName}:${key}:${session.date}:${index}`;
-      let checked = false;
-      try {
-        checked = localStorage.getItem(storageKey) === "done";
-      } catch (_) {}
-      return `<label class="task-item"><input type="checkbox" data-storage-key="${storageKey}" ${
-        checked ? "checked" : ""
-      }><span>${task}</span></label>`;
-    })
-    .join("");
-}
-
-function renderCourse(key, now) {
-  const config = courseConfig[key];
-  const index = nextIndex(config.schedule, now, config.endMinutes);
-  const session = index >= 0 ? config.schedule[index] : null;
-  const upNext =
-    index >= 0 && index + 1 < config.schedule.length ? config.schedule[index + 1] : null;
-  const dateEl = document.getElementById(`${key}Date`);
-  const topicEl = document.getElementById(`${key}Topic`);
-  const bodyEl = document.getElementById(`${key}Body`);
-  if (!dateEl || !topicEl || !bodyEl) return null;
-
-  if (!session) {
-    dateEl.textContent = termName;
-    topicEl.textContent = "Regular meetings complete";
-    bodyEl.innerHTML = `<div class="no-class">The course page remains available above.</div>`;
-    return null;
+  function localIso(date) {
+    const y = date.getFullYear();
+    const m = String(date.getMonth() + 1).padStart(2, "0");
+    const d = String(date.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
   }
 
-  dateEl.textContent =
-    formatDate(session.date) + (session.tentative ? " · transition to confirm" : "");
-  topicEl.textContent = session.topic;
-
-  let html = session.detail ? `<div class="session-detail">${session.detail}</div>` : "";
-  html += `<div class="section-title">Before class</div><div class="task-list">${taskMarkup(
-    key, session, config.tasks
-  )}</div>`;
-  html += `<div class="build-note"><strong>Term build:</strong> ${config.build}</div>`;
-  if (upNext) {
-    html += `<div class="up-next"><div class="up-next-label">Up next</div><div class="up-next-date">${formatDate(
-      upNext.date
-    )}</div><div class="up-next-topic">${upNext.topic}</div></div>`;
-  }
-  bodyEl.innerHTML = html;
-  return { key, session };
-}
-
-function escapeHtml(value) {
-  return String(value)
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-
-function taskBoardState(task) {
-  const storageKey = `${termName}:term-board:${task.id}`;
-  try {
-    const saved = localStorage.getItem(storageKey);
-    if (saved !== null) return saved === "done";
-  } catch (_) {}
-  return Boolean(task.done);
-}
-
-function initTaskBoard() {
-  const list = document.getElementById("todoList");
-  const filters = document.getElementById("todoFilters");
-  if (!list || !filters || !taskBoardConfig || !Array.isArray(taskBoardConfig.items)) return;
-
-  const lanes = Array.isArray(taskBoardConfig.lanes) ? taskBoardConfig.lanes : [];
-  const laneMap = Object.fromEntries(lanes.map((lane) => [lane.id, lane]));
-  let activeLane = "all";
-
-  filters.innerHTML = [
-    { id: "all", label: "All tasks", tone: "all" },
-    ...lanes,
-  ].map((lane) => `<button class="todo-filter todo-filter--${escapeHtml(lane.tone || lane.id)}" type="button" data-lane="${escapeHtml(lane.id)}" aria-pressed="${lane.id === "all"}">${escapeHtml(lane.label)}</button>`).join("");
-
-  function render() {
-    const visible = taskBoardConfig.items.filter((task) => activeLane === "all" || task.lane === activeLane);
-    list.innerHTML = visible.map((task) => {
-      const done = taskBoardState(task);
-      const lane = laneMap[task.lane] || { label: task.lane, tone: "neutral" };
-      return `<article class="todo-item ${done ? "is-done" : ""}" data-tone="${escapeHtml(lane.tone)}">
-        <div class="todo-item-copy">
-          <div class="todo-meta"><span class="course-chip" data-course="${escapeHtml(task.course)}">${escapeHtml(task.course)}</span><span>${escapeHtml(lane.label)}</span><span>${Number(task.points) || 0} pts</span></div>
-          <h3>${escapeHtml(task.title)}</h3>
-          <p>${escapeHtml(task.detail)}</p>
-        </div>
-        <button class="todo-action" type="button" data-task-id="${escapeHtml(task.id)}" aria-label="${done ? "Reopen" : "Complete"} ${escapeHtml(task.title)}">${done ? "Reopen" : `Done +${Number(task.points) || 0}`}</button>
-      </article>`;
-    }).join("");
-
-    const totalPoints = taskBoardConfig.items.reduce((sum, task) => sum + (Number(task.points) || 0), 0);
-    const completed = taskBoardConfig.items.filter(taskBoardState);
-    const completedPoints = completed.reduce((sum, task) => sum + (Number(task.points) || 0), 0);
-    const percent = totalPoints ? Math.round((completedPoints / totalPoints) * 100) : 0;
-    const score = document.getElementById("todoScore");
-    const progress = document.getElementById("todoProgress");
-    const track = progress && progress.parentElement;
-    const count = document.getElementById("todoCount");
-    if (score) score.textContent = `${percent}%`;
-    if (progress) progress.style.transform = `scaleX(${percent / 100})`;
-    if (track) track.setAttribute("aria-valuenow", String(percent));
-    if (count) count.textContent = `${completed.length} of ${taskBoardConfig.items.length} tasks · ${completedPoints} points banked`;
+  function formatDate(iso, options) {
+    const date = new Date(`${iso}T12:00:00`);
+    return new Intl.DateTimeFormat("en-US", options || {
+      weekday: "short", month: "short", day: "numeric"
+    }).format(date);
   }
 
-  filters.addEventListener("click", (event) => {
-    const button = event.target.closest("button[data-lane]");
-    if (!button) return;
-    activeLane = button.dataset.lane;
-    filters.querySelectorAll("button").forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
-    render();
-  });
-
-  list.addEventListener("click", (event) => {
-    const button = event.target.closest("button[data-task-id]");
-    if (!button) return;
-    const task = taskBoardConfig.items.find((item) => item.id === button.dataset.taskId);
-    if (!task) return;
-    const nextState = !taskBoardState(task);
-    try {
-      localStorage.setItem(`${termName}:term-board:${task.id}`, nextState ? "done" : "open");
-    } catch (_) {}
-    const announcement = document.getElementById("todoAnnouncement");
-    if (announcement) announcement.textContent = `${task.title} ${nextState ? "completed" : "reopened"}.`;
-    render();
-  });
-
-  render();
-}
-
-function init() {
-  const now = new Date();
-  const dateLabel = document.getElementById("dateLabel");
-  if (dateLabel) {
-    dateLabel.textContent = now.toLocaleDateString("en-US", {
-      weekday: "long", month: "long", day: "numeric", year: "numeric",
-    });
+  function nextIndex(schedule, now, endMinutes) {
+    const today = localIso(now);
+    const minute = now.getHours() * 60 + now.getMinutes();
+    let index = schedule.findIndex((meeting) =>
+      meeting.date > today || (meeting.date === today && minute <= Number(endMinutes || 1440))
+    );
+    if (index < 0) index = schedule.length - 1;
+    return Math.max(0, index);
   }
 
-  const nextSessions = Object.keys(courseConfig)
-    .map((key) => renderCourse(key, now))
-    .filter(Boolean);
-  nextSessions.sort((a, b) => a.session.date.localeCompare(b.session.date));
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
 
-  const subtitle = document.getElementById("headerSubtitle");
-  if (subtitle) {
-    if (nextSessions.length) {
-      const nextDate = nextSessions[0].session.date;
-      const labels = nextSessions
-        .filter((item) => item.session.date === nextDate)
-        .map((item) => item.key.toUpperCase())
-        .join(" + ");
-      subtitle.textContent = `Next teaching day · ${formatDate(nextDate)} · ${labels}`;
-    } else {
-      subtitle.textContent = "Regular meetings complete";
+  function taskBoardState() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(stateKey) || "{}"); } catch { saved = {}; }
+    const sourceItems = (window.taskBoardConfig && taskBoardConfig.items) || [];
+    return sourceItems.map((item) => ({
+      ...item,
+      done: Object.prototype.hasOwnProperty.call(saved, item.id) ? Boolean(saved[item.id]) : Boolean(item.done)
+    }));
+  }
+
+  function renderCourse(key, now) {
+    const config = courseConfig[key];
+    if (!config || !config.schedule || !config.schedule.length) return null;
+    const meeting = config.schedule[nextIndex(config.schedule, now, config.endMinutes)];
+    const dateNode = document.getElementById(`${key}Date`);
+    const topicNode = document.getElementById(`${key}Topic`);
+    if (dateNode) dateNode.textContent = formatDate(meeting.date);
+    if (topicNode) topicNode.textContent = meeting.topic || "Meeting details in the course home";
+    return { key, config, meeting };
+  }
+
+  function refreshSituation(now, sessions) {
+    const sorted = sessions.filter(Boolean).sort((a, b) => a.meeting.date.localeCompare(b.meeting.date));
+    const today = localIso(now);
+    const todaySessions = sorted.filter((item) => item.meeting.date === today);
+    const next = sorted[0];
+    const nowTitle = document.getElementById("nowTitle");
+    const nowDetail = document.getElementById("nowDetail");
+    const nextTitle = document.getElementById("nextTitle");
+    const nextDetail = document.getElementById("nextDetail");
+
+    if (nowTitle && nowDetail) {
+      if (todaySessions.length) {
+        nowTitle.textContent = `${todaySessions.length} course${todaySessions.length === 1 ? "" : "s"} meeting today`;
+        nowDetail.textContent = todaySessions.map((item) => item.config.code).join(" · ");
+      } else {
+        nowTitle.textContent = "No course meeting today";
+        nowDetail.textContent = "Use the priority move to prepare the next teaching day.";
+      }
+    }
+
+    if (nextTitle && nextDetail && next) {
+      nextTitle.textContent = `${next.config.code} · ${formatDate(next.meeting.date)}`;
+      nextDetail.textContent = next.meeting.topic || "Open the course home for the current question.";
     }
   }
 
-  document.addEventListener("change", (event) => {
-    const target = event.target;
-    if (!(target instanceof HTMLInputElement) || !target.dataset.storageKey) return;
-    try {
-      localStorage.setItem(target.dataset.storageKey, target.checked ? "done" : "open");
-    } catch (_) {}
-  });
+  function refreshQueueSummary(items) {
+    const open = items.filter((item) => !item.done);
+    const completed = items.filter((item) => item.done);
+    const priority = open.find((item) => item.lane === "matty") || open[0];
+    const risk = document.getElementById("riskTitle");
+    const priorityNode = document.getElementById("priorityTask");
+    const changed = document.getElementById("changedTitle");
+    const count = document.getElementById("todoCount");
+    if (risk) risk.textContent = priority ? priority.title : "No blocking decision recorded";
+    if (priorityNode) priorityNode.textContent = priority ? priority.title : "Opening preparation is clear";
+    if (changed && completed.length) changed.textContent = completed[completed.length - 1].title;
+    if (count) count.textContent = `${open.length} open · ${completed.length} complete`;
+  }
 
-  initTaskBoard();
-}
+  function initTaskBoard() {
+    const list = document.getElementById("todoList");
+    const filters = document.getElementById("todoFilters");
+    if (!list || !filters || !window.taskBoardConfig) return;
 
-init();
+    const labels = Object.fromEntries(((taskBoardConfig.lanes || [])).map((lane) => [lane.id, lane.label]));
+    const filterOptions = [
+      ["open", "Open"],
+      ...Object.keys(labels).map((key) => [key, labels[key]]),
+      ["complete", "Completed"]
+    ];
+    let active = "open";
+
+    function persist(items) {
+      const snapshot = {};
+      items.forEach((item) => { snapshot[item.id] = item.done; });
+      localStorage.setItem(stateKey, JSON.stringify(snapshot));
+    }
+
+    function render() {
+      const items = taskBoardState();
+      filters.innerHTML = filterOptions.map(([key, label]) =>
+        `<button type="button" data-filter="${escapeHtml(key)}" aria-pressed="${key === active}">${escapeHtml(label)}</button>`
+      ).join("");
+
+      const shown = items.filter((item) => {
+        if (active === "open") return !item.done;
+        if (active === "complete") return item.done;
+        return item.lane === active;
+      });
+
+      list.innerHTML = shown.length ? shown.map((item) => `
+        <article class="todo-item${item.done ? " is-done" : ""}">
+          <div>
+            <span class="todo-lane">${escapeHtml(labels[item.lane] || item.lane || "Term")}</span>
+            <h3>${escapeHtml(item.title)}</h3>
+            <p>${escapeHtml(item.detail || "")}</p>
+          </div>
+          <button type="button" data-task-id="${escapeHtml(item.id)}">${item.done ? "Reopen" : "Mark complete"}</button>
+        </article>`).join("") : `<p class="todo-empty">Nothing in this view.</p>`;
+
+      refreshQueueSummary(items);
+    }
+
+    filters.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-filter]");
+      if (!button) return;
+      active = button.dataset.filter;
+      render();
+    });
+
+    list.addEventListener("click", (event) => {
+      const button = event.target.closest("button[data-task-id]");
+      if (!button) return;
+      const items = taskBoardState();
+      const item = items.find((entry) => entry.id === button.dataset.taskId);
+      if (!item) return;
+      item.done = !item.done;
+      persist(items);
+      render();
+      const announcement = document.getElementById("todoAnnouncement");
+      if (announcement) announcement.textContent = `${item.title} marked ${item.done ? "complete" : "open"}.`;
+    });
+
+    render();
+  }
+
+  function init() {
+    const now = new Date();
+    const dateLabel = document.getElementById("dateLabel");
+    if (dateLabel) {
+      dateLabel.textContent = new Intl.DateTimeFormat("en-US", {
+        weekday: "long", month: "long", day: "numeric", year: "numeric"
+      }).format(now);
+    }
+    const sessions = Object.keys(window.courseConfig || {}).map((key) => renderCourse(key, now));
+    refreshSituation(now, sessions);
+    initTaskBoard();
+  }
+
+  init();
+}());

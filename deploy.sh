@@ -16,14 +16,14 @@ PUSH=0
 [[ "${1:-}" == "--push" ]] && PUSH=1
 
 echo "── build ─────────────────────────────────────────"
-python3 build.py
+python3 build.py --strict
 
 echo
 echo "── deploy checklist ──────────────────────────────"
 fail=0
 note() { printf '  %-6s %s\n' "$1" "$2"; }
 
-pages=(index.html courses/*.html)
+pages=(index.html students.html courses/*.html)
 
 # 0. GitHub Pages runs Jekyll, which refuses to publish any directory whose
 #    name starts with "_". Without .nojekyll the whole of _kit/ 404s live and
@@ -56,9 +56,20 @@ done
 # 5. breadcrumb on every sub-page, no orphans
 for page in courses/*.html; do
   grep -q 'class="breadcrumb"' "$page" || { note "FAIL" "$page has no breadcrumb"; fail=1; }
-  grep -q "$(basename "$page")" index.html || { note "FAIL" "$page is an orphan (HQ does not link it)"; fail=1; }
+  basename_page=$(basename "$page")
+  linked=0
+  for source in index.html students.html courses/*.html; do
+    [[ "$source" == "$page" ]] && continue
+    if grep -qE "href=\"([^\"]*/)?${basename_page}([#?][^\"]*)?\"" "$source"; then
+      linked=1
+      break
+    fi
+  done
+  if [[ $linked -eq 0 ]]; then
+    note "FAIL" "$page is an orphan (no generated navigation links it)"; fail=1
+  fi
 done
-[[ $fail -eq 0 ]] && note "ok" "breadcrumbs present, every course page linked from the HQ"
+[[ $fail -eq 0 ]] && note "ok" "breadcrumbs present, every course page linked from the student or instructor surface"
 
 # 6. every local asset resolves on disk
 missing=0

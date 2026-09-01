@@ -73,7 +73,7 @@
     "label": "Open Spring 2026 archive"
   },
   "taskBoard": {
-    "updated": "August 29, 2026",
+    "updated": "September 1, 2026",
     "intro": "One term. Three courses. Clear the decisions that unlock everything else.",
     "lanes": [
       {
@@ -101,16 +101,18 @@
         "course": "FRST",
         "lane": "matty",
         "title": "Choose the opening reflection deadline",
-        "detail": "September 13 or September 14 at 11:59 p.m.",
-        "points": 20
+        "detail": "Set for Sunday, September 13 at 5:00 p.m.",
+        "points": 20,
+        "done": true
       },
       {
         "id": "frst-publish-canvas",
         "course": "FRST",
         "lane": "matty",
         "title": "Authorize the prepared Canvas course",
-        "detail": "Confirm that the course shell and opening assignments can be published.",
-        "points": 20
+        "detail": "The course and all eleven assignments were published August 30.",
+        "points": 20,
+        "done": true
       },
       {
         "id": "frst-delta-listening",
@@ -197,15 +199,16 @@
         "course": "FRST",
         "lane": "codex",
         "title": "Finish first-day Canvas polish",
-        "detail": "Tighten navigation and verify front-page links.",
-        "points": 10
+        "detail": "Navigation, front-page links, and Student View were verified August 30.",
+        "points": 10,
+        "done": true
       },
       {
         "id": "hist-debate-handoff",
         "course": "HIST",
         "lane": "codex",
         "title": "Synchronize the debate title and roster handoff",
-        "detail": "Make the student-facing labels and workflow agree.",
+        "detail": "The public debate title is synchronized; the Access-gated roster handoff still needs confirmation.",
         "points": 10
       },
       {
@@ -229,8 +232,9 @@
         "course": "TERM",
         "lane": "codex",
         "title": "Make unsafe uncertainty block publication",
-        "detail": "Add a release check so unresolved privacy questions cannot slip onto the public site.",
-        "points": 10
+        "detail": "Strict publication checks now stop release while unresolved source or privacy questions remain.",
+        "points": 10,
+        "done": true
       },
       {
         "id": "buen-links-live",

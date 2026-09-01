@@ -2,6 +2,11 @@
 __pycache__/
 *.pyc
 
+# Local Impeccable exploration and visual-review evidence
+.impeccable/critique/
+.impeccable/mocks/
+.impeccable/review/
+
 # private planning and anything with student data never enters this repo
 teaching-notes/
 roster/

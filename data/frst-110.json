@@ -7,7 +7,7 @@
   "catalogTitle": "First-Year Studies",
   "cardName": "First-Year Studies · Water",
   "description": "A shared home for close reading, seminar preparation, writing, and the common intellectual work of the first year.",
-  "feature": "frst-110.html",
+  "feature": "frst-110.fragment",
   "meeting": {
     "days": [
       "Mon",
@@ -30,7 +30,9 @@
       "type": "image",
       "src": "images/frst-110-banner.jpg",
       "position": "center 43%",
-      "alt": "Ma Yuan's painting of waves"
+      "alt": "Ma Yuan's Waving Surface of the Autumn Flood, a study of layered curling waves",
+      "credit": "Ma Yuan, The Waving Surface of the Autumn Flood, c. 1200 · public domain",
+      "creditUrl": "https://commons.wikimedia.org/wiki/File:Ma_Yuan_-_Water_Album_-_The_Waving_Surface_of_the_Autumn_Flood.jpg"
     }
   },
   "registrar": {
@@ -42,10 +44,10 @@
     "email": "FRST110-202650-5576@lawrence.edu"
   },
   "final": {
-    "label": "Final examination",
-    "day": "Sunday",
-    "date": "November 22, 2026",
-    "time": "11:30 a.m.–2:00 p.m."
+    "label": "Course conclusion",
+    "day": "Sunday–Tuesday",
+    "date": "November 22–24, 2026",
+    "time": "Analysis Essay · Final Literacy Reflection"
   },
   "links": {
     "syllabus": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit",
@@ -57,7 +59,7 @@
   "extraPages": [
     {
       "slug": "water-in-the-news",
-      "fragment": "water-in-the-news.html",
+      "fragment": "water-in-the-news.fragment",
       "title": "Water in the News · FRST 110",
       "heading": "Water in the News",
       "description": "A student-built current of stories about water, place, power, and change.",

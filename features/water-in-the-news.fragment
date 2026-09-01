@@ -5,11 +5,13 @@
       <h1>Water in the News</h1>
       <p><a href="frst-110.html">FRST 110</a> · shared links about water, place, power, culture, and change</p>
     </div>
-    <a class="news-submit" id="newsSubmit" href="#">Submit a link <span aria-hidden="true">↗</span></a>
+    <a class="news-submit" id="newsSubmit" href="#">Submit a link</a>
   </header>
 
   <nav class="news-controls" aria-label="Browse stories by subject">
     <div class="news-filters" id="newsFilters" role="group" aria-label="Filter stories by subject"></div>
+    <label class="news-filter-select" for="newsFilterSelect"><span>Subject</span><select id="newsFilterSelect"></select></label>
+    <p class="news-status" id="newsStatus" aria-live="polite">Checking the live class feed…</p>
   </nav>
 
   <section class="news-stream" id="newsStream" aria-live="polite" aria-busy="true">

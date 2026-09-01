@@ -18,28 +18,95 @@
 <meta name="twitter:title" content="Fall 2026 Teaching HQ">
 <meta name="twitter:description" content="Next-class preparation, weekly schedule, and course links for Fall 2026 at Lawrence University.">
 <meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/hist-212-banner.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="_kit/hq.css">
 </head>
-<body>
-<header>
-  <div class="date-label" id="dateLabel">Loading…</div>
-  <h1 id="headerTitle">Fall 2026 Teaching HQ</h1>
-  <div class="subtitle" id="headerSubtitle">Next class, prep queue, and the whole week</div>
-  <nav class="hq-nav" aria-label="Teaching HQ">
-    <a href="#todo">Term Leader board</a>
-    <a href="#courses">Course prep</a>
-    <a href="#week">Week schedule</a>
-    <a href="https://omatty123.github.io/teaching-today/spring-2026.html">Archive</a>
+<body class="hq-page">
+<!--
+THESIS: A teaching day is a situation to read, not a dashboard to admire; the surface refuses generic cards, points, and inventory-first hierarchy.
+OWN-WORLD: Warm paper, navy ink, fine rules, square checks, restrained rust/moss/ochre signals, documentary strips, and compact sans-serif type.
+STORY: Orient to now, see the next consequential move, notice risk and change, then open the right course or system.
+FIRST VIEWPORT: A slim masthead sits above four equal situation columns and one prioritized move; course dispatches begin before the fold ends.
+FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<a class="skip-link" href="#main">Skip to teaching situation</a>
+<header class="site-masthead">
+  <div>
+    <h1>Fall 2026 Teaching HQ</h1>
+    <p id="dateLabel">Loading date…</p>
+  </div>
+  <nav aria-label="Teaching HQ">
+    <a href="students.html">Student course index</a>
+    <a href="#week">Week</a>
+    <a href="#decisions">All decisions</a>
+    <a href="https://omatty123.github.io/teaching-today/spring-2026.html">Previous term</a>
   </nav>
 </header>
 
-<section class="week-section" id="week" aria-labelledby="weekTitle">
-  <div class="section-heading">
-    <h2 id="weekTitle">Week at a glance</h2>
-    <p>Recurring meetings · Appleton Main Campus</p>
+<main id="main">
+  <section class="situation-ledger" aria-labelledby="situationTitle">
+    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
+    <div><h3>Now</h3><strong id="nowTitle">Orienting…</strong><p id="nowDetail">Checking today’s teaching schedule.</p></div>
+    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
+    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">Choose the Delta blues listening selections</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
+    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">Give the BUEN card a relevant image</strong><p>Queue projection updated September 1, 2026.</p></div>
+  </section>
+
+  <section class="priority-move" aria-labelledby="priorityTitle">
+    <div>
+      <h2 id="priorityTitle"><span id="priorityTask">Choose the Delta blues listening selections</span></h2>
+      <p><strong>Before the next class.</strong> Select the tracks and decide where students will access them.</p>
+    </div>
+    <a class="primary-action" href="#decisions">Open the decision queue</a>
+  </section>
+
+  <section class="dispatch-section" id="courses" aria-labelledby="coursesTitle">
+    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><p>Current meeting and working destinations</p></div>
+    <div class="dispatch-list"><article class="course-dispatch" id="frstDispatch" style="--course-color:#245a8d;--course-gradient:linear-gradient(135deg, #173f67 0%, #2d689f 100%)">
+  <figure class="dispatch-image"><img src="images/frst-110-banner.jpg" alt="Ma Yuan&#x27;s Waving Surface of the Autumn Flood, a study of layered curling waves" style="object-position:center 43%"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Ma_Yuan_-_Water_Album_-_The_Waving_Surface_of_the_Autumn_Flood.jpg">Ma Yuan, The Waving Surface of the Autumn Flood, c. 1200 · public domain</a></figcaption></figure>
+  <div class="dispatch-identity">
+    <h3>First-Year Studies</h3>
+    <p class="course-code">FRST 110</p>
+    <p>Monday, Wednesday &amp; Friday · 11:10 a.m.–12:20 p.m.</p>
   </div>
-  <div class="week-card">
+  <div class="dispatch-session">
+    <span>Next meeting</span>
+    <strong id="frstDate">Loading schedule…</strong>
+    <p id="frstTopic"></p>
+  </div>
+  <nav class="dispatch-links" aria-label="FRST 110 destinations"><a href="courses/frst-110.html">Course home</a><a href="https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit">Syllabus</a><a href="https://lawrence.instructure.com/courses/14726">Canvas</a><a href="courses/water-in-the-news.html">Water in the News</a><a href="https://teaching-fall-2026-roster.pages.dev/frst-110.html">Learn the names <span class="access-tag">Authenticated</span></a></nav>
+</article><article class="course-dispatch" id="histDispatch" style="--course-color:#7a3030;--course-gradient:linear-gradient(135deg, #542020 0%, #873a3a 100%)">
+  <figure class="dispatch-image"><img src="images/hist-212-banner.jpg" alt="Honil gangni yeokdae gukdo jido (1402), a Korean map of the known world" style="object-position:center 38%"><figcaption><a href="https://commons.wikimedia.org/wiki/File:KangnidoMap.jpg">Kwon Kun and Yi Hoe, Honil gangni yeokdae gukdo jido, 1402 · public domain</a></figcaption></figure>
+  <div class="dispatch-identity">
+    <h3>East Asia in the Premodern World</h3>
+    <p class="course-code">HIST / EAST / GLST 212</p>
+    <p>Tuesday &amp; Thursday · 10:25 a.m.–12:10 p.m.</p>
+  </div>
+  <div class="dispatch-session">
+    <span>Next meeting</span>
+    <strong id="histDate">Loading schedule…</strong>
+    <p id="histTopic"></p>
+  </div>
+  <nav class="dispatch-links" aria-label="HIST 212 destinations"><a href="courses/hist-212.html">Course home</a><a href="https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing">Syllabus</a><a href="https://lawrence.instructure.com/courses/13411">Canvas</a><a href="https://teaching-fall-2026-roster.pages.dev/hist-212.html">Learn the names <span class="access-tag">Authenticated</span></a></nav>
+</article><article class="course-dispatch" id="buenDispatch" style="--course-color:#2d5a50;--course-gradient:linear-gradient(135deg, #17352e 0%, #3f6a60 100%)">
+  <figure class="dispatch-image"><img src="images/buen-594-banner.jpg" alt="A young woman learns chair-making in a National Youth Administration workshop, 1943" style="object-position:center 36%"><figcaption><a href="https://www.loc.gov/pictures/item/2017852383/">John Vachon, National Youth Administration training program, 1943</a></figcaption></figure>
+  <div class="dispatch-identity">
+    <h3>Experiential Learning &amp; Professional Preparation</h3>
+    <p class="course-code">BUEN 594</p>
+    <p>Tuesday · 12:40–2:25 p.m.</p>
+  </div>
+  <div class="dispatch-session">
+    <span>Next meeting</span>
+    <strong id="buenDate">Loading schedule…</strong>
+    <p id="buenTopic"></p>
+  </div>
+  <nav class="dispatch-links" aria-label="BUEN 594 destinations"><a href="courses/buen-594.html">Course home</a><a href="https://lawrenceu-my.sharepoint.com/:w:/r/personal/marshalr_lawrence_edu/_layouts/15/Doc.aspx?sourcedoc=%7B2DCC3750-9B47-404A-843F-71E29BF07DF5%7D&amp;file=BUEN594Fall2026Syllabus.docx&amp;fromShare=true&amp;action=default&amp;mobileredirect=true">Syllabus</a><a href="https://lawrence.instructure.com/courses/13940">Canvas</a></nav>
+</article></div>
+  </section>
+
+  <section class="week-section" id="week" aria-labelledby="weekTitle">
+    <div class="section-heading"><h2 id="weekTitle">Recurring week</h2><p>Appleton Main Campus</p></div>
+    <div class="week-card">
   <div class="week-desktop" aria-label="Fall 2026 weekly block schedule">
     <div class="time-column">
       <div class="day-name" aria-hidden="true"></div>
@@ -50,80 +117,29 @@
   <div class="week-mobile"><div class="mobile-day"><strong>Monday</strong><div><a class="mobile-block" style="--course-color:#245a8d" href="courses/frst-110.html"><b>FRST 110</b><span>11:10–12:20</span></a></div></div><div class="mobile-day"><strong>Tuesday</strong><div><a class="mobile-block" style="--course-color:#7a3030" href="courses/hist-212.html"><b>HIST 212</b><span>10:25–12:10</span></a><a class="mobile-block" style="--course-color:#2d5a50" href="courses/buen-594.html"><b>BUEN 594</b><span>12:40–2:25</span></a></div></div><div class="mobile-day"><strong>Wednesday</strong><div><a class="mobile-block" style="--course-color:#245a8d" href="courses/frst-110.html"><b>FRST 110</b><span>11:10–12:20</span></a></div></div><div class="mobile-day"><strong>Thursday</strong><div><a class="mobile-block" style="--course-color:#7a3030" href="courses/hist-212.html"><b>HIST 212</b><span>10:25–12:10</span></a></div></div><div class="mobile-day"><strong>Friday</strong><div><a class="mobile-block" style="--course-color:#245a8d" href="courses/frst-110.html"><b>FRST 110</b><span>11:10–12:20</span></a></div></div></div>
   <div class="term-strip" aria-label="Key fall 2026 dates"><div class="term-date"><strong>September 11</strong>First FRST meeting</div><div class="term-date"><strong>September 14</strong>Fall classes begin</div><div class="term-date"><strong>October 22–25</strong>Midterm reading period</div><div class="term-date"><strong>November 19</strong>Last day of classes</div></div>
 </div>
-</section>
+  </section>
 
-<main class="container" id="courses">
-<article class="course-card" id="frstCard" style="--course-color:#245a8d;--course-gradient:linear-gradient(135deg, #173f67 0%, #2d689f 100%)">
-  <div class="card-banner" data-banner="image" role="img" style="background-image:url('images/frst-110-banner.jpg');background-position:center 43%" aria-label="Ma Yuan&#x27;s painting of waves"></div>
-  <div class="course-header">
-    <div class="course-code">FRST 110</div>
-    <div class="course-name">First-Year Studies · Water</div>
-    <div class="header-links"><a href="courses/frst-110.html" class="header-link">Course page</a><a href="https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit" class="header-link">Syllabus</a><a href="https://lawrence.instructure.com/courses/14726" class="header-link">Canvas</a><a href="courses/water-in-the-news.html" class="header-link">Water in the News</a><a href="https://teaching-fall-2026-roster.pages.dev/frst-110.html" class="header-link private" title="Instructor only"><span aria-hidden="true">•</span> Learn the names</a></div>
-  </div>
-  <div class="session-info">
-    <div class="class-date" id="frstDate"></div>
-    <div class="class-topic" id="frstTopic"></div>
-  </div>
-  <div class="course-body" id="frstBody"></div>
-</article><article class="course-card" id="histCard" style="--course-color:#7a3030;--course-gradient:linear-gradient(135deg, #542020 0%, #873a3a 100%)">
-  <div class="card-banner" data-banner="image" role="img" style="background-image:url('images/hist-212-banner.jpg');background-position:center 38%" aria-label="Honil gangni yeokdae gukdo jido (1402), a Korean map of the known world"></div>
-  <div class="course-header">
-    <div class="course-code">HIST / EAST / GLST 212</div>
-    <div class="course-name">East Asia in the Premodern World</div>
-    <div class="header-links"><a href="courses/hist-212.html" class="header-link">Course page</a><a href="https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing" class="header-link">Syllabus</a><a href="https://lawrence.instructure.com/courses/13411" class="header-link">Canvas</a><a href="https://teaching-fall-2026-roster.pages.dev/hist-212.html" class="header-link private" title="Instructor only"><span aria-hidden="true">•</span> Learn the names</a></div>
-  </div>
-  <div class="session-info">
-    <div class="class-date" id="histDate"></div>
-    <div class="class-topic" id="histTopic"></div>
-  </div>
-  <div class="course-body" id="histBody"></div>
-</article><article class="course-card" id="buenCard" style="--course-color:#2d5a50;--course-gradient:linear-gradient(135deg, #17352e 0%, #3f6a60 100%)">
-  <div class="card-banner" data-banner="image" role="img" style="background-image:url('images/buen-594-banner.jpg');background-position:center 36%" aria-label="A young woman learns chair-making in a National Youth Administration workshop, 1943"></div>
-  <div class="course-header">
-    <div class="course-code">BUEN 594</div>
-    <div class="course-name">Experiential Learning &amp; Professional Preparation</div>
-    <div class="header-links"><a href="courses/buen-594.html" class="header-link">Course page</a><a href="https://lawrenceu-my.sharepoint.com/:w:/r/personal/marshalr_lawrence_edu/_layouts/15/Doc.aspx?sourcedoc=%7B2DCC3750-9B47-404A-843F-71E29BF07DF5%7D&amp;file=BUEN594Fall2026Syllabus.docx&amp;fromShare=true&amp;action=default&amp;mobileredirect=true" class="header-link">Syllabus</a><a href="https://lawrence.instructure.com/courses/13940" class="header-link">Canvas</a></div>
-  </div>
-  <div class="session-info">
-    <div class="class-date" id="buenDate"></div>
-    <div class="class-topic" id="buenTopic"></div>
-  </div>
-  <div class="course-body" id="buenBody"></div>
-</article>
+  <section class="decision-section" id="decisions" aria-labelledby="todoTitle">
+    <details class="decision-disclosure">
+      <summary><span><strong id="todoTitle">All term decisions</strong><small>One term. Three courses. Clear the decisions that unlock everything else.</small></span><span id="todoCount">Loading queue…</span></summary>
+      <div class="decision-body">
+        <div class="todo-filters" id="todoFilters" role="group" aria-label="Filter the decision queue"></div>
+        <div class="todo-list" id="todoList"></div>
+        <p class="todo-storage-note">Personal checks stay in this browser. Course status files remain authoritative.</p>
+        <div class="sr-only" id="todoAnnouncement" aria-live="polite"></div>
+      </div>
+    </details>
+  </section>
 </main>
-<section class="todo-section" id="todo" aria-labelledby="todoTitle">
-  <div class="todo-shell">
-    <div class="todo-top">
-      <div>
-        <div class="todo-kicker">Updated August 29, 2026</div>
-        <h2 id="todoTitle">Term Leader Board</h2>
-        <p>One term. Three courses. Clear the decisions that unlock everything else.</p>
-      </div>
-      <div class="momentum" aria-labelledby="momentumLabel">
-        <div class="momentum-heading">
-          <span id="momentumLabel">Term momentum</span>
-          <strong id="todoScore">0%</strong>
-        </div>
-        <div class="momentum-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-labelledby="momentumLabel">
-          <span id="todoProgress"></span>
-        </div>
-        <span class="momentum-count" id="todoCount">Loading tasks…</span>
-      </div>
-    </div>
-    <div class="todo-filters" id="todoFilters" role="group" aria-label="Filter the task board"></div>
-    <div class="todo-list" id="todoList"></div>
-    <p class="todo-storage-note">Checks are saved only in this browser. The shared list stays unchanged.</p>
-    <div class="sr-only" id="todoAnnouncement" aria-live="polite"></div>
-  </div>
-</section>
 
 <section class="archive-section" aria-label="Previous terms">
   <div class="archive-link-card"><span>The Spring 2026 prep page is preserved as it was, with its Winter 2026 links below.</span>
-  <a href="https://omatty123.github.io/teaching-today/spring-2026.html">Open Spring 2026 archive →</a></div>
+  <a href="https://omatty123.github.io/teaching-today/spring-2026.html">Open Spring 2026 archive</a></div>
 </section>
 <script>
-const courseConfig = {
+window.courseConfig = {
   "frst": {
+    "code": "FRST 110",
     "schedule": [
       {
         "date": "2026-09-11",
@@ -254,9 +270,11 @@ const courseConfig = {
       "Set one open, debatable guiding question.",
       "Prepare the close-reading activity and exit move."
     ],
-    "build": "Finalize the schedule, syllabus, and opening Canvas module."
+    "build": "Finalize the schedule, syllabus, and opening Canvas module.",
+    "href": "courses/frst-110.html"
   },
   "hist": {
+    "code": "HIST 212",
     "schedule": [
       {
         "date": "2026-09-15",
@@ -300,7 +318,7 @@ const courseConfig = {
       },
       {
         "date": "2026-10-20",
-        "topic": "The Emperor's Great Debate"
+        "topic": "馬大王之清談"
       },
       {
         "date": "2026-10-27",
@@ -341,9 +359,11 @@ const courseConfig = {
       "Finish the evidence worksheet and visual source.",
       "Write the provisional answer and strongest counterevidence."
     ],
-    "build": "Lock the primary-source spine and the Emperor's Great Debate."
+    "build": "Lock the primary-source spine and 馬大王之清談.",
+    "href": "courses/hist-212.html"
   },
   "buen": {
+    "code": "BUEN 594",
     "schedule": [
       {
         "date": "2026-09-15",
@@ -392,12 +412,13 @@ const courseConfig = {
       "Ready the in-class practice and student artifact.",
       "Post the brief reflection prompt."
     ],
-    "build": "Resolve syllabus decisions and shape the ten Canvas modules."
+    "build": "Resolve syllabus decisions and shape the ten Canvas modules.",
+    "href": "courses/buen-594.html"
   }
 };
-const termName = "Fall 2026";
-const taskBoardConfig = {
-  "updated": "August 29, 2026",
+window.termName = "Fall 2026";
+window.taskBoardConfig = {
+  "updated": "September 1, 2026",
   "intro": "One term. Three courses. Clear the decisions that unlock everything else.",
   "lanes": [
     {
@@ -425,16 +446,18 @@ const taskBoardConfig = {
       "course": "FRST",
       "lane": "matty",
       "title": "Choose the opening reflection deadline",
-      "detail": "September 13 or September 14 at 11:59 p.m.",
-      "points": 20
+      "detail": "Set for Sunday, September 13 at 5:00 p.m.",
+      "points": 20,
+      "done": true
     },
     {
       "id": "frst-publish-canvas",
       "course": "FRST",
       "lane": "matty",
       "title": "Authorize the prepared Canvas course",
-      "detail": "Confirm that the course shell and opening assignments can be published.",
-      "points": 20
+      "detail": "The course and all eleven assignments were published August 30.",
+      "points": 20,
+      "done": true
     },
     {
       "id": "frst-delta-listening",
@@ -521,15 +544,16 @@ const taskBoardConfig = {
       "course": "FRST",
       "lane": "codex",
       "title": "Finish first-day Canvas polish",
-      "detail": "Tighten navigation and verify front-page links.",
-      "points": 10
+      "detail": "Navigation, front-page links, and Student View were verified August 30.",
+      "points": 10,
+      "done": true
     },
     {
       "id": "hist-debate-handoff",
       "course": "HIST",
       "lane": "codex",
       "title": "Synchronize the debate title and roster handoff",
-      "detail": "Make the student-facing labels and workflow agree.",
+      "detail": "The public debate title is synchronized; the Access-gated roster handoff still needs confirmation.",
       "points": 10
     },
     {
@@ -553,8 +577,9 @@ const taskBoardConfig = {
       "course": "TERM",
       "lane": "codex",
       "title": "Make unsafe uncertainty block publication",
-      "detail": "Add a release check so unresolved privacy questions cannot slip onto the public site.",
-      "points": 10
+      "detail": "Strict publication checks now stop release while unresolved source or privacy questions remain.",
+      "points": 10,
+      "done": true
     },
     {
       "id": "buen-links-live",

@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-01T14:06:15Z",
+  "title": "Design System: Fall 2026 Teaching HQ",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "status-risk-inset",
+        "value": "inset 0 4px 0 var(--rust)",
+        "purpose": "A structural top rule for risk state; it must not read as elevation."
+      },
+      {
+        "name": "status-changed-inset",
+        "value": "inset 0 4px 0 var(--moss)",
+        "purpose": "A structural top rule for changed state; it must not read as elevation."
+      },
+      {
+        "name": "atlas-cover-object",
+        "value": "0 2px 6px oklch(0.2 0.025 28 / 0.18)",
+        "purpose": "Reserved for physical book-cover imagery in FRST atlas reading rows."
+      }
+    ],
+    "motion": [
+      {
+        "name": "atlas-state",
+        "value": "180ms ease-out",
+        "purpose": "Atlas navigation color and map-marker hover/focus feedback only."
+      },
+      {
+        "name": "reduced-motion-floor",
+        "value": "0.01ms",
+        "purpose": "Collapses transitions and animations when reduced motion is requested."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "dispatch-compact",
+        "value": "1040px"
+      },
+      {
+        "name": "course-stack",
+        "value": "980px"
+      },
+      {
+        "name": "shared-mobile",
+        "value": "760px"
+      },
+      {
+        "name": "course-mobile",
+        "value": "720px"
+      },
+      {
+        "name": "shared-narrow",
+        "value": "420px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "action-primary",
+      "description": "The strongest consequential action on a shared Field Desk surface.",
+      "html": "<a class=\"ds-primary-action\" href=\"#\">Open the decision queue</a>",
+      "css": ".ds-primary-action { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 10px 16px; border: 1px solid var(--ink, #14263a); border-radius: 0; background: var(--ink, #14263a); color: var(--white, #fffdf7); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; font-size: .82rem; font-weight: 700; text-decoration: none; transition: background 180ms ease-out, border-color 180ms ease-out; } .ds-primary-action:hover { background: var(--rust, #91462f); border-color: var(--rust, #91462f); } .ds-primary-action:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-primary-action:active { background: var(--ink, #14263a); }"
+    },
+    {
+      "name": "Outline Action",
+      "kind": "button",
+      "refersTo": "action-outline",
+      "description": "A quiet square action that stays embedded in the document flow.",
+      "html": "<a class=\"ds-outline-action\" href=\"#\">See the schedule</a>",
+      "css": ".ds-outline-action { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: 8px 12px; border: 1px solid var(--ink, #14263a); border-radius: 0; background: transparent; color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; font-size: .75rem; font-weight: 700; text-decoration: none; transition: color 180ms ease-out, border-color 180ms ease-out; } .ds-outline-action:hover { color: var(--rust, #91462f); border-color: var(--rust, #91462f); } .ds-outline-action:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-outline-action:active { background: var(--paper-deep, #e8e1d2); }"
+    },
+    {
+      "name": "Filter Toggle",
+      "kind": "chip",
+      "refersTo": "filter-selected",
+      "description": "A rectangular decision-queue filter; selected state fills with ink and never becomes a pill.",
+      "html": "<button class=\"ds-filter-toggle\" type=\"button\" aria-pressed=\"true\">All decisions</button>",
+      "css": ".ds-filter-toggle { min-height: 44px; padding: 8px 12px; border: 1px solid var(--ink, #14263a); border-radius: 0; background: var(--ink, #14263a); color: var(--white, #fffdf7); cursor: pointer; font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; font-size: .76rem; font-weight: 650; } .ds-filter-toggle:hover { background: var(--rust, #91462f); border-color: var(--rust, #91462f); } .ds-filter-toggle:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-filter-toggle:active { background: var(--ink, #14263a); }"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "description": "Compact text destinations with generous practical targets and visible underlines.",
+      "html": "<nav class=\"ds-masthead-nav\" aria-label=\"Teaching HQ\"><a href=\"#\">Student course index</a><a href=\"#\">Week</a><a href=\"#\">All decisions</a></nav>",
+      "css": ".ds-masthead-nav { display: flex; flex-wrap: wrap; gap: 6px 20px; color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; font-size: .78rem; font-weight: 650; } .ds-masthead-nav a { display: inline-flex; min-height: 44px; align-items: center; color: inherit; text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; } .ds-masthead-nav a:hover { color: var(--rust, #91462f); text-decoration-thickness: 2px; } .ds-masthead-nav a:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-masthead-nav a:active { color: var(--ink-soft, #526174); }"
+    },
+    {
+      "name": "Situation Ledger Cell",
+      "kind": "custom",
+      "description": "A ruled status cell that places state, claim, and explanatory evidence in one scan path.",
+      "html": "<section class=\"ds-ledger-cell ds-ledger-cell-risk\"><h3>At risk</h3><strong>Choose the listening selections</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></section>",
+      "css": ".ds-ledger-cell { min-height: 172px; padding: 22px; border-right: 1px solid var(--rule, #aeb5b4); border-bottom: 1px solid var(--rule-dark, #74808a); background: var(--paper, #f3efe5); color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; } .ds-ledger-cell-risk { box-shadow: inset 0 4px 0 var(--rust, #91462f); } .ds-ledger-cell h3 { margin: 0; color: var(--ink-soft, #526174); font-size: .68rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; } .ds-ledger-cell strong { display: block; margin-top: 18px; font-size: 1.1rem; font-weight: 650; line-height: 1.25; } .ds-ledger-cell p { margin: 8px 0 0; color: var(--ink-soft, #526174); font-size: .85rem; line-height: 1.45; } .ds-ledger-cell:hover { background: var(--paper-deep, #e8e1d2); } .ds-ledger-cell:focus-within { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; }"
+    },
+    {
+      "name": "Course Dispatch Row",
+      "kind": "custom",
+      "description": "The shared course doorway: documentary evidence, identity, next session, and practical destinations in a ruled row.",
+      "html": "<article class=\"ds-dispatch\"><figure class=\"ds-dispatch-image\"><div>Documentary image</div><figcaption>Creator · work · source credit</figcaption></figure><div class=\"ds-dispatch-identity\"><h3>First-Year Studies</h3><p class=\"ds-dispatch-code\">FRST 110</p><p>Monday, Wednesday &amp; Friday</p></div><div class=\"ds-dispatch-session\"><span>Next meeting</span><strong>Friday, September 11</strong><p>Community event: The Great Lakes</p></div><nav class=\"ds-dispatch-links\" aria-label=\"Course destinations\"><a href=\"#\">Course home</a><a href=\"#\">Canvas</a></nav></article>",
+      "css": ".ds-dispatch { --ds-course: var(--course-color, #245a8d); display: grid; grid-template-columns: 170px minmax(180px, .9fr) minmax(220px, 1.15fr) minmax(160px, .8fr); min-height: 154px; border-bottom: 1px solid var(--rule-dark, #74808a); background: var(--paper, #f3efe5); color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; } .ds-dispatch-image { position: relative; min-width: 0; margin: 0; overflow: hidden; background: var(--ink, #14263a); color: var(--white, #fffdf7); } .ds-dispatch-image > div { display: grid; min-height: 154px; place-items: center; font-size: .72rem; font-weight: 650; } .ds-dispatch-image figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 4px 7px; background: rgb(20 38 58 / .86); color: #fff; font-size: .58rem; line-height: 1.25; } .ds-dispatch-identity, .ds-dispatch-session, .ds-dispatch-links { padding: 21px 18px; border-left: 1px solid var(--rule, #aeb5b4); } .ds-dispatch h3, .ds-dispatch p { margin: 0; } .ds-dispatch-code, .ds-dispatch-session > span { color: var(--ds-course); font-size: .68rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; } .ds-dispatch-identity p:last-child, .ds-dispatch-session p { margin-top: 8px; color: var(--ink-soft, #526174); font-size: .8rem; } .ds-dispatch-session strong { display: block; margin-top: 8px; font-size: 1rem; line-height: 1.25; } .ds-dispatch-links { display: flex; flex-direction: column; justify-content: center; } .ds-dispatch-links a { display: flex; min-height: 44px; align-items: center; border-bottom: 1px solid var(--rule, #aeb5b4); color: inherit; font-size: .78rem; font-weight: 650; text-underline-offset: 3px; } .ds-dispatch-links a:hover { color: var(--ds-course); } .ds-dispatch-links a:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-dispatch-links a:active { color: var(--ink-soft, #526174); }"
+    },
+    {
+      "name": "Schedule Block",
+      "kind": "custom",
+      "description": "A compact course-coded meeting block used in weekly desktop and mobile schedules.",
+      "html": "<a class=\"ds-schedule-block\" href=\"#\"><strong>FRST 110</strong><span>11:10–12:20 · Memorial 114</span></a>",
+      "css": ".ds-schedule-block { --ds-course: var(--course-color, #245a8d); display: block; min-height: 44px; padding: 6px 8px; border-top: 3px solid var(--ds-course); background: color-mix(in srgb, var(--ds-course) 10%, var(--white, #fffdf7)); color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; text-decoration: none; } .ds-schedule-block strong, .ds-schedule-block span { display: block; } .ds-schedule-block strong { font-size: .72rem; } .ds-schedule-block span { color: var(--ink-soft, #526174); font-size: .62rem; } .ds-schedule-block:hover { background: color-mix(in srgb, var(--ds-course) 16%, var(--white, #fffdf7)); } .ds-schedule-block:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-schedule-block:active { background: color-mix(in srgb, var(--ds-course) 22%, var(--white, #fffdf7)); }"
+    },
+    {
+      "name": "Workspace Row",
+      "kind": "custom",
+      "description": "A student-facing destination row that keeps source, purpose, and action on one rule-led line.",
+      "html": "<a class=\"ds-workspace-row\" href=\"#\"><div><h3>Canvas</h3><p>Assignments, announcements, and current course activity</p></div><span>Open Canvas</span></a>",
+      "css": ".ds-workspace-row { --ds-course: var(--course-color, #245a8d); display: grid; grid-template-columns: minmax(0, 1fr) auto; min-height: 86px; align-items: center; gap: 22px; padding: 14px 0; border-top: 2px solid var(--ink, #14263a); border-bottom: 1px solid var(--rule-dark, #74808a); color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; text-decoration: none; } .ds-workspace-row h3, .ds-workspace-row p { margin: 0; } .ds-workspace-row h3 { font-size: 1rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; } .ds-workspace-row p { margin-top: 4px; color: var(--ink-soft, #526174); font-size: .82rem; } .ds-workspace-row > span { color: var(--ds-course); font-size: .7rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; } .ds-workspace-row:hover h3 { color: var(--ds-course); } .ds-workspace-row:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-workspace-row:active { background: var(--paper-deep, #e8e1d2); }"
+    },
+    {
+      "name": "Decision Disclosure",
+      "kind": "custom",
+      "description": "A native details control for revealing the complete decision queue without decorative motion.",
+      "html": "<details class=\"ds-decision\"><summary><span><strong>All decisions</strong><small>Course status files remain authoritative</small></span></summary><div class=\"ds-decision-body\">Decision rows appear here.</div></details>",
+      "css": ".ds-decision { border-top: 2px solid var(--ink, #14263a); border-bottom: 1px solid var(--ink, #14263a); color: var(--ink, #14263a); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; } .ds-decision summary { display: flex; min-height: 72px; align-items: center; justify-content: space-between; gap: 22px; cursor: pointer; list-style: none; } .ds-decision summary span:first-child { display: grid; } .ds-decision summary strong { font-size: 1.12rem; } .ds-decision summary small { color: var(--ink-soft, #526174); font-size: .75rem; } .ds-decision summary::after { content: \"+\"; font-size: 1.5rem; } .ds-decision[open] summary::after { content: \"−\"; } .ds-decision summary:hover strong { color: var(--rust, #91462f); } .ds-decision summary:focus-visible { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; } .ds-decision summary:active { background: var(--paper-deep, #e8e1d2); } .ds-decision-body { padding: 18px 0 26px; border-top: 1px solid var(--rule, #aeb5b4); color: var(--ink-soft, #526174); font-size: .8rem; }"
+    },
+    {
+      "name": "Atlas Reading Row",
+      "kind": "custom",
+      "description": "The atlas evidence row pairs a physical work, indexed metadata, and an interpretive invitation.",
+      "html": "<article class=\"ds-atlas-reading\"><figure class=\"ds-atlas-visual\"><div class=\"ds-atlas-cover\">BOOK<br>COVER</div><figcaption>Cover via source archive</figcaption></figure><div class=\"ds-atlas-copy\"><h3>Death and Life of the Great Lakes</h3><div class=\"ds-atlas-index\"><span>01</span><strong>Ecosystem</strong></div><p class=\"ds-atlas-creator\">Dan Egan</p><p class=\"ds-atlas-invitation\">Treat the inland seas as an engineered ecosystem and contested commons.</p></div></article>",
+      "css": ".ds-atlas-reading { display: grid; grid-template-columns: 116px minmax(0, 1fr); gap: 18px; min-height: 246px; align-items: start; padding: 18px 0; border-top: 1px solid oklch(0.76 0.012 28); border-bottom: 1px solid oklch(0.88 0.008 28); color: oklch(0.2 0.025 28); font-family: \"Source Sans 3\", \"Segoe UI\", sans-serif; } .ds-atlas-visual { width: 116px; margin: 0; } .ds-atlas-cover { display: grid; aspect-ratio: 2 / 3; place-items: center; background: oklch(0.946 0.006 28); box-shadow: 0 2px 6px oklch(0.2 0.025 28 / .18); color: oklch(0.29 0.09 260); font-size: .68rem; font-weight: 700; text-align: center; } .ds-atlas-visual figcaption { margin-top: 6px; color: oklch(0.62 0.018 28); font-size: .56rem; line-height: 1.35; } .ds-atlas-copy { align-self: center; } .ds-atlas-copy h3, .ds-atlas-copy p { margin: 0; } .ds-atlas-copy h3 { font-size: 1rem; font-weight: 670; letter-spacing: -.015em; } .ds-atlas-index { display: flex; align-items: baseline; gap: 9px; margin: 7px 0; } .ds-atlas-index span { color: oklch(0.76 0.012 28); font-size: 1.08rem; font-weight: 690; } .ds-atlas-index strong { color: oklch(0.29 0.09 260); font-size: .62rem; letter-spacing: .045em; text-transform: uppercase; } .ds-atlas-creator { color: oklch(0.29 0.09 260); font-size: .73rem; font-weight: 630; } .ds-atlas-invitation { margin-top: 8px !important; color: oklch(0.46 0.025 28); font-size: .76rem; line-height: 1.5; } .ds-atlas-reading:hover .ds-atlas-copy h3 { color: oklch(0.29 0.09 260); } .ds-atlas-reading:focus-within { outline: 3px solid var(--focus, #0b63ce); outline-offset: 3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Academic Field Desk",
+    "overview": "The system should feel like a well-used field notebook opened on an instructor's desk: warm paper, deep navy ink, precise rules, compact annotations, and evidence arranged for consequential reading. Its authority comes from hierarchy, provenance, and editorial judgment rather than from decorative polish.\n\nThe world is shared by the instructor HQ, student course doorways, and the FRST course atlas. The atlas may widen the vocabulary with water-specific OKLCH colors and immersive documentary sequences, but it retains the same sans-serif voice, rule-led structure, source credits, and flat material logic. Nothing should resemble a generic LMS dashboard or an AI-generated collection of glossy cards.",
+    "keyCharacteristics": [
+      "Warm paper and deep ink establish a quiet, authored working surface.",
+      "Hairline and double rules organize comparison before boxes or cards do.",
+      "Blue, rust, and moss course signals orient without becoming decoration.",
+      "Documentary images remain connected to visible, readable source credits.",
+      "Strong sans-serif hierarchy carries density without sacrificing legibility.",
+      "Motion is minimal, purposeful, and suppressed when reduced motion is requested."
+    ],
+    "rules": [
+      {
+        "name": "The Course Signal Rule",
+        "body": "A course color identifies ownership or state; it does not flood an entire shared surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Evidence Color Rule",
+        "body": "Color must clarify course, risk, change, or concept before it is allowed to decorate.",
+        "section": "colors"
+      },
+      {
+        "name": "The Hierarchy, Not Ornament Rule",
+        "body": "Use weight, scale, tracking, and position to create hierarchy; do not introduce a decorative display face to manufacture personality.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rows Before Cards Rule",
+        "body": "When information is comparative or sequential, use aligned rows and continuous rules before introducing a bounded container.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-by-Default Rule",
+        "body": "Surfaces rest on the page; shadows never substitute for hierarchy, grouping, or state.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Surface Rule",
+        "body": "Keep shared controls and containers square; use a rounded silhouette only when the information itself is point-like or circular.",
+        "section": "shapes"
+      },
+      {
+        "name": "The State-Only Motion Rule",
+        "body": "Movement may confirm hover, focus, disclosure, or checklist completion; it may not run as ambient decoration.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve warm paper as the continuous ground and deep ink as the primary information color.",
+      "Do use aligned rows, hairline rules, and double rules to expose comparison and hierarchy.",
+      "Do keep documentary imagery factual, relevant, and accompanied by a visible credit.",
+      "Do use course colors sparingly for identity, schedule orientation, and meaningful state.",
+      "Do maintain visible keyboard focus, reduced-motion support, and at least 44px practical targets.",
+      "Do let responsive layouts reflow into a clear reading order."
+    ],
+    "donts": [
+      "Don't introduce glossy gradients, glass effects, ambient glows, or floating dashboard cards.",
+      "Don't turn labels, filters, or metadata into pill clutter.",
+      "Don't use oversized hero type where a compact situation or next action should lead.",
+      "Don't add decorative icons, stock illustration, or uncited imagery to simulate personality.",
+      "Don't animate for atmosphere; motion must communicate an interaction or state change.",
+      "Don't make page-specific composition trivia into a global rule when the Field Desk principles already govern it."
+    ]
+  }
+}
