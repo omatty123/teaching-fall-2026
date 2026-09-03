@@ -129,7 +129,7 @@ A 52px charcoal bar holds the course or term identity in small gold type and a f
 
 ### Editorial title field
 
-A deep slate field presents the page’s governing question or promise in large Newsreader type. Supporting information is short, high contrast, and subordinate.
+A deep slate field presents the page’s governing question or promise in compact, medium-weight Inter. Supporting information is short, high contrast, and subordinate.
 
 ### Course portrait
 
@@ -149,7 +149,7 @@ Use ruled rows, not nested cards. Dates align in a stable first column, details 
 
 - Lead each student page with a real course question, work, or documentary image.
 - Keep source credits visible and readable.
-- Use generous space around major serif titles and tighter rhythm inside practical groups.
+- Give major sans-serif titles enough space to lead while keeping practical groups tight.
 - Keep public/private boundaries absolute.
 - Preserve strong contrast and obvious keyboard focus.
 

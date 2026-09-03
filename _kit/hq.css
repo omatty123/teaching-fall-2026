@@ -872,7 +872,7 @@ p { text-wrap: pretty; }
 /* ── Seminar Screen ───────────────────────────────────────────────────────
    Fall 2026 public surfaces follow the pinned Modern Korea course-site
    reference: compact black utility chrome, slate editorial fields, warm
-   paper, Newsreader titles, Outfit interface copy, and image-led entry. */
+   paper, disciplined sans-serif hierarchy, and image-led entry. */
 :root {
   --paper: #f4f3f0;
   --paper-deep: #e9e6df;
@@ -925,11 +925,11 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
 .student-hero > div { width: min(100%, 1200px); margin-inline: auto; }
 .student-hero h1 {
   max-width: 24ch;
-  font-family: "Newsreader", Georgia, serif;
-  font-size: clamp(2rem, 4vw, 3.6rem);
-  font-weight: 400;
-  letter-spacing: -.035em;
-  line-height: .98;
+  font-family: "Inter", "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: clamp(1.8rem, 3.4vw, 2.9rem);
+  font-weight: 550;
+  letter-spacing: -.03em;
+  line-height: 1.04;
 }
 .student-hero p {
   max-width: 62ch;
