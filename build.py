@@ -39,6 +39,7 @@ LINK_SLOTS = [
     ("syllabus", "Syllabus",        False),
     ("canvas",   "Canvas",          False),
     ("waterNews", "Water in the News", False),
+    ("artwork",  "Artwork of the day", False),
     ("roster",   "Learn the names", True),   # True = instructor only
     ("people",   "Meet the class",  False),
 ]

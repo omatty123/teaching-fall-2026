@@ -49,7 +49,8 @@
   "links": {
     "syllabus": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
     "canvas": "https://lawrence.instructure.com/courses/13411",
-    "roster": "https://teaching-fall-2026-roster.pages.dev/hist-212.html"
+    "roster": "https://teaching-fall-2026-roster.pages.dev/hist-212.html",
+    "artwork": "courses/hist-212-artwork.html"
   },
   "syllabusUrl": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing",
   "prep": {
@@ -136,6 +137,17 @@
     {
       "date": "2026-11-19",
       "topic": "Could governments control the markets they needed?"
+    }
+  ],
+  "extraPages": [
+    {
+      "slug": "hist-212-artwork",
+      "fragment": "hist-212-artwork.fragment",
+      "title": "Artwork of the Day · HIST 212",
+      "heading": "Artwork of the day",
+      "description": "One work of art for each of the nineteen meetings of HIST/EAST/GLST 212, East Asia in the Premodern World, with three looking questions for each.",
+      "ogImage": "images/artwork/08-mawangdui.jpg",
+      "wrapperClass": "artwork-page"
     }
   ]
 }
