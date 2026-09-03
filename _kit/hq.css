@@ -1248,6 +1248,13 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
   font-weight: 500;
 }
 .student-index-page .dispatch-links a:hover { background: rgba(255,255,255,.14); }
+.student-index-page .dispatch-links a:has(.access-tag) { grid-column: auto; }
+.student-index-page .access-tag {
+  margin-left: 6px;
+  color: rgba(255,255,255,.72);
+  font-size: 8px;
+  letter-spacing: .08em;
+}
 .student-index-page .dispatch-session {
   order: 4;
   min-height: 146px;

@@ -40,7 +40,7 @@ LINK_SLOTS = [
     ("canvas",   "Canvas",          False),
     ("waterNews", "Water in the News", False),
     ("artwork",  "Artwork of the day", False),
-    ("roster",   "Learn the names", True),   # True = instructor only
+    ("roster",   "Student roster", True),   # protected by Cloudflare Access
     ("people",   "Meet the class",  False),
 ]
 
@@ -405,7 +405,10 @@ window.taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
 
 
 def build_student_index(term, courses):
-    dispatches = [course_dispatch(c, instructor=False) for c in courses]
+    # Roster destinations are safe to expose as navigation because the roster
+    # site itself is owner-only behind Cloudflare Access. No roster data is
+    # embedded in this public page.
+    dispatches = [course_dispatch(c, instructor=True) for c in courses]
     config = {c["key"]: {"code": c["code"], "schedule": c["schedule"],
               "endMinutes": c["meeting"]["endMinutes"], "tasks": [], "build": "",
               "href": f"courses/{c['slug']}.html"} for c in courses}
