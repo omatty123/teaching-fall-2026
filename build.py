@@ -557,7 +557,7 @@ def build_course(term, course):
       og_image=og_image,
       rel="../",
       og_path=f"courses/{slug}.html")}
-<link rel="stylesheet" href="../_kit/course.css">
+<link rel="stylesheet" href="../_kit/course.css?v={hashlib.sha256((KIT / 'course.css').read_bytes()).hexdigest()[:10]}">
 </head>
 <body class="course-body-page" style="{theme_vars(course, rel="../")}">
 {DIRECTION_CONTRACT}
@@ -638,7 +638,7 @@ def build_feature_page(term, course):
 <head>
 {head(term, title=f"Water Makes Worlds · {course['code']}", description=course['description'],
       og_image=og_image, rel="../", og_path=f"courses/{course['slug']}-atlas.html")}
-<link rel="stylesheet" href="../_kit/course.css">{feature_css}
+<link rel="stylesheet" href="../_kit/course.css?v={hashlib.sha256((KIT / 'course.css').read_bytes()).hexdigest()[:10]}">{feature_css}
 </head>
 <body class="course-body-page course-atlas-page" style="{theme_vars(course, rel='../')}">
 {DIRECTION_CONTRACT}
@@ -682,7 +682,7 @@ def build_extra_page(term, course, page):
       og_image=page.get("ogImage", "images/hist-212-banner.jpg"),
       rel="../",
       og_path=f"courses/{slug}.html")}
-<link rel="stylesheet" href="../_kit/course.css">{extra_css}
+<link rel="stylesheet" href="../_kit/course.css?v={hashlib.sha256((KIT / 'course.css').read_bytes()).hexdigest()[:10]}">{extra_css}
 </head>
 <body class="course-body-page" style="{theme_vars(course, rel="../")}">
 {DIRECTION_CONTRACT}
