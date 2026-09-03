@@ -1,261 +1,164 @@
 ---
-name: Fall 2026 Teaching HQ
-description: An evidence-aware academic field desk built from warm paper, deep ink, fine rules, and documentary course signals.
+name: Fall 2026 Teaching Sites
+description: Editorial seminar pages built from dark course rails, warm paper, literary display type, and documentary course portraits.
 colors:
-  hq-paper: "#f3efe5"
-  hq-paper-deep: "#e8e1d2"
-  hq-ink: "#14263a"
-  hq-ink-soft: "#526174"
-  hq-rule: "#aeb5b4"
-  hq-rule-dark: "#74808a"
-  hq-rust: "#91462f"
-  hq-moss: "#3f6653"
-  hq-ochre: "#765c21"
-  hq-white: "#fffdf7"
+  paper: "#f4f3f0"
+  paper-deep: "#e9e6df"
+  surface: "#ffffff"
+  ink: "#1a1a1a"
+  ink-soft: "#575757"
+  rule: "#d7d3cb"
+  rule-dark: "#aaa59c"
+  slate: "#1e2a35"
+  slate-light: "#2c3e50"
+  signal-gold: "#a67c00"
   focus-blue: "#0b63ce"
   course-frst-blue: "#245a8d"
   course-hist-rust: "#7a3030"
   course-buen-moss: "#2d5a50"
-  atlas-bg: "oklch(1 0 0)"
-  atlas-course-blue: "oklch(0.48 0.15 260)"
-  atlas-course-ink: "oklch(0.29 0.09 260)"
-  atlas-course-soft: "oklch(0.94 0.035 260)"
-  atlas-ink: "oklch(0.2 0.025 28)"
-  atlas-faint: "oklch(0.62 0.018 28)"
-  atlas-line: "oklch(0.88 0.008 28)"
-  atlas-line-strong: "oklch(0.76 0.012 28)"
-  atlas-muted: "oklch(0.46 0.025 28)"
-  atlas-surface: "oklch(0.975 0.003 28)"
-  atlas-surface-strong: "oklch(0.946 0.006 28)"
-  atlas-water-blue: "oklch(0.5 0.14 244)"
-  atlas-water-ice: "oklch(0.955 0.026 227)"
-  atlas-water-night: "oklch(0.22 0.055 248)"
-  atlas-water-paper: "oklch(0.955 0.035 78)"
-  atlas-water-rust: "oklch(0.52 0.17 32)"
 typography:
   display:
-    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
-    fontSize: "clamp(2.25rem, 5vw, 5.4rem)"
-    fontWeight: 520
-    lineHeight: 0.93
-    letterSpacing: "-0.06em"
+    fontFamily: '"Newsreader", Georgia, serif'
+    fontSize: "clamp(2.4rem, 6.5vw, 5.7rem)"
+    fontWeight: 400
+    lineHeight: 0.94
+    letterSpacing: "-0.035em"
   headline:
-    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
-    fontSize: "clamp(1.65rem, 3.4vw, 3.2rem)"
-    fontWeight: 550
-    lineHeight: 1.02
-    letterSpacing: "-0.045em"
+    fontFamily: '"Newsreader", Georgia, serif'
+    fontSize: "clamp(2.35rem, 5.6vw, 5.3rem)"
+    fontWeight: 400
+    lineHeight: 0.96
+    letterSpacing: "-0.035em"
   title:
-    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
-    fontSize: "clamp(1.2rem, 2vw, 1.55rem)"
-    fontWeight: 650
-    lineHeight: 1.1
-    letterSpacing: "-0.025em"
+    fontFamily: '"Newsreader", Georgia, serif'
+    fontSize: "clamp(1.45rem, 2.35vw, 2.05rem)"
+    fontWeight: 500
+    lineHeight: 1.04
+    letterSpacing: "-0.02em"
   body:
-    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
+    fontFamily: '"Outfit", "Source Sans 3", sans-serif'
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.5
-    letterSpacing: "normal"
   label:
-    fontFamily: "\"Source Sans 3\", \"Segoe UI\", sans-serif"
-    fontSize: "0.68rem"
-    fontWeight: 750
-    lineHeight: 1.5
-    letterSpacing: "0.12em"
-  data:
-    fontFamily: "-apple-system, BlinkMacSystemFont, \"Segoe UI Variable\", \"Segoe UI\", \"Helvetica Neue\", \"Apple SD Gothic Neo\", \"Noto Sans KR\", \"Noto Sans\", Arial, sans-serif"
-    fontSize: "0.64rem"
-    fontWeight: 400
-    lineHeight: 1.35
-    letterSpacing: "normal"
+    fontFamily: '"Outfit", "Source Sans 3", sans-serif'
+    fontSize: "0.7rem"
+    fontWeight: 600
+    lineHeight: 1.4
+    letterSpacing: "0.16em"
 rounded:
-  square: "0"
-  map-marker: "50%"
+  control: "4px"
+  portrait: "8px"
+  point: "50%"
 spacing:
   gutter: "clamp(18px, 4vw, 64px)"
   gutter-mobile: "16px"
-  control-padding: "8px 12px"
-  section-rhythm: "clamp(35px, 6vw, 68px)"
+  section: "clamp(1.5rem, 3vw, 2.5rem)"
 components:
-  action-primary:
-    backgroundColor: "{colors.hq-ink}"
-    textColor: "{colors.hq-white}"
-    typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    padding: "10px 16px"
-    height: "46px"
-  action-primary-hover:
-    backgroundColor: "{colors.hq-rust}"
-    textColor: "{colors.hq-white}"
-    typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    padding: "10px 16px"
-    height: "46px"
-  action-outline:
+  utility-control:
     backgroundColor: "transparent"
-    textColor: "{colors.hq-ink}"
+    textColor: "#bbbbbb"
     typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    padding: "{spacing.control-padding}"
-    height: "44px"
-  filter-selected:
-    backgroundColor: "{colors.hq-ink}"
-    textColor: "{colors.hq-white}"
-    typography: "{typography.label}"
-    rounded: "{rounded.square}"
-    padding: "{spacing.control-padding}"
-    height: "44px"
+    rounded: "{rounded.control}"
+    padding: "4px 10px"
+    height: "30px"
+  course-portrait:
+    backgroundColor: "{colors.surface}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.portrait}"
 ---
 
-# Design System: Fall 2026 Teaching HQ
+# Design System: Fall 2026 Teaching Sites
 
 ## Overview
 
-**Creative North Star: "The Academic Field Desk"**
+**Creative North Star: “The Seminar Screen”**
 
-The system should feel like a well-used field notebook opened on an instructor's desk: warm paper, deep navy ink, precise rules, compact annotations, and evidence arranged for consequential reading. Its authority comes from hierarchy, provenance, and editorial judgment rather than from decorative polish.
+The site is an editorial threshold into class rather than a miniature learning-management system. Its closest authority is the pinned *Modern Korea through Literature and Film* dashboard and student directory: a thin black utility rail, a deep slate title field, literary serif headlines, warm paper, and documentary images large enough to establish the intellectual world before administrative details appear.
 
-The world is shared by the instructor HQ, student course doorways, and the FRST course atlas. The atlas may widen the vocabulary with water-specific OKLCH colors and immersive documentary sequences, but it retains the same sans-serif voice, rule-led structure, source credits, and flat material logic. Nothing should resemble a generic LMS dashboard or an AI-generated collection of glossy cards.
+The student-facing index uses course portraits, not dashboard cards. Each course home begins with the live question, then moves into image, preparation, tools, schedule, and record. The private HQ may be denser, but it shares the same typography, environmental colors, and image discipline.
 
 **Key Characteristics:**
 
-- Warm paper and deep ink establish a quiet, authored working surface.
-- Hairline and double rules organize comparison before boxes or cards do.
-- Blue, rust, and moss course signals orient without becoming decoration.
-- Documentary images remain connected to visible, readable source credits.
-- Strong sans-serif hierarchy carries density without sacrificing legibility.
-- Motion is minimal, purposeful, and suppressed when reduced motion is requested.
+- Questions and images lead; administration follows.
+- Newsreader carries titles and intellectual prompts; Outfit carries navigation and working text.
+- Dark chrome is thin and functional; slate fields are reserved for major orientation.
+- Documentary images retain visible credits and meaningful crops.
+- Public pages never expose roster data, student names, or portraits.
 
 ## Colors
 
-The palette behaves like paper, ink, annotation, and course tabs. The HQ hex tokens in the frontmatter are normative for shared surfaces; the scoped atlas OKLCH tokens are normative inside the FRST water journey.
+Charcoal and slate establish the seminar environment; warm off-white paper and white reading surfaces keep long pages calm. Gold marks course-level navigation, while blue, rust, and moss identify the three courses without flooding shared surfaces.
 
-### Primary
+**The Gold Signal Rule.** Gold belongs to small navigational and identity signals, never large fills or long text.
 
-- **Deep Navy Ink** (`hq-ink`): Primary text, major rules, dark actions, and the strongest information-bearing marks.
-- **Warm Field Paper** (`hq-paper`): The continuous page ground; it should remain visually present between sections.
-
-### Secondary
-
-- **FRST Water Blue** (`course-frst-blue`): FRST identity, schedule blocks, and course-specific link states.
-- **HIST Archive Rust** (`course-hist-rust`): HIST identity and timetable orientation.
-- **BUEN Workshop Moss** (`course-buen-moss`): BUEN identity and timetable orientation.
-
-### Tertiary
-
-- **Editorial Rust** (`hq-rust`): Risk, consequential emphasis, and the primary-action hover state.
-- **Editorial Moss** (`hq-moss`): Confirmed change and constructive state signals.
-- **Ledger Ochre** (`hq-ochre`): Tentative schedule notes and restrained caution.
-
-### Neutral
-
-- **Porcelain Paper** (`hq-white`): A small amount of surface lift for controls and schedule blocks.
-- **Deepened Paper** (`hq-paper-deep`): Scrollbar tracks and subtle paper differentiation.
-- **Soft Ink** (`hq-ink-soft`): Explanatory copy, captions, metadata, and supporting information.
-- **Hairline Rule** (`hq-rule`) and **Dark Rule** (`hq-rule-dark`): The main structural separators.
-- **Focus Blue** (`focus-blue`): Keyboard focus only; never repurpose it as general decoration.
-
-### Atlas Extension
-
-The FRST atlas uses the `atlas-*` tokens as a scoped documentary extension. Water blue, ice, night, paper, and rust distinguish concepts and environments while the near-black ink, faint metadata, and restrained line tokens preserve the Field Desk's editorial discipline.
-
-**The Course Signal Rule.** A course color identifies ownership or state; it does not flood an entire shared surface.
-
-**The Evidence Color Rule.** Color must clarify course, risk, change, or concept before it is allowed to decorate.
+**The Legible Ink Rule.** Supporting text uses dark gray (`ink-soft`), not low-contrast pale gray.
 
 ## Typography
 
-**Display Font:** Source Sans 3 (with Segoe UI and sans-serif fallbacks)<br>
-**Body Font:** Source Sans 3 (with Segoe UI and sans-serif fallbacks)<br>
-**Label/Mono Font:** The system data stack recorded as `typography.data`
+**Display Font:** Newsreader, with Georgia and serif fallbacks  
+**Body Font:** Outfit, with Source Sans 3 and sans-serif fallbacks
 
-**Character:** One variable sans-serif family carries the shared world with a compact, humanist, editorial tone. Scale, weight, tracking, and rule placement create distinction; novelty typefaces do not.
+Newsreader gives questions and course titles a humane, literary cadence. Outfit keeps schedules, labels, controls, and practical directions compact and unambiguous.
 
-### Hierarchy
+- **Display:** Student-index promise; two or three balanced lines at most.
+- **Headline:** Current course question in the slate field.
+- **Title:** Course portraits and principal section names.
+- **Body:** Explanatory copy, generally held to 62–72 characters per line.
+- **Label:** Small uppercase course codes and utility context; use sparingly.
 
-- **Display** (`typography.display`): Course hero statements and rare atlas thesis moments; keep the line count short and the shape decisive.
-- **Headline** (`typography.headline`): Current questions and section-defining statements.
-- **Title** (`typography.title`): Section headings, dispatch titles, and compact content landmarks.
-- **Body** (`typography.body`): Explanatory prose, with typical measures between 56ch and 78ch depending on context.
-- **Label** (`typography.label`): Uppercase situation labels, course codes, context labels, and table annotations.
-- **Data** (`typography.data`): ISBNs, times, and numeric facts that benefit from tabular alignment.
-
-**The Hierarchy, Not Ornament Rule.** Use weight, scale, tracking, and position to create hierarchy; do not introduce a decorative display face to manufacture personality.
+**The Two-Voice Rule.** Serif type marks ideas, works, and questions; sans-serif type marks actions, metadata, and explanation.
 
 ## Layout
 
-The shared canvas is centered at a maximum width of 1440px with the fluid `gutter` spacing token. The spatial model is editorial: aligned columns for comparison, horizontal rows for destinations and schedules, and rules that continue across related information. Major sections breathe through `section-rhythm`, while internal content stays compact enough to support frequent scanning.
+Shared content centers at 1200–1248px with a fluid gutter. The student index uses three tall image-led course portraits on desktop, two plus one spanning portrait on tablet, and one continuous column on phones. Course pages move from a full-width slate question field to an asymmetric main resource and compact “coming next” rail, then to tools and the schedule record.
 
-Responsive behavior is reflow, not shrinkage. Four-column ledgers become two columns and then one; course dispatch rows progressively move links and meeting information below identity; two-column course heroes and content/sidebar layouts become single columns. The principal shared breakpoints are 1040px, 980px, 760/720px, and 420/430px, with the mobile gutter fixed by `gutter-mobile`. Practical interactive targets remain at least 44px.
-
-**The Rows Before Cards Rule.** When information is comparative or sequential, use aligned rows and continuous rules before introducing a bounded container.
+Responsive layouts reflow instead of shrinking. Mobile retains the question and image as the first two strong impressions, keeps practical targets at least 44px where repeated actions require it, and moves supporting rails below the main content.
 
 ## Elevation & Depth
 
-The system is flat by default. Depth comes from paper tone, ink contrast, documentary image fields, borders, and occasional dark environmental sections in the atlas. The inset rust and moss marks on situation cells are status rules, not floating shadows. The only conventional lift is the quiet shadow on atlas book-cover imagery, where it helps the physical object read as an object.
-
-**The Flat-by-Default Rule.** Surfaces rest on the page; shadows never substitute for hierarchy, grouping, or state.
+The system is mostly tonal. Course portraits and the main session resource receive one soft, low-opacity shadow to separate white paper from the warm ground; navigation, schedules, and facts use borders and color fields instead. No hard offset shadows or decorative glow.
 
 ## Shapes
 
-The core form language is square and rectilinear. Buttons, filters, rows, disclosures, and content containers use straight edges and one- or two-pixel rules. Double rules may close major editorial divisions. Circles are reserved for inherently point-like atlas map markers; they are not a license for pill-shaped tags or rounded dashboard cards.
-
-**The Square Surface Rule.** Keep shared controls and containers square; use a rounded silhouette only when the information itself is point-like or circular.
+The page field and title bands remain square and architectural. Small utility controls use 4px corners. Image-led course portraits and major white resource panels use an 8px radius, reflecting the Korean reference without turning every section into a card.
 
 ## Components
 
-Components should read as parts of one document, not as a gallery of isolated widgets. Every interactive state must preserve visible focus and the 44px practical target floor.
+### Utility rail
 
-### Buttons
+A 52px charcoal bar holds the course or term identity in small gold type and a few restrained outlined destinations. It remains sticky where course navigation benefits from persistence.
 
-- **Primary:** A square dark-ink action with light paper text and compact, confident type. Rust on hover marks consequence rather than spectacle.
-- **Outline:** Transparent paper, a one-pixel ink or dark-rule border, and no radius. It belongs beside content, not above it as decoration.
-- **Filters:** Rectangular toggles with a dark filled selected state and a quiet transparent unselected state; never render them as pills.
-- **Focus:** A three-pixel blue outline with three-pixel offset remains visible against both paper and dark fills.
+### Editorial title field
 
-### Navigation
+A deep slate field presents the page’s governing question or promise in large Newsreader type. Supporting information is short, high contrast, and subordinate.
 
-Navigation is text-led, underlined when it behaves like a destination, and arranged with enough gap to scan quickly. Masthead links and breadcrumb links use practical 44px heights. Sticky atlas navigation is a thin horizontal current with color change only.
+### Course portrait
 
-### Cards / Containers
+The image occupies most of the component and keeps its credit attached along its lower edge. Beneath it, title, course code, meeting pattern, next meeting, and direct destinations form a quiet white caption structure.
 
-Generic cards are not a shared primitive. Course dispatches, workspace destinations, facts, schedules, and decision items are ruled rows. A bounded atlas container is appropriate only when it represents a distinct documentary object or conceptual environment, and it remains mostly square and shadowless.
+### Course resource panel
 
-### Situation Ledger
+The principal documentary image and preparation text share a white bounded surface. A compact next-meeting rail sits alongside on wide screens and drops below on narrow ones.
 
-Ledger cells share a continuous grid and place the short uppercase state label above a stronger sentence and supporting detail. Risk and changed states receive an inset top rule in rust or moss; neutral cells do not gain extra decoration.
+### Schedules and records
 
-### Course Dispatch Row
-
-A documentary image strip with visible credit leads into course identity, next-session information, and underlined destinations. The course color appears in the code and relevant hover/state marks, while the row itself stays on warm paper.
-
-### Schedule Block
-
-Schedule entries are compact paper blocks with a three-pixel course-colored top edge, dark type, and tabular time information. On narrow screens, the weekly grid becomes a readable day-by-day list.
-
-### Atlas Markers and Reading Rows
-
-Circular numbered markers are the atlas's one recurring rounded primitive and scale slightly on hover or focus. Reading rows pair a documentary cover with indexed metadata and a concise invitation; their small cover shadow is object-specific, not a general card treatment.
-
-**The State-Only Motion Rule.** Movement may confirm hover, focus, disclosure, or checklist completion; it may not run as ambient decoration.
+Use ruled rows, not nested cards. Dates align in a stable first column, details read in the second, and the complete schedule stays progressively disclosed.
 
 ## Do's and Don'ts
 
-### Do:
+### Do
 
-- **Do** preserve warm paper as the continuous ground and deep ink as the primary information color.
-- **Do** use aligned rows, hairline rules, and double rules to expose comparison and hierarchy.
-- **Do** keep documentary imagery factual, relevant, and accompanied by a visible credit.
-- **Do** use course colors sparingly for identity, schedule orientation, and meaningful state.
-- **Do** maintain visible keyboard focus, reduced-motion support, and at least 44px practical targets.
-- **Do** let responsive layouts reflow into a clear reading order.
+- Lead each student page with a real course question, work, or documentary image.
+- Keep source credits visible and readable.
+- Use generous space around major serif titles and tighter rhythm inside practical groups.
+- Keep public/private boundaries absolute.
+- Preserve strong contrast and obvious keyboard focus.
 
-### Don't:
+### Don't
 
-- **Don't** introduce glossy gradients, glass effects, ambient glows, or floating dashboard cards.
-- **Don't** turn labels, filters, or metadata into pill clutter.
-- **Don't** use oversized hero type where a compact situation or next action should lead.
-- **Don't** add decorative icons, stock illustration, or uncited imagery to simulate personality.
-- **Don't** animate for atmosphere; motion must communicate an interaction or state change.
-- **Don't** make page-specific composition trivia into a global rule when the Field Desk principles already govern it.
+- Revert to equal dashboard tiles, metric panels, or a generic LMS inventory.
+- Add decorative icons, fake texture, or imagery unrelated to the course material.
+- Use pale gray for required reading text.
+- Put serif type on buttons, schedules, or dense operational metadata.
+- Let the private roster visual language justify publishing roster content.

@@ -45,19 +45,19 @@ LINK_SLOTS = [
 ]
 
 DIRECTION_CONTRACT = """<!--
-THESIS: A teaching day is a situation to read, not a dashboard to admire; the surface refuses generic cards, points, and inventory-first hierarchy.
-OWN-WORLD: Warm paper, navy ink, fine rules, square checks, restrained rust/moss/ochre signals, documentary strips, and compact sans-serif type.
-STORY: Orient to now, see the next consequential move, notice risk and change, then open the right course or system.
-FIRST VIEWPORT: A slim masthead sits above four equal situation columns and one prioritized move; course dispatches begin before the fold ends.
-FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.
+THESIS: The term site is an editorial threshold into seminar work: image, question, and next action arrive before administration.
+OWN-WORLD: Charcoal utility rails, deep slate title fields, warm paper, Newsreader display type, Outfit controls, ochre signals, and documentary images with quiet white captions.
+STORY: Recognize the course, meet its live question, enter the material, then consult the schedule and record.
+FIRST VIEWPORT: A thin black course rail opens into a dark editorial title field; on the student index, three image-led course portraits begin immediately below it.
+FORM: Seminar screen and course portrait system, adapted directly from the pinned Modern Korea dashboard and student-directory reference.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->"""
 
 HQ_DIRECTION_CONTRACT = DIRECTION_CONTRACT.replace(
     "FIRST VIEWPORT: A slim masthead sits above four equal situation columns and one prioritized move; course dispatches begin before the fold ends.\n"
     "FORM: Field Desk situation ledger, grounded direction 7, seed e7d8328d.",
-    "FIRST VIEWPORT: A persistent day rail supports one consequential move, a compact three-part situation ledger, and course dispatches without a dead tools column.\n"
-    "FORM: Field Desk day rail with a dense editorial workspace, grounded direction 7, seed e7d8328d."
+    "FIRST VIEWPORT: A compact term masthead gives way immediately to three course launch panels, with private name drills treated as primary teaching tools.\n"
+    "FORM: Course-first teaching launchpad, adapted from the Spring 2026 Teaching Today reference within the Fall Field Desk system."
 )
 
 
@@ -127,6 +127,7 @@ def theme_vars(course, rel=""):
 def head(term, *, title, description, og_image, rel="", og_path=""):
     """One head for every page. This is the deploy checklist, enforced in code."""
     base = term["baseUrl"].rstrip("/")
+    css_version = hashlib.sha256((KIT / "hq.css").read_bytes()).hexdigest()[:10]
     return f"""<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{e(title)}</title>
@@ -144,7 +145,10 @@ def head(term, *, title, description, og_image, rel="", og_path=""):
 <meta name="twitter:title" content="{e(title)}">
 <meta name="twitter:description" content="{e(description)}">
 <meta name="twitter:image" content="{base}/{og_image}">
-<link rel="stylesheet" href="{rel}_kit/hq.css">"""
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{rel}_kit/hq.css?v={css_version}">"""
 
 
 # ---------------------------------------------------------------- week grid
@@ -252,8 +256,48 @@ def course_dispatch(course, *, rel="", instructor=False):
 </article>"""
 
 
+def course_launch_links(course):
+    """First-viewport course actions for the private instructor HQ."""
+    links = course.get("links", {})
+    out = []
+    if links.get("roster"):
+        out.append(
+            f'<a class="launch-action launch-action--roster" href="{e(links["roster"])}">'
+            '<span>Learn the names</span><small>Private roster drill</small></a>'
+        )
+    out.append(
+        f'<a class="launch-action" href="courses/{e(course["slug"])}.html">'
+        '<span>Course home</span></a>'
+    )
+    for key, label in (("syllabus", "Syllabus"), ("canvas", "Canvas"),
+                       ("waterNews", "Water in the News"), ("artwork", "Artwork of the day")):
+        if links.get(key):
+            out.append(f'<a class="launch-action" href="{e(links[key])}"><span>{e(label)}</span></a>')
+    return "".join(out)
+
+
+def course_launch_panel(course):
+    m = course["meeting"]
+    return f"""<article class="course-launch" id="{course['key']}Dispatch" style="{theme_vars(course)}">
+  {banner_figure(course, class_name="launch-image")}
+  <div class="launch-body">
+    <header class="launch-identity">
+      <p class="course-code">{e(course['displayCode'])}</p>
+      <h2>{e(course['title'])}</h2>
+      <p>{e(m['daysLabel'])} · {e(m['timeLabel'])}<br>{e(m['location'])}</p>
+    </header>
+    <div class="launch-next">
+      <span>Next meeting</span>
+      <strong id="{course['key']}Date">Loading schedule…</strong>
+      <p id="{course['key']}Topic"></p>
+    </div>
+  </div>
+  <nav class="launch-actions" aria-label="{e(course['code'])} destinations">{course_launch_links(course)}</nav>
+</article>"""
+
+
 def build_hq(term, courses):
-    dispatches = [course_dispatch(c, instructor=True) for c in courses]
+    launches = [course_launch_panel(c) for c in courses]
     config = {
         c["key"]: {
             "code": c["code"],
@@ -298,55 +342,35 @@ def build_hq(term, courses):
 </head>
 <body class="hq-page">
 {HQ_DIRECTION_CONTRACT}
-<a class="skip-link" href="#main">Skip to teaching situation</a>
-<div class="hq-shell">
-<aside class="hq-rail" aria-label="Teaching day overview">
-  <header class="site-masthead">
-    <h1>{e(term['name'])} Teaching HQ</h1>
-    <p>Instructor field desk</p>
-  </header>
-  <section class="rail-now" aria-labelledby="railNowTitle">
-    <h2 id="railNowTitle">Now</h2>
-    <strong id="nowTitle">Orienting…</strong>
-    <p id="nowDetail">Checking today’s teaching schedule.</p>
-  </section>
-  <section class="rail-agenda" aria-labelledby="railAgendaTitle">
-    <h2 id="railAgendaTitle">Next on the calendar</h2>
-    <div class="rail-agenda-list" id="railAgenda"><p>Loading upcoming meetings…</p></div>
-  </section>
-  <nav class="rail-nav" aria-label="Teaching HQ sections">
-    <a href="#courses">Course dispatches</a>
-    <a href="#week">Recurring week</a>
-    <a href="#decisions">All decisions</a>
-  </nav>
-</aside>
-
-<div class="hq-workspace">
-  <header class="workspace-masthead">
+<a class="skip-link" href="#courses">Skip to courses</a>
+<header class="hq-launch-masthead">
+  <div>
     <p id="dateLabel">Loading date…</p>
-    <nav aria-label="Teaching HQ destinations"><a href="students.html">Student course index</a>{nav_archive}</nav>
-  </header>
+    <h1>Teaching Today</h1>
+    <p>{e(term['name'])} · Instructor HQ</p>
+  </div>
+  <nav aria-label="Teaching HQ destinations">
+    <a href="students.html">Student course index</a>
+    <a href="#week">Weekly pattern</a>
+    <a href="#decisions">Decision queue</a>
+    {nav_archive}
+  </nav>
+</header>
 
-  <main id="main">
-
-  <section class="priority-move" aria-labelledby="priorityTitle">
-    <div>
-      <h2 id="priorityTitle"><span id="priorityTask">{e(priority_title)}</span></h2>
-      <p><strong>Before the next class.</strong> {e(priority_detail)}</p>
+<main class="hq-launch-main" id="main">
+  <section class="course-launch-section" id="courses" aria-labelledby="coursesTitle">
+    <div class="launch-heading">
+      <div><p>Fall teaching desk</p><h2 id="coursesTitle">Your courses</h2></div>
+      <p>Open a course—or practice the student names—without hunting.</p>
     </div>
-    <a class="primary-action" href="#decisions">Open the decision queue</a>
+    <div class="course-launch-grid">{"".join(launches)}</div>
   </section>
 
-  <section class="situation-ledger" aria-labelledby="situationTitle">
-    <h2 class="sr-only" id="situationTitle">Current teaching situation</h2>
-    <div><h3>Next</h3><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
-    <div class="status-risk"><h3>At risk</h3><strong id="riskTitle">{e(risk)}</strong><p>Oldest unresolved instructor decision in the public-safe queue.</p></div>
-    <div class="status-changed"><h3>Changed</h3><strong id="changedTitle">{e(changed)}</strong><p>Queue projection updated {e(task_board.get('updated', ''))}.</p></div>
-  </section>
-
-  <section class="dispatch-section" id="courses" aria-labelledby="coursesTitle">
-    <div class="section-heading"><h2 id="coursesTitle">Course dispatches</h2><a href="students.html">Student course index</a></div>
-    <div class="dispatch-list">{"".join(dispatches)}</div>
+  <section class="teaching-brief" aria-labelledby="teachingBriefTitle">
+    <h2 class="sr-only" id="teachingBriefTitle">Teaching brief</h2>
+    <div><span>Today</span><strong id="nowTitle">Orienting…</strong><p id="nowDetail">Checking today’s teaching schedule.</p></div>
+    <div><span>Next</span><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
+    <div class="teaching-brief-priority"><span>Before the next class</span><strong id="priorityTask">{e(priority_title)}</strong><p>{e(priority_detail)}</p><a href="#decisions">Open decision queue</a></div>
   </section>
 
   <section class="week-section" id="week" aria-labelledby="weekTitle">
@@ -365,10 +389,11 @@ def build_hq(term, courses):
       </div>
     </details>
   </section>
-  </main>
+</main>
+<footer class="hq-launch-footer">
 {archive_html}
-</div>
-</div>
+  <span>{e(term['name'])} · {e(term['institution'])}</span>
+</footer>
 <script>
 window.courseConfig = {json.dumps(config, ensure_ascii=False, indent=2)};
 window.termName = {json.dumps(term['name'])};
@@ -380,7 +405,7 @@ window.taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
 """
     PRIVATE_OUT.mkdir(exist_ok=True)
     (PRIVATE_OUT / "index.html").write_text(doc)
-    return len(dispatches)
+    return len(launches)
 
 
 def build_student_index(term, courses):
@@ -399,13 +424,14 @@ def build_student_index(term, courses):
 {DIRECTION_CONTRACT}
 <a class="skip-link" href="#courses">Skip to courses</a>
 <header class="student-masthead">
-  <div><h1>{e(term['name'])} courses</h1><p>{e(term['institution'])} · Find your next meeting and course materials.</p></div>
+  <strong>LAWRENCE UNIVERSITY · {e(term['name'])}</strong>
+  <nav aria-label="Student navigation"><a href="#courses">Courses</a></nav>
 </header>
+<section class="student-hero" aria-labelledby="studentIntro">
+  <div><h1 id="studentIntro">Your courses, ready for the room</h1>
+  <p>Questions, schedules, syllabi, and Canvas—three clear ways into the work of the term.</p></div>
+</section>
 <main id="courses" class="student-index-main">
-  <section class="student-intro" aria-labelledby="studentIntro">
-    <h2 id="studentIntro">Three courses. One clear way in.</h2>
-    <p>Open your course home for the current question, Canvas, syllabus, and full meeting schedule.</p>
-  </section>
   <div class="dispatch-list student-dispatches">{"".join(dispatches)}</div>
 </main>
 <footer class="site-footer"><span>{e(term['name'])} · {e(term['institution'])}</span></footer>

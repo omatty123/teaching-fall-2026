@@ -286,3 +286,109 @@
   .course-facts dl > div { grid-template-columns: 78px 1fr; }
   .sched-table th { width: 96px; }
 }
+
+/* Public course pages: the same editorial language as the Korea dashboard. */
+.course-body-page { background: var(--paper); }
+.course-console {
+  min-height: 52px;
+  grid-template-columns: minmax(260px, 1fr) auto auto;
+  padding-inline: max(1.5rem, var(--gutter));
+  border-bottom-color: #333;
+  background: #1a1a1a;
+  color: #ccc;
+}
+.course-console-brand { color: #eee; }
+.course-console-brand span { color: var(--gold); letter-spacing: .16em; }
+.course-console-brand strong { font-weight: 500; }
+.course-console-meeting { border-color: #3c3c3c; }
+.course-console-meeting span { color: #888; }
+.course-console-meeting strong { color: #ddd; font-weight: 500; }
+.course-console-meeting a { color: var(--gold); }
+.course-console-tools a { border-color: #3c3c3c; color: #aaa; font-weight: 500; }
+.course-console-tools a:hover,
+.course-console-tools a:focus-visible { color: white; background: #292929; }
+
+.course-dashboard { max-width: 1200px; padding-top: 0; }
+.session-card { margin-inline: calc(-1 * var(--gutter)); border: 0; background: transparent; }
+.session-header {
+  min-height: 210px;
+  padding: clamp(2.2rem, 5vw, 4.5rem) max(var(--gutter), calc((100vw - 1200px) / 2 + var(--gutter)));
+  background: linear-gradient(160deg, var(--slate) 0%, var(--slate-light) 52%, var(--slate) 100%);
+}
+.session-header h1 {
+  max-width: 22ch;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.35rem, 5.6vw, 5.3rem);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: .96;
+}
+.session-header p { color: #c4c9cd; font-size: .84rem; }
+.session-meets { max-width: 260px; color: #eee; }
+.session-meets span { color: #afb6bc; }
+.session-body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.6rem var(--gutter) 0;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.5rem;
+}
+.session-primary {
+  overflow: hidden;
+  grid-template-columns: minmax(280px, .92fr) minmax(0, 1.08fr);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(20, 26, 31, .055);
+}
+.session-art { min-height: 330px; }
+.session-art img { filter: saturate(.88) contrast(1.04); }
+.session-brief { justify-content: flex-start; padding: clamp(1.3rem, 3vw, 2.25rem); }
+.course-lede { color: #4d4d4d; font-size: .94rem; }
+.session-detail {
+  margin-top: 1.25rem;
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 500;
+  line-height: 1.18;
+}
+.course-pattern h2 { font-family: "Newsreader", Georgia, serif; font-size: 1.15rem; font-weight: 600; }
+.course-pattern p { color: #555; }
+.session-next {
+  padding: 1.25rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: white;
+}
+.course-workspace,
+.course-lower { max-width: 1200px; margin-inline: auto; }
+.course-workspace { padding-top: 2rem; }
+.course-workspace .section-heading,
+.course-lower .section-heading { padding-bottom: .7rem; border-bottom: 1px solid #aaa59c; }
+.section-heading h2,
+.course-facts > h2 { font-family: "Newsreader", Georgia, serif; font-size: 1.35rem; font-weight: 600; letter-spacing: -.015em; text-transform: none; color: var(--ink); }
+.workspace-list { margin-top: 0; border-top: 0; }
+.workspace-row { min-height: 78px; }
+.workspace-row h3 { font-size: .94rem; text-decoration: none; }
+.course-lower { margin-top: 2.5rem; }
+.course-facts { top: 68px; border-top: 1px solid var(--rule-dark); }
+.course-facts > h2 { padding: .75rem 0; }
+.site-footer { margin-top: 1rem; }
+
+@media (max-width: 900px) {
+  .course-console { grid-template-columns: minmax(0, 1fr) auto; }
+  .course-console-tools { grid-column: 1 / -1; border-top: 1px solid #333; }
+  .session-body { grid-template-columns: 1fr; }
+  .session-next { border-left: 1px solid var(--rule); }
+  .session-next .sched-table tbody { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+}
+@media (max-width: 620px) {
+  .course-console { padding-inline: .9rem; }
+  .course-console-brand strong { font-size: .76rem; }
+  .session-header { padding: 2.25rem var(--gutter); }
+  .session-primary { grid-template-columns: 1fr; }
+  .session-art { min-height: 240px; }
+  .session-next .sched-table tbody { grid-template-columns: 1fr; }
+  .section-heading h2,
+  .course-facts > h2 { font-size: 1.18rem; }
+}
