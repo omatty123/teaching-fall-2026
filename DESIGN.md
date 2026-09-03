@@ -30,11 +30,11 @@ typography:
     lineHeight: 0.96
     letterSpacing: "-0.035em"
   title:
-    fontFamily: '"Newsreader", Georgia, serif'
+    fontFamily: '"Outfit", "Source Sans 3", sans-serif'
     fontSize: "clamp(1.45rem, 2.35vw, 2.05rem)"
-    fontWeight: 500
-    lineHeight: 1.04
-    letterSpacing: "-0.02em"
+    fontWeight: 600
+    lineHeight: 1.12
+    letterSpacing: "-0.025em"
   body:
     fontFamily: '"Outfit", "Source Sans 3", sans-serif'
     fontSize: "1rem"
@@ -76,12 +76,12 @@ components:
 
 The site is an editorial threshold into class rather than a miniature learning-management system. Its closest authority is the pinned *Modern Korea through Literature and Film* dashboard and student directory: a thin black utility rail, a deep slate title field, literary serif headlines, warm paper, and documentary images large enough to establish the intellectual world before administrative details appear.
 
-The student-facing index uses course portraits, not dashboard cards. Each course home begins with the live question, then moves into image, preparation, tools, schedule, and record. The private HQ may be denser, but it shares the same typography, environmental colors, and image discipline.
+The student-facing index uses course portraits, not dashboard cards. Each course home begins with the live question, then moves into image, preparation, tools, schedule, and record. Serif is deliberately rare: it appears only in the leading editorial statement or current question, while course names, navigation, sections, and working text remain sans-serif.
 
 **Key Characteristics:**
 
 - Questions and images lead; administration follows.
-- Newsreader carries titles and intellectual prompts; Outfit carries navigation and working text.
+- Newsreader carries only leading editorial statements and intellectual prompts; Outfit carries course names, navigation, sections, and working text.
 - Dark chrome is thin and functional; slate fields are reserved for major orientation.
 - Documentary images retain visible credits and meaningful crops.
 - Public pages never expose roster data, student names, or portraits.
@@ -107,7 +107,7 @@ Newsreader gives questions and course titles a humane, literary cadence. Outfit 
 - **Body:** Explanatory copy, generally held to 62–72 characters per line.
 - **Label:** Small uppercase course codes and utility context; use sparingly.
 
-**The Two-Voice Rule.** Serif type marks ideas, works, and questions; sans-serif type marks actions, metadata, and explanation.
+**The Two-Voice Rule.** Serif type is reserved for one governing idea or question per page; sans-serif type carries everything operational and all secondary headings.
 
 ## Layout
 
