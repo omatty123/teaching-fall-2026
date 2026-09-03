@@ -147,7 +147,7 @@ def head(term, *, title, description, og_image, rel="", og_path=""):
 <meta name="twitter:image" content="{base}/{og_image}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{rel}_kit/hq.css?v={css_version}">"""
 
 
@@ -259,20 +259,16 @@ def course_dispatch(course, *, rel="", instructor=False):
 def course_launch_links(course):
     """First-viewport course actions for the private instructor HQ."""
     links = course.get("links", {})
-    out = []
-    if links.get("roster"):
-        out.append(
-            f'<a class="launch-action launch-action--roster" href="{e(links["roster"])}">'
-            '<span>Learn the names</span><small>Private roster drill</small></a>'
-        )
-    out.append(
+    out = [
         f'<a class="launch-action" href="courses/{e(course["slug"])}.html">'
-        '<span>Course home</span></a>'
-    )
+        '<span>Course page</span></a>'
+    ]
     for key, label in (("syllabus", "Syllabus"), ("canvas", "Canvas"),
-                       ("waterNews", "Water in the News"), ("artwork", "Artwork of the day")):
+                       ("roster", "Learn the names"), ("waterNews", "Water in the News"),
+                       ("artwork", "Artwork of the day")):
         if links.get(key):
-            out.append(f'<a class="launch-action" href="{e(links[key])}"><span>{e(label)}</span></a>')
+            roster_class = " launch-action--roster" if key == "roster" else ""
+            out.append(f'<a class="launch-action{roster_class}" href="{e(links[key])}"><span>{e(label)}</span></a>')
     return "".join(out)
 
 
@@ -346,8 +342,8 @@ def build_hq(term, courses):
 <header class="hq-launch-masthead">
   <div>
     <p id="dateLabel">Loading date…</p>
-    <h1>Teaching Today</h1>
-    <p>{e(term['name'])} · Instructor HQ</p>
+    <h1>Today’s Prep</h1>
+    <p>Next class, prep queue, and the whole week</p>
   </div>
   <nav aria-label="Teaching HQ destinations">
     <a href="students.html">Student course index</a>
@@ -424,13 +420,10 @@ def build_student_index(term, courses):
 {DIRECTION_CONTRACT}
 <a class="skip-link" href="#courses">Skip to courses</a>
 <header class="student-masthead">
-  <strong>LAWRENCE UNIVERSITY · {e(term['name'])}</strong>
-  <nav aria-label="Student navigation"><a href="#courses">Courses</a></nav>
+  <p>LAWRENCE UNIVERSITY · {e(term['name'])}</p>
+  <h1>{e(term['name'])} Courses</h1>
+  <span>Course pages, Canvas, syllabi, and the next meeting</span>
 </header>
-<section class="student-hero" aria-labelledby="studentIntro">
-  <div><h1 id="studentIntro">Your courses, ready for the room</h1>
-  <p>Questions, schedules, syllabi, and Canvas—three clear ways into the work of the term.</p></div>
-</section>
 <main id="courses" class="student-index-main">
   <div class="dispatch-list student-dispatches">{"".join(dispatches)}</div>
 </main>

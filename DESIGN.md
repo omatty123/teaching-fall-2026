@@ -1,6 +1,6 @@
 ---
 name: Fall 2026 Teaching Sites
-description: Editorial seminar pages built from dark course rails, warm paper, literary display type, and documentary course portraits.
+description: Compact teaching pages built from a dark daily-prep header, image-and-color course cards, Inter typography, and direct next-class actions.
 colors:
   paper: "#f4f3f0"
   paper-deep: "#e9e6df"
@@ -18,26 +18,24 @@ colors:
   course-buen-moss: "#2d5a50"
 typography:
   display:
-    fontFamily: '"Newsreader", Georgia, serif'
-    fontSize: "clamp(2.4rem, 6.5vw, 5.7rem)"
-    fontWeight: 400
-    lineHeight: 0.94
-    letterSpacing: "-0.035em"
+    fontFamily: '"Inter", -apple-system, sans-serif'
+    fontSize: "28px"
+    fontWeight: 300
+    lineHeight: 1.2
+    letterSpacing: "0.5px"
   headline:
-    fontFamily: '"Newsreader", Georgia, serif'
-    fontSize: "clamp(2.35rem, 5.6vw, 5.3rem)"
-    fontWeight: 400
-    lineHeight: 0.96
-    letterSpacing: "-0.035em"
+    fontFamily: '"Inter", -apple-system, sans-serif'
+    fontSize: "17px"
+    fontWeight: 500
+    lineHeight: 1.3
   title:
-    fontFamily: '"Outfit", "Source Sans 3", sans-serif'
-    fontSize: "clamp(1.45rem, 2.35vw, 2.05rem)"
-    fontWeight: 600
-    lineHeight: 1.12
-    letterSpacing: "-0.025em"
+    fontFamily: '"Inter", -apple-system, sans-serif'
+    fontSize: "14px"
+    fontWeight: 500
+    lineHeight: 1.3
   body:
-    fontFamily: '"Outfit", "Source Sans 3", sans-serif'
-    fontSize: "1rem"
+    fontFamily: '"Inter", -apple-system, sans-serif'
+    fontSize: "12px"
     fontWeight: 400
     lineHeight: 1.5
   label:
@@ -72,16 +70,16 @@ components:
 
 ## Overview
 
-**Creative North Star: “The Seminar Screen”**
+**Creative North Star: “Today’s Prep Cards”**
 
-The site is an editorial threshold into class rather than a miniature learning-management system. Its closest authority is the pinned *Modern Korea through Literature and Film* dashboard and student directory: a thin black utility rail, a deep slate title field, literary serif headlines, warm paper, and documentary images large enough to establish the intellectual world before administrative details appear.
+The preserved Spring 2026 Teaching Today page is the literal template authority. The system uses its compact centered dark header, cool gray page field, three image-and-color course cards, small outlined buttons, direct next-class status, and dense Inter typography.
 
-The student-facing index uses course portraits, not dashboard cards. Each course home begins with the live question, then moves into image, preparation, tools, schedule, and record. Serif is deliberately rare: it appears only in the leading editorial statement or current question, while course names, navigation, sections, and working text remain sans-serif.
+The instructor HQ and student index share the same card skeleton. Course data, links, and privacy boundaries change by audience; geometry and typographic scale do not. Individual course pages may expand the card language into schedules and records but should remain compact and sans-serif-led.
 
 **Key Characteristics:**
 
 - Questions and images lead; administration follows.
-- Newsreader carries only leading editorial statements and intellectual prompts; Outfit carries course names, navigation, sections, and working text.
+- Inter carries every layer; size, weight, course color, and grouping create hierarchy.
 - Dark chrome is thin and functional; slate fields are reserved for major orientation.
 - Documentary images retain visible credits and meaningful crops.
 - Public pages never expose roster data, student names, or portraits.
@@ -96,10 +94,10 @@ Charcoal and slate establish the seminar environment; warm off-white paper and w
 
 ## Typography
 
-**Display Font:** Newsreader, with Georgia and serif fallbacks  
-**Body Font:** Outfit, with Source Sans 3 and sans-serif fallbacks
+**Display Font:** Inter, with the system sans-serif stack  
+**Body Font:** Inter, with the system sans-serif stack
 
-Newsreader gives questions and course titles a humane, literary cadence. Outfit keeps schedules, labels, controls, and practical directions compact and unambiguous.
+Inter keeps the entire system compact, familiar, and quick to scan. Do not introduce serif display type into this template.
 
 - **Display:** Student-index promise; two or three balanced lines at most.
 - **Headline:** Current course question in the slate field.
@@ -107,21 +105,21 @@ Newsreader gives questions and course titles a humane, literary cadence. Outfit 
 - **Body:** Explanatory copy, generally held to 62–72 characters per line.
 - **Label:** Small uppercase course codes and utility context; use sparingly.
 
-**The Two-Voice Rule.** Serif type is reserved for one governing idea or question per page; sans-serif type carries everything operational and all secondary headings.
+**The One-Family Rule.** Inter carries the whole interface; hierarchy comes from a restrained 9–28px scale, weight, spacing, and course-color bands.
 
 ## Layout
 
-Shared content centers at 1200–1248px with a fluid gutter. The student index uses three tall image-led course portraits on desktop, two plus one spanning portrait on tablet, and one continuous column on phones. Course pages move from a full-width slate question field to an asymmetric main resource and compact “coming next” rail, then to tools and the schedule record.
+Shared content centers at 1400px with 24px page padding and 20px gaps. Course cards use a 112px image strip, a compact colored identity/action band, and a white next-session body. Three columns become two and then one at 980px and 720px.
 
 Responsive layouts reflow instead of shrinking. Mobile retains the question and image as the first two strong impressions, keeps practical targets at least 44px where repeated actions require it, and moves supporting rails below the main content.
 
 ## Elevation & Depth
 
-The system is mostly tonal. Course portraits and the main session resource receive one soft, low-opacity shadow to separate white paper from the warm ground; navigation, schedules, and facts use borders and color fields instead. No hard offset shadows or decorative glow.
+Cards use the original restrained `0 2px 12px rgba(0,0,0,.08)` shadow on the cool gray ground. Internal hierarchy comes from course-color bands and light gray dividers.
 
 ## Shapes
 
-The page field and title bands remain square and architectural. Small utility controls use 4px corners. Image-led course portraits and major white resource panels use an 8px radius, reflecting the Korean reference without turning every section into a card.
+Course cards use 12px corners, supporting panels 8–10px, and small action buttons 6px. The geometry is soft but compact, never pill-shaped.
 
 ## Components
 
