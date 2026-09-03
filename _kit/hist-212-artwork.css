@@ -1,46 +1,52 @@
-/* Artwork of the Day · HIST 212.
-   Uses the kit's own tokens (--paper, --ink, --rust, --rule) so it moves with the
-   design system instead of pinning its own colours. */
+/* Artwork of the Day · HIST 212. Uses the kit's tokens so it moves with the design system. */
 .artwork-page{max-width:var(--max);margin:0 auto;padding:0 var(--gutter) 56px}
 .aw-head{background:none;color:var(--text);text-align:left;padding:14px 0 6px}
 .aw-head h1{margin:0;font-size:26px;font-weight:650;letter-spacing:-.02em}
-.aw-lede{margin:6px 0 0;max-width:64ch;color:var(--text-muted);font-size:13.5px;line-height:1.45}
+.aw-lede{margin:6px 0 0;max-width:66ch;color:var(--text-muted);font-size:13.5px;line-height:1.45}
 .aw-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--paper) 94%,transparent);
  backdrop-filter:blur(8px);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
  padding:8px 0;margin:10px 0 4px;display:flex;flex-wrap:wrap;gap:4px 14px}
 .aw-nav a{font-size:11.5px;color:var(--text-muted);text-decoration:none;white-space:nowrap}
 .aw-nav a b{color:var(--rust);margin-right:4px}
 .aw-nav a:hover{color:var(--ink)}
-.aw{display:grid;grid-template-columns:300px minmax(0,1fr);gap:26px;align-items:start;
- padding:20px 0;border-bottom:1px solid var(--rule);scroll-margin-top:46px}
+.aw{display:grid;grid-template-columns:420px minmax(0,1fr);gap:30px;align-items:start;
+ padding:26px 0;border-bottom:1px solid var(--rule);scroll-margin-top:46px}
 .aw:last-of-type{border-bottom:0}
-.aw.wide{grid-template-columns:minmax(0,1fr)!important;gap:12px}
+.aw.wide{grid-template-columns:minmax(0,1fr)!important;gap:16px}
 .aw figure{margin:0}
-.aw .imgbox{height:340px;display:flex;align-items:flex-start;gap:6px}
-.aw.wide .imgbox{height:auto;max-width:1000px}
-.aw figure img{max-width:100%;max-height:100%;width:auto;height:auto;display:block;
- background:var(--paper-deep);border:1px solid var(--rule);object-fit:contain}
-.aw.wide figure img{max-height:none;width:100%}
-.aw figcaption{font-size:10.5px;color:var(--text-muted);margin-top:6px;line-height:1.3}
-.aw.wide figcaption{max-width:1000px}
+.aw .imgbox{height:460px;display:flex;align-items:flex-start;gap:10px}
+.aw .shot{display:block;height:100%;line-height:0;text-decoration:none}
+.aw .shot img{height:100%;width:auto;display:block;
+ background:var(--paper-deep);border:1px solid var(--rule);object-fit:contain;
+ transition:box-shadow .12s ease,border-color .12s ease}
+/* wide handscrolls: full width of the card, natural height */
+.aw.wide .imgbox{height:auto;display:block}
+.aw.wide .shot{height:auto;width:100%}
+.aw.wide .shot img{width:100%;height:auto}
+.aw .shot:hover img{border-color:var(--rust);box-shadow:0 0 0 3px color-mix(in srgb,var(--rust) 18%,transparent)}
 .aw .when{margin:0;display:flex;gap:9px;align-items:baseline;font-size:11px;
  letter-spacing:.07em;text-transform:uppercase}
 .aw .when b{color:var(--rust)}
 .aw .when span{color:var(--text-muted)}
-.aw h2{margin:5px 0 0;font-size:19px;font-weight:650;letter-spacing:-.01em;line-height:1.25;color:var(--ink)}
-.aw h2 i{font-style:normal;color:var(--text-muted);font-weight:400;font-size:15px;margin-right:9px;letter-spacing:.04em}
-.aw .sub,.aw .meta{margin:2px 0 0;font-size:12.5px;color:var(--text-muted)}
-.aw .meta{margin-top:1px}
-.aw .hook{margin:11px 0 0;font-size:15.5px;line-height:1.4;font-weight:550;max-width:62ch;color:var(--ink)}
-.aw .awbody{margin:4px 0 0;font-size:14px;color:var(--ink-soft);max-width:62ch;line-height:1.45}
-.aw ol.q{margin:13px 0 0;padding:0;list-style:none;border-top:1px solid var(--rule);padding-top:10px}
-.aw ol.q li{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;margin:0 0 5px;align-items:baseline}
+.aw h2{margin:6px 0 0;font-size:22px;font-weight:650;letter-spacing:-.01em;line-height:1.22;color:var(--ink)}
+.aw h2 i{font-style:normal;color:var(--text-muted);font-weight:400;font-size:17px;margin-right:10px;letter-spacing:.04em}
+.aw .sub{margin:3px 0 0;font-size:13.5px;color:var(--text-muted)}
+.aw .src{margin:9px 0 0;font-size:12.5px;line-height:1.5;color:var(--ink-soft);max-width:62ch}
+.aw .out{margin:9px 0 0;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;font-size:12px}
+.aw .more{color:var(--rust);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor}
+.aw .more:hover{color:var(--ink)}
+.aw .imgsrc{color:var(--text-muted);font-size:11.5px}
+.aw .imgsrc a{color:var(--text-muted)}
+.aw ol.q{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--rule);padding-top:12px}
+.aw ol.q li{display:grid;grid-template-columns:104px minmax(0,1fr);gap:12px;margin:0 0 6px;align-items:baseline}
 .aw ol.q li:last-child{margin-bottom:0}
 .aw .lab{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--rust);font-weight:600}
-.aw .qt{font-size:13.5px;line-height:1.4;max-width:58ch;color:var(--ink)}
-@media (max-width:860px){
- .aw,.aw[style]{grid-template-columns:1fr!important;gap:12px;padding:16px 0}
- .aw .imgbox{height:230px}
+.aw .qt{font-size:14px;line-height:1.4;max-width:58ch;color:var(--ink)}
+@media (max-width:900px){
+ .aw,.aw[style]{grid-template-columns:1fr!important;gap:14px;padding:18px 0}
+ .aw .imgbox{height:auto;max-height:340px}
+ .aw .shot{height:auto;max-height:340px}
+ .aw figure img{max-height:340px}
  .aw-nav{display:none}
  .aw ol.q li{grid-template-columns:74px minmax(0,1fr);gap:9px}
 }
