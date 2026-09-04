@@ -155,7 +155,8 @@ def head(term, *, title, description, og_image, rel="", og_path=""):
 
 def week_grid(term, courses):
     win_start = term["scheduleWindow"]["startMinutes"]
-    win_end = term["scheduleWindow"]["endMinutes"]
+    win_end = max(term["scheduleWindow"]["endMinutes"], *(c["meeting"]["endMinutes"] for c in courses))
+    track_height = round((win_end - win_start) * PX_PER_MIN) + 16
 
     labels = []
     mark = win_start
@@ -196,7 +197,7 @@ def week_grid(term, courses):
         f'<div class="term-date"><strong>{e(d["stripLabel"])}</strong>{e(d["stripNote"])}</div>'
         for d in term["dates"] if d.get("strip"))
 
-    return f"""<div class="week-card">
+    return f"""<div class="week-card" style="--track-height:{track_height}px">
   <div class="week-desktop" aria-label="{e(term['name'])} weekly block schedule">
     <div class="time-column">
       <div class="day-name" aria-hidden="true"></div>
@@ -248,7 +249,7 @@ def course_dispatch(course, *, rel="", instructor=False):
     <p>{e(m['daysLabel'])} · {e(m['timeLabel'])}</p>
   </div>
   <div class="dispatch-session">
-    <span>Next meeting</span>
+    <span id="{course['key']}MeetingLabel">Next meeting</span>
     <strong id="{course['key']}Date">Loading schedule…</strong>
     <p id="{course['key']}Topic"></p>
   </div>
@@ -263,8 +264,8 @@ def course_launch_links(course):
         f'<a class="launch-action" href="courses/{e(course["slug"])}.html">'
         '<span>Course page</span></a>'
     ]
-    for key, label in (("syllabus", "Syllabus"), ("canvas", "Canvas"),
-                       ("roster", "Learn the names"), ("waterNews", "Water in the News"),
+    for key, label in (("roster", "Learn the names"), ("syllabus", "Syllabus"),
+                       ("canvas", "Canvas"), ("waterNews", "Water in the News"),
                        ("artwork", "Artwork of the day")):
         if links.get(key):
             roster_class = " launch-action--roster" if key == "roster" else ""
@@ -283,7 +284,7 @@ def course_launch_panel(course):
       <p>{e(m['daysLabel'])} · {e(m['timeLabel'])}<br>{e(m['location'])}</p>
     </header>
     <div class="launch-next">
-      <span>Next meeting</span>
+      <span id="{course['key']}MeetingLabel">Next meeting</span>
       <strong id="{course['key']}Date">Loading schedule…</strong>
       <p id="{course['key']}Topic"></p>
     </div>
@@ -298,12 +299,13 @@ def build_hq(term, courses):
         c["key"]: {
             "code": c["code"],
             "schedule": c["schedule"],
+            "startMinutes": c["meeting"]["startMinutes"],
             "endMinutes": c["meeting"]["endMinutes"],
             "timeLabel": c["meeting"]["timeLabel"],
             "location": c["meeting"]["shortLocation"],
             "tasks": c["prep"]["tasks"],
             "build": c["prep"]["build"],
-            "href": f"courses/{c['slug']}.html",
+            "href": f"{term['baseUrl'].rstrip('/')}/courses/{c['slug']}.html",
         } for c in courses
     }
 
@@ -359,6 +361,7 @@ def build_hq(term, courses):
       <div><p>Fall teaching desk</p><h2 id="coursesTitle">Your courses</h2></div>
       <p>Open a course—or practice the student names—without hunting.</p>
     </div>
+    <nav class="course-jumps" aria-label="Jump to a course">{"".join(f'<a href="#{c["key"]}Dispatch">{e(c["code"])}</a>' for c in courses)}</nav>
     <div class="course-launch-grid">{"".join(launches)}</div>
   </section>
 
@@ -366,7 +369,7 @@ def build_hq(term, courses):
     <h2 class="sr-only" id="teachingBriefTitle">Teaching brief</h2>
     <div><span>Today</span><strong id="nowTitle">Orienting…</strong><p id="nowDetail">Checking today’s teaching schedule.</p></div>
     <div><span>Next</span><strong id="nextTitle">Finding the next meeting…</strong><p id="nextDetail"></p></div>
-    <div class="teaching-brief-priority"><span>Before the next class</span><strong id="priorityTask">{e(priority_title)}</strong><p>{e(priority_detail)}</p><a href="#decisions">Open decision queue</a></div>
+    <div class="teaching-brief-priority"><span>Next term decision</span><strong id="priorityTask">{e(priority_title)}</strong><p id="priorityDetail">{e(priority_detail)}</p><a id="priorityLink" href="#decisions">Open decision queue</a></div>
   </section>
 
   <section class="week-section" id="week" aria-labelledby="weekTitle">
@@ -378,9 +381,11 @@ def build_hq(term, courses):
     <details class="decision-disclosure">
       <summary><span><strong id="todoTitle">All term decisions</strong><small>{e(task_board.get('intro', ''))}</small></span><span id="todoCount">Loading queue…</span></summary>
       <div class="decision-body">
+        <p class="todo-storage-note">Queue source updated {e(task_board.get("updated", "date not recorded"))}</p>
         <div class="todo-filters" id="todoFilters" role="group" aria-label="Filter the decision queue"></div>
         <div class="todo-list" id="todoList"></div>
         <p class="todo-storage-note">Personal checks stay in this browser. Course status files remain authoritative.</p>
+        <p id="todoStorageError" role="status" hidden></p>
         <div class="sr-only" id="todoAnnouncement" aria-live="polite"></div>
       </div>
     </details>
@@ -395,7 +400,7 @@ window.courseConfig = {json.dumps(config, ensure_ascii=False, indent=2)};
 window.termName = {json.dumps(term['name'])};
 window.taskBoardConfig = {json.dumps(task_board, ensure_ascii=False, indent=2)};
 </script>
-<script src="_kit/hq.js"></script>
+<script src="_kit/hq.js?v={hashlib.sha256((KIT / "hq.js").read_bytes()).hexdigest()[:10]}"></script>
 </body>
 </html>
 """
@@ -432,7 +437,7 @@ def build_student_index(term, courses):
 </main>
 <footer class="site-footer"><span>{e(term['name'])} · {e(term['institution'])}</span></footer>
 <script>window.courseConfig = {json.dumps(config, ensure_ascii=False)}; window.termName = {json.dumps(term['name'])}; window.taskBoardConfig = {{"items": []}};</script>
-<script src="_kit/hq.js"></script>
+<script src="_kit/hq.js?v={hashlib.sha256((KIT / "hq.js").read_bytes()).hexdigest()[:10]}"></script>
 </body>
 </html>"""
     (ROOT / "index.html").write_text(doc)
@@ -564,7 +569,7 @@ def build_course(term, course):
 <a class="skip-link" href="#course-main">Skip to course materials</a>
 <header class="course-console">
   <nav class="breadcrumb"><a class="course-console-brand" href="../students.html"><span>{e(course['displayCode'])}</span><strong>{e(course['title'])}</strong></a></nav>
-  <div class="course-console-meeting"><span>Next meeting</span><strong>{e(current_label)}</strong><a href="#schedule">All meetings</a></div>
+  <div class="course-console-meeting"><span id="{course['key']}MeetingLabel">Next meeting</span><strong>{e(current_label)}</strong><a href="#schedule">All meetings</a></div>
   <nav class="course-console-tools" aria-label="Course tools">{console_tools}</nav>
 </header>
 

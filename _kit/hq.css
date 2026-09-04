@@ -630,7 +630,7 @@ p { text-wrap: pretty; }
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-.day-track { position: relative; min-height: 160px; }
+.day-track { position: relative; min-height: var(--track-height, 205px); }
 .time-label { position: absolute; right: 8px; color: var(--ink-soft); font-size: .62rem; transform: translateY(-50%); }
 .time-label:first-child { transform: none; }
 .class-block {
@@ -1049,7 +1049,7 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
 }
 .hq-page .hq-launch-masthead nav { justify-content: center; gap: 8px; margin-top: 15px; }
 .hq-page .hq-launch-masthead nav a {
-  min-height: 0;
+  min-height: 44px;
   padding: 5px 11px;
   border: 1px solid rgba(255,255,255,.35);
   border-radius: 6px;
@@ -1085,7 +1085,7 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
   border: 0;
 }
 .hq-page .launch-image img { filter: none; }
-.hq-page .launch-image figcaption { display: none; }
+.hq-page .launch-image figcaption { display: block; font-size: 10px; }
 .hq-page .launch-body { display: contents; }
 .hq-page .launch-identity {
   order: 2;
@@ -1126,7 +1126,7 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
 .hq-page .launch-action,
 .hq-page .launch-action--roster {
   display: inline-flex;
-  min-height: 0;
+  min-height: 44px;
   width: auto;
   flex: 0 0 auto;
   grid-column: auto;
@@ -1136,16 +1136,29 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
   border-radius: 6px;
   background: transparent;
   color: #fff;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   text-decoration: none;
 }
 .hq-page .launch-action:hover,
 .hq-page .launch-action--roster:hover { background: rgba(255,255,255,.14); }
+.hq-page .launch-action--roster { background: #fff; color: var(--course-color); font-weight: 700; border-color: #fff; }
+.hq-page .launch-action--roster:hover { background: #eef2f5; }
 .hq-page .launch-action--roster small { display: none; }
+.hq-page .launch-identity > p:last-child { color: #f1f4f7; }
+.hq-page .launch-next p, .hq-page .launch-next > span { color: #57575c; }
+.course-jumps { display: none; }
+.todo-course { color: var(--ink); font-weight: 700; }
+.todo-item .todo-destination { display: inline-flex; align-items: center; min-height: 44px; font-size: .8rem; text-underline-offset: 3px; }
+#todoStorageError { padding: 12px; color: var(--ink); background: var(--paper-deep); }
+@media (max-width: 720px) {
+  .course-jumps { display: flex; gap: 8px; margin-bottom: 14px; }
+  .course-jumps a { display: flex; flex: 1; align-items: center; justify-content: center; min-height: 44px; border: 1px solid var(--rule-dark); border-radius: 6px; font-size: 12px; font-weight: 600; }
+  .hq-page .course-launch { scroll-margin-top: 12px; }
+}
 .hq-page .launch-next {
   order: 4;
-  min-height: 146px;
+  min-height: 108px;
   padding: 13px 20px 18px;
   border: 0;
   border-top: 1px solid #e5e5e5;

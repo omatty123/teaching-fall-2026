@@ -160,3 +160,7 @@ Use ruled rows, not nested cards. Dates align in a stable first column, details 
 - Use pale gray for required reading text.
 - Put serif type on buttons, schedules, or dense operational metadata.
 - Let the private roster visual language justify publishing roster content.
+
+## September 4 HQ usability refinement
+
+Keep the course-first card composition. Instructor navigation and course actions use 44px minimum touch targets; Learn the names is the white primary action for FRST/HIST. Next-meeting panels use 108px minimum height to recover useful space. Course image credits remain visible at 10px. A mobile-only course jump row precedes the stacked cards. Weekly track height is generated from the schedule window and latest meeting end, with 16px additional clearance. The preparation block is explicitly labeled Next term decision and updates its title, detail, and destination together.
