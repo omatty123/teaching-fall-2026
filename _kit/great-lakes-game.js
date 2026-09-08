@@ -53,9 +53,9 @@
       const Audio=window.AudioContext||window.webkitAudioContext;
       if(!Audio) return;
       audioContext ||= new Audio(); audioContext.resume().catch(()=>{});
-      // Each first-try answer lifts the chime by half a semitone. A full
-      // 24-place streak stays within one octave of the starting pitch.
-      const root=440*2**(Math.min(23,Math.max(0,streak-1))/24);
+      // Each first-try answer lifts the chime a full semitone. Starting
+      // at middle C keeps all 24 steps and milestone flourishes comfortable.
+      const root=261.63*2**(Math.min(23,Math.max(0,streak-1))/12);
       const milestone=type==='correct'&&streak>0&&streak%5===0;
       const intervals=milestone?(streak%10===0?[1,1.25,1.5,2,1.5,2]:[1,1.25,1.5,2]):[1,1.25,1.5];
       const frequencies=type==='wrong'?[180,125]:type==='finish'?[523.25,659.25,783.99,1046.5]:intervals.map(interval=>root*interval);
@@ -77,7 +77,14 @@
   function say(message,tone='neutral') { $('feedback').textContent=message; $('feedback').dataset.tone=tone; }
   function resetZoom(){
     const shortPhone=innerWidth<=700&&innerHeight<=550;
-    map.fitBounds([[41.45,-92.3],[49.05,-75.7]],{paddingTopLeft:[shortPhone?15:35,shortPhone?125:80],paddingBottomRight:shortPhone?[265,20]:[35,Math.min(220,innerHeight*.28)],animate:false});
+    if(innerWidth>700){
+      // Match the instructor's reference composition, scaling it to the viewport.
+      const scale=Math.min(innerWidth/862,innerHeight/633);
+      const zoom=Math.max(4,Math.round((5.75+Math.log2(scale))*4)/4);
+      map.setView([46.03,-83.92],zoom,{animate:false});
+    } else {
+      map.fitBounds([[41.45,-92.3],[49.05,-75.7]],{paddingTopLeft:[shortPhone?15:35,shortPhone?125:80],paddingBottomRight:shortPhone?[265,20]:[35,Math.min(220,innerHeight*.28)],animate:false});
+    }
     $('detail-view').value='';
   }
   function panTo(id,detail=false){
