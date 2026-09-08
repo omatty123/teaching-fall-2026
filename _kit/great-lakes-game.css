@@ -1,97 +1,67 @@
-.great-lakes-game { --gl-ink:#173448; --gl-blue:#245a8d; --gl-water:#bad7e7; --gl-rule:#c6d1d6; max-width:1480px; margin:auto; padding:30px clamp(18px,3vw,48px) 20px; color:var(--gl-ink); }
-.great-lakes-game *, .great-lakes-game *::before { box-sizing:border-box; }
-.great-lakes-game [hidden] { display:none !important; }
-.gl-header { display:flex; justify-content:space-between; gap:24px; align-items:center; margin-bottom:26px; }
-.gl-header h1 { font-size:clamp(28px,3vw,42px); line-height:1.1; letter-spacing:-.035em; margin:0 0 12px; }
-.gl-intro { font-size:15px; line-height:1.5; margin:0; color:#495c67; }
-.great-lakes-game button { font:inherit; font-size:14px; font-weight:650; line-height:1.35; min-height:44px; border:1px solid var(--gl-rule); background:white; color:var(--gl-ink); border-radius:4px; padding:10px 16px; cursor:pointer; }
-.great-lakes-game button:hover { background:#e8eff3; }
-.great-lakes-game :is(button,a,input,[tabindex]):focus-visible { outline:3px solid #9b5100; outline-offset:4px; }
-.gl-modes { display:flex; flex-shrink:0; padding:4px; gap:4px; background:#e5e9e8; border-radius:6px; }
-.gl-modes button { border-color:transparent; background:transparent; }
-.gl-modes button[aria-pressed="true"], #next, #retry, .gl-entry button { background:var(--gl-blue); color:#fff; border-color:var(--gl-blue); }
-.gl-layout { display:grid; grid-template-columns:minmax(0,1fr) 290px; gap:28px; align-items:start; }
-.gl-panel { grid-column:2; grid-row:1; background:#fff; border-top:4px solid var(--gl-blue); padding:22px; }
-.gl-progress-label { display:flex; justify-content:space-between; gap:10px; font-size:12px; font-weight:650; }
-#round-progress { display:block; width:100%; height:5px; border:0; border-radius:0; margin:12px 0 26px; background:#e4e9ed; color:var(--gl-blue); }
-#round-progress::-webkit-progress-bar { background:#e4e9ed; }
-#round-progress::-webkit-progress-value { background:var(--gl-blue); }
-#round-progress::-moz-progress-bar { background:var(--gl-blue); }
-#place-name { font-size:27px; line-height:1.2; letter-spacing:-.02em; margin:0 0 12px; min-height:65px; overflow-wrap:break-word; }
-.gl-category { font-size:13px; margin:0; color:#495c67; }
-.gl-feedback { font-size:15px; line-height:1.5; min-height:72px; margin:22px 0 14px; }
-.gl-feedback[data-tone="correct"] { color:#176047; }
-.gl-feedback[data-tone="wrong"] { color:#8b4606; }
-#number-form label { display:block; font-size:13px; line-height:1.5; margin-bottom:8px; }
-.gl-entry { display:flex; gap:8px; }
-.gl-entry input { width:100%; min-width:0; min-height:44px; font:inherit; font-size:18px; color:var(--gl-ink); border:1px solid #7e939f; border-radius:4px; padding:6px 10px; }
-.gl-actions { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
-.gl-actions button { width:100%; }
-.gl-score { margin:22px 0 10px; font-size:14px; font-weight:700; }
-.gl-low-stakes { font-size:12px; color:#54616a; line-height:1.5; margin:0; }
-.gl-mobile-status { display:none; }
-.gl-map-section { grid-column:1; grid-row:1; min-width:0; }
-.gl-map-bar { display:flex; justify-content:space-between; gap:12px; padding:13px 16px; background:var(--gl-ink); color:#fff; font-size:11px; letter-spacing:.08em; font-weight:700; }
-.gl-pan-hint { letter-spacing:0; font-weight:500; }
-.gl-map-scroll { overflow-x:auto; background:#f5f3ea; border:1px solid #d1d4cc; border-top:0; overscroll-behavior-x:contain; }
-#lakes-map { display:block; width:100%; min-width:900px; height:auto; }
-#lake-shapes path { fill:var(--gl-water); stroke:#4e819e; stroke-width:1.4; }
-#channel-shapes path { fill:none; stroke:#4e819e; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round; }
-#marker-stems line { stroke:#405561; stroke-width:1; }
-#marker-stems circle { fill:#173448; }
-.gl-marker { cursor:pointer; outline:none; }
-.gl-hit { fill:transparent; stroke:transparent; stroke-width:3; }
-.gl-token { fill:#fff; stroke:var(--gl-ink); stroke-width:1.5; }
-.gl-marker text { font-family:inherit; font-size:16px; font-weight:750; text-anchor:middle; dominant-baseline:central; fill:var(--gl-ink); pointer-events:none; }
-.gl-marker.port .gl-token { fill:var(--gl-ink); }
-.gl-marker.port text { fill:#fff; }
-.gl-marker:hover .gl-hit { fill:#245a8d20; }
-.gl-marker:focus-visible .gl-hit { stroke:#9b5100; }
-.gl-marker.is-correct .gl-hit, .gl-marker.is-selected .gl-hit { fill:#c9e7d6; stroke:#176047; }
-.gl-marker.is-correct .gl-token, .gl-marker.is-selected .gl-token { fill:#176047; stroke:#fff; }
-.gl-marker.is-correct text, .gl-marker.is-selected text { fill:#fff; }
-.gl-marker.is-wrong .gl-hit { stroke:#9b5100; stroke-dasharray:4 3; fill:#ffdfba; }
-.gl-marker.is-wrong .gl-token { fill:#fff0de; }
-.gl-marker.is-wrong text { fill:#7b3b00; }
-.gl-north path { fill:none; stroke:#566669; stroke-width:2; }
-.gl-north text { font-size:15px; font-weight:650; fill:#566669; }
-.gl-legend { display:flex; flex-wrap:wrap; padding:14px 0; margin:0; list-style:none; gap:14px 24px; border-bottom:1px solid var(--gl-rule); }
-.gl-legend li { display:flex; align-items:center; gap:9px; font-size:12px; }
-.gl-symbol { display:inline-block; width:13px; height:13px; border:1.5px solid var(--gl-ink); background:white; }
-.gl-symbol.area, .gl-symbol.port { border-radius:50%; }
-.gl-symbol.water { transform:rotate(45deg); width:11px; height:11px; }
-.gl-symbol.port { background:var(--gl-ink); }
-.gl-map-note, .gl-attribution { color:#495c67; font-size:12px; line-height:1.6; margin:12px 0 0; }
-.gl-attribution { font-size:11px; }
-.gl-attribution a { text-decoration:underline; }
-.gl-study-index { margin-top:24px; border-top:1px solid var(--gl-rule); padding-top:20px; }
-.gl-study-index h2 { font-size:24px; margin:0 0 8px; }
-.gl-study-index > p { font-size:14px; margin:0 0 20px; }
-#study-list { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
-.gl-study-group h3 { text-transform:uppercase; font-size:11px; letter-spacing:.05em; margin:0 0 10px; }
-.gl-study-group button { display:flex; width:100%; text-align:left; gap:10px; padding:9px 8px; border:0; background:transparent; font-size:13px; }
-.gl-study-group button span { font-variant-numeric:tabular-nums; color:#4a6474; width:22px; flex-shrink:0; }
-@media(min-width:1330px) { #lakes-map { min-width:0; } .gl-pan-hint { display:none; } }
-@media(max-width:760px) {
- .great-lakes-game { padding-top:22px; }
- .gl-header { display:block; margin-bottom:20px; }
- .gl-modes { margin-top:18px; width:max-content; }
- .gl-layout { display:flex; flex-direction:column; gap:20px; }
- .gl-panel,.gl-map-section { width:100%; }
- .gl-panel { padding:18px; }
- .gl-mobile-status { display:flex; align-items:center; justify-content:space-between; gap:12px; position:sticky; top:0; z-index:5; padding:12px; background:#fff; border:1px solid var(--gl-rule); border-bottom:0; box-shadow:0 3px 8px #17344814; }
- .gl-mobile-status strong { display:block; font-size:15px; line-height:1.3; }
- .gl-mobile-status p { font-size:12px; line-height:1.4; margin:5px 0 0; }
- .gl-mobile-status button { flex-shrink:0; background:var(--gl-blue); color:white; }
+body:has(.great-lakes-game){background:#0b2231;color:#edf7f4;--paper:#0b2231;--ink:#edf7f4;--ink-soft:#b4c9d3;--rule:#34505f}
+body:has(.great-lakes-game) .breadcrumb,body:has(.great-lakes-game) .site-footer{color:#b4c9d3;border-color:#34505f}
+.great-lakes-game{--gl-ink:#102f40;--gl-blue:#bdf468;--gl-water:#90cddc;--gl-rule:#34505f;max-width:1520px;margin:auto;padding:22px clamp(16px,3vw,44px) 28px;color:#edf7f4}
+.great-lakes-game *{box-sizing:border-box}
+.great-lakes-game [hidden]{display:none!important}
+.great-lakes-game ::selection{background:#bdf468;color:#102f40}
+.gl-header{display:flex;justify-content:space-between;gap:24px;align-items:center;margin-bottom:24px}
+.gl-header h1{font-size:clamp(30px,3.6vw,50px);line-height:1.04;letter-spacing:-.035em;margin:0}
+.gl-header h1 span{color:#bdf468;display:block;font-size:.65em;letter-spacing:-.02em;margin-top:5px}
+.gl-intro{color:#bdd1da;font-size:14px;margin:12px 0 0}
+.gl-header-controls{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.great-lakes-game button{font:inherit;font-size:14px;font-weight:650;line-height:1.35;min-height:44px;border:1px solid #52717e;background:#183b4b;color:#edf7f4;border-radius:8px;padding:10px 16px;cursor:pointer}
+.great-lakes-game button:hover{background:#2a5060}
+.great-lakes-game button:disabled{opacity:.45;cursor:default}
+.great-lakes-game :is(button,a,input,[tabindex],summary):focus-visible{outline:3px solid #eaa940;outline-offset:3px}
+#sound-toggle{display:flex;gap:9px;align-items:center;background:transparent;border:0;padding-inline:6px}
+#sound-toggle svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.gl-modes{display:flex;gap:4px;padding:4px;background:#193b4b;border-radius:10px}
+.gl-modes button{border:0;background:transparent}
+.gl-modes button[aria-pressed=true],#next,#retry,.gl-entry button{background:#bdf468;color:#102f40;border-color:#bdf468}
+.gl-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;align-items:start}
+.gl-panel{grid-column:2;grid-row:1;padding:0 0 12px 4px}
+.gl-scoreboard{display:flex;gap:48px;border-bottom:1px solid #34505f;padding:0 0 20px;margin-bottom:24px}
+.gl-scoreboard div{display:flex;flex-direction:column}
+.gl-scoreboard strong{font-size:42px;line-height:1.1;font-variant-numeric:tabular-nums;font-weight:700;color:#bdf468}
+.gl-scoreboard span{font-size:13px;color:#c2d6de;margin-top:2px}
+.gl-progress-label{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:650;color:#bdd1da}
+#round-progress{display:block;width:100%;height:7px;border:0;border-radius:4px;margin:10px 0 24px;background:#284755;color:#bdf468;overflow:hidden}
+#round-progress::-webkit-progress-bar{background:#284755}#round-progress::-webkit-progress-value{background:#bdf468}#round-progress::-moz-progress-bar{background:#bdf468}
+#place-name{font-size:32px;line-height:1.13;letter-spacing:-.025em;margin:0 0 12px;overflow-wrap:break-word}
+.gl-category{font-size:13px;margin:0;color:#bdd1da}
+.gl-feedback{font-size:16px;line-height:1.5;min-height:72px;margin:22px 0 18px}
+.gl-feedback[data-tone=correct]{color:#bdf468}.gl-feedback[data-tone=wrong]{color:#ffc484}
+.gl-actions{display:flex;flex-direction:column;gap:8px;margin:0 0 20px}.gl-actions button{width:100%}
+#number-form label{display:block;font-size:12px;color:#bdd1da;margin:0 0 8px}
+.gl-entry{display:flex;gap:8px}.gl-entry input{width:100%;min-width:0;min-height:44px;font:inherit;font-size:18px;color:#edf7f4;background:#173846;border:1px solid #52717e;border-radius:8px;padding:6px 10px;caret-color:#bdf468}
+.gl-score{font-size:14px;margin:20px 0 10px;color:#c2d6de}.gl-low-stakes{font-size:12px;line-height:1.5;margin:0;color:#a7c0cb}
+.gl-map-section{grid-column:1;grid-row:1;min-width:0}.gl-mobile-status{display:none}
+.gl-map-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#193b4b;padding:8px 12px;border-radius:12px 12px 0 0}
+.gl-zoom{display:flex;align-items:center;gap:4px}.gl-zoom button{border:0;background:transparent;padding:8px 12px;font-size:20px;min-width:44px}.gl-zoom button:hover{background:#315464}.gl-zoom #zoom-reset{font-size:13px}.gl-zoom span{font-size:12px;min-width:27px;text-align:center;color:#bdd1da;font-variant-numeric:tabular-nums}
+.gl-pan-hint{font-size:12px;color:#bdd1da}.gl-map-wrap{position:relative;background:#f1efe2;overflow:hidden;border-radius:0 0 12px 12px}
+.gl-map-scroll{overflow:auto;height:clamp(440px,61vw,650px);background:#f1efe2;overscroll-behavior:contain;scrollbar-color:#5a8893 #dce2d9;scrollbar-width:thin;cursor:grab}
+.gl-map-scroll.is-dragging{cursor:grabbing;user-select:none}
+#lakes-map{display:block;width:100%;min-width:900px;height:auto;touch-action:pan-x pan-y}
+#lake-shapes path{fill:#90cddc;stroke:#488994;stroke-width:.85;vector-effect:non-scaling-stroke;fill-rule:evenodd}
+#city-shapes path{fill:#edc78399;stroke:#8b5a16;stroke-width:1.35;vector-effect:non-scaling-stroke;fill-rule:evenodd}
+#city-shapes path.is-selected{fill:#b8de6799;stroke:#346819;stroke-width:2.5}
+#channel-shapes path{fill:none;stroke:#327e94;stroke-width:1.7;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round}
+#channel-shapes path.cut{stroke:#9a641c;stroke-width:2}
+.gl-marker{cursor:pointer;outline:none}.gl-hit{fill:transparent;stroke:none;pointer-events:all}
+.gl-marker text{font-family:inherit;font-size:17px;font-weight:750;text-anchor:middle;dominant-baseline:central;fill:#103c4b;stroke:#fffced;stroke-width:4px;stroke-linejoin:round;paint-order:stroke;pointer-events:none}
+.gl-marker.port text{fill:#713a08}.gl-marker.cut text{fill:#713a08}
+.gl-marker:hover text{fill:#000;stroke:#dbf797}.gl-marker:focus-visible .gl-hit{stroke:#9b5100;stroke-width:2;fill:#fffced77}
+.gl-marker.is-correct text,.gl-marker.is-selected text{fill:#143e12;stroke:#c8f67b;stroke-width:8px}
+.gl-marker.is-wrong text{fill:#792605;stroke:#ffd099;stroke-width:8px}
+.gl-map-north{position:absolute;top:16px;right:16px;pointer-events:none}.gl-map-north svg{width:20px;height:42px;stroke:#385462;fill:none;stroke-width:1.5}.gl-map-north text{stroke:none;fill:#385462;font-size:11px;font-weight:700}
+.gl-scale{position:absolute;bottom:20px;left:18px;pointer-events:none;color:#294653;background:#fffceddf;padding:6px 9px;font-size:10px;display:flex;flex-direction:column;gap:3px}.gl-scale span:first-child{display:block;height:5px;border:1px solid #294653;border-top:0}
+#map-celebration{position:absolute;z-index:4;top:18px;left:50%;transform:translateX(-50%);background:#bdf468;color:#123d2d;border-radius:8px;padding:10px 20px;font-weight:750;font-size:22px;pointer-events:none;white-space:nowrap;opacity:0}
+#map-celebration.show{opacity:1}
+.gl-map-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:14px;align-items:center}.gl-map-bottom p{font-size:12px;margin:0;color:#bdd1da}
+.gl-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12px;color:#d4e3e8}.gl-legend span{display:flex;gap:7px;align-items:center}.gl-legend i{display:inline-block;width:14px;height:11px;background:#90cddc;border:1px solid #65a6b6}.gl-legend .gl-city-swatch{background:#edc783;border-color:#ba8b45}.gl-legend .gl-canal-swatch{height:3px;background:#edc783;border:0}
+.gl-map-details{margin-top:16px;font-size:12px;color:#a7c0cb;line-height:1.6}.gl-map-details summary{cursor:pointer;width:max-content;min-height:44px;padding-block:10px}.gl-map-details p{max-width:80ch;margin:0 0 12px}.gl-map-details a{color:#d4e3e8;text-decoration:underline}
+.gl-study-index{margin-top:24px;border-top:1px solid #34505f;padding-top:24px}.gl-study-index h2{font-size:28px;margin:0 0 8px}.gl-study-index>p{font-size:14px;color:#bdd1da;margin:0 0 20px}#study-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.gl-study-group h3{font-size:14px;margin:0 0 10px;color:#bdf468}.gl-study-group button{display:flex;gap:10px;width:100%;text-align:left;padding:9px 8px;border:0;background:transparent;font-size:13px}.gl-study-group button span{font-variant-numeric:tabular-nums;color:#bdd1da;width:22px;flex-shrink:0}
+@media(max-width:760px){.great-lakes-game{padding-top:18px}.gl-header{display:block;margin-bottom:18px}.gl-header h1 span{display:inline;font-size:1em}.gl-header-controls{justify-content:space-between;margin-top:16px}.gl-intro{margin-top:8px}.gl-layout{display:flex;flex-direction:column;gap:20px}.gl-panel,.gl-map-section{width:100%}.gl-panel{padding:0}.gl-scoreboard{position:absolute;right:20px;gap:18px;padding:0;border:0;margin:0;transform:translateY(2px)}.gl-scoreboard strong{font-size:25px}.gl-scoreboard span{font-size:10px}.gl-progress-label{padding-right:150px;min-height:18px}#round-progress{width:calc(100% - 150px);margin-bottom:20px}#place-name{font-size:26px;max-width:100%}.gl-feedback{min-height:0;font-size:14px;margin:12px 0}.gl-actions{flex-direction:row;flex-wrap:wrap;margin-bottom:12px}.gl-actions button{width:auto;flex:1 1 130px}#number-form{display:none}.gl-score{font-size:12px;margin:10px 0}.gl-low-stakes{display:none}.gl-mobile-status{display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:6;background:#0b2231;padding:12px 0}.gl-mobile-status strong{display:block;font-size:16px;line-height:1.3}.gl-mobile-status p{font-size:12px;color:#bdd1da;line-height:1.4;margin:4px 0 0}.gl-mobile-status button{flex-shrink:0;background:#bdf468;color:#102f40}.gl-map-toolbar{flex-wrap:wrap;gap:4px;padding:5px 8px}.gl-pan-hint{font-size:11px;padding:0 8px 6px}.gl-map-scroll{height:470px}#study-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}}
+@media(prefers-reduced-motion:no-preference){#map-celebration.show{animation:gl-pop 850ms cubic-bezier(.16,1,.3,1) both}@keyframes gl-pop{0%{opacity:0;translate:0 10px;scale:.9}18%,75%{opacity:1;translate:0 0;scale:1}100%{opacity:0;translate:0 -10px;scale:1}}.gl-marker.is-correct text{animation:gl-found 850ms ease-out}@keyframes gl-found{0%{stroke-width:15px}100%{stroke-width:8px}}}
 
- #round-progress { margin-bottom:18px; }
- #place-name { min-height:0; font-size:25px; }
- .gl-feedback { min-height:0; margin:16px 0; }
- .gl-score { margin-top:16px; }
- .gl-actions { flex-direction:row; flex-wrap:wrap; }
- .gl-actions button { width:auto; flex:1 1 140px; }
- .gl-map-bar { flex-wrap:wrap; gap:6px; }
- .gl-pan-hint { display:block; }
- #study-list { grid-template-columns:repeat(2,minmax(0,1fr)); }
-}
-@media(prefers-reduced-motion:no-preference) { .gl-marker .gl-hit { transition:fill 150ms ease; } }
+.gl-details-zoom{display:flex;gap:2px;flex-wrap:wrap}.gl-details-zoom button{font-size:12px;padding:8px 10px;min-height:44px;background:transparent;border:0}.gl-details-zoom button:hover{background:#315464}

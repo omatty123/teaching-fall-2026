@@ -460,7 +460,7 @@ def workspace_items(course):
         ("Syllabus", "Policies, outcomes, assignments, and the term plan", links.get("syllabus") or course.get("syllabusUrl"), "Open syllabus"),
     ]
     if course.get("greatLakesGamePage"):
-        rows.append(("Great Lakes map game", "Learn and practice the 21 places on our map", course["greatLakesGamePage"], "Play the map game"))
+        rows.append(("Great Lakes map game", "Play the 24-place map challenge", course["greatLakesGamePage"], "Play the map game"))
     if course.get("waterNewsPage"):
         rows.append((
             "Water in the News",
