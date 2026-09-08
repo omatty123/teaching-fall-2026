@@ -687,6 +687,10 @@ def build_extra_page(term, course, page):
                         f'{json.dumps(config, ensure_ascii=False)};</script>'
                         f'\n<script src="../_kit/{script.name}?v={version}"></script>')
 
+    if slug == 'great-lakes-game':
+        extra_css = '<link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css">' + extra_css
+        extra_script = '<script src="../_kit/vendor/leaflet/leaflet.js"></script>' + extra_script
+
     doc = f"""<!DOCTYPE html>
 <html lang="en">
 <head>

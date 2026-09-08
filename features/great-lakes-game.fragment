@@ -1,31 +1,21 @@
 <main id="game-main">
-  <header class="gl-header">
-    <div><h1>Great Lakes <span>Map Challenge</span></h1><p class="gl-intro">24 places. Find them. Build your streak.</p></div>
-    <div class="gl-header-controls"><button id="sound-toggle" type="button" aria-pressed="true" aria-label="Sound effects on; click to mute"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM17 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></svg><span>Sound on</span></button><div class="gl-modes" aria-label="Game mode"><button type="button" id="play-mode" aria-pressed="true">Play</button><button type="button" id="study-mode" aria-pressed="false">Explore</button></div></div>
-  </header>
-  <noscript><p>This game needs JavaScript. Enable it in your browser, then reload the page.</p></noscript>
+  <div id="satellite-map" aria-label="Satellite map of the Great Lakes"></div>
+  <div id="tile-status" role="status">Loading satellite imagery…</div>
+  <header class="gl-topbar gl-float"><a href="frst-110.html" aria-label="Back to FRST 110"><svg class="gl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg></a><h1>Great Lakes</h1><div class="gl-modes" aria-label="Game mode"><button type="button" id="play-mode" aria-pressed="true">Play</button><button type="button" id="study-mode" aria-pressed="false">Explore</button></div></header>
+  <div class="gl-map-controls gl-float"><button id="sound-toggle" type="button" aria-pressed="true" aria-label="Sound effects on; click to mute"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4zM17 8c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></svg><span>Sound on</span></button><div class="gl-zoom"><button type="button" id="zoom-out" aria-label="Zoom out"><svg class="gl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button><button type="button" id="zoom-in" aria-label="Zoom in"><svg class="gl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5v14"/></svg></button><button type="button" id="zoom-reset">All lakes</button></div><label class="gl-view-label" for="detail-view">Detail</label><select id="detail-view" aria-label="Zoom to a detail"><option value="">Map views</option><option value="chicago">Chicago</option><option value="detroit">Detroit</option><option value="niagara">Niagara</option></select></div>
+  <noscript><p class="gl-noscript gl-float">Enable JavaScript to play this map game.</p></noscript>
   <div id="gl-app" hidden>
-    <div class="gl-layout">
-      <section class="gl-panel" aria-label="Current question">
-        <div class="gl-scoreboard"><div><strong id="points">0</strong><span>points</span></div><div><strong id="streak">0</strong><span>streak</span></div></div>
-        <div class="gl-progress-label"><span id="round-label">Full map</span><span id="progress-text"></span></div>
-        <progress id="round-progress" value="0" max="24" aria-label="Places completed"></progress>
-        <div id="question-area"><h2 id="place-name" tabindex="-1"></h2><p class="gl-category" id="place-category"></p></div>
-        <p id="feedback" class="gl-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
-        <div class="gl-actions"><button type="button" id="reveal">Reveal this place</button><button type="button" id="next" hidden>Keep going <span aria-hidden="true">→</span></button><button type="button" id="retry" hidden>Replay missed places</button><button type="button" id="restart" hidden>Play all 24 again</button></div>
-        <form id="number-form"><label for="map-number">Or answer by number</label><div class="gl-entry"><input id="map-number" type="number" inputmode="numeric" min="1" max="24" step="1" required autocomplete="off" aria-label="Map number"><button type="submit">Go</button></div></form>
-        <p id="score" class="gl-score"></p><p class="gl-low-stakes">100 points on your first try. 50 after a miss.<br>Untimed. Your score stays in this round.</p>
-      </section>
-      <section class="gl-map-section" aria-label="Great Lakes map">
-        <div class="gl-mobile-status"><div><strong id="mobile-prompt"></strong><p id="mobile-feedback"></p></div><button id="mobile-next" type="button" hidden>Next →</button></div>
-        <div class="gl-map-toolbar"><div class="gl-zoom"><button type="button" id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-level">1×</span><button type="button" id="zoom-in" aria-label="Zoom in">+</button><button type="button" id="zoom-reset">All lakes</button></div><div class="gl-details-zoom" aria-label="Zoom to a detail"><button type="button" data-detail="chicago">Chicago</button><button type="button" data-detail="detroit">Detroit</button><button type="button" data-detail="niagara">Niagara</button></div></div>
-        <div class="gl-map-wrap"><div id="map-celebration" aria-hidden="true"></div><div class="gl-map-scroll" tabindex="0" role="region" aria-label="Map. Drag or scroll to pan; use zoom buttons for detail. Arrow keys pan the map.">
-          <svg id="lakes-map" viewBox="0 0 1000 660" aria-label="Numbered Great Lakes identification map"><g id="lake-shapes" aria-hidden="true"></g><g id="city-shapes" aria-hidden="true"></g><g id="channel-shapes" aria-hidden="true"></g><g id="map-markers"></g></svg>
-        </div><div class="gl-map-north" aria-label="North is up"><svg viewBox="0 0 20 42" aria-hidden="true"><path d="M10 40V15m-6 6 6-6 6 6"/><text x="10" y="10" text-anchor="middle">N</text></svg></div><div class="gl-scale"><span id="scale-rule"></span><span id="scale-label"></span></div></div>
-        <div class="gl-map-bottom"><div class="gl-legend"><span><i class="gl-water-swatch"></i>Water</span><span><i class="gl-city-swatch"></i>City limits</span><span><i class="gl-canal-swatch"></i>Canal / seaway</span></div><p>Every number sits on its feature. Zoom in to separate nearby places.</p></div>
-        <details class="gl-map-details"><summary>Map sources &amp; geography</summary><p>Lake shores, municipal boundaries, rivers, and canal centerlines: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a>. Retrieved September 2026. North-up equirectangular projection, standard parallel 45° N; scale is approximate at 45° N. City outlines show municipal limits, which can include water. The Fox River shown is the lower Wisconsin river leading to Green Bay. Canal and seaway numbers locate one point on a longer route. <a href="../features/great-lakes-game-SOURCES.md">Source details</a>.</p></details>
-      </section>
-    </div>
-    <section id="study-index" class="gl-study-index" hidden aria-label="Study list"><h2>Explore the connections.</h2><p>Choose a place to zoom straight to it. Your game will wait.</p><div id="study-list"></div></section>
+    <section class="gl-panel gl-float" aria-label="Current question">
+      <div class="gl-round-row"><span id="round-label">Full map</span><span id="progress-text"></span><div class="gl-scoreboard"><span><strong id="points">0</strong> pts</span><span><strong id="streak">0</strong> streak</span></div></div>
+      <progress id="round-progress" value="0" max="24" aria-label="Places completed"></progress>
+      <h2 id="place-name" tabindex="-1"></h2><p class="gl-category" id="place-category"></p>
+      <p id="feedback" class="gl-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div class="gl-actions"><button type="button" id="reveal">Reveal</button><button type="button" id="next" hidden>Keep going</button><button type="button" id="retry" hidden>Replay missed</button><button type="button" id="restart" hidden>Play all 24</button><form id="number-form"><label for="map-number" class="gl-sr-only">Answer by map number</label><input id="map-number" type="number" inputmode="numeric" min="1" max="24" step="1" required autocomplete="off" placeholder="#"><button type="submit">Go</button></form></div>
+      <p id="score" class="gl-score"></p>
+    </section>
+    <section id="study-index" class="gl-study-index gl-float" hidden aria-label="Study list"><div class="gl-study-header"><h2>24 places</h2><button type="button" id="close-study" aria-label="Close place list"><svg class="gl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p>Choose a place to zoom in.</p><div id="study-list"></div></section>
+    <button id="show-study" type="button" class="gl-float" hidden>Place list</button>
   </div>
+  <div id="map-celebration" aria-hidden="true"></div>
+  <details class="gl-map-details gl-float"><summary>Map info</summary><p>Satellite imagery: Esri World Imagery. Image dates and providers vary by area and zoom. Numbered features, river centerlines and city limits: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL, September 2026. Outlines show municipal limits; they can include water. Numbers stay on their features; zoom in to separate close places. <a href="../features/great-lakes-game-SOURCES.md">Sources</a>.</p><p>100 points on the first try; 50 after a miss. Reveals score zero. Correct answers advance automatically. Your score stays in this round.</p></details>
 </main>
