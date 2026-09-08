@@ -631,7 +631,14 @@ p { text-wrap: pretty; }
   text-transform: uppercase;
 }
 .day-track { position: relative; min-height: var(--track-height, 205px); }
-.student-index-page .week-section { padding-top: 0; padding-bottom: 28px; }
+.student-index-page .week-section { padding-top: 28px; padding-bottom: 0; }
+.homepage-next { display: flex; align-items: center; gap: 24px; padding: 20px; margin-bottom: 24px; background: var(--ink); color: var(--white); }
+.homepage-next h2 { flex-shrink: 0; font-size: 1.1rem; }
+.homepage-next > div { flex: 1; }
+.homepage-next strong { font-size: 1.1rem; }
+.homepage-next p { margin-top: 4px; font-size: .95rem; }
+.homepage-next > a { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 12px; border: 1px solid currentColor; color: inherit; font-size: .9rem; white-space: nowrap; }
+@media (max-width: 650px) { .homepage-next { align-items: flex-start; flex-direction: column; gap: 12px; } }
 .time-label { position: absolute; right: 8px; color: var(--ink-soft); font-size: .62rem; transform: translateY(-50%); }
 .time-label:first-child { transform: none; }
 .class-block {

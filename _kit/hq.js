@@ -149,6 +149,42 @@
     window.addEventListener("storage", (event) => { if (event.key === stateKey || event.key === null) render(); });
     render();
   }
+  function renderNextUp() {
+    const title = document.getElementById("nextUpTitle");
+    if (!title) return;
+    const parts = Object.fromEntries(new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit",
+      hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+    }).formatToParts(new Date()).map(part => [part.type, part.value]));
+    const today = `${parts.year}-${parts.month}-${parts.day}`;
+    const minute = Number(parts.hour) * 60 + Number(parts.minute);
+    const meetings = Object.values(window.courseConfig || {}).flatMap(config =>
+      (config.schedule || []).map(meeting => ({config, meeting}))
+    ).filter(({config, meeting}) => meeting.date > today ||
+      (meeting.date === today && minute < config.endMinutes)
+    ).sort((a, b) => a.meeting.date.localeCompare(b.meeting.date) ||
+      a.config.startMinutes - b.config.startMinutes);
+    const next = meetings[0];
+    const meta = document.getElementById("nextUpMeta");
+    const topic = document.getElementById("nextUpTopic");
+    const link = document.getElementById("nextUpLink");
+    if (!next) {
+      title.textContent = "No upcoming classes";
+      meta.textContent = "The scheduled meetings for this term are complete.";
+      topic.textContent = "";
+      link.textContent = "View schedule";
+      link.href = "#week";
+      return;
+    }
+    const {config, meeting} = next;
+    const inProgress = meeting.date === today && minute >= config.startMinutes;
+    title.textContent = `${config.code} · ${formatDate(meeting.date)}${inProgress ? " · In progress" : ""}`;
+    meta.textContent = `${config.timeLabel} · ${config.location} · Central time`;
+    topic.textContent = meeting.topic || "Meeting details in the course home";
+    link.textContent = "Open course";
+    link.href = config.href;
+  }
+
   function openDecisions() {
     const disclosure = document.querySelector("#decisions details");
     if (disclosure) disclosure.open = true;
@@ -159,6 +195,8 @@
   window.addEventListener("hashchange", () => { if (window.location.hash === "#decisions") openDecisions(); });
   if (window.location.hash === "#decisions") openDecisions();
   refreshSchedule();
+  renderNextUp();
+  if (document.getElementById("nextUpTitle")) window.setInterval(renderNextUp, 60000);
   initTaskBoard();
   document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshSchedule(); });
   window.addEventListener("focus", refreshSchedule);
