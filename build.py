@@ -430,9 +430,13 @@ def build_student_index(term, courses):
 <header class="student-masthead">
   <p>LAWRENCE UNIVERSITY · {e(term['name'])}</p>
   <h1>{e(term['name'])} Courses</h1>
-  <span>Course pages, Canvas, syllabi, and the next meeting</span>
+  <span>Weekly schedule, course pages, Canvas, and syllabi</span>
 </header>
 <main id="courses" class="student-index-main">
+  <section class="week-section" id="week" aria-labelledby="weekTitle">
+    <div class="section-heading"><h2 id="weekTitle">Weekly schedule</h2><p>{e(term['campus'])}</p></div>
+    {week_grid(term, courses)}
+  </section>
   <div class="dispatch-list student-dispatches">{"".join(dispatches)}</div>
 </main>
 <footer class="site-footer"><span>{e(term['name'])} · {e(term['institution'])}</span></footer>
