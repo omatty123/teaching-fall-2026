@@ -53,9 +53,15 @@
       const Audio=window.AudioContext||window.webkitAudioContext;
       if(!Audio) return;
       audioContext ||= new Audio(); audioContext.resume().catch(()=>{});
-      const frequencies=type==='wrong'?[180,125]:type==='finish'?[523.25,659.25,783.99,1046.5]:[523.25,659.25,783.99];
+      // Each first-try answer lifts the chime by half a semitone. A full
+      // 24-place streak stays within one octave of the starting pitch.
+      const root=440*2**(Math.min(23,Math.max(0,streak-1))/24);
+      const milestone=type==='correct'&&streak>0&&streak%5===0;
+      const intervals=milestone?(streak%10===0?[1,1.25,1.5,2,1.5,2]:[1,1.25,1.5,2]):[1,1.25,1.5];
+      const frequencies=type==='wrong'?[180,125]:type==='finish'?[523.25,659.25,783.99,1046.5]:intervals.map(interval=>root*interval);
+      const spacing=milestone?.09:.075;
       frequencies.forEach((frequency,i)=>{
-        const oscillator=audioContext.createOscillator(), gain=audioContext.createGain(), at=audioContext.currentTime+i*.075;
+        const oscillator=audioContext.createOscillator(), gain=audioContext.createGain(), at=audioContext.currentTime+i*spacing;
         oscillator.type='sine';oscillator.frequency.value=frequency;
         gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(.09,at+.012);gain.gain.exponentialRampToValueAtTime(.001,at+.22);
         oscillator.connect(gain);gain.connect(audioContext.destination);oscillator.start(at);oscillator.stop(at+.24);
@@ -65,12 +71,13 @@
   function scoreDisplay(){ $('points').textContent=points; $('streak').textContent=streak; }
   function celebrate(){
     const badge=$('map-celebration');badge.classList.remove('show');void badge.offsetWidth;
-    badge.textContent=streak>=3?`${streak} in a row!`:'Nice find!';badge.classList.add('show');
+    badge.textContent=streak>0&&streak%10===0?`${streak} straight — unstoppable!`:streak>0&&streak%5===0?`${streak} in a row — on fire!`:streak>=2?`${streak} in a row!`:'Nice find!';badge.classList.add('show');
   }
 
   function say(message,tone='neutral') { $('feedback').textContent=message; $('feedback').dataset.tone=tone; }
   function resetZoom(){
-    map.fitBounds([[41.45,-92.3],[49.05,-75.7]],{paddingTopLeft:[35,80],paddingBottomRight:[35,Math.min(220,innerHeight*.28)],animate:false});
+    const shortPhone=innerWidth<=700&&innerHeight<=550;
+    map.fitBounds([[41.45,-92.3],[49.05,-75.7]],{paddingTopLeft:[shortPhone?15:35,shortPhone?125:80],paddingBottomRight:shortPhone?[265,20]:[35,Math.min(220,innerHeight*.28)],animate:false});
     $('detail-view').value='';
   }
   function panTo(id,detail=false){
