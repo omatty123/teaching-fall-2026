@@ -411,6 +411,8 @@ def build_student_index(term, courses):
     # embedded in this public page.
     dispatches = [course_dispatch(c, instructor=True) for c in courses]
     config = {c["key"]: {"code": c["code"], "schedule": c["schedule"],
+              "startMinutes": c["meeting"]["startMinutes"],
+              "timeLabel": c["meeting"]["timeLabel"], "location": c["meeting"]["shortLocation"],
               "endMinutes": c["meeting"]["endMinutes"], "tasks": [], "build": "",
               "href": f"courses/{c['slug']}.html"} for c in courses}
     doc = f"""<!DOCTYPE html>
@@ -429,15 +431,20 @@ def build_student_index(term, courses):
   <span>Weekly schedule, course pages, Canvas, and syllabi</span>
 </header>
 <main id="courses" class="student-index-main">
+  <section class="homepage-next" aria-labelledby="nextUpHeading">
+    <h2 id="nextUpHeading">Next up</h2>
+    <div><strong id="nextUpTitle">Checking the next class…</strong><p id="nextUpMeta"></p><p id="nextUpTopic"></p></div>
+    <a id="nextUpLink" href="#week">View schedule</a>
+  </section>
+  <div class="dispatch-list student-dispatches">{"".join(dispatches)}</div>
   <section class="week-section" id="week" aria-labelledby="weekTitle">
     <div class="section-heading"><h2 id="weekTitle">Weekly schedule</h2><p>{e(term['campus'])}</p></div>
     {week_grid(term, courses)}
   </section>
-  <div class="dispatch-list student-dispatches">{"".join(dispatches)}</div>
 </main>
 <footer class="site-footer"><span>{e(term['name'])} · {e(term['institution'])}</span></footer>
 <script>window.courseConfig = {json.dumps(config, ensure_ascii=False)}; window.termName = {json.dumps(term['name'])}; window.taskBoardConfig = {{"items": []}};</script>
-<script src="_kit/hq.js"></script>
+<script src="_kit/hq.js?v={hashlib.sha256((KIT / "hq.js").read_bytes()).hexdigest()[:10]}"></script>
 </body>
 </html>"""
     (ROOT / "index.html").write_text(doc)

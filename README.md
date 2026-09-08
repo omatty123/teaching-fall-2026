@@ -4,7 +4,7 @@ Lawrence University · FRST 110, HIST 212, BUEN 594.
 
 A framework-free static site for GitHub Pages. It has two entry surfaces:
 
-- `index.html` and `students.html` show the public weekly schedule above course homes, next meetings, syllabi, Canvas, and public course features. Authenticated roster links open the separate Access-gated site.
+- `index.html` and `students.html` show Next up at the top, followed by course cards and the public weekly schedule. Next up uses campus Central time and advances automatically. Authenticated roster links open the separate Access-gated site.
 - `.private-build/index.html` is the instructor HQ, assembled into the private portal separately.
 - Keep the weekly schedule visible on the public homepage. Moving private instructor tools must not remove the public teaching timetable.
 
