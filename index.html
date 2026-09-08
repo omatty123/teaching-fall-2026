@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="_kit/hq.css?v=be5e62f8cd">
+<link rel="stylesheet" href="_kit/hq.css?v=a72e1de56b">
 </head>
 <body class="student-index-page">
 <!--
@@ -36,9 +36,23 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <header class="student-masthead">
   <p>LAWRENCE UNIVERSITY · Fall 2026</p>
   <h1>Fall 2026 Courses</h1>
-  <span>Course pages, Canvas, syllabi, and the next meeting</span>
+  <span>Weekly schedule, course pages, Canvas, and syllabi</span>
 </header>
 <main id="courses" class="student-index-main">
+  <section class="week-section" id="week" aria-labelledby="weekTitle">
+    <div class="section-heading"><h2 id="weekTitle">Weekly schedule</h2><p>Appleton Main Campus</p></div>
+    <div class="week-card" style="--track-height:205px">
+  <div class="week-desktop" aria-label="Fall 2026 weekly block schedule">
+    <div class="time-column">
+      <div class="day-name" aria-hidden="true"></div>
+      <div class="day-track" aria-hidden="true"><span class="time-label" style="top:0">10:00</span><span class="time-label" style="top:42px">11:00</span><span class="time-label" style="top:84px">12:00</span><span class="time-label" style="top:126px">1:00</span><span class="time-label" style="top:168px">2:00</span></div>
+    </div>
+    <div class="day-column"><div class="day-name">Mon</div><div class="day-track"><a class="class-block" style="--top:49px;--height:49px;--course-color:#245a8d" href="courses/frst-110.html" aria-label="FRST 110, Monday, 11:10 a.m.–12:20 p.m., Memorial Hall 114"><strong>FRST 110</strong><span>11:10–12:20 · Memorial 114</span></a></div></div><div class="day-column"><div class="day-name">Tue</div><div class="day-track"><a class="class-block" style="--top:18px;--height:74px;--course-color:#7a3030" href="courses/hist-212.html" aria-label="HIST 212, Tuesday, 10:25 a.m.–12:10 p.m., Main Hall 211"><strong>HIST 212</strong><span>10:25–12:10 · Main 211</span></a><a class="class-block" style="--top:112px;--height:74px;--course-color:#2d5a50" href="courses/buen-594.html" aria-label="BUEN 594, Tuesday, 12:40–2:25 p.m., Steitz Hall 102"><strong>BUEN 594</strong><span>12:40–2:25 · Steitz 102</span></a></div></div><div class="day-column"><div class="day-name">Wed</div><div class="day-track"><a class="class-block" style="--top:49px;--height:49px;--course-color:#245a8d" href="courses/frst-110.html" aria-label="FRST 110, Wednesday, 11:10 a.m.–12:20 p.m., Memorial Hall 114"><strong>FRST 110</strong><span>11:10–12:20 · Memorial 114</span></a></div></div><div class="day-column"><div class="day-name">Thu</div><div class="day-track"><a class="class-block" style="--top:18px;--height:74px;--course-color:#7a3030" href="courses/hist-212.html" aria-label="HIST 212, Thursday, 10:25 a.m.–12:10 p.m., Main Hall 211"><strong>HIST 212</strong><span>10:25–12:10 · Main 211</span></a></div></div><div class="day-column"><div class="day-name">Fri</div><div class="day-track"><a class="class-block" style="--top:49px;--height:49px;--course-color:#245a8d" href="courses/frst-110.html" aria-label="FRST 110, Friday, 11:10 a.m.–12:20 p.m., Memorial Hall 114"><strong>FRST 110</strong><span>11:10–12:20 · Memorial 114</span></a></div></div>
+  </div>
+  <div class="week-mobile"><div class="mobile-day"><strong>Monday</strong><div><a class="mobile-block" style="--course-color:#245a8d" href="courses/frst-110.html"><b>FRST 110</b><span>11:10–12:20</span></a></div></div><div class="mobile-day"><strong>Tuesday</strong><div><a class="mobile-block" style="--course-color:#7a3030" href="courses/hist-212.html"><b>HIST 212</b><span>10:25–12:10</span></a><a class="mobile-block" style="--course-color:#2d5a50" href="courses/buen-594.html"><b>BUEN 594</b><span>12:40–2:25</span></a></div></div><div class="mobile-day"><strong>Wednesday</strong><div><a class="mobile-block" style="--course-color:#245a8d" href="courses/frst-110.html"><b>FRST 110</b><span>11:10–12:20</span></a></div></div><div class="mobile-day"><strong>Thursday</strong><div><a class="mobile-block" style="--course-color:#7a3030" href="courses/hist-212.html"><b>HIST 212</b><span>10:25–12:10</span></a></div></div><div class="mobile-day"><strong>Friday</strong><div><a class="mobile-block" style="--course-color:#245a8d" href="courses/frst-110.html"><b>FRST 110</b><span>11:10–12:20</span></a></div></div></div>
+  <div class="term-strip" aria-label="Key fall 2026 dates"><div class="term-date"><strong>September 11</strong>First FRST meeting</div><div class="term-date"><strong>September 14</strong>Fall classes begin</div><div class="term-date"><strong>October 22–25</strong>Midterm reading period</div><div class="term-date"><strong>November 19</strong>Last day of classes</div></div>
+</div>
+  </section>
   <div class="dispatch-list student-dispatches"><article class="course-dispatch" id="frstDispatch" style="--course-color:#245a8d;--course-gradient:linear-gradient(135deg, #173f67 0%, #2d689f 100%)">
   <figure class="dispatch-image"><img src="images/frst-110-banner.jpg" alt="Ma Yuan&#x27;s Waving Surface of the Autumn Flood, a study of layered curling waves" style="object-position:center 43%"><figcaption><a href="https://commons.wikimedia.org/wiki/File:Ma_Yuan_-_Water_Album_-_The_Waving_Surface_of_the_Autumn_Flood.jpg">Ma Yuan, The Waving Surface of the Autumn Flood, c. 1200 · public domain</a></figcaption></figure>
   <div class="dispatch-identity">

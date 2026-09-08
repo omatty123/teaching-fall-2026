@@ -630,7 +630,8 @@ p { text-wrap: pretty; }
   letter-spacing: .1em;
   text-transform: uppercase;
 }
-.day-track { position: relative; min-height: 160px; }
+.day-track { position: relative; min-height: var(--track-height, 205px); }
+.student-index-page .week-section { padding-top: 0; padding-bottom: 28px; }
 .time-label { position: absolute; right: 8px; color: var(--ink-soft); font-size: .62rem; transform: translateY(-50%); }
 .time-label:first-child { transform: none; }
 .class-block {
