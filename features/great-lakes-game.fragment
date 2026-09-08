@@ -10,12 +10,12 @@
       <progress id="round-progress" value="0" max="24" aria-label="Places completed"></progress>
       <h2 id="place-name" tabindex="-1"></h2><p class="gl-category" id="place-category"></p>
       <p id="feedback" class="gl-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+      <div id="map-celebration" aria-hidden="true"></div>
       <div class="gl-actions"><button type="button" id="reveal">Reveal</button><button type="button" id="next" hidden>Keep going</button><button type="button" id="retry" hidden>Replay missed</button><button type="button" id="restart" hidden>Play all 24</button><form id="number-form"><label for="map-number" class="gl-sr-only">Answer by map number</label><input id="map-number" type="number" inputmode="numeric" min="1" max="24" step="1" required autocomplete="off" placeholder="#"><button type="submit">Go</button></form></div>
       <p id="score" class="gl-score"></p>
     </section>
     <section id="study-index" class="gl-study-index gl-float" hidden aria-label="Study list"><div class="gl-study-header"><h2>24 places</h2><button type="button" id="close-study" aria-label="Close place list"><svg class="gl-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><p>Choose a place to zoom in.</p><div id="study-list"></div></section>
     <button id="show-study" type="button" class="gl-float" hidden>Place list</button>
   </div>
-  <div id="map-celebration" aria-hidden="true"></div>
   <details class="gl-map-details gl-float"><summary>Map info</summary><p>Satellite imagery: Esri World Imagery. Image dates and providers vary by area and zoom. Numbered features, river centerlines and city limits: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, ODbL, September 2026. Outlines show municipal limits; they can include water. Numbers stay on their features; zoom in to separate close places. <a href="../features/great-lakes-game-SOURCES.md">Sources</a>.</p><p>100 points on the first try; 50 after a miss. Reveals score zero. Correct answers advance automatically. Your score stays in this round.</p></details>
 </main>
