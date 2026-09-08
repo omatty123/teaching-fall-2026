@@ -53,12 +53,14 @@
       const Audio=window.AudioContext||window.webkitAudioContext;
       if(!Audio) return;
       audioContext ||= new Audio(); audioContext.resume().catch(()=>{});
-      // Each first-try answer lifts the chime a full semitone. Starting
-      // at middle C keeps all 24 steps and milestone flourishes comfortable.
-      const root=261.63*2**(Math.min(23,Math.max(0,streak-1))/12);
+      // The high note of each five-answer flourish becomes the next
+      // answer's starting note. Derive the ladder from streak so mute,
+      // retries and wrong answers cannot leave its pitch out of sync.
+      const step=Math.min(24,Math.max(1,streak))-1;
+      const root=261.63*2**((step+3*Math.floor(step/5))/12);
       const milestone=type==='correct'&&streak>0&&streak%5===0;
-      const intervals=milestone?(streak%10===0?[1,1.25,1.5,2,1.5,2]:[1,1.25,1.5,2]):[1,1.25,1.5];
-      const frequencies=type==='wrong'?[180,125]:type==='finish'?[523.25,659.25,783.99,1046.5]:intervals.map(interval=>root*interval);
+      const intervals=type==='finish'?(streak>0&&streak%5===0?[4,5,6,7]:[2,4,5,7]):milestone?(streak%10===0?[0,1,2,4,3,4]:[0,1,2,4]):[0,1,2];
+      const frequencies=type==='wrong'?[180,125]:intervals.map(semitones=>root*2**(semitones/12));
       const spacing=milestone?.09:.075;
       frequencies.forEach((frequency,i)=>{
         const oscillator=audioContext.createOscillator(), gain=audioContext.createGain(), at=audioContext.currentTime+i*spacing;
