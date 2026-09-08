@@ -1,0 +1,32 @@
+<main id="game-main">
+  <header class="gl-header">
+    <div><h1>Know the Great Lakes.</h1><p class="gl-intro">21 places. One connected system. Find your way from the lakes to the ports.</p></div>
+    <div class="gl-modes" aria-label="Game mode"><button type="button" id="play-mode" aria-pressed="true">Play</button><button type="button" id="study-mode" aria-pressed="false">Study the map</button></div>
+  </header>
+  <noscript><p>This game needs JavaScript. Enable it in your browser, then reload the page.</p></noscript>
+  <div id="gl-app" hidden>
+    <div class="gl-layout">
+      <section class="gl-panel" aria-label="Current question">
+        <div class="gl-progress-label"><span id="round-label">Round 1</span><span id="progress-text"></span></div>
+        <progress id="round-progress" value="0" max="21" aria-label="Places completed"></progress>
+        <div id="question-area"><h2 id="place-name" tabindex="-1"></h2><p class="gl-category" id="place-category"></p></div>
+        <p id="feedback" class="gl-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+        <form id="number-form"><label for="map-number">Click its map marker, or enter its number.</label><div class="gl-entry"><input id="map-number" type="number" inputmode="numeric" min="1" max="21" step="1" required autocomplete="off"><button type="submit">Check</button></div></form>
+        <div class="gl-actions"><button type="button" id="reveal">Show me</button><button type="button" id="next" hidden>Next place <span aria-hidden="true">→</span></button><button type="button" id="retry" hidden>Practice missed places</button><button type="button" id="restart" hidden>Play all 21 again</button></div>
+        <p id="score" class="gl-score"></p>
+        <p class="gl-low-stakes">Take your time. This is practice; scores aren’t submitted.</p>
+      </section>
+      <section class="gl-map-section" aria-label="Great Lakes map">
+        <div class="gl-mobile-status"><div><strong id="mobile-prompt"></strong><p id="mobile-feedback"></p></div><button id="mobile-next" type="button" hidden>Next →</button></div>
+        <div class="gl-map-bar"><span>YOUR FIELD MAP</span><span class="gl-pan-hint">Swipe or scroll sideways to explore →</span></div>
+        <div class="gl-map-scroll" tabindex="0" role="region" aria-label="Scrollable map; use arrow keys or scroll sideways to see every marker">
+          <svg id="lakes-map" viewBox="0 0 1000 660" aria-label="Numbered Great Lakes identification map"><g id="lake-shapes" aria-hidden="true"></g><g id="channel-shapes" aria-hidden="true"></g><g id="marker-stems" aria-hidden="true"></g><g id="map-markers"></g><g class="gl-north" aria-hidden="true"><path d="M920 550 v-45 m-8 12 8-12 8 12"/><text x="920" y="490" text-anchor="middle">N</text></g></svg>
+        </div>
+        <ul class="gl-legend" aria-label="Map symbol legend"><li><span class="gl-symbol area" aria-hidden="true"></span>Lakes &amp; bays</li><li><span class="gl-symbol water" aria-hidden="true"></span>Connecting waters</li><li><span class="gl-symbol cut" aria-hidden="true"></span>Canals</li><li><span class="gl-symbol port" aria-hidden="true"></span>Cities &amp; ports</li></ul>
+        <p class="gl-map-note">Numbers match the class worksheet. Lines connect offset markers to their locations. Waterways are schematic; canal markers locate part of a longer route.</p>
+        <p class="gl-attribution">Lake outlines: © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL</a>. Lake St. Clair outline simplified for the worksheet.</p>
+      </section>
+    </div>
+    <section id="study-index" class="gl-study-index" hidden aria-label="Study list"><h2>Follow the water.</h2><p>Select a place below or a marker on the map to locate it.</p><div id="study-list"></div></section>
+  </div>
+</main>

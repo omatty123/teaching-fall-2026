@@ -459,6 +459,8 @@ def workspace_items(course):
         ("Canvas", "Assignments, announcements, and current course activity", links.get("canvas"), "Open Canvas"),
         ("Syllabus", "Policies, outcomes, assignments, and the term plan", links.get("syllabus") or course.get("syllabusUrl"), "Open syllabus"),
     ]
+    if course.get("greatLakesGamePage"):
+        rows.append(("Great Lakes map game", "Learn and practice the 21 places on our map", course["greatLakesGamePage"], "Play the map game"))
     if course.get("waterNewsPage"):
         rows.append((
             "Water in the News",
@@ -697,7 +699,7 @@ def build_extra_page(term, course, page):
 <link rel="stylesheet" href="../_kit/course.css?v={hashlib.sha256((KIT / 'course.css').read_bytes()).hexdigest()[:10]}">{extra_css}
 </head>
 <body class="course-body-page" style="{theme_vars(course, rel="../")}">
-{DIRECTION_CONTRACT}
+{"" if slug == "great-lakes-game" else DIRECTION_CONTRACT}
 <nav class="breadcrumb">
   <a href="../students.html">{e(term['name'])} student courses</a>
   <span class="crumb-sep" aria-hidden="true">/</span>
