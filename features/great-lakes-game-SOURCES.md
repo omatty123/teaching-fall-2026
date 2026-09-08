@@ -43,10 +43,12 @@ The page config is the `great-lakes-game` entry under `extraPages` in `data/frst
 
 Source: `features/great-lakes-game.fragment`, `_kit/great-lakes-game.css`, `_kit/great-lakes-game.js`; generated output: `courses/great-lakes-game.html`. Course link uses `greatLakesGamePage`. Do not edit generated HTML.
 
-The question card is a small overlay over open land at upper right on desktop, matching the instructor’s September 8 reference framing (292px wide; centered above the map on phones), with feedback and celebrations kept beside the prompt. Redundant supporting text remains available to assistive technology.
+The question card is a small overlay over open land at upper right on desktop, with a tight fit of the lake region to the current viewport (292px wide; centered above the map on phones), with feedback and celebrations kept beside the prompt. Redundant supporting text remains available to assistive technology.
 
 Success tones rise a full semitone with each consecutive first-try answer, bounded across the 24-place round. Five-answer milestones add a fourth note; ten-answer milestones add a six-note flourish. Maximum sound duration is 0.69 seconds; volume remains modest and mute is preserved.
 
 A correct answer scores 100 points on the first attempt or 50 after a miss, plays a short synthesized chime if sound is enabled, highlights the feature, then advances after 1.15 seconds. Wrong answers reset the streak and remain on the same question. Revealed answers score zero and wait for “Keep going.” Explore pauses the active round and pending advance; returning to play resumes it. Missed-only rounds and full replays reset their round scores. Sound is generated locally with Web Audio; the mute button prevents new notes. No audio files, analytics, user accounts, score submission, or persistent score storage.
 
 `node tests/great-lakes-game.cjs` (Playwright required) checks all 24 markers, seven municipal layers, restored names, direct anchoring, sound/mute, automatic advance and pause, reveal, points/streaks, retry, keyboard, zoom, mobile tapping, and page overflow. `CHROME_PATH` selects an installed browser; `GAME_BASE_URL` selects a test server (default localhost:8782). Also run `python3 build.py --strict` and `./deploy.sh` and inspect full-viewport desktop, mobile, and zoomed city/canal screenshots, confirming that the imagery tiles loaded.
+
+Desktop All lakes fits geographic bounds `[[41.30,-92.3],[49.05,-75.7]]` with 20px side padding and 25/30px top/bottom padding. This includes Superior’s northern shore and Erie’s southern shore; it replaces scaling a fixed screenshot composition. At 1416×791 the overview zoom is 6.5. Resizing refits an unchanged overview, while a manually chosen detail remains at its chosen zoom.
