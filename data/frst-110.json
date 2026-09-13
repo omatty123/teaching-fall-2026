@@ -10523,6 +10523,15 @@
           ]
         }
       }
+    },
+    {
+      "slug": "egan-reading-guide",
+      "title": "Meet the Great Lakes Cast · Egan 1–2 · FRST 110",
+      "description": "An illustrated reading guide to Egan chapters 1–2: fish, people, settings, philosophical tensions, and emotional moves.",
+      "fragment": "egan-reading-guide.fragment",
+      "wrapperClass": "egan-page",
+      "ogImage": "images/frst/egan-guide/lake-trout.jpg",
+      "heading": "Egan 1–2 · Illustrated reading guide"
     }
   ],
   "prep": {
@@ -10742,5 +10751,12 @@
     }
   ],
   "syllabusUrl": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit",
-  "greatLakesGamePage": "great-lakes-game.html"
+  "greatLakesGamePage": "great-lakes-game.html",
+  "readingGuides": [
+    {
+      "label": "Egan 1–2: illustrated reading guide",
+      "description": "Meet the fish and people; explore the settings, tensions, and emotional moves",
+      "href": "egan-reading-guide.html"
+    }
+  ]
 }

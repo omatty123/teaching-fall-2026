@@ -164,3 +164,42 @@ Use ruled rows, not nested cards. Dates align in a stable first column, details 
 ## September 4 HQ usability refinement
 
 Keep the course-first card composition. Instructor navigation and course actions use 44px minimum touch targets; Learn the names is the white primary action for FRST/HIST. Next-meeting panels use 108px minimum height to recover useful space. Course image credits remain visible at 10px. A mobile-only course jump row precedes the stacked cards. Weekly track height is generated from the schedule window and latest meeting end, with 16px additional clearance. The preparation block is explicitly labeled Next term decision and updates its title, detail, and destination together.
+
+## September 13 Egan reading guide addendum
+
+This addendum records the implemented Egan chapters 1–2 guide only. It preserves the shared teaching-site identity and records the guide’s current values where the global template description above differs. Sources are `features/egan-reading-guide.fragment`, `_kit/egan-reading-guide.css`, `_kit/egan-reading-guide.js`, and the desktop/mobile evidence in `.impeccable/review/egan-guide/`.
+
+### Colors
+
+The guide uses light paper (`#faf9f5`), slate text (`#1e2a35`), FRST blue links and roles (`#245a8d`), supporting text (`#55636d`), and quiet rules (`#d9dfdf`). White fish plates retain the source illustrations. The science grouping uses a pale slate field (`#eef2f3`). Map water uses pale blue (`#d4e3e8`); rust (`#a95031`) identifies the selected location, canal detail, and focus outline.
+
+### Typography
+
+Browser-computed body and h1 both inherit `Outfit, "Source Sans 3", sans-serif` from course CSS. The global Inter-only description is stale for this surface; do not change the guide’s inherited family to match it. The guide body is 16px with 1.6 line height; most descriptive entries are 14px. The h1 uses `clamp(32px, 4.3vw, 52px)`, weight 750, line height 1.1, and tracking `-.035em`, with a 37px mobile size. Section headings are 30px, becoming 27px on mobile. Names precede their 12px blue role lines. Course/date metadata follows the reading title. Actual section titles and the Hall of Fame use h2 elements. The map keeps its embedded system-sans labels.
+
+### Layout
+
+The guide centers within 1180px and uses 40px horizontal padding, reducing to 24px at 900px and 18px at 650px. Three equal fish plates enable side-by-side identification on desktop and stack on phones. Human portraits accompany names and short prose; unpictured witnesses occupy a ruled row. The science group contains two illustrated entries and a shared team credit. Settings pair a regional locator with a numbered list and Niagara inset. Six philosophical comparisons use two columns, becoming one on mobile; emotional effects use ruled rows.
+
+### Elevation & Depth
+
+The guide introduces no shadows. Paper, white illustration fields, pale science/map fields, and thin borders provide grouping.
+
+### Shapes
+
+Fish plates have square corners. Portraits and map frames use 3px corners; the science field uses 4px corners. Numbered map markers and list badges are circular.
+
+### Components
+
+Section navigation and disclosure summaries have a 44px minimum height. Links, buttons, summaries, and the focusable map expose visible focus outlines. Setting buttons update `aria-pressed` and the matching marker state. On narrow screens the map scrolls horizontally within its frame; visible swipe guidance explains this. Selecting a setting brings its marker into the available view and scrolls the map into view, respecting reduced-motion preference. The Erie Canal choice highlights both endpoints; its initial horizontal positioning follows Buffalo. Full setting descriptions remain available without JavaScript.
+
+Use the classroom handout’s OpenStreetMap lake contours and the class map game’s Niagara/Welland geometry. The north-up regional map uses an equirectangular projection at 45°N and a labeled approximate scale. The inset shows modern waterways; its caption explicitly distinguishes them from historical canal alignments. Keep the existing attribution, approximate-location notes, and undisplayed Erie Canal route boundary.
+
+### Do's and Don'ts
+
+- Preserve identification cues, Latin names, and the notice that fish images are not at the same scale.
+- Retain seven sourced raster assets and their ledger at `images/frst/egan-guide/SOURCES.md`; keep source credits available from the page.
+- State when a human portrait is unverified; do not substitute an invented likeness.
+- Keep philosophical pairings explicitly interpretive and emotional moves tied to the writing.
+- Keep these surface-specific values scoped to the Egan guide; this addendum does not replace the shared template.
+
