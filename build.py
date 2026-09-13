@@ -675,7 +675,7 @@ def build_extra_page(term, course, page):
         print(f"  ! {slug}: fragment {page['fragment']} missing, skipped")
         return False
 
-    sheet = KIT / f"{slug}.css"
+    sheet = KIT / f"{page.get('styleSlug', slug)}.css"
     extra_css = ""
     if sheet.exists():
         version = hashlib.sha256(sheet.read_bytes()).hexdigest()[:10]
