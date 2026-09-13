@@ -459,6 +459,8 @@ def workspace_items(course):
         ("Canvas", "Assignments, announcements, and current course activity", links.get("canvas"), "Open Canvas"),
         ("Syllabus", "Policies, outcomes, assignments, and the term plan", links.get("syllabus") or course.get("syllabusUrl"), "Open syllabus"),
     ]
+    for guide in course.get("readingGuides", []):
+        rows.append((guide["label"], guide["description"], guide["href"], "Open reading guide"))
     if course.get("greatLakesGamePage"):
         rows.append(("Great Lakes map game", "Play the 24-place map challenge", course["greatLakesGamePage"], "Play the map game"))
     if course.get("waterNewsPage"):
