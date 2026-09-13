@@ -10532,6 +10532,26 @@
       "wrapperClass": "egan-page",
       "ogImage": "images/frst/egan-guide/lake-trout.jpg",
       "heading": "Egan 1–2 · Illustrated reading guide"
+    },
+    {
+      "slug": "egan-chapters-3-4",
+      "title": "Egan 3–4: Reading Guide · FRST 110",
+      "heading": "Egan 3–4: Reading Guide",
+      "description": "Characters, settings, and key events for Wednesday, September 16: Dan Egan, chapters 3–4.",
+      "fragment": "egan-chapters-3-4.fragment",
+      "wrapperClass": "egan-simple-page",
+      "styleSlug": "egan-simple-guide",
+      "ogImage": "images/frst-110-banner.jpg"
+    },
+    {
+      "slug": "egan-chapters-5-6",
+      "title": "Egan 5–6: Reading Guide · FRST 110",
+      "heading": "Egan 5–6: Reading Guide",
+      "description": "Characters, settings, and key events for Friday, September 18: Dan Egan, chapters 5–6.",
+      "fragment": "egan-chapters-5-6.fragment",
+      "wrapperClass": "egan-simple-page",
+      "styleSlug": "egan-simple-guide",
+      "ogImage": "images/frst-110-banner.jpg"
     }
   ],
   "prep": {
@@ -10757,6 +10777,16 @@
       "label": "Egan 1–2: illustrated reading guide",
       "description": "Meet the fish and people; explore the settings, tensions, and emotional moves",
       "href": "egan-reading-guide.html"
+    },
+    {
+      "label": "Wednesday: Egan 3–4 reading guide",
+      "description": "Characters, settings, and key events",
+      "href": "egan-chapters-3-4.html"
+    },
+    {
+      "label": "Friday: Egan 5–6 reading guide",
+      "description": "Characters, settings, and key events",
+      "href": "egan-chapters-5-6.html"
     }
   ]
 }
