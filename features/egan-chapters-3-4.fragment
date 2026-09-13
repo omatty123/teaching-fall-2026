@@ -1,24 +1,24 @@
-<main class="egan-simple"><header><h1>Egan 3–4: reading guide</h1><p class="reading-meta">FRST 110 · Wednesday, September 16, 2026 · pp. 75–147</p><p class="reading-titles">The World’s Great Fishing Hole · Noxious Cargo</p></header><nav class="guide-links" aria-label="Egan reading guides">
+<main class="egan-simple"><header><h1>Egan 3–4: reading guide</h1><p class="reading-meta">FRST 110 · Wednesday, September 16, 2026 · pp. 75–147</p><p class="reading-titles">The World’s Great Fishing Hole · Noxious Cargo</p></header><nav aria-label="Egan reading guides" class="guide-links">
 <a href="egan-reading-guide.html">Monday · 1–2</a>
 <span aria-current="page">Wednesday · 3–4</span>
 <a href="egan-chapters-5-6.html">Friday · 5–6</a>
 </nav>
-<section aria-labelledby="characters"><h2 id="characters">Characters</h2><ul>
+<section aria-labelledby="characters"><h2 id="characters">Characters</h2><div class="species-grid"><article class="species-card"><img alt="Silver coho salmon with small dark spots on its back and upper tail." loading="lazy" src="../images/frst/egan-guide/coho.png"/><div><h3>Coho salmon</h3><p>Stocked in 1966. The first Pacific salmon in Michigan’s experiment; eats alewives.</p><p class="image-credit">Illustration: <a href="https://www.fisheries.noaa.gov/species/coho-salmon">NOAA Fisheries</a> / Jack Hornady</p></div></article><article class="species-card"><img alt="Chinook salmon with dark spots across its back and both tail lobes." loading="lazy" src="../images/frst/egan-guide/chinook.png"/><div><h3>Chinook salmon</h3><p>Added in 1967. The larger “king” salmon; cheaper to raise, with a big appetite.</p><p class="image-credit">Illustration: <a href="https://www.fisheries.noaa.gov/species/chinook-salmon">NOAA Fisheries</a> / Jack Hornady</p></div></article></div><p class="visual-note">Two Pacific salmon, two stocking decisions. Illustrations are not at the same scale.</p><article class="species-card"><img alt="Scientific illustration of an alewife in side profile." loading="lazy" src="../images/frst/egan-guide/alewife.jpg"/><div><h3>Alewife · returning character</h3><p>The introduced herring from chapter 2 becomes valuable food for the salmon fishery.</p><p class="image-credit"><a href="egan-reading-guide.html">From Monday’s character guide</a></p></div></article><figure class="comparison"><div class="comparison-labels"><strong>Zebra mussel</strong><strong>Quagga mussel</strong></div><a href="../images/frst/egan-guide/mussels.png" rel="noopener" target="_blank"><img alt="USGS side-by-side comparison: triangular zebra mussel on the left; rounder quagga mussel on the right." loading="lazy" src="../images/frst/egan-guide/mussels.png"/></a><figcaption><strong>Left:</strong> zebra—hard surfaces, pipes, and intakes. <strong>Right:</strong> quagga—also reaches deeper water and soft bottoms. Both filter food from the water. <a href="https://www.usgs.gov/media/images/detailed-view-a-quagga-mussel-right-and-a-zebra-mussel">Photo: USGS</a> · Tap to enlarge.</figcaption></figure><h3 class="people-heading">People to keep track of</h3><ul>
 <li><strong>Howard Tanner &amp; Wayne Tody</strong> — Michigan fisheries officials who choose Pacific salmon to eat alewives and build a sport fishery.</li>
 <li><strong>Sonya Santavy</strong> — The young biologist who finds a zebra mussel in Lake St. Clair in 1988.</li>
 <li><strong>Phyllis Green &amp; David Hand</strong> — The Isle Royale superintendent and engineer who work with the ferry crew to treat ballast water.</li>
-<li><strong>Coho salmon</strong> — The Pacific salmon stocked in 1966; grows rapidly by eating alewives.</li>
-<li><strong>Chinook salmon</strong> — The larger “king” salmon added in 1967; cheaper to raise in hatcheries, with a large appetite for prey fish.</li>
-<li><strong>Alewife</strong> — The introduced herring from chapter 2. Once a nuisance, it becomes valuable food for the salmon fishery.</li>
-<li><strong>Zebra mussel</strong> — The small invader that attaches to hard surfaces, clogs water intakes, and filters food from the water.</li>
-<li><strong>Quagga mussel</strong> — A different mussel that also colonizes deeper water and soft lake bottoms, extending the damage through the food web.</li>
+
+
+
+
+
 </ul></section>
-<section aria-labelledby="settings"><h2 id="settings">Settings</h2><ul>
-<li><strong>Lake Michigan &amp; the Platte River</strong> — The salmon experiment begins in tributaries and transforms fishing around the lake.</li>
-<li><strong>Lake Huron</strong> — The later collapse of its salmon fishery exposes the limits of managing predators and their food supply.</li>
-<li><strong>Lake St. Clair</strong> — The shallow link between Huron and Erie where the first North American zebra mussel is discovered.</li>
-<li><strong>St. Lawrence Seaway &amp; ships’ ballast tanks</strong> — The route and the hidden transport system for organisms arriving from overseas.</li>
-<li><strong>Isle Royale, Lake Superior</strong> — Green’s effort to protect native fish centers on the park ferry, Ranger III.</li>
+<section aria-labelledby="settings"><h2 id="settings">Settings</h2><figure class="setting-map"><div aria-label="Scrollable settings map" class="map-scroll" role="region" tabindex="0"><img alt="Great Lakes map locating Platte River, Lake Huron, Lake St. Clair, the Seaway entrance, and the Isle Royale area." loading="lazy" src="../images/frst/egan-guide/settings-3-4.svg"/></div><figcaption><strong>Across the Great Lakes.</strong> Numbers match the list below. Same lake outlines as our classroom map; markers locate settings, not exact release or sampling sites. Isle Royale is marked as an island area at this scale. <a href="../images/frst/egan-guide/settings-3-4.svg" rel="noopener" target="_blank">Open full-size map ↗</a><span class="phone-map-hint"> Swipe sideways to explore the map on a phone.</span></figcaption></figure><ul>
+<li>1. <strong>Lake Michigan &amp; the Platte River</strong> — The salmon experiment begins in tributaries and transforms fishing around the lake.</li>
+<li>2. <strong>Lake Huron</strong> — The later collapse of its salmon fishery exposes the limits of managing predators and their food supply.</li>
+<li>3. <strong>Lake St. Clair</strong> — The shallow link between Huron and Erie where the first North American zebra mussel is discovered.</li>
+<li>4. <strong>St. Lawrence Seaway &amp; ships’ ballast tanks</strong> — The route and the hidden transport system for organisms arriving from overseas.</li>
+<li>5. <strong>Isle Royale, Lake Superior</strong> — Green’s effort to protect native fish centers on the park ferry, Ranger III.</li>
 </ul></section>
 <section aria-labelledby="events"><h2 id="events">Key events</h2><ol>
 <li><strong>Salmon are deliberately introduced.</strong> Oregon supplies coho eggs in 1964; Michigan releases the fish in 1966 and adds chinook in 1967. (pp. 87–95)</li>
@@ -29,4 +29,5 @@
 <li><strong>Ballast regulation leaves openings.</strong> Egan traces exemptions and weaknesses in rules meant to stop living organisms from traveling in ships’ water. (pp. 117–118, 131–142)</li>
 <li><strong>Green acts to protect Isle Royale.</strong> In 2007, a threatening fish virus prompts rapid ballast treatment on Ranger III; a permanent filtration and UV system follows. (pp. 142–147)</li>
 </ol></section>
-<p class="source-note">Based on Dan Egan, The Death and Life of the Great Lakes (2017), chapters 3–4. Page numbers refer to the printed first edition. These lists follow the book’s account; they are a reading aid, not an additional assignment.</p></main>
+<p class="source-note">Based on Dan Egan, The Death and Life of the Great Lakes (2017), chapters 3–4. Page numbers refer to the printed first edition. These lists follow the book’s account; they are a reading aid, not an additional assignment. <a href="../images/frst/egan-guide/SOURCES.md">Image and map credits</a>.</p></main>
+
