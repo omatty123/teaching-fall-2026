@@ -11,10 +11,13 @@
 .ww { max-width: 1240px; margin: 0 auto; padding: 0 24px 40px; }
 .ww i { font-style: normal; font-weight: 650; }
 
-.ww-head { padding: 26px 0 14px; border-bottom: 2px solid var(--ink); background: transparent; color: var(--ink); text-align: left; }
-.ww-head h1 { margin: 0 0 6px; color: var(--ink); font-size: clamp(2rem, 4vw, 3.1rem); font-weight: 650; letter-spacing: -.035em; line-height: 1; }
-.ww-head p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.45; }
-.ww-head p a { color: var(--blue); font-weight: 700; text-underline-offset: 3px; }
+.ww-head { display: flex; justify-content: center; padding: 22px 0 0; background: transparent; color: var(--ink); }
+.ww-mark { margin: 0; }
+.ww-mark svg { display: block; width: clamp(220px, 26vw, 340px); height: auto; overflow: visible; }
+.ww-mark line { stroke: var(--ink); stroke-width: 4; stroke-linecap: round; }
+.ww-mark .o { fill: var(--blue); }
+.ww-mark .h { fill: #9fc3d9; }
+.ww-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .ww-stage { display: grid; grid-template-columns: minmax(0, 1fr) 330px; gap: 28px; align-items: start; padding: 18px 0 8px; }
 
@@ -38,7 +41,12 @@
 .ww-word.is-on .ww-l { fill: var(--ink); }
 .ww-word.is-on .ww-dot { r: 7px; }
 
-.ww-core { fill: #fff; stroke: var(--rule); stroke-width: 1.5; }
+.ww-center { cursor: pointer; outline: none; }
+.ww-core { fill: #fff; stroke: var(--rule); stroke-width: 1.5; transition: stroke .15s ease; }
+.ww-center:hover .ww-core, .ww-center:focus-visible .ww-core, .ww-center.is-touring .ww-core { stroke: var(--c, var(--blue)); stroke-width: 3; }
+.ww-c-cue path { fill: var(--blue); }
+.ww-c-cue text { fill: var(--blue); font-size: 17px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; dominant-baseline: central; }
+.ww-center.is-touring .ww-c-cue path, .ww-center.is-touring .ww-c-cue text { fill: var(--c, var(--blue)); }
 .ww-ripple { fill: none; stroke: var(--c, var(--blue)); stroke-width: 2; opacity: 0; transform-box: fill-box; transform-origin: center; }
 .ww-ripple.go { animation: ww-ripple 1.5s ease-out forwards; }
 .ww-ripple.go.r2 { animation-delay: .22s; }
