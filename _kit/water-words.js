@@ -74,6 +74,11 @@
   var cRoman = el("text", { class: "ww-c-roman", x: C, y: C + 50 }, core);
   var cLang = el("text", { class: "ww-c-lang", x: C, y: C + 92 }, core);
   var cFam = el("text", { class: "ww-c-fam", x: C, y: C + 120 }, core);
+  var cCue = el("g", { class: "ww-c-cue" }, core);
+  var cCueIcon = el("path", { d: "" }, cCue);
+  var cCueText = el("text", { x: C + 12, y: C - 132 }, cCue);
+  core.setAttribute("tabindex", "0");
+  core.setAttribute("role", "button");
 
   function fitCenter() {
     cWord.style.fontSize = "";
@@ -221,8 +226,45 @@
       r.classList.add("go");
     });
   }
+  function setCue(touring) {
+    cCueText.textContent = touring ? "stop" : (resumeAt ? "continue" : "play all");
+    var tw = cCueText.getComputedTextLength ? cCueText.getComputedTextLength() : 80;
+    var x0 = C - (13 + 7 + tw) / 2, y = C - 132;
+    cCueIcon.setAttribute("d", touring
+      ? "M" + x0 + " " + (y - 6.5) + "h13v13h-13z"
+      : "M" + x0 + " " + (y - 7.5) + "l13 7.5l-13 7.5z");
+    cCueText.setAttribute("x", x0 + 20);
+    cCueText.setAttribute("y", y);
+    core.setAttribute("aria-label", touring ? "Pause"
+      : resumeAt ? "Continue around the circle from " + words[resumeAt].lang
+      : "Play all " + words.length + " words around the circle");
+    core.classList.toggle("is-touring", touring);
+  }
+  var TOUR = { name: "circle", words: words };
+  var resumeAt = 0, gapPending = false;
+  function toggleTour() {
+    if (queueFam === TOUR) {
+      // pause: pick up with the word that was cut off, or the next one if it had finished
+      resumeAt = (words.indexOf(current) + (gapPending ? 1 : 0)) % words.length;
+      audio.pause();
+      stopQueue();
+      return;
+    }
+    stopQueue();
+    queueFam = TOUR;
+    setCue(true);
+    queue = words.slice(resumeAt);
+    play(queue.shift());
+  }
+  core.addEventListener("click", toggleTour);
+  core.addEventListener("keydown", function (ev) {
+    if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); toggleTour(); }
+  });
+
   function play(w) {
     current = w;
+    gapPending = false;
+    if (queueFam !== TOUR) { resumeAt = words.indexOf(w); setCue(false); }
     mark(w);
     setCenter(w);
     ripple();
@@ -240,7 +282,9 @@
   }
   function stopQueue() {
     clearTimeout(gapTimer);
+    gapPending = false;
     queue = [];
+    if (queueFam === TOUR) setCue(false);
     if (queueFam && queueFam.button) {
       queueFam.button.setAttribute("aria-pressed", "false");
       queueFam.button.textContent = "Play all";
@@ -249,12 +293,15 @@
   }
   audio.addEventListener("ended", function () {
     if (queue.length) {
+      gapPending = true;
       gapTimer = setTimeout(function () { play(queue.shift()); }, 350);
     } else if (queueFam) {
+      if (queueFam === TOUR) resumeAt = 0;
       stopQueue();
     }
   });
 
   setCenter(null);
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setCenter(current); });
+  setCue(false);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { setCenter(current); setCue(queueFam === TOUR); });
 })();
