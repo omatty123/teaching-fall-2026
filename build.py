@@ -467,6 +467,8 @@ def workspace_items(course):
         rows.append((guide["label"], guide["description"], guide["href"], "Open reading guide"))
     if course.get("greatLakesGamePage"):
         rows.append(("Great Lakes map game", "Play the 24-place map challenge", course["greatLakesGamePage"], "Play the map game"))
+    if course.get("waterWordsPage"):
+        rows.append(("Water, spoken", "Hear the word for water in 45 languages", course["waterWordsPage"], "Listen"))
     if course.get("waterNewsPage"):
         rows.append((
             "Water in the News",

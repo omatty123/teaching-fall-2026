@@ -1,0 +1,33 @@
+<!-- Visual direction: one ring of spoken words, colored by language family, with the chosen word held in the still center. -->
+<main class="ww">
+  <header class="ww-head">
+    <h1>Water, spoken</h1>
+    <p><a href="frst-110.html">FRST 110</a> · one word in 45 languages. Click a word to hear someone say it. Colors mark language families.</p>
+  </header>
+
+  <div class="ww-stage">
+    <figure class="ww-wheel">
+      <svg id="wwWheel" viewBox="0 0 1000 1000" role="group" aria-label="The word for water in 45 languages, arranged in a circle by language family"></svg>
+    </figure>
+
+    <aside class="ww-side" aria-label="Language families">
+      <h2>Families</h2>
+      <ol class="ww-families" id="wwFamilies"></ol>
+    </aside>
+  </div>
+
+  <section class="ww-explain" aria-labelledby="wwExplainTitle">
+    <h2 id="wwExplainTitle">Why the words cluster</h2>
+    <p>Related languages descend from a common ancestor, and everyday words come along. English <i>water</i>, German <i>Wasser</i>, Russian <i>voda</i> and Lithuanian <i>vanduo</i> all go back to Proto-Indo-European <i>*wódr̥</i>. Latin <i>aqua</i> became <i>eau</i>, <i>agua</i>, <i>acqua</i>, <i>apă</i>.</p>
+    <p>Families also trade words in. Hindi <i>pānī</i> comes from Sanskrit <i>pānīya</i>, “drinkable.” Tamil <i>taṇṇīr</i> is literally “cold water.” Malagasy <i>rano</i> is kin to Indonesian <i>danau</i>, “lake.”</p>
+    <p><i>Nibi</i> is Ojibwe (Anishinaabemowin), a language of the Great Lakes, spoken here long before English.</p>
+  </section>
+
+  <details class="ww-credits">
+    <summary>Recordings and licenses</summary>
+    <p>Volunteer speakers on Wikimedia Commons (Lingua Libre and Wiktionary). Ojibwe: Eugene Stillday, © The Ojibwe People’s Dictionary, CC BY-NC-SA 3.0. Audio trimmed and volume-matched; words and etymologies checked against Wiktionary.</p>
+    <ol id="wwCredits"></ol>
+  </details>
+
+  <noscript><p class="ww-noscript">Turn on JavaScript to hear the words.</p></noscript>
+</main>
