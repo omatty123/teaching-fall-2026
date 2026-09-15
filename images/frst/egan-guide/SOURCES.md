@@ -37,3 +37,8 @@ Dan Egan, The Death and Life of the Great Lakes, 2017 first edition, chapters 1â
   - Isle Royale: regional island-area marker at 48 N, 88.9 W, compared with [NPS park maps](https://www.nps.gov/isro/planyourvisit/maps.htm); not a dock or exact sampling point. Small island shape omitted in classroom shoreline source.
   - Lake Huron (-82.4,44.55), Lake St. Clair (-82.67,42.5), Seaway entrance (-76.1618,44.2807), Chicago (-87.6244,41.8756): existing course map coordinate ledger, regional setting markers. Seaway marker denotes its entrance near Lake Ontario, not the whole shipping route.
   - Mead / Powell: representative interior points computed from each named Natural Earth lake geometry; locate reservoirs, not exact dam sites. Dam names paired in captions for reading orientation.
+
+## Round goby â€” added September 15, 2026
+
+- `round-goby.jpg`: U.S. Fish & Wildlife Service, public domain; https://commons.wikimedia.org/wiki/File:Neogobius_melanostomus2.jpg . Original photo preserved.
+- Species and food-web context: https://www.nps.gov/slbe/learn/nature/invasivespecies.htm ; botulism pathway uncertainty: https://www.nps.gov/slbe/learn/nature/sick-birds.htm .
