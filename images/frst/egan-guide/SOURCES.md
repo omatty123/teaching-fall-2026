@@ -38,7 +38,7 @@ Dan Egan, The Death and Life of the Great Lakes, 2017 first edition, chapters 1�
   - Lake Huron (-82.4,44.55), Lake St. Clair (-82.67,42.5), Seaway entrance (-76.1618,44.2807), Chicago (-87.6244,41.8756): existing course map coordinate ledger, regional setting markers. Seaway marker denotes its entrance near Lake Ontario, not the whole shipping route.
   - Mead / Powell: representative interior points computed from each named Natural Earth lake geometry; locate reservoirs, not exact dam sites. Dam names paired in captions for reading orientation.
 
-## Round goby — added September 15, 2026
+## Round goby — added September 15, 2026; photo replaced September 16, 2026
 
-- `round-goby.jpg`: U.S. Fish & Wildlife Service, public domain; https://commons.wikimedia.org/wiki/File:Neogobius_melanostomus2.jpg . Original photo preserved.
+- `round-goby.jpg`: photographed by Alex R (iNaturalist username flsandhills_ar), Onondaga Lake, Syracuse NY, August 30, 2018; Research Grade observation of Round Goby (Neogobius melanostomus). Licensed CC BY-NC. https://www.inaturalist.org/photos/24046034 . Replaces the original U.S. Fish & Wildlife Service hand-held photo (still public domain, no longer used here) at the user's request for a cleaner studio-style image; original file was https://commons.wikimedia.org/wiki/File:Neogobius_melanostomus2.jpg .
 - Species and food-web context: https://www.nps.gov/slbe/learn/nature/invasivespecies.htm ; botulism pathway uncertainty: https://www.nps.gov/slbe/learn/nature/sick-birds.htm .
