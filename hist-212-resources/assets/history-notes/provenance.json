@@ -1,0 +1,16 @@
+{
+  "source": "https://docs.google.com/spreadsheets/d/1TGGk5M7ePL4ul5ezXQ2J-Y2ye3Ht1lYVZiu9dg52bqo/edit?gid=0",
+  "extracted": "2026-09-21",
+  "images": [
+    {
+      "file": "image1.png",
+      "sha256": "da445b56fa285616b8a304ae2b65da9cb7df5c534e911daa97239eddd447d200",
+      "origin": "Unmodified embedded image from supplied Google Sheet XLSX export; rights status not independently established."
+    },
+    {
+      "file": "image2.png",
+      "sha256": "6e02dbe205af6de77965829c58736ff5b2822490127ff7dbf840a0bee3c7dc58",
+      "origin": "Unmodified embedded image from supplied Google Sheet XLSX export; rights status not independently established."
+    }
+  ]
+}

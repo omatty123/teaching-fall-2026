@@ -1,0 +1,49 @@
+{
+  "source": "User-supplied Ancient China Google Sheet, Sheet1 gid=0",
+  "url": "https://docs.google.com/spreadsheets/d/1boiT8l9znKHpqnXrcHxNVufuNPVpu3sPO62R29PNWPw/edit?gid=0",
+  "retrieved": "2026-09-21",
+  "method": "Native XLSX export, unmodified xl/media bytes, mappings verified against drawing anchors and source chart",
+  "rights": "Supplied reference assets; original publication/license attribution was not provided. Retained for this local user-requested visualization; do not claim a verified reuse license.",
+  "images": [
+    {
+      "file": "image8.jpg",
+      "subject": "Yu the Great",
+      "sha256": "ca41c526daa768756488b66ff9e341ac31ee07182fb14f336640e8a639ee0458"
+    },
+    {
+      "file": "image3.png",
+      "subject": "Tang the Accomplished",
+      "sha256": "466bbda9ce7e24abb6bbc3fbbb343e2254f9ac6d9f147c672bd770126b7def7f"
+    },
+    {
+      "file": "image7.jpg",
+      "subject": "King Wen",
+      "sha256": "c7ac4bdf3a2d1197da8404968bab5c18aecfdec90b44be5e6d478458790b181d"
+    },
+    {
+      "file": "image2.jpg",
+      "subject": "King Wu",
+      "sha256": "983897633f7ae8daabcc1a77cc97374152989ca90153153e861d753b6a97c576"
+    },
+    {
+      "file": "image6.png",
+      "subject": "Duke of Zhou",
+      "sha256": "e837d4f65385f1bdec95177b666b98128117fdab0c1bac339ecee7b2c03afda9"
+    },
+    {
+      "file": "image4.png",
+      "subject": "King Jie",
+      "sha256": "e5a1b20047061fb78d0b88e752dbbab8ccec1dd039e1f5cf1bf574b764a0a6e6"
+    },
+    {
+      "file": "image1.jpg",
+      "subject": "King Zhòu of Shang",
+      "sha256": "750942aab27729f8b6a41d618e7e6b67758e470d93035fc82fade82194074990"
+    },
+    {
+      "file": "image5.jpg",
+      "subject": "King You",
+      "sha256": "f47ed816dd84ec6b172758c4826b4cce66d21f6addc2b8d44d12b4743f2f9c8f"
+    }
+  ]
+}

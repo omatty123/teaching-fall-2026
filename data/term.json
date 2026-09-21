@@ -73,7 +73,7 @@
     "label": "Open Spring 2026 archive"
   },
   "taskBoard": {
-    "updated": "September 1, 2026",
+    "updated": "September 13, 2026",
     "intro": "One term. Three courses. Clear the decisions that unlock everything else.",
     "lanes": [
       {
@@ -119,16 +119,18 @@
         "course": "FRST",
         "lane": "matty",
         "title": "Choose the Delta blues listening selections",
-        "detail": "Select the tracks and decide where students will access them.",
-        "points": 20
+        "detail": "Done. Eight tracks across Oct 14, 16 and 19, published on the Canvas page “Delta Blues: Water, Labor & Migration” since September 8, which is also where students access them.",
+        "points": 20,
+        "done": true
       },
       {
         "id": "hist-test-readings",
         "course": "HIST",
         "lane": "matty",
         "title": "Test the first three course-pack readings",
-        "detail": "Open each reading in student context and confirm that access works.",
-        "points": 20
+        "detail": "Done. All 17 daily reading PDFs checked in Drive on 13 Sep: every one is shared anyone-with-link as reader, so student access works. First is Sep 15.",
+        "points": 20,
+        "done": true
       },
       {
         "id": "hist-scholar-exam",
