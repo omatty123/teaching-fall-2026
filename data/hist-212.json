@@ -149,5 +149,27 @@
       "ogImage": "images/artwork/08-mawangdui.jpg",
       "wrapperClass": "artwork-page"
     }
+  ],
+  "readingGuides": [
+    {
+      "label": "Tuesday Sep 22: annotated reader",
+      "description": "Tang's declarations and the Kongzi passages. Click a phrase for a note.",
+      "href": "../hist-212-resources/0922-reader.html"
+    },
+    {
+      "label": "Ancient China chart",
+      "description": "Rulers, dynasties and their sources, from the Sanhuang to Eastern Zhou",
+      "href": "../hist-212-resources/index.html"
+    },
+    {
+      "label": "Ancient China quiz",
+      "description": "Forty practice questions",
+      "href": "../hist-212-resources/quiz.html"
+    },
+    {
+      "label": "China history notes",
+      "description": "Xia, Shang and Western Zhou side by side, with primary sources in English",
+      "href": "../hist-212-resources/history-notes.html"
+    }
   ]
 }
