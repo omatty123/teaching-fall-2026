@@ -198,3 +198,21 @@ Use the classroom handout’s OpenStreetMap lake contours and the class map game
 - State when a human portrait is unverified; do not substitute an invented likeness.
 - Keep philosophical pairings explicitly interpretive and emotional moves tied to the writing.
 - Keep these surface-specific values scoped to the Egan guide; this addendum does not replace the shared template.
+
+## HIST 212 materials page · September 22, 2026
+
+`courses/hist-212.html` now prioritizes opening materials. Its `materialsHome`
+data in `data/hist-212.json` supplies grouped reading/source and practice links,
+with course systems alongside on desktop and below on phones. Jump links remain
+near the title. The former repeated question, generic preparation prose, cropped
+map banner, duplicate upcoming meetings, and registrar panel are removed from
+this route. The complete schedule has one native disclosure; meeting time and
+place remain beneath the course name. Other course pages retain their layout.
+
+Scoped styling lives in `_kit/materials-home.css`: Inter, a warm paper field,
+rust links, a dark compact navigation bar, ruled resource rows, and a white
+course-links column. Body text is 14–16px, resource titles 16–17px, section titles
+18–19px, and the course heading 24–32px. No animation is needed for this index.
+Detector exceptions: the established Inter face is intentional; the side-stripe
+warnings refer to unused shared HQ selectors, not elements on this route. The
+old design sidecar is stale and was not regenerated as part of this change.

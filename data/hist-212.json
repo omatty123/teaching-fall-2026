@@ -171,5 +171,83 @@
       "description": "Xia, Shang and Western Zhou side by side, with primary sources in English",
       "href": "../hist-212-resources/history-notes.html"
     }
-  ]
+  ],
+  "materialsHome": {
+    "groups": [
+      {
+        "title": "Readings and sources",
+        "items": [
+          {
+            "label": "September 22 annotated reader",
+            "description": "Tang’s declarations and Kongzi passages, with notes beside the text.",
+            "href": "../hist-212-resources/0922-reader.html",
+            "action": "Read the passages"
+          },
+          {
+            "label": "Ancient China timeline",
+            "description": "Rulers, dynasties, books, thinkers, and cities in one illustrated chart.",
+            "href": "../hist-212-resources/index.html",
+            "action": "Explore the timeline"
+          },
+          {
+            "label": "China history notes",
+            "description": "Xia, Shang, and Western Zhou compared, with portraits and English source excerpts.",
+            "href": "../hist-212-resources/history-notes.html",
+            "action": "Open the notes"
+          },
+          {
+            "label": "Primary-source reading links",
+            "description": "Go directly to the texts behind the timeline and dynasty stories.",
+            "href": "../hist-212-resources/history-notes.html#primary-sources",
+            "action": "Find a source"
+          }
+        ]
+      },
+      {
+        "title": "Practice and visual sources",
+        "items": [
+          {
+            "label": "Ancient China quiz",
+            "description": "Forty questions on rulers, dynasties, dates, thinkers, books, and cities.",
+            "href": "../hist-212-resources/quiz.html",
+            "action": "Start practicing"
+          },
+          {
+            "label": "East Asia map game",
+            "description": "Learn and practice the places on the course map.",
+            "href": "https://hist-212-map-game.omatty123.workers.dev/",
+            "action": "Open the map game"
+          },
+          {
+            "label": "Artwork of the day",
+            "description": "The course’s visual sources, with looking questions for each meeting.",
+            "href": "hist-212-artwork.html",
+            "action": "View the artworks"
+          }
+        ]
+      }
+    ],
+    "courseLinks": [
+      {
+        "label": "Class notes",
+        "description": "The shared 2026 course notes.",
+        "href": "https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit"
+      },
+      {
+        "label": "Canvas",
+        "description": "Assignments, submissions, announcements, and grades.",
+        "href": "https://lawrence.instructure.com/courses/13411"
+      },
+      {
+        "label": "Syllabus",
+        "description": "Readings, requirements, policies, and the term plan.",
+        "href": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing"
+      },
+      {
+        "label": "Great Debate guide",
+        "description": "The debate instructions and preparation requirements.",
+        "href": "https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit"
+      }
+    ]
+  }
 }

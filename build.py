@@ -536,7 +536,41 @@ def course_pattern(course):
             "Close reading, shared works, seminar preparation, and writing move through the term’s water questions.")
 
 
+def build_materials_home(term, course):
+    """A course-specific resource index, with public content owned by data/."""
+    home = course["materialsHome"]
+    m = course["meeting"]
+    def resource(item):
+        action = f'<span class="material-action">{e(item["action"])}</span>' if item.get("action") else ""
+        return (f'<li><a class="material-link" href="{e(item["href"])}">'
+                f'<strong>{e(item["label"])}</strong><span>{e(item["description"])}</span>{action}</a></li>')
+    groups = "".join(f'<section class="material-group" aria-labelledby="group-{i}">'
+        f'<h2 id="group-{i}">{e(g["title"])}</h2><ul>{"".join(resource(item) for item in g["items"])}</ul></section>'
+        for i, g in enumerate(home["groups"]))
+    links = "".join(resource(item) for item in home["courseLinks"])
+    style_hash = hashlib.sha256((KIT / "materials-home.css").read_bytes()).hexdigest()[:10]
+    doc = f"""<!DOCTYPE html>
+<html lang="en"><head>
+{head(term, title=f"{course['code']} · Course materials", description="Readings, timelines, history notes, practice quizzes, maps, and course links for HIST 212.", og_image=course['theme']['banner']['src'], rel='../', og_path=f"courses/{course['slug']}.html")}
+<link rel="stylesheet" href="../_kit/materials-home.css?v={style_hash}">
+</head><body class="materials-home">
+<a class="skip-link" href="#materials">Skip to course materials</a>
+<nav class="breadcrumb" aria-label="Course navigation"><a href="../students.html">All courses</a><span>{e(course['displayCode'])} · {e(term['name'])}</span><a href="#schedule">Schedule</a></nav>
+<header class="materials-heading"><h1>{e(course['title'])}</h1><p>{e(m['daysLabel'])} · {e(m['timeLabel'])} · {e(m['location'])}</p><nav class="materials-jumps" aria-label="Jump to resources"><a href="#group-0">Readings</a><a href="#group-1">Practice</a><a href="#course-links">Class notes &amp; course links</a></nav></header>
+<main id="materials" class="materials-main"><div class="materials-content">{groups}</div>
+<aside class="materials-course" aria-labelledby="course-links"><h2 id="course-links">Course links</h2><ul>{links}</ul>
+<div class="materials-contact"><p><strong>Ma Seonsaengnim</strong><br>{e(' · '.join(course['registrar']['instructors']))}</p></div></aside>
+<section class="materials-schedule" id="schedule" aria-labelledby="schedule-title"><h2 id="schedule-title">Course schedule</h2>
+<details><summary>View all {len(course['schedule'])} meetings</summary><table><caption>Fall 2026 · HIST 212</caption><tbody>{schedule_rows(course['schedule'])}</tbody></table></details>
+<p class="materials-final"><strong>{e(course['final']['label'])}</strong> · {e(course['final']['date'])} · {e(course['final']['time'])}</p></section>
+</main><footer class="materials-footer">{e(course['code'])} · {e(term['name'])} · {e(term['institution'])}</footer>
+</body></html>"""
+    (ROOT / "courses" / f"{course['slug']}.html").write_text(doc)
+
+
 def build_course(term, course):
+    if course.get("materialsHome"):
+        return build_materials_home(term, course)
     slug = course["slug"]
     m = course["meeting"]
     reg = course["registrar"]

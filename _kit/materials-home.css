@@ -1,0 +1,41 @@
+/* HIST 212 resource index: materials first, course systems alongside. */
+.materials-home {background:#f4f3f0;color:#242726;font-family:Inter,Arial,sans-serif;font-size:16px;line-height:1.5;--material-accent:#7a3030;}
+.materials-home * {box-sizing:border-box;}
+.materials-home ::selection {background:#ead4b6;color:#242726;}
+.materials-home a {text-underline-offset:4px;}
+.materials-home a:focus-visible,.materials-home summary:focus-visible {outline:3px solid #0b63ce;outline-offset:4px;}
+.materials-home > .breadcrumb {display:flex;align-items:center;gap:24px;min-height:52px;padding:0 max(20px,calc((100vw - 1120px)/2));background:#232a2c;color:#edf0ef;font-size:13px;}
+.materials-home > .breadcrumb a {display:inline-flex;align-items:center;min-height:48px;color:inherit;white-space:nowrap;}
+.materials-home > .breadcrumb span {flex:1;}
+.materials-heading,.materials-main,.materials-footer {max-width:1160px;margin:0 auto;padding-left:20px;padding-right:20px;}
+.materials-heading {padding-top:28px;padding-bottom:24px;}
+.materials-heading h1 {font-size:clamp(24px,3vw,32px);font-weight:650;line-height:1.2;letter-spacing:-.025em;text-wrap:balance;}
+.materials-heading p {margin-top:9px;font-size:14px;color:#555c59;}
+.materials-main {display:grid;grid-template-columns:minmax(0,2fr) minmax(240px,1fr);gap:36px 48px;align-items:start;}
+.materials-main h2 {font-size:19px;line-height:1.3;font-weight:650;margin:0;padding-bottom:12px;border-bottom:1px solid #aaa59c;}
+.materials-main ul {list-style:none;margin:0;padding:0;}
+.material-group + .material-group {margin-top:30px;}
+.material-link {display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;row-gap:4px;padding:16px 0;min-height:80px;border-bottom:1px solid #d7d3cb;color:inherit;text-decoration:none;}
+.material-link strong {font-size:17px;font-weight:650;color:var(--material-accent);}
+.material-link > span:not(.material-action) {grid-column:1;font-size:14px;color:#555c59;max-width:65ch;}
+.material-link .material-action {grid-column:2;grid-row:1 / span 2;align-self:center;font-size:12px;font-weight:600;color:var(--material-accent);text-decoration:underline;text-underline-offset:4px;}
+.material-link:hover strong {text-decoration:underline;}
+.material-link:hover {background:#eeeae3;}
+.materials-course {padding:20px;background:#fff;}
+.materials-course .material-link {grid-template-columns:1fr;padding:14px 0;}
+.materials-course .material-link strong {font-size:16px;}
+.materials-contact {margin-top:20px;font-size:13px;color:#555c59;}
+.materials-schedule {grid-column:1 / -1;max-width:100%;}
+.materials-schedule summary {cursor:pointer;min-height:52px;padding:14px 0;color:var(--material-accent);font-weight:600;}
+.materials-schedule table {width:100%;border-collapse:collapse;font-size:14px;}
+.materials-schedule caption {text-align:left;padding-bottom:12px;color:#555c59;}
+.materials-schedule th,.materials-schedule td {padding:12px 8px 12px 0;text-align:left;vertical-align:top;border-bottom:1px solid #d7d3cb;}
+.materials-schedule th {width:120px;white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600;}
+.materials-final {border-top:1px solid #d7d3cb;padding-top:18px;font-size:14px;}
+.materials-footer {padding-top:28px;padding-bottom:28px;color:#555c59;font-size:12px;}
+@media(max-width:760px){.materials-main {grid-template-columns:1fr;gap:30px;}.materials-home > .breadcrumb {gap:14px;}.materials-home > .breadcrumb span {font-size:12px;}.material-link {column-gap:14px;}.materials-heading {padding-top:22px;}.materials-course {padding:18px;}}
+@media(max-width:480px){.materials-home > .breadcrumb span {max-width:150px;}.material-link {grid-template-columns:1fr;padding:14px 0;}.material-link .material-action {grid-column:1;grid-row:auto;padding-top:3px;}.materials-heading h1 {font-size:26px;}.materials-heading p {font-size:13px;}.materials-main h2 {font-size:18px;}}
+
+.materials-jumps {display:flex;flex-wrap:wrap;gap:0 20px;margin-top:10px;font-size:13px;}
+.materials-jumps a {display:inline-flex;align-items:center;min-height:44px;color:var(--material-accent);font-weight:600;}
+.materials-main [id] {scroll-margin-top:20px;}
