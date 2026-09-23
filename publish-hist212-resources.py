@@ -15,6 +15,7 @@ ROOT = pathlib.Path(__file__).parent
 BASE = "https://omatty123.github.io/teaching-fall-2026/"
 SRC = pathlib.Path("/Users/wegehaum/workspaces/hist-212-ancient-china-quiz")
 READER = pathlib.Path("/Users/wegehaum/Documents/ChatGPT/FALL 2026/course-materials/hist-212/readings/annotated/hist-212-0922-annotated-reader.html")
+READER_0924 = READER.with_name("hist-212-0924-annotated-reader.html")
 OUT = ROOT / "hist-212-resources"
 IMG = BASE + "images/hist-212-banner.jpg"
 
@@ -27,6 +28,8 @@ PAGES = {
                            "Xia, Shang and Western Zhou compared, with primary sources in English."),
     "0922-reader.html": (READER, "Tuesday Sep 22 annotated reader",
                          "The Tang declarations and Kongzi passages, with a note beside each phrase you click."),
+    "0924-reader.html": (READER_0924, "Thursday Sep 24 annotated reader",
+                         "The Mozi passages, with a note beside each phrase you click."),
 }
 
 CRUMB = ('<nav class="breadcrumb" style="font:600 13px/1.4 Inter,system-ui,sans-serif;padding:10px 16px;'

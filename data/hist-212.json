@@ -157,6 +157,11 @@
       "href": "../hist-212-resources/0922-reader.html"
     },
     {
+      "label": "Thursday Sep 24: annotated reader",
+      "description": "The Mozi passages. Click a phrase for a note.",
+      "href": "../hist-212-resources/0924-reader.html"
+    },
+    {
       "label": "Ancient China chart",
       "description": "Rulers, dynasties and their sources, from the Sanhuang to Eastern Zhou",
       "href": "../hist-212-resources/index.html"
@@ -181,6 +186,12 @@
             "label": "September 22 annotated reader",
             "description": "Tang’s declarations and Kongzi passages, with notes beside the text.",
             "href": "../hist-212-resources/0922-reader.html",
+            "action": "Read the passages"
+          },
+          {
+            "label": "September 24 annotated reader",
+            "description": "The Mozi passages, with notes beside the text.",
+            "href": "../hist-212-resources/0924-reader.html",
             "action": "Read the passages"
           },
           {
