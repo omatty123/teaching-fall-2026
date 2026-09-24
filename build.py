@@ -568,9 +568,139 @@ def build_materials_home(term, course):
     (ROOT / "courses" / f"{course['slug']}.html").write_text(doc)
 
 
+# ---------------------------------------------------------------- timeline course home
+# Used when a course's data carries "units": the page is organized by time.
+# Next class, what's due, and which unit is open are recomputed in the browser
+# from the Chicago date (_kit/course-timeline.js); the build-time answer is the fallback.
+
+def _short_date(iso):
+    dt = datetime.date.fromisoformat(iso)
+    return dt.strftime("%a %b ") + str(dt.day)
+
+
+def _range(a, b):
+    """Sep 25 – Oct 2, or Oct 14–21 within one month"""
+    x, y = datetime.date.fromisoformat(a), datetime.date.fromisoformat(b)
+    if x.month == y.month:
+        return f"{x.strftime('%b')} {x.day}–{y.day}"
+    return f"{x.strftime('%b')} {x.day} – {y.strftime('%b')} {y.day}"
+
+
+def _due_label(stamp):
+    dt = datetime.datetime.fromisoformat(stamp)
+    hour = dt.strftime("%I:%M %p").lstrip("0").replace(":00", "").lower()
+    return dt.strftime("%a %b ") + str(dt.day) + " · " + hour
+
+
+def _chips(items, rel=""):
+    return "".join(f'<a class="ft-chip ft-chip-{e(m.get("kind", "page"))}" href="{e(m["href"])}">{e(m["label"])}</a>'
+                   for m in items)
+
+
+def build_timeline_home(term, course):
+    slug, m, reg = course["slug"], course["meeting"], course["registrar"]
+    today = datetime.date.today().isoformat()
+    sched = course["schedule"]
+    nxt = next((s for s in sched if s["date"] >= today), sched[-1])
+    due = next((a for a in course["assignments"] if a["due"][:10] >= today), course["assignments"][-1])
+    units = {u["key"]: dict(u, days=[]) for u in course["units"]}
+    for s in sched:
+        units[s["unit"]]["days"].append(s)
+
+    def day_row(s):
+        cls = "ft-day" + (" ft-event" if s.get("event") else "") + (" is-past" if s["date"] < nxt["date"] else "") \
+              + (" is-next" if s is nxt else "")
+        return (f'<li class="{cls}" data-date="{s["date"]}"><span class="ft-date">{e(_short_date(s["date"]))}</span>'
+                f'<span class="ft-what"><strong>{e(s["topic"])}</strong>'
+                f'{"<span>" + e(s["detail"]) + "</span>" if s.get("detail") else ""}</span>'
+                f'<span class="ft-mats">{_chips(s.get("materials", []))}</span></li>')
+
+    unit_html = []
+    for u in units.values():
+        first, last = u["days"][0]["date"], u["days"][-1]["date"]
+        is_open = first <= nxt["date"] <= last
+        n_read = sum(1 for d in u["days"] if not d.get("event"))
+        extra = (f'<p class="ft-unit-mats">Across the unit: {_chips(u["materials"])}</p>' if u["materials"] else "")
+        unit_html.append(
+            f'<details class="ft-unit" data-start="{first}" data-end="{last}"{" open" if is_open else ""}>'
+            f'<summary><span class="ft-unit-dates">{e(_range(first, last))}</span>'
+            f'<span class="ft-unit-title"><strong>{e(u["title"])}</strong><span>{e(u["author"])}</span></span>'
+            f'<span class="ft-unit-count">{n_read} class{"es" if n_read != 1 else ""}</span></summary>'
+            f'<ol class="ft-days">{"".join(day_row(d) for d in u["days"])}</ol>{extra}</details>')
+
+    assign_html = "".join(
+        f'<li class="ft-assign{" is-past" if a["due"][:10] < today else ""}{" is-due" if a is due else ""}" data-due="{a["due"]}">'
+        f'<a href="{e(a["href"])}"><span class="ft-assign-due">{e(_due_label(a["due"]))}</span>'
+        f'<strong>{e(a["label"])}</strong>{"<span>" + e(a["note"]) + "</span>" if a.get("note") else ""}</a></li>'
+        for a in course["assignments"])
+    standing = "".join(f'<a href="{e(l["href"])}">{e(l["label"])}</a>' for l in course["standingLinks"])
+    data = json.dumps({"schedule": [{"date": s["date"], "topic": s["topic"], "detail": s.get("detail", ""),
+                                     "event": bool(s.get("event")), "materials": s.get("materials", [])} for s in sched],
+                       "assignments": course["assignments"], "classEnd": m["end"]}, ensure_ascii=False).replace("</", "<\\/")
+    banner = course["theme"]["banner"]
+    css_v = hashlib.sha256((KIT / "course-timeline.css").read_bytes()).hexdigest()[:10]
+    js_v = hashlib.sha256((KIT / "course-timeline.js").read_bytes()).hexdigest()[:10]
+    doc = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+{head(term, title=f"{course['code']} · {course['title']}", description=course["description"],
+      og_image=banner["src"], rel="../", og_path=f"courses/{slug}.html")}
+<link rel="stylesheet" href="../_kit/course-timeline.css?v={css_v}">
+</head>
+<body class="ft-page">
+{DIRECTION_CONTRACT}
+<nav class="ft-crumb" aria-label="Breadcrumb"><a href="../students.html">&larr; All courses</a><span>{e(course['displayCode'])} · {e(term['name'])}</span></nav>
+<header class="ft-hero" style="background-image:url('../{e(banner['src'])}');background-position:{e(banner.get('position', 'center'))}">
+  <div class="ft-hero-copy">
+    <p class="ft-kicker">{e(course['displayCode'])} · {e(course['title'])}</p>
+    <h1>Water Makes Worlds</h1>
+    <p class="ft-meets">{e(m['daysLabel'])} · {e(m['timeLabel'])} · {e(m['location'])}</p>
+  </div>
+  <div class="ft-now">
+    <section class="ft-next" aria-labelledby="ft-next-h">
+      <p class="ft-label" id="ft-next-h">Next class</p>
+      <p class="ft-next-date" id="ft-next-date">{e(format_course_date(nxt['date']))}</p>
+      <h2 id="ft-next-topic">{e(nxt['topic'])}</h2>
+      <p class="ft-next-detail" id="ft-next-detail">{e(nxt.get('detail', ''))}</p>
+      <p class="ft-next-mats" id="ft-next-mats">{_chips(nxt.get('materials', []))}</p>
+    </section>
+    <section class="ft-due" aria-labelledby="ft-due-h">
+      <p class="ft-label" id="ft-due-h">Due next</p>
+      <a id="ft-due-link" href="{e(due['href'])}"><strong id="ft-due-label">{e(due['label'])}</strong>
+      <span id="ft-due-when">{e(_due_label(due['due']))}</span></a>
+    </section>
+  </div>
+</header>
+<nav class="ft-standing" aria-label="Course links">{standing}</nav>
+<main class="ft-main">
+  <section class="ft-term" aria-labelledby="ft-term-h">
+    <h2 id="ft-term-h">The term, unit by unit</h2>
+    {"".join(unit_html)}
+  </section>
+  <aside class="ft-side">
+    <section aria-labelledby="ft-assign-h"><h2 id="ft-assign-h">Writing</h2><ol class="ft-assigns">{assign_html}</ol></section>
+    <section class="ft-record" aria-labelledby="ft-rec-h"><h2 id="ft-rec-h">Course record</h2><dl>
+      <div><dt>Instructor</dt><dd>{e(' · '.join(reg['instructors']))}</dd></div>
+      <div><dt>Meets</dt><dd>{e(m['daysLabel'])}<br>{e(m['timeLabel'])} · {e(m['location'])}</dd></div>
+      <div><dt>Registrar</dt><dd>{reg['credits']} credits · CRN {e(reg['crn'])}</dd></div>
+      <div><dt>Class email</dt><dd><a href="mailto:{e(reg['email'])}">{e(reg['email'])}</a></dd></div>
+    </dl></section>
+  </aside>
+</main>
+<footer class="site-footer"><span>{e(course['code'])} · {e(term['name'])} · {e(term['institution'])}</span><a href="../students.html">All student courses</a></footer>
+<script type="application/json" id="ft-data">{data}</script>
+<script src="../_kit/course-timeline.js?v={js_v}"></script>
+</body>
+</html>
+"""
+    (ROOT / "courses" / f"{slug}.html").write_text(doc)
+
+
 def build_course(term, course):
     if course.get("materialsHome"):
         return build_materials_home(term, course)
+    if course.get("units"):
+        return build_timeline_home(term, course)
     slug = course["slug"]
     m = course["meeting"]
     reg = course["registrar"]
