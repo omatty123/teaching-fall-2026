@@ -53,3 +53,17 @@ missing = sorted(r for r in refs if not (OUT / r).exists())
 if missing:
     raise SystemExit("missing from frst-110-resources/: %s" % missing)
 print("wrote", OUT / NAME, "| local refs ok:", len(refs), "| assets:", len(list((OUT / ASSETS).iterdir())))
+
+
+# Sample filled workbook pages (the instructor's model sheet for each class day),
+# the colour/blue-ink PDFs from the workbook builder. Meeting n -> meeting-NN.pdf.
+WB = pathlib.Path("/Users/wegehaum/Documents/ChatGPT/FALL 2026/course-materials/frst-110/workbook")
+SAMPLES = OUT / "workbook-samples"
+SAMPLES.mkdir(exist_ok=True)
+got = []
+for pdf in sorted(WB.glob("FRST-110-Mock-Filled-Sheet-Meeting-*.pdf")):
+    m = re.fullmatch(r"FRST-110-Mock-Filled-Sheet-Meeting-(\d+)\.pdf", pdf.name)
+    if m:
+        shutil.copy(pdf, SAMPLES / f"meeting-{int(m.group(1)):02d}.pdf")
+        got.append(int(m.group(1)))
+print("workbook samples:", got)

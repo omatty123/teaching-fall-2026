@@ -103,3 +103,4 @@
   .ft-what span{display:block;margin-left:0}
 }
 @media print{.ft-hero{color:#000;background:none!important}.ft-hero::before{display:none}.ft-unit{break-inside:avoid}}
+.ft-chip-sample{background:#f3e8f4;border-color:#dcc3df;color:#5d2a63}
