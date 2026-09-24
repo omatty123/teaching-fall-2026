@@ -103,3 +103,39 @@ button.reading-bubble.is-playing{background:var(--word-ink);color:#fff}
 .tablet-detail-views .drawing-label{margin-bottom:8px}.tablet-detail-views figcaption{font-size:.8rem;margin-top:8px}
 .line-reader .type-note{margin-top:14px}
 @media(max-width:700px){.tablet-linked-views{grid-template-columns:1fr;gap:18px}.tablet-overview{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:0 16px;align-items:center}.tablet-overview .drawing-label{grid-column:1/-1}.tablet-overview>svg{max-height:190px}.tablet-overview figcaption{margin:0}.tablet-detail-views .drawing-reading{margin-top:14px}.tablet-detail-views .drawing-reading svg{max-height:none}header nav{flex-wrap:wrap}}
+
+/* folded "How do we know this story?": one heading row until opened */
+.evidence-fold>summary{list-style:none;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 24px}
+.evidence-fold>summary::-webkit-details-marker{display:none}
+.evidence-fold>summary h2{margin-bottom:0}
+.evidence-fold>summary h2::after{content:" +";color:var(--blue);font-weight:600}
+.evidence-fold[open]>summary h2::after{content:" −"}
+.evidence-fold>summary p{margin:0;color:var(--muted);font-weight:400}
+.evidence-fold[open]>summary{margin-bottom:24px}
+
+/* HERO: lapis over the clay itself (a real photograph of the tablet's wedges), gold for the way in */
+:root{--lapis:#15294a;--lapis-2:#1f3a66;--gold:#d8b04e;--gold-soft:#f0dca5;--parchment:#f6efe3}
+.hero{position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(240px,.55fr);gap:44px;align-items:center;
+  padding:40px 5vw 38px;color:var(--parchment);background:var(--lapis) url(hero-clay.jpg) center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(95deg,rgba(15,31,58,.95) 0%,rgba(17,36,66,.9) 52%,rgba(21,41,74,.62) 100%)}
+.hero .kicker{margin:0 0 10px;color:var(--gold);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.hero h1{margin:0 0 12px;color:#fff;font-size:clamp(2.2rem,4.2vw,3.7rem);line-height:1.02;letter-spacing:-.035em}
+.hero .lead{margin:0 0 22px;max-width:60ch;color:#e8e0d0;font-size:1.15rem;line-height:1.5}
+.story-so-far{list-style:none;margin:0 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;counter-reset:step}
+.story-so-far li{counter-increment:step;padding:12px 14px 13px;background:rgba(255,255,255,.07);border-top:3px solid var(--gold);
+  border-radius:0 0 4px 4px;font-size:.93rem;line-height:1.45;color:#ddd5c5}
+.story-so-far b{display:block;margin-bottom:3px;color:#fff;font-size:1rem}
+.story-so-far b::before{content:counter(step);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:8px;
+  border-radius:50%;background:var(--gold);color:var(--lapis);font-size:.78rem;vertical-align:1px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin:0}
+.hero-actions a{display:inline-block;padding:11px 18px;border-radius:4px;font-weight:700;text-decoration:none;font-size:.98rem}
+.btn-gold{background:var(--gold);color:var(--lapis)}.btn-gold:hover{background:var(--gold-soft)}
+.btn-ghost{border:1px solid rgba(246,239,227,.55);color:var(--parchment)}.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.hero-object{margin:0}
+.hero-object img{display:block;width:100%;max-height:380px;object-fit:contain;background:#000;border-radius:4px;
+  box-shadow:0 18px 40px rgba(0,0,0,.5),0 0 0 1px rgba(216,176,78,.35)}
+.hero-object figcaption{margin-top:9px;color:#c9c0ae;font-size:.78rem;line-height:1.45}
+@media(min-width:1440px){.hero{padding-left:72px;padding-right:72px}}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:22px;padding:30px 24px}.hero-object{max-width:240px}
+  .hero-object img{max-height:200px}.hero .kicker{font-size:.72rem}.story-so-far{grid-template-columns:1fr}}
