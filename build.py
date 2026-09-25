@@ -658,16 +658,22 @@ def build_timeline_home(term, course):
   </div>
   <div class="ft-now">
     <section class="ft-next" aria-labelledby="ft-next-h">
-      <p class="ft-label" id="ft-next-h">Next class</p>
-      <p class="ft-next-date" id="ft-next-date">{e(format_course_date(nxt['date']))}</p>
-      <h2 id="ft-next-topic">{e(nxt['topic'])}</h2>
-      <p class="ft-next-detail" id="ft-next-detail">{e(nxt.get('detail', ''))}</p>
+      <div class="ft-next-heading">
+        <p class="ft-label" id="ft-next-h">Next class</p>
+        <p class="ft-next-date" id="ft-next-date">{e(format_course_date(nxt['date']))}</p>
+      </div>
+      <div class="ft-next-reading">
+        <h2 id="ft-next-topic">{e(nxt['topic'])}</h2>
+        <p class="ft-next-detail" id="ft-next-detail">{e(nxt.get('detail', ''))}</p>
+      </div>
       <p class="ft-next-mats" id="ft-next-mats">{_chips(nxt.get('materials', []))}</p>
     </section>
     <section class="ft-due" aria-labelledby="ft-due-h">
-      <p class="ft-label" id="ft-due-h">Due next</p>
-      <a id="ft-due-link" href="{e(due['href'])}"><strong id="ft-due-label">{e(due['label'])}</strong>
-      <span id="ft-due-when">{e(_due_label(due['due']))}</span></a>
+      <div class="ft-next-heading"><p class="ft-label" id="ft-due-h">Due next</p>
+        <p class="ft-due-when" id="ft-due-when">{e(_due_label(due['due']))}</p></div>
+      <div class="ft-next-reading"><a id="ft-due-link" href="{e(due['href'])}"><strong id="ft-due-label">{e(due['label'])}</strong></a>
+        <p class="ft-due-note" id="ft-due-note">{e(due.get('note', ''))}</p></div>
+      <p class="ft-next-mats"><a class="ft-chip" id="ft-due-open" href="{e(due['href'])}">Open on Canvas</a></p>
     </section>
   </div>
 </header>

@@ -43,6 +43,8 @@
   document.getElementById("ft-due-link").href = due.href;
   document.getElementById("ft-due-label").textContent = due.label;
   document.getElementById("ft-due-when").textContent = dueDate(due.due);
+  document.getElementById("ft-due-note").textContent = due.note || "";
+  document.getElementById("ft-due-open").href = due.href;
 
   [].forEach.call(document.querySelectorAll(".ft-day"), function (li) {
     li.classList.toggle("is-past", li.dataset.date < next.date);
