@@ -139,3 +139,6 @@ button.reading-bubble.is-playing{background:var(--word-ink);color:#fff}
 @media(min-width:1440px){.hero{padding-left:72px;padding-right:72px}}
 @media(max-width:860px){.hero{grid-template-columns:1fr;gap:22px;padding:30px 24px}.hero-object{max-width:240px}
   .hero-object img{max-height:200px}.hero .kicker{font-size:.72rem}.story-so-far{grid-template-columns:1fr}}
+
+.epic-map{margin:0 0 28px}.epic-map img{display:block;width:100%;max-width:1100px;height:auto;border-radius:4px;box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.epic-map figcaption{margin-top:10px;max-width:75ch;color:#c6d8d8;font-size:.92rem}
