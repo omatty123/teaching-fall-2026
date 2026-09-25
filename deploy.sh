@@ -55,7 +55,7 @@ done
 
 # 5. breadcrumb on every sub-page, no orphans
 for page in courses/*.html; do
-  grep -q 'class="breadcrumb"' "$page" || { note "FAIL" "$page has no breadcrumb"; fail=1; }
+  grep -qE 'class="breadcrumb"|aria-label="Breadcrumb"' "$page" || { note "FAIL" "$page has no breadcrumb"; fail=1; }
   basename_page=$(basename "$page")
   linked=0
   for source in index.html students.html courses/*.html; do
