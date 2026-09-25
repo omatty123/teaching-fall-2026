@@ -604,6 +604,19 @@ def build_timeline_home(term, course):
     nxt = next((s for s in sched if s["date"] >= today), sched[-1])
     due = next((a for a in course["assignments"] if a["due"][:10] >= today), course["assignments"][-1])
     units = {u["key"]: dict(u, days=[]) for u in course["units"]}
+    unit_title = {u["key"]: u["title"] for u in course["units"]}
+    reads = {}
+    for s_ in sched:
+        if not s_.get("event"):
+            reads.setdefault(s_["unit"], []).append(s_["date"])
+
+    def _where_in_unit(s_):
+        bits = [s_.get("detail", "")]
+        if not s_.get("event") and len(reads.get(s_["unit"], [])) > 1:
+            r = reads[s_["unit"]]
+            bits.append(f"{unit_title[s_['unit']]}, {r.index(s_['date']) + 1} of {len(r)}")
+        return " · ".join(b for b in bits if b)
+
     for s in sched:
         units[s["unit"]]["days"].append(s)
 
@@ -635,7 +648,7 @@ def build_timeline_home(term, course):
         for a in course["assignments"])
     standing = "".join(f'<a href="{e(l["href"])}">{e(l["label"])}</a>' for l in course["standingLinks"])
     data = json.dumps({"schedule": [{"date": s["date"], "topic": s["topic"], "detail": s.get("detail", ""),
-                                     "event": bool(s.get("event")), "materials": s.get("materials", [])} for s in sched],
+                                     "event": bool(s.get("event")), "materials": s.get("materials", []), "where": _where_in_unit(s)} for s in sched],
                        "assignments": course["assignments"], "classEnd": m["end"]}, ensure_ascii=False).replace("</", "<\\/")
     banner = course["theme"]["banner"]
     css_v = hashlib.sha256((KIT / "course-timeline.css").read_bytes()).hexdigest()[:10]
@@ -650,32 +663,20 @@ def build_timeline_home(term, course):
 <body class="ft-page">
 {DIRECTION_CONTRACT}
 <nav class="ft-crumb" aria-label="Breadcrumb"><a href="../students.html">&larr; All courses</a><span>{e(course['displayCode'])} · {e(term['name'])}</span></nav>
-<header class="ft-hero" style="background-image:url('../{e(banner['src'])}');background-position:{e(banner.get('position', 'center'))}">
-  <div class="ft-hero-copy">
-    <p class="ft-kicker">{e(course['displayCode'])} · {e(course['title'])}</p>
-    <h1>Water Makes Worlds</h1>
-    <p class="ft-meets">{e(m['daysLabel'])} · {e(m['timeLabel'])} · {e(m['location'])}</p>
+<header class="ft-hero ft-hero-b" style="background-image:url('../{e(banner['src'])}');background-position:{e(banner.get('position', 'center'))}">
+  <div class="ft-day-lead">
+    <p class="ft-kicker" id="ft-next-date">Next class · {e(format_course_date(nxt['date']))}</p>
+    <h1 id="ft-next-topic">{e(nxt['topic'])}</h1>
+    <p class="ft-day-sub" id="ft-next-detail">{e(_where_in_unit(nxt))}</p>
+    <p class="ft-day-links" id="ft-next-mats">{_chips(nxt.get('materials', []))}</p>
   </div>
-  <div class="ft-now">
-    <section class="ft-next" aria-labelledby="ft-next-h">
-      <div class="ft-next-heading">
-        <p class="ft-label" id="ft-next-h">Next class</p>
-        <p class="ft-next-date" id="ft-next-date">{e(format_course_date(nxt['date']))}</p>
-      </div>
-      <div class="ft-next-reading">
-        <h2 id="ft-next-topic">{e(nxt['topic'])}</h2>
-        <p class="ft-next-detail" id="ft-next-detail">{e(nxt.get('detail', ''))}</p>
-      </div>
-      <p class="ft-next-mats" id="ft-next-mats">{_chips(nxt.get('materials', []))}</p>
-    </section>
-    <section class="ft-due" aria-labelledby="ft-due-h">
-      <div class="ft-next-heading"><p class="ft-label" id="ft-due-h">Due next</p>
-        <p class="ft-due-when" id="ft-due-when">{e(_due_label(due['due']))}</p></div>
-      <div class="ft-next-reading"><a id="ft-due-link" href="{e(due['href'])}"><strong id="ft-due-label">{e(due['label'])}</strong></a>
-        <p class="ft-due-note" id="ft-due-note">{e(due.get('note', ''))}</p></div>
-      <p class="ft-next-mats"><a class="ft-chip" id="ft-due-open" href="{e(due['href'])}">Open on Canvas</a></p>
-    </section>
-  </div>
+  <aside class="ft-due-b" aria-labelledby="ft-due-h">
+    <p class="ft-kicker" id="ft-due-h">Due next</p>
+    <a id="ft-due-link" href="{e(due['href'])}"><strong id="ft-due-label">{e(due['label'])}</strong></a>
+    <p class="ft-due-when" id="ft-due-when">{e(_due_label(due['due']))}</p>
+    <p class="ft-due-note" id="ft-due-note">{e(due.get('note', ''))}</p>
+    <p class="ft-course-line">{e(course['displayCode'])} · Water Makes Worlds<br>MWF · {e(m['timeLabel'])} · {e(m.get('shortLocation', m['location']))}</p>
+  </aside>
 </header>
 <nav class="ft-standing" aria-label="Course links">{standing}</nav>
 <main class="ft-main">

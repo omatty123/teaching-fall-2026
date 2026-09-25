@@ -34,9 +34,9 @@
   }
   function esc(s) { var t = document.createElement("span"); t.textContent = s; return t.innerHTML; }
 
-  document.getElementById("ft-next-date").textContent = longDate(next.date);
+  document.getElementById("ft-next-date").textContent = "Next class · " + longDate(next.date);
   document.getElementById("ft-next-topic").textContent = next.topic;
-  document.getElementById("ft-next-detail").textContent = next.detail || "";
+  document.getElementById("ft-next-detail").textContent = next.where || next.detail || "";
   document.getElementById("ft-next-mats").innerHTML = (next.materials || []).map(function (m) {
     return '<a class="ft-chip ft-chip-' + esc(m.kind || "page") + '" href="' + esc(m.href) + '">' + esc(m.label) + "</a>";
   }).join("");
@@ -44,7 +44,6 @@
   document.getElementById("ft-due-label").textContent = due.label;
   document.getElementById("ft-due-when").textContent = dueDate(due.due);
   document.getElementById("ft-due-note").textContent = due.note || "";
-  document.getElementById("ft-due-open").href = due.href;
 
   [].forEach.call(document.querySelectorAll(".ft-day"), function (li) {
     li.classList.toggle("is-past", li.dataset.date < next.date);
