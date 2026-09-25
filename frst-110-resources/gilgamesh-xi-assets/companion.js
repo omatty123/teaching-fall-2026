@@ -51,3 +51,30 @@ soundButtons.forEach(button=>button.addEventListener('click',async()=>{
 wordAudio.addEventListener('ended',finishWord);
 wordAudio.addEventListener('error',()=>{clearPlaying();audioStatus.textContent='The word could not load. Try the recording below.';});
 passageAudio.addEventListener('play',()=>{++playbackRequest;wordAudio.pause();finishWord();});
+
+// A single player for the five scholar name excerpts.
+(function(){
+  const audio=document.getElementById('cast-audio');
+  const status=document.getElementById('cast-audio-status');
+  const slow=document.getElementById('cast-slow');
+  const buttons=[...document.querySelectorAll('.say')];
+  let active=null,request=0;
+  function reset(){
+    buttons.forEach(b=>{b.classList.remove('is-playing');b.setAttribute('aria-pressed','false');b.querySelector('.say-icon').textContent='▶';});
+    active=null;
+  }
+  function stop(){++request;audio.pause();reset();}
+  slow.addEventListener('change',()=>{audio.playbackRate=slow.checked?.75:1;});
+  buttons.forEach(button=>button.addEventListener('click',async()=>{
+    if(active===button){stop();status.textContent='Stopped. Press a name to listen again.';return;}
+    stop();const current=++request;
+    ++playbackRequest;wordAudio.pause();passageAudio.pause();finishWord();
+    active=button;audio.src=button.dataset.audio;audio.playbackRate=slow.checked?.75:1;audio.preservesPitch=true;
+    button.classList.add('is-playing');button.setAttribute('aria-pressed','true');button.querySelector('.say-icon').textContent='■';
+    status.textContent='Playing '+button.dataset.name+(slow.checked?' at ¾ speed.':'.');
+    try{await audio.play();}catch(error){if(current!==request)return;reset();status.textContent='The sample could not play. Try again, or open the recording link beneath the name.';}
+  }));
+  audio.addEventListener('ended',()=>{const name=active?.dataset.name;reset();status.textContent=(name?name+': ':'')+'press the name again to repeat, or select slow playback.';});
+  audio.addEventListener('error',()=>{reset();status.textContent='The sample could not load. Open the recording link beneath the name.';});
+  [wordAudio,passageAudio].forEach(other=>other.addEventListener('play',()=>{if(active){stop();status.textContent='Name playback stopped while the tablet reading plays.';}}));
+})();
