@@ -100,3 +100,6 @@ finish_page("genesis.html", "Genesis 6–9 · FRST 110",
 finish_page("sleuth-explainers.html", "Three mysteries explained · FRST 110",
             "How cuneiform was deciphered, how old handwriting is dated, and more: explainers for the flood narratives.",
             "sleuth-assets/behistun.jpg", "← Back to the Genesis reader", "genesis.html")
+finish_page("quran.html", "Nuh in the Quran · FRST 110",
+            "Sura 71 and Sura 11:25–49 with notes, Arabic recitation that follows the English, and the Gilgamesh / Genesis / Quran comparison.",
+            "quran-assets/nuh-ark-detail.jpg")

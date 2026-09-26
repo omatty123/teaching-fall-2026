@@ -10800,8 +10800,14 @@
       "date": "2026-09-30",
       "unit": "flood",
       "topic": "Quran",
-      "detail": "The story of Nuh",
-      "materials": []
+      "detail": "Suras 71 and 11",
+      "materials": [
+        {
+          "label": "Nuh in the Quran, with notes",
+          "href": "../frst-110-resources/quran.html",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-02",
