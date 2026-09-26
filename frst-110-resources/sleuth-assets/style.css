@@ -49,3 +49,19 @@
 .t-verdict{margin:8px 0;font-size:.92rem;line-height:1.55}
 .t-src{margin-top:8px}
 @media(max-width:700px){.seals{grid-template-columns:1fr}}
+
+/* step 1: real Old Persian */
+.op-box{margin:12px 0;padding:12px;background:#fbf7ef;border:1px solid #d9ccb2}
+.op-line+.op-line{margin-top:12px;padding-top:12px;border-top:1px dashed #d9ccb2}
+.op-who{display:block;margin-bottom:6px;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#50616c}
+.op-words{display:flex;flex-wrap:wrap;align-items:flex-start;gap:6px 4px}
+.op-word{display:inline-flex;flex-direction:column;align-items:center;padding:4px 5px;border-radius:3px;transition:background .3s}
+.op-cu{font-family:"Noto Sans Old Persian",sans-serif;font-size:1.55rem;line-height:1.2;letter-spacing:.04em}
+.op-div{font-family:"Noto Sans Old Persian",sans-serif;font-size:1.3rem;color:#8a8577;align-self:flex-start;padding-top:6px}
+.op-gap{align-self:flex-start;padding-top:8px;color:#8a8577}
+.op-tr,.op-gl{max-height:0;overflow:hidden;opacity:0;font-size:.72rem;line-height:1.3;transition:opacity .3s}
+.op-word.on .op-tr,.op-word.on .op-gl{max-height:3em;opacity:1}
+.op-tr{font-style:italic;color:#50616c}.op-gl{font-weight:700;color:#203442}
+.on-king{background:#f3e7c2}.on-name{background:#d7ebf3}.on-father{background:#f6d7c6}
+.clues{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.clue[aria-pressed="true"]{opacity:.55}
