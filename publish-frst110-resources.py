@@ -86,7 +86,7 @@ def finish_page(name, title, desc, image, crumb_label="← Back to FRST 110", cr
                 ("property", "og:url", url), ("property", "og:type", "website"), ("name", "twitter:card", "summary_large_image"),
                 ("name", "twitter:title", title), ("name", "twitter:description", desc), ("name", "twitter:image", img)]
         h = h.replace("</head>", "".join(f'<meta {k}="{n}" content="{v}">' for k, n, v in rows) + "</head>", 1)
-    if 'class="breadcrumb"' not in h:
+    if 'class="breadcrumb"' not in h and 'Genesis reader</a>' not in h:   # page's own top bar already links back
         crumb = CRUMB.replace("&larr; Back to FRST 110", crumb_label.replace("←", "&larr;")).replace("../courses/frst-110.html", crumb_href)
         h = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + crumb, h, count=1)
     path.write_text(h, encoding="utf-8")
