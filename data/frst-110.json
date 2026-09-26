@@ -10783,7 +10783,18 @@
       "unit": "flood",
       "topic": "Genesis",
       "detail": "The Noah story",
-      "materials": []
+      "materials": [
+        {
+          "label": "Genesis 6–9 with notes",
+          "href": "../frst-110-resources/genesis.html",
+          "kind": "page"
+        },
+        {
+          "label": "Reading guide",
+          "href": "../frst-110-resources/genesis-reading-guide.html",
+          "kind": "guide"
+        }
+      ]
     },
     {
       "date": "2026-09-30",

@@ -67,3 +67,36 @@ for pdf in sorted(WB.glob("FRST-110-Mock-Filled-Sheet-Meeting-*.pdf")):
         shutil.copy(pdf, SAMPLES / f"meeting-{int(m.group(1)):02d}.pdf")
         got.append(int(m.group(1)))
 print("workbook samples:", got)
+
+
+# Codex-built pages (Genesis reader, sleuth explainers) arrive via their own builders;
+# here they get what the deploy checklist needs. Idempotent: skips what is already present.
+def finish_page(name, title, desc, image, crumb_label="← Back to FRST 110", crumb_href="../courses/frst-110.html"):
+    path = OUT / name
+    if not path.exists():
+        print("  (skipped, not built yet):", name)
+        return
+    h = path.read_text(encoding="utf-8")
+    url = BASE + "frst-110-resources/" + name
+    img = BASE + "frst-110-resources/" + image
+    if 'rel="icon"' not in h:
+        h = h.replace("</head>", '<link rel="icon" type="image/svg+xml" href="../favicon.svg"></head>', 1)
+    if "og:image" not in h:
+        rows = [("property", "og:title", title), ("property", "og:description", desc), ("property", "og:image", img),
+                ("property", "og:url", url), ("property", "og:type", "website"), ("name", "twitter:card", "summary_large_image"),
+                ("name", "twitter:title", title), ("name", "twitter:description", desc), ("name", "twitter:image", img)]
+        h = h.replace("</head>", "".join(f'<meta {k}="{n}" content="{v}">' for k, n, v in rows) + "</head>", 1)
+    if 'class="breadcrumb"' not in h:
+        crumb = CRUMB.replace("&larr; Back to FRST 110", crumb_label.replace("←", "&larr;")).replace("../courses/frst-110.html", crumb_href)
+        h = re.sub(r"(<body[^>]*>)", lambda m: m.group(1) + crumb, h, count=1)
+    path.write_text(h, encoding="utf-8")
+    assert (OUT / image).exists(), image
+    print("finished", name)
+
+
+finish_page("genesis.html", "Genesis 6–9 · FRST 110",
+            "The Noah story with notes, maps, a timeline, and a comparison with Gilgamesh XI and the Quran.",
+            "genesis-assets/lake-van-nasa.jpg")
+finish_page("sleuth-explainers.html", "Three mysteries explained · FRST 110",
+            "How cuneiform was deciphered, how old handwriting is dated, and more: explainers for the flood narratives.",
+            "sleuth-assets/behistun.jpg", "← Back to the Genesis reader", "genesis.html")
