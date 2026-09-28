@@ -10785,6 +10785,11 @@
       "detail": "The Noah story",
       "materials": [
         {
+          "label": "Start today’s class: Genesis + Summary",
+          "href": "../frst-110-resources/class-2026-09-28.html",
+          "kind": "page"
+        },
+        {
           "label": "Genesis 6–9 with notes",
           "href": "../frst-110-resources/genesis.html",
           "kind": "page"
@@ -10793,6 +10798,11 @@
           "label": "Reading guide",
           "href": "../frst-110-resources/genesis-reading-guide.html",
           "kind": "guide"
+        },
+        {
+          "label": "Song: Turn! Turn! Turn!",
+          "href": "https://lawrence.instructure.com/courses/14726/pages/song-of-the-day-turn-turn-turn-the-byrds",
+          "kind": "song"
         }
       ]
     },
