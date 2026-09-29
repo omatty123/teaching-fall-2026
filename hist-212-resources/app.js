@@ -1,5 +1,8 @@
 'use strict';
-const {sections,sources}=window.QUIZ_DATA;
+// Practice quiz trimmed from 40 to 24 (2026-09-29). The chart still uses all 40 entries in data.js.
+const LEFT_OUT=new Set(['books-2','books-4','books-6','books-8','thinkers-3','thinkers-5','thinkers-7','thinkers-8','dynasties-2','dynasties-3','dynasties-4','dynasties-7','dynasties-8','cities-1','cities-3','cities-6']);
+const {sources}=window.QUIZ_DATA;
+const sections=window.QUIZ_DATA.sections.map(s=>({...s,items:s.items.filter(q=>!LEFT_OUT.has(q.id))}));
 const allItems=sections.flatMap(s=>s.items.map(q=>({...q,section:s.id})));
 const $=id=>document.getElementById(id);
 const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

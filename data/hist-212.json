@@ -152,6 +152,11 @@
   ],
   "readingGuides": [
     {
+      "label": "The Shi Exams",
+      "description": "How the six Scholar Exams work, when each opens, and where to study for Early China",
+      "href": "../hist-212-resources/shi-exams.html"
+    },
+    {
       "label": "Tuesday Sep 22: annotated reader",
       "description": "Tang's declarations and the Kongzi passages. Click a phrase for a note.",
       "href": "../hist-212-resources/0922-reader.html"
@@ -168,7 +173,7 @@
     },
     {
       "label": "Ancient China quiz",
-      "description": "Forty practice questions",
+      "description": "24 practice questions",
       "href": "../hist-212-resources/quiz.html"
     },
     {
@@ -182,6 +187,12 @@
       {
         "title": "Readings and sources",
         "items": [
+          {
+            "label": "The Shi Exams",
+            "description": "How the six Scholar Exams work, and where to study for each.",
+            "href": "../hist-212-resources/shi-exams.html",
+            "action": "Read the guide"
+          },
           {
             "label": "September 22 annotated reader",
             "description": "Tang’s declarations and Kongzi passages, with notes beside the text.",
@@ -219,7 +230,7 @@
         "items": [
           {
             "label": "Ancient China quiz",
-            "description": "Forty questions on rulers, dynasties, dates, thinkers, books, and cities.",
+            "description": "24 questions on rulers, dynasties, dates, thinkers, books, and capitals.",
             "href": "../hist-212-resources/quiz.html",
             "action": "Start practicing"
           },
