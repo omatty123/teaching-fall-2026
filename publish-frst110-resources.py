@@ -97,7 +97,7 @@ def finish_page(name, title, desc, image, crumb_label="← Back to FRST 110", cr
 finish_page("genesis.html", "Genesis 6–9 · FRST 110",
             "The Noah story with notes, maps, a timeline, and a comparison with Gilgamesh XI and the Quran.",
             "genesis-assets/lake-van-nasa.jpg")
-finish_page("sleuth-explainers.html", "Three mysteries explained · FRST 110",
+finish_page("sleuth-explainers.html", "Cuneiform, paleography, and seven · FRST 110",
             "How cuneiform was deciphered, how old handwriting is dated, and more: explainers for the flood narratives.",
             "sleuth-assets/behistun.jpg", "← Back to the Genesis reader", "genesis.html")
 finish_page("quran.html", "Nuh in the Quran · FRST 110",
