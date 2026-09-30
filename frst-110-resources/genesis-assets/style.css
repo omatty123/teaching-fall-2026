@@ -30,3 +30,6 @@
 
 /* Unannotated verses retain reference numbers without suggesting a click. */
 span.verse-number{cursor:default;background:transparent}
+
+/* Keep the reading margin clear until a passage note is selected. */
+.note-panel:not(.is-open){visibility:hidden}

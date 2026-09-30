@@ -4,7 +4,6 @@ const byNote=Object.fromEntries(data.notes.map(n=>[n.id,n]));
 const byVerse=Object.fromEntries(data.verses.map(v=>[v.ref,v.text]));
 const panel=document.getElementById('note-panel');
 const content=document.getElementById('note-content');
-const initialContent=content.innerHTML;
 let lastTrigger=null;
 const mobile=()=>window.matchMedia('(max-width:760px)').matches;
 const verseId=ref=>'v-'+ref.replace(':','-');
@@ -25,7 +24,7 @@ function openNote(id,ref,trigger,scroll=false){
  history.replaceState(null,'','#'+verseId(ref));
  if(scroll||mobile()){requestAnimationFrame(()=>document.getElementById(verseId(ref))?.scrollIntoView({block:'start',behavior:'instant'}));}
 }
-function closeNote(restoreFocus=true){panel.classList.remove('is-open');document.body.classList.remove('note-open');clearSelection();document.getElementById('note-label').textContent='Reading notes';content.innerHTML=initialContent;bindNoteButtons(content);if(restoreFocus)lastTrigger?.focus({preventScroll:true});}
+function closeNote(restoreFocus=true){panel.classList.remove('is-open');document.body.classList.remove('note-open');clearSelection();document.getElementById('note-label').textContent='';content.replaceChildren();if(restoreFocus)lastTrigger?.focus({preventScroll:true});}
 function bindNoteButtons(root){root.querySelectorAll('[data-note]').forEach(b=>b.addEventListener('click',()=>openNote(b.dataset.note,b.dataset.ref,b,b.classList.contains('sample-note'))));}
 bindNoteButtons(document);
 document.getElementById('close-note').addEventListener('click',()=>closeNote());
