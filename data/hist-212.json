@@ -148,6 +148,15 @@
       "description": "One work of art for each of the nineteen meetings of HIST/EAST/GLST 212, East Asia in the Premodern World, with three looking questions for each.",
       "ogImage": "images/artwork/08-mawangdui.jpg",
       "wrapperClass": "artwork-page"
+    },
+    {
+      "slug": "hist-212-thought-experiments",
+      "title": "Thought experiments & metaphors · HIST 212",
+      "heading": "Thought experiments & metaphors",
+      "description": "Compare 26 major thought experiments, metaphors, and parables in Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi, with passage references.",
+      "fragment": "hist-212-thought-experiments.fragment",
+      "wrapperClass": "thought-page",
+      "ogImage": "images/hist-212-banner.jpg"
     }
   ],
   "readingGuides": [
@@ -192,6 +201,12 @@
             "description": "How the six Scholar Exams work, and where to study for each.",
             "href": "../hist-212-resources/shi-exams.html",
             "action": "Read the guide"
+          },
+          {
+            "label": "Thought experiments & metaphors",
+            "description": "Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi: 26 images and the arguments they make.",
+            "href": "hist-212-thought-experiments.html",
+            "action": "Compare the thinkers"
           },
           {
             "label": "September 22 annotated reader",

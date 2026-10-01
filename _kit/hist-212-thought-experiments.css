@@ -1,0 +1,110 @@
+/* HIST 212 reading chart; extends the course materials page. */
+body:has(.thought-page) { background:#f4f3f0; color:#242726; font-family:Inter,Arial,sans-serif; }
+body:has(.thought-page) > .breadcrumb { max-width:none; padding-inline:max(20px,calc((100vw - 1320px)/2)); background:#232a2c; color:#edf0ef; border:0; font-size:13px; }
+body:has(.thought-page) > .breadcrumb a { color:inherit; }
+.thought-page { max-width:1360px; margin:auto; padding:0 20px 32px; font-size:15px; line-height:1.55; }
+.thought-page * { box-sizing:border-box; }
+.thought-page [hidden] { display:none !important; }
+.thought-page ::selection { background:#ead4b6; color:#242726; }
+.thought-page :is(a,button,input,summary,[tabindex]):focus-visible { outline:3px solid #0b63ce; outline-offset:3px; }
+.thought-page a { color:#7a3030; text-underline-offset:4px; }
+.thought-skip { position:absolute; top:-100px; padding:12px; background:#fff; z-index:10; }
+.thought-skip:focus { top:8px; }
+.thought-heading { padding:28px 0 20px; border-bottom:1px solid #aaa59c; }
+.thought-heading h1 { margin:0 0 10px; font-size:clamp(26px,3vw,34px); font-weight:650; letter-spacing:-.025em; line-height:1.18; text-wrap:balance; }
+.thought-heading p { margin:6px 0 0; max-width:78ch; color:#555c59; font-size:15px; }
+.thought-heading p:first-of-type { color:#242726; font-weight:550; }
+#thought-tools { padding:18px 0 0; display:flex; flex-wrap:wrap; align-items:end; gap:14px 18px; }
+.thought-filters { display:flex; flex-wrap:wrap; gap:6px; width:100%; }
+.thought-search-tools { display:grid; grid-template-columns:minmax(220px,560px) max-content 1fr; align-items:end; gap:6px 10px; width:100%; }
+.thought-search-tools label { grid-column:1/-1; }
+.thought-search-tools #thought-print { justify-self:end; }
+.thought-page button { min-height:44px; padding:9px 15px; border:1px solid #aaa59c; border-radius:4px; background:transparent; color:#343a37; font:600 13px/1.4 Inter,Arial,sans-serif; cursor:pointer; }
+.thought-page button:hover { background:#e9e6df; }
+.thought-page button[aria-pressed="true"] { color:#fff; background:#7a3030; border-color:#7a3030; }
+#thought-tools label { display:flex; flex-direction:column; gap:5px; font-size:12px; font-weight:650; flex:1; min-width:220px; max-width:560px; }
+#thought-search { width:100%; min-height:44px; background:#fff; border:1px solid #aaa59c; border-radius:4px; padding:10px 12px; color:#242726; caret-color:#7a3030; font:400 15px/1.4 Inter,Arial,sans-serif; }
+#thought-search::placeholder { color:#646b67; }
+#thought-print { margin-left:auto; }
+#thought-count { color:#555c59; font-size:13px; margin:17px 0 12px; font-variant-numeric:tabular-nums; }
+.thought-table-wrap { scroll-margin-top:14px; }
+.thought-table { width:100%; border-collapse:collapse; table-layout:fixed; background:#fff; text-align:left; }
+.thought-table thead th { padding:12px 15px; background:#232a2c; color:#fff; font-size:12px; font-weight:600; }
+.thought-table thead th:nth-child(1) { width:10%; }
+.thought-table thead th:nth-child(2) { width:19%; }
+.thought-table thead th:nth-child(3) { width:29%; }
+.thought-table thead th:nth-child(4) { width:30%; }
+.thought-table thead th:nth-child(5) { width:12%; }
+.thought-table :is(td,tbody th) { vertical-align:top; padding:17px 15px; border-bottom:1px solid #d7d3cb; font-size:14px; line-height:1.6; overflow-wrap:break-word; }
+.thought-table tbody th { font-size:16px; font-weight:650; line-height:1.4; }
+.thought-table td:first-child { font-size:13px; background:#f9f8f5; }
+.thought-table td:first-child strong { display:block; }
+.thought-table td:first-child [lang="zh"] { display:block; color:#646b67; margin-top:3px; font-size:15px; }
+.thought-table :is(th,td) small { display:block; margin-top:7px; font-size:11px; font-weight:450; color:#555c59; line-height:1.4; }
+.thought-permalink { text-decoration:none; color:#242726 !important; }
+.thought-permalink:hover { text-decoration:underline; }
+.thought-table td:last-child a { display:inline-flex; min-height:44px; align-items:center; margin-top:-9px; font-size:12px; font-weight:650; }
+.thought-row:target { background:#fff3d7; }
+.thought-row { scroll-margin-top:18px; }
+.thought-sources { margin-top:24px; border-top:1px solid #aaa59c; font-size:13px; color:#555c59; }
+.thought-sources summary { min-height:48px; padding:14px 0; cursor:pointer; color:#7a3030; font-weight:650; }
+.thought-sources p { max-width:85ch; margin:8px 0; }
+.thought-sources li { padding:4px 0; max-width:85ch; }
+#thought-empty { padding:28px 0; border-block:1px solid #d7d3cb; }
+#thought-empty h2 { font-size:20px; margin:0 0 6px; }
+#thought-empty p { margin:0; color:#555c59; }
+.thought-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media(max-width:1050px) and (min-width:761px) {
+  .thought-table :is(td,tbody th) { padding:14px 10px; font-size:13px; }
+  .thought-table thead th { padding:12px 10px; }
+  .thought-table tbody th { font-size:15px; }
+}
+@media(max-width:760px) {
+  .thought-page { padding-inline:16px; }
+  .thought-heading { padding-top:22px; }
+  .thought-heading p { font-size:14px; }
+  .thought-table,.thought-table tbody { display:block; }
+  .thought-table { background:transparent; }
+  .thought-table thead { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+  .thought-table .thought-row { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:0 15px; padding:17px 0 20px; border-top:1px solid #aaa59c; }
+  .thought-table :is(td,tbody th) { display:block; padding:0; border:0; font-size:15px; }
+  .thought-table td:first-child { background:transparent; grid-column:1; grid-row:1; font-size:13px; padding-bottom:7px; color:#7a3030; }
+  .thought-table td:first-child :is(strong,[lang="zh"]) { display:inline; font-size:13px; }
+  .thought-table td:first-child [lang="zh"] { margin-left:5px; }
+  .thought-table tbody th { grid-column:1/-1; grid-row:2; font-size:19px; padding-bottom:12px; }
+  .thought-table th small { display:inline; font-size:11px; margin-left:8px; }
+  .thought-table td:nth-child(3),.thought-table td:nth-child(4) { grid-column:1/-1; padding:0 0 12px; max-width:72ch; }
+  .thought-table td:nth-child(3)::before,.thought-table td:nth-child(4)::before { content:attr(data-label); display:block; color:#555c59; font-size:11px; font-weight:650; margin-bottom:3px; }
+  .thought-table td:last-child { grid-column:2; grid-row:1; text-align:right; }
+  .thought-table td:last-child a { margin-top:-12px; }
+  .thought-table td:last-child small { display:none; }
+  .thought-row:target { outline:2px solid #a67c00; outline-offset:4px; }
+  #thought-print { margin-left:0; }
+  #thought-tools label { min-width:100%; }
+  .thought-search-tools { grid-template-columns:1fr 1fr; }
+  .thought-search-tools input { grid-column:1/-1; }
+  .thought-search-tools #thought-clear { justify-self:start; }
+  .thought-caveat { margin:7px 0 0; font-size:13px; }
+}
+@media print {
+  @page { size:landscape; margin:12mm; }
+  body:has(.thought-page) { background:#fff; }
+  body:has(.thought-page) > :is(.breadcrumb,.site-footer),#thought-tools,.thought-skip { display:none !important; }
+  .thought-page { padding:0; max-width:none; font-size:10pt; }
+  .thought-heading { padding:0 0 10px; }
+  .thought-heading h1 { font-size:20pt; }
+  .thought-heading p,#thought-count { font-size:9pt; }
+  .thought-table { display:table; width:100%; background:#fff; }
+  .thought-table tbody { display:table-row-group; }
+  .thought-table thead { display:table-header-group; position:static; width:auto; height:auto; clip:auto; }
+  .thought-table thead th { background:#eee; color:#111; font-size:9pt; }
+  .thought-table .thought-row { display:table-row; break-inside:avoid; }
+  .thought-table :is(td,tbody th) { display:table-cell; padding:8px; font-size:9pt; line-height:1.4; border-bottom:1px solid #aaa; }
+  .thought-table td::before { display:none !important; }
+  .thought-table td:first-child { font-size:9pt; background:#fff; }
+  .thought-table td:last-child { text-align:left; }
+  .thought-table td:last-child a { display:inline; min-height:0; margin:0; font-size:9pt; }
+  .thought-table a { color:#111; text-decoration:none; }
+  .thought-sources { font-size:8pt; }
+  .thought-sources[open] { break-before:auto; }
+}

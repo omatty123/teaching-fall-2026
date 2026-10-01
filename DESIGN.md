@@ -216,3 +216,45 @@ course-links column. Body text is 14–16px, resource titles 16–17px, section 
 Detector exceptions: the established Inter face is intentional; the side-stripe
 warnings refer to unused shared HQ selectors, not elements on this route. The
 old design sidecar is stale and was not regenerated as part of this change.
+
+## HIST 212 thought experiments chart · October 1, 2026
+
+### Overview
+
+`courses/hist-212-thought-experiments.html` is a **Read** surface reached from
+the HIST 212 materials page. It extends that page’s warm paper, Inter typography,
+rust links, compact dark navigation, and ruled reading surfaces. The chart leads;
+the compact title and controls support comparison without a decorative hero.
+This addendum records this surface only.
+
+### Layout
+
+The wide layout presents 26 examples in a five-column semantic table: thinker,
+image or experiment, what happens, argument, and passage. A white reading field,
+thin horizontal rules, and a dark header establish hierarchy without shadows.
+The heading scales from 26–34px; table prose is 14px, with 16px row titles. At
+760px and below, each row becomes a labeled reading block: thinker and passage
+above the title, followed by the scene and argument. The mobile layout uses 16px
+gutters and avoids sideways scrolling.
+
+### Components
+
+Five thinker filters plus All thinkers, text search, a live result count, Reset,
+and Print chart enhance the complete static table. Selected filters use rust
+with white text; controls have 44px minimum heights and visible blue keyboard
+focus. Search and thinker state are retained in the URL. Stable row links
+highlight their target and reveal it if filters have hidden it. Without
+JavaScript, all 26 examples and source links remain readable. Landscape print
+styles remove controls and navigation and preserve the currently visible rows.
+Sources and interpretive cautions use a native disclosure below the chart.
+
+### Source maintenance
+
+`data/hist-212.json` registers the route through `extraPages` and links it from
+`materialsHome`. Edit `features/hist-212-thought-experiments.fragment`,
+`_kit/hist-212-thought-experiments.css`, and
+`_kit/hist-212-thought-experiments.js`, then regenerate the page. Passage and
+edition provenance lives in
+`features/hist-212-thought-experiments-SOURCES.md`. The surface brief is
+`.impeccable/surfaces/hist-212-thought-experiments.md`; shared design tokens and
+the existing global sidecar were not refreshed for this scoped addition.
