@@ -16,3 +16,5 @@ First viewport: a compact title, the five thinkers, filters/search, and the open
 Navigation: public HIST 212 Readings and sources links the chart; its breadcrumbs return to HIST 212 and the course index. The private HIST teaching desk also links the same public resource. Maintain source through extraPages in data/hist-212.json, the feature fragment, and scoped CSS/JS. Never author only the generated HTML.
 
 Scope: no schedule, assignment, or policy changes; no student or private planning data. Paraphrases and interpretive summaries are explicitly distinguished from primary-text quotations.
+
+Source clarity revision, 2026-10-01: no tagline or introductory prose. Each course row links its named packet and verified packet PDF page(s); original book pages are in a separate citation disclosure. Three outside examples name their linked translators. The source section explicitly identifies chart prose as paraphrases. On phones citations follow each argument at full width. Search excludes repeated book credits.

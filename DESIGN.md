@@ -155,6 +155,8 @@ Use ruled rows, not nested cards. Dates align in a stable first column, details 
 
 ### Don't
 
+- Do not add slogans, taglines, or generic introductory prose to course pages. Start with the title and actual material or controls. Keep source instructions concrete and next to the references they explain. (User preference, 2026-10-01.)
+
 - Revert to equal dashboard tiles, metric panels, or a generic LMS inventory.
 - Add decorative icons, fake texture, or imagery unrelated to the course material.
 - Use pale gray for required reading text.
@@ -233,8 +235,8 @@ The wide layout presents the selected examples in a five-column semantic table: 
 image or experiment, what happens, argument, and passage. A white reading field,
 thin horizontal rules, and a dark header establish hierarchy without shadows.
 The heading scales from 26–34px; table prose is 14px, with 16px row titles. At
-760px and below, each row becomes a labeled reading block: thinker and passage
-above the title, followed by the scene and argument. The mobile layout uses 16px
+760px and below, each row becomes a labeled reading block: thinker and title,
+then scene and argument, with the packet link, passage, and edition below. The mobile layout uses 16px
 gutters and avoids sideways scrolling.
 
 ### Components
@@ -246,7 +248,11 @@ focus. Search and thinker state are retained in the URL. Stable row links
 highlight their target and reveal it if filters have hidden it. Without
 JavaScript, all the selected examples and source links remain readable. Landscape print
 styles remove controls and navigation and preserve the currently visible rows.
-Sources and interpretive cautions use a native disclosure below the chart.
+Source instructions and the paraphrase notice appear below the chart, reached
+from the Sources and page numbers link above it. Book lists and reading notes use
+native disclosures. Each row leads with the standalone packet and verified PDF
+page; Original edition discloses the full translator/book citation separately.
+The title has no tagline or introductory prose.
 
 ### Source maintenance
 

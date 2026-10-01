@@ -17,7 +17,12 @@
   }
   readURL();
   const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’‘']/g, '').toLowerCase();
-  const texts = new Map(rows.map(row => [row, normalize(`${row.textContent} ${row.dataset.search || ''}`)]));
+  const texts = new Map(rows.map(row => {
+    const content = row.cloneNode(true);
+    // Repeated anthology credits name other thinkers; exclude them from topic search.
+    content.querySelectorAll('.thought-edition').forEach(edition => edition.remove());
+    return [row, normalize(`${content.textContent} ${row.dataset.search || ''}`)];
+  }));
   function apply(updateURL = true) {
     const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
     let shown = 0;

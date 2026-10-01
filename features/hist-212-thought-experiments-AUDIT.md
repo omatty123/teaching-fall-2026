@@ -27,3 +27,16 @@ The original chart had 28 entries. This review adds 55: 14 Mengzi, 9 Laozi, 9 Zh
 ## Verification record
 
 Source audit completed against the local course anthology and the current supplements. Primary excerpt text in the reading packets is unchanged by this chart review. Build and interface checks are recorded in the course STATUS handoff after publication.
+
+## Source clarity revision — 1 October 2026
+
+At the user’s request, removed the tagline and introductory paragraph. Recorded the durable preference against slogans and generic introductory copy in the public design guidance and both term-workspace instruction files.
+
+- Mapped every one of the 80 packet examples to the actual standalone PDF page(s), whose footer numbering matches the PDF viewer. All five linked Drive PDFs were downloaded through the connected account and matched local PDFs byte-for-byte; SHA-256 hashes and all 83 entries are retained in `hist-212-thought-experiments-packet-pages.json`.
+- Each course row now leads with its packet name and page number, followed by the ancient passage ID. Original edition disclosures distinguish full translator/book citations from packet pagination.
+- Corrected the two further Laozi citation labels to match the linked translations (Robert Eno and James Legge). All three outside examples explicitly say Outside the course packet.
+- The Sources and page numbers section identifies chart descriptions as study paraphrases and explanations as interpretations. Removed the confusing general list of unused alternative translations from the student page; the source ledger retains relevant research references.
+- Source cells follow each argument at full width on phones. Repeated anthology credits are excluded from topic search to avoid false thinker matches.
+- Strict build and deployment checklist passed. Checked all 83 stable row IDs and source links against the page map, balanced HTML, 80 edition disclosures, absence of the removed introduction, desktop expanded citations, 390px mobile expanded citations without horizontal overflow, arrows/boil search, exactly three outside-source results, and reset to all 83.
+
+No packet content, course schedule, or Canvas data changed.

@@ -1,0 +1,1034 @@
+{
+  "checked": "2026-10-01",
+  "method": "Located each course example in the standalone student PDF. Packet footer pages match PDF viewer pages. All five linked Drive PDFs verified byte-for-byte against the local PDFs. No source PDFs republished.",
+  "packet_hashes": [
+    {
+      "packet": "05-mengzi",
+      "live_matches_local": true,
+      "sha256": "03e3614ac6288684010384744d5112e6f61d5bcbc3227f89abdb030aa506569f"
+    },
+    {
+      "packet": "03-laozi",
+      "live_matches_local": true,
+      "sha256": "4ff3660f19f79f92c40797b64383e9e2cf68519804649fc78cf4549ebe3083d6"
+    },
+    {
+      "packet": "04-zhuangzi",
+      "live_matches_local": true,
+      "sha256": "7adc465b66d83d90c6450f243d32ec9d7365acc4898410ae5b5b01a745f1838b"
+    },
+    {
+      "packet": "06-xunzi",
+      "live_matches_local": true,
+      "sha256": "6b519af2999d596473672934b25e76e7004c07a807c489f77016a152bb00396a"
+    },
+    {
+      "packet": "07-hanfeizi",
+      "live_matches_local": true,
+      "sha256": "d6260da43099d6e453bc546790d450cce5cbf75d373a75875515f1a75654e80e"
+    }
+  ],
+  "entries": [
+    {
+      "id": "mengzi-fifty-paces",
+      "thinker": "mengzi",
+      "title": "Fifty paces laughing at a hundred",
+      "passage": "Mengzi 1A3",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Van Norden, p. 122",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-blaming-weapon",
+      "thinker": "mengzi",
+      "title": "Blaming the year or the weapon",
+      "passage": "Mengzi 1A3",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Bloom, p. 4",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-animals-devour",
+      "thinker": "mengzi",
+      "title": "Leading animals to devour people",
+      "passage": "Mengzi 1A4; 3B9",
+      "coverage": "course",
+      "packet_pages": [
+        1,
+        4
+      ],
+      "source_edition": "Bloom, p. 4; Van Norden, p. 138",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-ox-sheep",
+      "thinker": "mengzi",
+      "title": "King, ox, and sheep",
+      "passage": "Mengzi 1A7",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Van Norden, pp. 123–124",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-mount-tai",
+      "thinker": "mengzi",
+      "title": "Lifting Mount Tai or helping an elder",
+      "passage": "Mengzi 1A7",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Van Norden, p. 124",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-trapping-people",
+      "thinker": "mengzi",
+      "title": "Trapping the people",
+      "passage": "Mengzi 1A7",
+      "coverage": "course",
+      "packet_pages": [
+        3,
+        4
+      ],
+      "source_edition": "Van Norden, p. 126",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-mere-fellow",
+      "thinker": "mengzi",
+      "title": "The tyrant as a mere fellow",
+      "passage": "Mengzi 1B8",
+      "coverage": "course",
+      "packet_pages": [
+        5
+      ],
+      "source_edition": "Van Norden, p. 128",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-seedlings",
+      "thinker": "mengzi",
+      "title": "Pulling up seedlings",
+      "passage": "Mengzi 2A2",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Van Norden, p. 130",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-child-well",
+      "thinker": "mengzi",
+      "title": "Child at the well",
+      "passage": "Mengzi 2A6",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Van Norden, pp. 132–133",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-four-sprouts",
+      "thinker": "mengzi",
+      "title": "Four sprouts",
+      "passage": "Mengzi 2A6",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Van Norden, pp. 132–133",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-parents-ditch",
+      "thinker": "mengzi",
+      "title": "Parents’ bodies abandoned in a ditch",
+      "passage": "Mengzi 3A5",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Van Norden, p. 136",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-wide-house",
+      "thinker": "mengzi",
+      "title": "The wide house and great Way",
+      "passage": "Mengzi 3B2",
+      "coverage": "course",
+      "packet_pages": [
+        5
+      ],
+      "source_edition": "Bloom, p. 62",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-drowning-sister",
+      "thinker": "mengzi",
+      "title": "Drowning sister-in-law; drowning world",
+      "passage": "Mengzi 4A17",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Van Norden, pp. 140–141",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-heaven-people",
+      "thinker": "mengzi",
+      "title": "Heaven’s eyes and ears",
+      "passage": "Mengzi 5A5",
+      "coverage": "course",
+      "packet_pages": [
+        5
+      ],
+      "source_edition": "Bloom, pp. 103–104",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-willow-cups",
+      "thinker": "mengzi",
+      "title": "Willow tree made into cups and bowls",
+      "passage": "Mengzi 6A1",
+      "coverage": "course",
+      "packet_pages": [
+        1,
+        2
+      ],
+      "source_edition": "Van Norden, p. 146",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-water",
+      "thinker": "mengzi",
+      "title": "Water flowing downward",
+      "passage": "Mengzi 6A2",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Van Norden, p. 146",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-ox-mountain",
+      "thinker": "mengzi",
+      "title": "Ox Mountain",
+      "passage": "Mengzi 6A8",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Van Norden, pp. 150–151",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-fish-bear-paw",
+      "thinker": "mengzi",
+      "title": "Fish and bear’s paw",
+      "passage": "Mengzi 6A10",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Van Norden, p. 151",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-contemptuous-food",
+      "thinker": "mengzi",
+      "title": "Food given with contempt",
+      "passage": "Mengzi 6A10",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Van Norden, pp. 151–152",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "mengzi-child-parents",
+      "thinker": "mengzi",
+      "title": "A child’s love for parents",
+      "passage": "Mengzi 7A15",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Van Norden, p. 153",
+      "url": "https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view"
+    },
+    {
+      "id": "laozi-filled-bellies",
+      "thinker": "laozi",
+      "title": "Filled bellies and strong bones",
+      "passage": "Daodejing 3",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Ivanhoe, p. 174",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-water",
+      "thinker": "laozi",
+      "title": "Water",
+      "passage": "Daodejing 8, 78",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Ivanhoe, p. 176; pp. 208–209",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-empty-spaces",
+      "thinker": "laozi",
+      "title": "Empty hub, vessel, and room",
+      "passage": "Daodejing 11",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Ivanhoe, p. 177",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-unnoticed-ruler",
+      "thinker": "laozi",
+      "title": "The scarcely noticed ruler",
+      "passage": "Daodejing 17",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Ivanhoe, p. 180",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-uncarved-block",
+      "thinker": "laozi",
+      "title": "Uncarved block",
+      "passage": "Daodejing 28, 32",
+      "coverage": "further",
+      "packet_pages": [],
+      "source_edition": "Robert Eno, Daodejing teaching translation, chapters 28 and 32",
+      "url": "https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2"
+    },
+    {
+      "id": "laozi-world-vessel",
+      "thinker": "laozi",
+      "title": "The world as a spiritual vessel",
+      "passage": "Daodejing 29",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Ivanhoe, p. 186",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-war-mourning",
+      "thinker": "laozi",
+      "title": "Weeds after war; victory as mourning",
+      "passage": "Daodejing 30–31",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Ivanhoe, pp. 186–187",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-ritual-sleeves",
+      "thinker": "laozi",
+      "title": "The ritualist rolls up his sleeves",
+      "passage": "Daodejing 38",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Ivanhoe, p. 190",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-court-granaries",
+      "thinker": "laozi",
+      "title": "The rich court and empty granaries",
+      "passage": "Daodejing 53, 75",
+      "coverage": "course",
+      "packet_pages": [
+        3,
+        4
+      ],
+      "source_edition": "Ivanhoe, pp. 197, 207",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-infant",
+      "thinker": "laozi",
+      "title": "Infant",
+      "passage": "Daodejing 55",
+      "coverage": "further",
+      "packet_pages": [],
+      "source_edition": "James Legge, Dao De Jing, chapter 55 (Chinese Text Project)",
+      "url": "https://ctext.org/dao-de-jing/ens"
+    },
+    {
+      "id": "laozi-small-fish",
+      "thinker": "laozi",
+      "title": "Cooking small fish",
+      "passage": "Daodejing 60",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Ivanhoe, p. 200",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-sea-valleys",
+      "thinker": "laozi",
+      "title": "The sea below the valleys",
+      "passage": "Daodejing 66",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Ivanhoe, p. 204",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-soft-living",
+      "thinker": "laozi",
+      "title": "Soft bodies, stiff corpses, breaking trees",
+      "passage": "Daodejing 76",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Ivanhoe, pp. 207–208",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "laozi-small-community",
+      "thinker": "laozi",
+      "title": "Small communities that never visit",
+      "passage": "Daodejing 80",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Ivanhoe, pp. 209–210",
+      "url": "https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view"
+    },
+    {
+      "id": "zhuangzi-useless-tree",
+      "thinker": "zhuangzi",
+      "title": "Useless tree",
+      "passage": "Zhuangzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Kjellberg, p. 229",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-giant-bird",
+      "thinker": "zhuangzi",
+      "title": "Giant bird and small creatures",
+      "passage": "Zhuangzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Kjellberg, pp. 224–225",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-giant-gourds",
+      "thinker": "zhuangzi",
+      "title": "Giant gourds",
+      "passage": "Zhuangzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Kjellberg, pp. 228–229",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-butterfly-dream",
+      "thinker": "zhuangzi",
+      "title": "Butterfly dream",
+      "passage": "Zhuangzi 2",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Kjellberg, p. 238",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-pipes-wind",
+      "thinker": "zhuangzi",
+      "title": "Wind and the ten thousand pipes",
+      "passage": "Zhuangzi 2",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Kjellberg, pp. 229–230",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-species-standards",
+      "thinker": "zhuangzi",
+      "title": "Whose home, taste, or beauty?",
+      "passage": "Zhuangzi 2",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Kjellberg, p. 236",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-neutral-judge",
+      "thinker": "zhuangzi",
+      "title": "Who can judge the dispute?",
+      "passage": "Zhuangzi 2",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Kjellberg, p. 238",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-cook-ding",
+      "thinker": "zhuangzi",
+      "title": "Cook Ding",
+      "passage": "Zhuangzi 3",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Kjellberg, pp. 239–240",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-hundun",
+      "thinker": "zhuangzi",
+      "title": "Hundun / All-full (Chaos)",
+      "passage": "Zhuangzi 7",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Kjellberg, p. 256",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-mirror-heart",
+      "thinker": "zhuangzi",
+      "title": "Heart-mind as a mirror",
+      "passage": "Zhuangzi 7",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Kjellberg, p. 256",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-happy-fish",
+      "thinker": "zhuangzi",
+      "title": "Happiness of fish",
+      "passage": "Zhuangzi 17",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Kjellberg, pp. 260–261",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-turtle",
+      "thinker": "zhuangzi",
+      "title": "Turtle in the mud",
+      "passage": "Zhuangzi 17",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Kjellberg, p. 260",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-frog-well",
+      "thinker": "zhuangzi",
+      "title": "Frog in the collapsed well",
+      "passage": "Zhuangzi 17",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Kjellberg, pp. 259–260",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-wife-tub",
+      "thinker": "zhuangzi",
+      "title": "Singing after his wife’s death",
+      "passage": "Zhuangzi 18",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Kjellberg, p. 261",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "zhuangzi-predator-chain",
+      "thinker": "zhuangzi",
+      "title": "Cicada, mantis, magpie, and hunter",
+      "passage": "Zhuangzi 20",
+      "coverage": "course",
+      "packet_pages": [
+        2,
+        3
+      ],
+      "source_edition": "Kjellberg, p. 263",
+      "url": "https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view"
+    },
+    {
+      "id": "xunzi-crooked-wood",
+      "thinker": "xunzi",
+      "title": "Shaping wood and sharpening metal",
+      "passage": "Xunzi 1, 23",
+      "coverage": "course",
+      "packet_pages": [
+        1,
+        3
+      ],
+      "source_edition": "Hutton, pp. 270–271, 310",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-blue-dye",
+      "thinker": "xunzi",
+      "title": "Blue dye and ice",
+      "passage": "Xunzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Hutton, p. 270",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-small-steps",
+      "thinker": "xunzi",
+      "title": "Small steps and accumulating streams",
+      "passage": "Xunzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Hutton, pp. 271–272",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-crying-children",
+      "thinker": "xunzi",
+      "title": "Same infant cries, different customs",
+      "passage": "Xunzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Hutton, pp. 270–271",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-chariot-boat",
+      "thinker": "xunzi",
+      "title": "Chariot and horses; boat and oars",
+      "passage": "Xunzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Hutton, p. 271",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-nags-carving",
+      "thinker": "xunzi",
+      "title": "Old nags and persistent carving",
+      "passage": "Xunzi 1",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Hutton, pp. 271–272",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-oxen-horses",
+      "thinker": "xunzi",
+      "title": "Humans commanding oxen and horses",
+      "passage": "Xunzi 9",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Hutton, p. 281",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-boat-water",
+      "thinker": "xunzi",
+      "title": "Ruler as boat, people as water",
+      "passage": "Xunzi 9",
+      "coverage": "course",
+      "packet_pages": [
+        1,
+        2
+      ],
+      "source_edition": "Hutton, Complete Text, p. 70",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-human-omens",
+      "thinker": "xunzi",
+      "title": "Falling stars and human ill omens",
+      "passage": "Xunzi 17",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Hutton, p. 285",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-rain-sacrifice",
+      "thinker": "xunzi",
+      "title": "Rain after a rain sacrifice",
+      "passage": "Xunzi 17",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Hutton, p. 286",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-potter",
+      "thinker": "xunzi",
+      "title": "Potter and clay",
+      "passage": "Xunzi 23",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Hutton, p. 312",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "xunzi-walking-world",
+      "thinker": "xunzi",
+      "title": "Feet that could walk the world",
+      "passage": "Xunzi 23",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Hutton, p. 317",
+      "url": "https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view"
+    },
+    {
+      "id": "han-feizi-ministers-polishing",
+      "thinker": "han-feizi",
+      "title": "Ministers carving and polishing themselves",
+      "passage": "Han Feizi 5",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Harris, pp. 324–325",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-ink-line",
+      "thinker": "han-feizi",
+      "title": "The ink line and crooked wood",
+      "passage": "Han Feizi 6",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Harris, pp. 332–333",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-two-handles",
+      "thinker": "han-feizi",
+      "title": "Two handles; tiger’s claws and teeth",
+      "passage": "Han Feizi 7",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Harris, p. 333",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-cap-robe",
+      "thinker": "han-feizi",
+      "title": "Cap keeper and robe keeper",
+      "passage": "Han Feizi 7",
+      "coverage": "course",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Harris, p. 335",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-fame-profit",
+      "thinker": "han-feizi",
+      "title": "Persuading someone who wants fame—or profit",
+      "passage": "Han Feizi 12",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Harris, pp. 336–338",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-half-eaten-peach",
+      "thinker": "han-feizi",
+      "title": "Mi Zixia: borrowed carriage and half-eaten peach",
+      "passage": "Han Feizi 12",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Harris, pp. 339–340",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-inverted-scales",
+      "thinker": "han-feizi",
+      "title": "The dragon’s inverted scales",
+      "passage": "Han Feizi 12",
+      "coverage": "course",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Harris, p. 340",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-carriages-coffins",
+      "thinker": "han-feizi",
+      "title": "Carriage makers and coffin makers",
+      "passage": "Han Feizi 17",
+      "coverage": "further",
+      "packet_pages": [],
+      "source_edition": "W. K. Liao, The Complete Works of Han Fei Tzŭ, chapter 17, PDF p. 86",
+      "url": "https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=86"
+    },
+    {
+      "id": "han-feizi-landowner-workers",
+      "thinker": "han-feizi",
+      "title": "The landowner and hired field workers",
+      "passage": "Han Feizi 32",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Harbsmeier, vol. 2, pp. 562–563; hf 32.3.1",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-spear-shield",
+      "thinker": "han-feizi",
+      "title": "Spear and shield",
+      "passage": "Han Feizi 40",
+      "coverage": "course",
+      "packet_pages": [
+        3,
+        4
+      ],
+      "source_edition": "Harris, pp. 351–352",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-dragon-clouds",
+      "thinker": "han-feizi",
+      "title": "Dragons on clouds; snakes on mist",
+      "passage": "Han Feizi 40",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Harris, p. 348",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-yao-jie",
+      "thinker": "han-feizi",
+      "title": "Yao without office; Jie on the throne",
+      "passage": "Han Feizi 40",
+      "coverage": "course",
+      "packet_pages": [
+        3,
+        4
+      ],
+      "source_edition": "Harris, pp. 348, 351–352",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-sons-daughters",
+      "thinker": "han-feizi",
+      "title": "Sons, daughters, and parental calculation",
+      "passage": "Han Feizi 46",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Harbsmeier, vol. 2, pp. 897–898; hf 46.3",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-mother-teacher-doctor",
+      "thinker": "han-feizi",
+      "title": "The loving mother, teacher, and doctor",
+      "passage": "Han Feizi 47",
+      "coverage": "course",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Harris, p. 356",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-rabbit-stump",
+      "thinker": "han-feizi",
+      "title": "Rabbit and tree stump",
+      "passage": "Han Feizi 49",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Harris, p. 358",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-nests-fire",
+      "thinker": "han-feizi",
+      "title": "Nests and fire drills in the wrong age",
+      "passage": "Han Feizi 49",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Harris, p. 357",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-five-sons",
+      "thinker": "han-feizi",
+      "title": "Five sons become twenty-five grandsons",
+      "passage": "Han Feizi 49",
+      "coverage": "course",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Harris, p. 358",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-five-vermin",
+      "thinker": "han-feizi",
+      "title": "Five vermin of the state",
+      "passage": "Han Feizi 49",
+      "coverage": "course",
+      "packet_pages": [
+        4,
+        5
+      ],
+      "source_edition": "Harris, p. 371",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-straight-arrows",
+      "thinker": "han-feizi",
+      "title": "Straight arrows and round wheels",
+      "passage": "Han Feizi 50",
+      "coverage": "course",
+      "packet_pages": [
+        5
+      ],
+      "source_edition": "Harris, pp. 376–377",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-child-boil",
+      "thinker": "han-feizi",
+      "title": "Lancing a child’s boil",
+      "passage": "Han Feizi 50",
+      "coverage": "course",
+      "packet_pages": [
+        5,
+        6
+      ],
+      "source_edition": "Harris, p. 378",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-absent-founders",
+      "thinker": "han-feizi",
+      "title": "Dead founders and rival heirs",
+      "passage": "Han Feizi 50",
+      "coverage": "course",
+      "packet_pages": [
+        5
+      ],
+      "source_edition": "Harris, pp. 371–372",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    },
+    {
+      "id": "han-feizi-competing-funerals",
+      "thinker": "han-feizi",
+      "title": "Frugal funeral or filial funeral?",
+      "passage": "Han Feizi 50",
+      "coverage": "course",
+      "packet_pages": [
+        5
+      ],
+      "source_edition": "Harris, p. 372",
+      "url": "https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view"
+    }
+  ]
+}
