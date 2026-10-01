@@ -9,7 +9,7 @@ related_targets: ["features/hist-212-thought-experiments.fragment", "_kit/hist-2
 
 Mode: Read. A permanent course resource in the existing Teaching HQ complex, requested October 1, 2026.
 
-Inherit the course materials page: Inter, warm paper, dark navigation, rust links, thin rules, no decorative hero. The chart is the main artifact. Show all 26 examples as a semantic table without JavaScript; enhance with thinker filters, text search, result count, stable row links, and printing. On phones, reflow each row into labeled reading blocks without sideways scrolling. Sources remain linked at the passage and documented below the chart.
+Inherit the course materials page: Inter, warm paper, dark navigation, rust links, thin rules, no decorative hero. The chart is the main artifact. Show all 28 examples as a semantic table without JavaScript; enhance with thinker filters, text search, result count, stable row links, and printing. On phones, reflow each row into labeled reading blocks without sideways scrolling. Sources remain linked at the passage and documented below the chart.
 
 First viewport: a compact title, the five thinkers, filters/search, and the opening Mengzi examples. A student should recognize the thinkers and start comparing images immediately.
 

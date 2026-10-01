@@ -1,6 +1,6 @@
 # HIST 212 — Thought experiments and metaphors
 
-Source ledger for `hist-212-thought-experiments.fragment`. The fragment is editorial source; the site generator produces the public page. Maintain all 26 row IDs so saved links continue to work. Source checks were completed on 2026-10-01.
+Source ledger for `hist-212-thought-experiments.fragment`. The fragment is editorial source; the site generator produces the public page. Maintain all 28 row IDs so saved links continue to work. Source checks were completed on 2026-10-01.
 
 ## Editorial approach
 
@@ -18,6 +18,7 @@ Source ledger for `hist-212-thought-experiments.fragment`. The fragment is edito
 - **Laozi:** James Legge (1891), Chinese Text Project; Robert Eno, *Daodejing*, teaching translation version 1.4 (2010–2025), Indiana University ScholarWorks, for the uncarved block. Eno 1.3a is superseded; use the linked current item.
 - **Zhuangzi:** James Legge, Chinese Text Project, received chapters 1, 2, 3, 7, 17.
 - **Xunzi:** *Sources of Chinese Tradition*, compiled by Wm. Theodore de Bary and Irene Bloom, 2nd ed., vol. 1 (Columbia University Press, 1999): “Encouraging Learning,” pp. 161–164; “Human Nature Is Evil,” pp. 179–183. The Asia for Educators excerpt PDFs do not identify individual translators; do not infer one.
+- **Han Feizi, chapter 50 additions:** Eirik Lang Harris, in Philip J. Ivanhoe and Bryan W. Van Norden, eds., *Readings in Classical Chinese Philosophy*, 3rd ed., pp. 376–377 (arrows/wheels), p. 378 (child/boil). Checked directly against the local anthology and current canonical `readings/07-hanfeizi.md`, sections VII–VIII, including the October 1 arrows restoration. Public links point to Liao; anthology locators are labeled separately.
 - **Han Feizi:** W. K. Liao, *The Complete Works of Han Fei Tzŭ*, linked PDF. Page fragments below use one-based viewer pages, not printed pagination.
 
 ## Passage ledger
@@ -50,6 +51,8 @@ Source ledger for `hist-212-thought-experiments.fragment`. The fragment is edito
 | `han-feizi-spear-shield` | Spear and shield | Han Feizi 36 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=254) |
 | `han-feizi-cap-robe` | Cap keeper and robe keeper | Han Feizi 7 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=32) |
 | `han-feizi-carriages-coffins` | Carriage makers and coffin makers | Han Feizi 17 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=86) |
+| `han-feizi-straight-arrows` | Straight arrows and round wheels | Han Feizi 50; Harris pp. 376–377 | [Liao, PDF p. 340](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=340) |
+| `han-feizi-child-boil` | Lancing a child’s boil | Han Feizi 50; Harris p. 378 | [Liao, PDF p. 341](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=341) |
 
 ## Interpretive checks to preserve
 
@@ -64,6 +67,9 @@ Source ledger for `hist-212-thought-experiments.fragment`. The fragment is edito
 - **Spear and shield:** Liao uses “halberd”; “spear and shield” is the familiar teaching label.
 - **Cap and robe keepers:** “both punished” avoids differing descriptions of their penalties.
 - **Carriage and coffin makers:** identifies structural incentives; do not reduce it to a claim that every individual is always consciously malicious.
+
+- **Straight arrows and round wheels:** chapter 50 directly contrasts reliable institutions with naturally good subjects; do not silently substitute chapter 40’s related argument about ordinary rulers, or Mengzi 2A7’s arrow-maker/armor-maker analogy.
+- **Child and boil:** a separate person restrains the child while the mother treats it. The analogy supports Han Feizi’s paternalistic defense of coercive policies; public resistance does not prove harm in his argument, but the analogy itself does not establish that the policies are beneficial.
 
 ## Interaction contract
 
