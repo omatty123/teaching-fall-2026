@@ -1,7 +1,17 @@
 {
   "checked": "2026-10-01",
-  "method": "Located each course example in the standalone student PDF. Packet footer pages match PDF viewer pages. All five linked Drive PDFs verified byte-for-byte against the local PDFs. No source PDFs republished.",
+  "method": "Located each course example in the standalone student PDF. Packet footer pages match PDF viewer pages. All seven linked Drive PDFs verified byte-for-byte against the local PDFs. No source PDFs republished.",
   "packet_hashes": [
+    {
+      "packet": "01-kongzi",
+      "live_matches_local": true,
+      "sha256": "78a6bd1572280e95e8f7709216e24b8f860fcd308df4f34a49308a55c240c256"
+    },
+    {
+      "packet": "02-mozi",
+      "live_matches_local": true,
+      "sha256": "1617cb80b4194b3d92c4a4a9a9515733354bbc67237fc076f20711a72c71540f"
+    },
     {
       "packet": "05-mengzi",
       "live_matches_local": true,
@@ -29,6 +39,415 @@
     }
   ],
   "entries": [
+    {
+      "id": "kongzi-roots-goodness",
+      "thinker": "kongzi",
+      "title": "The roots of Goodness",
+      "passage": "Analects 1.2",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 5.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-pole-star",
+      "thinker": "kongzi",
+      "title": "The Pole Star",
+      "passage": "Analects 2.1",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 7.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-punishment-ritual",
+      "thinker": "kongzi",
+      "title": "Punishment or ritual",
+      "passage": "Analects 2.3",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 7.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-lifelong-learning",
+      "thinker": "kongzi",
+      "title": "Learning from fifteen to seventy",
+      "passage": "Analects 2.4",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 8.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-eight-dancers",
+      "thinker": "kongzi",
+      "title": "Eight rows of dancers",
+      "passage": "Analects 3.1",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 9.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-single-thread",
+      "thinker": "kongzi",
+      "title": "One thread through the teaching",
+      "passage": "Analects 4.15",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), pp. 13–14.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-gu-vessel",
+      "thinker": "kongzi",
+      "title": "A wine vessel that fails its name",
+      "passage": "Analects 6.25",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 20.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-helping-others-stand",
+      "thinker": "kongzi",
+      "title": "Helping others take their stand",
+      "passage": "Analects 6.30; 15.24",
+      "packet_pages": [
+        1,
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), pp. 21, 45.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-four-corners",
+      "thinker": "kongzi",
+      "title": "One corner and the other three",
+      "passage": "Analects 7.8",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 22.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-walking-companions",
+      "thinker": "kongzi",
+      "title": "Two walking companions",
+      "passage": "Analects 7.22",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 23.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-heavy-burden",
+      "thinker": "kongzi",
+      "title": "A heavy burden and a long road",
+      "passage": "Analects 8.7",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 25.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-kuang",
+      "thinker": "kongzi",
+      "title": "Surrounded in Kuang",
+      "passage": "Analects 9.5",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 26.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-elusive-goal",
+      "thinker": "kongzi",
+      "title": "Yan Hui’s receding goal",
+      "passage": "Analects 9.11",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), pp. 26–27.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-one-day-rites",
+      "thinker": "kongzi",
+      "title": "One day of returning to ritual",
+      "passage": "Analects 12.1",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 33.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-food-weapons-trust",
+      "thinker": "kongzi",
+      "title": "Food, weapons, and public trust",
+      "passage": "Analects 12.7",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), pp. 34–35.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-roles-grain",
+      "thinker": "kongzi",
+      "title": "True lords and uneaten grain",
+      "passage": "Analects 12.11",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 36.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-wind-grass",
+      "thinker": "kongzi",
+      "title": "Wind and grass",
+      "passage": "Analects 12.19",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 36.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-wrong-names",
+      "thinker": "kongzi",
+      "title": "Wrong names, failing government",
+      "passage": "Analects 13.3",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), pp. 37–38.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-father-sheep",
+      "thinker": "kongzi",
+      "title": "The father who stole a sheep",
+      "passage": "Analects 13.18",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), p. 39.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "kongzi-mourning-rice",
+      "thinker": "kongzi",
+      "title": "Sweet rice during mourning",
+      "passage": "Analects 17.21",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Edward Slingerland, trans., “Kongzi (Confucius),” in Philip J. Ivanhoe and Bryan W. Van Norden, eds., Readings in Classical Chinese Philosophy, 3rd ed. (Indianapolis: Hackett, 2023), pp. 49–50.",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view"
+    },
+    {
+      "id": "mozi-archers-charioteers",
+      "thinker": "mozi",
+      "title": "Rewarding archers and charioteers",
+      "passage": "Mozi chapter 8",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 60",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-one-person-one-standard",
+      "thinker": "mozi",
+      "title": "One person, one standard; ten people, ten standards",
+      "passage": "Mozi chapter 11",
+      "packet_pages": [
+        1
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), pp. 62–63",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-flood-fire",
+      "thinker": "mozi",
+      "title": "Adding water to a flood or flame to a fire",
+      "passage": "Mozi chapter 16",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 65",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-family-before-war",
+      "thinker": "mozi",
+      "title": "Entrusting one’s family before war",
+      "passage": "Mozi chapter 16",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 67",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-epidemic-rulers",
+      "thinker": "mozi",
+      "title": "Choosing a ruler during an epidemic",
+      "passage": "Mozi chapter 16",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 68",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-orchard-theft-war",
+      "thinker": "mozi",
+      "title": "From stolen peaches to aggressive war",
+      "passage": "Mozi chapter 17",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 73",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-black-white",
+      "thinker": "mozi",
+      "title": "Calling a little black black, but much black white",
+      "passage": "Mozi chapter 17",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 73",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-useful-clothing",
+      "thinker": "mozi",
+      "title": "Clothes that keep people warm and cool",
+      "passage": "Mozi chapter 20",
+      "packet_pages": [
+        2
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), pp. 74–75",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-rival-funeral-claims",
+      "thinker": "mozi",
+      "title": "Rival funeral customs claiming the same sages",
+      "passage": "Mozi chapter 25",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 77",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-harvest-without-plowing",
+      "thinker": "mozi",
+      "title": "Seeking a harvest while forbidding plowing",
+      "passage": "Mozi chapter 25",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), pp. 78–79",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-modest-funeral",
+      "thinker": "mozi",
+      "title": "A modest coffin, tears, and a return to work",
+      "passage": "Mozi chapter 25",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 85",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-music-hunger",
+      "thinker": "mozi",
+      "title": "Pleasant music alongside hunger and exhaustion",
+      "passage": "Mozi chapter 32",
+      "packet_pages": [
+        3
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 99",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-spinning-potters-wheel",
+      "thinker": "mozi",
+      "title": "Finding sunrise on a spinning potter’s wheel",
+      "passage": "Mozi chapter 35",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 104",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
+    {
+      "id": "mozi-searching-dead-parent",
+      "thinker": "mozi",
+      "title": "Searching wells and rat holes for a dead parent",
+      "passage": "Mozi chapter 39",
+      "packet_pages": [
+        4
+      ],
+      "source_edition": "Philip J. Ivanhoe, trans., in Readings in Classical Chinese Philosophy, 3rd ed. (Hackett, 2023), p. 105",
+      "coverage": "course",
+      "url": "https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view"
+    },
     {
       "id": "mengzi-fifty-paces",
       "thinker": "mengzi",

@@ -6,6 +6,8 @@
 <section id="thought-tools" class="thought-tools" aria-label="Chart controls" hidden>
 <div class="thought-filters" role="group" aria-label="Filter by thinker">
 <button type="button" data-thinker="all" aria-pressed="true">All thinkers</button>
+<button type="button" data-thinker="kongzi" aria-pressed="false">Kongzi</button>
+<button type="button" data-thinker="mozi" aria-pressed="false">Mozi</button>
 <button type="button" data-thinker="mengzi" aria-pressed="false">Mengzi</button>
 <button type="button" data-thinker="laozi" aria-pressed="false">Laozi</button>
 <button type="button" data-thinker="zhuangzi" aria-pressed="false">Zhuangzi</button>
@@ -22,9 +24,247 @@
 <div class="thought-chart-meta"><p id="thought-count" role="status" aria-live="polite">All examples · all thinkers</p><a href="#thought-sources">Sources and page numbers</a></div>
 <div id="thought-chart" class="thought-table-wrap" tabindex="0" role="region" aria-label="Comparative chart">
 <table class="thought-table">
-<caption class="thought-sr-only">Major thought experiments, metaphors, and parables in Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi, with passage references.</caption>
+<caption class="thought-sr-only">Major thought experiments, metaphors, and parables in Kongzi, Mozi, Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi, with passage references.</caption>
 <thead><tr><th scope="col">Thinker</th><th scope="col">Image or experiment</th><th scope="col">What happens</th><th scope="col">What it helps argue</th><th scope="col">Where to find it</th></tr></thead>
 <tbody>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-roots-goodness" data-search="Youzi filial piety ren humaneness family root Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-roots-goodness">The roots of Goodness</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Master You compares respect for parents and elders to roots from which the moral Way grows.</td>
+<td data-label="What it helps argue">Family relationships provide a starting point for cultivating humane conduct and social order.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 1</a><span class="thought-passage">Analects 1.2</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 5.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-pole-star" data-search="North Star Polaris government virtue de Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-pole-star">The Pole Star</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">A ruler governing through virtue resembles the Pole Star, remaining in place while the other stars turn toward it.</td>
+<td data-label="What it helps argue">A ruler’s moral authority can organize others through example and attraction.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 2.1</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 7.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-punishment-ritual" data-search="law regulations evasion shame conscience virtue self correction Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-punishment-ritual">Punishment or ritual</a><small class="thought-kind">Comparison</small></th>
+<td data-label="What happens">Kongzi contrasts people evading punishments with people guided by virtue and ritual, who feel shame and correct themselves.</td>
+<td data-label="What it helps argue">Government should cultivate an internal moral response rather than rely only on fear of penalties.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 2.3</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 7.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-lifelong-learning" data-search="Confucius fifteen thirty forty fifty sixty seventy learning cultivation">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-lifelong-learning">Learning from fifteen to seventy</a><small class="thought-kind">Self-portrait</small></th>
+<td data-label="What happens">Kongzi describes stages of learning: at seventy, he can follow his desires without crossing the bounds of proper conduct.</td>
+<td data-label="What it helps argue">Long cultivation can bring desire and proper conduct into agreement; moral maturity is more than reluctantly obeying rules.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 1</a><span class="thought-passage">Analects 2.4</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 8.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-eight-dancers" data-search="Ji family royal dancers ceremony rank usurpation Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-eight-dancers">Eight rows of dancers</a><small class="thought-kind">Moral example</small></th>
+<td data-label="What happens">Kongzi sees eight rows of dancers in the Ji family’s courtyard and treats the display as evidence of deeper wrongdoing.</td>
+<td data-label="What it helps argue">Ritual forms carry political limits: taking a superior’s ceremonial privileges challenges the order those rites express.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 3.1</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 9.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-single-thread" data-search="Zengzi zhong shu loyalty reciprocity thread Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-single-thread">One thread through the teaching</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Kongzi says one thread joins his teachings. Master Zeng explains it as dutifulness tempered by sympathetic understanding.</td>
+<td data-label="What it helps argue">The many practices of moral life form a connected approach, requiring both commitment and sensitivity to others.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 1</a><span class="thought-passage">Analects 4.15</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 13–14.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-gu-vessel" data-search="goblet cup ritual vessel rectification names gu Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-gu-vessel">A wine vessel that fails its name</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Kongzi asks whether a gu—a ritual wine vessel—that is not a proper gu can really deserve the name.</td>
+<td data-label="What it helps argue">A name carries standards: keeping a label is not enough when the thing or role fails to meet its requirements.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 6.25</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 20.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-helping-others-stand" data-search="near at hand standing oneself reciprocal golden rule shu sympathetic understanding Zigong Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-helping-others-stand">Helping others take their stand</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Asked about helping everyone, Kongzi turns to a nearer model: help others achieve what you seek for yourself, and do not impose what you dislike.</td>
+<td data-label="What it helps argue">One’s own aims and aversions offer a starting analogy for humane treatment of others.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · pp. 1–2</a><span class="thought-passage">Analects 6.30; 15.24</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 21, 45.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-four-corners" data-search="door mind tongue learning inference Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-four-corners">One corner and the other three</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">A teacher shows one corner of a problem and expects the student to find the other three.</td>
+<td data-label="What it helps argue">Learning requires active inference and a desire to understand; the teacher cannot do all the student’s thinking.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 1</a><span class="thought-passage">Analects 7.8</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 22.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-walking-companions" data-search="three people walking teachers emulate self reflection Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-walking-companions">Two walking companions</a><small class="thought-kind">Moral example</small></th>
+<td data-label="What happens">Walking with two other people, Kongzi treats their good qualities as models and their faults as reminders to examine himself.</td>
+<td data-label="What it helps argue">Ordinary encounters can teach moral improvement, including encounters with people whose conduct should not be copied.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 1</a><span class="thought-passage">Analects 7.22</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 23.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-heavy-burden" data-search="Zengzi scholar official long way dao journey Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-heavy-burden">A heavy burden and a long road</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Master Zeng calls Goodness a heavy burden carried along a road that ends only at death.</td>
+<td data-label="What it helps argue">Moral responsibility demands endurance and lifelong commitment, rather than a single achievement.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 8.7</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 25.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-kuang" data-search="King Wen Heaven culture danger cultural transmission Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-kuang">Surrounded in Kuang</a><small class="thought-kind">Anecdote</small></th>
+<td data-label="What happens">Surrounded in Kuang, Kongzi argues that Heaven would not entrust inherited culture to him only to let it perish there.</td>
+<td data-label="What it helps argue">His sense of responsibility for cultural transmission sustains confidence under threat.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 4</a><span class="thought-passage">Analects 9.5</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 26.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-elusive-goal" data-search="Yan Yuan high hard before behind culture rites teacher Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-elusive-goal">Yan Hui’s receding goal</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Yan Hui describes the teaching as ever higher, harder, and just beyond reach, while Kongzi guides him through culture and ritual.</td>
+<td data-label="What it helps argue">Moral learning combines sustained aspiration with gradual training; difficulty can deepen commitment rather than end it.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 9.11</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 26–27.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-one-day-rites" data-search="self restraint ren li eyes ears words movement Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-one-day-rites">One day of returning to ritual</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Kongzi says that one day of self-restraint and return to ritual could draw the world toward Goodness; he specifies looking, listening, speaking, and moving.</td>
+<td data-label="What it helps argue">Goodness depends on one’s own disciplined practice, which Kongzi presents as capable of influencing the wider world.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 2</a><span class="thought-passage">Analects 12.1</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 33.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-food-weapons-trust" data-search="Zigong arms armaments confidence people faith government Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-food-weapons-trust">Food, weapons, and public trust</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Forced to surrender necessities of government, Kongzi gives up weapons first and food next, preserving the people’s confidence.</td>
+<td data-label="What it helps argue">Public trust is indispensable to a state’s survival, even when compared with military strength and material provision.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 3</a><span class="thought-passage">Analects 12.7</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 34–35.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-roles-grain" data-search="Duke Jing Qi father son minister names duties Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-roles-grain">True lords and uneaten grain</a><small class="thought-kind">Moral example</small></th>
+<td data-label="What happens">Kongzi says lords, ministers, fathers, and sons must fulfill their roles. Duke Jing asks whether plentiful grain could feed him if they did not.</td>
+<td data-label="What it helps argue">Resources alone cannot sustain political life when people fail to meet the responsibilities attached to their positions.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 3</a><span class="thought-passage">Analects 12.11</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 36.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-wind-grass" data-search="Ji Kangzi executions killing gentleman petty person leadership Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-wind-grass">Wind and grass</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Asked about executing bad people, Kongzi compares a leader’s virtue to wind and the people’s response to grass bending before it.</td>
+<td data-label="What it helps argue">The ruler should improve his own conduct; moral example is presented as an alternative to governing through executions.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 3</a><span class="thought-passage">Analects 12.19</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 36.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-wrong-names" data-search="rectification of names zhengming Zilu Wei penalties words Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-wrong-names">Wrong names, failing government</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Asked what he would do in office, Kongzi traces a failure to correct names through confused speech, failed tasks, broken ritual, and misdirected punishments.</td>
+<td data-label="What it helps argue">Clear, fitting names and responsibilities are conditions for coordinated action and just government.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 3</a><span class="thought-passage">Analects 13.3</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 37–38.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-father-sheep" data-search="Upright Gong Duke She sheep theft concealment father son loyalty corruption Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-father-sheep">The father who stole a sheep</a><small class="thought-kind">Moral dilemma</small></th>
+<td data-label="What happens">A duke praises a son for reporting his father’s theft. Kongzi locates uprightness instead in fathers and sons protecting one another.</td>
+<td data-label="What it helps argue">Family loyalty can conflict with public enforcement; the passage challenges the idea that reporting wrongdoing is always the upright act.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 3</a><span class="thought-passage">Analects 13.18</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 39.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="kongzi" data-coverage="course" id="kongzi-mourning-rice" data-search="Zai Wo three years mourning brocade parents child care Confucius">
+<td data-label="Thinker"><strong>Kongzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#kongzi-mourning-rice">Sweet rice during mourning</a><small class="thought-kind">Moral dilemma</small></th>
+<td data-label="What happens">Zai Wo wants shorter mourning and admits he could enjoy rich food and fine clothes. Kongzi asks whether he has forgotten his parents’ first three years of care.</td>
+<td data-label="What it helps argue">Mourning should express felt gratitude and grief, not merely compliance with an external rule.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/15t6ujvr7xGi_22mtf1Thf5dJVObqakMY/view">Kongzi packet · p. 3</a><span class="thought-passage">Analects 17.21</span><details class="thought-edition"><summary>Original edition</summary><p>Edward Slingerland, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 49–50.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-archers-charioteers" data-search="worthy merit office state treasures archery chariots">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-archers-charioteers">Rewarding archers and charioteers</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A ruler encourages skilled archers and charioteers by rewarding and honoring them; Mozi proposes treating worthy officials in the same way.</td>
+<td data-label="What it helps argue">Public rewards can encourage the abilities a state needs. Mozi calls worthy people its treasures and urges rulers to promote them.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 1</a><span class="thought-passage">Mozi chapter 8</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 60.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-one-person-one-standard" data-search="state of nature birds beasts disagreement moral norms remonstrance">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-one-person-one-standard">One person, one standard; ten people, ten standards</a><small class="thought-kind">Origin story</small></th>
+<td data-label="What happens">Mozi imagines a time before government when people condemn one another’s judgments, let surplus goods rot, and refuse to help. They choose a worthy ruler.</td>
+<td data-label="What it helps argue">He uses this disorder to argue for shared standards organized through a hierarchy. He also requires people to point out wrongdoing by superiors.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 1</a><span class="thought-passage">Mozi chapter 11</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 62–63.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-flood-fire" data-search="constructive criticism replacement partiality">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-flood-fire">Adding water to a flood or flame to a fire</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Condemning someone’s proposal without offering a replacement is compared to adding water to a flood or flame to a fire.</td>
+<td data-label="What it helps argue">Criticism must provide a constructive alternative; Mozi proposes impartial care in place of partiality.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 2</a><span class="thought-passage">Mozi chapter 16</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 65.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-family-before-war" data-search="parents wife children guardian impartial care universal love">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-family-before-war">Entrusting one’s family before war</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Before leaving for a war one might not survive, one must choose an impartial or partial person to care for one’s family.</td>
+<td data-label="What it helps argue">Mozi argues that even critics of impartial care rely on it when their own family’s safety is at stake.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 2</a><span class="thought-passage">Mozi chapter 16</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 67.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-epidemic-rulers" data-search="plague hunger cold impartial partial">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-epidemic-rulers">Choosing a ruler during an epidemic</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">An epidemic leaves people hungry, cold, and unburied. Would they choose a ruler who puts their needs first or one who neglects them?</td>
+<td data-label="What it helps argue">Mozi argues that people’s choice in a crisis reveals the appeal of impartial government, even if they reject impartiality in words.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 2</a><span class="thought-passage">Mozi chapter 16</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 68.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-orchard-theft-war" data-search="plums horses cattle spear sword murder conquest aggression">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-orchard-theft-war">From stolen peaches to aggressive war</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">People condemn stealing fruit, taking livestock, and killing someone for possessions, yet praise a state that attacks another state.</td>
+<td data-label="What it helps argue">Mozi challenges the double standard: harming others for one’s own benefit does not become right when a state does it on a larger scale.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 2</a><span class="thought-passage">Mozi chapter 17</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 73.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-black-white" data-search="colors colours moral consistency scale">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-black-white">Calling a little black black, but much black white</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Someone correctly names a small amount of black but calls a large amount white.</td>
+<td data-label="What it helps argue">Mozi compares this inconsistency to condemning individual wrongdoing while praising aggressive war; greater scale does not reverse the moral judgment.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 2</a><span class="thought-passage">Mozi chapter 17</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 73.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-useful-clothing" data-search="moderation expenditures luxury useful usefulness wealth">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-useful-clothing">Clothes that keep people warm and cool</a><small class="thought-kind">Practical example</small></th>
+<td data-label="What happens">Mozi asks what clothes are for: protection from winter cold and summer heat. Additions that do not serve that purpose should be removed.</td>
+<td data-label="What it helps argue">Evaluate expenditure by the needs it meets. Reducing waste can improve a state’s resources without conquering more territory.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 2</a><span class="thought-passage">Mozi chapter 20</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 74–75.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-rival-funeral-claims" data-search="three benefits Yao Shun Yu Tang Wen Wu mourning">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-rival-funeral-claims">Rival funeral customs claiming the same sages</a><small class="thought-kind">Policy test</small></th>
+<td data-label="What happens">Two groups defend conflicting funeral practices while both claim to follow the ancient sage-kings. Mozi asks what their practices would actually accomplish.</td>
+<td data-label="What it helps argue">Claims of ancient authority do not settle the dispute. Test funeral customs by their effects on wealth, population, and public order.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 3</a><span class="thought-passage">Mozi chapter 25</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 77.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-harvest-without-plowing" data-search="ploughing lavish funerals treasury gold jade pearls coffins burial">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-harvest-without-plowing">Seeking a harvest while forbidding plowing</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Lavish tombs bury existing wealth, while prolonged mourning interrupts productive life. Mozi compares seeking wealth this way to demanding a harvest without allowing plowing.</td>
+<td data-label="What it helps argue">Practices that consume resources and prevent their renewal undermine the prosperity they are supposed to support.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 3</a><span class="thought-passage">Mozi chapter 25</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), pp. 78–79.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-modest-funeral" data-search="three layers clothes mound filial filiality sacrifice">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-modest-funeral">A modest coffin, tears, and a return to work</a><small class="thought-kind">Practical example</small></th>
+<td data-label="What happens">Mozi prescribes a modest coffin and grave, crying at burial, a prompt return to work, and continued offerings to one’s parents.</td>
+<td data-label="What it helps argue">Moderation allows grief and respect for parents while preserving livelihoods. His proposal does not abolish burial, mourning, or sacrifice.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 3</a><span class="thought-passage">Mozi chapter 25</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 85.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-music-hunger" data-search="zithers luxury musical performances clothing rest">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-music-hunger">Pleasant music alongside hunger and exhaustion</a><small class="thought-kind">Comparison</small></th>
+<td data-label="What happens">Mozi admits that bells, drums, and pipes sound pleasing, but says producing musical instruments keeps hungry people from food and weary workers from rest.</td>
+<td data-label="What it helps argue">Enjoyment alone does not justify public expense. He judges musical performances by their costs to people’s basic needs.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 3</a><span class="thought-passage">Mozi chapter 32</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 99.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-spinning-potters-wheel" data-search="three gauges precedent evidence application fatalism standards assessment">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-spinning-potters-wheel">Finding sunrise on a spinning potter’s wheel</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Trying to judge a claim without a stable standard is like marking sunrise and sunset on the surface of a spinning potter’s wheel.</td>
+<td data-label="What it helps argue">Claims need reliable tests. Mozi names three: ancient precedents, what people have observed, and the benefits of putting a claim into practice.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 4</a><span class="thought-passage">Mozi chapter 35</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 104.</p></details></td>
+</tr>
+<tr class="thought-row" data-thinker="mozi" data-coverage="course" id="mozi-searching-dead-parent" data-search="corpse mourning roof hypocrisy Confucians">
+<td data-label="Thinker"><strong>Mozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mozi-searching-dead-parent">Searching wells and rat holes for a dead parent</a><small class="thought-kind">Polemical example</small></th>
+<td data-label="What happens">Mozi depicts a Confucian mourner looking from a roof into a well and searching rat holes and wash basins for a deceased parent.</td>
+<td data-label="What it helps argue">Mozi attacks the search as foolish or insincere, presenting it as evidence against Confucian mourning practices. This is his hostile portrayal of his rivals.</td>
+<td class="thought-source" data-label="Where to find it"><a class="thought-source-link" href="https://drive.google.com/file/d/1vN4xE5kwiAbW4zoQmdm5IKb6HRSL0jqe/view">Mozi packet · p. 4</a><span class="thought-passage">Mozi chapter 39</span><details class="thought-edition"><summary>Original edition</summary><p>Philip J. Ivanhoe, trans., in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023), p. 105.</p></details></td>
+</tr>
 <tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-fifty-paces">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-fifty-paces">Fifty paces laughing at a hundred</a><small class="thought-kind">Analogy</small></th>
@@ -616,13 +856,13 @@
 <footer class="thought-notes">
 <section id="thought-sources" class="thought-sources" aria-labelledby="thought-sources-heading">
 <h2 id="thought-sources-heading">Sources and page numbers</h2>
-<p><strong>80 examples come from the five course packets linked in the chart.</strong> The three marked “Outside the course packet” are the uncarved block, the infant, and the carriage/coffin makers; their links open the named translations.</p>
+<p><strong>114 examples come from the seven course packets linked in the chart.</strong> The three marked “Outside the course packet” are the uncarved block, the infant, and the carriage/coffin makers; their links open the named translations.</p>
 <p><strong>Use the packet’s own page number.</strong> “Han Feizi packet · p. 5” means page 5 of that standalone PDF, numbered at the bottom. It is not page 5 of a combined daily reader. “Original edition” gives the translator, book, and book page used to prepare that excerpt.</p>
 <p><strong>The chart’s descriptions and explanations are study paraphrases, not quotations.</strong> Read the linked passage for the author’s wording and context. “What it helps argue” offers an interpretation, not a line from the text.</p>
 <details class="thought-bibliography">
 <summary>Books used in the course packets</summary>
 <ul>
-<li><strong>Main anthology:</strong> Philip J. Ivanhoe and Bryan W. Van Norden, eds., <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (Hackett, 2023). Translators: Bryan W. Van Norden (Mengzi), Philip J. Ivanhoe (Laozi), Paul Kjellberg (Zhuangzi), Eric L. Hutton (Xunzi), and Eirik Lang Harris (Han Feizi).</li>
+<li><strong>Main anthology:</strong> Philip J. Ivanhoe and Bryan W. Van Norden, eds., <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (Hackett, 2023). Translators: Edward Slingerland (Kongzi), Philip J. Ivanhoe (Mozi), Bryan W. Van Norden (Mengzi), Philip J. Ivanhoe (Laozi), Paul Kjellberg (Zhuangzi), Eric L. Hutton (Xunzi), and Eirik Lang Harris (Han Feizi).</li>
 <li><strong>Mengzi additions:</strong> Irene Bloom, trans., <i>Mencius</i> (Columbia University Press, 2009).</li>
 <li><strong>Xunzi’s boat and water:</strong> Eric L. Hutton, trans., <i>Xunzi: The Complete Text</i> (Princeton University Press, 2014), p. 70.</li>
 <li><strong>Han Feizi’s landowner/workers and sons/daughters:</strong> Christoph Harbsmeier, trans., <i>Han Feizi: The Art of Statecraft in Early China</i>, vol. 2 (Brill, 2025), pp. 562–563 and 897–898.</li>
@@ -630,6 +870,7 @@
 </details>
 <details class="thought-reading-notes">
 <summary>Reading notes</summary>
+<p>Kongzi’s entries come from the <i>Analects</i>. Some passages record his disciples speaking; the chart identifies those speakers. Passage numbers follow the packet’s Edward Slingerland translation and may differ in other editions.</p>
 <p>Names vary by translation: Kjellberg’s Minnow and Breeze are Kun and Peng; his All-full is Hundun. The chart includes thought experiments, metaphors, parables, and concrete comparisons; these categories overlap.</p>
 <p><strong>Compare carefully:</strong> Mengzi’s water tends downward; Laozi’s water is yielding and effective; Xunzi’s water can carry or overturn the ruler’s boat. Han Feizi’s arrows concern reliable institutions rather than naturally good subjects. His child-and-boil analogy defends coercive government; the chart reports that argument without endorsing it.</p>
 <p>The butterfly dream and debate about fish invite competing interpretations. Cook Ding’s skill includes caution at difficult joints. Xunzi’s claim about bad human nature still allows everyone the capacity for moral improvement. Han Feizi’s spear-and-shield entry follows the assigned chapter 40 version; a related version appears in chapter 36.</p>

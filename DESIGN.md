@@ -241,7 +241,7 @@ gutters and avoids sideways scrolling.
 
 ### Components
 
-Five thinker filters plus All thinkers, text search, a live result count, Reset,
+Seven thinker filters plus All thinkers, text search, a live result count, Reset,
 and Print chart enhance the complete static table. Selected filters use rust
 with white text; controls have 44px minimum heights and visible blue keyboard
 focus. Search and thinker state are retained in the URL. Stable row links

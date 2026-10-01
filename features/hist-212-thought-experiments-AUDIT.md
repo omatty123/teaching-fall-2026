@@ -40,3 +40,15 @@ At the user’s request, removed the tagline and introductory paragraph. Recorde
 - Strict build and deployment checklist passed. Checked all 83 stable row IDs and source links against the page map, balanced HTML, 80 edition disclosures, absence of the removed introduction, desktop expanded citations, 390px mobile expanded citations without horizontal overflow, arrows/boil search, exactly three outside-source results, and reset to all 83.
 
 No packet content, course schedule, or Canvas data changed.
+
+## Kongzi and Mozi extension — 1 October 2026
+
+Added 20 Kongzi and 14 Mozi entries, all from the current standalone course packets. Total: 117 entries, 114 from seven packets and the same three explicitly labeled outside examples. The previous 83 rows and anchors are unchanged.
+
+- Kongzi includes roots, Pole Star, wind/grass, the single thread, the gu vessel, four corners, food/weapons/trust, stolen sheep, mourning, and developed moral scenarios. Speaker attribution distinguishes Master You and Master Zeng from Kongzi. Slingerland numbering is retained, especially 6.25 and 6.30. The near-at-hand analogy spans packet pp. 1–2; other rows each occupy one packet page.
+- Mozi includes rewarded archers/charioteers, the imagined disorder before government, water/fire, family entrusted before war, rulers during an epidemic, theft/war, black/white, clothing, funeral cases, music/hunger, the potter’s wheel, and his hostile depiction of Confucian mourning. Bare doctrines about Heaven, ghosts, or fatalism are not turned into separate metaphors.
+- Concrete policy comparisons and anecdotes carry their own kind labels; the chart does not call every case a thought experiment. The dead-parent search reports Mozi’s criticism without inventing a body/soul distinction or endorsing his depiction of rivals.
+- Both linked Drive PDFs match current local packets byte-for-byte. Every added row was checked against extracted PDF page text and source-edition locators. The seven-packet page map and hashes are maintained alongside this audit.
+- The title remains free of slogans and introductory prose. Public course listing, metadata, filters, source guide, bibliography, and private HQ listing include Kongzi and Mozi.
+
+Validation: strict build and deployment checklist passed. All 83 pre-existing rows match their previous bytes. All 34 new evidence strings match the specified PDF pages; all 117 rows match the citation map; 114 course citations and seven packet hashes are present. Desktop review confirmed seven thinker filters; Kongzi returns20, Mozi14, Confucius alias20, Reset117. Mozi’s expanded edition citation is readable at390px with no horizontal overflow.
