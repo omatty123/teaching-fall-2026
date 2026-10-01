@@ -229,7 +229,7 @@ This addendum records this surface only.
 
 ### Layout
 
-The wide layout presents 28 examples in a five-column semantic table: thinker,
+The wide layout presents the selected examples in a five-column semantic table: thinker,
 image or experiment, what happens, argument, and passage. A white reading field,
 thin horizontal rules, and a dark header establish hierarchy without shadows.
 The heading scales from 26–34px; table prose is 14px, with 16px row titles. At
@@ -244,7 +244,7 @@ and Print chart enhance the complete static table. Selected filters use rust
 with white text; controls have 44px minimum heights and visible blue keyboard
 focus. Search and thinker state are retained in the URL. Stable row links
 highlight their target and reveal it if filters have hidden it. Without
-JavaScript, all 28 examples and source links remain readable. Landscape print
+JavaScript, all the selected examples and source links remain readable. Landscape print
 styles remove controls and navigation and preserve the currently visible rows.
 Sources and interpretive cautions use a native disclosure below the chart.
 

@@ -77,7 +77,7 @@ body:has(.thought-page) > .breadcrumb a { color:inherit; }
   .thought-table td:nth-child(3)::before,.thought-table td:nth-child(4)::before { content:attr(data-label); display:block; color:#555c59; font-size:11px; font-weight:650; margin-bottom:3px; }
   .thought-table td:last-child { grid-column:2; grid-row:1; text-align:right; }
   .thought-table td:last-child a { margin-top:-12px; }
-  .thought-table td:last-child small { display:none; }
+  .thought-table td:last-child small { display:block; max-width:19ch; margin:2px 0 0 auto; font-size:11px; }
   .thought-row:target { outline:2px solid #a67c00; outline-offset:4px; }
   #thought-print { margin-left:0; }
   #thought-tools label { min-width:100%; }
@@ -103,6 +103,7 @@ body:has(.thought-page) > .breadcrumb a { color:inherit; }
   .thought-table td::before { display:none !important; }
   .thought-table td:first-child { font-size:9pt; background:#fff; }
   .thought-table td:last-child { text-align:left; }
+  .thought-table td:last-child small { display:block; max-width:none; margin:4px 0 0; font-size:8pt; }
   .thought-table td:last-child a { display:inline; min-height:0; margin:0; font-size:9pt; }
   .thought-table a { color:#111; text-decoration:none; }
   .thought-sources { font-size:8pt; }

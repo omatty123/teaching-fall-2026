@@ -153,7 +153,7 @@
       "slug": "hist-212-thought-experiments",
       "title": "Thought experiments & metaphors · HIST 212",
       "heading": "Thought experiments & metaphors",
-      "description": "Compare 28 major thought experiments, metaphors, and parables in Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi, with passage references.",
+      "description": "Compare major thought experiments, metaphors, and parables in Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi, with passage references.",
       "fragment": "hist-212-thought-experiments.fragment",
       "wrapperClass": "thought-page",
       "ogImage": "images/hist-212-banner.jpg"
@@ -204,7 +204,7 @@
           },
           {
             "label": "Thought experiments & metaphors",
-            "description": "Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi: 28 images and the arguments they make.",
+            "description": "Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi: images, arguments, and references to the course readings.",
             "href": "hist-212-thought-experiments.html",
             "action": "Compare the thinkers"
           },

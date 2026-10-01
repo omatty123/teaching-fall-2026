@@ -1,58 +1,104 @@
 # HIST 212 — Thought experiments and metaphors
 
-Source ledger for `hist-212-thought-experiments.fragment`. The fragment is editorial source; the site generator produces the public page. Maintain all 28 row IDs so saved links continue to work. Source checks were completed on 2026-10-01.
+Source ledger for `hist-212-thought-experiments.fragment`, the maintained editorial source. Preserve existing row IDs. Audited against the current canonical course packets on 2026-10-01; see `hist-212-thought-experiments-AUDIT.md` for scope and corrections.
 
-## Editorial approach
+## Sources and editorial method
 
-- Compact teaching paraphrases, not quotations or substitutes for reading full passages.
-- “What it helps argue” gives a defensible teaching interpretation, not the only possible meaning.
-- Keep Mengzi’s and Laozi’s water arguments distinct.
-- Preserve course boundaries and do not add unverified historical anecdotes.
-- Public page links to existing source editions; no third-party PDF is copied or hosted here.
-- Row genres are navigation aids. Some stories combine analogy, dialogue, and thought experiment.
-
-## Editions
-
-- **Mengzi 1A7, 2A2, 2A6:** Bryan W. Van Norden, selected translations (1997), hosted on his Vassar faculty site.
-- **Mengzi 6A2, 6A8:** James Legge, Chinese Text Project, “Gaozi I.”
-- **Laozi:** James Legge (1891), Chinese Text Project; Robert Eno, *Daodejing*, teaching translation version 1.4 (2010–2025), Indiana University ScholarWorks, for the uncarved block. Eno 1.3a is superseded; use the linked current item.
-- **Zhuangzi:** James Legge, Chinese Text Project, received chapters 1, 2, 3, 7, 17.
-- **Xunzi:** *Sources of Chinese Tradition*, compiled by Wm. Theodore de Bary and Irene Bloom, 2nd ed., vol. 1 (Columbia University Press, 1999): “Encouraging Learning,” pp. 161–164; “Human Nature Is Evil,” pp. 179–183. The Asia for Educators excerpt PDFs do not identify individual translators; do not infer one.
-- **Han Feizi, chapter 50 additions:** Eirik Lang Harris, in Philip J. Ivanhoe and Bryan W. Van Norden, eds., *Readings in Classical Chinese Philosophy*, 3rd ed., pp. 376–377 (arrows/wheels), p. 378 (child/boil). Checked directly against the local anthology and current canonical `readings/07-hanfeizi.md`, sections VII–VIII, including the October 1 arrows restoration. Public links point to Liao; anthology locators are labeled separately.
-- **Han Feizi:** W. K. Liao, *The Complete Works of Han Fei Tzŭ*, linked PDF. Page fragments below use one-based viewer pages, not printed pagination.
+- Source of truth: `readings/03-laozi.md` through `07-hanfeizi.md` in `/Users/wegehaum/Documents/ChatGPT/FALL 2026/course-materials/hist-212/`, plus the named source editions. Separate primary excerpts from instructor commentary and appendices.
+- Course anthology: Ivanhoe and Van Norden, eds., *Readings in Classical Chinese Philosophy*, 3rd ed. (2023). Translators: Van Norden (Mengzi), Ivanhoe (Laozi), Kjellberg (Zhuangzi), Hutton (Xunzi), Harris (Han Feizi).
+- Supplements: Irene Bloom, *Mencius* (2009); Eric L. Hutton, *Xunzi: The Complete Text* (2014); Christoph Harbsmeier, *Han Feizi: The Art of Statecraft in Early China*, vol. 2 (2025).
+- All row text is a compact teaching paraphrase; interpretations are not exclusive. Include significant concrete cases and disputed analogies, not just narrowly defined thought experiments. Do not turn bare doctrines or every passing figure into a separate row.
+- Course links open the existing student packet. Printed source-edition locators are distinct from packet PDF pages. No source PDF is copied or uploaded by this chart.
+- Retained further examples: Laozi’s uncarved block and infant, and Han Feizi’s carriage/coffin makers. Their original alternative translations remain linked. All other rows are grounded in the current concentrated packets.
+- Alternate translations retained in the ledger are supplementary; chapter/wording differences must be checked before substituting them for the course edition. For chapter 46, Liao’s euphemism about daughters does not reproduce the assigned Harbsmeier translation.
 
 ## Passage ledger
 
-| Row ID | Label | Passage | Source |
+| Stable row ID | Image / experiment | Passage and source-edition locator | Coverage / link |
 |---|---|---|---|
-| `mengzi-child-well` | Child at the well | Mengzi 2A6 | [Source](https://facultysites.vassar.edu/brvannor/mengzi.html) |
-| `mengzi-four-sprouts` | Four sprouts | Mengzi 2A6 | [Source](https://facultysites.vassar.edu/brvannor/mengzi.html) |
-| `mengzi-seedlings` | Pulling up seedlings | Mengzi 2A2 | [Source](https://facultysites.vassar.edu/brvannor/mengzi.html) |
-| `mengzi-ox-sheep` | King, ox, and sheep | Mengzi 1A7 | [Source](https://facultysites.vassar.edu/brvannor/mengzi.html) |
-| `mengzi-water` | Water flowing downward | Mengzi 6A2 | [Source](https://ctext.org/mengzi/gaozi-i) |
-| `mengzi-ox-mountain` | Ox Mountain | Mengzi 6A8 | [Source](https://ctext.org/mengzi/gaozi-i) |
-| `laozi-water` | Water | Daodejing 8, 78 | [Source](https://ctext.org/dao-de-jing/ens) |
-| `laozi-empty-spaces` | Empty hub, vessel, and room | Daodejing 11 | [Source](https://ctext.org/dao-de-jing/ens) |
-| `laozi-uncarved-block` | Uncarved block | Daodejing 28, 32 | [Source](https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2) |
-| `laozi-infant` | Infant | Daodejing 55 | [Source](https://ctext.org/dao-de-jing/ens) |
-| `laozi-small-fish` | Cooking small fish | Daodejing 60 | [Source](https://ctext.org/dao-de-jing/zh) |
-| `zhuangzi-butterfly-dream` | Butterfly dream | Zhuangzi 2 | [Source](https://ctext.org/zhuangzi/adjustment-of-controversies/ens) |
-| `zhuangzi-cook-ding` | Cook Ding | Zhuangzi 3 | [Source](https://ctext.org/zhuangzi/nourishing-the-lord-of-life) |
-| `zhuangzi-useless-tree` | Useless tree | Zhuangzi 1 | [Source](https://ctext.org/zhuangzi/enjoyment-in-untroubled-ease) |
-| `zhuangzi-happy-fish` | Happiness of fish | Zhuangzi 17 | [Source](https://ctext.org/zhuangzi/floods-of-autumn/zh) |
-| `zhuangzi-hundun` | Hundun / Chaos | Zhuangzi 7 | [Source](https://ctext.org/zhuangzi/normal-course-for-rulers-and-kings) |
-| `zhuangzi-turtle` | Turtle in the mud | Zhuangzi 17 | [Source](https://ctext.org/zhuangzi/floods-of-autumn/zh) |
-| `xunzi-crooked-wood` | Crooked wood and dull metal | Xunzi 23 | [Source](https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf) |
-| `xunzi-blue-dye` | Blue dye and ice | Xunzi 1 | [Source](https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf) |
-| `xunzi-potter` | Potter and clay | Xunzi 23 | [Source](https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf) |
-| `xunzi-small-steps` | Small steps and accumulating streams | Xunzi 1 | [Source](https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf) |
-| `han-feizi-two-handles` | Two handles; tiger’s claws and teeth | Han Feizi 7 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=31) |
-| `han-feizi-rabbit-stump` | Rabbit and tree stump | Han Feizi 49 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=325) |
-| `han-feizi-spear-shield` | Spear and shield | Han Feizi 36 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=254) |
-| `han-feizi-cap-robe` | Cap keeper and robe keeper | Han Feizi 7 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=32) |
-| `han-feizi-carriages-coffins` | Carriage makers and coffin makers | Han Feizi 17 | [Source](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=86) |
-| `han-feizi-straight-arrows` | Straight arrows and round wheels | Han Feizi 50; Harris pp. 376–377 | [Liao, PDF p. 340](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=340) |
-| `han-feizi-child-boil` | Lancing a child’s boil | Han Feizi 50; Harris p. 378 | [Liao, PDF p. 341](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=341) |
+| `mengzi-fifty-paces` | Fifty paces laughing at a hundred | Mengzi 1A3; Van Norden, p. 122 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-blaming-weapon` | Blaming the year or the weapon | Mengzi 1A3; Bloom, p. 4 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-animals-devour` | Leading animals to devour people | Mengzi 1A4; 3B9; Bloom, p. 4; Van Norden, p. 138 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-ox-sheep` | King, ox, and sheep | Mengzi 1A7; Van Norden, pp. 123–124 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) · [alternative](https://facultysites.vassar.edu/brvannor/mengzi.html) |
+| `mengzi-mount-tai` | Lifting Mount Tai or helping an elder | Mengzi 1A7; Van Norden, p. 124 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-trapping-people` | Trapping the people | Mengzi 1A7; Van Norden, p. 126 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-mere-fellow` | The tyrant as a mere fellow | Mengzi 1B8; Van Norden, p. 128 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-seedlings` | Pulling up seedlings | Mengzi 2A2; Van Norden, p. 130 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) · [alternative](https://facultysites.vassar.edu/brvannor/mengzi.html) |
+| `mengzi-child-well` | Child at the well | Mengzi 2A6; Van Norden, pp. 132–133 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) · [alternative](https://facultysites.vassar.edu/brvannor/mengzi.html) |
+| `mengzi-four-sprouts` | Four sprouts | Mengzi 2A6; Van Norden, pp. 132–133 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) · [alternative](https://facultysites.vassar.edu/brvannor/mengzi.html) |
+| `mengzi-parents-ditch` | Parents’ bodies abandoned in a ditch | Mengzi 3A5; Van Norden, p. 136 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-wide-house` | The wide house and great Way | Mengzi 3B2; Bloom, p. 62 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-drowning-sister` | Drowning sister-in-law; drowning world | Mengzi 4A17; Van Norden, pp. 140–141 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-heaven-people` | Heaven’s eyes and ears | Mengzi 5A5; Bloom, pp. 103–104 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-willow-cups` | Willow tree made into cups and bowls | Mengzi 6A1; Van Norden, p. 146 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-water` | Water flowing downward | Mengzi 6A2; Van Norden, p. 146 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) · [alternative](https://ctext.org/mengzi/gaozi-i) |
+| `mengzi-ox-mountain` | Ox Mountain | Mengzi 6A8; Van Norden, pp. 150–151 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) · [alternative](https://ctext.org/mengzi/gaozi-i) |
+| `mengzi-fish-bear-paw` | Fish and bear’s paw | Mengzi 6A10; Van Norden, p. 151 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-contemptuous-food` | Food given with contempt | Mengzi 6A10; Van Norden, pp. 151–152 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `mengzi-child-parents` | A child’s love for parents | Mengzi 7A15; Van Norden, p. 153 | [course](https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view) |
+| `laozi-filled-bellies` | Filled bellies and strong bones | Daodejing 3; Ivanhoe, p. 174 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-water` | Water | Daodejing 8, 78; Ivanhoe, p. 176; pp. 208–209 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) · [alternative](https://ctext.org/dao-de-jing/ens) |
+| `laozi-empty-spaces` | Empty hub, vessel, and room | Daodejing 11; Ivanhoe, p. 177 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) · [alternative](https://ctext.org/dao-de-jing/ens) |
+| `laozi-unnoticed-ruler` | The scarcely noticed ruler | Daodejing 17; Ivanhoe, p. 180 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-uncarved-block` | Uncarved block | Daodejing 28, 32; Ivanhoe, pp. 186, 188 | [further](https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2) |
+| `laozi-world-vessel` | The world as a spiritual vessel | Daodejing 29; Ivanhoe, p. 186 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-war-mourning` | Weeds after war; victory as mourning | Daodejing 30–31; Ivanhoe, pp. 186–187 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-ritual-sleeves` | The ritualist rolls up his sleeves | Daodejing 38; Ivanhoe, p. 190 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-court-granaries` | The rich court and empty granaries | Daodejing 53, 75; Ivanhoe, pp. 197, 207 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-infant` | Infant | Daodejing 55; Ivanhoe, p. 198 | [further](https://ctext.org/dao-de-jing/ens) |
+| `laozi-small-fish` | Cooking small fish | Daodejing 60; Ivanhoe, p. 200 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) · [alternative](https://ctext.org/dao-de-jing/zh) |
+| `laozi-sea-valleys` | The sea below the valleys | Daodejing 66; Ivanhoe, p. 204 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-soft-living` | Soft bodies, stiff corpses, breaking trees | Daodejing 76; Ivanhoe, pp. 207–208 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `laozi-small-community` | Small communities that never visit | Daodejing 80; Ivanhoe, pp. 209–210 | [course](https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view) |
+| `zhuangzi-useless-tree` | Useless tree | Zhuangzi 1; Kjellberg, p. 229 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) · [alternative](https://ctext.org/zhuangzi/enjoyment-in-untroubled-ease) |
+| `zhuangzi-giant-bird` | Giant bird and small creatures | Zhuangzi 1; Kjellberg, pp. 224–225 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-giant-gourds` | Giant gourds | Zhuangzi 1; Kjellberg, pp. 228–229 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-butterfly-dream` | Butterfly dream | Zhuangzi 2; Kjellberg, p. 238 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) · [alternative](https://ctext.org/zhuangzi/adjustment-of-controversies/ens) |
+| `zhuangzi-pipes-wind` | Wind and the ten thousand pipes | Zhuangzi 2; Kjellberg, pp. 229–230 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-species-standards` | Whose home, taste, or beauty? | Zhuangzi 2; Kjellberg, p. 236 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-neutral-judge` | Who can judge the dispute? | Zhuangzi 2; Kjellberg, p. 238 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-cook-ding` | Cook Ding | Zhuangzi 3; Kjellberg, pp. 239–240 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) · [alternative](https://ctext.org/zhuangzi/nourishing-the-lord-of-life) |
+| `zhuangzi-hundun` | Hundun / All-full (Chaos) | Zhuangzi 7; Kjellberg, p. 256 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) · [alternative](https://ctext.org/zhuangzi/normal-course-for-rulers-and-kings) |
+| `zhuangzi-mirror-heart` | Heart-mind as a mirror | Zhuangzi 7; Kjellberg, p. 256 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-happy-fish` | Happiness of fish | Zhuangzi 17; Kjellberg, pp. 260–261 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) · [alternative](https://ctext.org/zhuangzi/floods-of-autumn/zh) |
+| `zhuangzi-turtle` | Turtle in the mud | Zhuangzi 17; Kjellberg, p. 260 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) · [alternative](https://ctext.org/zhuangzi/floods-of-autumn/zh) |
+| `zhuangzi-frog-well` | Frog in the collapsed well | Zhuangzi 17; Kjellberg, pp. 259–260 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-wife-tub` | Singing after his wife’s death | Zhuangzi 18; Kjellberg, p. 261 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `zhuangzi-predator-chain` | Cicada, mantis, magpie, and hunter | Zhuangzi 20; Kjellberg, p. 263 | [course](https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view) |
+| `xunzi-crooked-wood` | Shaping wood and sharpening metal | Xunzi 1, 23; Hutton, pp. 270–271, 310 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) · [alternative](https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf) |
+| `xunzi-blue-dye` | Blue dye and ice | Xunzi 1; Hutton, p. 270 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) · [alternative](https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf) |
+| `xunzi-small-steps` | Small steps and accumulating streams | Xunzi 1; Hutton, pp. 271–272 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) · [alternative](https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf) |
+| `xunzi-crying-children` | Same infant cries, different customs | Xunzi 1; Hutton, pp. 270–271 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-chariot-boat` | Chariot and horses; boat and oars | Xunzi 1; Hutton, p. 271 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-nags-carving` | Old nags and persistent carving | Xunzi 1; Hutton, pp. 271–272 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-oxen-horses` | Humans commanding oxen and horses | Xunzi 9; Hutton, p. 281 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-boat-water` | Ruler as boat, people as water | Xunzi 9; Hutton, Complete Text, p. 70 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-human-omens` | Falling stars and human ill omens | Xunzi 17; Hutton, p. 285 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-rain-sacrifice` | Rain after a rain sacrifice | Xunzi 17; Hutton, p. 286 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `xunzi-potter` | Potter and clay | Xunzi 23; Hutton, p. 312 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) · [alternative](https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf) |
+| `xunzi-walking-world` | Feet that could walk the world | Xunzi 23; Hutton, p. 317 | [course](https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view) |
+| `han-feizi-ministers-polishing` | Ministers carving and polishing themselves | Han Feizi 5; Harris, pp. 324–325 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-ink-line` | The ink line and crooked wood | Han Feizi 6; Harris, pp. 332–333 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-two-handles` | Two handles; tiger’s claws and teeth | Han Feizi 7; Harris, p. 333 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) · [alternative](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=31) |
+| `han-feizi-cap-robe` | Cap keeper and robe keeper | Han Feizi 7; Harris, p. 335 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) · [alternative](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=32) |
+| `han-feizi-fame-profit` | Persuading someone who wants fame—or profit | Han Feizi 12; Harris, pp. 336–338 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-half-eaten-peach` | Mi Zixia: borrowed carriage and half-eaten peach | Han Feizi 12; Harris, pp. 339–340 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-inverted-scales` | The dragon’s inverted scales | Han Feizi 12; Harris, p. 340 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-carriages-coffins` | Carriage makers and coffin makers | Han Feizi 17; Liao, PDF p. 86 | [further](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=86) |
+| `han-feizi-landowner-workers` | The landowner and hired field workers | Han Feizi 32; Harbsmeier, vol. 2, pp. 562–563; hf 32.3.1 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-spear-shield` | Spear and shield | Han Feizi 40; Harris, pp. 351–352 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) · [alternative](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=284) |
+| `han-feizi-dragon-clouds` | Dragons on clouds; snakes on mist | Han Feizi 40; Harris, p. 348 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-yao-jie` | Yao without office; Jie on the throne | Han Feizi 40; Harris, pp. 348, 351–352 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-sons-daughters` | Sons, daughters, and parental calculation | Han Feizi 46; Harbsmeier, vol. 2, pp. 897–898; hf 46.3 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-mother-teacher-doctor` | The loving mother, teacher, and doctor | Han Feizi 47; Harris, p. 356 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-rabbit-stump` | Rabbit and tree stump | Han Feizi 49; Harris, p. 358 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) · [alternative](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=325) |
+| `han-feizi-nests-fire` | Nests and fire drills in the wrong age | Han Feizi 49; Harris, p. 357 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-five-sons` | Five sons become twenty-five grandsons | Han Feizi 49; Harris, p. 358 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-five-vermin` | Five vermin of the state | Han Feizi 49; Harris, p. 371 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-straight-arrows` | Straight arrows and round wheels | Han Feizi 50; Harris, pp. 376–377 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) · [alternative](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=340) |
+| `han-feizi-child-boil` | Lancing a child’s boil | Han Feizi 50; Harris, p. 378 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) · [alternative](https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=341) |
+| `han-feizi-absent-founders` | Dead founders and rival heirs | Han Feizi 50; Harris, pp. 371–372 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
+| `han-feizi-competing-funerals` | Frugal funeral or filial funeral? | Han Feizi 50; Harris, p. 372 | [course](https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view) |
 
 ## Interpretive checks to preserve
 
@@ -64,13 +110,14 @@ Source ledger for `hist-212-thought-experiments.fragment`. The fragment is edito
 - **Cook Ding:** keep his caution at difficult joints alongside responsiveness and ease.
 - **Useless tree:** this is Huizi’s tree in chapter 1; do not add the dream speech from Carpenter Shi’s episode in chapter 4.
 - **Xunzi:** “evil” does not mean incapable of moral improvement. The potter analogy concerns the deliberate origin of ritual, as well as transformation.
-- **Spear and shield:** Liao uses “halberd”; “spear and shield” is the familiar teaching label.
+- **Spear and shield:** use the assigned chapter 40 argument about moral worth and positional power (Harris pp. 351–352), not the related chapter 36 argument about praise for Yao and Shun.
 - **Cap and robe keepers:** “both punished” avoids differing descriptions of their penalties.
 - **Carriage and coffin makers:** identifies structural incentives; do not reduce it to a claim that every individual is always consciously malicious.
 
 - **Straight arrows and round wheels:** chapter 50 directly contrasts reliable institutions with naturally good subjects; do not silently substitute chapter 40’s related argument about ordinary rulers, or Mengzi 2A7’s arrow-maker/armor-maker analogy.
 - **Child and boil:** a separate person restrains the child while the mother treats it. The analogy supports Han Feizi’s paternalistic defense of coercive policies; public resistance does not prove harm in his argument, but the analogy itself does not establish that the policies are beneficial.
 
+
 ## Interaction contract
 
-The fragment supplies `#thought-tools` (initially hidden), six `button[data-thinker]` filters, `#thought-search`, `#thought-clear`, `#thought-print`, `#thought-count`, `#thought-chart`, and `#thought-empty` (initially hidden). Rows are `.thought-row[data-thinker]`; every row has five cells and a stable ID. The fully visible static table is the no-JavaScript fallback. CSS and JS are maintained separately by the site integration.
+Semantic five-column table, stable row IDs, thinker filters, text search (including spelling/name aliases), reset, saved query and deep links, browser-history restoration, and print-current-view. All rows remain visible without JavaScript; count is derived at runtime. Mobile and print views retain source locators. Counts are intentionally omitted from navigation and editorial prose.

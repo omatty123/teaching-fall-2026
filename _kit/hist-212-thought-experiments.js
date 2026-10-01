@@ -9,11 +9,15 @@
   const table = document.getElementById('thought-chart');
   const empty = document.getElementById('thought-empty');
   const names = Object.fromEntries(buttons.map(b => [b.dataset.thinker,b.textContent.trim()]));
-  const params = new URLSearchParams(location.search);
-  let thinker = Object.hasOwn(names, params.get('thinker')) ? params.get('thinker') : 'all';
-  search.value = params.get('q') || '';
-  const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-  const texts = new Map(rows.map(row => [row, normalize(row.textContent)]));
+  let thinker = 'all';
+  function readURL() {
+    const params = new URLSearchParams(location.search);
+    thinker = Object.hasOwn(names, params.get('thinker')) ? params.get('thinker') : 'all';
+    search.value = params.get('q') || '';
+  }
+  readURL();
+  const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[’‘']/g, '').toLowerCase();
+  const texts = new Map(rows.map(row => [row, normalize(`${row.textContent} ${row.dataset.search || ''}`)]));
   function apply(updateURL = true) {
     const terms = normalize(search.value).trim().split(/\s+/).filter(Boolean);
     let shown = 0;
@@ -46,4 +50,5 @@
   apply(false);
   revealAnchor();
   window.addEventListener('hashchange', revealAnchor);
+  window.addEventListener('popstate', () => { readURL(); apply(false); revealAnchor(); });
 })();

@@ -1,8 +1,8 @@
 <a class="thought-skip" href="#thought-chart">Skip to chart</a>
 <header class="thought-heading">
 <h1>Thought experiments &amp; metaphors</h1>
-<p class="thought-lede">Five thinkers. Twenty-eight ways to test an idea.</p>
-<p>Compare what each image makes visible about human nature, learning, government, or knowledge. Follow a passage link to read the argument in context.</p>
+<p class="thought-lede">Five thinkers. Images that carry an argument.</p>
+<p>Compare what each image makes visible about human nature, learning, government, or knowledge. Most passage links open the current course packets; page references identify the source editions. Entries marked “Further example” go beyond the concentrated readings.</p>
 </header>
 <main id="thought-main">
 <section id="thought-tools" class="thought-tools" aria-label="Chart controls" hidden>
@@ -21,207 +21,592 @@
 <button id="thought-print" type="button">Print chart</button>
 </div>
 </section>
-<p id="thought-count" role="status" aria-live="polite">28 examples · all thinkers</p>
+<p id="thought-count" role="status" aria-live="polite">All examples · all thinkers</p>
 <div id="thought-chart" class="thought-table-wrap" tabindex="0" role="region" aria-label="Comparative chart">
 <table class="thought-table">
 <caption class="thought-sr-only">Major thought experiments, metaphors, and parables in Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi, with passage references.</caption>
 <thead><tr><th scope="col">Thinker</th><th scope="col">Image or experiment</th><th scope="col">What happens</th><th scope="col">What it helps argue</th><th scope="col">Passage</th></tr></thead>
 <tbody>
-<tr class="thought-row" data-thinker="mengzi" id="mengzi-child-well">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-fifty-paces">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-child-well">Child at the well</a><small class="thought-kind">Thought experiment</small></th>
-<td data-label="What happens">Someone suddenly sees a child about to fall into a well and feels alarm and concern before calculating personal advantage.</td>
-<td data-label="What it helps argue">People have a spontaneous beginning of compassion; the example does not guarantee that everyone will carry out a rescue.</td>
-<td data-label="Passage"><a href="https://facultysites.vassar.edu/brvannor/mengzi.html">Mengzi 2A6</a></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-fifty-paces">Fifty paces laughing at a hundred</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">Soldiers who flee fifty paces mock those who flee a hundred; both have run away.</td>
+<td data-label="What it helps argue">A king whose government is only less harmful than his neighbors’ has not yet achieved benevolent rule.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1A3</a><small class="thought-kind">Van Norden, p. 122</small></td>
 </tr>
-<tr class="thought-row" data-thinker="mengzi" id="mengzi-four-sprouts">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-blaming-weapon">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-four-sprouts">Four sprouts</a><small class="thought-kind">Metaphor</small></th>
-<td data-label="What happens">Compassion, shame, deference, and moral judgment are compared to young sprouts.</td>
-<td data-label="What it helps argue">These beginnings of benevolence, righteousness, ritual propriety, and wisdom need cultivation to develop fully.</td>
-<td data-label="Passage"><a href="https://facultysites.vassar.edu/brvannor/mengzi.html">Mengzi 2A6</a></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-blaming-weapon">Blaming the year or the weapon</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A ruler blames famine deaths on the bad year, like a killer blaming the weapon.</td>
+<td data-label="What it helps argue">Rulers remain responsible for preventable suffering; pointing to external conditions does not excuse failed government.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1A3</a><small class="thought-kind">Bloom, p. 4</small></td>
 </tr>
-<tr class="thought-row" data-thinker="mengzi" id="mengzi-seedlings">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-animals-devour">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-seedlings">Pulling up seedlings</a><small class="thought-kind">Parable</small></th>
-<td data-label="What happens">An impatient farmer pulls his seedlings upward to help them grow; they wither.</td>
-<td data-label="What it helps argue">Moral development needs patient cultivation: neither neglect growth nor force it.</td>
-<td data-label="Passage"><a href="https://facultysites.vassar.edu/brvannor/mengzi.html">Mengzi 2A2</a></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-animals-devour">Leading animals to devour people</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">The ruler’s animals are well fed while people starve; Mengzi compares death through government with death by a blade.</td>
+<td data-label="What it helps argue">Lavish provision for the ruler alongside neglected human hunger makes government itself destructive.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1A4; 3B9</a><small class="thought-kind">Bloom, p. 4; Van Norden, p. 138</small></td>
 </tr>
-<tr class="thought-row" data-thinker="mengzi" id="mengzi-ox-sheep">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-ox-sheep">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-ox-sheep">King, ox, and sheep</a><small class="thought-kind">Dialogue</small></th>
 <td data-label="What happens">A king spares a frightened ox but substitutes a sheep he has not seen.</td>
 <td data-label="What it helps argue">Compassion can be real yet selective; the king should extend it to his people.</td>
-<td data-label="Passage"><a href="https://facultysites.vassar.edu/brvannor/mengzi.html">Mengzi 1A7</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1A7</a><small class="thought-kind">Van Norden, pp. 123–124</small></td>
 </tr>
-<tr class="thought-row" data-thinker="mengzi" id="mengzi-water">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-mount-tai" data-search="feather wagon firewood strength eyesight ability">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-mount-tai">Lifting Mount Tai or helping an elder</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Carrying Mount Tai over the sea is impossible; massaging an elder’s stiff joints is not. The king fails to use capacities he has, like strength not used to lift a feather.</td>
+<td data-label="What it helps argue">Failure to extend compassion is a failure to act, not proof that benevolent government is beyond the king’s ability.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1A7</a><small class="thought-kind">Van Norden, p. 124</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-trapping-people">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-trapping-people">Trapping the people</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">A ruler leaves people without a secure livelihood, then punishes the crimes into which they fall.</td>
+<td data-label="What it helps argue">Benevolent rule must make ordinary life sustainable; punishment alone ignores the conditions government creates.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1A7</a><small class="thought-kind">Van Norden, p. 126</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-mere-fellow">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-mere-fellow">The tyrant as a mere fellow</a><small class="thought-kind">Dialogue</small></th>
+<td data-label="What happens">Asked about killing a ruler, Mengzi describes the executed tyrant Zhou as someone who had already forfeited the standing of a ruler.</td>
+<td data-label="What it helps argue">A political title depends on fulfilling moral duties; tyranny can strip its holder of the protection that the title normally gives.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 1B8</a><small class="thought-kind">Van Norden, p. 128</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-seedlings">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-seedlings">Pulling up seedlings</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">An impatient farmer pulls his seedlings upward to help them grow; they wither.</td>
+<td data-label="What it helps argue">Moral development needs patient cultivation: neither neglect growth nor force it.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 2A2</a><small class="thought-kind">Van Norden, p. 130</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-child-well">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-child-well">Child at the well</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Someone suddenly sees a child about to fall into a well and feels alarm and concern before calculating personal advantage.</td>
+<td data-label="What it helps argue">People have a spontaneous beginning of compassion; the example does not guarantee that everyone will carry out a rescue.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 2A6</a><small class="thought-kind">Van Norden, pp. 132–133</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-four-sprouts" data-search="four limbs fire spring">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-four-sprouts">Four sprouts</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Compassion, shame, deference, and moral judgment are young sprouts; developing them is like a fire catching or a spring breaking through.</td>
+<td data-label="What it helps argue">These beginnings of benevolence, righteousness, ritual propriety, and wisdom need cultivation to develop fully.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 2A6</a><small class="thought-kind">Van Norden, pp. 132–133</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-parents-ditch">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-parents-ditch">Parents’ bodies abandoned in a ditch</a><small class="thought-kind">Imagined origin story</small></th>
+<td data-label="What happens">People see animals feeding on their unburied parents and visibly recoil, without trying to impress anyone.</td>
+<td data-label="What it helps argue">Spontaneous feeling for parents helps ground burial practices; Mengzi challenges the Mohist account of impartial care.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 3A5</a><small class="thought-kind">Van Norden, p. 136</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-wide-house" data-search="great man integrity">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-wide-house">The wide house and great Way</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">The great person inhabits the world’s wide house and walks its great Way, remaining steadfast through wealth, poverty, and coercion.</td>
+<td data-label="What it helps argue">Moral integrity, not the ability to frighten rulers or obtain office, defines greatness.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 3B2</a><small class="thought-kind">Bloom, p. 62</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-drowning-sister">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-drowning-sister">Drowning sister-in-law; drowning world</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">One must grasp a drowning sister-in-law despite a rule against touching. Saving a disordered world, however, requires the Way rather than a literal helping hand.</td>
+<td data-label="What it helps argue">Moral judgment can require departing from a ritual rule; extending an analogy also requires attention to the different case.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 4A17</a><small class="thought-kind">Van Norden, pp. 140–141</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-heaven-people">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-heaven-people">Heaven’s eyes and ears</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Heaven does not announce a successor: Shun’s conduct, orderly administration, and the people’s acceptance reveal its judgment.</td>
+<td data-label="What it helps argue">Political legitimacy requires more than a ruler’s private gift of the realm; Heaven’s judgment is manifested through the people.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 5A5</a><small class="thought-kind">Bloom, pp. 103–104</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-willow-cups">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-willow-cups">Willow tree made into cups and bowls</a><small class="thought-kind">Disputed analogy</small></th>
+<td data-label="What happens">Gaozi compares moral formation to carving willow wood; Mengzi objects that carving violates the tree.</td>
+<td data-label="What it helps argue">Mengzi rejects a model that makes goodness an injury imposed on human nature from outside.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 6A1</a><small class="thought-kind">Van Norden, p. 146</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-water">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-water">Water flowing downward</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Water naturally flows downward, although an external force can drive it upward.</td>
 <td data-label="What it helps argue">Human nature tends toward goodness; circumstances can divert that tendency.</td>
-<td data-label="Passage"><a href="https://ctext.org/mengzi/gaozi-i">Mengzi 6A2</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 6A2</a><small class="thought-kind">Van Norden, p. 146</small></td>
 </tr>
-<tr class="thought-row" data-thinker="mengzi" id="mengzi-ox-mountain">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-ox-mountain">
 <td data-label="Thinker"><strong>Mengzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-ox-mountain">Ox Mountain</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Logging and grazing strip a once-wooded mountain until it appears naturally barren.</td>
 <td data-label="What it helps argue">Damaged moral capacities do not show that human nature was originally bad; nourishment and conditions matter.</td>
-<td data-label="Passage"><a href="https://ctext.org/mengzi/gaozi-i">Mengzi 6A8</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 6A8</a><small class="thought-kind">Van Norden, pp. 150–151</small></td>
 </tr>
-<tr class="thought-row" data-thinker="laozi" id="laozi-water">
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-fish-bear-paw">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-fish-bear-paw">Fish and bear’s paw</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">When two desired foods cannot both be had, one chooses the preferred one; Mengzi compares this with choosing righteousness over life.</td>
+<td data-label="What it helps argue">People can rank desires: preserving life is not necessarily their highest commitment.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 6A10</a><small class="thought-kind">Van Norden, p. 151</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-contemptuous-food">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-contemptuous-food">Food given with contempt</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">A hungry person may refuse food offered insultingly, yet someone accepts a lavish salary without checking whether it is right.</td>
+<td data-label="What it helps argue">Moral shame can outweigh survival; wealth can nevertheless lead people to abandon the judgment they once upheld.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 6A10</a><small class="thought-kind">Van Norden, pp. 151–152</small></td>
+</tr>
+<tr class="thought-row" data-thinker="mengzi" data-coverage="course" id="mengzi-child-parents">
+<td data-label="Thinker"><strong>Mengzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#mengzi-child-parents">A child’s love for parents</a><small class="thought-kind">Example</small></th>
+<td data-label="What happens">Young children love their parents without studying; older children recognize respect for elder siblings.</td>
+<td data-label="What it helps argue">Mengzi finds beginnings of benevolence and righteousness in ordinary relationships and calls for extending them more widely.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1HcSH79w3GG_9rvU5PoWuBZFUAS7aPPYb/view">Mengzi 7A15</a><small class="thought-kind">Van Norden, p. 153</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-filled-bellies">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-filled-bellies">Filled bellies and strong bones</a><small class="thought-kind">Political image</small></th>
+<td data-label="What happens">Sage rulers fill bellies and strengthen bones while weakening ambitions and reducing knowledge and desires.</td>
+<td data-label="What it helps argue">Order depends on meeting basic needs and curbing competitive desires; the ruler actively shapes the people.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 3</a><small class="thought-kind">Ivanhoe, p. 174</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-water">
 <td data-label="Thinker"><strong>Laozi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-water">Water</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Water nourishes everything, occupies low places, and overcomes what is hard despite its softness.</td>
 <td data-label="What it helps argue">Humility, non-contention, and flexibility can be more effective than force.</td>
-<td data-label="Passage"><a href="https://ctext.org/dao-de-jing/ens">Daodejing 8, 78</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 8, 78</a><small class="thought-kind">Ivanhoe, p. 176; pp. 208–209</small></td>
 </tr>
-<tr class="thought-row" data-thinker="laozi" id="laozi-empty-spaces">
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-empty-spaces">
 <td data-label="Thinker"><strong>Laozi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-empty-spaces">Empty hub, vessel, and room</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Wheels, pots, and rooms work because of their empty spaces.</td>
 <td data-label="What it helps argue">Absence and openness make useful activity possible; solidity alone is insufficient.</td>
-<td data-label="Passage"><a href="https://ctext.org/dao-de-jing/ens">Daodejing 11</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 11</a><small class="thought-kind">Ivanhoe, p. 177</small></td>
 </tr>
-<tr class="thought-row" data-thinker="laozi" id="laozi-uncarved-block">
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-unnoticed-ruler">
 <td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-unnoticed-ruler">The scarcely noticed ruler</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Rulers range from barely noticed to loved, feared, and despised. Under the best, people regard their order as simply how things are.</td>
+<td data-label="What it helps argue">Effective leadership need not advertise itself or make people feel dependent on a ruler.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 17</a><small class="thought-kind">Ivanhoe, p. 180</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="further" id="laozi-uncarved-block">
+<td data-label="Thinker"><strong>Laozi</strong><small>Further example</small></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-uncarved-block">Uncarved block</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Unworked wood represents simplicity before carving divides it into specialized objects.</td>
 <td data-label="What it helps argue">Preserve simplicity; avoid excessive desires and imposed distinctions.</td>
-<td data-label="Passage"><a href="https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2">Daodejing 28, 32</a></td>
+<td data-label="Passage"><a href="https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2">Daodejing 28, 32</a><small class="thought-kind">Ivanhoe, pp. 186, 188</small></td>
 </tr>
-<tr class="thought-row" data-thinker="laozi" id="laozi-infant">
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-world-vessel">
 <td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-world-vessel">The world as a spiritual vessel</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">The world is likened to a sacred vessel: those who try to manipulate or grasp it ruin or lose it.</td>
+<td data-label="What it helps argue">The world cannot safely be treated as an object for a ruler’s controlling purposes.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 29</a><small class="thought-kind">Ivanhoe, p. 186</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-war-mourning">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-war-mourning">Weeds after war; victory as mourning</a><small class="thought-kind">Political image</small></th>
+<td data-label="What happens">An army leaves thorns and failed harvests; even victory calls for mourning.</td>
+<td data-label="What it helps argue">Military force creates lasting damage; it should be a last resort, and killing should never be celebrated.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 30–31</a><small class="thought-kind">Ivanhoe, pp. 186–187</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-ritual-sleeves">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-ritual-sleeves">The ritualist rolls up his sleeves</a><small class="thought-kind">Vignette</small></th>
+<td data-label="What happens">When others fail to respond, the person insisting on ritual correctness rolls up his sleeves and resorts to force.</td>
+<td data-label="What it helps argue">Enforced ritual can reveal depleted trust and produce coercion instead of harmony.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 38</a><small class="thought-kind">Ivanhoe, p. 190</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-court-granaries">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-court-granaries">The rich court and empty granaries</a><small class="thought-kind">Political image</small></th>
+<td data-label="What happens">Courts glitter while fields grow weeds and granaries stand empty; rulers consume too much in taxes while the people go hungry.</td>
+<td data-label="What it helps argue">Elite consumption can impoverish the people; luxury amid deprivation resembles robbery, not good government.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 53, 75</a><small class="thought-kind">Ivanhoe, pp. 197, 207</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="further" id="laozi-infant">
+<td data-label="Thinker"><strong>Laozi</strong><small>Further example</small></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-infant">Infant</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">A baby is physically soft yet holds firmly and embodies vitality and harmony.</td>
 <td data-label="What it helps argue">Genuine strength can coexist with softness and freedom from calculated striving.</td>
-<td data-label="Passage"><a href="https://ctext.org/dao-de-jing/ens">Daodejing 55</a></td>
+<td data-label="Passage"><a href="https://ctext.org/dao-de-jing/ens">Daodejing 55</a><small class="thought-kind">Ivanhoe, p. 198</small></td>
 </tr>
-<tr class="thought-row" data-thinker="laozi" id="laozi-small-fish">
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-small-fish">
 <td data-label="Thinker"><strong>Laozi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-small-fish">Cooking small fish</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Governing a large state is compared to cooking delicate fish.</td>
 <td data-label="What it helps argue">A common reading: restrained government avoids damaging what it seeks to nourish through excessive handling.</td>
-<td data-label="Passage"><a href="https://ctext.org/dao-de-jing/zh">Daodejing 60</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 60</a><small class="thought-kind">Ivanhoe, p. 200</small></td>
 </tr>
-<tr class="thought-row" data-thinker="zhuangzi" id="zhuangzi-butterfly-dream">
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-sea-valleys">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-sea-valleys">The sea below the valleys</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Rivers and the sea receive the valleys’ waters because they occupy the lower position.</td>
+<td data-label="What it helps argue">Leaders gain authority by placing themselves below and behind the people, rather than competing with them.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 66</a><small class="thought-kind">Ivanhoe, p. 204</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-soft-living">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-soft-living">Soft bodies, stiff corpses, breaking trees</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Living bodies are soft; corpses are rigid. An overly rigid tree breaks.</td>
+<td data-label="What it helps argue">Flexibility belongs to life; apparent hardness can signal fragility and decline.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 76</a><small class="thought-kind">Ivanhoe, pp. 207–208</small></td>
+</tr>
+<tr class="thought-row" data-thinker="laozi" data-coverage="course" id="laozi-small-community">
+<td data-label="Thinker"><strong>Laozi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#laozi-small-community">Small communities that never visit</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">A small population leaves labor-saving tools unused; neighbors hear one another’s animals but never visit.</td>
+<td data-label="What it helps argue">An ideal of local contentment challenges expansion, technological ambition, and restless travel.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1OQQA2ZIZEfZrHWueWSEc8zKFTQfzJLU1/view">Daodejing 80</a><small class="thought-kind">Ivanhoe, pp. 209–210</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-useless-tree">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-useless-tree">Useless tree</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">A nimble weasel dies in a trap; a crooked tree escapes the carpenter and offers a place to rest.</td>
+<td data-label="What it helps argue">Conventional usefulness can endanger life; apparent uselessness can protect freedom.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 1</a><small class="thought-kind">Kjellberg, p. 229</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-giant-bird" data-search="Kun Peng Minnow Breeze cicada dove quail bird">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-giant-bird">Giant bird and small creatures</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">A giant fish, Kun (Minnow), becomes Peng (Breeze). Small flyers mock its journey; short-lived mushrooms and insects cannot know longer cycles.</td>
+<td data-label="What it helps argue">Limited experience can make other lives seem absurd; scale and lifespan shape what a creature can understand.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 1</a><small class="thought-kind">Kjellberg, pp. 224–225</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-giant-gourds">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-giant-gourds">Giant gourds</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">Huizi smashes enormous gourds that fail as containers and ladles; Zhuangzi proposes using them as floats.</td>
+<td data-label="What it helps argue">Usefulness depends on imagination and context; familiar purposes can conceal new possibilities.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 1</a><small class="thought-kind">Kjellberg, pp. 228–229</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-butterfly-dream">
 <td data-label="Thinker"><strong>Zhuangzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-butterfly-dream">Butterfly dream</a><small class="thought-kind">Thought experiment</small></th>
 <td data-label="What happens">Zhou dreams he is a butterfly; awake, he wonders whether he is a butterfly dreaming he is Zhou.</td>
 <td data-label="What it helps argue">Questions certainty about identity and perspective; evokes the transformation of things.</td>
-<td data-label="Passage"><a href="https://ctext.org/zhuangzi/adjustment-of-controversies/ens">Zhuangzi 2</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 2</a><small class="thought-kind">Kjellberg, p. 238</small></td>
 </tr>
-<tr class="thought-row" data-thinker="zhuangzi" id="zhuangzi-cook-ding">
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-pipes-wind">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-pipes-wind">Wind and the ten thousand pipes</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">One wind blows through differently shaped hollows, producing many distinct sounds.</td>
+<td data-label="What it helps argue">Different forms yield different voices; the image invites reflection on how perspectives arise without a single imposed voice.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 2</a><small class="thought-kind">Kjellberg, pp. 229–230</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-species-standards">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-species-standards">Whose home, taste, or beauty?</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Humans, eels, and monkeys prefer different homes; animals eat different foods and flee women celebrated as beautiful.</td>
+<td data-label="What it helps argue">Human standards are not automatically universal; judgments arise from particular forms of life.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 2</a><small class="thought-kind">Kjellberg, p. 236</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-neutral-judge">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-neutral-judge">Who can judge the dispute?</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">A proposed judge already agrees or disagrees with the disputants. Choosing another person does not by itself settle who is right.</td>
+<td data-label="What it helps argue">Winning an argument or appointing a judge cannot simply be assumed to establish an independent standard of truth.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 2</a><small class="thought-kind">Kjellberg, p. 238</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-cook-ding">
 <td data-label="Thinker"><strong>Zhuangzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-cook-ding">Cook Ding</a><small class="thought-kind">Parable</small></th>
 <td data-label="What happens">His knife follows the spaces within an ox’s joints, remaining sharp for years. At difficult joints, he slows down.</td>
 <td data-label="What it helps argue">Practiced responsiveness to a situation’s structure preserves both skill and life.</td>
-<td data-label="Passage"><a href="https://ctext.org/zhuangzi/nourishing-the-lord-of-life">Zhuangzi 3</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 3</a><small class="thought-kind">Kjellberg, pp. 239–240</small></td>
 </tr>
-<tr class="thought-row" data-thinker="zhuangzi" id="zhuangzi-useless-tree">
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-hundun">
 <td data-label="Thinker"><strong>Zhuangzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-useless-tree">Useless tree</a><small class="thought-kind">Parable</small></th>
-<td data-label="What happens">A crooked tree escapes the carpenter and offers a place to rest.</td>
-<td data-label="What it helps argue">Conventional usefulness can endanger life; apparent uselessness can protect freedom.</td>
-<td data-label="Passage"><a href="https://ctext.org/zhuangzi/enjoyment-in-untroubled-ease">Zhuangzi 1</a></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-hundun">Hundun / All-full (Chaos)</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">Two rulers repay Hundun’s kindness by boring seven human openings into him; he dies.</td>
+<td data-label="What it helps argue">Imposing supposedly beneficial standards can destroy another being’s way of life.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 7</a><small class="thought-kind">Kjellberg, p. 256</small></td>
 </tr>
-<tr class="thought-row" data-thinker="zhuangzi" id="zhuangzi-happy-fish">
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-mirror-heart">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-mirror-heart">Heart-mind as a mirror</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">The perfected person’s heart-mind responds like a mirror, reflecting what comes without holding on to it.</td>
+<td data-label="What it helps argue">Receptive, adaptable action avoids clinging to preconceptions and possessions; emptiness need not mean inactivity.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 7</a><small class="thought-kind">Kjellberg, p. 256</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-happy-fish">
 <td data-label="Thinker"><strong>Zhuangzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-happy-fish">Happiness of fish</a><small class="thought-kind">Dialogue</small></th>
 <td data-label="What happens">Huizi challenges Zhuangzi’s claim to know that swimming fish are happy.</td>
 <td data-label="What it helps argue">Explores how we know other beings’ experiences and the limits of argumentative certainty.</td>
-<td data-label="Passage"><a href="https://ctext.org/zhuangzi/floods-of-autumn/zh">Zhuangzi 17</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 17</a><small class="thought-kind">Kjellberg, pp. 260–261</small></td>
 </tr>
-<tr class="thought-row" data-thinker="zhuangzi" id="zhuangzi-hundun">
-<td data-label="Thinker"><strong>Zhuangzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-hundun">Hundun / Chaos</a><small class="thought-kind">Parable</small></th>
-<td data-label="What happens">Two rulers repay Hundun’s kindness by boring seven human openings into him; he dies.</td>
-<td data-label="What it helps argue">Imposing supposedly beneficial standards can destroy another being’s way of life.</td>
-<td data-label="Passage"><a href="https://ctext.org/zhuangzi/normal-course-for-rulers-and-kings">Zhuangzi 7</a></td>
-</tr>
-<tr class="thought-row" data-thinker="zhuangzi" id="zhuangzi-turtle">
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-turtle">
 <td data-label="Thinker"><strong>Zhuangzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-turtle">Turtle in the mud</a><small class="thought-kind">Parable</small></th>
 <td data-label="What happens">Offered office, Zhuangzi asks whether a turtle would prefer honored bones or life in the mud.</td>
 <td data-label="What it helps argue">Living freely can be worth more than prestigious political service.</td>
-<td data-label="Passage"><a href="https://ctext.org/zhuangzi/floods-of-autumn/zh">Zhuangzi 17</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 17</a><small class="thought-kind">Kjellberg, p. 260</small></td>
 </tr>
-<tr class="thought-row" data-thinker="xunzi" id="xunzi-crooked-wood">
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-frog-well">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-frog-well">Frog in the collapsed well</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">A frog boasts about its well until a sea turtle, too large to enter, describes the ocean.</td>
+<td data-label="What it helps argue">A familiar world can feel complete until a wider perspective exposes its limits.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 17</a><small class="thought-kind">Kjellberg, pp. 259–260</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-wife-tub">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-wife-tub">Singing after his wife’s death</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">After first grieving, Zhuangzi beats a tub and sings, understanding his wife’s death as another transformation like the seasons.</td>
+<td data-label="What it helps argue">Seeing death within continuing transformation can alter mourning; the story explicitly acknowledges his initial grief.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 18</a><small class="thought-kind">Kjellberg, p. 261</small></td>
+</tr>
+<tr class="thought-row" data-thinker="zhuangzi" data-coverage="course" id="zhuangzi-predator-chain">
+<td data-label="Thinker"><strong>Zhuangzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#zhuangzi-predator-chain">Cicada, mantis, magpie, and hunter</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">Zhuangzi pursues a magpie hunting a mantis stalking a cicada—then is chased by the grove’s warden.</td>
+<td data-label="What it helps argue">Fixation on an attractive prize can hide one’s own vulnerability; even Zhuangzi can become entangled.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1l-Jgd-W5RVkhGuOjMN8NmjuGqh2j_1w0/view">Zhuangzi 20</a><small class="thought-kind">Kjellberg, p. 263</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-crooked-wood" data-search="crooked wood dull metal shaping frame steaming bending wheel">
 <td data-label="Thinker"><strong>Xunzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-crooked-wood">Crooked wood and dull metal</a><small class="thought-kind">Metaphor</small></th>
-<td data-label="What happens">Wood needs straightening; metal needs sharpening.</td>
-<td data-label="What it helps argue">Teachers, ritual, and deliberate practice transform our untrained dispositions.</td>
-<td data-label="Passage"><a href="https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf">Xunzi 23</a></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-crooked-wood">Shaping wood and sharpening metal</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Crooked wood is straightened, a straight beam bent into a lasting wheel, and dull metal sharpened.</td>
+<td data-label="What it helps argue">Teaching, ritual, and deliberate practice can produce lasting changes in dispositions; improvement need not leave the original material unchanged.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 1, 23</a><small class="thought-kind">Hutton, pp. 270–271, 310</small></td>
 </tr>
-<tr class="thought-row" data-thinker="xunzi" id="xunzi-blue-dye">
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-blue-dye">
 <td data-label="Thinker"><strong>Xunzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-blue-dye">Blue dye and ice</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">Dye exceeds its plant’s color; ice is colder than water.</td>
 <td data-label="What it helps argue">Learning can transform people beyond their original condition.</td>
-<td data-label="Passage"><a href="https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf">Xunzi 1</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 1</a><small class="thought-kind">Hutton, p. 270</small></td>
 </tr>
-<tr class="thought-row" data-thinker="xunzi" id="xunzi-potter">
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-small-steps">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-small-steps">Small steps and accumulating streams</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Earth accumulates into a mountain and water into a deep pool; long journeys and rivers depend on small steps and streams.</td>
+<td data-label="What it helps argue">Moral achievement comes through accumulated, sustained practice.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 1</a><small class="thought-kind">Hutton, pp. 271–272</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-crying-children">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-crying-children">Same infant cries, different customs</a><small class="thought-kind">Example</small></th>
+<td data-label="What happens">Children begin with the same cries but grow up with different customs through teaching.</td>
+<td data-label="What it helps argue">Education and social surroundings shape conduct; acquired differences should not simply be treated as inborn.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 1</a><small class="thought-kind">Hutton, pp. 270–271</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-chariot-boat">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-chariot-boat">Chariot and horses; boat and oars</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A rider travels far without better feet; a passenger crosses water without becoming a swimmer.</td>
+<td data-label="What it helps argue">Learning includes using external resources and supports well; cultivated ability need not come from exceptional birth.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 1</a><small class="thought-kind">Hutton, p. 271</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-nags-carving">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-nags-carving">Old nags and persistent carving</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A fine horse’s single leap is limited; a nag’s continued travel and carving that cuts metal and stone show what persistence achieves.</td>
+<td data-label="What it helps argue">Persistence and accumulated effort can achieve what a brief display of talent cannot.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 1</a><small class="thought-kind">Hutton, pp. 271–272</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-oxen-horses">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-oxen-horses">Humans commanding oxen and horses</a><small class="thought-kind">Comparison</small></th>
+<td data-label="What happens">Humans are weaker than oxen and slower than horses, yet put both to use.</td>
+<td data-label="What it helps argue">Cooperation organized through shared standards, roles, and divisions gives human communities their strength.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 9</a><small class="thought-kind">Hutton, p. 281</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-boat-water">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-boat-water">Ruler as boat, people as water</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Water carries a boat but can also overturn it; Xunzi applies the received saying to rulers and common people.</td>
+<td data-label="What it helps argue">The ruler’s security depends on governing fairly and caring for the people whose support sustains the state.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 9</a><small class="thought-kind">Hutton, Complete Text, p. 70</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-human-omens">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-human-omens">Falling stars and human ill omens</a><small class="thought-kind">Comparison</small></th>
+<td data-label="What happens">People fear falling stars and groaning trees, while neglected fields and disordered government bring famine.</td>
+<td data-label="What it helps argue">The dangers to address arise from human mismanagement, not a supposed moral message in unusual natural events.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 17</a><small class="thought-kind">Hutton, p. 285</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-rain-sacrifice">
+<td data-label="Thinker"><strong>Xunzi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-rain-sacrifice">Rain after a rain sacrifice</a><small class="thought-kind">Causal test</small></th>
+<td data-label="What happens">Rain falls after a sacrifice, but it also falls without one. Xunzi retains the ritual while rejecting the proposed causal explanation.</td>
+<td data-label="What it helps argue">Ritual gives human affairs proper form; its value need not depend on controlling the weather.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 17</a><small class="thought-kind">Hutton, p. 286</small></td>
+</tr>
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-potter">
 <td data-label="Thinker"><strong>Xunzi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-potter">Potter and clay</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">A potter deliberately makes a vessel from clay.</td>
 <td data-label="What it helps argue">Sages create ritual and moral standards through cultivated activity, rather than receiving them as spontaneous products of inborn nature.</td>
-<td data-label="Passage"><a href="https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf">Xunzi 23</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 23</a><small class="thought-kind">Hutton, p. 312</small></td>
 </tr>
-<tr class="thought-row" data-thinker="xunzi" id="xunzi-small-steps">
+<tr class="thought-row" data-thinker="xunzi" data-coverage="course" id="xunzi-walking-world">
 <td data-label="Thinker"><strong>Xunzi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-small-steps">Small steps and accumulating streams</a><small class="thought-kind">Metaphor</small></th>
-<td data-label="What happens">Long journeys require individual steps; rivers gather small streams.</td>
-<td data-label="What it helps argue">Moral achievement comes through accumulated, sustained practice.</td>
-<td data-label="Passage"><a href="https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf">Xunzi 1</a></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#xunzi-walking-world">Feet that could walk the world</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A person has feet capable of walking anywhere, although nobody actually walks everywhere.</td>
+<td data-label="What it helps argue">The capacity to become a sage is distinct from realizing it: universal potential does not make achievement automatic.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1LcgBOfcWDZgdmHDnDAIw9LMDbMGlualJ/view">Xunzi 23</a><small class="thought-kind">Hutton, p. 317</small></td>
 </tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-two-handles">
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-ministers-polishing">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-ministers-polishing">Ministers carving and polishing themselves</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">When a ruler reveals his desires, ministers reshape their presentation to match what he wants.</td>
+<td data-label="What it helps argue">Keeping preferences hidden makes flattery harder and helps the ruler assess ministers by their work.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 5</a><small class="thought-kind">Harris, pp. 324–325</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-ink-line">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-ink-line">The ink line and crooked wood</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">A carpenter’s marking line stays straight instead of bending around crooked wood.</td>
+<td data-label="What it helps argue">Legal standards should not bend for noble status: powerful ministers face punishment, and commoners can earn rewards.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 6</a><small class="thought-kind">Harris, pp. 332–333</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-two-handles">
 <td data-label="Thinker"><strong>Han Feizi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-two-handles">Two handles; tiger’s claws and teeth</a><small class="thought-kind">Metaphor</small></th>
 <td data-label="What happens">A tiger surrendering its weapons to a dog becomes vulnerable.</td>
 <td data-label="What it helps argue">The ruler must retain control over rewards and punishments.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=31">Han Feizi 7</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 7</a><small class="thought-kind">Harris, p. 333</small></td>
 </tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-rabbit-stump">
-<td data-label="Thinker"><strong>Han Feizi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-rabbit-stump">Rabbit and tree stump</a><small class="thought-kind">Parable</small></th>
-<td data-label="What happens">A farmer abandons farming after one rabbit accidentally dies against a tree.</td>
-<td data-label="What it helps argue">Policies must fit present conditions; copying ancient successes mechanically is foolish.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=325">Han Feizi 49</a></td>
-</tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-spear-shield">
-<td data-label="Thinker"><strong>Han Feizi</strong></td>
-<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-spear-shield">Spear and shield</a><small class="thought-kind">Parable</small></th>
-<td data-label="What happens">A seller advertises an impenetrable shield and an all-piercing spear.</td>
-<td data-label="What it helps argue">Incompatible claims cannot both stand; Han Feizi challenges inconsistent political praise.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=254">Han Feizi 36</a></td>
-</tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-cap-robe">
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-cap-robe">
 <td data-label="Thinker"><strong>Han Feizi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-cap-robe">Cap keeper and robe keeper</a><small class="thought-kind">Parable</small></th>
 <td data-label="What happens">The cap keeper covers a sleeping ruler; both officials are punished.</td>
 <td data-label="What it helps argue">Officials must fulfill defined responsibilities without neglect or unauthorized interference.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=32">Han Feizi 7</a></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 7</a><small class="thought-kind">Harris, p. 335</small></td>
 </tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-carriages-coffins">
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-fame-profit">
 <td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-fame-profit">Persuading someone who wants fame—or profit</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">An adviser tries promises of reputation or wealth on rulers with different public and private motives.</td>
+<td data-label="What it helps argue">Persuasion depends on understanding the hearer’s aims and self-image, not simply on knowing the facts or arguing clearly.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 12</a><small class="thought-kind">Harris, pp. 336–338</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-half-eaten-peach">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-half-eaten-peach">Mi Zixia: borrowed carriage and half-eaten peach</a><small class="thought-kind">Story</small></th>
+<td data-label="What happens">A ruler first praises Mi Zixia’s unauthorized carriage ride and shared peach, then condemns the same acts after affection fades.</td>
+<td data-label="What it helps argue">Personal favor can reverse judgments of unchanged conduct; advisers cannot assume that correctness protects them from a ruler’s changing feelings.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 12</a><small class="thought-kind">Harris, pp. 339–340</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-inverted-scales" data-search="reverse reversed scales">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-inverted-scales">The dragon’s inverted scales</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A dragon can be ridden, but touching the reversed scales beneath its throat provokes a deadly response.</td>
+<td data-label="What it helps argue">Persuaders must recognize a ruler’s dangerous sensitivities; access and familiarity do not guarantee safety.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 12</a><small class="thought-kind">Harris, p. 340</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="further" id="han-feizi-carriages-coffins">
+<td data-label="Thinker"><strong>Han Feizi</strong><small>Further example</small></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-carriages-coffins">Carriage makers and coffin makers</a><small class="thought-kind">Analogy</small></th>
 <td data-label="What happens">One hopes customers prosper; the other benefits when people die.</td>
 <td data-label="What it helps argue">Incentives shape conduct; apparent kindness or cruelty may reflect material interests.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=86">Han Feizi 17</a></td>
+<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=86">Han Feizi 17</a><small class="thought-kind">Liao, PDF p. 86</small></td>
 </tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-straight-arrows">
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-landowner-workers">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-landowner-workers">The landowner and hired field workers</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A landowner offers good food and pay to secure diligent labor; workers labor hard to obtain those benefits.</td>
+<td data-label="What it helps argue">Aligned interests can sustain cooperation without affection, while frustrated expectations can produce resentment even between parents and children.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 32</a><small class="thought-kind">Harbsmeier, vol. 2, pp. 562–563; hf 32.3.1</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-spear-shield">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-spear-shield">Spear and shield</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">A seller claims his shield stops everything and his spear pierces everything, but cannot say what happens when they meet.</td>
+<td data-label="What it helps argue">Claims of unstoppable moral worth and positional power that stops everything cannot both hold; the story exposes a contradiction in the chapter’s political debate.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 40</a><small class="thought-kind">Harris, pp. 351–352</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-dragon-clouds">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-dragon-clouds">Dragons on clouds; snakes on mist</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">A flying dragon and winged snake lose their extraordinary powers when the clouds and mist supporting them disperse.</td>
+<td data-label="What it helps argue">Shen Dao, quoted here, uses this image to explain dependence on positional power; the chapter debates how far that claim can go.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 40</a><small class="thought-kind">Harris, p. 348</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-yao-jie">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-yao-jie">Yao without office; Jie on the throne</a><small class="thought-kind">Comparison</small></th>
+<td data-label="What happens">The virtuous Yao as a commoner cannot command even a few people; the tyrant Jie can disrupt the world as ruler.</td>
+<td data-label="What it helps argue">Moral worth and power to command differ. Han Feizi’s reply advocates law-supported authority for ordinary rulers rather than dependence on exceptional sages.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 40</a><small class="thought-kind">Harris, pp. 348, 351–352</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-sons-daughters">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-sons-daughters">Sons, daughters, and parental calculation</a><small class="thought-kind">Example</small></th>
+<td data-label="What happens">Han Feizi describes parents celebrating a son’s birth but killing a daughter, explaining the contrast through expected future benefit.</td>
+<td data-label="What it helps argue">He argues that even family relations can involve calculations of advantage, challenging reliance on affection to secure political obedience.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 46</a><small class="thought-kind">Harbsmeier, vol. 2, pp. 897–898; hf 46.3</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-mother-teacher-doctor">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-mother-teacher-doctor">The loving mother, teacher, and doctor</a><small class="thought-kind">Analogy</small></th>
+<td data-label="What happens">A loving mother sends a misbehaving child to a teacher and a seriously ill child to a doctor.</td>
+<td data-label="What it helps argue">Love alone does not supply the discipline or expertise needed to protect a child; Han Feizi questions making affection the basis of government.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 47</a><small class="thought-kind">Harris, p. 356</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-rabbit-stump">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-rabbit-stump">Rabbit and tree stump</a><small class="thought-kind">Parable</small></th>
+<td data-label="What happens">A farmer abandons farming after one rabbit accidentally dies against a tree.</td>
+<td data-label="What it helps argue">Policies must fit present conditions; copying ancient successes mechanically is foolish.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 49</a><small class="thought-kind">Harris, p. 358</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-nests-fire">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-nests-fire">Nests and fire drills in the wrong age</a><small class="thought-kind">Historical analogy</small></th>
+<td data-label="What happens">Sages invent shelters or ways to make fire for urgent needs; repeating those solutions in later ages would invite ridicule.</td>
+<td data-label="What it helps argue">Successful methods answer particular conditions. Their ancient prestige does not make them suitable for every later problem.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 49</a><small class="thought-kind">Harris, p. 357</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-five-sons">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-five-sons">Five sons become twenty-five grandsons</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Five sons each have five sons; population expands while available goods become scarce.</td>
+<td data-label="What it helps argue">Han Feizi explains growing conflict through changing material conditions, challenging the assumption that ancient peace proves superior virtue.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 49</a><small class="thought-kind">Harris, p. 358</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-five-vermin">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-five-vermin">Five vermin of the state</a><small class="thought-kind">Metaphor</small></th>
+<td data-label="What happens">Scholars, persuaders, private swordsmen, those evading battle, and merchants/artisans are compared to pests consuming the state.</td>
+<td data-label="What it helps argue">He condemns activities he presents as diverting effort or authority from law, farming, and warfare—a political judgment, not a neutral description of these groups.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 49</a><small class="thought-kind">Harris, p. 371</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-straight-arrows">
 <td data-label="Thinker"><strong>Han Feizi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-straight-arrows">Straight arrows and round wheels</a><small class="thought-kind">Analogy</small></th>
 <td data-label="What happens">Craftspeople straighten arrow shafts and shape wheels instead of waiting for naturally perfect wood.</td>
 <td data-label="What it helps argue">Reliable laws, rewards, and punishments govern ordinary people; a state cannot depend on rare, spontaneous goodness.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=340">Han Feizi 50</a><small class="thought-kind">Course anthology, pp. 376–377</small></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 50</a><small class="thought-kind">Harris, pp. 376–377</small></td>
 </tr>
-<tr class="thought-row" data-thinker="han-feizi" id="han-feizi-child-boil">
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-child-boil" data-search="popping a child&#x27;s boil abscess opening">
 <td data-label="Thinker"><strong>Han Feizi</strong></td>
 <th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-child-boil">Lancing a child’s boil</a><small class="thought-kind">Analogy</small></th>
 <td data-label="What happens">A child is held still while its caring mother lances a boil. It cries at the pain, unable to understand the benefit.</td>
 <td data-label="What it helps argue">Han Feizi compares the people to the child: their resistance does not, he argues, disprove the benefit of harsh laws, taxes, or military service.</td>
-<td data-label="Passage"><a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf#page=341">Han Feizi 50</a><small class="thought-kind">Course anthology, p. 378</small></td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 50</a><small class="thought-kind">Harris, p. 378</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-absent-founders">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-absent-founders">Dead founders and rival heirs</a><small class="thought-kind">Thought experiment</small></th>
+<td data-label="What happens">Eight Confucian branches and three Mohist branches disagree, yet each claims authenticity; their dead founders cannot settle the dispute.</td>
+<td data-label="What it helps argue">Claims of ancient authority need evidence. Invoking a founder does not resolve disagreement over what that founder actually taught.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 50</a><small class="thought-kind">Harris, pp. 371–372</small></td>
+</tr>
+<tr class="thought-row" data-thinker="han-feizi" data-coverage="course" id="han-feizi-competing-funerals">
+<td data-label="Thinker"><strong>Han Feizi</strong></td>
+<th scope="row" data-label="Image or experiment"><a class="thought-permalink" href="#han-feizi-competing-funerals">Frugal funeral or filial funeral?</a><small class="thought-kind">Comparison</small></th>
+<td data-label="What happens">Rulers honor brief, inexpensive Mohist mourning as frugal and prolonged, costly Confucian mourning as filial.</td>
+<td data-label="What it helps argue">Han Feizi challenges rulers who praise incompatible standards without deciding which conduct they will actually reward.</td>
+<td data-label="Passage"><a href="https://drive.google.com/file/d/1jGRtjrEVOKVYaWWDIvEGGwEBOari86GY/view">Han Feizi 50</a><small class="thought-kind">Harris, p. 372</small></td>
 </tr>
 </tbody>
 </table>
@@ -233,15 +618,15 @@
 <footer class="thought-notes">
 <details class="thought-sources">
 <summary>Sources and reading notes</summary>
-<p>These entries are teaching paraphrases, not quotations. The final column links to source translations. Chapter titles and wording vary by edition; references identify the received texts.</p>
+<p>These are selected teaching paraphrases, not quotations or substitutes for the readings. “What it helps argue” is a concise interpretation. The chart includes thought experiments, metaphors, parables, and concrete comparisons; these categories overlap.</p>
+<p><strong>Read with the course packet:</strong> most passage links open the assigned translation. The page numbers below those links refer to the original books, not the packet’s PDF page count. “Further example” marks three retained examples outside the concentrated packets. Names vary by translation: Kjellberg’s Minnow and Breeze are Kun and Peng; his All-full is Hundun.</p>
 <ul>
-<li><strong>Mengzi:</strong> <a href="https://facultysites.vassar.edu/brvannor/mengzi.html">Bryan W. Van Norden’s selected translations (1997)</a> for 1A7, 2A2, and 2A6; <a href="https://ctext.org/mengzi/gaozi-i">James Legge’s translation at the Chinese Text Project</a> for 6A2 and 6A8. A and B denote the two halves of a book.</li>
-<li><strong>Laozi / Daodejing:</strong> <a href="https://ctext.org/dao-de-jing/ens">James Legge’s translation (1891)</a>, with <a href="https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2">Robert Eno’s teaching translation, version 1.4 (2010–2025)</a>, for the uncarved block. The advice to avoid overhandling small fish explains the metaphor; the chapter itself gives the comparison without spelling out that instruction.</li>
-<li><strong>Zhuangzi:</strong> James Legge’s translation at the <a href="https://ctext.org/zhuangzi">Chinese Text Project</a>. The butterfly and fish episodes invite competing interpretations; they do not simply prove that reality is illusion or settle the question of other minds. Cook Ding’s skill includes caution. This useless-tree entry follows chapter 1; the dream of Carpenter Shi and the tree is a different episode in chapter 4.</li>
-<li><strong>Xunzi:</strong> <a href="https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf">“Encouraging Learning”</a> and <a href="https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf">“Human Nature Is Evil”</a>, from <i>Sources of Chinese Tradition</i>, compiled by Wm. Theodore de Bary and Irene Bloom, 2nd ed., vol. 1 (1999), hosted by Columbia University’s Asia for Educators. These excerpts do not identify individual translators. The latter title does not mean people cannot become good: transformation through learning is central to the argument.</li>
-<li><strong>Han Feizi:</strong> <a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf">W. K. Liao, <i>The Complete Works of Han Fei Tzŭ</i></a>. Passage links include PDF page locations where supported. Liao calls the weapon in the familiar spear-and-shield story a halberd. The cap-and-robe episode reports both officials being punished without resolving differences in how translators describe the penalties. The arrows and child’s-boil entries were also checked against Eirik Lang Harris’s translation in Ivanhoe and Van Norden, eds., <i>Readings in Classical Chinese Philosophy</i>, 3rd ed., pp. 376–378, used in the current course packet. Their passage links open Liao’s translation; the printed page numbers identify the course anthology. The child analogy states Han Feizi’s defense of coercive government, not an endorsement of that argument.</li>
+<li><strong>Course anthology:</strong> Philip J. Ivanhoe and Bryan W. Van Norden, eds., <i>Readings in Classical Chinese Philosophy</i>, 3rd ed. (2023). Translators: Bryan W. Van Norden (Mengzi), Philip J. Ivanhoe (Laozi), Paul Kjellberg (Zhuangzi), Eric L. Hutton (Xunzi), and Eirik Lang Harris (Han Feizi).</li>
+<li><strong>Supplementary course sources:</strong> Irene Bloom, <i>Mencius</i> (2009); Eric L. Hutton, <i>Xunzi: The Complete Text</i> (2014); Christoph Harbsmeier, <i>Han Feizi: The Art of Statecraft in Early China</i>, vol. 2 (2025). Their names and page numbers identify passages added to the course packets.</li>
+<li><strong>Other translations:</strong> <a href="https://facultysites.vassar.edu/brvannor/mengzi.html">Van Norden’s selected Mengzi translations</a>; <a href="https://scholarworks.iu.edu/dspace/items/3b2ff74d-1038-4db6-86aa-715a4d5fbacd">Robert Eno’s complete Mengzi teaching translation</a>; <a href="https://scholarworks.iu.edu/dspace/items/d79d75bd-6464-4b8f-9fe8-efa076c36ea2">Eno’s Daodejing teaching translation</a>; <a href="https://ctext.org/zhuangzi">Zhuangzi at the Chinese Text Project</a>; Columbia’s <a href="https://afe.easia.columbia.edu/ps/cup/xunzi_encouraging_learning.pdf">Xunzi on learning</a> and <a href="https://afe.easia.columbia.edu/ps/cup/xunzi_human_nature.pdf">human nature</a>; <a href="https://cognitionandculture.net/wp-content/uploads/1939The-Complete-Works-of-Han-Fei-Tzu-A-Classic-of-Chinese-Political-Science-ebook.pdf">W. K. Liao’s complete Han Feizi</a>. Wording and pagination differ.</li>
 </ul>
-<p><strong>Compare carefully:</strong> water makes different arguments in Mengzi and Laozi. Mengzi emphasizes its natural direction; Laozi emphasizes its humility, softness, and efficacy.</p>
+<p><strong>Compare carefully:</strong> Mengzi’s water tends downward; Laozi’s water is yielding and effective; Xunzi’s water can carry or overturn the ruler’s boat. Han Feizi’s arrows concern reliable institutions rather than naturally good subjects. His child-and-boil analogy defends coercive government; the chart reports that argument without endorsing it.</p>
+<p>The butterfly dream and debate about fish invite competing interpretations. Cook Ding’s skill includes caution at difficult joints. Xunzi’s claim about bad human nature still allows everyone the capacity for moral improvement. Han Feizi’s spear-and-shield entry follows the assigned chapter 40 version; a related version appears in chapter 36.</p>
 </details>
 </footer>
 </main>
