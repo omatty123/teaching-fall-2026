@@ -1,0 +1,32 @@
+# New Orleans geography module source ledger
+
+Prepared October 4, 2026. Educational orientation for Blood Dazzler, opening reading pp. vii–24.
+
+## Geographic layers and coordinates
+
+- Basemap: OpenStreetMap Carto tiles, `https://tile.openstreetmap.org/{z}/{x}/{y}.png`. Live, contemporary data. WGS 84 coordinates displayed in Web Mercator (EPSG:3857). Attribution appears continuously on the map: © OpenStreetMap contributors, linked to https://www.openstreetmap.org/copyright. Data ODbL; standard tiles have their own usage policy: https://operations.osmfoundation.org/policies/tiles/. Browser default caching and Referer are retained. No tile prefetch, scraping, offline tile archive, or routing feature.
+- Neighborhood geometry: City of New Orleans, 2020 Census Neighborhood Statistical Areas Demographics layer, https://maps.nola.gov/server/rest/services/Census/Census_2020/MapServer/3 . Retrieved October 4, 2026. Requested only GNOCDC_LAB and polygon geometry for French Quarter, Lower Ninth Ward, Holy Cross, output EPSG:4326 with longitude/latitude order. Embedded geometry rounded to six decimal places, about 0.1 m in coordinate precision; underlying boundary accuracy is not claimed at that level. Source returned no explicit license or boundary-update timestamp. Credit the City of New Orleans; use as a reference statistical boundary. Source layer named for Census 2020, not as a reconstruction of 2005 geography.
+- Avoided older city neighborhood layer https://gis.nola.gov/arcgis/rest/services/apps/QoL_Boundaries/MapServer/2 because its metadata explicitly notes multiple errors.
+- Industrial Canal label anchor, Leaflet latitude/longitude: [29.9664805, -90.02675]. Exact coordinate published for the IHNC Lock canal-side gage by USACE: https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?d=7&dt=E&sid=76160 . Used only as an anchor for the extended canal's label, not as a breach site or character location. USACE geographic description: https://www.mvn.usace.army.mil/about/projects/ihnc-lock-replacement/ . It identifies the Industrial Canal/IHNC and its connection between Lake Pontchartrain and the Mississippi River.
+- Mississippi River label anchor [29.947, -90.060]: approximate water-feature label near the French Quarter; no exact point feature is claimed. Verified relative location using the National Park Service map and modern basemap. Source: https://www.nps.gov/jela/planyourvisit/upload/New-Orleans-area-map-with-French-Quarter-Visitor-Center-Barataria-Preserve-Chalmette-Battlefield-Natl-Cemetery-2014-map.pdf . Independent USACE river/lock coordinate (not displayed): [29.9644138, -90.0274333], https://rivergages.mvr.usace.army.mil/WaterControl/stationinfo2.cfm?sid=01340 . This distinction keeps the river separate from the canal.
+- Lake Pontchartrain label anchor [30.045, -90.075]: approximate label in southern lake water; no exact point feature is claimed. Verified using the NPS area map and USACE description above. Geographic reference for the south-shore West End gage, not displayed: [-90.115644, 30.022164] longitude/latitude in USACE CPRA material, https://www.mvn.usace.army.mil/Portals/56/App%20A%2C%20Annex%204%2C%20CPRA%20Coastal%20Master%20Plan-Attachment-C3-25.1-Storm%20Surge.pdf .
+- French Quarter label anchor [29.958, -90.064]: representative point inside the official city's French Quarter statistical polygon, not an address or the location of the unnamed tourists. NPS corroborating street map: https://www.nps.gov/jela/upload/FQ-Historic-Homes-and-Museums-080808-good-map-for-pdf.pdf .
+- Lower Ninth Ward label anchor [29.971, -90.011]: representative point inside official city statistical polygon, not a house, an unnamed character's location, or a levee-breach point. Modern statistical area shown separately from Holy Cross. The larger Ninth Ward must not be equated with this polygon. City planning map supporting separate neighborhood/ward context: https://nola.gov/nola/media/City-Planning/CZO/Citywide-Planning-Districts.pdf .
+- Superdome marker [29.951, -90.081]: approximate building center rounded to three decimals (not an entrance). Official venue address is 1500 Sugar Bowl Drive, New Orleans, LA 70112, https://www.caesarssuperdome.com/plan-your-visit/directions-parking . Official site plan: https://www.caesarssuperdome.com/assets/doc/TurfSpecialEventGuide2023-5d7d5b13aa.pdf . This is contextual: the poem titled “Superdome” is later, p.40, outside this opening reading.
+- Gulf context marker [29.958, -90.064]: the same representative French Quarter point used as a coarse New Orleans city locator. Not a city-boundary feature or hurricane track.
+
+## Interpretation and limits
+
+There are no hurricane-track, inundation, flood-depth, levee-breach, evacuation-route, or character-address layers. Modern basemap infrastructure and city statistical boundaries do not depict 2005 flood conditions. The woman “in the Ninth” on printed p.22 has no precise address: the Lower Ninth Ward map area is contextual rather than proof of her location. Holy Cross is shown separately because the city dataset treats it as a separate statistical neighborhood.
+
+## Failure behavior and interaction
+
+The full place-description list and primary map link remain readable without JavaScript, boundary APIs, or tile network service. Tile failures add a status message. Map drag/pinch starts disabled so the page can scroll over the map; Move map enables it and Finish moving/Escape disables it. Zoom controls and standard Leaflet keyboard controls remain available. All places are reachable through ordinary buttons. North is up; scale bar shows metric and US customary units. Reduced-motion preference disables view animation. The modern basemap is intentionally light even in a dark surrounding interface so roads and labels remain legible.
+
+## Vendor
+
+Leaflet 1.9.4 stable, official download reference https://leafletjs.com/download.html . Local demo files downloaded from the CDN listed in official Leaflet documentation. BSD-2-Clause license included with the site vendor assets. Production integration should reuse existing vendored site files.
+
+## Verification
+
+`node --check map.js` passed. Source GeoJSON contains three polygon features, all inside New Orleans, with coordinate order longitude/latitude. Representative neighborhood anchors checked against these polygons. Desktop/mobile visual review is separate from this source/geometry audit; see parent agent's final website verification.

@@ -1,0 +1,397 @@
+{
+  "title": "Blood Dazzler: opening poems",
+  "subtitle": "Patricia Smith · pp. vii–24",
+  "scope": {
+    "first": "Prologue—And Then She Owns You",
+    "last": "Voodoo II: Money",
+    "page_convention": "Printed book pages",
+    "exclude": "All of What to Tweak, beginning on p. 25"
+  },
+  "frequency": {
+    "title": "Repeated words",
+    "lead": "These are ten frequently repeated words worth tracking. Frequency tells us what returns; interpretation explains what changes.",
+    "words": [
+      {
+        "word": "rain",
+        "count": 15,
+        "pages": "viii, 7, 8, 11, 15, 16, 20",
+        "note": "Ordinary weather becomes something familiar, beautiful, or dangerous; repetition also shapes Ghazal."
+      },
+      {
+        "word": "go",
+        "count": 11,
+        "pages": "viii, 7, 10, 13, 14, 16",
+        "note": "A repeated instruction means different things to people with different choices."
+      },
+      {
+        "word": "little",
+        "count": 11,
+        "pages": "viii, 6, 8, 13, 15, 16, 21",
+        "note": "Small possessions, pleasures, bodies, and comforts face a much larger storm."
+      },
+      {
+        "word": "water",
+        "count": 10,
+        "pages": "1, 7, 10, 18, 19, 20, 23",
+        "note": "Necessary water and threatening water recur together."
+      },
+      {
+        "word": "know",
+        "count": 8,
+        "pages": "4, 7, 10, 11, 12, 16, 24",
+        "note": "Speakers claim knowledge, question it, or confront what they cannot predict."
+      },
+      {
+        "word": "name",
+        "count": 7,
+        "pages": "vii, 3, 11, 13, 17",
+        "note": "A name can identify a place, confer power, or claim authority."
+      },
+      {
+        "word": "purple",
+        "count": 7,
+        "pages": "7, 15, 19, 20",
+        "note": "A familiar hat color becomes a storm color and the color of a sound."
+      },
+      {
+        "word": "eye",
+        "count": 6,
+        "pages": "1, 4, 11, 14",
+        "note": "The storm feature becomes a hungry observer."
+      },
+      {
+        "word": "sound",
+        "count": 6,
+        "pages": "4, 19, 20",
+        "note": "A storm can be heard before it is understood; repeated sound becomes color."
+      },
+      {
+        "word": "house",
+        "count": 6,
+        "pages": "7, 8, 13",
+        "note": "A home is both a structure and a life made there."
+      }
+    ],
+    "pronouns": [
+      {
+        "word": "my",
+        "count": 38
+      },
+      {
+        "word": "it",
+        "count": 37
+      },
+      {
+        "word": "you",
+        "count": 33
+      },
+      {
+        "word": "your",
+        "count": 24
+      },
+      {
+        "word": "i",
+        "count": 24
+      },
+      {
+        "word": "we",
+        "count": 19
+      },
+      {
+        "word": "he",
+        "count": 18
+      },
+      {
+        "word": "she",
+        "count": 11
+      }
+    ],
+    "pronoun_note": "Pronouns also recur often. Each new poem can change who I, my, you, we, she, or it refers to.",
+    "method": "3,117 words in the poem bodies on pp. vii–24. Titles, headnotes, epigraphs, timestamps, and page numbers are excluded. Capitalization is ignored; contractions and hyphenated words remain intact; straight and curly apostrophes are treated alike. These are selected exact-word counts, not totals for word families."
+  },
+  "key_words": [
+    {
+      "cluster": "rain · water",
+      "pages": "viii, 1, 10, 15–16, 18–20, 23",
+      "student": "Water can attract, sustain, delight, or destroy. Identify the speaker before deciding what it means."
+    },
+    {
+      "cluster": "Go · leave · run",
+      "pages": "viii, 7, 10, 13–14",
+      "student": "A command to leave does not supply transport, a destination, or a reason to trust the warning. Compare the people who hear it."
+    },
+    {
+      "cluster": "house · home · own · money",
+      "pages": "vii–viii, 7–8, 10, 13, 24",
+      "student": "A house holds inheritance, food, routine, and belongings. Money changes the choices available to its owner."
+    },
+    {
+      "cluster": "name · word · language",
+      "pages": "vii, 3, 5, 11–12, 23",
+      "student": "Naming Katrina gives the storm a speaking identity. Words later struggle to communicate what people need."
+    },
+    {
+      "cluster": "I · my · we · you · she · it",
+      "pages": "vii–viii, 1–5, 7–8, 13, 18, 22–23",
+      "student": "These words identify a point of view. Ask who speaks, who is addressed, and who is being described."
+    },
+    {
+      "cluster": "mouth · body · hunger · swallow",
+      "pages": "vii–viii, 1, 3–5, 9, 11–12, 19–21, 23",
+      "student": "Smith gives the city, storm, and buildings body parts. Compare their power with the exposed human and animal bodies."
+    },
+    {
+      "cluster": "eye · see · sound · voice · purple",
+      "pages": "vii–viii, 4–5, 15, 18–20, 22–23",
+      "student": "Seeing and hearing do not always produce understanding. Purple gives sound the language of color."
+    },
+    {
+      "cluster": "God · Lord · mercy · prayer",
+      "pages": "7, 9, 14–15, 17–18, 21, 23",
+      "student": "Religious words can express authority, hope, habit, or a question about protection. Identify which use appears in each poem."
+    },
+    {
+      "cluster": "black · white · dollar",
+      "pages": "7, 10, 13–14, 24",
+      "student": "Race and money shape warnings, movement, and the ways people are represented. Wealth is stated in “Inconvenient”; the speaker’s race is not."
+    }
+  ],
+  "characters": {
+    "lead": "An explicit character appears in the words of a poem. An implicit character is a person or institution we infer from an action, object, or system. The groups below keep separate unnamed speakers separate.",
+    "explicit": [
+      {
+        "name": "New Orleans",
+        "pages": "vii–viii, 6",
+        "role": "A personified city addressed as a woman. Visitors also appear in the city poems."
+      },
+      {
+        "name": "Katrina",
+        "pages": "1–5, 11–12, 18–20",
+        "role": "The hurricane becomes a speaking woman with a mouth, eye, appetite, and desire for recognition."
+      },
+      {
+        "name": "Residents who hear, question, or resist the warning",
+        "pages": "7–8, 14",
+        "role": "Different unnamed voices describe attachment to home, barriers to leaving, and confidence from surviving an earlier storm."
+      },
+      {
+        "name": "The man on television",
+        "pages": "7, 10",
+        "role": "An evacuation warning reaches people through his voice."
+      },
+      {
+        "name": "The affluent evacuee and husband",
+        "pages": "13",
+        "role": "An unnamed speaker narrates departure in a Lincoln toward another home; the speaker’s husband prepares the house."
+      },
+      {
+        "name": "Luther B, m’dear, and the departing household",
+        "pages": "10, 15, 21",
+        "role": "Luther B is the dog left tied to a tree. M’dear is remembered through her care, speech, and food."
+      },
+      {
+        "name": "B-boys, children, and mothers",
+        "pages": "16",
+        "role": "Children first treat rain as familiar; mothers later bring their lives onto rooftops."
+      },
+      {
+        "name": "The church community and its religious references",
+        "pages": "17; also 7, 15, 18, 21, 23",
+        "role": "A choir, elders, and a preacher appear on p. 17. God, Jesus, and the Lord are invoked across the poems."
+      },
+      {
+        "name": "President George Bush and the woman in the Ninth",
+        "pages": "22",
+        "role": "The president plays guitar while a woman voices abandonment. The headnote also names country singer Mark Willis (as printed)."
+      },
+      {
+        "name": "People on the roof and helicopter crews",
+        "pages": "23",
+        "role": "People signal, call for help, hold babies, and face rescue decisions. Aircraft noise competes with their words."
+      },
+      {
+        "name": "Tourists and unnamed sexual partners",
+        "pages": "vii–viii, 6, 9",
+        "role": "Visitors seek pleasure in the city. The love-spell poem gives desire a physical, potentially violent force."
+      },
+      {
+        "name": "Mutts, priestesses, and tree trunks",
+        "pages": "19–20",
+        "role": "They hear the first sound. Smith extends perception beyond the usual human witnesses."
+      }
+    ],
+    "implicit": [
+      {
+        "name": "Unseen camera workers and viewers",
+        "pages": "23; compare 22",
+        "role": "Cameras and judgments imply people who frame, circulate, and interpret the survivors’ images."
+      },
+      {
+        "name": "The people responsible for evacuation and protective infrastructure",
+        "pages": "7, 13, 18",
+        "role": "A warning and cracking levees imply decisions about movement, protection, and public responsibility."
+      },
+      {
+        "name": "Racially prejudiced viewers",
+        "pages": "23",
+        "role": "The focus on hair, jewelry, bodies, and speech suggests viewers who judge the survivors through stereotypes. This is an interpretation of the camera’s attention."
+      },
+      {
+        "name": "Ancestors subjected to deadly passage over water",
+        "pages": "18",
+        "role": "Water’s earlier passage toward death suggests historical memory, possibly the Middle Passage. No ancestor or historical event is named."
+      }
+    ]
+  },
+  "discussion": [
+    {
+      "title": "Map: place and movement",
+      "pages": "7, 13, 22",
+      "steps": [
+        "Locate the Mississippi River, Lake Pontchartrain, Industrial Canal, and Lower Ninth Ward.",
+        "Identify two obstacles to leaving in Man on the TV Say and two resources available in Inconvenient.",
+        "Explain one detail the map helps you understand and one detail it cannot tell you about either household."
+      ]
+    },
+    {
+      "title": "Photographs: signals from a roof",
+      "pages": "23",
+      "steps": [
+        "Describe two visible details in one roof photograph.",
+        "Match each detail to a word or action in Up on the Roof.",
+        "Identify one feeling, motive, or judgment in the poem that the photograph alone cannot prove."
+      ]
+    },
+    {
+      "title": "Video: who can hear whom",
+      "pages": "23",
+      "steps": [
+        "Describe the helicopter video’s camera position and one audible sound.",
+        "Find the passage in Up on the Roof where aircraft noise interferes with speech.",
+        "Explain how the poem’s you changes your position compared with the video camera’s position."
+      ]
+    },
+    {
+      "title": "Compare: the same command",
+      "pages": "7, 13",
+      "steps": [
+        "Read the first Go in each poem aloud.",
+        "Name the speaker, a resource, and an obstacle in each poem.",
+        "Explain one change in the command’s meaning using a detail from each poem."
+      ]
+    }
+  ],
+  "source_note": "Reading: Patricia Smith, Blood Dazzler (Coffee House Press, 2008), pp. vii–24. All page references use the book’s printed pages.",
+  "poems": [
+    {
+      "title": "Prologue: And Then She Owns You",
+      "pages": "vii–viii",
+      "voice": "A voice addressing a visitor; New Orleans is “she”."
+    },
+    {
+      "title": "5 p.m., Tuesday, August 23, 2005",
+      "pages": "1",
+      "voice": "Katrina: first-person storm voice."
+    },
+    {
+      "title": "11 a.m., Wednesday, August 24, 2005",
+      "pages": "3",
+      "voice": "Katrina receives her name."
+    },
+    {
+      "title": "5 p.m., Thursday, August 25, 2005",
+      "pages": "4",
+      "voice": "Katrina describes her eye."
+    },
+    {
+      "title": "7 p.m., Thursday, August 25, 2005",
+      "pages": "5",
+      "voice": "Katrina encounters land."
+    },
+    {
+      "title": "Why New Orleans Is",
+      "pages": "6",
+      "voice": "A collective tourist “we”."
+    },
+    {
+      "title": "Man on the TV Say",
+      "pages": "7",
+      "voice": "A resident answers the television warning."
+    },
+    {
+      "title": "Only Everything I Own",
+      "pages": "8",
+      "voice": "A homeowner describes an inherited house."
+    },
+    {
+      "title": "Voodoo I: Love and Passion",
+      "pages": "9",
+      "voice": "A voice describes sexual desire."
+    },
+    {
+      "title": "Won’t Be but a Minute",
+      "pages": "10",
+      "voice": "A household leaves Luther B behind."
+    },
+    {
+      "title": "8 a.m., Sunday, August 28, 2005",
+      "pages": "11",
+      "voice": "Katrina speaks at full strength."
+    },
+    {
+      "title": "Inconvenient",
+      "pages": "13",
+      "voice": "An affluent evacuee narrates departure."
+    },
+    {
+      "title": "Company’s Coming",
+      "pages": "14",
+      "voice": "A survivor of an earlier hurricane speaks."
+    },
+    {
+      "title": "The Dawn of Luther B’s Best Day",
+      "pages": "15",
+      "voice": "A narrator follows Luther B’s perceptions."
+    },
+    {
+      "title": "Ghazal",
+      "pages": "16",
+      "voice": "A witness moves among children, mothers, and others."
+    },
+    {
+      "title": "10:30 a.m., Sunday, August 28, 2005",
+      "pages": "17",
+      "voice": "A narrator observes the church congregation."
+    },
+    {
+      "title": "She Sees What It Sees",
+      "pages": "18",
+      "voice": "A narrator describes flooding through the ward."
+    },
+    {
+      "title": "What Was the First Sound",
+      "pages": "19–20",
+      "voice": "A repeating voice reconstructs the first sound."
+    },
+    {
+      "title": "Luther B Rides Out the Storm",
+      "pages": "21",
+      "voice": "A narrator follows Luther B, remembering m’dear."
+    },
+    {
+      "title": "Gettin’ His Twang On",
+      "pages": "22",
+      "voice": "A narrator contrasts Bush with a woman in the Ninth."
+    },
+    {
+      "title": "Up on the Roof",
+      "pages": "23",
+      "voice": "A voice addresses a rooftop survivor as “you”."
+    },
+    {
+      "title": "Voodoo II: Money",
+      "pages": "24",
+      "voice": "A voice questions money as protection."
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<section class="bd-map" aria-labelledby="bd-map-title">
+  <h2 id="bd-map-title">New Orleans: river, lake, and neighborhoods</h2>
+  <div class="bd-map-toolbar" aria-label="Map views">
+    <div class="bd-map-views" role="group" aria-label="Choose map scale">
+      <button type="button" data-bd-view="gulf" aria-pressed="false">Gulf coast</button>
+      <button type="button" data-bd-view="city" aria-pressed="true">New Orleans</button>
+      <button type="button" data-bd-view="ninth" aria-pressed="false">Lower Ninth area</button>
+    </div>
+    <button class="bd-map-move" type="button" aria-pressed="false" aria-controls="bd-new-orleans-map">Move map</button>
+  </div>
+  <p id="bd-map-help" class="bd-map-help">Choose a view, or select a place below. Select “Move map” to drag or pinch. Use the + and − controls to zoom.</p>
+  <div class="bd-map-frame">
+    <div id="bd-new-orleans-map" class="bd-map-canvas" aria-label="Interactive geographic map of New Orleans" aria-describedby="bd-map-help bd-map-method" data-interactive="false"></div>
+    <span class="bd-map-north" aria-hidden="true">↑ N</span>
+  </div>
+  <p class="bd-map-status" role="status" aria-live="polite">The place descriptions below remain available if the map cannot load.</p>
+  <div class="bd-map-legend" aria-label="Map legend"><span><i class="bd-swatch bd-swatch-quarter"></i>French Quarter</span><span><i class="bd-swatch bd-swatch-ninth"></i>Lower Ninth Ward statistical area</span><span><i class="bd-swatch bd-swatch-holy"></i>Holy Cross</span></div>
+  <div class="bd-map-places" aria-label="Places and geographic context">
+    <article><h3><button type="button" data-bd-place="river">Mississippi River</button></h3><p>The river bends around central New Orleans. Its water is distinct from the lake and canal.</p></article>
+    <article><h3><button type="button" data-bd-place="lake">Lake Pontchartrain</button></h3><p>The large body of water north of central New Orleans.</p></article>
+    <article><h3><button type="button" data-bd-place="canal">Industrial Canal</button></h3><p>Also called the Inner Harbor Navigation Canal. It connects the lake and river and lies west of the Lower Ninth Ward.</p></article>
+    <article><h3><button type="button" data-bd-place="quarter">French Quarter</button></h3><p>A historic neighborhood beside the river. Use it to orient the city; the opening poems do not give the tourists a street address.</p></article>
+    <article><h3><button type="button" data-bd-place="ninth">Lower Ninth Ward</button></h3><p>The shaded area follows the city’s statistical neighborhood boundary. The Ninth Ward is larger. The woman “in the Ninth” on p. 22 has no given address.</p></article>
+    <article><h3><button type="button" data-bd-place="dome">Superdome</button></h3><p>A context landmark west of the French Quarter. The poem “Superdome” appears later in the book, on p. 40.</p></article>
+  </div>
+  <p id="bd-map-method" class="bd-map-method">Modern geography for orientation. These are neighborhood outlines, not 2005 flood boundaries. Water labels identify broad features; they do not identify levee breaches or a character’s home.</p>
+  <details class="bd-map-sources"><summary>Map sources</summary><p>Basemap: <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>. Neighborhood geometry: <a href="https://maps.nola.gov/server/rest/services/Census/Census_2020/MapServer/3">City of New Orleans, 2020 Census neighborhood statistical areas</a>, retrieved October 4, 2026. Geographic checks: <a href="https://www.nps.gov/jela/planyourvisit/upload/New-Orleans-area-map-with-French-Quarter-Visitor-Center-Barataria-Preserve-Chalmette-Battlefield-Natl-Cemetery-2014-map.pdf">National Park Service area map</a>, <a href="https://www.mvn.usace.army.mil/about/projects/ihnc-lock-replacement/">USACE Industrial Canal description</a>, and <a href="https://www.caesarssuperdome.com/plan-your-visit/directions-parking">official Superdome address</a>. Coordinates use longitude/latitude degrees (WGS 84); the web basemap uses Web Mercator. North is up. <a href="https://www.openstreetmap.org/fixthemap">Report a basemap issue</a>.</p></details>
+  <noscript><p>JavaScript is required for the interactive map. Read the place descriptions above, or open the <a href="https://www.nps.gov/jela/planyourvisit/upload/New-Orleans-area-map-with-French-Quarter-Visitor-Center-Barataria-Preserve-Chalmette-Battlefield-Natl-Cemetery-2014-map.pdf">National Park Service map</a>.</p></noscript>
+</section>

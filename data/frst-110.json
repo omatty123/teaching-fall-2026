@@ -10836,8 +10836,18 @@
       "date": "2026-10-05",
       "unit": "smith",
       "topic": "Smith, Blood Dazzler",
-      "detail": "pp. vii–25",
-      "materials": []
+      "detail": "pp. vii–24",
+      "materials": [
+        {
+          "label": "Blood Dazzler: map, rescue footage, words, and characters",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-5.html"
+        },
+        {
+          "label": "Song: The River in Reverse",
+          "href": "https://lawrence.instructure.com/courses/14726/pages/song-of-the-day-the-river-in-reverse-elvis-costello-and-allen-toussaint",
+          "kind": "song"
+        }
+      ]
     },
     {
       "date": "2026-10-07",
