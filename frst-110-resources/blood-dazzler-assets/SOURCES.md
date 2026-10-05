@@ -4,9 +4,9 @@
 
 Patricia Smith, *Blood Dazzler* (Coffee House Press, 2008), printed pp. vii–24, from “Prologue: And Then She Owns You” through “Voodoo II: Money.” Monday excludes “What to Tweak,” which begins on p. 25. The complete copyrighted poems are not reproduced here.
 
-The counts cover 3,117 words in the poem bodies. Titles, headnotes, epigraphs, timestamps and page numbers are excluded. Capitalization is ignored. Straight and curly apostrophes are normalized; contractions and hyphenated words remain intact. Related forms remain separate. The extraction was checked against page images, including OCR corrections to first-person “I.” The selected content words are not a ranking of all words or of literary importance. Pronoun references and implicit characters require interpretation.
+The word graph uses six groups and 21 words selected for their roles in the assigned poems. Lines connect related images, actions, and points of view. These groups and connections are close-reading interpretations. Their positions and sizes carry no quantitative scale. Selecting a word shows a brief account and two poem/page examples. Examples are paraphrases; the money entry explicitly labels the p.13 use of dollar as a related contrast. Eye and eyes remain separate words. My and you are included because changing speakers and addressees change their meaning.
 
-The full counts are in [counts-vii-24.json](counts-vii-24.json). Page references and teaching summaries are in [reading-data.json](reading-data.json). The copyrighted source text is kept private.
+The graph’s evidence is in [word-connections.json](word-connections.json). Reading titles and speaker summaries are in [reading-data.json](reading-data.json). The prior frequency tables were removed from the page at the instructor’s request on October 5, 2026. Audited counts remain available in [counts-vii-24.json](counts-vii-24.json) for source checking: 3,117 words in poem bodies, excluding titles, headnotes, epigraphs, timestamps and page numbers. Capitalization is ignored; related forms remain separate. Full copyrighted source text remains private.
 
 ## Photographs
 

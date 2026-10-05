@@ -1,0 +1,604 @@
+{
+  "title": "Words that connect the poems",
+  "scope": "Patricia Smith, Blood Dazzler, pp. vii–24",
+  "intro": "Select a word to compare its uses in the poems.",
+  "link_note": "Lines show interpretive connections, not measured word co-occurrence.",
+  "count_note": "Counts refer to exact words in poem bodies. Capitalization is ignored; related forms remain separate. Counts exclude titles and headnotes.",
+  "clusters": [
+    {
+      "id": "water",
+      "label": "Rain and water",
+      "words": [
+        "rain",
+        "water",
+        "wind"
+      ]
+    },
+    {
+      "id": "home",
+      "label": "Home and resources",
+      "words": [
+        "house",
+        "home",
+        "my",
+        "money"
+      ]
+    },
+    {
+      "id": "movement",
+      "label": "Leaving",
+      "words": [
+        "go",
+        "leave",
+        "run"
+      ]
+    },
+    {
+      "id": "bodies",
+      "label": "Storm and bodies",
+      "words": [
+        "eye",
+        "mouth",
+        "bodies"
+      ]
+    },
+    {
+      "id": "perception",
+      "label": "Seeing and hearing",
+      "words": [
+        "eyes",
+        "see",
+        "sound",
+        "purple"
+      ]
+    },
+    {
+      "id": "authority",
+      "label": "Naming and address",
+      "words": [
+        "name",
+        "know",
+        "god",
+        "you"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "rain",
+      "word": "rain",
+      "cluster": "water",
+      "count": 15,
+      "summary": "Rain can be familiar and welcome before it becomes frightening. The same word carries the children’s play, an owner’s patience, and the storm’s change in scale.",
+      "examples": [
+        {
+          "poem": "Only Everything I Own",
+          "pages": "8",
+          "note": "The homeowner waits patiently for rain beside the inherited house."
+        },
+        {
+          "poem": "Ghazal",
+          "pages": "16",
+          "note": "Children approach familiar rain; later mothers carry their lives to rooftops."
+        }
+      ],
+      "characters": [
+        "The homeowner",
+        "Children",
+        "Mothers"
+      ]
+    },
+    {
+      "id": "water",
+      "word": "water",
+      "cluster": "water",
+      "count": 10,
+      "summary": "Water sustains life and threatens it. A household leaves drinking water for its dog; floodwater later reaches people stranded on a roof.",
+      "examples": [
+        {
+          "poem": "Won’t Be but a Minute",
+          "pages": "10",
+          "note": "Luther B is left bowls of water while the household evacuates."
+        },
+        {
+          "poem": "Up on the Roof",
+          "pages": "23",
+          "note": "Water rises toward the feet of people waiting for rescue."
+        }
+      ],
+      "characters": [
+        "Luther B",
+        "The departing household",
+        "People on the roof"
+      ]
+    },
+    {
+      "id": "wind",
+      "word": "wind",
+      "cluster": "water",
+      "count": 3,
+      "summary": "Wind becomes a perceptible force: it acquires color in one poem and becomes a wall against Luther B’s body in another.",
+      "examples": [
+        {
+          "poem": "What Was the First Sound",
+          "pages": "19–20",
+          "note": "Wind finds its color as the poem reconstructs the storm’s first sound."
+        },
+        {
+          "poem": "Luther B Rides Out the Storm",
+          "pages": "21",
+          "note": "Luther B presses his muzzle against a wall of wind."
+        }
+      ],
+      "characters": [
+        "Luther B",
+        "The storm"
+      ]
+    },
+    {
+      "id": "house",
+      "word": "house",
+      "cluster": "home",
+      "count": 6,
+      "summary": "A house can be the center of an inherited life or one property among several. The contrast changes what evacuation puts at risk.",
+      "examples": [
+        {
+          "poem": "Only Everything I Own",
+          "pages": "8",
+          "note": "The speaker identifies the house with a grandfather, garden, food, and daily routine."
+        },
+        {
+          "poem": "Inconvenient",
+          "pages": "13",
+          "note": "The affluent evacuee has a guest house, boat, car, and another home."
+        }
+      ],
+      "characters": [
+        "The homeowner",
+        "The affluent evacuee"
+      ]
+    },
+    {
+      "id": "home",
+      "word": "home",
+      "cluster": "home",
+      "count": 4,
+      "summary": "Home promises a place to return to. That promise differs for the household leaving its dog and the evacuee able to exchange one home for another.",
+      "examples": [
+        {
+          "poem": "Won’t Be but a Minute",
+          "pages": "10",
+          "note": "The household promises to return home soon and retrieve Luther B."
+        },
+        {
+          "poem": "Inconvenient",
+          "pages": "13",
+          "note": "The speaker treats evacuation as exchanging home for its vacation version."
+        }
+      ],
+      "characters": [
+        "The departing household",
+        "The affluent evacuee",
+        "Luther B"
+      ]
+    },
+    {
+      "id": "my",
+      "word": "my",
+      "cluster": "home",
+      "count": 38,
+      "summary": "This possessive pronoun changes with its speaker. A resident claims the materials of a life; Katrina claims her appetite, name, and power.",
+      "examples": [
+        {
+          "poem": "Only Everything I Own",
+          "pages": "8",
+          "note": "Repeated my ties the house, garden, table, dust, and food to the homeowner."
+        },
+        {
+          "poem": "8 a.m., Sunday, August 28, 2005",
+          "pages": "11",
+          "note": "Katrina claims her mouth, name, fists, and swallowing eye."
+        }
+      ],
+      "characters": [
+        "The homeowner",
+        "Katrina"
+      ]
+    },
+    {
+      "id": "money",
+      "word": "money",
+      "cluster": "home",
+      "count": 1,
+      "summary": "Money can give people more choices, but it cannot guarantee protection. Compare the affluent evacuation with the money-spell poem’s fragile defense against weather.",
+      "examples": [
+        {
+          "poem": "Inconvenient",
+          "pages": "13",
+          "note": "Related contrast: dollar accompanies the car and vacation home; money itself does not occur here."
+        },
+        {
+          "poem": "Voodoo II: Money",
+          "pages": "24",
+          "note": "The poem describes money as too thin to hold tomorrow back."
+        }
+      ],
+      "characters": [
+        "The affluent evacuee",
+        "The money-spell addressee"
+      ]
+    },
+    {
+      "id": "go",
+      "word": "go",
+      "cluster": "movement",
+      "count": 11,
+      "summary": "The same evacuation command reaches people with unequal resources. Its apparent simplicity conflicts with the practical work of leaving.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "A resident answers the television order by questioning transport and refuge."
+        },
+        {
+          "poem": "Inconvenient",
+          "pages": "13",
+          "note": "The affluent speaker hears Go but can leave by car for another home."
+        }
+      ],
+      "characters": [
+        "The man on television",
+        "A resident",
+        "The affluent evacuee"
+      ]
+    },
+    {
+      "id": "leave",
+      "word": "leave",
+      "cluster": "movement",
+      "count": 5,
+      "summary": "Leaving involves specific losses and decisions. The word directs people away from their belongings and directs a household to abandon its dog temporarily.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The order lists a house, food, a dog, a watch, and a church hat."
+        },
+        {
+          "poem": "Won’t Be but a Minute",
+          "pages": "10",
+          "note": "The departing household says to leave Luther B behind."
+        }
+      ],
+      "characters": [
+        "A resident",
+        "The departing household",
+        "Luther B"
+      ]
+    },
+    {
+      "id": "run",
+      "word": "run",
+      "cluster": "movement",
+      "count": 3,
+      "summary": "The command to run assumes movement is available. The wealthy evacuee has transport; the resident questions whether human bodies can meet the command.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The television order says run; the resident questions its assumptions about bodies and transport."
+        },
+        {
+          "poem": "Inconvenient",
+          "pages": "13",
+          "note": "The speaker says the household runs while describing departure in a Lincoln."
+        }
+      ],
+      "characters": [
+        "The man on television",
+        "A resident",
+        "The affluent evacuee"
+      ]
+    },
+    {
+      "id": "eye",
+      "word": "eye",
+      "cluster": "bodies",
+      "count": 6,
+      "summary": "Katrina’s storm eye becomes a hungry observer. Another speaker imagines people inside that eye, reversing the question from what the storm sees to whom it threatens.",
+      "examples": [
+        {
+          "poem": "5 p.m., Thursday, August 25, 2005",
+          "pages": "4",
+          "note": "Katrina describes an eye that craves sights and pushes her forward."
+        },
+        {
+          "poem": "Company’s Coming",
+          "pages": "14",
+          "note": "The storm survivor describes a threatening woman with us in her eye."
+        }
+      ],
+      "characters": [
+        "Katrina",
+        "The earlier storm survivor"
+      ]
+    },
+    {
+      "id": "mouth",
+      "word": "mouth",
+      "cluster": "bodies",
+      "count": 4,
+      "summary": "A mouth can consume or admit danger. Katrina fills hers with buildings; a survivor advises keeping a human mouth closed against the weather.",
+      "examples": [
+        {
+          "poem": "8 a.m., Sunday, August 28, 2005",
+          "pages": "11",
+          "note": "Katrina says she has filled her mouth with buildings."
+        },
+        {
+          "poem": "Company’s Coming",
+          "pages": "14",
+          "note": "The survivor tells the listener to keep a mouth closed so weather cannot enter."
+        }
+      ],
+      "characters": [
+        "Katrina",
+        "The earlier storm survivor"
+      ]
+    },
+    {
+      "id": "bodies",
+      "word": "bodies",
+      "cluster": "bodies",
+      "count": 6,
+      "summary": "Human bodies have limits that an evacuation instruction cannot remove. Their own water and protective bones become newly vulnerable as the storm arrives.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The resident insists that bodies are only bodies, without wheels or gas."
+        },
+        {
+          "poem": "What Was the First Sound",
+          "pages": "19–20",
+          "note": "The poem considers bodies already filled with water and secured by bone."
+        }
+      ],
+      "characters": [
+        "A resident",
+        "People exposed to the storm"
+      ]
+    },
+    {
+      "id": "eyes",
+      "word": "eyes",
+      "cluster": "perception",
+      "count": 2,
+      "summary": "Human eyes do not guarantee attention to human need. The television warning and the presidential performance expose different failures of recognition.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The man’s gray eyes accompany a simple order; the resident questions whether he sees their limits."
+        },
+        {
+          "poem": "Gettin’ His Twang On",
+          "pages": "22",
+          "note": "The president’s dead eyes focus on the guitar chord while a woman voices abandonment."
+        }
+      ],
+      "characters": [
+        "The man on television",
+        "President George Bush",
+        "The woman in the Ninth"
+      ]
+    },
+    {
+      "id": "see",
+      "word": "see",
+      "cluster": "perception",
+      "count": 6,
+      "summary": "Seeing means appetite for Katrina and a demand for recognition for the resident. Compare what each observer notices and what each overlooks.",
+      "examples": [
+        {
+          "poem": "5 p.m., Thursday, August 25, 2005",
+          "pages": "4",
+          "note": "Katrina wants to see even the sound of weeping."
+        },
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The resident asks whether the television man can see the limits of their bodies."
+        }
+      ],
+      "characters": [
+        "Katrina",
+        "A resident",
+        "The man on television"
+      ]
+    },
+    {
+      "id": "sound",
+      "word": "sound",
+      "cluster": "perception",
+      "count": 6,
+      "summary": "Sound crosses into sight and color. These impossible sensory combinations give the storm a presence that ordinary observation cannot contain.",
+      "examples": [
+        {
+          "poem": "5 p.m., Thursday, August 25, 2005",
+          "pages": "4",
+          "note": "Katrina’s eye wants to see the sound of weeping."
+        },
+        {
+          "poem": "What Was the First Sound",
+          "pages": "19–20",
+          "note": "The storm’s first sound is repeatedly described as purple."
+        }
+      ],
+      "characters": [
+        "Katrina",
+        "Mutts",
+        "Priestesses",
+        "Tree trunks"
+      ]
+    },
+    {
+      "id": "purple",
+      "word": "purple",
+      "cluster": "perception",
+      "count": 7,
+      "summary": "Purple connects a familiar possession with an unfamiliar sensory event. The color moves from a church hat to the storm’s sound and wounded imagery.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "A purple church hat belongs to the life the resident is told to leave."
+        },
+        {
+          "poem": "What Was the First Sound",
+          "pages": "19–20",
+          "note": "Purple describes the first sound through the image of a new wound."
+        }
+      ],
+      "characters": [
+        "A resident",
+        "The storm’s witnesses"
+      ]
+    },
+    {
+      "id": "name",
+      "word": "name",
+      "cluster": "authority",
+      "count": 7,
+      "summary": "A name can confer identity or authority. Katrina’s naming gives her force; the preacher’s claimed familiarity with Jesus supports his standing among the congregation.",
+      "examples": [
+        {
+          "poem": "11 a.m., Wednesday, August 24, 2005",
+          "pages": "3",
+          "note": "Receiving a name gives Katrina pulse, temper, and a word in her own mouth."
+        },
+        {
+          "poem": "10:30 a.m., Sunday, August 28, 2005",
+          "pages": "17",
+          "note": "The congregation credits the preacher with knowing Jesus by his first name."
+        }
+      ],
+      "characters": [
+        "Katrina",
+        "The preacher",
+        "The congregation",
+        "Jesus"
+      ]
+    },
+    {
+      "id": "know",
+      "word": "know",
+      "cluster": "authority",
+      "count": 8,
+      "summary": "Knowing can mean familiarity with home or recognition of a threat. Katrina demands recognition; residents describe what makes an unfamiliar destination difficult to imagine.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The resident says bodies remain tied to what they know."
+        },
+        {
+          "poem": "8 a.m., Sunday, August 28, 2005",
+          "pages": "11",
+          "note": "Katrina warns people that they must not know her name."
+        }
+      ],
+      "characters": [
+        "A resident",
+        "Katrina"
+      ]
+    },
+    {
+      "id": "god",
+      "word": "God",
+      "cluster": "authority",
+      "count": 4,
+      "summary": "God is invoked as commanding authority and as the destination of desperate protest. Religious language does not establish that protection arrives.",
+      "examples": [
+        {
+          "poem": "Man on the TV Say",
+          "pages": "7",
+          "note": "The television order is compared with God directing people out of Paradise."
+        },
+        {
+          "poem": "Up on the Roof",
+          "pages": "23",
+          "note": "The roof survivor directs angry cries toward God while holding babies."
+        }
+      ],
+      "characters": [
+        "God",
+        "The man on television",
+        "People on the roof"
+      ]
+    },
+    {
+      "id": "you",
+      "word": "you",
+      "cluster": "authority",
+      "count": 33,
+      "summary": "The person being addressed changes. The prologue places you with a visitor drawn to the city; the roof poem places you inside exposure, judgment, and uncertain rescue.",
+      "examples": [
+        {
+          "poem": "Prologue: And Then She Owns You",
+          "pages": "vii–viii",
+          "note": "A visitor is addressed as someone attracted and held by New Orleans."
+        },
+        {
+          "poem": "Up on the Roof",
+          "pages": "23",
+          "note": "The addressed person signals from a roof, holds babies, and faces rescue decisions."
+        }
+      ],
+      "characters": [
+        "A visitor",
+        "New Orleans",
+        "People on the roof"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "source": "house",
+      "target": "leave",
+      "note": "Leaving a structure also puts inherited routines, food, and belongings at risk. Compare pp. 7–8."
+    },
+    {
+      "source": "money",
+      "target": "go",
+      "note": "The same command meets unequal means of escape: compare the resident on p. 7 with the car and second home on p. 13."
+    },
+    {
+      "source": "water",
+      "target": "bodies",
+      "note": "Water is already inside human bodies, yet floodwater threatens their protection. Compare pp. 19–20 with p. 23."
+    },
+    {
+      "source": "eye",
+      "target": "eyes",
+      "note": "Katrina’s hungry eye contrasts with the attention of human authorities. Compare p. 4 with the television man on p. 7 and president on p. 22."
+    },
+    {
+      "source": "my",
+      "target": "mouth",
+      "note": "The resident’s possessive claims preserve a life; Katrina’s claims announce an appetite for buildings. Compare pp. 8 and 11."
+    },
+    {
+      "source": "know",
+      "target": "see",
+      "note": "The resident asks for recognition of familiar attachments and bodily limits. Read the uses of know and see together on p. 7."
+    },
+    {
+      "source": "you",
+      "target": "water",
+      "note": "The roof poem connects direct address with rising water, making the survivor’s exposure the reader’s immediate point of view. Read p. 23."
+    }
+  ],
+  "evidence_note": "Each example is a paraphrase. The money example on p. 13 is explicitly a related contrast using dollar, not another occurrence of money. Eye and eyes are separate exact words; the television man’s eyes are gray, not described as white.",
+  "source_note": "Reading: Patricia Smith, Blood Dazzler (Coffee House Press, 2008), pp. vii–24. All page references use the book’s printed pages."
+}

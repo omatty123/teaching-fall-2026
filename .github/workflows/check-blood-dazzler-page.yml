@@ -8,6 +8,7 @@ on:
       - '_kit/blood-dazzler-*'
       - '_kit/vendor/leaflet/**'
       - 'scripts/build-blood-dazzler-page.py'
+      - 'scripts/blood_dazzler_word_graph.py'
       - 'scripts/check-blood-dazzler-page.py'
       - '.github/workflows/check-blood-dazzler-page.yml'
   pull_request:
@@ -17,6 +18,7 @@ on:
       - '_kit/blood-dazzler-*'
       - '_kit/vendor/leaflet/**'
       - 'scripts/build-blood-dazzler-page.py'
+      - 'scripts/blood_dazzler_word_graph.py'
       - 'scripts/check-blood-dazzler-page.py'
       - '.github/workflows/check-blood-dazzler-page.yml'
   workflow_dispatch:
@@ -39,9 +41,11 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Check map JavaScript syntax
-        run: node --check _kit/blood-dazzler-map.js
+      - name: Check classroom JavaScript syntax
+        run: |
+          node --check _kit/blood-dazzler-map.js
+          node --check _kit/blood-dazzler-words.js
       - name: Build the class page
         run: python scripts/build-blood-dazzler-page.py
-      - name: Check reading, media, local links, and generated HTML
+      - name: Check reading, word evidence, media, local links, and generated HTML
         run: python scripts/check-blood-dazzler-page.py --check-generated
