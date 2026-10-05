@@ -73,9 +73,12 @@ def _label_layout(word, radius):
     return lines, baselines, size * .91
 
 
-def render_graph(data, minimum_word_pixels=None):
+def render_graph(data, minimum_word_pixels=None, id_prefix=None, title=None):
     """Keep the builder interface; all chart content is native, static SVG."""
     esc = lambda value: html.escape(str(value), quote=True)
+    section_id = f'words-{id_prefix}' if id_prefix else 'words'
+    id_stem = f'bd-{id_prefix}-' if id_prefix else 'bd-'
+    heading = title if title is not None else 'Word cloud'
     words = data.get('words', [])
     positions = _pack(words)
     extent = max((math.hypot(x, y) + r for x, y, r in positions), default=50.0) + 8.0
@@ -102,12 +105,12 @@ def render_graph(data, minimum_word_pixels=None):
         items.append(f'<g class="bd-frequency-word" data-word="{word}" data-count="{count}" role="img" aria-label="{label}"><title>{label}</title><circle cx="{cx:.6f}" cy="{cy:.6f}" r="{radius:.6f}" fill="#dbe9f1" stroke="#7393a4" stroke-width="1" vector-effect="non-scaling-stroke"/><text class="bd-frequency-text" x="{cx:.6f}" y="{cy - 2:.6f}" font-size="{label_size:.3f}" style="{word_style}">{spans}</text><text class="bd-frequency-count" x="{cx:.6f}" y="{cy + count_baseline:.6f}" style="{count_style}">{count}</text></g>')
         readable.append(f'<li><span>{word}</span><strong>{count}</strong></li>')
     payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('&', '\\u0026').replace('<', '\\u003c').replace('>', '\\u003e')
-    return f'''<section id="words" class="bd-words bd-frequency" aria-labelledby="bd-words-title">
-<h2 id="bd-words-title">Word cloud</h2>
+    return f'''<section id="{esc(section_id)}" class="bd-words bd-frequency" aria-labelledby="{esc(id_stem)}words-title">
+<h2 id="{esc(id_stem)}words-title">{esc(heading)}</h2>
 <p class="bd-frequency-instruction">Circle area shows frequency. Numbers show counts.</p>
-<div class="bd-frequency-chart" style="max-width:{chart_width}px;margin:0 auto;overflow-x:auto;overscroll-behavior-inline:contain" role="region" aria-label="Packed word frequency circles; scroll horizontally on a small screen" tabindex="0"><svg class="bd-frequency-cluster" xmlns="http://www.w3.org/2000/svg" width="{chart_width}" height="{chart_width}" style="display:block;width:100%;min-width:{chart_width}px;max-width:none;height:auto;margin:0;padding:0" viewBox="0 0 {diameter:.6f} {diameter:.6f}" role="img" aria-labelledby="bd-frequency-chart-title bd-frequency-chart-desc"><title id="bd-frequency-chart-title">Word cloud, {esc(data.get('scope', 'pp. vii–24'))}</title><desc id="bd-frequency-chart-desc">{len(words)} packed circles, one for each counted word. Circle area is proportional to the exact count printed below the word. Common function words are excluded. A readable list of all counts follows.</desc>{''.join(items)}</svg></div>
+<div class="bd-frequency-chart" style="max-width:{chart_width}px;margin:0 auto;overflow-x:auto;overscroll-behavior-inline:contain" role="region" aria-label="Packed word frequency circles; scroll horizontally on a small screen" tabindex="0"><svg class="bd-frequency-cluster" xmlns="http://www.w3.org/2000/svg" width="{chart_width}" height="{chart_width}" style="display:block;width:100%;min-width:{chart_width}px;max-width:none;height:auto;margin:0;padding:0" viewBox="0 0 {diameter:.6f} {diameter:.6f}" role="img" aria-labelledby="{esc(id_stem)}frequency-chart-title {esc(id_stem)}frequency-chart-desc"><title id="{esc(id_stem)}frequency-chart-title">Word cloud, {esc(data.get('scope', 'pp. vii–24'))}</title><desc id="{esc(id_stem)}frequency-chart-desc">{len(words)} packed circles, one for each counted word. Circle area is proportional to the exact count printed below the word. Common function words are excluded. A readable list of all counts follows.</desc>{''.join(items)}</svg></div>
 <p class="bd-frequency-mobile-note">Scroll sideways to read every circle.</p>
 <p class="bd-frequency-scope">{esc(data.get('scope', 'pp. vii–24'))} · {len(words)} most frequent words, excluding common words such as the, a, and an.</p>
 <details class="bd-frequency-count-list"><summary>Read all word counts</summary><ul>{''.join(readable)}</ul></details>
 <details class="bd-frequency-method"><summary>Counting method</summary><div><p>{esc(data.get('method', ''))}</p></div></details>
-<script type="application/json" id="bd-word-data">{payload}</script></section>'''
+<script type="application/json" id="{esc(id_stem)}word-data">{payload}</script></section>'''

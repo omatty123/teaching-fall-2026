@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Validate the full-book count-only resource and its generated public page."""
 import argparse
+import copy
 import hashlib
 import importlib.util
 import json
@@ -17,10 +18,12 @@ PAGE = ROOT / "frst-110-resources/blood-dazzler-words.html"
 ASSETS = PAGE.parent / "blood-dazzler-assets"
 PUBLIC_URL = "https://omatty123.github.io/teaching-fall-2026/" + PAGE.relative_to(ROOT).as_posix()
 SCOPE = "Whole book: pp. vii–viii, 1–77"
-HIPS_PAGES = {
-    "poem-01": "viii", "poem-02": "1", "poem-06": "6", "poem-36": "44",
-    "poem-39": "48", "poem-40": "56", "poem-45": "63", "poem-51": "72",
-}
+PARTITIONS = (
+    ("first", "frequency-cluster.json", "pp. vii–24", 0, 22, 3117),
+    ("second", "frequency-25-49.json", "pp. 25–49", 22, 39, 3148),
+    ("third", "frequency-50-77.json", "pp. 50–77", 39, 55, 3128),
+    ("whole", "frequency-whole-book.json", SCOPE, 0, 55, 9393),
+)
 
 # Register the module before executing it: its dataclass definitions need the
 # module in sys.modules. Share the original resource and circle regressions.
@@ -109,25 +112,29 @@ def check_corpus(book):
     return poems
 
 
-def check_hips(hips, book):
-    shape(hips, {"word", "count", "poem_count", "related", "interpretation", "occurrences"}, "Hips analysis payload")
-    require(hips["word"] == "hips" and hips["count"] == hips["poem_count"] == 8, "Hips analysis must count eight uses in eight poems.")
-    matched = [poem for poem in book["poems"] if poem["counts"].get("hips", 0)]
-    require(book["counts"].get("hips") == 8 and len(matched) == 8 and all(poem["counts"]["hips"] == 1 for poem in matched), "The full source does not support eight single hips occurrences.")
-    require({poem["id"] for poem in matched} == set(HIPS_PAGES), "Hips poem identities differ from the audited source locators.")
-    related = hips["related"]
-    require(related == [{"word": word, "count": 1} for word in ("hip", "hipped", "world-hipped")], "Related hip forms must remain three separate exact-word counts of one.")
-    require(all(book["counts"].get(item["word"]) == item["count"] for item in related), "Related hip forms disagree with the full-book source counts.")
-    nonempty(hips["interpretation"], "Hips interpretation")
-    occurrences = hips["occurrences"]
-    require(isinstance(occurrences, list) and len(occurrences) == 8, "Hips context must contain exactly eight occurrence records.")
-    require([item.get("poem_id") for item in occurrences] == [poem["id"] for poem in matched], "Hips context omits, duplicates, or reorders a source poem.")
-    for occurrence in occurrences:
-        shape(occurrence, {"poem_id", "title", "page", "count", "subject", "context"}, "Hips occurrence")
-        require(occurrence["page"] == HIPS_PAGES[occurrence["poem_id"]] and occurrence["count"] == 1, f"Hips context has the wrong exact page or count: {occurrence['poem_id']}")
-        for field in ("title", "subject", "context"):
-            nonempty(occurrence[field], f"Hips {field} for {occurrence['poem_id']}")
-    return matched
+def check_partitions(book):
+    opening = read_data("frequency-cluster.json")
+    basic_fields = {"scope", "method", "stop_words", "words", "max_words"}
+    partitions = []
+    for key, filename, scope, start, end, tokens in PARTITIONS:
+        frequency = read_data(filename)
+        fields = basic_fields if key == "first" else basic_fields | {"poem_count", "total_tokens"}
+        shape(frequency, fields, f"{key.capitalize()} frequency payload")
+        selected = book["poems"][start:end]
+        counts = Counter()
+        for poem in selected:
+            counts.update(poem["counts"])
+        require(len(selected) == end - start and sum(counts.values()) == tokens,
+                f"The {key} section differs from its frozen poem/token partition.")
+        require(frequency["scope"] == scope, f"Wrong printed page range for the {key} cloud.")
+        require(len(frequency["stop_words"]) == 206 and frequency["stop_words"] == opening["stop_words"],
+                f"The {key} cloud must use the same explicit 206-word stop list as the opening cloud.")
+        if key != "first":
+            require(frequency["poem_count"] == end - start and frequency["total_tokens"] == tokens,
+                    f"Declared {key} frequency totals differ from its source partition.")
+        shared.check_frequency_data(frequency, counts, expected_scope=scope)
+        partitions.append((key, frequency, counts))
+    return partitions
 
 
 def check_version(document, relative, tag, attribute):
@@ -139,37 +146,89 @@ def check_version(document, relative, tag, attribute):
     require(versions == [expected], f"Full-book {relative} lacks its current content-hash URL.")
 
 
-def check_page(document, book, frequency, hips, matched):
+def check_public_scope(document):
+    require(not (ASSETS / "hips-analysis.json").exists(), "The private hips analysis remains in public assets.")
+    private_material = re.compile(r"hips-analysis\.json|\bhips\s+in\s+context\b|\bwhose\s+hips\b|\bhips\s*:\s*8\b|\b(?:world-hipped|hipped)\b|\bbd-(?:word-search|lookup|result-rows)\b|\bcount\s+a\s+word\b", re.I)
+    # Count dictionaries may contain these exact words. Check presentation
+    # material only; the strict public count schema above protects source data.
+    require(not private_material.search(clean(document.root.text())), "The public clouds page exposes private word-context analysis or lookup content.")
+    require(not any(node.attrs.get("id", "") in {"hips", "lookup", "bd-whole-book-data", "bd-word-search"}
+                    for node in document.root.all()), "Private context/search controls remain on the public clouds page.")
+    for path in (ASSETS / "SOURCES.md", ROOT / ".impeccable/surfaces/frst-110-resources-blood-dazzler-words-html.md",
+                 ROOT / "_kit/blood-dazzler-full-words.js", ROOT / "_kit/blood-dazzler-full-words.css"):
+        require(path.is_file(), f"Missing cloud source/design record: {path.relative_to(ROOT)}")
+        require(not private_material.search(path.read_text(encoding="utf-8")), f"Private context analysis remains in {path.relative_to(ROOT)}.")
+    class_page = shared.Document(shared.PAGE.read_text(encoding="utf-8"))
+    companions = [node for node in class_page.root.all("a")
+                  if shared.local_path(node.attrs.get("href", ""), shared.PAGE)[0] == PAGE]
+    require(companions and all(clean(node.text()) == "Word clouds by section and whole book" for node in companions),
+            "The class-page companion link must say Word clouds by section and whole book.")
+
+
+def check_page(document, book, partitions):
     nodes = list(document.root.all())
     by_id = {node.attrs["id"]: node for node in nodes if "id" in node.attrs}
-    require({"words", "lookup", "hips", "bd-word-search", "bd-lookup-word", "bd-result-title", "bd-result-rows", "bd-whole-book-data"} <= by_id.keys(), "Full-book page omits its chart, lookup, hips context, or source data.")
+    sections = {f"words-{key}" for key, _, _ in partitions}
+    require(sections <= by_id.keys(), "The page omits one of its four section/whole-book word clouds.")
+    require(len([node for node in nodes if node.tag == "section" and "bd-frequency" in node.attrs.get("class", "").split()]) == 4,
+            "The public page must contain exactly four frequency-cloud sections.")
     metadata = {node.attrs.get("property", node.attrs.get("name")): node.attrs.get("content", "") for node in nodes if node.tag == "meta"}
     require(metadata.get("og:url") == PUBLIC_URL, "Full-book page metadata points to the wrong public address.")
-    require("Whole-book word counts" in clean(next(document.root.all("title")).text()), "Full-book browser title is missing.")
+    title = clean(next(document.root.all("title")).text())
+    require("Blood Dazzler" in title and "word cloud" in title.casefold(), "Word-cloud browser title is missing.")
     summary = clean(next(document.root.all("header")).text())
-    require(book["scope"] in summary and "55 poems" in summary and "9,393 words" in summary, "Full-book heading omits or changes its source scope/totals.")
-    embedded = by_id["bd-whole-book-data"]
-    require(embedded.tag == "script" and embedded.attrs.get("type") == "application/json" and json.loads(embedded.text()) == book, "Embedded lookup source differs from the count-only corpus.")
-    require({node.attrs.get("id") for node in nodes if node.tag == "script" and node.attrs.get("type") == "application/json"} == {"bd-whole-book-data", "bd-word-data"}, "The page embeds an unapproved public data payload.")
-    require(by_id["bd-lookup-word"].attrs.get("value") == "hips", "The static lookup does not start with hips.")
-    require(clean(by_id["bd-result-title"].text()) == "hips: 8 uses in 8 poems", "Static hips lookup title disagrees with its source count.")
-    actual = [[clean(cell.text()) for cell in row.children if isinstance(cell, shared.Element) and cell.tag in {"th", "td"}] for row in by_id["bd-result-rows"].all("tr")]
-    expected = [[poem["title"], poem["pages"], str(poem["counts"]["hips"])] for poem in matched]
-    require(actual == expected, "Static hips lookup rows differ from their eight source-poem counts.")
-    context_tables = [node for node in by_id["hips"].all("table") if "bd-context-table" in node.attrs.get("class", "").split()]
-    require(len(context_tables) == 1, "The hips section needs one readable context table.")
-    bodies = list(context_tables[0].all("tbody"))
-    require(len(bodies) == 1, "Hips context table lacks its body.")
-    actual = [[clean(cell.text()) for cell in row.children if isinstance(cell, shared.Element) and cell.tag in {"th", "td"}] for row in bodies[0].all("tr")]
-    expected = [[item["title"], item["page"], clean(item["subject"] + " " + item["context"])] for item in hips["occurrences"]]
-    require(actual == expected, "Rendered hips context differs from the eight approved paraphrases and page locators.")
-    require(hips["interpretation"] in clean(by_id["hips"].text()), "The rendered hips interpretation differs from its data.")
-    related = [node for node in by_id["hips"].all("details") if "bd-related" in node.attrs.get("class", "").split()]
-    require(len(related) == 1, "Hips section omits its separate related-word counts.")
-    require([clean(node.text()) for node in related[0].all("li")] == [f"{item['word']} {item['count']}" for item in hips["related"]], "Rendered related hip counts differ from their source data.")
-    check_version(document, "_kit/blood-dazzler-full-words.css", "link", "href")
+    require(book["scope"] in summary, "Full-book heading omits or changes its precise source scope.")
+    expected_payloads = {f"bd-{key}-word-data" for key, _, _ in partitions}
+    require({node.attrs.get("id") for node in nodes if node.tag == "script" and node.attrs.get("type") == "application/json"} == expected_payloads,
+            "The page embeds missing or unapproved public data; only the four frequency payloads belong here.")
+    anchors = {node.attrs.get("href") for node in nodes if node.tag == "a"}
+    require({f"#{section}" for section in sections} <= anchors, "The page omits a native anchor for a section/whole-book cloud.")
+    words = 0
+    for key, frequency, counts in partitions:
+        section = by_id[f"words-{key}"]
+        stem = f"bd-{key}-"
+        expected_ids = {stem + suffix for suffix in ("words-title", "frequency-chart-title", "frequency-chart-desc", "word-data")}
+        section_ids = {node.attrs.get("id") for node in section.all()}
+        require(section.tag == "section" and expected_ids <= section_ids, f"The {key} cloud lacks its uniquely prefixed chart/data IDs.")
+        require(section.attrs.get("aria-labelledby") == stem + "words-title", f"The {key} cloud lacks its accessible section heading.")
+        require("hidden" not in section.attrs and shared.inline_styles(section).get("display") != "none",
+                f"The {key} cloud is unavailable before JavaScript runs.")
+        heading = by_id[stem + "words-title"]
+        heading_text = "Whole book" if key == "whole" else frequency["scope"]
+        require(heading.tag == "h2" and clean(heading.text()) == heading_text, f"The {key} cloud heading has the wrong reading scope.")
+        _, _, _, start, end, tokens = next(part for part in PARTITIONS if part[0] == key)
+        totals = [node for node in section.all() if "bd-cloud-meta" in node.attrs.get("class", "").split()]
+        require(len(totals) == 1 and clean(totals[0].text()) == f"{end - start} poems · {tokens:,} words in poem bodies",
+                f"The {key} panel omits or changes its exact poem/token totals.")
+        scope_labels = [node for node in section.all() if "bd-frequency-scope" in node.attrs.get("class", "").split()]
+        require(len(scope_labels) == 1 and frequency["scope"] in clean(scope_labels[0].text()), f"The {key} cloud displays the wrong printed page range.")
+        charts = list(section.all("svg"))
+        require(len(charts) == 1 and charts[0].attrs.get("role") == "img"
+                and charts[0].attrs.get("aria-labelledby") == stem + "frequency-chart-title " + stem + "frequency-chart-desc",
+                f"The {key} cloud lacks its accessible SVG title and description references.")
+        require(frequency["scope"] in clean(by_id[stem + "frequency-chart-title"].text()), f"The {key} SVG title has the wrong source range.")
+        chart = charts[0]
+        width = float(chart.attrs["viewbox"].replace(",", " ").split()[2])
+        minimum = shared.style_number(shared.inline_styles(chart).get("min-width"), f"The {key} chart lacks its inline minimum width.")
+        for text in chart.all("text"):
+            if "bd-frequency-text" in text.attrs.get("class", "").split():
+                size = shared.style_number(shared.inline_styles(text).get("font-size"), f"The {key} chart lacks an inline word font size.")
+                require(size * minimum / width >= 20 - 0.02, f"The {key} word label is smaller than 20 screen pixels: {clean(text.text())}")
+        # Adapt only a private in-memory copy to the class-page helper's old
+        # IDs/heading. The real range metadata was checked above.
+        cloned = copy.deepcopy(section)
+        for node in [cloned, *cloned.all()]:
+            identity = node.attrs.get("id", "")
+            if identity.startswith(stem):
+                node.attrs["id"] = "bd-" + identity[len(stem):]
+            if node.tag == "h2":
+                node.children = ["Word cloud"]
+        words += shared.check_frequency_cluster(document, cloned, counts, data=frequency, page=PAGE, expected_scope=frequency["scope"])
+    for relative in ("_kit/blood-dazzler-1.css", "_kit/blood-dazzler-words.css", "_kit/blood-dazzler-full-words.css"):
+        check_version(document, relative, "link", "href")
     check_version(document, "_kit/blood-dazzler-full-words.js", "script", "src")
-    return shared.check_frequency_cluster(document, by_id["words"], book["counts"], data=frequency, page=PAGE, expected_scope=book["scope"])
+    check_public_scope(document)
+    return words
 
 
 def check_generated():
@@ -190,21 +249,16 @@ def main():
     try:
         if args.check_generated:
             check_generated()
-        book, frequency, hips = (read_data(filename) for filename in ("whole-book-counts.json", "frequency-whole-book.json", "hips-analysis.json"))
+        book = read_data("whole-book-counts.json")
         poems = check_corpus(book)
-        shape(frequency, {"scope", "method", "stop_words", "words", "poem_count", "total_tokens", "max_words"}, "Whole-book frequency payload")
-        opening_frequency = read_data("frequency-cluster.json")
-        require(len(frequency["stop_words"]) == 206 and frequency["stop_words"] == opening_frequency["stop_words"], "The full-book cloud must use the same explicit 206-word stop list as the opening cloud.")
-        require(frequency["poem_count"] == book["poem_count"] and frequency["total_tokens"] == book["total_tokens"], "Frequency payload totals differ from its corpus.")
-        shared.check_frequency_data(frequency, book["counts"], expected_scope=book["scope"])
-        matched = check_hips(hips, book)
+        partitions = check_partitions(book)
         document = shared.Document(PAGE.read_text(encoding="utf-8"))
         resources = shared.check_local_resources(document, page=PAGE)
-        words = check_page(document, book, frequency, hips, matched)
+        words = check_page(document, book, partitions)
     except (OSError, ValueError, KeyError, StopIteration, subprocess.CalledProcessError) as error:
         print(f"Blood Dazzler full-book check failed: {error}", file=sys.stderr)
         return 1
-    print(f"Blood Dazzler full-book check passed: {len(poems)} poems; {book['total_tokens']:,} tokens; {book['unique_words']:,} forms; first 22 agree exactly; {words} frequency circles; 8 hips references; {resources} local resources.")
+    print(f"Blood Dazzler full-book check passed: {len(poems)} poems; {book['total_tokens']:,} tokens; {book['unique_words']:,} forms; first 22 agree exactly; 4 clouds with {words} frequency circles; {resources} local resources.")
     return 0
 
 

@@ -10,7 +10,7 @@ e=html.escape
 c=json.loads((ASSETS/'reading-data.json').read_text())
 rows=lambda data: ''.join(f'<tr><td><strong>{e(x["name"])}</strong></td><td>{e(x["pages"])}</td><td>{e(x["role"])}</td></tr>' for x in data)
 word_graph=render_graph(json.loads((ASSETS/'frequency-cluster.json').read_text()))
-word_graph=word_graph.replace('<h2 id="bd-words-title">Word cloud</h2>', '<h2 id="bd-words-title">Word cloud</h2>\n<p class="note"><a href="blood-dazzler-words.html">Whole-book word counts and hips</a></p>', 1)
+word_graph=word_graph.replace('<h2 id="bd-words-title">Word cloud</h2>', '<h2 id="bd-words-title">Word cloud</h2>\n<p class="note"><a href="blood-dazzler-words.html">Word clouds by section and whole book</a></p>', 1)
 tasks=''.join(f'<article class="task"><h3>{e(x["title"])}</h3><p>Book: pp. {e(x["pages"])}</p><ol>'+''.join(f'<li>{e(s)}</li>' for s in x['steps'])+'</ol></article>' for x in c['discussion'])
 poems=''.join(f'<tr><td>{e(x["pages"])}</td><td>{e(x["title"])}</td><td>{e(x["voice"])}</td></tr>' for x in c['poems'])
 map_html=(ASSETS/'map-fragment.html').read_text().replace('<section class="bd-map"','<section id="map" class="bd-map"',1)

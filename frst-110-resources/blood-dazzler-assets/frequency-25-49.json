@@ -1,0 +1,417 @@
+{
+  "scope": "pp. 25–49",
+  "method": "Counts use the supplied PDF’s OCR text, with checked transcription corrections. Poem bodies on printed pp. vii–viii and 1–77 are included; titles, headnotes, epigraphs, timestamps, internal section numerals, page numbers and front/back matter are excluded. Capitalization is ignored. Straight and curly apostrophes are treated alike; contractions and hyphenated words remain intact. Different word forms are counted separately. Email excerpts within “What to Tweak” count as poem body.",
+  "stop_words": [
+    "a",
+    "about",
+    "above",
+    "after",
+    "again",
+    "against",
+    "ain't",
+    "all",
+    "am",
+    "an",
+    "and",
+    "any",
+    "are",
+    "aren't",
+    "as",
+    "at",
+    "be",
+    "because",
+    "been",
+    "before",
+    "being",
+    "below",
+    "between",
+    "both",
+    "bout",
+    "but",
+    "by",
+    "can",
+    "can't",
+    "cannot",
+    "comin",
+    "could",
+    "couldn't",
+    "did",
+    "didn't",
+    "do",
+    "does",
+    "doesn't",
+    "doing",
+    "don't",
+    "down",
+    "during",
+    "each",
+    "either",
+    "else",
+    "enough",
+    "even",
+    "ever",
+    "every",
+    "few",
+    "for",
+    "from",
+    "further",
+    "gon",
+    "gonna",
+    "gotta",
+    "had",
+    "hadn't",
+    "has",
+    "hasn't",
+    "have",
+    "haven't",
+    "having",
+    "he",
+    "he'd",
+    "he'll",
+    "he's",
+    "her",
+    "here",
+    "here's",
+    "hers",
+    "herself",
+    "him",
+    "himself",
+    "his",
+    "hisself",
+    "how",
+    "how's",
+    "i",
+    "i'd",
+    "i'll",
+    "i'm",
+    "i've",
+    "if",
+    "in",
+    "into",
+    "is",
+    "isn't",
+    "it",
+    "it's",
+    "its",
+    "itself",
+    "just",
+    "let",
+    "let's",
+    "like",
+    "me",
+    "might",
+    "more",
+    "most",
+    "much",
+    "must",
+    "mustn't",
+    "my",
+    "myself",
+    "neither",
+    "no",
+    "nor",
+    "not",
+    "now",
+    "nuthin",
+    "of",
+    "off",
+    "offa",
+    "ol",
+    "on",
+    "once",
+    "only",
+    "or",
+    "other",
+    "ought",
+    "our",
+    "ours",
+    "ourselves",
+    "out",
+    "outta",
+    "over",
+    "own",
+    "same",
+    "shall",
+    "shan't",
+    "she",
+    "she'd",
+    "she'll",
+    "she's",
+    "sho",
+    "should",
+    "shouldn't",
+    "so",
+    "some",
+    "somethin",
+    "such",
+    "than",
+    "that",
+    "that's",
+    "the",
+    "their",
+    "theirs",
+    "them",
+    "themselves",
+    "then",
+    "there",
+    "there's",
+    "these",
+    "they",
+    "they'd",
+    "they'll",
+    "they're",
+    "they've",
+    "this",
+    "those",
+    "through",
+    "to",
+    "too",
+    "under",
+    "until",
+    "up",
+    "us",
+    "very",
+    "was",
+    "wasn't",
+    "we",
+    "we'd",
+    "we'll",
+    "we're",
+    "we've",
+    "were",
+    "weren't",
+    "what",
+    "what's",
+    "when",
+    "when's",
+    "where",
+    "where's",
+    "which",
+    "while",
+    "who",
+    "who's",
+    "whom",
+    "why",
+    "why's",
+    "will",
+    "with",
+    "won't",
+    "would",
+    "wouldn't",
+    "y'all",
+    "you",
+    "you'd",
+    "you'll",
+    "you're",
+    "you've",
+    "your",
+    "yours",
+    "yourself",
+    "yourselves"
+  ],
+  "words": [
+    {
+      "word": "come",
+      "count": 16
+    },
+    {
+      "word": "wait",
+      "count": 14
+    },
+    {
+      "word": "water",
+      "count": 11
+    },
+    {
+      "word": "know",
+      "count": 9
+    },
+    {
+      "word": "rain",
+      "count": 9
+    },
+    {
+      "word": "never",
+      "count": 8
+    },
+    {
+      "word": "chair",
+      "count": 7
+    },
+    {
+      "word": "son",
+      "count": 7
+    },
+    {
+      "word": "sun",
+      "count": 7
+    },
+    {
+      "word": "back",
+      "count": 6
+    },
+    {
+      "word": "black",
+      "count": 6
+    },
+    {
+      "word": "body",
+      "count": 6
+    },
+    {
+      "word": "get",
+      "count": 6
+    },
+    {
+      "word": "one",
+      "count": 6
+    },
+    {
+      "word": "see",
+      "count": 6
+    },
+    {
+      "word": "sleep",
+      "count": 6
+    },
+    {
+      "word": "sudden",
+      "count": 6
+    },
+    {
+      "word": "away",
+      "count": 5
+    },
+    {
+      "word": "food",
+      "count": 5
+    },
+    {
+      "word": "hear",
+      "count": 5
+    },
+    {
+      "word": "help",
+      "count": 5
+    },
+    {
+      "word": "left",
+      "count": 5
+    },
+    {
+      "word": "legs",
+      "count": 5
+    },
+    {
+      "word": "look",
+      "count": 5
+    },
+    {
+      "word": "man",
+      "count": 5
+    },
+    {
+      "word": "men",
+      "count": 5
+    },
+    {
+      "word": "mud",
+      "count": 5
+    },
+    {
+      "word": "name",
+      "count": 5
+    },
+    {
+      "word": "say",
+      "count": 5
+    },
+    {
+      "word": "skin",
+      "count": 5
+    },
+    {
+      "word": "toward",
+      "count": 5
+    },
+    {
+      "word": "white",
+      "count": 5
+    },
+    {
+      "word": "babies",
+      "count": 4
+    },
+    {
+      "word": "boy",
+      "count": 4
+    },
+    {
+      "word": "breath",
+      "count": 4
+    },
+    {
+      "word": "eyes",
+      "count": 4
+    },
+    {
+      "word": "glass",
+      "count": 4
+    },
+    {
+      "word": "heat",
+      "count": 4
+    },
+    {
+      "word": "lawd",
+      "count": 4
+    },
+    {
+      "word": "mothers",
+      "count": 4
+    },
+    {
+      "word": "says",
+      "count": 4
+    },
+    {
+      "word": "shit",
+      "count": 4
+    },
+    {
+      "word": "shut",
+      "count": 4
+    },
+    {
+      "word": "stop",
+      "count": 4
+    },
+    {
+      "word": "teeth",
+      "count": 4
+    },
+    {
+      "word": "tell",
+      "count": 4
+    },
+    {
+      "word": "walk",
+      "count": 4
+    },
+    {
+      "word": "word",
+      "count": 4
+    },
+    {
+      "word": "always",
+      "count": 3
+    },
+    {
+      "word": "ankles",
+      "count": 3
+    }
+  ],
+  "poem_count": 17,
+  "total_tokens": 3148,
+  "max_words": 50
+}
