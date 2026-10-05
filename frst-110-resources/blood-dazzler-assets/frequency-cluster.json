@@ -1,6 +1,6 @@
 {
   "scope": "pp. vii–24",
-  "method": "3,117 words in the poem bodies on pp. vii–24. Titles, headnotes, epigraphs, timestamps, and page numbers are excluded. Capitalization is ignored; contractions and hyphenated words remain intact; straight and curly apostrophes are treated alike. These are selected exact-word counts, not totals for word families. Common function words and their contractions are removed using the stop_words list in this file. The 50 most frequent remaining words are shown; ties are ordered alphabetically. Word forms are not combined. Font size increases linearly with count; position and color do not add meaning.",
+  "method": "3,117 words in the poem bodies on pp. vii–24. Titles, headnotes, epigraphs, timestamps, and page numbers are excluded. Capitalization is ignored; contractions and hyphenated words remain intact; straight and curly apostrophes are treated alike. These are selected exact-word counts, not totals for word families. Common function words and their contractions are removed using the stop_words list in this file. The 50 most frequent remaining words are shown; ties are ordered alphabetically. Word forms are not combined. Circle area is proportional to count; position and color do not add meaning.",
   "stop_words": [
     "a",
     "about",

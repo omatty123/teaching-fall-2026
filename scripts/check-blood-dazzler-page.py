@@ -6,6 +6,7 @@ reruns the builder and checks the committed page for an outstanding Git diff.
 """
 import argparse
 import json
+import math
 import re
 import struct
 import subprocess
@@ -207,22 +208,76 @@ def check_frequency_data(data, counts):
 def check_frequency_cluster(document, section, counts):
     data = json.loads((ASSETS / "frequency-cluster.json").read_text(encoding="utf-8"))
     words = check_frequency_data(data, counts)
-    require(any(clean(node.text()).casefold() == "word frequency" for node in section.all("h2")), "The simple frequency cluster lacks its Word frequency title.")
+    require(any(clean(node.text()).casefold() == "word cloud" for node in section.all("h2")), "The frequency circles lack their Word cloud title.")
     elements = list(section.all())
     embedded = next((node for node in elements if node.attrs.get("id") == "bd-word-data"), None)
     require(embedded is not None and embedded.tag == "script" and embedded.attrs.get("type") == "application/json", "Frequency cluster lacks its embedded source data.")
     require(json.loads(embedded.text()) == data, "Rendered frequency data differs from frequency-cluster.json.")
-    cloud = [node for node in elements if node.tag == "ul" and "bd-frequency-cluster" in node.attrs.get("class", "").split()]
-    require(len(cloud) == 1, "The page needs one readable frequency cluster.")
-    items = [node for node in cloud[0].all() if "bd-frequency-word" in node.attrs.get("class", "").split()]
-    require(len(items) == len(words), "Frequency cluster omits or duplicates a counted word.")
-    for item, expected in zip(items, words):
-        require(item.tag == "li" and item.attrs.get("data-word") == expected["word"] and item.attrs.get("data-count") == str(expected["count"]), f"Rendered frequency record is incorrect or out of order: {expected['word']}")
-        labels = [node for node in item.all() if "bd-frequency-text" in node.attrs.get("class", "").split()]
-        counts = [node for node in item.all() if "bd-frequency-count" in node.attrs.get("class", "").split()]
-        require(len(labels) == 1 and clean(labels[0].text()) == expected["word"], f"Frequency word is not readable: {expected['word']}")
-        require(len(counts) == 1 and re.search(rf"\b{expected['count']}\b", clean(counts[0].text())), f"Frequency count is not readable: {expected['word']}")
-    require(not any(node.tag == "svg" or node.attrs.get("id") == "bd-word-selected" or "bd-word-group" in node.attrs.get("class", "").split() for node in elements), "The replaced interpretive graph remains in the frequency section.")
+    charts = [node for node in elements if node.tag == "svg"]
+    require(len(charts) == 1, "The page needs one packed-circle frequency diagram.")
+    chart = charts[0]
+    chart_descriptions = [node for node in chart.children if isinstance(node, Element) and node.tag == "desc"]
+    require(len(chart_descriptions) == 1 and clean(chart_descriptions[0].text()), "Frequency diagram lacks its native SVG description.")
+    view_box = chart.attrs.get("viewbox", "").replace(",", " ").split()
+    require(len(view_box) == 4, "The frequency SVG lacks a usable viewBox.")
+    left, top, width, height = map(float, view_box)
+    require(all(math.isfinite(value) for value in (left, top, width, height)) and width > 0 and height > 0, "Invalid frequency SVG bounds.")
+    items = [node for node in chart.all() if "bd-frequency-word" in node.attrs.get("class", "").split()]
+    require(len(items) == len(words) and len(list(chart.all("circle"))) == len(words), "Packed diagram must show exactly one circle per counted word.")
+    expected_by_word = {item["word"]: item for item in words}
+    identities = [item.attrs.get("data-word") for item in items]
+    require(len(identities) == len(set(identities)) and set(identities) == set(expected_by_word), "Packed diagram omits or repeats a frequency word.")
+    geometry = []
+    for item in items:
+        word = item.attrs["data-word"]
+        expected = expected_by_word[word]
+        require(item.attrs.get("data-count") == str(expected["count"]), f"Rendered frequency count is incorrect: {word}")
+        circles = list(item.all("circle"))
+        require(len(circles) == 1, f"Word does not have one native SVG circle: {word}")
+        circle = circles[0]
+        x, y, radius = (float(circle.attrs.get(key, "0")) for key in ("cx", "cy", "r"))
+        for transformed in (item, circle):
+            transform = transformed.attrs.get("transform", "").strip()
+            if transform:
+                match = re.fullmatch(r"translate\(\s*([^()]*)\s*\)", transform)
+                require(match is not None, f"Unsupported circle transform in frequency diagram: {word}")
+                offsets = match.group(1).replace(",", " ").split()
+                require(len(offsets) in (1, 2), f"Invalid circle translation: {word}")
+                x += float(offsets[0])
+                y += float(offsets[1]) if len(offsets) == 2 else 0
+        require(all(math.isfinite(value) for value in (x, y, radius)) and radius > 0, f"Invalid circle geometry: {word}")
+        require(x - radius >= left - 0.02 and y - radius >= top - 0.02 and x + radius <= left + width + 0.02 and y + radius <= top + height + 0.02, f"Frequency circle is clipped by the SVG bounds: {word}")
+        titles, descriptions = list(item.all("title")), list(item.all("desc"))
+        require(len(titles) == 1, f"Circle lacks its native SVG title: {word}")
+        accessible = clean(titles[0].text() + " " + " ".join(node.text() for node in descriptions)).casefold()
+        require(re.search(rf"\b{re.escape(word)}\b", accessible) and re.search(rf"\b{expected['count']}\b", accessible), f"Circle's accessible name omits its word or count: {word}")
+        aria_label = item.attrs.get("aria-label", "").casefold()
+        require(item.attrs.get("role") == "img" and re.search(rf"\b{re.escape(word)}\b", aria_label) and re.search(rf"\b{expected['count']}\b", aria_label), f"Circle's assistive label omits its word or count: {word}")
+        labels = [node for node in item.all("text") if "bd-frequency-text" in node.attrs.get("class", "").split()]
+        count_labels = [node for node in item.all("text") if "bd-frequency-count" in node.attrs.get("class", "").split()]
+        # A long word may use separate tspan lines. Rejoin those lines rather
+        # than treating the visual line break as a change to the counted word.
+        require(len(labels) == 1 and re.sub(r"\s+", "", labels[0].text()).casefold() == word.casefold(), f"Circle does not visibly label its exact word: {word}")
+        require(len(count_labels) == 1 and clean(count_labels[0].text()) == str(expected["count"]), f"Circle does not visibly label its exact count: {word}")
+        geometry.append((word, expected["count"], x, y, radius))
+    # r/sqrt(count) must be constant: therefore circle AREA, not radius or
+    # lettering, represents frequency. 0.02 SVG units allows decimal rounding.
+    scales = sorted(radius / math.sqrt(count) for _, count, _, _, radius in geometry)
+    scale = (scales[(len(scales) - 1) // 2] + scales[len(scales) // 2]) / 2
+    for word, count, _, _, radius in geometry:
+        require(abs(radius - scale * math.sqrt(count)) <= 0.02, f"Circle area is not proportional to frequency: {word}")
+    for index, (word, _, x, y, radius) in enumerate(geometry):
+        for other, _, other_x, other_y, other_radius in geometry[index + 1:]:
+            require(math.hypot(x - other_x, y - other_y) + 0.02 >= radius + other_radius, f"Frequency circles overlap: {word}, {other}")
+    fallbacks = [node for node in elements if node.tag == "details" and "bd-frequency-count-list" in node.attrs.get("class", "").split()]
+    require(len(fallbacks) == 1, "Frequency circles lack their readable word/count list.")
+    readable = list(fallbacks[0].all("li"))
+    require(len(readable) == len(words), "Readable frequency list omits or duplicates a word.")
+    for item, expected in zip(readable, words):
+        labels, values = list(item.all("span")), list(item.all("strong"))
+        require(len(labels) == 1 and clean(labels[0].text()) == expected["word"], f"Readable list has the wrong word or order: {expected['word']}")
+        require(len(values) == 1 and clean(values[0].text()) == str(expected["count"]), f"Readable list has the wrong count: {expected['word']}")
+    require(not any(node.attrs.get("id") == "bd-word-selected" or "bd-word-group" in node.attrs.get("class", "").split() for node in elements), "The replaced interpretive graph remains in the frequency section.")
     return len(words)
 
 
