@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Three improvements to your summary · FRST 110</title>
+  <meta name="description" content="Place a chapter in the book, explain its causes, and state its thesis. A concise Egan summary explainer with a documentary analogy.">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/summary-explainer.html">
+  <style>
+    @font-face{font-family:"Source Sans 3";src:url("../_kit/fonts/SourceSans3VF-Upright.woff2") format("woff2");font-weight:200 900;font-display:swap}
+    :root{color-scheme:light;--paper:#f7f6f2;--ink:#202f35;--muted:#4a5c64;--blue:#245a8d;--rule:#cbd3d5;--water:#ddebf3;--ending:#f5e9d4;--focus:#0765ca}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:clamp(20px,1.65vw,25px)/1.3 "Source Sans 3",sans-serif}
+    ::selection{background:#c9dfec;color:#132f42}
+    a{color:var(--blue);text-underline-offset:4px}
+    a:hover{text-decoration-thickness:2px}
+    a:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+    .skip{position:absolute;top:-100px;left:16px;z-index:1;background:var(--paper);padding:12px}
+    .skip:focus{top:8px}
+    main{max-width:1440px;margin:auto;padding:clamp(20px,1.5vw,24px)}
+    h1{font-size:clamp(32px,3.1vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0 0 8px;font-weight:700;text-wrap:balance}
+    p{margin:0}
+    .intro{margin-bottom:9px}
+    .analogy{color:var(--muted)}
+    .moves{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:24px 0 20px}
+    .move+.move{border-left:1px solid var(--rule);padding-left:28px}
+    h2{font-size:clamp(24px,2.05vw,31px);line-height:1.18;margin:0 0 12px;font-weight:700;text-wrap:balance}
+    .question{font-weight:600;margin-bottom:12px}
+    .instruction{margin-bottom:14px}
+    .example{font-size:.97em}
+    .film h2{font-size:clamp(23px,1.9vw,29px);margin-bottom:14px}
+    .filmstrip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px}
+    .filmstrip li{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--water);padding:10px 7px;min-height:72px;font-weight:600}
+    .filmstrip li:nth-child(n+4){background:var(--ending)}
+    .filmstrip li::before,.filmstrip li::after{content:"";position:absolute;left:8px;right:8px;height:4px;background:repeating-linear-gradient(to right,var(--ink) 0 8px,transparent 8px 24px)}
+    .filmstrip li::before{top:4px}.filmstrip li::after{bottom:4px}
+    .connector{position:absolute;right:-24px;top:calc(50% - 7px);width:22px;height:14px;color:var(--ink)}
+    .reminders{margin-top:15px;padding-top:12px;border-top:1px solid var(--rule)}
+    .reminders p+p{margin-top:7px}
+    footer{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6px;font-size:16px;color:var(--muted)}
+    footer a{min-height:44px;display:inline-flex;align-items:center}
+    .sources{margin-left:auto}
+    @media(max-width:760px){
+      body{font-size:21px}main{padding:22px 18px}
+      .moves{grid-template-columns:1fr;gap:22px;margin-top:26px}
+      .move+.move{border-left:0;border-top:1px solid var(--rule);padding:20px 0 0}
+      .instruction{margin-bottom:12px}
+      .filmstrip{grid-template-columns:1fr;gap:25px;max-width:420px;margin:auto}
+      .filmstrip li{min-height:68px;padding:16px}
+      .connector{top:auto;bottom:-20px;right:calc(50% - 11px);transform:rotate(90deg)}
+      .sources{margin-left:0;width:100%}
+    }
+    @media print{
+      @page{size:landscape;margin:12mm}
+      body{background:white;font-size:15px}main{padding:0}
+      h1{font-size:29px}h2{font-size:21px}
+      .moves{margin:20px 0;gap:20px}.move+.move{padding-left:20px}
+      .filmstrip li{min-height:62px}.film h2{font-size:20px}
+      .skip,footer{display:none}.reminders{margin-top:16px;padding-top:12px}
+      section{break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to explainer</a>
+  <main id="content">
+    <header>
+      <h1>Three improvements to your summary</h1>
+      <p class="intro">Many papers found good facts and told events clearly. Now explain how those facts fit together.</p>
+      <p class="analogy">Think of editing a documentary: accurate scenes can mislead if you remove the connections or ending.</p>
+    </header>
+    <div class="moves">
+      <section class="move" aria-labelledby="place">
+        <h2 id="place">1. Place in the book</h2>
+        <p class="question">Where does this scene fit?</p>
+        <p class="instruction">Explain what the chapter adds to the book's larger account.</p>
+        <p class="example"><strong>Chapter 3:</strong> After earlier invasions, Egan examines a human response: introducing salmon to control alewives and create a sport fishery.</p>
+      </section>
+      <section class="move" aria-labelledby="causes">
+        <h2 id="causes">2. Explain the causes</h2>
+        <p class="question">Why does one event lead to another?</p>
+        <p class="instruction">Connect events with <strong>because</strong> or <strong>enabled</strong> when Egan supports the connection.</p>
+        <p class="example"><strong>Chapter 5:</strong> Chicago's canal connected separate watersheds, creating a possible route for carp toward the Great Lakes.</p>
+      </section>
+      <section class="move" aria-labelledby="thesis">
+        <h2 id="thesis">3. State the thesis</h2>
+        <p class="question">What does the whole account establish?</p>
+        <p class="instruction">Name Egan's main claim, including any crucial condition or limit.</p>
+        <p class="example"><strong>Chapter 7:</strong> Earlier pollution controls improved Lake Erie, but that recovery did not provide lasting protection.</p>
+      </section>
+    </div>
+    <section class="film" aria-labelledby="ending">
+      <h2 id="ending">Chapter 7: stopping at improvement changes the argument</h2>
+      <ol class="filmstrip" aria-label="Chapter 7's sequence continues beyond the initial improvement">
+        <li>Pollution<svg class="connector" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></li>
+        <li>Cleanup<svg class="connector" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></li>
+        <li>Improvement<svg class="connector" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></li>
+        <li>Toxic blooms<br>return<svg class="connector" viewBox="0 0 22 14" aria-hidden="true"><path d="M1 7h19m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></li>
+        <li>Toledo water<br>crisis</li>
+      </ol>
+    </section>
+    <section class="reminders" aria-label="Drafting and synthesis">
+      <p><strong>Before drafting:</strong> write one sentence each for place, causes, and thesis. Then choose supporting details.</p>
+      <p><strong>For synthesis:</strong> understand each source's argument before comparing arguments and making your own claim.</p>
+    </section>
+    <footer>
+      <a href="../courses/frst-110.html">FRST 110 course materials</a>
+      <a href="summary-explainer.pdf">One-page PDF</a>
+      <span class="sources">Examples paraphrase Egan (2017), chs. 3, 5, 7.</span>
+    </footer>
+  </main>
+</body>
+</html>

@@ -264,3 +264,50 @@ edition provenance lives in
 `features/hist-212-thought-experiments-SOURCES.md`. The surface brief is
 `.impeccable/surfaces/hist-212-thought-experiments.md`; shared design tokens and
 the existing global sidecar were not refreshed for this scoped addition.
+
+## FRST 110 Summary explainer · October 5, 2026
+
+### Overview
+
+`frst-110-resources/summary-explainer.html` is a **Read** surface for the
+five-minute Summary discussion. The compact title, three explanations, and
+Chapter 7 sequence adapt the approved one-page PDF. These values apply to this
+surface only; shared design tokens and the existing global sidecar stay as they are.
+
+### Colors
+
+Warm paper (`#f7f6f2`) supports slate ink (`#202f35`), muted explanatory text
+(`#4a5c64`), FRST blue links (`#245a8d`), and thin rules (`#cbd3d5`). The first
+three film frames use pale blue (`#ddebf3`); the final two use pale amber
+(`#f5e9d4`) to distinguish the returning blooms and Toledo water crisis.
+Keyboard focus uses blue (`#0765ca`).
+
+### Typography
+
+Self-hosted Source Sans 3 loads from `_kit/fonts/SourceSans3VF-Upright.woff2`,
+with sans-serif fallback. Body type scales from 20–25px at 1.3 line height;
+phones use 21px. The title scales from 32–46px with weight 700 and 1.12 line
+height. Section headings scale from 24–31px at weight 700. Questions and film
+labels use weight 600; the footer uses 16px. This surface's large type is
+intentional and does not replace the shared typography scale.
+
+### Layout
+
+Content centers within 1440px, with 20–24px padding. Three equal columns use
+28px gaps and vertical rules. The five-frame film sequence reads left to right:
+Pollution, Cleanup, Improvement, Toxic blooms return, Toledo water crisis.
+Inline arrows connect square frames with small film perforations. At 760px and
+below, the explanations stack with horizontal rules; the film frames stack
+with downward arrows. Mobile gutters are 18px. The complete desktop explainer
+fits 1280×720; the reviewed 390px and 320px layouts reflow without horizontal
+overflow.
+
+### Components
+
+All explanations remain visible in static HTML; there is no JavaScript or
+motion. A skip link and underlined links retain visible keyboard focus. The
+footer links to `courses/frst-110.html` and the companion
+`frst-110-resources/summary-explainer.pdf`. Landscape print styles use white
+paper, 12mm margins, smaller type, and hidden navigation/footer while retaining
+the explanation and sequence. Flat color fields and rules provide grouping;
+there are no shadows or rounded cards.

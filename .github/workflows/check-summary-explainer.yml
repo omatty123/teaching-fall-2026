@@ -1,0 +1,26 @@
+name: Check Summary explainer
+on:
+  push:
+    paths:
+      - 'frst-110-resources/summary-explainer.*'
+      - 'scripts/check-summary-explainer.py'
+      - '.github/workflows/check-summary-explainer.yml'
+  pull_request:
+    paths:
+      - 'frst-110-resources/summary-explainer.*'
+      - 'scripts/check-summary-explainer.py'
+      - '.github/workflows/check-summary-explainer.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: python scripts/check-summary-explainer.py
