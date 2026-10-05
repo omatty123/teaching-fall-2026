@@ -1,0 +1,86 @@
+{
+  "word": "hips",
+  "count": 8,
+  "poem_count": 8,
+  "related": [
+    {
+      "word": "hip",
+      "count": 1
+    },
+    {
+      "word": "hipped",
+      "count": 1
+    },
+    {
+      "word": "world-hipped",
+      "count": 1
+    }
+  ],
+  "interpretation": "Hips appears once in each of eight poems. Its contexts include city architecture, weather, music, childhood, remembered adulthood, burial work, and displacement. In “Buried,” the father moves his hips while digging a grave. In “Golden Rule Days,” hips describes Carla’s donated denims. The descriptions below are interpretations grounded in the poems.",
+  "occurrences": [
+    {
+      "poem_id": "poem-01",
+      "title": "Prologue—And Then She Owns You",
+      "page": "viii",
+      "count": 1,
+      "subject": "New Orleans, personified as a woman",
+      "context": "The city seduces the visiting you. Brick makes its erotic body architectural; rhumba and swerve make the attraction rhythmic."
+    },
+    {
+      "poem_id": "poem-02",
+      "title": "5 P.M., Tuesday, August 23, 2005",
+      "page": "1",
+      "count": 1,
+      "subject": "Women, as described by the speaking storm",
+      "context": "The emerging storm connects female bodily self-knowledge with weather, appetite, and chaos. Katrina speaks; the phrase itself concerns every woman."
+    },
+    {
+      "poem_id": "poem-06",
+      "title": "Why New Orleans Is",
+      "page": "6",
+      "count": 1,
+      "subject": "Southern Illinois women performing karaoke in New Orleans",
+      "context": "Toned visiting bodies keep time to Black music. The poem sets their dancing and sexual release within a city they can consume and leave."
+    },
+    {
+      "poem_id": "poem-36",
+      "title": "Ms. Thang Sloshes in the Direction of Home",
+      "page": "44",
+      "count": 1,
+      "subject": "Ms. Thang",
+      "context": "Her shoes fail in flood mud, but she retains her sashay and treats movement as performance. Hips link bodily progress and feminine self-presentation under pressure."
+    },
+    {
+      "poem_id": "poem-39",
+      "title": "Thankful",
+      "page": "48",
+      "count": 1,
+      "subject": "The speaking we remembering childhood",
+      "context": "Children dance or play to rhymes while their mothers watch and warn them. Remembered bodily joy and care answer an official account of poverty that diminishes their former lives."
+    },
+    {
+      "poem_id": "poem-40",
+      "title": "34, section 29",
+      "page": "56",
+      "count": 1,
+      "subject": "An older female nursing-home victim’s voice",
+      "context": "The speaker recalls sexual energy, style, motherhood, and belonging before accusing Louisiana of betrayal. Her remembered body supplies an individual life beyond a death count."
+    },
+    {
+      "poem_id": "poem-45",
+      "title": "Buried",
+      "page": "63",
+      "count": 1,
+      "subject": "The bereaved father digging a grave",
+      "context": "Jazz rhythm organizes strenuous digging. A body part previously associated with erotic dance now moves through exhausting burial work and grief."
+    },
+    {
+      "poem_id": "poem-51",
+      "title": "Golden Rule Days, section III",
+      "page": "72",
+      "count": 1,
+      "subject": "The hip area of Carla’s donated denims",
+      "context": "Ill-fitting donated clothing marks the displaced schoolchild for hostile recognition. The grammar attaches their to the denims; the image concerns clothing and social labeling."
+    }
+  ]
+}

@@ -32,3 +32,13 @@ The map gives contemporary geographic orientation. It does not reconstruct Katri
 - The site’s existing local Leaflet assets are reused. Tile access is online; place descriptions and source links remain readable if tiles fail.
 
 The more detailed geographic audit is in [MAP-SOURCES.md](MAP-SOURCES.md). Media metadata is in [media-sources.json](media-sources.json).
+
+## Whole-book word counts and hips
+
+The [whole-book word analysis](../blood-dazzler-words.html) covers all 55 poems: printed pp. vii–viii and 1–77, ending with “Voodoo VIII: Spiritual Cleansing & Blessing.” It counts 9,393 poem-body words in 2,998 distinct exact forms. Counts use the supplied edition’s OCR text layer, with checked transcription corrections. All first 22 poems exactly reproduce the prior 3,117-word opening-section audit. The full PDF, extracted verse, page slices and correction ledger remain private.
+
+[whole-book-counts.json](whole-book-counts.json) contains aggregate and per-poem word counts, titles and printed page references; it contains no poem text. Capitalization is ignored, curly/straight apostrophes are normalized, and contractions/hyphenated words remain intact. Titles, headnotes, epigraphs, timestamps, internal section labels, page numbers and front/back matter are excluded. Email excerpts within “What to Tweak” count as its body. The supplied PDF’s SHA-256 fingerprint is included in the public source metadata.
+
+[frequency-whole-book.json](frequency-whole-book.json) uses exactly the same 206 common-word exclusions and mechanically selects the top 50 words, sorted by descending count then alphabetically. Each circle’s area is proportional to its count within that chart. Chart scales adjust to keep labels readable; areas should not be compared across the opening-section and whole-book charts.
+
+[hips-analysis.json](hips-analysis.json) records exact **hips 8** across eight poems, with all eight occurrences individually checked against the source page images. Printed pages: viii, 1, 6, 44, 48, 56, 63, 72. Exact **hip 1**, **hipped 1**, and **world-hipped 1** are separate counts. Hips has shared frequency rank 58 (alphabetical tie order 64), below the top 50 cutoff of 9; it receives its own count/context section rather than being added to that cloud. The context descriptions and short interpretation are paraphrases grounded in the cited poems. “Square hips” in “Buried” describes the father digging a grave; “pocked hips” in “Golden Rule Days,” III, describes Carla’s donated denims.

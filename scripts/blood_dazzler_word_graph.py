@@ -8,8 +8,11 @@ def _pack(words):
     """Greedily fill the nearest available tangent positions around the center."""
     placed = []
     gap = 3.0
+    # Keep the smallest displayed circle readable at either reading scope.
+    # Areas remain proportional to exact counts within each chart.
+    radius_scale = 36.0 / math.sqrt(min((int(item['count']) for item in words), default=4))
     for item in words:
-        radius = 18.0 * math.sqrt(int(item['count']))
+        radius = radius_scale * math.sqrt(int(item['count']))
         if not placed:
             placed.append((0.0, 0.0, radius))
             continue
@@ -54,7 +57,7 @@ def _label_layout(word, radius):
                 'p': .55, 'q': .55, 'r': .39, 's': .43, 't': .37,
                 'u': .55, 'v': .50, 'w': .82, 'x': .50, 'y': .48, 'z': .47}
     size = 22.0
-    while size > 16.2:
+    while size > 12.0:
         fits = True
         for line, baseline in zip(lines, baselines):
             half_width = sum(advances.get(char, .62) for char in line.lower()) * size * .525
@@ -70,13 +73,18 @@ def _label_layout(word, radius):
     return lines, baselines, size * .91
 
 
-def render_graph(data):
+def render_graph(data, minimum_word_pixels=None):
     """Keep the builder interface; all chart content is native, static SVG."""
     esc = lambda value: html.escape(str(value), quote=True)
     words = data.get('words', [])
     positions = _pack(words)
     extent = max((math.hypot(x, y) + r for x, y, r in positions), default=50.0) + 8.0
     diameter = 2 * extent
+    chart_width = 850
+    if minimum_word_pixels and words:
+        smallest_label = min(_label_layout(str(item['word']), radius)[2]
+                             for item, (_, _, radius) in zip(words, positions))
+        chart_width = max(chart_width, math.ceil(minimum_word_pixels * diameter / smallest_label))
     items = []
     readable = []
     for item, (x, y, radius) in zip(words, positions):
@@ -97,7 +105,7 @@ def render_graph(data):
     return f'''<section id="words" class="bd-words bd-frequency" aria-labelledby="bd-words-title">
 <h2 id="bd-words-title">Word cloud</h2>
 <p class="bd-frequency-instruction">Circle area shows frequency. Numbers show counts.</p>
-<div class="bd-frequency-chart" style="max-width:850px;margin:0 auto;overflow-x:auto;overscroll-behavior-inline:contain" role="region" aria-label="Packed word frequency circles; scroll horizontally on a small screen" tabindex="0"><svg class="bd-frequency-cluster" xmlns="http://www.w3.org/2000/svg" width="850" height="850" style="display:block;width:100%;min-width:850px;max-width:none;height:auto;margin:0;padding:0" viewBox="0 0 {diameter:.6f} {diameter:.6f}" role="img" aria-labelledby="bd-frequency-chart-title bd-frequency-chart-desc"><title id="bd-frequency-chart-title">Word cloud, {esc(data.get('scope', 'pp. vii–24'))}</title><desc id="bd-frequency-chart-desc">{len(words)} packed circles, one for each counted word. Circle area is proportional to the exact count printed below the word. Common function words are excluded. A readable list of all counts follows.</desc>{''.join(items)}</svg></div>
+<div class="bd-frequency-chart" style="max-width:{chart_width}px;margin:0 auto;overflow-x:auto;overscroll-behavior-inline:contain" role="region" aria-label="Packed word frequency circles; scroll horizontally on a small screen" tabindex="0"><svg class="bd-frequency-cluster" xmlns="http://www.w3.org/2000/svg" width="{chart_width}" height="{chart_width}" style="display:block;width:100%;min-width:{chart_width}px;max-width:none;height:auto;margin:0;padding:0" viewBox="0 0 {diameter:.6f} {diameter:.6f}" role="img" aria-labelledby="bd-frequency-chart-title bd-frequency-chart-desc"><title id="bd-frequency-chart-title">Word cloud, {esc(data.get('scope', 'pp. vii–24'))}</title><desc id="bd-frequency-chart-desc">{len(words)} packed circles, one for each counted word. Circle area is proportional to the exact count printed below the word. Common function words are excluded. A readable list of all counts follows.</desc>{''.join(items)}</svg></div>
 <p class="bd-frequency-mobile-note">Scroll sideways to read every circle.</p>
 <p class="bd-frequency-scope">{esc(data.get('scope', 'pp. vii–24'))} · {len(words)} most frequent words, excluding common words such as the, a, and an.</p>
 <details class="bd-frequency-count-list"><summary>Read all word counts</summary><ul>{''.join(readable)}</ul></details>
