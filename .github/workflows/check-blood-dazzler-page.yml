@@ -4,22 +4,28 @@ on:
   push:
     paths:
       - 'frst-110-resources/blood-dazzler-oct-5.html'
+      - 'frst-110-resources/blood-dazzler-words.html'
       - 'frst-110-resources/blood-dazzler-assets/**'
       - '_kit/blood-dazzler-*'
       - '_kit/vendor/leaflet/**'
       - 'scripts/build-blood-dazzler-page.py'
+      - 'scripts/build-blood-dazzler-full-words.py'
       - 'scripts/blood_dazzler_word_graph.py'
       - 'scripts/check-blood-dazzler-page.py'
+      - 'scripts/check-blood-dazzler-full-words.py'
       - '.github/workflows/check-blood-dazzler-page.yml'
   pull_request:
     paths:
       - 'frst-110-resources/blood-dazzler-oct-5.html'
+      - 'frst-110-resources/blood-dazzler-words.html'
       - 'frst-110-resources/blood-dazzler-assets/**'
       - '_kit/blood-dazzler-*'
       - '_kit/vendor/leaflet/**'
       - 'scripts/build-blood-dazzler-page.py'
+      - 'scripts/build-blood-dazzler-full-words.py'
       - 'scripts/blood_dazzler_word_graph.py'
       - 'scripts/check-blood-dazzler-page.py'
+      - 'scripts/check-blood-dazzler-full-words.py'
       - '.github/workflows/check-blood-dazzler-page.yml'
   workflow_dispatch:
 
@@ -45,7 +51,12 @@ jobs:
         run: |
           node --check _kit/blood-dazzler-map.js
           node --check _kit/blood-dazzler-words.js
+          node --check _kit/blood-dazzler-full-words.js
       - name: Build the class page
-        run: python scripts/build-blood-dazzler-page.py
+        run: |
+          python scripts/build-blood-dazzler-page.py
+          python scripts/build-blood-dazzler-full-words.py
       - name: Check reading, word evidence, media, local links, and generated HTML
-        run: python scripts/check-blood-dazzler-page.py --check-generated
+        run: |
+          python scripts/check-blood-dazzler-page.py --check-generated
+          python scripts/check-blood-dazzler-full-words.py --check-generated

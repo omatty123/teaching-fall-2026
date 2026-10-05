@@ -1,0 +1,417 @@
+{
+  "scope": "Whole book: pp. vii–viii, 1–77",
+  "method": "Counts use the supplied PDF’s OCR text, with checked transcription corrections. Poem bodies on printed pp. vii–viii and 1–77 are included; titles, headnotes, epigraphs, timestamps, internal section numerals, page numbers and front/back matter are excluded. Capitalization is ignored. Straight and curly apostrophes are treated alike; contractions and hyphenated words remain intact. Different word forms are counted separately. Email excerpts within “What to Tweak” count as poem body. The same206 common-word exclusions used for the opening reading are applied. The50 most frequent remaining words are shown, with alphabetical ordering for ties. Circle area represents the number of uses; position and color do not add meaning.",
+  "stop_words": [
+    "a",
+    "about",
+    "above",
+    "after",
+    "again",
+    "against",
+    "ain't",
+    "all",
+    "am",
+    "an",
+    "and",
+    "any",
+    "are",
+    "aren't",
+    "as",
+    "at",
+    "be",
+    "because",
+    "been",
+    "before",
+    "being",
+    "below",
+    "between",
+    "both",
+    "bout",
+    "but",
+    "by",
+    "can",
+    "can't",
+    "cannot",
+    "comin",
+    "could",
+    "couldn't",
+    "did",
+    "didn't",
+    "do",
+    "does",
+    "doesn't",
+    "doing",
+    "don't",
+    "down",
+    "during",
+    "each",
+    "either",
+    "else",
+    "enough",
+    "even",
+    "ever",
+    "every",
+    "few",
+    "for",
+    "from",
+    "further",
+    "gon",
+    "gonna",
+    "gotta",
+    "had",
+    "hadn't",
+    "has",
+    "hasn't",
+    "have",
+    "haven't",
+    "having",
+    "he",
+    "he'd",
+    "he'll",
+    "he's",
+    "her",
+    "here",
+    "here's",
+    "hers",
+    "herself",
+    "him",
+    "himself",
+    "his",
+    "hisself",
+    "how",
+    "how's",
+    "i",
+    "i'd",
+    "i'll",
+    "i'm",
+    "i've",
+    "if",
+    "in",
+    "into",
+    "is",
+    "isn't",
+    "it",
+    "it's",
+    "its",
+    "itself",
+    "just",
+    "let",
+    "let's",
+    "like",
+    "me",
+    "might",
+    "more",
+    "most",
+    "much",
+    "must",
+    "mustn't",
+    "my",
+    "myself",
+    "neither",
+    "no",
+    "nor",
+    "not",
+    "now",
+    "nuthin",
+    "of",
+    "off",
+    "offa",
+    "ol",
+    "on",
+    "once",
+    "only",
+    "or",
+    "other",
+    "ought",
+    "our",
+    "ours",
+    "ourselves",
+    "out",
+    "outta",
+    "over",
+    "own",
+    "same",
+    "shall",
+    "shan't",
+    "she",
+    "she'd",
+    "she'll",
+    "she's",
+    "sho",
+    "should",
+    "shouldn't",
+    "so",
+    "some",
+    "somethin",
+    "such",
+    "than",
+    "that",
+    "that's",
+    "the",
+    "their",
+    "theirs",
+    "them",
+    "themselves",
+    "then",
+    "there",
+    "there's",
+    "these",
+    "they",
+    "they'd",
+    "they'll",
+    "they're",
+    "they've",
+    "this",
+    "those",
+    "through",
+    "to",
+    "too",
+    "under",
+    "until",
+    "up",
+    "us",
+    "very",
+    "was",
+    "wasn't",
+    "we",
+    "we'd",
+    "we'll",
+    "we're",
+    "we've",
+    "were",
+    "weren't",
+    "what",
+    "what's",
+    "when",
+    "when's",
+    "where",
+    "where's",
+    "which",
+    "while",
+    "who",
+    "who's",
+    "whom",
+    "why",
+    "why's",
+    "will",
+    "with",
+    "won't",
+    "would",
+    "wouldn't",
+    "y'all",
+    "you",
+    "you'd",
+    "you'll",
+    "you're",
+    "you've",
+    "your",
+    "yours",
+    "yourself",
+    "yourselves"
+  ],
+  "words": [
+    {
+      "word": "rain",
+      "count": 33
+    },
+    {
+      "word": "water",
+      "count": 30
+    },
+    {
+      "word": "name",
+      "count": 24
+    },
+    {
+      "word": "know",
+      "count": 22
+    },
+    {
+      "word": "one",
+      "count": 21
+    },
+    {
+      "word": "wait",
+      "count": 21
+    },
+    {
+      "word": "come",
+      "count": 20
+    },
+    {
+      "word": "little",
+      "count": 18
+    },
+    {
+      "word": "left",
+      "count": 17
+    },
+    {
+      "word": "back",
+      "count": 15
+    },
+    {
+      "word": "go",
+      "count": 15
+    },
+    {
+      "word": "skin",
+      "count": 15
+    },
+    {
+      "word": "body",
+      "count": 14
+    },
+    {
+      "word": "god",
+      "count": 14
+    },
+    {
+      "word": "hard",
+      "count": 14
+    },
+    {
+      "word": "never",
+      "count": 14
+    },
+    {
+      "word": "see",
+      "count": 14
+    },
+    {
+      "word": "sun",
+      "count": 14
+    },
+    {
+      "word": "black",
+      "count": 13
+    },
+    {
+      "word": "breath",
+      "count": 13
+    },
+    {
+      "word": "day",
+      "count": 13
+    },
+    {
+      "word": "say",
+      "count": 13
+    },
+    {
+      "word": "way",
+      "count": 13
+    },
+    {
+      "word": "away",
+      "count": 12
+    },
+    {
+      "word": "leave",
+      "count": 12
+    },
+    {
+      "word": "new",
+      "count": 12
+    },
+    {
+      "word": "wet",
+      "count": 12
+    },
+    {
+      "word": "days",
+      "count": 11
+    },
+    {
+      "word": "got",
+      "count": 11
+    },
+    {
+      "word": "light",
+      "count": 11
+    },
+    {
+      "word": "sky",
+      "count": 11
+    },
+    {
+      "word": "sleep",
+      "count": 11
+    },
+    {
+      "word": "time",
+      "count": 11
+    },
+    {
+      "word": "white",
+      "count": 11
+    },
+    {
+      "word": "blue",
+      "count": 10
+    },
+    {
+      "word": "done",
+      "count": 10
+    },
+    {
+      "word": "everything",
+      "count": 10
+    },
+    {
+      "word": "eye",
+      "count": 10
+    },
+    {
+      "word": "eyes",
+      "count": 10
+    },
+    {
+      "word": "first",
+      "count": 10
+    },
+    {
+      "word": "get",
+      "count": 10
+    },
+    {
+      "word": "keep",
+      "count": 10
+    },
+    {
+      "word": "man",
+      "count": 10
+    },
+    {
+      "word": "toward",
+      "count": 10
+    },
+    {
+      "word": "behind",
+      "count": 9
+    },
+    {
+      "word": "hair",
+      "count": 9
+    },
+    {
+      "word": "hands",
+      "count": 9
+    },
+    {
+      "word": "heart",
+      "count": 9
+    },
+    {
+      "word": "luther",
+      "count": 9
+    },
+    {
+      "word": "mud",
+      "count": 9
+    }
+  ],
+  "poem_count": 55,
+  "total_tokens": 9393,
+  "max_words": 50
+}

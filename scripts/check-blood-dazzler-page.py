@@ -96,8 +96,8 @@ def local_path(url, origin):
     return target, unquote(parsed.fragment)
 
 
-def check_local_resources(document):
-    documents = {PAGE: document}
+def check_local_resources(document, page=PAGE):
+    documents = {page: document}
     checked = set()
     stylesheets = set()
     ids = [node.attrs["id"] for node in document.root.all() if "id" in node.attrs]
@@ -107,7 +107,7 @@ def check_local_resources(document):
             value = node.attrs.get(attribute)
             if not value:
                 continue
-            target, fragment = local_path(value, PAGE)
+            target, fragment = local_path(value, page)
             if target is None:
                 continue
             require(target.is_file(), f"Missing local {node.tag} {attribute}: {value}")
@@ -211,21 +211,24 @@ def color_luminance(value, message):
     return sum(channel * weight for channel, weight in zip(linear, (0.2126, 0.7152, 0.0722)))
 
 
-def check_word_stylesheet(document):
+def check_word_stylesheet(document, page=PAGE):
     stylesheet = ROOT / "_kit/blood-dazzler-words.css"
     links = [node for node in document.root.all("link")
              if "stylesheet" in node.attrs.get("rel", "").split()
-             and local_path(node.attrs.get("href", ""), PAGE)[0] == stylesheet]
+             and local_path(node.attrs.get("href", ""), page)[0] == stylesheet]
     require(len(links) == 1, "The word cloud needs one versioned words stylesheet.")
     version = parse_qs(urlsplit(links[0].attrs["href"]).query).get("v", [])
     expected = hashlib.sha256(stylesheet.read_bytes()).hexdigest()[:12]
     require(version == [expected], "Word-cloud stylesheet URL lacks the current CSS content hash; a cached older style can hide its labels.")
 
 
-def check_frequency_data(data, counts):
+def check_frequency_data(data, counts, expected_scope=None):
     require(isinstance(data, dict), "Frequency cluster data must be an object.")
     scope = json.dumps(data.get("scope", ""), ensure_ascii=False)
-    require(re.search(r"vii\s*[–-]\s*24", scope), "Frequency cluster scope must be the printed reading pp. vii–24.")
+    if expected_scope is None:
+        require(re.search(r"vii\s*[–-]\s*24", scope), "Frequency cluster scope must be the printed reading pp. vii–24.")
+    else:
+        require(data.get("scope") == expected_scope, "Frequency cluster scope differs from its counted corpus.")
     require(isinstance(data.get("method"), str) and data["method"].strip(), "Frequency cluster must explain its counting/filtering method.")
     stops = data.get("stop_words")
     require(isinstance(stops, list) and all(isinstance(word, str) and word for word in stops), "Frequency cluster needs an explicit stop-word list.")
@@ -244,10 +247,11 @@ def check_frequency_data(data, counts):
     return words
 
 
-def check_frequency_cluster(document, section, counts):
-    check_word_stylesheet(document)
-    data = json.loads((ASSETS / "frequency-cluster.json").read_text(encoding="utf-8"))
-    words = check_frequency_data(data, counts)
+def check_frequency_cluster(document, section, counts, data=None, page=PAGE, expected_scope=None):
+    check_word_stylesheet(document, page)
+    if data is None:
+        data = json.loads((ASSETS / "frequency-cluster.json").read_text(encoding="utf-8"))
+    words = check_frequency_data(data, counts, expected_scope)
     require(any(clean(node.text()).casefold() == "word cloud" for node in section.all("h2")), "The frequency circles lack their Word cloud title.")
     elements = list(section.all())
     embedded = next((node for node in elements if node.attrs.get("id") == "bd-word-data"), None)
