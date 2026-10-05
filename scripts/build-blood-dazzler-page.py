@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Build the October 5 class resource from public-safe reading data and sourced map markup."""
-import html,json
+import html,json,hashlib
 from pathlib import Path
 from blood_dazzler_word_graph import render_graph
 ROOT=Path(__file__).resolve().parent.parent
 ASSETS=ROOT/'frst-110-resources/blood-dazzler-assets'
+word_css_version=hashlib.sha256((ROOT/'_kit/blood-dazzler-words.css').read_bytes()).hexdigest()[:12]
 e=html.escape
 c=json.loads((ASSETS/'reading-data.json').read_text())
 rows=lambda data: ''.join(f'<tr><td><strong>{e(x["name"])}</strong></td><td>{e(x["pages"])}</td><td>{e(x["role"])}</td></tr>' for x in data)
@@ -15,7 +16,7 @@ map_html=(ASSETS/'map-fragment.html').read_text().replace('<section class="bd-ma
 page=f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Blood Dazzler · October 5 · FRST 110</title><meta name="description" content="Patricia Smith, pp. vii–24: New Orleans map, rooftop rescue photographs and helicopter footage, a word frequency cloud, characters, and poem voices.">
-<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="../_kit/blood-dazzler-1.css"><link rel="stylesheet" href="../_kit/blood-dazzler-map.css"><link rel="stylesheet" href="../_kit/blood-dazzler-words.css">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="../_kit/blood-dazzler-1.css"><link rel="stylesheet" href="../_kit/blood-dazzler-map.css"><link rel="stylesheet" href="../_kit/blood-dazzler-words.css?v={word_css_version}">
 <meta property="og:title" content="Blood Dazzler · October 5"><meta property="og:description" content="New Orleans geography, rooftop waiting and rescue, and Patricia Smith’s opening poems, pp. vii–24."><meta property="og:type" content="website"><meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-5.html"><meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-assets/rooftop-waiting.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-assets/rooftop-waiting.jpg">
 </head><body><a class="skip" href="#content">Skip to reading materials</a>
 <nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a class="crumb" href="../courses/frst-110.html">Course materials</a><a href="https://lawrence.instructure.com/courses/14726/pages/song-of-the-day-the-river-in-reverse-elvis-costello-and-allen-toussaint">The River in Reverse</a></div></nav>

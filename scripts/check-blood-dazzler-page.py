@@ -5,6 +5,7 @@ No network or third-party Python packages are needed. --check-generated also
 reruns the builder and checks the committed page for an outstanding Git diff.
 """
 import argparse
+import hashlib
 import json
 import math
 import re
@@ -15,7 +16,7 @@ from dataclasses import dataclass, field
 from datetime import date
 from html.parser import HTMLParser
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import parse_qs, unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGE = ROOT / "frst-110-resources/blood-dazzler-oct-5.html"
@@ -183,6 +184,44 @@ def mp4_duration(path):
 REQUIRED_STOP_WORDS = set("a an and of the to in with as at for but is was are it its that this these those my i you your he she her we our they their them him his me us be can will from".split())
 
 
+def inline_styles(node):
+    """Read the element's own styles, independently of a cached stylesheet."""
+    return {name.strip().casefold(): value.strip().removesuffix("!important").strip()
+            for declaration in node.attrs.get("style", "").split(";")
+            if ":" in declaration
+            for name, value in [declaration.split(":", 1)]}
+
+
+def style_number(value, message):
+    require(re.fullmatch(r"\d+(?:\.\d+)?(?:px)?", value or ""), message)
+    number = float(value.removesuffix("px"))
+    require(math.isfinite(number) and number > 0, message)
+    return number
+
+
+def color_luminance(value, message):
+    # Explicit hex colors remain usable even if the stylesheet cannot load.
+    require(re.fullmatch(r"#[0-9a-fA-F]{3}(?:[0-9a-fA-F]{3})?", value or ""), message)
+    digits = value[1:]
+    if len(digits) == 3:
+        digits = "".join(digit * 2 for digit in digits)
+    channels = [int(digits[index:index + 2], 16) / 255 for index in (0, 2, 4)]
+    linear = [channel / 12.92 if channel <= 0.04045 else ((channel + 0.055) / 1.055) ** 2.4
+              for channel in channels]
+    return sum(channel * weight for channel, weight in zip(linear, (0.2126, 0.7152, 0.0722)))
+
+
+def check_word_stylesheet(document):
+    stylesheet = ROOT / "_kit/blood-dazzler-words.css"
+    links = [node for node in document.root.all("link")
+             if "stylesheet" in node.attrs.get("rel", "").split()
+             and local_path(node.attrs.get("href", ""), PAGE)[0] == stylesheet]
+    require(len(links) == 1, "The word cloud needs one versioned words stylesheet.")
+    version = parse_qs(urlsplit(links[0].attrs["href"]).query).get("v", [])
+    expected = hashlib.sha256(stylesheet.read_bytes()).hexdigest()[:12]
+    require(version == [expected], "Word-cloud stylesheet URL lacks the current CSS content hash; a cached older style can hide its labels.")
+
+
 def check_frequency_data(data, counts):
     require(isinstance(data, dict), "Frequency cluster data must be an object.")
     scope = json.dumps(data.get("scope", ""), ensure_ascii=False)
@@ -206,6 +245,7 @@ def check_frequency_data(data, counts):
 
 
 def check_frequency_cluster(document, section, counts):
+    check_word_stylesheet(document)
     data = json.loads((ASSETS / "frequency-cluster.json").read_text(encoding="utf-8"))
     words = check_frequency_data(data, counts)
     require(any(clean(node.text()).casefold() == "word cloud" for node in section.all("h2")), "The frequency circles lack their Word cloud title.")
@@ -222,6 +262,13 @@ def check_frequency_cluster(document, section, counts):
     require(len(view_box) == 4, "The frequency SVG lacks a usable viewBox.")
     left, top, width, height = map(float, view_box)
     require(all(math.isfinite(value) for value in (left, top, width, height)) and width > 0 and height > 0, "Invalid frequency SVG bounds.")
+    chart_style = inline_styles(chart)
+    require(chart_style.get("display") == "block" and chart_style.get("width") == "100%"
+            and chart_style.get("height") == "auto", "Frequency SVG lacks self-contained responsive sizing.")
+    minimum_width = style_number(chart_style.get("min-width"), "Frequency SVG lacks a readable inline minimum width.")
+    wrappers = [node for node in elements if "bd-frequency-chart" in node.attrs.get("class", "").split()]
+    require(len(wrappers) == 1 and inline_styles(wrappers[0]).get("overflow-x") == "auto",
+            "Frequency chart lacks self-contained horizontal scrolling for its large labels.")
     items = [node for node in chart.all() if "bd-frequency-word" in node.attrs.get("class", "").split()]
     require(len(items) == len(words) and len(list(chart.all("circle"))) == len(words), "Packed diagram must show exactly one circle per counted word.")
     expected_by_word = {item["word"]: item for item in words}
@@ -235,6 +282,13 @@ def check_frequency_cluster(document, section, counts):
         circles = list(item.all("circle"))
         require(len(circles) == 1, f"Word does not have one native SVG circle: {word}")
         circle = circles[0]
+        # Native presentation attributes are sufficient for the circles; text
+        # uses inline CSS so an older external text rule cannot realign it.
+        circle_style = {**circle.attrs, **inline_styles(circle)}
+        circle_fill = color_luminance(circle_style.get("fill"), f"Circle lacks an explicit fill: {word}")
+        require(circle_fill >= 0.5, f"Circle fill is too dark for its dark labels: {word}")
+        color_luminance(circle_style.get("stroke"), f"Circle lacks an explicit stroke: {word}")
+        style_number(circle_style.get("stroke-width"), f"Circle lacks a positive stroke width: {word}")
         x, y, radius = (float(circle.attrs.get(key, "0")) for key in ("cx", "cy", "r"))
         for transformed in (item, circle):
             transform = transformed.attrs.get("transform", "").strip()
@@ -259,6 +313,17 @@ def check_frequency_cluster(document, section, counts):
         # than treating the visual line break as a change to the counted word.
         require(len(labels) == 1 and re.sub(r"\s+", "", labels[0].text()).casefold() == word.casefold(), f"Circle does not visibly label its exact word: {word}")
         require(len(count_labels) == 1 and clean(count_labels[0].text()) == str(expected["count"]), f"Circle does not visibly label its exact count: {word}")
+        for text, minimum_weight, kind in ((labels[0], 800, "word"), (count_labels[0], 700, "count")):
+            styles = inline_styles(text)
+            require(styles.get("text-anchor") == "middle", f"Circle {kind} lacks self-contained centered alignment: {word}")
+            family = styles.get("font-family", "").casefold()
+            require("source sans 3" in family and "sans-serif" in family, f"Circle {kind} lacks its inline legible font family: {word}")
+            size = style_number(styles.get("font-size"), f"Circle {kind} lacks a positive inline font size: {word}")
+            require(size * minimum_width / width >= 18 - 0.02, f"Circle {kind} becomes smaller than 18 screen pixels at its minimum chart width: {word}")
+            weight = style_number(styles.get("font-weight"), f"Circle {kind} lacks an explicit inline font weight: {word}")
+            require(weight >= minimum_weight, f"Circle {kind} is not bold enough: {word}")
+            ink = color_luminance(styles.get("fill"), f"Circle {kind} lacks an explicit inline text color: {word}")
+            require((circle_fill + 0.05) / (ink + 0.05) >= 4.5, f"Circle {kind} has insufficient contrast against its circle: {word}")
         geometry.append((word, expected["count"], x, y, radius))
     # r/sqrt(count) must be constant: therefore circle AREA, not radius or
     # lettering, represents frequency. 0.02 SVG units allows decimal rounding.
