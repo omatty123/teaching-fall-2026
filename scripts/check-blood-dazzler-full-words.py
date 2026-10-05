@@ -165,6 +165,52 @@ def check_public_scope(document):
             "The class-page companion link must say Word clouds by section and whole book.")
 
 
+def check_scope_selection(document):
+    navs = [node for node in document.root.all("nav") if "bd-cloud-nav" in node.attrs.get("class", "").split()]
+    require(len(navs) == 1, "The clouds page needs one native reading-scope navigation.")
+    links = list(navs[0].all("a"))
+    identities = [f"words-{key}" for key, *_ in PARTITIONS]
+    require([node.attrs.get("data-cloud") for node in links] == identities
+            and [node.attrs.get("href") for node in links] == [f"#{identity}" for identity in identities],
+            "Cloud controls must be native anchors for all four exact scopes.")
+    # Execute the actual small selector against its DOM contract. This checks
+    # default/deep-link/history behavior without depending on browser layout.
+    program = r"""
+const vm = require('node:vm');
+const input = JSON.parse(require('node:fs').readFileSync(0, 'utf8'));
+const assert = (ok, message) => { if (!ok) throw Error(message); };
+const setup = hash => {
+  const sections = input.ids.map(id => ({id, hidden:false, scrollIntoView(){}}));
+  const links = input.ids.map(id => ({dataset:{cloud:id}, hash:'#'+id, attrs:{}, events:{},
+    setAttribute(k,v){this.attrs[k]=v;}, removeAttribute(k){delete this.attrs[k];}, addEventListener(k,v){this.events[k]=v;}}));
+  const win = {location:{hash}, events:{}, addEventListener(k,v){this.events[k]=v;}, requestAnimationFrame(fn){fn();}};
+  win.history = {pushState(a,b,hash){win.location.hash=hash;}};
+  const document = {querySelector:()=>({querySelectorAll:()=>links}), getElementById:id=>sections.find(s=>s.id===id)};
+  vm.runInNewContext(input.script, {document, window:win});
+  const selected = id => {
+    assert(sections.filter(s=>!s.hidden).map(s=>s.id).join()===id, 'Wrong selected cloud for '+win.location.hash);
+    assert(links.filter(l=>l.attrs['aria-current']).map(l=>l.dataset.cloud).join()===id, 'Wrong accessible selected state');
+  };
+  return {win, links, selected};
+};
+for (const hash of ['', '#unknown', '#%ZZ', ...input.ids.map(id=>'#'+id)]) {
+  const test = setup(hash); test.selected(input.ids.includes(hash.slice(1)) ? hash.slice(1) : 'words-whole');
+}
+const test = setup('');
+for (const link of test.links) {
+  link.events.click({button:0,ctrlKey:false,metaKey:false,shiftKey:false,altKey:false,preventDefault(){}});
+  test.selected(link.dataset.cloud); assert(test.win.location.hash===link.hash, 'Selection does not update its native hash');
+}
+for (const event of ['hashchange','popstate']) {
+  assert(typeof test.win.events[event]==='function', 'Missing history/hash restoration');
+  test.win.location.hash='#words-first'; test.win.events[event](); test.selected('words-first');
+}
+"""
+    result = subprocess.run(["node", "-e", program], input=json.dumps({"ids": identities, "script": (ROOT / "_kit/blood-dazzler-full-words.js").read_text()}),
+                            cwd=ROOT, capture_output=True, text=True)
+    require(result.returncode == 0, f"Cloud selection fails default, deep-link, click, or history behavior: {result.stderr.strip()}")
+
+
 def check_page(document, book, partitions):
     nodes = list(document.root.all())
     by_id = {node.attrs["id"]: node for node in nodes if "id" in node.attrs}
@@ -228,6 +274,7 @@ def check_page(document, book, partitions):
         check_version(document, relative, "link", "href")
     check_version(document, "_kit/blood-dazzler-full-words.js", "script", "src")
     check_public_scope(document)
+    check_scope_selection(document)
     return words
 
 
