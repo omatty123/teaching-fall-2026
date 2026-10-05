@@ -293,21 +293,20 @@ intentional and does not replace the shared typography scale.
 
 ### Layout
 
-Content centers within 1440px, with 20–24px padding. Three equal columns use
-28px gaps and vertical rules. The five-frame film sequence reads left to right:
-Pollution, Cleanup, Improvement, Toxic blooms return, Toledo water crisis.
-Inline arrows connect square frames with small film perforations. At 760px and
-below, the explanations stack with horizontal rules; the film frames stack
-with downward arrows. Mobile gutters are 18px. The complete desktop explainer
-fits 1280×720; the reviewed 390px and 320px layouts reflow without horizontal
-overflow.
+Content centers within 880px, with 20–24px padding. All three explanations
+stack vertically in their numbered order, with horizontal rules between them.
+The five-frame film sequence also reads from top to bottom: Pollution, Cleanup,
+Improvement, Toxic blooms return, Toledo water crisis. Downward arrows connect
+square frames with small film perforations. This vertical reading order applies
+at every screen width. Mobile gutters are 18px. The webpage scrolls vertically;
+its original one-page PDF remains a separate landscape export.
 
 ### Components
 
 All explanations remain visible in static HTML; there is no JavaScript or
 motion. A skip link and underlined links retain visible keyboard focus. The
 footer links to `courses/frst-110.html` and the companion
-`frst-110-resources/summary-explainer.pdf`. Landscape print styles use white
+`frst-110-resources/summary-explainer.pdf`. Portrait print styles use white
 paper, 12mm margins, smaller type, and hidden navigation/footer while retaining
 the explanation and sequence. Flat color fields and rules provide grouping;
 there are no shadows or rounded cards.

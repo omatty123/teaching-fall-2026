@@ -18,24 +18,24 @@
     a:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
     .skip{position:absolute;top:-100px;left:16px;z-index:1;background:var(--paper);padding:12px}
     .skip:focus{top:8px}
-    main{max-width:1440px;margin:auto;padding:clamp(20px,1.5vw,24px)}
+    main{max-width:880px;margin:auto;padding:clamp(20px,1.5vw,24px)}
     h1{font-size:clamp(32px,3.1vw,46px);line-height:1.12;letter-spacing:-.02em;margin:0 0 8px;font-weight:700;text-wrap:balance}
     p{margin:0}
     .intro{margin-bottom:9px}
     .analogy{color:var(--muted)}
-    .moves{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:24px 0 20px}
-    .move+.move{border-left:1px solid var(--rule);padding-left:28px}
+    .moves{display:grid;grid-template-columns:1fr;gap:22px;margin:24px 0 20px}
+    .move+.move{border-top:1px solid var(--rule);padding:20px 0 0}
     h2{font-size:clamp(24px,2.05vw,31px);line-height:1.18;margin:0 0 12px;font-weight:700;text-wrap:balance}
     .question{font-weight:600;margin-bottom:12px}
     .instruction{margin-bottom:14px}
     .example{font-size:.97em}
     .film h2{font-size:clamp(23px,1.9vw,29px);margin-bottom:14px}
-    .filmstrip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:26px}
+    .filmstrip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr;gap:25px;max-width:420px}
     .filmstrip li{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--water);padding:10px 7px;min-height:72px;font-weight:600}
     .filmstrip li:nth-child(n+4){background:var(--ending)}
     .filmstrip li::before,.filmstrip li::after{content:"";position:absolute;left:8px;right:8px;height:4px;background:repeating-linear-gradient(to right,var(--ink) 0 8px,transparent 8px 24px)}
     .filmstrip li::before{top:4px}.filmstrip li::after{bottom:4px}
-    .connector{position:absolute;right:-24px;top:calc(50% - 7px);width:22px;height:14px;color:var(--ink)}
+    .connector{position:absolute;bottom:-20px;right:calc(50% - 11px);width:22px;height:14px;color:var(--ink);transform:rotate(90deg)}
     .reminders{margin-top:15px;padding-top:12px;border-top:1px solid var(--rule)}
     .reminders p+p{margin-top:7px}
     footer{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-top:6px;font-size:16px;color:var(--muted)}
@@ -52,10 +52,10 @@
       .sources{margin-left:0;width:100%}
     }
     @media print{
-      @page{size:landscape;margin:12mm}
+      @page{size:portrait;margin:12mm}
       body{background:white;font-size:15px}main{padding:0}
       h1{font-size:29px}h2{font-size:21px}
-      .moves{margin:20px 0;gap:20px}.move+.move{padding-left:20px}
+      .moves{margin:20px 0;gap:20px}.move+.move{padding:16px 0 0}
       .filmstrip li{min-height:62px}.film h2{font-size:20px}
       .skip,footer{display:none}.reminders{margin-top:16px;padding-top:12px}
       section{break-inside:avoid}
