@@ -4,9 +4,9 @@
 
 Patricia Smith, *Blood Dazzler* (Coffee House Press, 2008), printed pp. vii–24, from “Prologue: And Then She Owns You” through “Voodoo II: Money.” Monday excludes “What to Tweak,” which begins on p. 25. The complete copyrighted poems are not reproduced here.
 
-The word graph uses six groups and 21 words selected for their roles in the assigned poems. Lines connect related images, actions, and points of view. These groups and connections are close-reading interpretations. Their positions and sizes carry no quantitative scale. Selecting a word shows a brief account and two poem/page examples. Examples are paraphrases; the money entry explicitly labels the p.13 use of dollar as a related contrast. Eye and eyes remain separate words. My and you are included because changing speakers and addressees change their meaning.
+The frequency cluster shows the 50 most frequent words in the assigned poem bodies after common function words and their contractions are removed. It is a count, with no thematic selection or grouping. Font size increases linearly with the number of occurrences. Positions and colors have no analytical meaning. Ties are ordered alphabetically. Related forms remain separate: rain, raining, and rained are different words.
 
-The graph’s evidence is in [word-connections.json](word-connections.json). Reading titles and speaker summaries are in [reading-data.json](reading-data.json). The prior frequency tables were removed from the page at the instructor’s request on October 5, 2026. Audited counts remain available in [counts-vii-24.json](counts-vii-24.json) for source checking: 3,117 words in poem bodies, excluding titles, headnotes, epigraphs, timestamps and page numbers. Capitalization is ignored; related forms remain separate. Full copyrighted source text remains private.
+Audited counts are in [counts-vii-24.json](counts-vii-24.json): 3,117 words in poem bodies, excluding titles, headnotes, epigraphs, timestamps and page numbers. Capitalization is ignored; straight and curly apostrophes are treated alike; contractions and hyphenated words remain intact. The exact common-word exclusion list and displayed frequencies are in [frequency-cluster.json](frequency-cluster.json). Reading titles and speaker summaries are in [reading-data.json](reading-data.json). Full copyrighted source text remains private.
 
 ## Photographs
 

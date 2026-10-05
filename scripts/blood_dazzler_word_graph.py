@@ -1,38 +1,26 @@
-"""Public-safe, progressively enhanced thematic word connections."""
+"""Render a simple, public-safe cluster of mechanically counted words."""
 import html
 import json
 
 
-def page_label(pages):
-    return ('pp. ' if '–' in str(pages) else 'p. ') + str(pages)
-
-
 def render_graph(data):
-    """Return the words section; all reading notes remain available without JS."""
+    """Keep the builder interface; render readable words and counts without JS."""
     esc = lambda value: html.escape(str(value), quote=True)
-    nodes = {str(node['id']): node for node in data['nodes']}
-    groups = []
-    fallback = []
-    for group in data['clusters']:
-        buttons = []
-        for node_id in group['words']:
-            node = nodes[str(node_id)]
-            buttons.append(f'<a class="bd-word-node" data-word-id="{esc(node_id)}" href="#bd-word-{esc(node_id)}">{esc(node["word"])}</a>')
-        groups.append(f'<div class="bd-word-group" data-cluster="{esc(group["id"])}"><h3>{esc(group["label"])}</h3><div class="bd-word-group-nodes">{"".join(buttons)}</div></div>')
-    for node in data['nodes']:
-        examples = ''.join(f'<li><strong>{esc(example["poem"])}</strong> <span class="bd-word-pages">{esc(page_label(example["pages"]))}</span><p>{esc(example["note"])}</p></li>' for example in node.get('examples', []))
-        characters = ', '.join(esc(item) for item in node.get('characters', []))
-        related = []
-        for link in data.get('links', []):
-            if node['id'] in (link['source'], link['target']):
-                other_id = link['target'] if link['source'] == node['id'] else link['source']
-                other = nodes.get(str(other_id))
-                if other:
-                    related.append(f'<li><strong>{esc(other["word"])}</strong>: {esc(link.get("note", ""))}</li>')
-        fallback.append(f'<details id="bd-word-{esc(node["id"])}"><summary>{esc(node["word"])}</summary><div><p>{esc(node["summary"])}</p><ol>{examples}</ol>' + (f'<p><strong>Characters:</strong> {characters}</p>' if characters else '') + (f'<ul>{"".join(related)}</ul>' if related else '') + '</div></details>')
+    words = data.get('words', [])
+    highest = max((int(item['count']) for item in words), default=1)
+    lowest = min((int(item['count']) for item in words), default=1)
+    frequency_range = highest - lowest
+    items = []
+    for item in words:
+        count = int(item['count'])
+        weight = (count - lowest) / frequency_range if frequency_range else 0.5
+        size = 1.12 + 2.18 * weight
+        items.append(f'<li class="bd-frequency-word" data-word="{esc(item["word"])}" data-count="{count}" style="--frequency-size:{size:.3f}rem"><span class="bd-frequency-text">{esc(item["word"])}</span><small class="bd-frequency-count"><span class="bd-frequency-sr"> count: </span>{count}</small></li>')
     payload = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('&', '\\u0026').replace('<', '\\u003c').replace('>', '\\u003e')
-    return f'''<section id="words" class="bd-words" aria-labelledby="bd-words-title">
-<div class="bd-words-heading"><h2 id="bd-words-title">Word connections</h2><p>Choose a word to follow its meaning across the poems.</p></div>
-<div class="bd-word-layout"><div class="bd-word-network"><div class="bd-word-graph"><svg class="bd-word-edges" aria-hidden="true" focusable="false"></svg><div class="bd-word-groups">{''.join(groups)}</div></div><p class="bd-word-caption">Groups and lines connect related words and images across the poems.</p><a class="bd-word-read" href="#bd-word-selected">Read selected word ↓</a></div><aside id="bd-word-selected" class="bd-word-detail" aria-label="Selected word" aria-live="polite" aria-atomic="true"></aside></div>
-<div class="bd-word-fallback"><h3>Read the word notes</h3>{''.join(fallback)}</div>
+    return f'''<section id="words" class="bd-words bd-frequency" aria-labelledby="bd-words-title">
+<h2 id="bd-words-title">Word frequency</h2>
+<p class="bd-frequency-instruction">Larger words occur more often. Numbers show counts.</p>
+<ul class="bd-frequency-cluster" aria-label="Frequently used words and their counts">{''.join(items)}</ul>
+<p class="bd-frequency-scope">{esc(data.get('scope', 'pp. vii–24'))} · {len(words)} most frequent words, excluding common words such as the, a, and an.</p>
+<details class="bd-frequency-method"><summary>Counting method</summary><div><p>{esc(data.get('method', ''))}</p></div></details>
 <script type="application/json" id="bd-word-data">{payload}</script></section>'''

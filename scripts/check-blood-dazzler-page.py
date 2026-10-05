@@ -177,155 +177,53 @@ def mp4_duration(path):
 
 
 
-# Articles, connectors, prepositions, and grammatical auxiliaries do not make
-# useful graph concepts. Interpretive pronouns such as my/you are intentional.
-FUNCTION_WORDS = set("a an and are as at be been being but by can could did do does for from had has have if in into is of on or than that the then these this those to was were will with would".split())
+# The full explicit stop list is source data, but it must remove the common
+# function words and pronouns rather than silently rank them as content words.
+REQUIRED_STOP_WORDS = set("a an and of the to in with as at for but is was are it its that this these those my i you your he she her we our they their them him his me us be can will from".split())
 
 
-def printed_pages(value):
-    """Parse printed-page locators; retain the prologue's Roman page numbers."""
-    text = re.sub(r"^pp?\.\s*", "", str(value).strip().lower())
-    require(bool(text), "A word example has no printed-page locator.")
-    roman = {"vii": -2, "viii": -1}
-    pages = set()
-    for part in text.split(","):
-        part = part.strip()
-        match = re.fullmatch(r"(vii|viii|\d{1,2})(?:\s*[–—-]\s*(vii|viii|\d{1,2}))?", part)
-        require(match is not None, f"Invalid printed-page locator: {value}")
-        first, last = match.group(1), match.group(2) or match.group(1)
-        require((first in roman) == (last in roman), f"Mixed Roman/Arabic page range: {value}")
-        low = roman[first] if first in roman else int(first)
-        high = roman[last] if last in roman else int(last)
-        require(low <= high, f"Reversed printed-page range: {value}")
-        require(low in {-2, -1, *range(1, 25)} and high in {-2, -1, *range(1, 25)}, f"Word example leaves pp. vii–24: {value}")
-        pages.update(range(low, high + 1))
-    return pages
+def check_frequency_data(data, counts):
+    require(isinstance(data, dict), "Frequency cluster data must be an object.")
+    scope = json.dumps(data.get("scope", ""), ensure_ascii=False)
+    require(re.search(r"vii\s*[–-]\s*24", scope), "Frequency cluster scope must be the printed reading pp. vii–24.")
+    require(isinstance(data.get("method"), str) and data["method"].strip(), "Frequency cluster must explain its counting/filtering method.")
+    stops = data.get("stop_words")
+    require(isinstance(stops, list) and all(isinstance(word, str) and word for word in stops), "Frequency cluster needs an explicit stop-word list.")
+    require(len(stops) == len(set(stops)), "The stop-word list contains duplicates.")
+    require(all(word == word.casefold().replace("’", "'") for word in stops), "Stop words must use the audited lowercase/apostrophe convention.")
+    stop_words = set(stops)
+    missing = (REQUIRED_STOP_WORDS & set(counts)) - stop_words
+    require(not missing, f"Common function words/pronouns missing from the stop list: {sorted(missing)}")
+    require(type(data.get("max_words")) is int and data["max_words"] == 50, "Frequency cluster must use the top 50 words after filtering.")
+    expected = [{"word": word, "count": count} for word, count in sorted(
+        ((word, count) for word, count in counts.items() if word not in stop_words),
+        key=lambda item: (-item[1], item[0]))[:50]]
+    words = data.get("words")
+    require(isinstance(words, list) and words == expected, "Frequency cluster differs from the audited top 50 words sorted by descending count, then word.")
+    require(all(type(item["count"]) is int and item["count"] > 0 for item in words), "Frequency cluster contains a nonpositive or invalid count.")
+    return words
 
 
-def poem_page_ranges(poems):
-    """The reading table gives some starts (p.1/p.11), not continuation pages."""
-    ranges = {}
-    for index, poem in enumerate(poems):
-        pages = printed_pages(poem["pages"])
-        if min(pages) > 0:
-            next_pages = printed_pages(poems[index + 1]["pages"]) if index + 1 < len(poems) else {25}
-            next_start = min(next_pages)
-            require(next_start > max(pages), "The assigned poem table is not in printed-page order.")
-            pages.update(range(min(pages), next_start))
-        ranges[poem["title"]] = pages
-    return ranges
-
-
-def check_word_data(graph, reading, counts):
-    require(isinstance(graph, dict), "Word graph data must be an object.")
-    clusters, nodes, links = graph.get("clusters"), graph.get("nodes"), graph.get("links")
-    require(isinstance(clusters, list) and 5 <= len(clusters) <= 6, "Word graph needs 5–6 interpretive clusters.")
-    require(isinstance(nodes, list) and 18 <= len(nodes) <= 22, "Word graph needs 18–22 word nodes.")
-    require(isinstance(links, list) and bool(links), "Word graph has no interpretive links.")
-    cluster_by_id = {}
-    for cluster in clusters:
-        require(isinstance(cluster, dict), "Invalid word cluster.")
-        ident = cluster.get("id", "")
-        require(isinstance(ident, str) and re.fullmatch(r"[a-z][a-z0-9-]*", ident), f"Invalid word cluster ID: {ident}")
-        require(ident not in cluster_by_id, f"Duplicate word cluster: {ident}")
-        require(isinstance(cluster.get("label"), str) and bool(cluster["label"].strip()), f"Unlabelled word cluster: {ident}")
-        words = cluster.get("words")
-        require(isinstance(words, list) and len(words) >= 2 and all(isinstance(word, str) for word in words), f"Cluster {ident} needs at least two word IDs.")
-        require(len(words) == len(set(words)), f"Cluster {ident} repeats a word ID.")
-        cluster_by_id[ident] = cluster
-    references = poem_page_ranges(reading["poems"])
-    node_by_id, word_names = {}, set()
-    for node in nodes:
-        require(isinstance(node, dict), "Invalid word graph node.")
-        ident = node.get("id", "")
-        require(isinstance(ident, str) and re.fullmatch(r"[a-z][a-z0-9-]*", ident), f"Invalid word node ID: {ident}")
-        require(ident not in node_by_id, f"Duplicate word node ID: {ident}")
-        word = node.get("word", "")
-        require(isinstance(word, str) and re.fullmatch(r"[A-Za-z]+(?:['’\-][A-Za-z]+)*", word), f"Word node is not one exact word: {ident}")
-        canonical = word.casefold().replace("’", "'")
-        require(canonical not in word_names, f"Duplicate word in the graph: {word}")
-        require(canonical not in FUNCTION_WORDS, f"Grammatical filler used as a graph concept: {word}")
-        word_names.add(canonical)
-        require(type(node.get("count")) is int and node["count"] > 0, f"Word node needs a positive integer count: {word}")
-        require(counts.get(canonical) == node["count"], f"Word graph count disagrees with the audited exact-word count: {word}")
-        require(node.get("cluster") in cluster_by_id, f"Unknown cluster for {word}.")
-        require(ident in cluster_by_id[node["cluster"]]["words"], f"Cluster membership omits {word}.")
-        require(isinstance(node.get("summary"), str) and bool(node["summary"].strip()), f"Word node lacks its interpretation: {word}")
-        examples = node.get("examples")
-        require(isinstance(examples, list) and bool(examples), f"Word node lacks poem evidence: {word}")
-        for example in examples:
-            require(isinstance(example, dict), f"Invalid evidence for {word}.")
-            poem = example.get("poem", "")
-            require(poem in references, f"Unknown or unassigned poem in {word} evidence: {poem}")
-            require(printed_pages(example.get("pages", "")) <= references[poem], f"Page locator for {word} does not belong to {poem}.")
-            require(isinstance(example.get("note"), str) and bool(example["note"].strip()), f"Unexplained poem evidence for {word}.")
-        characters = node.get("characters")
-        require(isinstance(characters, list) and bool(characters) and all(isinstance(name, str) and name.strip() for name in characters), f"Word node lacks its character connections: {word}")
-        node_by_id[ident] = node
-    membership = [ident for cluster in clusters for ident in cluster["words"]]
-    require(len(membership) == len(set(membership)) and set(membership) == set(node_by_id), "Clusters must assign every word node exactly once.")
-    adjacency = {ident: set() for ident in node_by_id}
-    # Local associations are represented by cluster grouping, not redundant
-    # explicit crosslink data. Include those associations in connectivity.
-    for cluster in clusters:
-        for ident in cluster["words"]:
-            require(node_by_id[ident]["cluster"] == cluster["id"], f"Cluster lists {ident} under the wrong group.")
-            adjacency[ident].update(set(cluster["words"]) - {ident})
-    pairs, crosslinks = set(), 0
-    for link in links:
-        require(isinstance(link, dict), "Invalid interpretive word link.")
-        source, target = link.get("source"), link.get("target")
-        require(source in node_by_id and target in node_by_id, f"Word link has a missing endpoint: {source}, {target}")
-        require(source != target, f"Word graph has a self-link: {source}")
-        pair = tuple(sorted((source, target)))
-        require(pair not in pairs, f"Duplicate undirected word link: {source}, {target}")
-        pairs.add(pair)
-        require(isinstance(link.get("note"), str) and bool(link["note"].strip()), f"Word link lacks an interpretation: {source}, {target}")
-        adjacency[source].add(target)
-        adjacency[target].add(source)
-        crosslinks += node_by_id[source]["cluster"] != node_by_id[target]["cluster"]
-    require(crosslinks > 0, "Word graph needs an interpreted connection across clusters.")
-    visited, pending = set(), [next(iter(node_by_id))]
-    while pending:
-        ident = pending.pop()
-        if ident not in visited:
-            visited.add(ident)
-            pending.extend(adjacency[ident] - visited)
-    require(visited == set(node_by_id), "Word graph has disconnected clusters or unreachable words.")
-    return node_by_id
-
-
-def check_word_graph(document, section, reading, counts):
-    graph = json.loads((ASSETS / "word-connections.json").read_text(encoding="utf-8"))
-    node_by_id = check_word_data(graph, reading, counts)
+def check_frequency_cluster(document, section, counts):
+    data = json.loads((ASSETS / "frequency-cluster.json").read_text(encoding="utf-8"))
+    words = check_frequency_data(data, counts)
+    require(any(clean(node.text()).casefold() == "word frequency" for node in section.all("h2")), "The simple frequency cluster lacks its Word frequency title.")
     elements = list(section.all())
-    by_id = {node.attrs["id"]: node for node in elements if "id" in node.attrs}
-    embedded = by_id.get("bd-word-data")
-    require(embedded is not None and embedded.tag == "script" and embedded.attrs.get("type") == "application/json", "Word graph lacks its local JSON data.")
-    require(json.loads(embedded.text()) == graph, "Rendered word graph data differs from word-connections.json.")
-    require("bd-word-selected" in by_id, "Word graph lacks its selection detail panel.")
-    groups = {node.attrs["data-cluster"]: node for node in elements if "bd-word-group" in node.attrs.get("class", "").split() and "data-cluster" in node.attrs}
-    require(set(groups) == {cluster["id"] for cluster in graph["clusters"]}, "Rendered graph omits or adds a cluster.")
-    controls = [node for node in elements if "bd-word-node" in node.attrs.get("class", "").split() and "data-word-id" in node.attrs]
-    control_ids = [node.attrs["data-word-id"] for node in controls]
-    require(len(control_ids) == len(set(control_ids)) and set(control_ids) == set(node_by_id), "Every graph word needs exactly one accessible native control or fallback anchor.")
-    for control in controls:
-        ident = control.attrs["data-word-id"]
-        node = node_by_id[ident]
-        require(control.tag in {"a", "button"}, f"Word control is not native and keyboard accessible: {ident}")
-        require(clean(control.text()).casefold() == node["word"].casefold(), f"Word control has the wrong label: {ident}")
-        fallback = by_id.get("bd-word-" + ident)
-        require(fallback is not None and fallback.tag == "details", f"Word lacks a readable evidence fallback: {ident}")
-        require(clean(node["summary"]) in clean(fallback.text()), f"Fallback omits the interpretation for {ident}.")
-        if control.tag == "a":
-            require(control.attrs.get("href") == "#bd-word-" + ident, f"Word fallback anchor points to the wrong evidence: {ident}")
-        else:
-            require(control.attrs.get("type") == "button" and control.attrs.get("aria-controls") == "bd-word-selected" and control.attrs.get("aria-pressed") in {"true", "false"}, f"Interactive word control lacks its button state: {ident}")
-        grouped_ids = {item.attrs.get("data-word-id") for item in groups[node["cluster"]].all()}
-        require(ident in grouped_ids, f"Rendered cluster omits {ident}.")
-    scripts = [node.attrs.get("src", "") for node in document.root.all("script")]
-    require(any(urlsplit(src).path.endswith("/_kit/blood-dazzler-words.js") or urlsplit(src).path.endswith("_kit/blood-dazzler-words.js") for src in scripts), "Interactive word graph script is not loaded.")
-    return len(node_by_id)
+    embedded = next((node for node in elements if node.attrs.get("id") == "bd-word-data"), None)
+    require(embedded is not None and embedded.tag == "script" and embedded.attrs.get("type") == "application/json", "Frequency cluster lacks its embedded source data.")
+    require(json.loads(embedded.text()) == data, "Rendered frequency data differs from frequency-cluster.json.")
+    cloud = [node for node in elements if node.tag == "ul" and "bd-frequency-cluster" in node.attrs.get("class", "").split()]
+    require(len(cloud) == 1, "The page needs one readable frequency cluster.")
+    items = [node for node in cloud[0].all() if "bd-frequency-word" in node.attrs.get("class", "").split()]
+    require(len(items) == len(words), "Frequency cluster omits or duplicates a counted word.")
+    for item, expected in zip(items, words):
+        require(item.tag == "li" and item.attrs.get("data-word") == expected["word"] and item.attrs.get("data-count") == str(expected["count"]), f"Rendered frequency record is incorrect or out of order: {expected['word']}")
+        labels = [node for node in item.all() if "bd-frequency-text" in node.attrs.get("class", "").split()]
+        counts = [node for node in item.all() if "bd-frequency-count" in node.attrs.get("class", "").split()]
+        require(len(labels) == 1 and clean(labels[0].text()) == expected["word"], f"Frequency word is not readable: {expected['word']}")
+        require(len(counts) == 1 and re.search(rf"\b{expected['count']}\b", clean(counts[0].text())), f"Frequency count is not readable: {expected['word']}")
+    require(not any(node.tag == "svg" or node.attrs.get("id") == "bd-word-selected" or "bd-word-group" in node.attrs.get("class", "").split() for node in elements), "The replaced interpretive graph remains in the frequency section.")
+    return len(words)
 
 
 def check_content(document):
@@ -345,10 +243,7 @@ def check_content(document):
     for node in nodes:
         if node.tag in {"h1", "h2", "h3", "h4", "h5", "h6", "summary"}:
             label = clean(node.text())
-            require(not re.search(r"\bmost\s+(?:common|used|important)\s+words\b|\blong[ -]+words?\b|\bword\s+frequency\b", label, re.I), f"Replaced word-ranking analysis remains visible: {label}")
-    for table in sections["words"].all("table"):
-        headers = [clean(item.text()).casefold() for item in table.all("th")]
-        require(headers != ["word", "count"], "The old frequency ranking remains in the words section.")
+            require(not re.search(r"\bmost\s+(?:common|used|important)\s+words\b|\blong[ -]+words?\b", label, re.I), f"Replaced word-ranking analysis remains visible: {label}")
     poem_text = clean(sections["poems"].text())
     require("What to Tweak" not in poem_text, "The rendered poem list includes unassigned reading.")
     require(all(poem["title"] in poem_text for poem in poems), "The rendered poem list omits an assigned poem.")
@@ -405,7 +300,7 @@ def check_content(document):
         require(sum(counts.values()) == counts_record["total_tokens"], "Full word counts do not sum to their declared total.")
     if "pdf_pages_included" in counts_record:
         require(set(counts_record["pdf_pages_included"]) == {9, 10, *range(15, 39)}, "Word counts include an unassigned PDF page or omit an assigned page.")
-    word_nodes = check_word_graph(document, sections["words"], reading, counts)
+    word_nodes = check_frequency_cluster(document, sections["words"], counts)
     return duration, word_nodes
 
 
@@ -433,7 +328,7 @@ def main():
     except (OSError, ValueError, KeyError, StopIteration, subprocess.CalledProcessError) as error:
         print(f"Blood Dazzler check failed: {error}", file=sys.stderr)
         return 1
-    print(f"Blood Dazzler check passed: 22 poems through p. 24; {word_nodes} evidenced word nodes; {resources} local resources; complete {duration:.2f}s rescue video.")
+    print(f"Blood Dazzler check passed: 22 poems through p. 24; {word_nodes} filtered frequency words; {resources} local resources; complete {duration:.2f}s rescue video.")
     return 0
 
 

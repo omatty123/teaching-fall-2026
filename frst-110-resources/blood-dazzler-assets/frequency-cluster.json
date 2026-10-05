@@ -1,0 +1,415 @@
+{
+  "scope": "pp. vii–24",
+  "method": "3,117 words in the poem bodies on pp. vii–24. Titles, headnotes, epigraphs, timestamps, and page numbers are excluded. Capitalization is ignored; contractions and hyphenated words remain intact; straight and curly apostrophes are treated alike. These are selected exact-word counts, not totals for word families. Common function words and their contractions are removed using the stop_words list in this file. The 50 most frequent remaining words are shown; ties are ordered alphabetically. Word forms are not combined. Font size increases linearly with count; position and color do not add meaning.",
+  "stop_words": [
+    "a",
+    "about",
+    "above",
+    "after",
+    "again",
+    "against",
+    "ain't",
+    "all",
+    "am",
+    "an",
+    "and",
+    "any",
+    "are",
+    "aren't",
+    "as",
+    "at",
+    "be",
+    "because",
+    "been",
+    "before",
+    "being",
+    "below",
+    "between",
+    "both",
+    "bout",
+    "but",
+    "by",
+    "can",
+    "can't",
+    "cannot",
+    "comin",
+    "could",
+    "couldn't",
+    "did",
+    "didn't",
+    "do",
+    "does",
+    "doesn't",
+    "doing",
+    "don't",
+    "down",
+    "during",
+    "each",
+    "either",
+    "else",
+    "enough",
+    "even",
+    "ever",
+    "every",
+    "few",
+    "for",
+    "from",
+    "further",
+    "gon",
+    "gonna",
+    "gotta",
+    "had",
+    "hadn't",
+    "has",
+    "hasn't",
+    "have",
+    "haven't",
+    "having",
+    "he",
+    "he'd",
+    "he'll",
+    "he's",
+    "her",
+    "here",
+    "here's",
+    "hers",
+    "herself",
+    "him",
+    "himself",
+    "his",
+    "hisself",
+    "how",
+    "how's",
+    "i",
+    "i'd",
+    "i'll",
+    "i'm",
+    "i've",
+    "if",
+    "in",
+    "into",
+    "is",
+    "isn't",
+    "it",
+    "it's",
+    "its",
+    "itself",
+    "just",
+    "let",
+    "let's",
+    "like",
+    "me",
+    "might",
+    "more",
+    "most",
+    "much",
+    "must",
+    "mustn't",
+    "my",
+    "myself",
+    "neither",
+    "no",
+    "nor",
+    "not",
+    "now",
+    "nuthin",
+    "of",
+    "off",
+    "offa",
+    "ol",
+    "on",
+    "once",
+    "only",
+    "or",
+    "other",
+    "ought",
+    "our",
+    "ours",
+    "ourselves",
+    "out",
+    "outta",
+    "over",
+    "own",
+    "same",
+    "shall",
+    "shan't",
+    "she",
+    "she'd",
+    "she'll",
+    "she's",
+    "sho",
+    "should",
+    "shouldn't",
+    "so",
+    "some",
+    "somethin",
+    "such",
+    "than",
+    "that",
+    "that's",
+    "the",
+    "their",
+    "theirs",
+    "them",
+    "themselves",
+    "then",
+    "there",
+    "there's",
+    "these",
+    "they",
+    "they'd",
+    "they'll",
+    "they're",
+    "they've",
+    "this",
+    "those",
+    "through",
+    "to",
+    "too",
+    "under",
+    "until",
+    "up",
+    "us",
+    "very",
+    "was",
+    "wasn't",
+    "we",
+    "we'd",
+    "we'll",
+    "we're",
+    "we've",
+    "were",
+    "weren't",
+    "what",
+    "what's",
+    "when",
+    "when's",
+    "where",
+    "where's",
+    "which",
+    "while",
+    "who",
+    "who's",
+    "whom",
+    "why",
+    "why's",
+    "will",
+    "with",
+    "won't",
+    "would",
+    "wouldn't",
+    "y'all",
+    "you",
+    "you'd",
+    "you'll",
+    "you're",
+    "you've",
+    "your",
+    "yours",
+    "yourself",
+    "yourselves"
+  ],
+  "max_words": 50,
+  "words": [
+    {
+      "word": "rain",
+      "count": 15
+    },
+    {
+      "word": "go",
+      "count": 11
+    },
+    {
+      "word": "little",
+      "count": 11
+    },
+    {
+      "word": "water",
+      "count": 10
+    },
+    {
+      "word": "know",
+      "count": 8
+    },
+    {
+      "word": "one",
+      "count": 8
+    },
+    {
+      "word": "back",
+      "count": 7
+    },
+    {
+      "word": "day",
+      "count": 7
+    },
+    {
+      "word": "luther",
+      "count": 7
+    },
+    {
+      "word": "name",
+      "count": 7
+    },
+    {
+      "word": "new",
+      "count": 7
+    },
+    {
+      "word": "purple",
+      "count": 7
+    },
+    {
+      "word": "b",
+      "count": 6
+    },
+    {
+      "word": "behind",
+      "count": 6
+    },
+    {
+      "word": "bodies",
+      "count": 6
+    },
+    {
+      "word": "dog",
+      "count": 6
+    },
+    {
+      "word": "eye",
+      "count": 6
+    },
+    {
+      "word": "hard",
+      "count": 6
+    },
+    {
+      "word": "house",
+      "count": 6
+    },
+    {
+      "word": "see",
+      "count": 6
+    },
+    {
+      "word": "sky",
+      "count": 6
+    },
+    {
+      "word": "sound",
+      "count": 6
+    },
+    {
+      "word": "away",
+      "count": 5
+    },
+    {
+      "word": "first",
+      "count": 5
+    },
+    {
+      "word": "leave",
+      "count": 5
+    },
+    {
+      "word": "still",
+      "count": 5
+    },
+    {
+      "word": "time",
+      "count": 5
+    },
+    {
+      "word": "tree",
+      "count": 5
+    },
+    {
+      "word": "whole",
+      "count": 5
+    },
+    {
+      "word": "breath",
+      "count": 4
+    },
+    {
+      "word": "chaos",
+      "count": 4
+    },
+    {
+      "word": "done",
+      "count": 4
+    },
+    {
+      "word": "garden",
+      "count": 4
+    },
+    {
+      "word": "get",
+      "count": 4
+    },
+    {
+      "word": "god",
+      "count": 4
+    },
+    {
+      "word": "got",
+      "count": 4
+    },
+    {
+      "word": "hair",
+      "count": 4
+    },
+    {
+      "word": "hold",
+      "count": 4
+    },
+    {
+      "word": "home",
+      "count": 4
+    },
+    {
+      "word": "last",
+      "count": 4
+    },
+    {
+      "word": "light",
+      "count": 4
+    },
+    {
+      "word": "maybe",
+      "count": 4
+    },
+    {
+      "word": "mouth",
+      "count": 4
+    },
+    {
+      "word": "say",
+      "count": 4
+    },
+    {
+      "word": "small",
+      "count": 4
+    },
+    {
+      "word": "something",
+      "count": 4
+    },
+    {
+      "word": "wait",
+      "count": 4
+    },
+    {
+      "word": "way",
+      "count": 4
+    },
+    {
+      "word": "weather",
+      "count": 4
+    },
+    {
+      "word": "woman",
+      "count": 4
+    }
+  ]
+}
