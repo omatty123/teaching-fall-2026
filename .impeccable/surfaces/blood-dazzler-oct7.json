@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T22:50:56Z",
+  "title": "Design System: Blood Dazzler · Wednesday, October 7",
+  "scope": {
+    "kind": "surface",
+    "markdown": ".impeccable/surfaces/blood-dazzler-oct7.md",
+    "primaryTarget": "frst-110-resources/blood-dazzler-oct-7.html",
+    "stateAtDocumentation": "LOCAL; deployment and Teaching HQ link pending",
+    "visualAuthority": "Existing October 5 Blood Dazzler reading page",
+    "roleSubstitution": "Fresh general subagent used the documenter workflow because the shipped documenter role is unavailable."
+  },
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm paper"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Slate ink"
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Supporting ink"
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "FRST link blue"
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Reading rule"
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "Keyboard focus blue"
+      },
+      "nav-slate": {
+        "role": "neutral",
+        "displayName": "Dark navigation"
+      },
+      "nav-text": {
+        "role": "neutral",
+        "displayName": "Navigation white"
+      },
+      "nav-crumb": {
+        "role": "neutral",
+        "displayName": "Navigation breadcrumb"
+      },
+      "cloud-fill": {
+        "role": "neutral",
+        "displayName": "Frequency circle fill"
+      },
+      "cloud-stroke": {
+        "role": "neutral",
+        "displayName": "Frequency circle stroke"
+      }
+    },
+    "breakpoints": [
+      {
+        "name": "stack-official-clips",
+        "value": "800px"
+      },
+      {
+        "name": "phone-type-and-gutters",
+        "value": "600px"
+      }
+    ],
+    "focus": {
+      "outline": "3px solid var(--focus)",
+      "defaultOffset": "3px",
+      "videoAndCloudOffset": "4px"
+    },
+    "motion": [
+      {
+        "name": "section-scroll",
+        "value": "scroll-behavior: smooth",
+        "purpose": "Inherited section navigation; auto under prefers-reduced-motion: reduce."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Course navigation",
+      "kind": "nav",
+      "refersTo": "course-navigation",
+      "description": "Compact inherited FRST breadcrumb navigation; actual markup and styling, scoped for preview.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Breadcrumb\"><div class=\"ds-nav-inner\"><a class=\"ds-brand\" href=\"#course\">FRST 110</a><a class=\"ds-crumb\" href=\"#course\">Course materials</a><a href=\"#oct5\">October 5 · pp. vii–24</a></div></nav>",
+      "css": ".ds-nav{background:#1e2a35;color:white;font:20px/1.5 'Source Sans 3',sans-serif}.ds-nav-inner{max-width:1460px;margin:auto;padding:6px 24px;display:flex;align-items:center;gap:25px;flex-wrap:wrap}.ds-nav a{color:white;min-height:44px;display:flex;align-items:center;text-underline-offset:3px}.ds-nav .ds-brand{margin-right:auto;font-weight:650}.ds-nav .ds-crumb{color:#dbe6ec}.ds-nav a:hover{text-decoration-thickness:2px}.ds-nav a:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:3px}@media(max-width:600px){.ds-nav-inner{padding:5px 16px;gap:14px}.ds-nav .ds-brand{width:100%;margin:0;min-height:30px}.ds-nav a{font-size:16px;min-height:35px}}"
+    },
+    {
+      "name": "Section navigation",
+      "kind": "nav",
+      "description": "Four direct jump links between the metadata and first media.",
+      "html": "<nav class=\"ds-section-nav\" aria-label=\"Page sections\"><a href=\"#barbara-bush\">Barbara Bush</a><a href=\"#brownie\">Brownie clip</a><a href=\"#evacuation\">Evacuation clip</a><a href=\"#words-second\">Word cloud</a></nav>",
+      "css": ".ds-section-nav{font-family:'Source Sans 3',sans-serif;display:flex;gap:4px 24px;flex-wrap:wrap;border-top:1px solid var(--rule,#cbd3d5);border-bottom:1px solid var(--rule,#cbd3d5);margin-bottom:25px}.ds-section-nav a{color:var(--blue,#245a8d);display:flex;align-items:center;min-height:44px;text-decoration:none;font-size:18px;font-weight:600}.ds-section-nav a:hover{text-decoration:underline}.ds-section-nav a:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:3px}@media(max-width:600px){.ds-section-nav{gap:0 20px}.ds-section-nav a{font-size:17px}}"
+    },
+    {
+      "name": "Native video frame",
+      "kind": "custom",
+      "refersTo": "native-player",
+      "description": "Browser-native 16:9 player; content and poster URLs stay in the page, rather than becoming synthetic preview assets.",
+      "html": "<figure class=\"ds-media\"><video controls playsinline preload=\"none\" width=\"1280\" height=\"720\" aria-label=\"Native video frame\" aria-describedby=\"ds-media-caption\"></video><figcaption id=\"ds-media-caption\">19 seconds · Original audio with Astrodome photographs and captions.</figcaption></figure>",
+      "css": ".ds-media{margin:0;color:var(--ink,#202f35);font-family:'Source Sans 3',sans-serif}.ds-media video{width:100%;display:block;background:#1e2a35;aspect-ratio:16/9;height:auto;object-fit:contain}.ds-media video:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:4px}.ds-media figcaption{padding-top:10px;font-size:17px;line-height:1.4;max-width:75ch}@media(max-width:600px){.ds-media figcaption{font-size:16px}}"
+    },
+    {
+      "name": "Canonical frequency circle",
+      "kind": "custom",
+      "description": "The actual come/16 SVG group, extracted as a specimen; the page retains the full canonical 50-circle chart.",
+      "html": "<svg class=\"ds-frequency-specimen\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"340 340 188 188\" role=\"img\" aria-label=\"come: 16 uses\"><g><title>come: 16 uses</title><circle cx=\"433.825804\" cy=\"433.825804\" r=\"83.138439\" vector-effect=\"non-scaling-stroke\"/><text class=\"ds-frequency-word\" x=\"433.825804\" y=\"431.825804\">come</text><text class=\"ds-frequency-count\" x=\"433.825804\" y=\"455.825804\">16</text></g></svg>",
+      "css": ".ds-frequency-specimen{display:block;width:188px;height:auto}.ds-frequency-specimen circle{fill:#dbe9f1;stroke:#7393a4;stroke-width:1}.ds-frequency-specimen text{font-family:'Source Sans 3',sans-serif;text-anchor:middle}.ds-frequency-word{font-size:20.020px;font-weight:800;fill:var(--ink,#202f35)}.ds-frequency-count{font-size:18px;font-weight:700;fill:var(--muted,#4a5c64);font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Native count disclosure",
+      "kind": "custom",
+      "refersTo": "disclosure",
+      "description": "Native details/summary with ruled boundaries and a count-list alternative; sample entries preserve actual counts.",
+      "html": "<details class=\"ds-count-list\"><summary>Read all word counts</summary><ul><li><span>come</span><strong>16</strong></li><li><span>wait</span><strong>14</strong></li><li><span>water</span><strong>11</strong></li></ul></details>",
+      "css": ".ds-count-list{color:var(--ink,#202f35);font-family:'Source Sans 3',sans-serif;border-top:1px solid var(--rule,#cbd3d5);border-bottom:1px solid var(--rule,#cbd3d5);margin-top:15px}.ds-count-list summary{min-height:44px;padding:11px 0;font-size:16px;font-weight:600;cursor:pointer}.ds-count-list summary:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:3px}.ds-count-list ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px 25px;list-style:none;padding:4px 0 15px;margin:0}.ds-count-list li{display:flex;justify-content:space-between;gap:12px;font-size:16px}.ds-count-list strong{font-weight:600;font-variant-numeric:tabular-nums}@media(max-width:600px){.ds-count-list ul{grid-template-columns:repeat(2,minmax(0,1fr))}}"
+    }
+  ],
+  "verification": {
+    "disposition": "ship",
+    "review": ".impeccable/review/oct7/finish-review.json",
+    "captures": [
+      {
+        "path": ".impeccable/review/oct7/desktop.png",
+        "width": 1265,
+        "height": 3260
+      },
+      {
+        "path": ".impeccable/review/oct7/mobile.png",
+        "width": 375,
+        "height": 3389
+      }
+    ],
+    "geometry": {
+      "evidence": ".impeccable/review/oct7/mobile-geometry.json",
+      "bodyClient": 375,
+      "bodyScroll": 375,
+      "cloudClient": 343,
+      "cloudScroll": 999,
+      "minimumCloudWordScreenPixels": 20.012201694655072
+    },
+    "media": {
+      "evidence": ".impeccable/review/oct7/playback.json",
+      "durationsSeconds": [
+        19,
+        17.8,
+        131.666667
+      ],
+      "nativeControls": true,
+      "playsinline": true,
+      "preload": "none",
+      "autoplay": false,
+      "independentListening": "unverified"
+    },
+    "sources": "frst-110-resources/blood-dazzler-assets/oct7/SOURCES.md",
+    "limits": [
+      "Paused native controls cover part of Barbara Bush's burned-in caption; the outside-player caption stays clear.",
+      "Independent listening remains unverified.",
+      "Public deployment and Teaching HQ linking are outside the artifact review verdict."
+    ]
+  },
+  "narrative": {
+    "overview": "The built October 7 page preserves the existing Blood Dazzler reading-page world. Official remarks appear first, separate evacuation testimony follows, and the canonical pp. 25–49 frequency cloud appears last.",
+    "rules": [
+      {
+        "name": "The Native Player Rule",
+        "body": "Keep browser controls and direct-file access with each video.",
+        "section": "components"
+      },
+      {
+        "name": "The Count Preservation Rule",
+        "body": "Preserve every canonical word/count pair and the count and method disclosures when changing layout.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do preserve the existing Blood Dazzler palette and local Source Sans 3 typography.",
+      "Do keep official remarks together on desktop and stacked on phones, with evacuation testimony separate below.",
+      "Do keep the cloud words at least 20 screen pixels and confine sideways scrolling to the cloud region.",
+      "Do keep source dates, credits, direct media links, canonical counts, and native disclosures visible or available."
+    ],
+    "donts": [
+      "Don't add a hero, slogan, new identity, task, or character analysis to this requested resource page.",
+      "Don't substitute a remote embed for the verified local native players or add autoplay.",
+      "Don't describe the Brownie repetitions as repeated statements at the original event.",
+      "Don't turn this surface record into a replacement for the shared design system.",
+      "Don't treat unverified listening or obscured paused subtitles as verified quality guarantees."
+    ]
+  },
+  "notCanonized": [
+    "Paused subtitle occlusion is recorded as a limit, not a design rule.",
+    "Compact inherited phone breadcrumb targets are recorded in the extracted snippet, not prescribed as a new interaction standard.",
+    "No synthetic tonal ramp, new component, global palette repair, comp, seed, or QUALITY BAR artifact was created."
+  ]
+}

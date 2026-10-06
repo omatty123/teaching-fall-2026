@@ -10854,7 +10854,12 @@
       "unit": "smith",
       "topic": "Smith, Blood Dazzler",
       "detail": "pp. 25–49",
-      "materials": []
+      "materials": [
+        {
+          "label": "Blood Dazzler: Barbara Bush, Brownie, evacuation, and section word cloud",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-7.html"
+        }
+      ]
     },
     {
       "date": "2026-10-09",

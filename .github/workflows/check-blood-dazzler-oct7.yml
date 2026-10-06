@@ -1,0 +1,53 @@
+name: Check Blood Dazzler October 7
+
+on:
+  push:
+    paths:
+      - 'data/frst-110.json'
+      - 'frst-110-resources/blood-dazzler-oct-7.html'
+      - 'frst-110-resources/blood-dazzler-words.html'
+      - 'frst-110-resources/blood-dazzler-assets/oct7/**'
+      - 'frst-110-resources/blood-dazzler-assets/frequency-25-49.json'
+      - '_kit/blood-dazzler-oct7.css'
+      - '_kit/blood-dazzler-1.css'
+      - '_kit/blood-dazzler-words.css'
+      - '_kit/fonts/**'
+      - 'scripts/build-blood-dazzler-oct7.py'
+      - 'scripts/check-blood-dazzler-oct7.py'
+      - 'scripts/check-blood-dazzler-page.py'
+      - 'scripts/blood_dazzler_word_graph.py'
+      - '.github/workflows/check-blood-dazzler-oct7.yml'
+  pull_request:
+    paths:
+      - 'data/frst-110.json'
+      - 'frst-110-resources/blood-dazzler-oct-7.html'
+      - 'frst-110-resources/blood-dazzler-words.html'
+      - 'frst-110-resources/blood-dazzler-assets/oct7/**'
+      - 'frst-110-resources/blood-dazzler-assets/frequency-25-49.json'
+      - '_kit/blood-dazzler-oct7.css'
+      - '_kit/blood-dazzler-1.css'
+      - '_kit/blood-dazzler-words.css'
+      - '_kit/fonts/**'
+      - 'scripts/build-blood-dazzler-oct7.py'
+      - 'scripts/check-blood-dazzler-oct7.py'
+      - 'scripts/check-blood-dazzler-page.py'
+      - 'scripts/blood_dazzler_word_graph.py'
+      - '.github/workflows/check-blood-dazzler-oct7.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Check deterministic page, reading scope, word counts, and local clips
+        run: python scripts/check-blood-dazzler-oct7.py
