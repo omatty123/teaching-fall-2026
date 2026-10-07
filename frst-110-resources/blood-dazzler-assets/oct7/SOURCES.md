@@ -1,7 +1,7 @@
-# Blood Dazzler · October 7 video sources
+# Blood Dazzler · October 7 media sources
 
 Reading: Patricia Smith, *Blood Dazzler* (Coffee House Press, 2008), printed pp. 25–49.
-Only the four classroom excerpts and their posters appear here. Full working sources and editable projects remain private.
+The class page uses three video excerpts and three historical still photographs. The earlier standalone Brownie file remains saved, but its player was removed because that footage is already in the longer excerpt. Full working video sources, original-resolution image downloads, and editable projects remain private.
 
 ## Federal response: the requested longer passage
 
@@ -28,7 +28,7 @@ Photographs illustrate the shelter conditions; they are not synchronized footage
 
 Original audio retained at constant gain 0.76; no added speech or music. Captions use automatic timing and contemporary transcript checks. The X post’s claim about the recording’s removal from the Internet is not adopted.
 
-## George W. Bush and Michael Brown
+## George W. Bush and Michael Brown — retained file, removed standalone player
 
 `george-bush-brownie.mp4` · 17.8 seconds. A continuous excerpt from Spike Lee’s *When the Levees Broke: A Requiem in Four Acts* (2006). It includes Bush’s immediate-relief statement and the Brownie line. The film repeats that line three times; the classroom edit adds no repetition. The original event transcript records the statement once.
 
@@ -47,6 +47,19 @@ Working download requested only 01:21:40–01:22:07 of the upload. Actual source
 - [Documentary passage](https://www.youtube.com/watch?v=CTVy-JC-Lag&t=5300)
 
 Full-upload interval approximately 01:28:20.650–01:30:32.300; working-source interval 200.650–332.300 seconds from the eight-minute source. The edit ends before the next oath scene. No reordering, overlays, added captions, narration or music. Original audio retained at unity gain. The poster is a frame from this excerpt.
+
+## Superdome roof damage
+
+Read alongside “Superdome,” p. 40. Both photographs show damage to the roof covering; neither caption claims the whole structural roof disappeared. They are official FEMA employee photographs, identified as public domain in the United States on their file pages. Web images preserve complete frames, proportions and photographic content; only pixel dimensions and JPEG compression change.
+
+- `superdome-roof-close.jpg` · Win Henderson/FEMA. FEMA caption dated September 5, 2005, identifies stripped covering on the southwest side. Camera EXIF says September 4; the classroom caption follows the documented FEMA caption date. [Source and public-domain declaration](https://commons.wikimedia.org/wiki/File:Superdome_Roof_Damage_FEMA.jpg). Original 3008 × 2000; web 1200 × 798.
+- `superdome-roof-aerial.jpg` · Jocelyn Augustino/FEMA, September 4, 2005. FEMA Photo Library #17670. [Source and public-domain declaration](https://commons.wikimedia.org/wiki/File:FEMA_-_17670_-_Photograph_by_Jocelyn_Augustino_taken_on_09-04-2005_in_Louisiana.jpg). Original 4265 × 2735; web 1200 × 770.
+
+## Ethel Freeman
+
+Read alongside “Ethel’s Sestina,” pp. 45–46. `ethel-freeman-wheelchair.jpg` shows Freeman’s covered body in the central wheelchair outside the New Orleans Convention Center on September 2, 2005. Identification, date and credit are verified in the [Houston Chronicle/AP caption carried by CT Insider](https://www.ctinsider.com/news/article/Hurricane-Katrina-Sept-2-2005-in-photos-6465422.php).
+
+Photograph © Eric Gay/Associated Press. This is a copyrighted news photograph, not a public-domain FEMA image. The modest classroom illustration retains the AP credit and complete frame for comparison with the named poem. The image is sourced from [The Avery Review](https://averyreview.com/issues/73/where-do-we-cease-to-be-citizens), whose photo credit also identifies Eric Gay and Associated Press copyright. Original 3096 × 2184; web 900 × 635. No retouching, reconstruction, cropping or generated image. The original-resolution download and source manifest remain private.
 
 ## Delivery and word cloud
 

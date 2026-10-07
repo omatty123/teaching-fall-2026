@@ -4,7 +4,7 @@ slug: "blood-dazzler-oct7"
 primary_target: "frst-110-resources/blood-dazzler-oct-7.html"
 related_targets: ["_kit/blood-dazzler-oct7.css", "scripts/build-blood-dazzler-oct7.py", "scripts/check-blood-dazzler-oct7.py"]
 name: "Blood Dazzler · October 7 · FRST 110"
-description: "October 7 reading page with three native videos and the pp. 25–49 frequency cloud."
+description: "October 7 reading page with three native videos, historical photographs and the pp. 25–49 frequency cloud."
 colors:
   paper: "#f7f6f2"
   ink: "#202f35"
@@ -72,6 +72,13 @@ components:
 ---
 
 # Design System: Blood Dazzler · Wednesday, October 7
+
+## October 7 addition: Superdome and Ethel Freeman photographs
+
+Two new sections follow the three video players and precede the unchanged cloud. “Superdome roof damage” places two sourced FEMA photographs side by side on desktop and stacks them on phones, retaining full image proportions. “Ethel Freeman” displays the verified Eric Gay/AP photograph as a complete frame up to 720px wide, with AP copyright credit. Each section names its poem and printed locator, with image descriptions, dates and clickable photo sources. Six direct section links now include Superdome and Ethel Freeman.
+
+Three JPEGs total approximately 445KB. Explicit intrinsic dimensions reserve the correct space; lazy loading and asynchronous decoding keep the initial videos unaffected. No historical image is generated, retouched or cropped. The source ledger distinguishes public-domain FEMA work from the copyrighted AP photograph. Existing palette, self-hosted typography and caption roles continue. All three videos, their captions and 50 canonical word/count pairs remain unchanged. This addition supersedes the four-link count in the correction below; earlier screenshots remain historical records.
+
 
 ## October 7 correction: remove the duplicate player
 

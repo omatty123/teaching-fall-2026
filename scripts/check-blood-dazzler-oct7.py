@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the October 7 reading boundary, sourced local clips, and exact word counts."""
+"""Check the October 7 reading boundary, sourced local media, and exact word counts."""
 
 import importlib.util
 import json
@@ -22,6 +22,35 @@ spec.loader.exec_module(common)
 require = common.require
 
 
+def jpeg_dimensions(path):
+    """Read intrinsic JPEG dimensions without adding a third-party dependency."""
+    blob = path.read_bytes()
+    require(blob[:2] == b"\xff\xd8", f"{path.name}: not a JPEG image.")
+    offset = 2
+    frame_markers = {0xC0, 0xC1, 0xC2, 0xC3, 0xC5, 0xC6, 0xC7, 0xC9, 0xCA, 0xCB, 0xCD, 0xCE, 0xCF}
+    while offset < len(blob):
+        require(blob[offset] == 0xFF, f"{path.name}: invalid JPEG marker.")
+        while offset < len(blob) and blob[offset] == 0xFF:
+            offset += 1
+        require(offset < len(blob), f"{path.name}: truncated JPEG marker.")
+        marker = blob[offset]
+        offset += 1
+        if marker in {0x01, 0xD8, 0xD9} or 0xD0 <= marker <= 0xD7:
+            continue
+        require(offset + 2 <= len(blob), f"{path.name}: truncated JPEG segment.")
+        length = int.from_bytes(blob[offset:offset + 2], "big")
+        require(length >= 2 and offset + length <= len(blob), f"{path.name}: invalid JPEG segment length.")
+        if marker in frame_markers:
+            require(length >= 8, f"{path.name}: truncated JPEG frame.")
+            height = int.from_bytes(blob[offset + 3:offset + 5], "big")
+            width = int.from_bytes(blob[offset + 5:offset + 7], "big")
+            require(width > 0 and height > 0, f"{path.name}: missing intrinsic image dimensions.")
+            return width, height
+        require(marker != 0xDA, f"{path.name}: JPEG scan precedes its dimensions.")
+        offset += length
+    raise ValueError(f"{path.name}: JPEG has no image dimensions.")
+
+
 def main():
     subprocess.run([sys.executable, str(ROOT / "scripts/build-blood-dazzler-oct7.py"), "--check"], check=True)
     document = common.Document(PAGE.read_text(encoding="utf-8"))
@@ -35,7 +64,15 @@ def main():
     class_url = "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-7.html"
     require(meeting["detail"] == "pp. 25–49" and any(item.get("href") == class_url for item in meeting["materials"]), "The October 7 course schedule must link to this reading page.")
     require(len(list(document.root.all("h1"))) == 1, "The page needs one main title.")
-    require(set(("federal-response", "barbara-bush", "evacuation", "words-second")) <= by_id.keys(), "A requested classroom resource is missing its jump target.")
+    section_ids = ("federal-response", "barbara-bush", "evacuation", "superdome-photos", "ethel-freeman", "words-second")
+    require(set(section_ids) <= by_id.keys(), "A requested classroom resource is missing its jump target.")
+    section_order = tuple(node.attrs["id"] for node in document.root.all("section") if node.attrs.get("id") in section_ids)
+    require(section_order == section_ids, "The requested photographs must follow evacuation and precede the unchanged word cloud.")
+    section_navs = [node for node in document.root.all("nav") if node.attrs.get("class") == "section-nav"]
+    require(len(section_navs) == 1, "The page needs one section navigation.")
+    nav_links = list(section_navs[0].all("a"))
+    require(tuple(node.attrs.get("href") for node in nav_links) == tuple(f"#{item}" for item in section_ids), "The section navigation must link to all six resources in page order.")
+    require(tuple(common.clean(node.text()) for node in nav_links)[3:5] == ("Superdome", "Ethel Freeman"), "The photographs need the requested navigation labels.")
     require("brownie" not in by_id, "The standalone Brownie player duplicates the longer documentary excerpt.")
     require("Federal response in When the Levees Broke" in body_text, "The longer excerpt needs its requested subject heading.")
     require("“What to Tweak,” pp. 25–28" in body_text and "“The President Flies Over,” p. 36" in body_text, "The longer excerpt needs its verified poem references.")
@@ -65,6 +102,39 @@ def main():
         duration = common.mp4_duration(ASSETS / "oct7" / f"{filename}.mp4")
         require(minimum <= duration <= maximum, f"{filename}: duration {duration:.3f}s is outside the reviewed excerpt range {minimum}–{maximum}s.")
         durations.append(f"{filename}: {duration:.3f}s")
+
+    photos = (
+        ("superdome-photos", "superdome-roof-close.jpg",
+         "https://commons.wikimedia.org/wiki/File:Superdome_Roof_Damage_FEMA.jpg"),
+        ("superdome-photos", "superdome-roof-aerial.jpg",
+         "https://commons.wikimedia.org/wiki/File:FEMA_-_17670_-_Photograph_by_Jocelyn_Augustino_taken_on_09-04-2005_in_Louisiana.jpg"),
+        ("ethel-freeman", "ethel-freeman-wheelchair.jpg",
+         "https://www.ctinsider.com/news/article/Hurricane-Katrina-Sept-2-2005-in-photos-6465422.php"),
+    )
+    images = list(document.root.all("img"))
+    require(len(images) == 3, "Expected exactly the two Superdome photographs and one Ethel Freeman photograph.")
+    for image, (section_id, filename, source) in zip(images, photos):
+        require(image.attrs.get("src") == f"blood-dazzler-assets/oct7/{filename}", f"{filename}: unexpected still-image source.")
+        alt = common.clean(image.attrs.get("alt", ""))
+        require(alt and alt.casefold() not in {"image", "photo", "photograph", "picture", filename.casefold()}, f"{filename}: missing a descriptive, accessible alt text.")
+        require(image.attrs.get("loading") == "lazy" and image.attrs.get("decoding") == "async", f"{filename}: use lazy loading and asynchronous decoding.")
+        width, height = jpeg_dimensions(ASSETS / "oct7" / filename)
+        require(image.attrs.get("width") == str(width) and image.attrs.get("height") == str(height), f"{filename}: HTML dimensions must match the complete JPEG frame ({width}×{height}).")
+        figures = [node for node in by_id[section_id].all("figure") if image in list(node.all("img"))]
+        require(len(figures) == 1, f"{filename}: image must belong to its requested section and figure.")
+        captions = list(figures[0].all("figcaption"))
+        require(len(captions) == 1 and common.clean(captions[0].text()), f"{filename}: missing its photograph caption.")
+        require(any(node.attrs.get("href") == source for node in captions[0].all("a")), f"{filename}: missing its supplied photograph source link.")
+        if section_id == "ethel-freeman":
+            caption_text = common.clean(captions[0].text())
+            require(all(credit in caption_text for credit in ("©", "Eric Gay", "Associated Press")), "Ethel Freeman's photograph needs its AP copyright credit.")
+    for section_id, heading, reference in (
+        ("superdome-photos", "Superdome roof damage", "Read alongside “Superdome,” p. 40."),
+        ("ethel-freeman", "Ethel Freeman", "Read alongside “Ethel’s Sestina,” pp. 45–46."),
+    ):
+        headings = list(by_id[section_id].all("h2"))
+        require(len(headings) == 1 and common.clean(headings[0].text()) == heading, f"{section_id}: missing the requested photograph heading.")
+        require(reference in common.clean(by_id[section_id].text()), f"{section_id}: missing its verified poem reference.")
 
     # Remote links are credits only. Media and stylesheet requests stay local.
     for node in nodes:
@@ -112,7 +182,9 @@ def main():
         require(source in source_record, f"Missing supplied source in the video record: {source}")
     for filename, _, _ in expected:
         require(f"{filename}.mp4" in source_record, f"Missing excerpt file mapping in the source record: {filename}")
-    print(f"October 7 checks passed: exact reading date, three local players, all 50 canonical counts, {checked} local resources.")
+    for _, filename, source in photos:
+        require(filename in source_record and source in source_record, f"Missing photograph file mapping or source in the source record: {filename}")
+    print(f"October 7 checks passed: exact reading date, three local players, three sourced local photographs, all 50 canonical counts, {checked} local resources.")
     print("; ".join(durations))
 
 

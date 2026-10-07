@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-10-07T10:57:22.435208+00:00",
-  "title": "Design System: Blood Dazzler \u00b7 Wednesday, October 7",
+  "title": "Design System: Blood Dazzler · Wednesday, October 7",
   "scope": {
     "kind": "surface",
     "markdown": ".impeccable/surfaces/blood-dazzler-oct7.md",
     "primaryTarget": "frst-110-resources/blood-dazzler-oct-7.html",
-    "stateAtDocumentation": "LOCAL October 7 three-player correction; earlier October 6 verification retained as historical evidence",
+    "stateAtDocumentation": "LOCAL October 7 still-photograph addition; earlier video-only evidence retained as historical",
     "visualAuthority": "Existing October 5 Blood Dazzler reading page",
     "roleSubstitution": "Fresh general subagent used the documenter workflow because the shipped documenter role is unavailable."
   },
@@ -86,14 +86,14 @@
       "kind": "nav",
       "refersTo": "course-navigation",
       "description": "Compact inherited FRST breadcrumb navigation; actual markup and styling, scoped for preview.",
-      "html": "<nav class=\"ds-nav\" aria-label=\"Breadcrumb\"><div class=\"ds-nav-inner\"><a class=\"ds-brand\" href=\"#course\">FRST 110</a><a class=\"ds-crumb\" href=\"#course\">Course materials</a><a href=\"#oct5\">October 5 \u00b7 pp. vii\u201324</a></div></nav>",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Breadcrumb\"><div class=\"ds-nav-inner\"><a class=\"ds-brand\" href=\"#course\">FRST 110</a><a class=\"ds-crumb\" href=\"#course\">Course materials</a><a href=\"#oct5\">October 5 · pp. vii–24</a></div></nav>",
       "css": ".ds-nav{background:#1e2a35;color:white;font:20px/1.5 'Source Sans 3',sans-serif}.ds-nav-inner{max-width:1460px;margin:auto;padding:6px 24px;display:flex;align-items:center;gap:25px;flex-wrap:wrap}.ds-nav a{color:white;min-height:44px;display:flex;align-items:center;text-underline-offset:3px}.ds-nav .ds-brand{margin-right:auto;font-weight:650}.ds-nav .ds-crumb{color:#dbe6ec}.ds-nav a:hover{text-decoration-thickness:2px}.ds-nav a:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:3px}@media(max-width:600px){.ds-nav-inner{padding:5px 16px;gap:14px}.ds-nav .ds-brand{width:100%;margin:0;min-height:30px}.ds-nav a{font-size:16px;min-height:35px}}"
     },
     {
       "name": "Section navigation",
       "kind": "nav",
-      "description": "Four direct jump links between the metadata and first media, in the current page order.",
-      "html": "<nav class=\"ds-section-nav\" aria-label=\"Page sections\"><a href=\"#federal-response\">Federal response</a><a href=\"#barbara-bush\">Barbara Bush</a><a href=\"#evacuation\">Evacuation clip</a><a href=\"#words-second\">Word cloud</a></nav>",
+      "description": "Six direct jump links in the current page order.",
+      "html": "<nav class=\"ds-section-nav\" aria-label=\"Page sections\"><a href=\"#federal-response\">Federal response</a><a href=\"#barbara-bush\">Barbara Bush</a><a href=\"#evacuation\">Evacuation clip</a><a href=\"#superdome-photos\">Superdome</a><a href=\"#ethel-freeman\">Ethel Freeman</a><a href=\"#words-second\">Word cloud</a></nav>",
       "css": ".ds-section-nav{font-family:'Source Sans 3',sans-serif;display:flex;gap:4px 24px;flex-wrap:wrap;border-top:1px solid var(--rule,#cbd3d5);border-bottom:1px solid var(--rule,#cbd3d5);margin-bottom:25px}.ds-section-nav a{color:var(--blue,#245a8d);display:flex;align-items:center;min-height:44px;text-decoration:none;font-size:18px;font-weight:600}.ds-section-nav a:hover{text-decoration:underline}.ds-section-nav a:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:3px}@media(max-width:600px){.ds-section-nav{gap:0 20px}.ds-section-nav a{font-size:17px}}"
     },
     {
@@ -101,7 +101,7 @@
       "kind": "custom",
       "refersTo": "native-player",
       "description": "Browser-native 16:9 player; content and poster URLs stay in the page, rather than becoming synthetic preview assets.",
-      "html": "<figure class=\"ds-media\"><video controls playsinline preload=\"none\" width=\"1280\" height=\"720\" aria-label=\"Native video frame\" aria-describedby=\"ds-media-caption\"></video><figcaption id=\"ds-media-caption\">19 seconds \u00b7 Original audio with Astrodome photographs and captions.</figcaption></figure>",
+      "html": "<figure class=\"ds-media\"><video controls playsinline preload=\"none\" width=\"1280\" height=\"720\" aria-label=\"Native video frame\" aria-describedby=\"ds-media-caption\"></video><figcaption id=\"ds-media-caption\">19 seconds · Original audio with Astrodome photographs and captions.</figcaption></figure>",
       "css": ".ds-media{margin:0;color:var(--ink,#202f35);font-family:'Source Sans 3',sans-serif}.ds-media video{width:100%;display:block;background:#1e2a35;aspect-ratio:16/9;height:auto;object-fit:contain}.ds-media video:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:4px}.ds-media figcaption{padding-top:10px;font-size:17px;line-height:1.4;max-width:75ch}@media(max-width:600px){.ds-media figcaption{font-size:16px}}"
     },
     {
@@ -121,7 +121,7 @@
     }
   ],
   "narrative": {
-    "overview": "Three native players, stacked vertically: federal response, Barbara Bush, evacuation testimony, then the unchanged pp. 25\u201349 cloud. Separate Brownie player removed at user request because it duplicates footage in federal response; media files preserved.",
+    "overview": "Three native players, followed by two Superdome photographs, the Ethel Freeman photograph, and the unchanged pp. 25–49 cloud. Complete historical frames, attributed sources and poem locators; no duplicate standalone Brownie player.",
     "rules": [
       {
         "name": "The Native Player Rule",
@@ -176,7 +176,7 @@
     "audioGain": 1.0,
     "nativeAndWebAACBytesIdentical": true,
     "review": ".impeccable/review/longer/finish-review.json",
-    "sourceAttribution": "Interviewees\u2019 judgments remain attributed; the source ledger preserves the exact supplied t=4864 link."
+    "sourceAttribution": "Interviewees’ judgments remain attributed; the source ledger preserves the exact supplied t=4864 link."
   },
   "verificationHistoricalOctober6": {
     "disposition": "ship",
@@ -265,9 +265,9 @@
     }
   },
   "verification": {
-    "scope": "October 7 duplicate-player removal only",
+    "scope": "October 7 three-player page plus requested historical photographs",
     "playerCount": 3,
-    "sectionLinkCount": 4,
+    "sectionLinkCount": 6,
     "playerOrder": [
       "federal-response",
       "barbara-bush",
@@ -279,12 +279,107 @@
       131.666667
     ],
     "captures": [
-      ".impeccable/review/no-repeat/desktop.png",
-      ".impeccable/review/no-repeat/mobile.png"
+      ".impeccable/review/still-photos/desktop.png",
+      ".impeccable/review/still-photos/mobile.png"
     ],
     "mediaBytes": "Unchanged; all prior assets retained",
     "independentListening": "unverified; inherited limit",
-    "playbackScope": "Existing media retain previous playback proofs; this correction removes one player and changes only Barbara section layout"
+    "playbackScope": "Existing media retain previous playback proofs; this correction removes one player and changes only Barbara section layout",
+    "photoCount": 3,
+    "geometryOctober7Photographs": {
+      "desktop": {
+        "bodyBackground": "rgb(247, 246, 242)",
+        "bodyClient": 1265,
+        "bodyScroll": 1265,
+        "caption": {
+          "color": "rgb(32, 47, 53)",
+          "fontSize": "17px"
+        },
+        "navLinks": 6,
+        "photos": [
+          {
+            "aspect": "auto 1200 / 798",
+            "display": [
+              538,
+              357.765625
+            ],
+            "fit": "contain",
+            "loaded": true,
+            "natural": [
+              1200,
+              798
+            ],
+            "radius": "0px",
+            "source": "blood-dazzler-assets/oct7/superdome-roof-close.jpg"
+          },
+          {
+            "aspect": "auto 1200 / 770",
+            "display": [
+              538,
+              345.2109375
+            ],
+            "fit": "contain",
+            "loaded": true,
+            "natural": [
+              1200,
+              770
+            ],
+            "radius": "0px",
+            "source": "blood-dazzler-assets/oct7/superdome-roof-aerial.jpg"
+          },
+          {
+            "aspect": "auto 900 / 635",
+            "display": [
+              720,
+              508
+            ],
+            "fit": "contain",
+            "loaded": true,
+            "natural": [
+              900,
+              635
+            ],
+            "radius": "0px",
+            "source": "blood-dazzler-assets/oct7/ethel-freeman-wheelchair.jpg"
+          }
+        ],
+        "players": 3,
+        "words": 50
+      },
+      "phone": {
+        "bodyClient": 360,
+        "bodyFont": "19px",
+        "bodyScroll": 360,
+        "captionFont": "16px",
+        "navLinks": 6,
+        "pairColumns": "328px",
+        "photos": [
+          {
+            "height": 218.1171875,
+            "loaded": true,
+            "width": 328
+          },
+          {
+            "height": 210.4609375,
+            "loaded": true,
+            "width": 328
+          },
+          {
+            "height": 231.421875,
+            "loaded": true,
+            "width": 328
+          }
+        ],
+        "players": 3,
+        "words": 50
+      },
+      "captionContrast": 12.78
+    },
+    "detectorOctober7Photographs": {
+      "runs": 1,
+      "scope": "Static scoped HTML and linked CSS",
+      "findings": "Inherited native-video container text/background inference, native-video padding and global design metadata advisories; no photograph-section defect. No rerun."
+    }
   },
   "october7Correction": {
     "userRequest": "No repeat videos; Barbara Bush and documentary excerpts",
@@ -301,5 +396,26 @@
     ],
     "styles": "No CSS changes; Barbara uses existing evacuation-clip width class",
     "priorRecords": "verificationHistoricalOctober6 and october6Addition describe earlier states"
+  },
+  "october7Photographs": {
+    "sections": [
+      "superdome-photos",
+      "ethel-freeman"
+    ],
+    "files": [
+      "superdome-roof-close.jpg",
+      "superdome-roof-aerial.jpg",
+      "ethel-freeman-wheelchair.jpg"
+    ],
+    "rights": [
+      "Two official public-domain FEMA photographs",
+      "Eric Gay/Associated Press copyright retained for the Freeman image"
+    ],
+    "imageTreatment": "Complete uncropped proportional JPEG web copies; originals private",
+    "readingReferences": [
+      "Superdome p.40",
+      "Ethel’s Sestina pp.45–46"
+    ],
+    "verification": "Builder/checker, original pixel inspection and desktop/phone browser QA; no new audio verification"
   }
 }
