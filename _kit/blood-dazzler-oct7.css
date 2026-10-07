@@ -19,3 +19,14 @@ section{scroll-margin-top:18px}
 @media(max-width:800px){.official-clips{grid-template-columns:1fr;gap:0}.official-clips p{min-height:0}.class-photo-pair{grid-template-columns:1fr;gap:26px}}
 @media(max-width:600px){body{font-size:19px}h1{font-size:34px}h2{font-size:26px}.meta{font-size:18px}.section-nav{gap:0 20px}.section-nav a{font-size:17px}.official-clips section{margin-bottom:35px}.cloud-links{font-size:17px}figcaption{font-size:16px}}
 @media print{body{font-size:12pt}.official-clips{display:block}.official-clips p{min-height:0}.bd-frequency-chart{max-width:600px!important}.bd-frequency-cluster{min-width:0!important}figcaption{font-size:10pt}}
+
+/* Tanka definition and short classroom writing activity. */
+.tanka-section{max-width:75ch}.tanka-section p{max-width:70ch}
+.tanka-steps{padding-left:1.4em}.tanka-steps li{padding-left:.25em;margin-bottom:.7em}
+.tanka-sources{font-size:17px}.tanka-example{margin-top:24px;border-top:1px solid var(--rule);padding-top:10px}
+.tanka-example summary{min-height:44px;cursor:pointer;font-weight:600;display:list-item;padding:8px 0}
+.tanka-example summary:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.tanka-lines{border-collapse:collapse;width:100%;max-width:620px;text-align:left}
+.tanka-lines caption{text-align:left;margin-bottom:8px}.tanka-lines th,.tanka-lines td{padding:8px 12px 8px 0;border-bottom:1px solid var(--rule)}
+.tanka-lines th:last-child,.tanka-lines td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+@media(max-width:600px){.tanka-lines{font-size:18px}.tanka-sources{font-size:16px}}
