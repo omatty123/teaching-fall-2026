@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-06T22:50:56Z",
+  "generatedAt": "2026-10-07T00:53:59Z",
   "title": "Design System: Blood Dazzler · Wednesday, October 7",
   "scope": {
     "kind": "surface",
     "markdown": ".impeccable/surfaces/blood-dazzler-oct7.md",
     "primaryTarget": "frst-110-resources/blood-dazzler-oct-7.html",
-    "stateAtDocumentation": "LOCAL; deployment and Teaching HQ link pending",
+    "stateAtDocumentation": "LOCAL; LIVE deployment and Teaching HQ linking were not checked by this review",
     "visualAuthority": "Existing October 5 Blood Dazzler reading page",
     "roleSubstitution": "Fresh general subagent used the documenter workflow because the shipped documenter role is unavailable."
   },
@@ -92,8 +92,8 @@
     {
       "name": "Section navigation",
       "kind": "nav",
-      "description": "Four direct jump links between the metadata and first media.",
-      "html": "<nav class=\"ds-section-nav\" aria-label=\"Page sections\"><a href=\"#barbara-bush\">Barbara Bush</a><a href=\"#brownie\">Brownie clip</a><a href=\"#evacuation\">Evacuation clip</a><a href=\"#words-second\">Word cloud</a></nav>",
+      "description": "Five direct jump links between the metadata and first media, in the current page order.",
+      "html": "<nav class=\"ds-section-nav\" aria-label=\"Page sections\"><a href=\"#federal-response\">Federal response</a><a href=\"#barbara-bush\">Barbara Bush</a><a href=\"#brownie\">Brownie clip</a><a href=\"#evacuation\">Evacuation clip</a><a href=\"#words-second\">Word cloud</a></nav>",
       "css": ".ds-section-nav{font-family:'Source Sans 3',sans-serif;display:flex;gap:4px 24px;flex-wrap:wrap;border-top:1px solid var(--rule,#cbd3d5);border-bottom:1px solid var(--rule,#cbd3d5);margin-bottom:25px}.ds-section-nav a{color:var(--blue,#245a8d);display:flex;align-items:center;min-height:44px;text-decoration:none;font-size:18px;font-weight:600}.ds-section-nav a:hover{text-decoration:underline}.ds-section-nav a:focus-visible{outline:3px solid var(--focus,#0765ca);outline-offset:3px}@media(max-width:600px){.ds-section-nav{gap:0 20px}.ds-section-nav a{font-size:17px}}"
     },
     {
@@ -122,30 +122,37 @@
   ],
   "verification": {
     "disposition": "ship",
-    "review": ".impeccable/review/oct7/finish-review.json",
+    "review": ".impeccable/review/longer/finish-review.json",
     "captures": [
       {
-        "path": ".impeccable/review/oct7/desktop.png",
+        "path": ".impeccable/review/longer/desktop.png",
         "width": 1265,
-        "height": 3260
+        "height": 4053
       },
       {
-        "path": ".impeccable/review/oct7/mobile.png",
+        "path": ".impeccable/review/longer/mobile.png",
         "width": 375,
-        "height": 3389
+        "height": 4061
       }
     ],
     "geometry": {
-      "evidence": ".impeccable/review/oct7/mobile-geometry.json",
+      "evidence": ".impeccable/review/longer/mobile-geometry.json",
       "bodyClient": 375,
       "bodyScroll": 375,
       "cloudClient": 343,
       "cloudScroll": 999,
-      "minimumCloudWordScreenPixels": 20.012201694655072
+      "minimumCloudWordScreenPixels": 20.012201694655072,
+      "bodyFont": "19px",
+      "headingFont": "26px",
+      "playerWidth": 343,
+      "playerCount": 4,
+      "wordCount": 50,
+      "minimumCloudWordScreenPixelsEvidence": ".impeccable/review/oct7/mobile-geometry.json; prior proof for the unchanged cloud"
     },
     "media": {
-      "evidence": ".impeccable/review/oct7/playback.json",
+      "evidence": ".impeccable/review/longer/playback.json",
       "durationsSeconds": [
+        258.066667,
         19,
         17.8,
         131.666667
@@ -154,17 +161,53 @@
       "playsinline": true,
       "preload": "none",
       "autoplay": false,
-      "independentListening": "unverified"
+      "independentListening": "unverified",
+      "playerOrder": [
+        "federal-response",
+        "barbara-bush",
+        "brownie",
+        "evacuation"
+      ],
+      "playbackEvidenceScope": "The current evidence checks only the new first player; the prior three players retain earlier playback proof. All four were not newly played.",
+      "firstPlayerPlayback": {
+        "evidence": ".impeccable/review/longer/playback.json",
+        "durationSeconds": 258.066667,
+        "readyState": 4,
+        "currentTimeSeconds": 55.983497,
+        "paused": true,
+        "noMediaErrorObserved": true
+      },
+      "priorThreePlayback": {
+        "evidence": ".impeccable/review/oct7/playback.json",
+        "playerOrder": [
+          "barbara-bush",
+          "brownie",
+          "evacuation"
+        ],
+        "durationsSeconds": [
+          19,
+          17.8,
+          131.666667
+        ],
+        "scope": "Earlier three-player play/pause proof; retained as historical evidence, not a fresh four-player check."
+      }
     },
     "sources": "frst-110-resources/blood-dazzler-assets/oct7/SOURCES.md",
     "limits": [
       "Paused native controls cover part of Barbara Bush's burned-in caption; the outside-player caption stays clear.",
       "Independent listening remains unverified.",
       "Public deployment and Teaching HQ linking are outside the artifact review verdict."
-    ]
+    ],
+    "reviewerRoleSubstitution": "Fresh general subagent used the finish-reviewer workflow because the shipped role was unavailable.",
+    "detector": {
+      "evidence": ".impeccable/review/longer/detector.json",
+      "runsForAddition": 1,
+      "rerun": false,
+      "disposition": "Inferred unused text/background pairs and native-video padding warnings are not actual defects in the inspected page; shared-token advisories concern metadata outside this scoped record."
+    }
   },
   "narrative": {
-    "overview": "The built October 7 page preserves the existing Blood Dazzler reading-page world. Official remarks appear first, separate evacuation testimony follows, and the canonical pp. 25–49 frequency cloud appears last.",
+    "overview": "The built October 7 page preserves the existing Blood Dazzler reading-page world. The longer federal-response passage appears first, followed by the Barbara Bush and Brownie pair, separate evacuation testimony, and the exact canonical pp. 25–49 frequency cloud.",
     "rules": [
       {
         "name": "The Native Player Rule",
@@ -195,5 +238,30 @@
     "Paused subtitle occlusion is recorded as a limit, not a design rule.",
     "Compact inherited phone breadcrumb targets are recorded in the extracted snippet, not prescribed as a new interaction standard.",
     "No synthetic tonal ramp, new component, global palette repair, comp, seed, or QUALITY BAR artifact was created."
-  ]
+  ],
+  "october6Addition": {
+    "subject": "Longer federal-response passage",
+    "userSource": "https://youtu.be/CTVy-JC-Lag?t=4864",
+    "video": "frst-110-resources/blood-dazzler-assets/oct7/levees-federal-response.mp4",
+    "position": "First section before existing official pair",
+    "treatment": "Same native wide player; no new styles",
+    "selectedSeconds": 258.05,
+    "sourceLocalRange": [
+      4.8,
+      262.85
+    ],
+    "previousPlayersAndCloud": "Preserved",
+    "independentListening": "Unverified",
+    "containerDurationSeconds": 258.066667,
+    "frames": 7742,
+    "dimensions": {
+      "width": 1280,
+      "height": 720
+    },
+    "framesPerSecond": 30,
+    "audioGain": 1.0,
+    "nativeAndWebAACBytesIdentical": true,
+    "review": ".impeccable/review/longer/finish-review.json",
+    "sourceAttribution": "Interviewees’ judgments remain attributed; the source ledger preserves the exact supplied t=4864 link."
+  }
 }

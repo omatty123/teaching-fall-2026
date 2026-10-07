@@ -31,7 +31,7 @@ def build():
     return f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Blood Dazzler · October 7 · FRST 110</title>
-<meta name="description" content="Patricia Smith, pp. 25–49: Barbara Bush’s Astrodome remarks, George W. Bush’s Brownie remarks, evacuation testimony, and the section’s word frequencies.">
+<meta name="description" content="Patricia Smith, pp. 25–49: federal response in When the Levees Broke, Barbara Bush’s Astrodome remarks, George W. Bush’s Brownie remarks, evacuation testimony, and the section’s word frequencies.">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{versioned('_kit/blood-dazzler-1.css')}">
 <link rel="stylesheet" href="{versioned('_kit/blood-dazzler-words.css')}">
@@ -40,7 +40,11 @@ def build():
 </head><body><a class="skip" href="#content">Skip to class materials</a>
 <nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a class="crumb" href="../courses/frst-110.html">Course materials</a><a href="blood-dazzler-oct-5.html">October 5 · pp. vii–24</a></div></nav>
 <main id="content"><header><h1>Blood Dazzler</h1><p class="meta">Patricia Smith · Wednesday, October 7, 2026 · pp. 25–49</p>
-<nav class="section-nav" aria-label="Page sections"><a href="#barbara-bush">Barbara Bush</a><a href="#brownie">Brownie clip</a><a href="#evacuation">Evacuation clip</a><a href="#words-second">Word cloud</a></nav></header>
+<nav class="section-nav" aria-label="Page sections"><a href="#federal-response">Federal response</a><a href="#barbara-bush">Barbara Bush</a><a href="#brownie">Brownie clip</a><a href="#evacuation">Evacuation clip</a><a href="#words-second">Word cloud</a></nav></header>
+<section id="federal-response" class="evacuation-clip" aria-labelledby="federal-response-title"><h2 id="federal-response-title">Federal response in <cite>When the Levees Broke</cite></h2>
+<p>Interviewees discuss the government’s information and response; archival footage includes Bush’s praise, the flyover, and questions to Michael Brown. Read alongside “What to Tweak,” pp. 25–28, and “The President Flies Over,” p. 36.</p>
+<figure>{player('levees-federal-response', 'Federal response in When the Levees Broke', 'federal-response-caption')}
+<figcaption id="federal-response-caption">4 minutes 18 seconds · A continuous excerpt from Spike Lee’s <cite>When the Levees Broke</cite> (2006). <a href="https://youtu.be/CTVy-JC-Lag?t=4864">Documentary source at the requested passage</a> · <a href="blood-dazzler-assets/oct7/levees-federal-response.mp4">Open video</a></figcaption></figure></section>
 <div class="official-clips">
 <section id="barbara-bush" aria-labelledby="barbara-title"><h2 id="barbara-title">Barbara Bush at the Astrodome</h2>
 <p><a href="https://transcripts.cnn.com/show/lkl/date/2005-09-05/segment/01">September 5, 2005</a>. Read alongside “Thankful,” pp. 48–49.</p>
@@ -72,7 +76,7 @@ def main():
         print("October 7 page matches its builder and canonical word counts.")
     else:
         OUTPUT.write_text(page, encoding="utf-8")
-        print("Built Blood Dazzler October 7: three classroom clips and 50 word counts, pp. 25–49.")
+        print("Built Blood Dazzler October 7: four classroom clips and 50 word counts, pp. 25–49.")
 
 
 if __name__ == "__main__":

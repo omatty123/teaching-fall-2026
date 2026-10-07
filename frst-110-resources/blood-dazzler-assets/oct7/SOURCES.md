@@ -1,7 +1,16 @@
 # Blood Dazzler · October 7 video sources
 
 Reading: Patricia Smith, *Blood Dazzler* (Coffee House Press, 2008), printed pp. 25–49.
-Only the three short classroom videos and their posters appear here. Full working sources and editable projects remain private.
+Only the four classroom excerpts and their posters appear here. Full working sources and editable projects remain private.
+
+## Federal response: the requested longer passage
+
+`levees-federal-response.mp4` · 258.05-second selected passage (about 4 minutes 18 seconds). A continuous excerpt from Spike Lee’s *When the Levees Broke: A Requiem in Four Acts* (2006), beginning at the user’s selected passage. Interviewees discuss information and government response; archival footage includes Bush’s praise, the presidential flyover, and news interviews with Michael Brown. Speakers’ causal judgments, historical comparisons and relief claims remain attributed statements. Read alongside “What to Tweak,” pp. 25–28, and “The President Flies Over,” p. 36.
+
+- [User-selected starting point](https://youtu.be/CTVy-JC-Lag?t=4864)
+- [Supplied documentary upload](https://www.youtube.com/watch?v=CTVy-JC-Lag)
+
+Working download requested only 01:21:00–01:25:30. Source-local selection 4.800–262.850 seconds; approximate upload interval 01:21:04.800–01:25:22.850. The opener retains “So there was information”; the closing journalist’s final sentence is complete, before the next voice turns to Brown’s appointment. Local automatic word timings and fine source waveforms checked both boundaries. Original framing, scene order, repetitions and audio retained at unity gain. No new captions, narration, music, overlays or repeated footage. The film’s original transition from briefing footage into the first interview remains intact. Independent listening remains unverified.
 
 ## Barbara Bush at the Astrodome
 
@@ -41,7 +50,7 @@ Full-upload interval approximately 01:28:20.650–01:30:32.300; working-source i
 
 ## Delivery and word cloud
 
-Tesseract 0.3.1 renders the editable projects. Web copies compress those completed renders with H.264 at CRF 20 (Barbara/Brownie) or CRF 22 (evacuation), retaining the native AAC audio without recoding. MP4 metadata is placed first for browser playback. No visual edit is reconstructed in the compression step.
+Tesseract 0.3.1 renders the editable projects. Web copies compress those completed renders with H.264 at CRF 20 (Barbara/Brownie) or CRF 22 (the two longer documentary passages), retaining the native AAC audio without recoding. MP4 metadata is placed first for browser playback. No visual edit is reconstructed in the compression step.
 
 Video cuts have transcript/waveform checks and visual frame review; independent listening review remains unverified.
 
