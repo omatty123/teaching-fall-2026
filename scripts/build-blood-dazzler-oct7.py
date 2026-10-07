@@ -41,26 +41,47 @@ def build():
 <nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a class="crumb" href="../courses/frst-110.html">Course materials</a><a href="blood-dazzler-oct-5.html">October 5 · pp. vii–24</a></div></nav>
 <main id="content"><header><h1>Blood Dazzler</h1><p class="meta">Patricia Smith · Wednesday, October 7, 2026 · pp. 25–49</p>
 <p class="cloud-links"><a href="https://lawrence.instructure.com/courses/14726/pages/song-of-the-day-southern-nights-allen-toussaint">Song of the Day · Allen Toussaint, “Southern Nights”</a></p>
-<nav class="section-nav" aria-label="Page sections"><a href="#what-is-tanka">What is Tanka?</a><a href="#write-tanka">Let’s Write Tanka</a><a href="#federal-response">Federal response</a><a href="#barbara-bush">Barbara Bush</a><a href="#evacuation">Evacuation clip</a><a href="#superdome-photos">Superdome</a><a href="#ethel-freeman">Ethel Freeman</a><a href="#words-second">Word cloud</a></nav></header>
+<nav class="section-nav" aria-label="Page sections"><a href="#what-is-tanka">What is Tanka?</a><a href="#write-tanka">Let’s Write Tanka</a><a href="#sestina">Ethel’s Sestina</a><a href="#federal-response">Federal response</a><a href="#barbara-bush">Barbara Bush</a><a href="#evacuation">Evacuation clip</a><a href="#superdome-photos">Superdome</a><a href="#ethel-freeman">Ethel Freeman</a><a href="#words-second">Word cloud</a></nav></header>
 <section id="what-is-tanka" class="tanka-section" aria-labelledby="tanka-title"><h2 id="tanka-title">What is Tanka?</h2>
 <p><strong>Tanka is a short Japanese poetic form.</strong> In English, it is usually written in five lines. A common syllable pattern is <strong>5–7–5–7–7</strong>.</p>
 <p>A tanka can begin with something seen, heard, or felt, then shift toward a thought, memory, or different perspective. This shift is called a <strong>turn</strong>. The pattern is a starting point: English-language tanka do not always keep a strict syllable count.</p>
 <p>In today’s reading: Patricia Smith, <strong>“Tankas,” pp. 38–39</strong>.</p>
+<h3>Smith’s five lines: one tanka from the sequence</h3>
+<table class="tanka-lines"><caption>“Tankas,” p. 38 · each row is one printed line</caption><thead><tr><th scope="col">Smith’s line</th><th scope="col">Syllables</th></tr></thead><tbody>
+<tr><td>I have three children,</td><td>5</td></tr>
+<tr><td>but only two arms. He falls</td><td>7</td></tr>
+<tr><td>and barely splashes,</td><td>5</td></tr>
+<tr><td>that’s how incredibly light</td><td>7</td></tr>
+<tr><td>he <strong>is—was</strong>. How death whispers.</td><td>7</td></tr>
+</tbody></table>
+<p class="tanka-sources">Patricia Smith, <cite>Blood Dazzler</cite>, p. 38. Bold added to mark the change of tense.</p>
+<p><strong>Where the turn happens:</strong> “is—was” changes present to past within the final line. The speaker corrects herself as she recognizes the loss.</p>
+<p><strong>Form and content:</strong> the sentence continues across line breaks, while the five-line pattern contains the moment. “He falls” ends a line; “and barely splashes” begins the next. The small sound and the short space make the loss painfully immediate.</p>
 <p class="tanka-sources">Sources: <a href="https://poets.org/glossary/tanka">Academy of American Poets: Tanka</a> · <a href="https://www.poetryfoundation.org/articles/157323/tanka-and-renga-looking-through-windows">Poetry Foundation: Tanka and Renga</a></p></section>
 <section id="write-tanka" class="tanka-section" aria-labelledby="write-tanka-title"><h2 id="write-tanka-title">Let’s Write Tanka</h2>
 <ol class="tanka-steps"><li><strong>Choose one moment involving water.</strong> Rain, a drink, a sink, snow, or a lake will do.</li>
 <li><strong>Write five lines.</strong> Try 5, 7, 5, 7, and 7 syllables.</li>
 <li><strong>Make a turn.</strong> One approach: describe the moment in the first three lines; add a thought, memory, or change of perspective in the last two.</li>
 <li><strong>Read it aloud.</strong> Revise one word or line to make the image or sound clearer.</li></ol>
-<details class="tanka-example"><summary>See an example with syllable counts</summary>
-<p class="tanka-sources">Original classroom example</p>
-<table class="tanka-lines"><caption>Five lines · 5–7–5–7–7</caption><thead><tr><th scope="col">Line</th><th scope="col">Syllables</th></tr></thead><tbody>
-<tr><td>Rain taps on the glass</td><td>5</td></tr>
-<tr><td>My cup warms both of my hands</td><td>7</td></tr>
-<tr><td>The bus is still late</td><td>5</td></tr>
-<tr><td>Across the street, one light shines</td><td>7</td></tr>
-<tr><td>Someone else is still awake</td><td>7</td></tr>
-</tbody></table></details></section>
+</section>
+<section id="sestina" class="tanka-section" aria-labelledby="sestina-title"><h2 id="sestina-title">What is a Sestina? “Ethel’s Sestina”</h2>
+<p><strong>A sestina repeats six end words in a changing order.</strong> Its usual structure is six six-line stanzas followed by a three-line ending, called an <strong>envoi</strong>, containing all six words. Smith adapts this structure in <strong>“Ethel’s Sestina,” pp. 45–46</strong>.</p>
+<h3>First stanza: six lines, six end words</h3>
+<blockquote class="poem-lines"><div>Gon’ be obedient in this here <strong>chair</strong>,</div><div>gon’ bide my time, fanning against this <strong>sun</strong>.</div><div>I ask my boy, and all he says is <strong>Wait</strong>.</div><div>He wipes my brow with steam, says I should <strong>sleep</strong>.</div><div>I trust his every word. Herbert my <strong>son</strong>.</div><div>I believe him when he says help gon’ <strong>come</strong>.</div></blockquote>
+<p class="tanka-sources">Patricia Smith, <cite>Blood Dazzler</cite>, p. 45. Bold added to show the end words.</p>
+<h3>The same words return in a different order</h3>
+<div class="pattern-scroll" role="region" aria-label="Sestina end-word order" tabindex="0"><table class="sestina-pattern"><caption>Read across each row: line endings in stanzas 1–5</caption><thead><tr><th scope="col">Stanza</th><th scope="col">1</th><th scope="col">2</th><th scope="col">3</th><th scope="col">4</th><th scope="col">5</th><th scope="col">6</th></tr></thead><tbody>
+<tr><th scope="row">1</th><td>chair</td><td>sun</td><td>Wait</td><td>sleep</td><td>son</td><td>come</td></tr>
+<tr><th scope="row">2</th><td>come</td><td>chair</td><td>son</td><td>sun</td><td>sleep</td><td>Wait</td></tr>
+<tr><th scope="row">3</th><td>wait</td><td>come</td><td>sleep</td><td>chair</td><td>sun</td><td>son</td></tr>
+<tr><th scope="row">4</th><td>son</td><td>Wait</td><td>sun</td><td>come</td><td>chair</td><td>sleepin’</td></tr>
+<tr><th scope="row">5</th><td>sleep</td><td>son</td><td>chair</td><td>wait</td><td>come</td><td>sun</td></tr>
+</tbody></table></div>
+<p><strong>Form and content:</strong> the returning words keep the speaker’s attention on her chair, the heat, her son, and the promised arrival of help. The poem moves forward, but keeps returning to waiting.</p>
+<h3>Smith changes the pattern</h3>
+<p>In the sixth stanza, <strong>“Come.”</strong> repeats on separate lines. The repeated call expands the stanza beyond six lines. Its last line places <strong>“chair”</strong> inside the phrase <strong>“chair no more.”</strong> In this reading, the formal change accompanies the speaker’s imagined departure from her body.</p>
+<p>In the three-line envoi, all six words return in pairs: <strong>come / son · sun / sleep · wait / chair</strong>. The final chair is a <strong>“golden chair”</strong>: the same word now describes a different world. The imagined release does not erase the failure to bring help.</p>
+<p class="tanka-sources">Form reference: <a href="https://poets.org/glossary/sestina">Academy of American Poets: Sestina</a>. Excerpt and word order: Smith, <cite>Blood Dazzler</cite>, pp. 45–46.</p></section>
 <section id="federal-response" class="evacuation-clip" aria-labelledby="federal-response-title"><h2 id="federal-response-title">Federal response in <cite>When the Levees Broke</cite></h2>
 <p>Interviewees discuss the government’s information and response; archival footage includes Bush’s praise, the flyover, and questions to Michael Brown. Read alongside “What to Tweak,” pp. 25–28, and “The President Flies Over,” p. 36.</p>
 <figure>{player('levees-federal-response', 'Federal response in When the Levees Broke', 'federal-response-caption')}

@@ -188,3 +188,12 @@ The requested “What is Tanka?” and “Let’s Write Tanka” sections preced
 Read mode continues the established paper, ink, Source Sans 3, blue links, and ruled disclosures. Text is limited to 75ch (paragraphs 70ch); the example summary has a 44px minimum height and visible keyboard focus. The six existing content sections remain byte-identical. No shared design-system changes were made.
 
 Maintain this addition through `scripts/build-blood-dazzler-oct7.py` and `_kit/blood-dazzler-oct7.css`, then run `scripts/check-blood-dazzler-oct7.py`. Automated checks and LOCAL desktop (1280px) and phone (390px) review passed without page overflow; proof is in `.impeccable/review/tanka/`. The finish review returned `ship`. This records local verification, not live deployment.
+
+
+## October 7, 2026 revision: Smith’s tanka and sestina
+
+Smith’s actual stanza from “Tankas,” p. 38, replaces the invented example and its disclosure. The five printed lines now appear in a visible five-row syllable table, with the tense change in “is—was” emphasized and explained. The four writing steps remain. This supersedes the preceding addendum’s example and disclosure description.
+
+A new “Ethel’s Sestina” section and jump link introduce the form, show the first stanza with six bold end words, and map their order across stanzas 1–5. The text explains Smith’s sixth-stanza adaptation and three-line envoi. A ruled quotation and compact table inherit the existing Read design; the table has a keyboard-focusable horizontal scroll region for phones. No JavaScript or global design changes were added.
+
+Maintain the content through `scripts/build-blood-dazzler-oct7.py` and the scoped stylesheet. Automated checks passed; LOCAL desktop and 390px phone captures are saved in `.impeccable/review/smith-forms/`, with no page overflow on the phone. This record does not establish live deployment.

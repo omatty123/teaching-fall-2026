@@ -64,15 +64,15 @@ def main():
     class_url = "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-7.html"
     require(meeting["detail"] == "pp. 25–49" and any(item.get("href") == class_url for item in meeting["materials"]), "The October 7 course schedule must link to this reading page.")
     require(len(list(document.root.all("h1"))) == 1, "The page needs one main title.")
-    section_ids = ("what-is-tanka", "write-tanka", "federal-response", "barbara-bush", "evacuation", "superdome-photos", "ethel-freeman", "words-second")
+    section_ids = ("what-is-tanka", "write-tanka", "sestina", "federal-response", "barbara-bush", "evacuation", "superdome-photos", "ethel-freeman", "words-second")
     require(set(section_ids) <= by_id.keys(), "A requested classroom resource is missing its jump target.")
     section_order = tuple(node.attrs["id"] for node in document.root.all("section") if node.attrs.get("id") in section_ids)
     require(section_order == section_ids, "The requested photographs must follow evacuation and precede the unchanged word cloud.")
     section_navs = [node for node in document.root.all("nav") if node.attrs.get("class") == "section-nav"]
     require(len(section_navs) == 1, "The page needs one section navigation.")
     nav_links = list(section_navs[0].all("a"))
-    require(tuple(node.attrs.get("href") for node in nav_links) == tuple(f"#{item}" for item in section_ids), "The section navigation must link to all eight resources in page order.")
-    require(tuple(common.clean(node.text()) for node in nav_links)[5:7] == ("Superdome", "Ethel Freeman"), "The photographs need the requested navigation labels.")
+    require(tuple(node.attrs.get("href") for node in nav_links) == tuple(f"#{item}" for item in section_ids), "The section navigation must link to all nine resources in page order.")
+    require(tuple(common.clean(node.text()) for node in nav_links)[6:8] == ("Superdome", "Ethel Freeman"), "The photographs need the requested navigation labels.")
     require("5–7–5–7–7" in body_text and "“Tankas,” pp. 38–39" in body_text, "Missing the tanka pattern or book locator.")
     require(len(list(by_id["write-tanka"].all("li"))) == 4, "Expected four short writing steps.")
     require("brownie" not in by_id, "The standalone Brownie player duplicates the longer documentary excerpt.")
