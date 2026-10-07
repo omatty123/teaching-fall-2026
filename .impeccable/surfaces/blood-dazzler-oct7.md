@@ -4,7 +4,7 @@ slug: "blood-dazzler-oct7"
 primary_target: "frst-110-resources/blood-dazzler-oct-7.html"
 related_targets: ["_kit/blood-dazzler-oct7.css", "scripts/build-blood-dazzler-oct7.py", "scripts/check-blood-dazzler-oct7.py"]
 name: "Blood Dazzler · October 7 · FRST 110"
-description: "Verified October 7 reading page with four native videos and the pp. 25–49 frequency cloud."
+description: "October 7 reading page with three native videos and the pp. 25–49 frequency cloud."
 colors:
   paper: "#f7f6f2"
   ink: "#202f35"
@@ -72,6 +72,16 @@ components:
 ---
 
 # Design System: Blood Dazzler · Wednesday, October 7
+
+## October 7 correction: remove the duplicate player
+
+At the user's request, the current page has three videos in this order: federal response in When the Levees Broke (4:18), Barbara Bush at the Astrodome (19 seconds), and evacuation testimony (2:12). The separate 18-second Brownie player and its jump link were removed because the federal-response excerpt already contains that footage. The film's own sequence and three repetitions remain untouched. All media assets and source ledgers remain saved; the exact canonical cloud is unchanged.
+
+All three sections now use the existing 960px wide-player treatment, stacked vertically on desktop and phones. Barbara no longer sits in an empty two-column wrapper or reserves 90px for alignment with the removed player. No CSS, palette, type, narration, or video edit changed. Four jump links remain: Federal response, Barbara Bush, Evacuation clip, and Word cloud. The existing Teaching HQ route reaches the same public page.
+
+The October 7 removal is checked through the deterministic builder, scoped checker, media-hash preservation, and desktop/phone inspection. Current captures are `.impeccable/review/no-repeat/desktop.png` and `mobile.png`. Earlier playback and listening limits still apply; unchanged media were not re-edited or independently auditioned. The records below describe the historical October 6 four-player page and do not establish current player counts or geometry.
+
+# Historical design and verification record — October 6
 
 ## Overview
 

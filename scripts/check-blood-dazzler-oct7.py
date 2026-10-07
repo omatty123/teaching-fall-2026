@@ -35,22 +35,21 @@ def main():
     class_url = "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-7.html"
     require(meeting["detail"] == "pp. 25–49" and any(item.get("href") == class_url for item in meeting["materials"]), "The October 7 course schedule must link to this reading page.")
     require(len(list(document.root.all("h1"))) == 1, "The page needs one main title.")
-    require(set(("federal-response", "barbara-bush", "brownie", "evacuation", "words-second")) <= by_id.keys(), "A requested classroom resource is missing its jump target.")
+    require(set(("federal-response", "barbara-bush", "evacuation", "words-second")) <= by_id.keys(), "A requested classroom resource is missing its jump target.")
+    require("brownie" not in by_id, "The standalone Brownie player duplicates the longer documentary excerpt.")
     require("Federal response in When the Levees Broke" in body_text, "The longer excerpt needs its requested subject heading.")
     require("“What to Tweak,” pp. 25–28" in body_text and "“The President Flies Over,” p. 36" in body_text, "The longer excerpt needs its verified poem references.")
     require(any(node.attrs.get("href") == "https://youtu.be/CTVy-JC-Lag?t=4864" for node in by_id["federal-response"].all("a")), "The longer excerpt needs the exact supplied documentary link.")
     require("“Thankful,” pp. 48–49" in body_text, "Barbara Bush's clip needs its verified poem reference.")
-    require("September 5, 2005" in body_text and "September 2, 2005" in body_text, "The two official remarks need their event dates.")
-    require("The film repeats the Brownie line three times." in body_text, "Identify the three Brownie repetitions as the documentary's editing.")
+    require("September 5, 2005" in body_text, "Barbara Bush's remarks need their event date.")
     require(not list(document.root.all("iframe")), "Classroom clips must be local native players, not remote embeds.")
     require(not list(document.root.all("script")) or all(node.attrs.get("type") == "application/json" for node in document.root.all("script")), "This static page should not add remote or executable scripts.")
 
     videos = list(document.root.all("video"))
-    require(len(videos) == 4, "Expected the federal-response, Barbara Bush, Brownie, and separate evacuation players.")
+    require(len(videos) == 3, "Expected only federal-response, Barbara Bush, and separate evacuation players.")
     expected = (
         ("levees-federal-response", 258.0, 258.15),
         ("barbara-bush-katrina", 18.9, 19.1),
-        ("george-bush-brownie", 17.7, 17.9),
         ("levees-evacuation", 131.55, 131.75),
     )
     durations = []
@@ -113,7 +112,7 @@ def main():
         require(source in source_record, f"Missing supplied source in the video record: {source}")
     for filename, _, _ in expected:
         require(f"{filename}.mp4" in source_record, f"Missing excerpt file mapping in the source record: {filename}")
-    print(f"October 7 checks passed: exact reading date, four local players, all 50 canonical counts, {checked} local resources.")
+    print(f"October 7 checks passed: exact reading date, three local players, all 50 canonical counts, {checked} local resources.")
     print("; ".join(durations))
 
 
