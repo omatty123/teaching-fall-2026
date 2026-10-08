@@ -199,7 +199,13 @@ function render(t){
   lines[row].classList.add('live');
   document.getElementById('status').textContent='Verse '+(vi+1)+' of 7 · bar '+(k+1)+' of 12 · line '+['A','A','B'][row];
 }
-function tick(){if(player&&player.getCurrentTime){render(player.getCurrentTime());}requestAnimationFrame(tick);}
+// YouTube reports the playhead in coarse steps; between reports, run on the clock so the beat dots move smoothly.
+let lastT=-1,lastW=0;
+function playhead(){const t=player.getCurrentTime(),w=performance.now();
+  if(t!==lastT){lastT=t;lastW=w;}
+  if(player.getPlayerState&&player.getPlayerState()===1){return t+Math.min(1,(w-lastW)/1000)*(player.getPlaybackRate?player.getPlaybackRate():1);}
+  return t;}
+function tick(){if(player&&player.getCurrentTime){render(playhead());}requestAnimationFrame(tick);}
 window.onYouTubeIframeAPIReady=function(){player=new YT.Player('player',{videoId:'4EZ7mNG7tfM',playerVars:{rel:0,playsinline:1},});};
 const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);
 render(-1);
