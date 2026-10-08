@@ -228,6 +228,11 @@
       "detail": "Ebrey 56–74, 103–105",
       "materials": [
         {
+          "label": "Class page",
+          "href": "../hist-212-resources/class-2026-10-13.html",
+          "kind": "guide"
+        },
+        {
           "label": "Reader PDF",
           "href": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
           "kind": "page"

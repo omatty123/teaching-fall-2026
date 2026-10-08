@@ -1,0 +1,192 @@
+{
+  "title": "Buddhism, family, and the ruler",
+  "description": "October 13 class excerpts: the Pensive Bodhisattva, why Buddhism spread in a divided China, Mouzi on the family, Huiyuan on monks and kings, and Silla's conversion.",
+  "meta": "Ebrey 56–74, 103–105 · Mouzi and Huiyuan (SCT) · Wŏn’gwang and the Silla conversion (SKT)",
+  "sections": [
+    {
+      "id": "art",
+      "short": "Pensive Bodhisattva",
+      "title": "Artwork of the day: the Pensive Bodhisattva",
+      "source": "金銅彌勒菩薩半跏思惟像 · Korean National Treasure no. 83",
+      "body": [
+        {
+          "figure": {
+            "src": "../images/artwork/09-pensive.jpg",
+            "alt": "Gilt-bronze bodhisattva seated with one leg crossed over the knee, fingers raised to the cheek",
+            "caption": "Gilt bronze, Three Kingdoms period, late 6th–early 7th century. Height 93.5 cm. National Museum of Korea, Seoul. KOGL Type 1.",
+            "source": "https://commons.wikimedia.org/wiki/File:Pensive_Bodhisattva_02.jpg"
+          }
+        }
+      ],
+      "ask": "Describe the pose: weight, hand, eyes. What is smooth, and what is elaborate?"
+    },
+    {
+      "id": "spread",
+      "short": "Why now?",
+      "title": "Division and the spread",
+      "source": "Ebrey pp. 64–72",
+      "body": [
+        {
+          "board": "Han falls 220 · Luoyang taken 311 · Fotudeng arrives 310"
+        },
+        {
+          "passage": {
+            "who": "Ebrey, p. 70",
+            "quote": "In a rough and tumultuous age, Buddhism offered an appealing emphasis on kindness, charity, the preservation of life, and the prospect of salvation.",
+            "cite": "Ebrey & Walthall, Pre-Modern East Asia, p. 70"
+          }
+        }
+      ],
+      "ask": "There were no forced conversions. Who gained by taking up Buddhism, and who had something to lose?"
+    },
+    {
+      "id": "mouzi",
+      "short": "Mouzi and the family",
+      "title": "Mouzi: the family charge",
+      "source": "Mouzi, Disposing of Error · SCT pp. 423–424",
+      "body": [
+        {
+          "pair": [
+            {
+              "who": "The questioner",
+              "quote": "But now the monks shave their heads. How this violates the sayings of the sages and is out of keeping with the way of the filial!",
+              "cite": "SCT p. 423",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · p. 1"
+            },
+            {
+              "who": "Mouzi",
+              "quote": "Taibo cut his hair short and tattooed his body ... And yet Confucius praised him, saying that his might well be called <mark>the ultimate virtue</mark>.",
+              "cite": "SCT p. 423",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · p. 1"
+            }
+          ]
+        },
+        {
+          "pair": [
+            {
+              "who": "The questioner",
+              "quote": "Now of felicities there is none greater than the continuation of one’s line, of unfilial conduct there is none worse than childlessness.",
+              "cite": "SCT pp. 423–424",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · p. 1"
+            },
+            {
+              "who": "Mouzi",
+              "quote": "Boyi and Shuqi starved in Shouyang, but Confucius praised their worth. ... One does not hear of their being ill-spoken of because they were childless and propertyless.",
+              "cite": "SCT p. 424",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · pp. 1–2",
+              "pageBreak": true
+            }
+          ]
+        },
+        {
+          "passage": {
+            "who": "Mouzi",
+            "quote": "The spirit never perishes. Only the body decays.",
+            "cite": "SCT p. 424 · compare the editors on p. 416: no eternal Self or soul",
+            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+            "linkLabel": "Oct 13 reader · p. 2"
+          }
+        }
+      ],
+      "ask": "Mouzi answers each charge with someone Confucius praised. Whose books is he arguing from? What does he give up to win?"
+    },
+    {
+      "id": "huiyuan",
+      "short": "Huiyuan and the king",
+      "title": "Huiyuan: where the king’s reach stops",
+      "source": "Huiyuan, A Monk Does Not Bow Down Before a King · SCT pp. 427–429",
+      "body": [
+        {
+          "passage": {
+            "who": "Those who stay in the household",
+            "quote": "Therefore they who rejoice in the way of Sakya invariably first serve their parents and respect their lords.",
+            "cite": "SCT p. 427",
+            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+            "linkLabel": "Oct 13 reader · p. 2"
+          }
+        },
+        {
+          "passage": {
+            "who": "Those who leave it",
+            "quote": "Kings and princes, though they have the power of preserving existence, <mark>cannot cause a preserved creature to be without woe</mark>. ... This is why the monk refuses homage to the Lord of the Myriad Chariots",
+            "cite": "SCT pp. 428–429",
+            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+            "linkLabel": "Oct 13 reader · pp. 2–3"
+          }
+        }
+      ],
+      "ask": "Who is outside the emperor’s authority, and why? The king can ___, but cannot ___."
+    },
+    {
+      "id": "silla",
+      "short": "Silla",
+      "title": "Silla: the king needs it",
+      "source": "Sources of Korean Tradition · pp. 41–46",
+      "body": [
+        {
+          "passage": {
+            "who": "The ministers object",
+            "quote": "In recent years the crops have been scarce, and the people are restless. Besides, because of frequent border raids from the neighboring state, our soldiers are still engaged in battle.",
+            "cite": "SKT pp. 41–42",
+            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+            "linkLabel": "Oct 13 reader · p. 5"
+          }
+        },
+        {
+          "passage": {
+            "who": "Ich’adon",
+            "quote": "Sacrificing his life in order to accomplish goodness is the great principle of the official.",
+            "cite": "SKT p. 42",
+            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+            "linkLabel": "Oct 13 reader · p. 5"
+          }
+        },
+        {
+          "pair": [
+            {
+              "who": "Wŏn’gwang drafts the war petition",
+              "quote": "To destroy others in order to preserve oneself is not the way of a monk. But since I, a poor monk, live in Your Majesty’s territory and waste Your Majesty’s clothes and food, I dare not disobey.",
+              "cite": "SKT p. 45",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · p. 5"
+            },
+            {
+              "who": "Five Commandments for Laymen",
+              "quote": "serve your sovereign with loyalty; attend your parents with filial piety; treat your friends with sincerity; <mark>do not retreat from a battlefield</mark>; be discriminating about the taking of life.",
+              "cite": "SKT pp. 45–46",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · pp. 5–6",
+              "pageBreak": true
+            }
+          ]
+        }
+      ],
+      "ask": "Huiyuan’s monk stands outside the king’s reach. Where does Wŏn’gwang stand? Whom is Buddhism serving here?"
+    },
+    {
+      "id": "close",
+      "short": "Who controls the monk?",
+      "title": "Close: who controls the monk?",
+      "source": "Ebrey p. 72",
+      "body": [
+        {
+          "passage": {
+            "who": "Ebrey, p. 72",
+            "quote": "in China the governments successfully claimed the authority to regulate Buddhist clergy and monastic establishments.",
+            "cite": "Ebrey & Walthall, Pre-Modern East Asia, p. 72"
+          }
+        }
+      ],
+      "ask": "China or Silla: where did the monk stand against the ruler? Buddhism flourished because ___, on the ruler’s terms because ___."
+    }
+  ],
+  "readings": [
+    "Ebrey 56–74: Buddhism in India and its spread along the Silk Road; political division in China",
+    "Ebrey 103–105: Early Korea, the Three Kingdoms (stop before “Unification by Silla”)",
+    "<a href=\"https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view\">October 13 reader</a>: Mouzi and Huiyuan (SCT ch. 15); Wŏn’gwang and the Silla conversion (SKT)"
+  ]
+}
