@@ -172,15 +172,19 @@ body = f"""
 </ul>
 <p>Write your own. These show the shape: “On p. __, why ___ rather than ___?”</p></section>
 <section id="author-questions"><header class="sec-head"><h2>“Why did you write this?” · Preparing to talk with Patricia Smith</h2></header>
-<p>That question can ask about an event, a purpose, a word, or a formal choice. Decide which you want to understand. These are familiar author-interview questions, not a measured ranking. The answers below paraphrase Smith’s published interviews; they do not predict what she will say on Monday.</p>
+<p>That question can ask about an event, a purpose, a word, or a formal choice. Decide which you want to understand. These are familiar author-interview questions, not a measured ranking. The answers below summarize and briefly quote Smith’s published interviews; they do not predict what she will say on Monday.</p>
 <h3>Questions authors often receive—and what Smith has already said</h3>
 <dl>
 <dt><strong>Why did you write this book? What inspired you?</strong></dt>
 <dd><p>Smith says the deaths of the nursing-home residents stayed with her. Writing “34” led to more poems and eventually a book. <a href="https://knpr.org/show/knprs-state-of-nevada/2016-08-25/poet-patricia-smith-on-storytelling-in-a-controlled-space">KNPR interview</a></p><p><strong>Follow-up:</strong> What changed when “34” became part of a whole book rather than a poem on its own?</p></dd>
+<dt><strong>What made you keep writing about Katrina?</strong></dt>
+<dd><p>Smith describes reading “34” at the Palm Beach Poetry Festival in winter 2007. After noticing restlessness, she spoke with an audience member who said, “they just had Mardi Gras, didn’t they? Things are better now.” Smith understood this response as a wish to put the catastrophe behind them. That encounter helped turn a single poem into a continuing project. <a href="https://isthmus.com/arts/books/wisconsin-book-festival-2008-patricia-smith-speaks/">Smith’s account in <cite>Isthmus</cite> (2008)</a></p><p><strong>Follow-up:</strong> How did that encounter change what you wanted the poems to make readers hear?</p></dd>
 <dt><strong>What did you want readers to understand?</strong></dt>
 <dd><p>She describes Katrina as a human catastrophe that exposed the country’s abandonment of poor, mostly brown people. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> In “34,” what can separate voices make us understand that the headnote’s number cannot?</p></dd>
 <dt><strong>Why is it called <cite>Blood Dazzler</cite>?</strong></dt>
-<dd><p>The phrase began as a placeholder in “Siblings.” By the end, she thought it could encompass the book without fixing its meaning. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> What did those words come to hold that they did not hold when you first wrote them?</p></dd>
+<dd><p><strong>Sound first:</strong> In 2008, Smith said, “I have no idea what those two words mean.” She loved how the phrase felt in her mouth and what remained after she spoke it. It comes from the end of “Siblings,” where it names Katrina. <a href="https://isthmus.com/arts/books/wisconsin-book-festival-2008-patricia-smith-speaks/">David Medaris’s interview, <cite>Isthmus</cite> (2008)</a></p>
+<p><strong>Meaning developing:</strong> In 2016, she explained that the phrase began as a placeholder she intended to replace. By the time she finished the book, it could encompass the narrative without fixing its meaning. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">Jon Riccio’s interview, <cite>The Volta</cite> (2016)</a></p>
+<p><strong>For our reading:</strong> A phrase can begin with its sound and acquire meaning through the poems around it. Our readings of blood, kinship, attraction, and impaired sight still need evidence from the book; they are not necessarily meanings Smith planned in advance.</p><p><strong>Follow-up:</strong> What did those words come to hold that they did not hold when you first wrote them?</p></dd>
 <dt><strong>Why make the hurricane speak?</strong></dt>
 <dd><p>Smith wanted an unexpected perspective. Katrina’s voice helped shape the collection and gave the storm a changing emotional life. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> How did you decide when we should hear Katrina and when we should hear someone suffering because of her?</p></dd>
 <dt><strong>Why use strict forms for such painful events?</strong></dt>
@@ -204,7 +208,7 @@ body = f"""
 <li><strong>If her reading differs from ours:</strong> explain the line that led us there, then ask how she reads it. Her account of writing adds evidence; we still need to explain our textual evidence.</li>
 </ul>
 <p><strong>Prepare one main question and one follow-up.</strong> Keep the book open to the passage. Ask one question at a time. If another person asks yours, listen for what remains unanswered. You do not need a long introduction or specialist vocabulary.</p>
-<p class="source-note">Published answers: Jon Riccio, <cite>The Volta</cite>, January 4, 2016; Fred Wasser, KNPR, August 25, 2016. Text check: <a href="https://poets.org/poem/ethels-sestina">“Ethel’s Sestina,” Academy of American Poets</a>. <a href="blood-dazzler-come.html">Our reasoning about “come”</a>.</p>
+<p class="source-note">Published answers: David Medaris, <cite>Isthmus</cite>, October 13, 2008; Jon Riccio, <cite>The Volta</cite>, January 4, 2016; Fred Wasser, KNPR, August 25, 2016. Text check: <a href="https://poets.org/poem/ethels-sestina">“Ethel’s Sestina,” Academy of American Poets</a>. <a href="blood-dazzler-come.html">Our reasoning about “come”</a>.</p>
 </section>
 
 """
