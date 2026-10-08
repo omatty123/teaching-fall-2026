@@ -10891,21 +10891,44 @@
       "unit": "blues",
       "topic": "Delta blues",
       "detail": "Listening selections",
-      "materials": []
+      "materials": [
+        {
+          "label": "Class page: Flood (Patton, McCoy and Memphis Minnie), with lyrics",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blues-oct-14.html",
+          "kind": "guide"
+        },
+        {
+          "label": "What are the blues? Twelve bars, A A B",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blues-form.html",
+          "kind": "guide"
+        }
+      ]
     },
     {
       "date": "2026-10-16",
       "unit": "blues",
       "topic": "Delta blues",
       "detail": "Listening selections",
-      "materials": []
+      "materials": [
+        {
+          "label": "Class page: Displacement and levee labor (Smith, Pearson, Johnson), with lyrics",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blues-oct-16.html",
+          "kind": "guide"
+        }
+      ]
     },
     {
       "date": "2026-10-19",
       "unit": "blues",
       "topic": "Delta blues",
       "detail": "Listening selections",
-      "materials": []
+      "materials": [
+        {
+          "label": "Class page: Mississippi to Chicago (Muddy Waters)",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blues-oct-19.html",
+          "kind": "guide"
+        }
+      ]
     },
     {
       "date": "2026-10-21",

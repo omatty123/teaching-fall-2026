@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What Are the Blues? · FRST 110</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<meta name="description" content="How a blues verse is built: twelve bars, three lines, A A B. Watch the form light up as Bessie Smith sings “Back-Water Blues,” then hear Charley Patton bend it.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="What Are the Blues? · FRST 110">
+<meta property="og:description" content="Twelve bars, three lines, A A B. Watch the form light up as Bessie Smith sings “Back-Water Blues.”">
+<meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blues-form.html">
+<meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst/delta-blues.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst/delta-blues.jpg">
+<style>
+:root{--paper:#fff;--ink:#202f35;--muted:#4a5c64;--rule:#cbd3d5;--card:#fff;--a:#d28a00;--a-t:#fbe6bf;--a2:#b8740a;--b:#245a8d;--b-t:#cfe3f7;--resp:#2f7a6b;--resp-t:#d5ece6;--talk:#8a817e;--off:#eceae4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Source Sans 3",-apple-system,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--b)}
+.nav{border-bottom:1px solid var(--rule);background:var(--card)}
+.nav-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;flex-wrap:wrap;font-size:16px}
+.nav .brand{font-weight:700;text-decoration:none;color:var(--ink)}
+main{max-width:1100px;margin:0 auto;padding:22px 16px 48px}
+h1{font-size:30px;margin:0 0 4px;line-height:1.15}
+.meta{color:var(--muted);margin:0 0 18px;font-size:15px}
+section{background:var(--card);border:1px solid var(--rule);border-left:6px solid var(--c,var(--b));border-radius:6px;padding:16px 20px;margin:0 0 20px}
+section h2{margin:0 0 8px;font-size:22px;line-height:1.2}
+section h3{margin:18px 0 6px;font-size:18px}
+.lead{font-size:17px;margin:0 0 10px}
+.parts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 4px}
+.parts div{border-radius:6px;padding:10px 12px;font-size:15px}
+.parts b{display:block;font-size:20px}
+.pa{background:var(--a-t)}.pb{background:var(--b-t)}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:20px;align-items:start}
+.video{position:relative;padding-bottom:56.25%;height:0;background:#000;border-radius:4px;overflow:hidden}
+.video iframe,.video>div{position:absolute;inset:0;width:100%;height:100%;border:0}
+.status{font-size:16px;color:var(--muted);margin:8px 0 0}
+.grid{display:grid;grid-template-columns:34px repeat(4,minmax(0,1fr));gap:6px;align-items:stretch}
+.grid .lab{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;border-radius:4px}
+.lab.A{color:var(--a2)}.lab.B{color:var(--b)}
+.bar{position:relative;min-height:58px;border-radius:5px;background:var(--off);border:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;padding:5px 7px;font-size:13px;color:var(--muted);transition:background .12s}
+.bar .n{font-weight:700}
+.bar .dots{display:flex;gap:5px}
+.bar .dots i{width:9px;height:9px;border-radius:50%;background:transparent;border:1px solid var(--muted)}
+.bar.now .dots i.on{background:var(--ink);border-color:var(--ink)}
+.bar.now{outline:3px solid var(--ink);outline-offset:-1px;color:var(--ink)}
+.bar.sing.rowA{background:var(--a-t)}.bar.sing.rowB{background:var(--b-t)}
+.bar.answer{background:var(--resp-t)}
+.line{grid-column:2 / span 4;font-size:15px;min-height:26px;margin:-2px 0 8px;color:var(--muted)}
+.line.live{color:var(--ink);font-weight:600}
+.key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;margin:10px 0 0;color:var(--muted)}
+.key i{display:inline-block;width:15px;height:15px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid var(--rule)}
+.verses{margin:16px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.verses li{border:1px solid var(--rule);border-radius:5px;padding:7px 10px;font-size:15px;line-height:1.4;cursor:pointer}
+.verses li.live{border:2px solid var(--ink)}
+.verses li .v{font-size:12px;color:var(--muted);display:block}
+.verses li .rep{color:var(--muted)}
+.chords{display:grid;grid-template-columns:34px repeat(4,minmax(0,1fr));gap:6px;max-width:560px}
+.chords span{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:5px;font-weight:700;font-size:20px;border:1px solid var(--rule);background:var(--off)}
+.chords .I{background:var(--off)}.chords .IV{background:var(--resp-t)}.chords .V{background:var(--b-t)}
+.chords span.now{outline:3px solid var(--ink);outline-offset:-1px}
+.chords .lab{border:0;background:transparent}
+button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
+.patton{margin:10px 0 0;padding:0;list-style:none;max-width:760px}
+.patton li{display:grid;grid-template-columns:40px 1fr;gap:8px;padding:4px 8px;border-radius:4px;margin:2px 0;font-size:15px}
+.patton li b{font-size:13px}
+.patton .A{background:var(--a-t)}.patton .A2{background:var(--a-t);box-shadow:inset 4px 0 0 var(--a2)}.patton .B{background:var(--b-t)}
+.patton .X{background:var(--off)}.patton .T{background:transparent;color:var(--talk);font-style:italic}
+.patton .gap{height:8px;background:none;padding:0;margin:0}
+.src{font-size:14px;color:var(--muted)}
+.ask{font-size:16px}
+@media(max-width:820px){.stage{grid-template-columns:1fr}.parts{grid-template-columns:1fr}h1{font-size:26px}}
+</style></head>
+<body>
+<nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a href="../courses/frst-110.html">← Course materials</a></div></nav>
+<main>
+<h1>What are the blues?</h1>
+<p class="meta">Delta blues · October 14, 16 and 19</p>
+
+<section style="--c:var(--a)">
+<h2>A verse is twelve bars and three lines</h2>
+<p class="lead">Count four beats to a bar. A blues verse runs twelve bars. The words come in three lines, four bars each:</p>
+<div class="parts">
+<div class="pa"><b>A</b>bars 1–4 · the singer states a line</div>
+<div class="pa"><b>A</b>bars 5–8 · the same line again</div>
+<div class="pb"><b>B</b>bars 9–12 · a new line answers it</div>
+</div>
+<p>Inside each line there is a second answer. The singer takes the first two bars or so, then stops. The piano or guitar answers in the rest. Call and response.</p>
+</section>
+
+<section id="watch" style="--c:var(--a)">
+<h2>Watch the form: Bessie Smith, “Back-Water Blues”</h2>
+<p>Press play. The box moves bar by bar. Orange or blue: Smith is singing. Green: the piano answers (James P. Johnson). The dots count the four beats.</p>
+<div class="stage">
+<div>
+<div class="video"><div id="player"></div></div>
+<p class="status" id="status">Seven verses · 3 minutes 18 seconds · Columbia, recorded February 17, 1927</p>
+</div>
+<div>
+<div class="grid" id="grid" aria-live="off"></div>
+<div class="key"><span><i style="background:var(--a-t)"></i>singing, line A</span><span><i style="background:var(--b-t)"></i>singing, line B</span><span><i style="background:var(--resp-t)"></i>piano answers</span></div>
+</div>
+</div>
+<ol class="verses" id="verses"></ol>
+<p class="src">Click a verse to jump to it.</p>
+</section>
+
+<section id="chords" style="--c:var(--resp)">
+<h2>The usual chords: I, IV, V</h2>
+<p>Under the words, the band usually moves through three chords. Call the home chord I. IV is a step away; V pulls hardest back home. The common twelve-bar plan:</p>
+<div class="chords" id="chordgrid"></div>
+<p style="margin-top:12px"><button id="playchords" type="button">Hear the pattern</button> <span class="src">Plain piano chords, one verse, with a click on each beat.</span></p>
+<p>Players change the plan all the time: an early IV in bar 2, a V in bar 12 to lead into the next verse. Listen for the turn to IV at bar 5 and the pull of V at bar 9. That is where the B line lands.</p>
+</section>
+
+<section id="patton" style="--c:var(--b)">
+<h2>Charley Patton bends it: “High Water Everywhere, Part 2”</h2>
+<p>Patton starts in A A B, but his A lines already change on the repeat (marked A′). After three verses the form gives way: lines stop repeating, he talks to the listener, and the flood comes in pieces.</p>
+<div class="stage">
+<div><div class="video"><iframe src="https://www.youtube.com/embed/v99b1ky7mNA?rel=0" title="Charley Patton, High Water Everywhere, Part 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+<p class="status">Paramount, recorded in Grafton, Wisconsin, 1929</p>
+<div class="key"><span><i style="background:var(--a-t)"></i>A</span><span><i style="background:var(--a-t);box-shadow:inset 4px 0 0 var(--a2)"></i>A′, changed on the repeat</span><span><i style="background:var(--b-t)"></i>B</span><span><i style="background:var(--off)"></i>outside the pattern</span><span><i style="background:transparent"></i><em>spoken</em></span></div>
+</div>
+<ul class="patton">
+<li class="A"><b>A</b>Backwater at Blytheville, backed up all around</li>
+<li class="A2"><b>A′</b>Backwater at Blytheville, done took Joiner town</li>
+<li class="B"><b>B</b>It was fifty families and children come to sink and drown</li>
+<li class="gap"></li>
+<li class="A"><b>A</b>The water was risin’ up at my friend’s door</li>
+<li class="A"><b>A</b>The water was risin’ up at my friend’s door</li>
+<li class="B"><b>B</b>The man said to his women folk, “Lord, we’d better go”</li>
+<li class="gap"></li>
+<li class="A"><b>A</b>The water was risin’, got up in my bed</li>
+<li class="A2"><b>A′</b>Lord, the water was rollin’, got up to my bed</li>
+<li class="B"><b>B</b>I thought I would take a trip, Lord, out on the big ice sled</li>
+<li class="gap"></li>
+<li class="X"><b></b>Oh, I can hear, Lord Lord, water upon my door</li>
+<li class="T"><b></b>You know what I mean, look-a here</li>
+<li class="X"><b></b>I hear the ice, Lord Lord, was sinkin’ down</li>
+<li class="X"><b></b>I couldn’t get no boats there, Marion City gone down</li>
+<li class="gap"></li>
+<li class="X"><b></b>So high the water was risin’ our men sinkin’ down</li>
+<li class="X"><b></b>Man, the water was risin’ at places all around</li>
+<li class="T"><b></b>Boy, they’s all around</li>
+<li class="X"><b></b>It was fifty men and children come to sink and drown</li>
+<li class="gap"></li>
+<li class="X"><b></b>Oh, Lordy, women and grown men drown</li>
+<li class="X"><b></b>Oh, women and children sinkin’ down</li>
+<li class="T"><b></b>Lord, have mercy</li>
+<li class="X"><b></b>I couldn’t see nobody’s home and wasn’t no one to be found</li>
+</ul>
+</div>
+<p class="ask"><strong>Ask:</strong> where does the form break, and what is happening in the words when it does?</p>
+</section>
+
+<p class="src">Form: <a href="https://human.libretexts.org/Courses/Western_Washington_University/Popular_Music_(Smith)/01:_Readings/1.03:_The_Blues">“The Blues,” Popular Music (Western Washington University, LibreTexts)</a>. “Back-Water Blues”: Bessie Smith with James P. Johnson, piano, Columbia, February 17, 1927, <a href="https://www.youtube.com/watch?v=4EZ7mNG7tfM">provided to YouTube by Legacy/Columbia</a>; words transcribed from the recording. Bar timings are measured from the recording and are approximate. “High Water Everywhere, Part 2”: Charley Patton, Paramount, Grafton, Wisconsin, 1929, <a href="https://www.youtube.com/watch?v=v99b1ky7mNA">Charley Patton topic channel</a>; words as transcribed for the course. Chord demo is a simple synthesized piano, not from either recording.</p>
+</main>
+
+<script>
+// Back-Water Blues: line starts/ends measured from the recording (Whisper word timings), seconds.
+const VERSES=[
+ {l:[[2.94,10.0],[12.58,20.0],[22.40,29.0]],t:["When it rains five days and the skies turn dark as night","When it rains five days and the skies turn dark as night","Then trouble’s takin’ place in the lowlands at night"]},
+ {l:[[31.90,38.88],[41.18,47.92],[51.36,56.88]],t:["I woke up this mornin’, can’t even get out of my door","I woke up this mornin’, can’t even get out of my door","That’s enough trouble to make a poor girl wonder where she wanna go"]},
+ {l:[[59.60,66.86],[68.76,76.08],[78.06,84.62]],t:["Then they rowed a little boat about five miles ’cross the pond","Then they rowed a little boat about five miles ’cross the pond","I packed all my clothes, throwed ’em in and they rowed me along"]},
+ {l:[[86.96,93.74],[96.06,103.6],[105.02,111.32]],t:["When it thunders and lightnin’ and the wind begins to blow","When it thunders and lightnin’ and the wind begins to blow","There’s thousands of people ain’t got no place to go"]},
+ {l:[[113.54,120.78],[122.74,129.32],[131.62,138.58]],t:["Then I went and stood upon some high old lonesome hill","Then I went and stood upon some high old lonesome hill","Then looked down on the house where I used to live"]},
+ {l:[[140.80,147.58],[149.84,157.02],[158.96,165.68]],t:["Backwater blues done caused me to pack my things and go","Backwater blues done caused me to pack my things and go","’Cause my house fell down and I can’t live there no more"]},
+ {l:[[169.22,174.78],[177.32,183.58],[186.46,192.22]],t:["Mmm, I can’t move no more","Mmm, I can’t move no more","There ain’t no place for a poor old girl to go"]}
+];
+const END=197.6;
+VERSES.forEach((v,i)=>{const s=v.l[0][0],n=i+1<VERSES.length?VERSES[i+1].l[0][0]:END;v.s=s;v.bar=(n-s)/12;});
+
+const grid=document.getElementById('grid'),cells=[],lines=[];
+['A','A','B'].forEach((r,ri)=>{
+  const lab=document.createElement('div');lab.className='lab '+r;lab.textContent=r;grid.appendChild(lab);
+  for(let b=0;b<4;b++){const c=document.createElement('div');const n=ri*4+b+1;c.className='bar row'+r;
+    c.innerHTML='<span class="n">'+n+'</span><span class="dots"><i></i><i></i><i></i><i></i></span>';grid.appendChild(c);cells.push(c);}
+  const ln=document.createElement('div');ln.className='line';ln.textContent=' ';grid.appendChild(ln);lines.push(ln);
+});
+const vl=document.getElementById('verses');
+VERSES.forEach((v,i)=>{const li=document.createElement('li');
+  li.innerHTML='<span class="v">Verse '+(i+1)+'</span>'+v.t[0]+'<br><span class="rep">'+v.t[1]+'</span><br>'+v.t[2];
+  li.addEventListener('click',()=>{if(player&&player.seekTo){player.seekTo(Math.max(0,v.s-0.4),true);player.playVideo();}});vl.appendChild(li);v.li=li;});
+
+let player=null,last=-1;
+function render(t){
+  let vi=-1;for(let i=0;i<VERSES.length;i++){if(t>=VERSES[i].s-0.05)vi=i;}
+  cells.forEach(c=>{c.classList.remove('now','sing','answer');c.querySelectorAll('i').forEach(d=>d.classList.remove('on'));});
+  VERSES.forEach(v=>v.li.classList.remove('live'));lines.forEach(l=>l.classList.remove('live'));
+  if(vi<0||t>END){lines.forEach(l=>l.textContent=' ');document.getElementById('status').textContent=t>END?'Done. Seven verses, each A A B.':'Seven verses · 3 minutes 18 seconds · Columbia, recorded February 17, 1927';return;}
+  const v=VERSES[vi];v.li.classList.add('live');
+  lines.forEach((l,i)=>l.textContent=v.t[i]);
+  const k=Math.min(11,Math.floor((t-v.s)/v.bar)),beat=Math.min(3,Math.floor(((t-v.s)/v.bar-k)*4));
+  const row=Math.floor(k/4),[ls,le]=v.l[row];
+  for(let j=0;j<=k;j++){const bs=v.s+j*v.bar,end=v.l[Math.floor(j/4)][1];cells[j].classList.add(bs+v.bar*0.5<end?'sing':'answer');}
+  const c=cells[k];c.classList.add('now');c.classList.remove('sing','answer');c.classList.add(t<le+0.15&&t>=ls-0.3?'sing':'answer');
+  c.querySelectorAll('i').forEach((d,i)=>{if(i<=beat)d.classList.add('on');});
+  lines[row].classList.add('live');
+  document.getElementById('status').textContent='Verse '+(vi+1)+' of 7 · bar '+(k+1)+' of 12 · line '+['A','A','B'][row];
+}
+function tick(){if(player&&player.getCurrentTime){render(player.getCurrentTime());}requestAnimationFrame(tick);}
+window.onYouTubeIframeAPIReady=function(){player=new YT.Player('player',{videoId:'4EZ7mNG7tfM',playerVars:{rel:0,playsinline:1},});};
+const s=document.createElement('script');s.src='https://www.youtube.com/iframe_api';document.head.appendChild(s);
+render(-1);
+requestAnimationFrame(tick);
+
+// Chord pattern demo
+const PLAN=['I','I','I','I','IV','IV','I','I','V','IV','I','I'];
+const cg=document.getElementById('chordgrid'),cc=[];
+['A','A','B'].forEach((r,ri)=>{const lab=document.createElement('span');lab.className='lab';lab.textContent=r;cg.appendChild(lab);
+  for(let b=0;b<4;b++){const x=document.createElement('span');const ch=PLAN[ri*4+b];x.className=ch;x.textContent=ch;cg.appendChild(x);cc.push(x);}});
+const ROOT={I:0,IV:5,V:7};let ac=null,playing=false;
+document.getElementById('playchords').addEventListener('click',()=>{
+  if(playing)return;playing=true;ac=ac||new (window.AudioContext||window.webkitAudioContext)();
+  const beat=0.55,t0=ac.currentTime+0.1,base=196;// G3 as home
+  PLAN.forEach((ch,i)=>{const r=ROOT[ch];const freqs=[0,4,7,10].map(s=>base*Math.pow(2,(r+s)/12));
+    for(let b=0;b<4;b++){const at=t0+(i*4+b)*beat;
+      freqs.forEach((f,fi)=>{if(fi===3&&ch==='I'&&i<4)return;const o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=f;
+        g.gain.setValueAtTime(0.0001,at);g.gain.exponentialRampToValueAtTime(0.09,at+0.02);g.gain.exponentialRampToValueAtTime(0.0001,at+beat*0.95);
+        o.connect(g).connect(ac.destination);o.start(at);o.stop(at+beat);});
+      const k=ac.createOscillator(),kg=ac.createGain();k.frequency.value=b===0?1400:1000;kg.gain.setValueAtTime(0.0001,at);kg.gain.exponentialRampToValueAtTime(0.08,at+0.003);kg.gain.exponentialRampToValueAtTime(0.0001,at+0.04);k.connect(kg).connect(ac.destination);k.start(at);k.stop(at+0.05);
+    }
+    setTimeout(()=>{cc.forEach(x=>x.classList.remove('now'));cc[i].classList.add('now');},(t0-ac.currentTime+i*4*beat)*1000);
+  });
+  setTimeout(()=>{cc.forEach(x=>x.classList.remove('now'));playing=false;},(t0-ac.currentTime+48*beat)*1000+200);
+});
+</script>
+</body></html>

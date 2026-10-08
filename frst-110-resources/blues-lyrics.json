@@ -1,0 +1,815 @@
+{
+ "days": [
+  {
+   "n": 14,
+   "short": "Wed Oct 14 · Flood",
+   "title": "Flood",
+   "date": "Wednesday, October 14",
+   "intro": "Two musical responses to the Great Mississippi Flood of 1927, recorded in 1929. Listen to both parts of “High Water Everywhere.”",
+   "songs": [
+    {
+     "id": "patton-1",
+     "color": "a",
+     "yt": "UeYlqEFRw4g",
+     "artist": "Charley Patton",
+     "title": "High Water Everywhere, Part 1",
+     "made": "Paramount, recorded in Grafton, Wisconsin, 1929",
+     "lines": [
+      [
+       "A",
+       "Well, backwater done rose all around Sumner now, drove me down the line"
+      ],
+      [
+       "A2",
+       "Backwater done rose at Sumner, drove poor Charley down the line"
+      ],
+      [
+       "B",
+       "Lord, I’ll tell the world the water done crept through this town"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Lord, the whole round country, Lord, river has overflowed"
+      ],
+      [
+       "A2",
+       "Lord, the whole round country, man, is overflowed"
+      ],
+      [
+       "T",
+       "You know I can’t stay here, I’ll go where it’s high, boy"
+      ],
+      [
+       "B",
+       "I would go to the hilly country, but they got me barred"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Now, look-a here now at Leland, river was risin’ high"
+      ],
+      [
+       "A2",
+       "Look-a here boys around Leland tell me, river was risin’ high"
+      ],
+      [
+       "T",
+       "Boy, it’s risin’ over there, yeah"
+      ],
+      [
+       "B",
+       "I’m gonna move to Greenville ’fore I leave, goodbye"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Look-a here the water now, Lordy, levee broke, rose most everywhere"
+      ],
+      [
+       "A2",
+       "The water at Greenville and Leland, Lord, it done rose everywhere"
+      ],
+      [
+       "T",
+       "Boy, you can’t never stay here"
+      ],
+      [
+       "B",
+       "I would go down to Rosedale, but they tell me there’s water there"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Now, the water now, mama, done took Charley’s town"
+      ],
+      [
+       "A",
+       "Well, they tell me the water done took Charley’s town"
+      ],
+      [
+       "T",
+       "Boy, I’m goin’ to Vicksburg"
+      ],
+      [
+       "B",
+       "Well, I’m goin’ to Vicksburg, for that high of mine"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "I am goin’ up that water, where lands don’t never flow"
+      ],
+      [
+       "A2",
+       "Well, I’m goin’ over the hill where water, oh, don’t ever flow"
+      ],
+      [
+       "T",
+       "Boy, hit Sharkey County and everything was down in Stovall"
+      ],
+      [
+       "B",
+       "But that whole county was leavin’ over that Tallahatchie shore"
+      ],
+      [
+       "T",
+       "Boy, went to Tallahatchie and got it over there"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Lord, the water done rushed all over, down old Jackson road"
+      ],
+      [
+       "A2",
+       "Lord, the water done raised over the Jackson road"
+      ],
+      [
+       "T",
+       "Boy, it starched my clothes"
+      ],
+      [
+       "B",
+       "I’m goin’ back to the hilly country, won’t be worried no more"
+      ]
+     ]
+    },
+    {
+     "id": "patton-2",
+     "color": "b",
+     "yt": "v99b1ky7mNA",
+     "artist": "Charley Patton",
+     "title": "High Water Everywhere, Part 2",
+     "made": "Paramount, recorded in Grafton, Wisconsin, 1929",
+     "note": "Part 2 crosses the river into Arkansas. Where the form breaks is marked on <a href=\"blues-form.html#patton\">What are the blues?</a>",
+     "lines": [
+      [
+       "A",
+       "Backwater at Blytheville, backed up all around"
+      ],
+      [
+       "A2",
+       "Backwater at Blytheville, done took Joiner town"
+      ],
+      [
+       "B",
+       "It was fifty families and children come to sink and drown"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "The water was risin’ up at my friend’s door"
+      ],
+      [
+       "A",
+       "The water was risin’ up at my friend’s door"
+      ],
+      [
+       "B",
+       "The man said to his women folk, “Lord, we’d better go”"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "The water was risin’, got up in my bed"
+      ],
+      [
+       "A2",
+       "Lord, the water was rollin’, got up to my bed"
+      ],
+      [
+       "B",
+       "I thought I would take a trip, Lord, out on the big ice sled"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "X",
+       "Oh, I can hear, Lord Lord, water upon my door"
+      ],
+      [
+       "T",
+       "You know what I mean, look-a here"
+      ],
+      [
+       "X",
+       "I hear the ice, Lord Lord, was sinkin’ down"
+      ],
+      [
+       "X",
+       "I couldn’t get no boats there, Marion City gone down"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "X",
+       "So high the water was risin’ our men sinkin’ down"
+      ],
+      [
+       "X",
+       "Man, the water was risin’ at places all around"
+      ],
+      [
+       "T",
+       "Boy, they’s all around"
+      ],
+      [
+       "X",
+       "It was fifty men and children come to sink and drown"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "X",
+       "Oh, Lordy, women and grown men drown"
+      ],
+      [
+       "X",
+       "Oh, women and children sinkin’ down"
+      ],
+      [
+       "T",
+       "Lord, have mercy"
+      ],
+      [
+       "X",
+       "I couldn’t see nobody’s home and wasn’t no one to be found"
+      ]
+     ]
+    },
+    {
+     "id": "levee-breaks",
+     "color": "resp",
+     "yt": "WSlt8-fmvas",
+     "artist": "Kansas Joe McCoy & Memphis Minnie",
+     "title": "When the Levee Breaks",
+     "made": "Columbia, recorded in New York, June 18, 1929",
+     "lines": [
+      [
+       "A",
+       "If it keeps on rainin’, levee’s goin’ to break"
+      ],
+      [
+       "A",
+       "If it keeps on rainin’, levee’s goin’ to break"
+      ],
+      [
+       "B",
+       "And the water gonna come in and we’ll have no place to stay"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Well, all last night I sat on the levee and moan"
+      ],
+      [
+       "A",
+       "Well, all last night I sat on the levee and moan"
+      ],
+      [
+       "B",
+       "Thinkin’ ’bout my baby and my happy home"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "If it keeps on rainin’, levee’s goin’ to break"
+      ],
+      [
+       "A",
+       "If it keeps on rainin’, levee’s goin’ to break"
+      ],
+      [
+       "B",
+       "And all these people will have no place to stay"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Now look here, mama, what am I to do?"
+      ],
+      [
+       "A",
+       "Now look here, mama, what am I, I to do?"
+      ],
+      [
+       "B",
+       "I ain’t got nobody to tell my troubles to"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "I worked on the levee, mama, both night and day"
+      ],
+      [
+       "A",
+       "I worked on the levee, mama, both night and day"
+      ],
+      [
+       "B",
+       "I ain’t got nobody to keep the water away"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Oh, cryin’ won’t help you, prayin’ won’t do no good"
+      ],
+      [
+       "A",
+       "Oh, cryin’ won’t help you, prayin’ won’t do no good"
+      ],
+      [
+       "B",
+       "Whenever the levee breaks, mama, you got to move"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "I worked on the levee, mama, both night and day"
+      ],
+      [
+       "A",
+       "I worked on the levee, mama, both night and day"
+      ],
+      [
+       "B",
+       "I worked so hard to keep the water away"
+      ]
+     ]
+    }
+   ],
+   "sources": "Recordings from the artists’ YouTube topic channels. Words transcribed for the course and checked against the recordings; Patton’s are hard to hear and published versions differ. Form: <a href=\"blues-form.html\">What are the blues?</a>"
+  },
+  {
+   "n": 16,
+   "short": "Fri Oct 16 · Displacement & levee labor",
+   "title": "Displacement and levee labor",
+   "date": "Friday, October 16",
+   "intro": "Flood displacement and levee labor, in voice, piano, and guitar. In Greenville, Mississippi, in 1927, Black families were told to stay on the levee and work. A refugee camp ran along the levee, the National Guard was called in, and officials would not let them evacuate. They worked without pay.",
+   "songs": [
+    {
+     "id": "back-water",
+     "color": "a",
+     "yt": "4EZ7mNG7tfM",
+     "artist": "Bessie Smith",
+     "title": "Back-Water Blues",
+     "made": "Columbia, recorded in New York, February 17, 1927, with James P. Johnson, piano",
+     "note": "Smith recorded this before the major Mississippi flooding that spring. Watch the form light up bar by bar on <a href=\"blues-form.html#watch\">What are the blues?</a>",
+     "lines": [
+      [
+       "A",
+       "When it rains five days and the skies turn dark as night"
+      ],
+      [
+       "A",
+       "When it rains five days and the skies turn dark as night"
+      ],
+      [
+       "B",
+       "Then trouble’s takin’ place in the lowlands at night"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "I woke up this mornin’, can’t even get out of my door"
+      ],
+      [
+       "A",
+       "I woke up this mornin’, can’t even get out of my door"
+      ],
+      [
+       "B",
+       "There’s been enough trouble to make a poor girl wonder where she want to go"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Then they rowed a little boat about five miles ’cross the pond"
+      ],
+      [
+       "A",
+       "Then they rowed a little boat about five miles ’cross the pond"
+      ],
+      [
+       "B",
+       "I packed all my clothes, throwed them in and they rowed me along"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "When it thunders and lightnin’ and when the wind begins to blow"
+      ],
+      [
+       "A",
+       "When it thunders and lightnin’ and the wind begins to blow"
+      ],
+      [
+       "B",
+       "There’s thousands of people ain’t got no place to go"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Then I went and stood upon some high old lonesome hill"
+      ],
+      [
+       "A",
+       "Then I went and stood upon some high old lonesome hill"
+      ],
+      [
+       "B",
+       "Then looked down on the house where I used to live"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Backwater blues done call me to pack my things and go"
+      ],
+      [
+       "A",
+       "Backwater blues done call me to pack my things and go"
+      ],
+      [
+       "B",
+       "’Cause my house fell down and I can’t live there no more"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Mmm, I can’t move no more"
+      ],
+      [
+       "A",
+       "Mmm, I can’t move no more"
+      ],
+      [
+       "B",
+       "There ain’t no place for a poor old girl to go"
+      ]
+     ]
+    },
+    {
+     "id": "greenville",
+     "color": "b",
+     "yt": "7f_Q9sijrUQ",
+     "artist": "Alice Pearson",
+     "title": "Greenville Levee Blues",
+     "made": "Paramount, recorded in Chicago, July 1927",
+     "lines": [
+      [
+       "A",
+       "I woke up this mornin’, couldn’t even get outta my door"
+      ],
+      [
+       "A",
+       "I woke up this mornin’, couldn’t even get outta my door"
+      ],
+      [
+       "B",
+       "The levee broke and this town is overflowed"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "And you could hear people screamin’ all over town"
+      ],
+      [
+       "A",
+       "And you could hear people screamin’ all over town"
+      ],
+      [
+       "B",
+       "And someone’s callin’, “Please don’t let me drown”"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "When the water was risin’ and creepin’ up in my door"
+      ],
+      [
+       "A",
+       "When the water was risin’, creepin’ up in my door"
+      ],
+      [
+       "B",
+       "I had a mind to leave, and I didn’t know where to go"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "They were rowin’ little boats five and ten miles away"
+      ],
+      [
+       "A",
+       "They were rowin’ little boats, Lord, five and ten miles away"
+      ],
+      [
+       "B",
+       "They were pickin’ up people, didn’t have no place to stay"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Livin’ on the levee, sleepin’ on the ground"
+      ],
+      [
+       "A",
+       "Livin’ on the levee, sleepin’ on the ground"
+      ],
+      [
+       "B",
+       "I’m gonna tell everybody that Greenville’s a good old town"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Delta water caused me to lose my clothes and shoes"
+      ],
+      [
+       "A",
+       "Delta water caused me to lose my clothes and shoes"
+      ],
+      [
+       "B",
+       "You can tell by that, it left me with the Delta water blues"
+      ]
+     ]
+    },
+    {
+     "id": "broken-levee",
+     "color": "resp",
+     "yt": "u8CH6csp7wY",
+     "artist": "Lonnie Johnson",
+     "title": "Broken Levee Blues",
+     "made": "OKeh, recorded in San Antonio, March 13, 1928",
+     "note": "Helena is in Arkansas, on the Mississippi. Cairo, Illinois, is where the Ohio River meets the Mississippi.",
+     "lines": [
+      [
+       "A",
+       "I wants to go back to Helena, the high waters got me bogged"
+      ],
+      [
+       "A",
+       "I wants to go back to Helena, the high waters got me bogged"
+      ],
+      [
+       "B",
+       "I woke up early this mornin’, a water hole in my back yard"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "They want me to work on the levee, I have to leave my home"
+      ],
+      [
+       "A",
+       "They want me to work on the levee, that I have to leave my home"
+      ],
+      [
+       "B",
+       "I was so scared the levee might break out and I may drown"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "The water was ’round my windows and backin’ all up in my door"
+      ],
+      [
+       "A",
+       "The water was all up ’round my windows and backin’ all up in my door"
+      ],
+      [
+       "B",
+       "I’d rather to leave my home ’cause I can’t live there no more"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "The police run me all from Cairo, all through Arkansas"
+      ],
+      [
+       "A",
+       "The police run me all from Cairo, all through Arkansas"
+      ],
+      [
+       "B",
+       "And put me in jail, behind those cold iron bars"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "The police say work, fight, or go to jail, I say I ain’t totin’ no sack"
+      ],
+      [
+       "A",
+       "Police say work, fight, or go to jail, I say I ain’t totin’ no sack"
+      ],
+      [
+       "B",
+       "And I ain’t buildin’ no levee, the planks is on the ground and I ain’t drivin’ no nails"
+      ]
+     ]
+    }
+   ],
+   "sources": "Greenville: Princella Wilkerson Nowell, <a href=\"https://mshistory.mdah.ms.gov/issue/the-flood-of-1927-and-its-impact-in-greenville-mississippi\">“The Flood of 1927 and Its Impact in Greenville, Mississippi,”</a> Mississippi History Now. “Broken Levee Blues” date: <a href=\"https://adp.library.ucsb.edu/index.php/objects/detail/251740/OKeh_8618\">Discography of American Historical Recordings, OKeh 8618</a>. Recordings from the artists’ YouTube channels. Words transcribed for the course and checked against the recordings."
+  },
+  {
+   "n": 19,
+   "short": "Mon Oct 19 · Mississippi to Chicago",
+   "title": "Mississippi to Chicago",
+   "date": "Monday, October 19",
+   "intro": "Muddy Waters in a 1941 field recording on Stovall Plantation, Mississippi, and a 1948 commercial recording in Chicago.",
+   "songs": [
+    {
+     "id": "country-blues",
+     "color": "a",
+     "yt": "sRAXrVt3Ass",
+     "artist": "Muddy Waters",
+     "title": "Country Blues (No. 1)",
+     "made": "Library of Congress field recording, Stovall Plantation, Mississippi, 1941",
+     "note": "Not A A B. Each verse is a couplet, sung once and then sung again with changes. First two verses:",
+     "lines": [
+      [
+       "A",
+       "I get later on in the evenin’ time, I feel like, like blowin’ my horn"
+      ],
+      [
+       "B",
+       "I woke up this mornin’, find my, my little baby gone, hmm"
+      ],
+      [
+       "A2",
+       "Later on in the evenin’, main man, I feel like, like blowin’ my horn"
+      ],
+      [
+       "B2",
+       "Well I woke up this mornin’, baby, find my little baby gone"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "A",
+       "Well now, some folks say they worry, worry blues isn’t bad"
+      ],
+      [
+       "B",
+       "That’s a misery feelin’, child, I most, most ever had"
+      ],
+      [
+       "A2",
+       "Some folks tell me, man, I did worry, the blues isn’t bad"
+      ],
+      [
+       "B2",
+       "Well, that’s a misery ole feelin’, honey, now, well, girl, I most ever had"
+      ]
+     ]
+    },
+    {
+     "id": "satisfied",
+     "color": "b",
+     "yt": "LG95MseHfgA",
+     "artist": "Muddy Waters",
+     "title": "I Can’t Be Satisfied",
+     "made": "Aristocrat, recorded in Chicago, 1948",
+     "lines": [
+      [
+       "X",
+       "Well, I’m going away to leave"
+      ],
+      [
+       "X",
+       "Won’t be back no more"
+      ],
+      [
+       "X",
+       "Going back down south"
+      ],
+      [
+       "X",
+       "Child, don’t you want to go?"
+      ],
+      [
+       "",
+       ""
+      ],
+      [
+       "X",
+       "Woman, I’m troubled"
+      ],
+      [
+       "X",
+       "I be all worried in mind"
+      ],
+      [
+       "X",
+       "Well, babe, I just can’t be satisfied"
+      ],
+      [
+       "X",
+       "And I just can’t keep from trying"
+      ]
+     ],
+     "note": "Verse and chorus, not A A B. First verse and chorus:"
+    }
+   ],
+   "sources": "Recordings from YouTube. Both songs are still under copyright, so this page quotes only a few lines; listen for the rest."
+  }
+ ]
+}
