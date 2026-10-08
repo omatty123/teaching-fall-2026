@@ -1,0 +1,15 @@
+name: Check HIST lesson
+on:
+  push:
+    paths: ['hist-212-resources/class-2026-10-08*', '_kit/hist-212-lesson.*', 'scripts/check-hist-lesson.py', '.github/workflows/check-hist-lesson.yml']
+  pull_request:
+    paths: ['hist-212-resources/class-2026-10-08*', '_kit/hist-212-lesson.*', 'scripts/check-hist-lesson.py']
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: python scripts/check-hist-lesson.py
