@@ -143,7 +143,7 @@ def main():
 <nav class="sections" aria-label="Lesson sections">{chips}<a href="#resources">Readings</a></nav></header>
 {"".join(secs)}
 <section id="resources"><h2>Today’s readings</h2><ul>{readings}</ul></section>
-<footer><p><a href="{CLASS_NOTES}">Class notes</a> · <a href="../courses/hist-212.html">All classes and readings</a></p></footer>
+<footer>{("<p>" + day["footnote"] + "</p>") if day.get("footnote") else ""}<p><a href="{CLASS_NOTES}">Class notes</a> · <a href="../courses/hist-212.html">All classes and readings</a></p></footer>
 </main><script src="{kit("hist-212-lesson.js")}"></script></body></html>
 """
     out = ROOT / f"hist-212-resources/class-{date}.html"
