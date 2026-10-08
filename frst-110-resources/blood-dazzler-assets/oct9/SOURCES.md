@@ -27,3 +27,8 @@ Charges (September 2005) and the defense's statement about a parish evacuation o
 - `2005-season-map.jpg`: [NOAA 2005 Atlantic hurricane season summary map](https://commons.wikimedia.org/wiki/File:2005_Atlantic_hurricane_season_summary_map.png)
 
 All downloaded at 1280 px wide and stored locally.
+
+
+## Katrina · Clair de lune
+
+NOAA/NESDIS satellite animation: https://www.nesdis.noaa.gov/news/hurricane-katrina-animation ; source MP4 https://www.nesdis.noaa.gov/s3/2021-07/104640_Katrina.mp4 . Music: Claude Debussy, Clair de lune; instructor-supplied recording, performer unconfirmed. 98.3-second classroom edit; coastal crossing visually aligned to the musical crescendo at 1:13. This alignment is editorial, not a meteorological timestamp. Published at the instructor’s request.
