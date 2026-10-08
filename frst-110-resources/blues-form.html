@@ -36,11 +36,8 @@ section h3{margin:18px 0 6px;font-size:18px}
 .grid{display:grid;grid-template-columns:34px repeat(4,minmax(0,1fr));gap:6px;align-items:stretch}
 .grid .lab{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;border-radius:4px}
 .lab.A{color:var(--a2)}.lab.B{color:var(--b)}
-.bar{position:relative;min-height:58px;border-radius:5px;background:var(--off);border:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;padding:5px 7px;font-size:13px;color:var(--muted);transition:background .12s}
+.bar{position:relative;min-height:44px;border-radius:5px;background:var(--off);border:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;padding:5px 7px;font-size:13px;color:var(--muted);transition:background .12s}
 .bar .n{font-weight:700}
-.bar .dots{display:flex;gap:5px}
-.bar .dots i{width:9px;height:9px;border-radius:50%;background:transparent;border:1px solid var(--muted)}
-.bar.now .dots i.on{background:var(--ink);border-color:var(--ink)}
 .bar.now{outline:3px solid var(--ink);outline-offset:-1px;color:var(--ink)}
 .bar.sing.rowA{background:var(--a-t)}.bar.sing.rowB{background:var(--b-t)}
 .bar.answer{background:var(--resp-t)}
@@ -88,7 +85,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 
 <section id="watch" style="--c:var(--a)">
 <h2>Watch the form: Bessie Smith, “Back-Water Blues”</h2>
-<p>Press play. The box moves bar by bar. Orange or blue: Smith is singing. Green: the piano answers (James P. Johnson). The dots count the four beats.</p>
+<p>Press play. The box moves bar by bar. Orange or blue: Smith is singing. Green: the piano answers (James P. Johnson).</p>
 <div class="stage">
 <div>
 <div class="video"><div id="player"></div></div>
@@ -172,7 +169,7 @@ const grid=document.getElementById('grid'),cells=[],lines=[];
 ['A','A','B'].forEach((r,ri)=>{
   const lab=document.createElement('div');lab.className='lab '+r;lab.textContent=r;grid.appendChild(lab);
   for(let b=0;b<4;b++){const c=document.createElement('div');const n=ri*4+b+1;c.className='bar row'+r;
-    c.innerHTML='<span class="n">'+n+'</span><span class="dots"><i></i><i></i><i></i><i></i></span>';grid.appendChild(c);cells.push(c);}
+    c.innerHTML='<span class="n">'+n+'</span>';grid.appendChild(c);cells.push(c);}
   const ln=document.createElement('div');ln.className='line';ln.textContent=' ';grid.appendChild(ln);lines.push(ln);
 });
 const vl=document.getElementById('verses');
@@ -183,16 +180,15 @@ VERSES.forEach((v,i)=>{const li=document.createElement('li');
 let player=null,last=-1;
 function render(t){
   let vi=-1;for(let i=0;i<VERSES.length;i++){if(t>=VERSES[i].s-0.05)vi=i;}
-  cells.forEach(c=>{c.classList.remove('now','sing','answer');c.querySelectorAll('i').forEach(d=>d.classList.remove('on'));});
+  cells.forEach(c=>c.classList.remove('now','sing','answer'));
   VERSES.forEach(v=>v.li.classList.remove('live'));lines.forEach(l=>l.classList.remove('live'));
   if(vi<0||t>END){lines.forEach(l=>l.textContent=' ');document.getElementById('status').textContent=t>END?'Done. Seven verses, each A A B.':'Seven verses · 3 minutes 18 seconds · Columbia, recorded February 17, 1927';return;}
   const v=VERSES[vi];v.li.classList.add('live');
   lines.forEach((l,i)=>l.textContent=v.t[i]);
-  const k=Math.min(11,Math.floor((t-v.s)/v.bar)),beat=Math.min(3,Math.floor(((t-v.s)/v.bar-k)*4));
+  const k=Math.min(11,Math.floor((t-v.s)/v.bar));
   const row=Math.floor(k/4),[ls,le]=v.l[row];
   for(let j=0;j<=k;j++){const bs=v.s+j*v.bar,end=v.l[Math.floor(j/4)][1];cells[j].classList.add(bs+v.bar*0.5<end?'sing':'answer');}
   const c=cells[k];c.classList.add('now');c.classList.remove('sing','answer');c.classList.add(t<le+0.15&&t>=ls-0.3?'sing':'answer');
-  c.querySelectorAll('i').forEach((d,i)=>{if(i<=beat)d.classList.add('on');});
   lines[row].classList.add('live');
   document.getElementById('status').textContent='Verse '+(vi+1)+' of 7 · bar '+(k+1)+' of 12 · line '+['A','A','B'][row];
 }
