@@ -637,7 +637,7 @@ def build_timeline_home(term, course):
         unit_html.append(
             f'<details class="ft-unit" data-start="{first}" data-end="{last}"{" open" if is_open else ""}>'
             f'<summary><span class="ft-unit-dates">{e(_range(first, last))}</span>'
-            f'<span class="ft-unit-title"><strong>{e(u["title"])}</strong><span>{e(u["author"])}</span></span>'
+            f'<span class="ft-unit-title"><strong>{e(u["title"])}</strong>{"<span>" + e(u["author"]) + "</span>" if u.get("author") else ""}</span>'
             f'<span class="ft-unit-count">{n_read} class{"es" if n_read != 1 else ""}</span></summary>'
             f'<ol class="ft-days">{"".join(day_row(d) for d in u["days"])}</ol>{extra}</details>')
 
@@ -675,7 +675,7 @@ def build_timeline_home(term, course):
     <a id="ft-due-link" href="{e(due['href'])}"><strong id="ft-due-label">{e(due['label'])}</strong></a>
     <p class="ft-due-when" id="ft-due-when">{e(_due_label(due['due']))}</p>
     <p class="ft-due-note" id="ft-due-note">{e(due.get('note', ''))}</p>
-    <p class="ft-course-line">{e(course['displayCode'])} · Water Makes Worlds<br>MWF · {e(m['timeLabel'])} · {e(m.get('shortLocation', m['location']))}</p>
+    <p class="ft-course-line">{e(course.get('heroLine', course['displayCode'] + ' · Water Makes Worlds'))}<br>{e(''.join(d[0] for d in m['days']) if len(m['days']) == 3 else ' & '.join(m['days']))} · {e(m['timeLabel'])} · {e(m.get('shortLocation', m['location']))}</p>
   </aside>
 </header>
 <nav class="ft-standing" aria-label="Course links">{standing}</nav>
@@ -685,7 +685,7 @@ def build_timeline_home(term, course):
     {"".join(unit_html)}
   </section>
   <aside class="ft-side">
-    <section aria-labelledby="ft-assign-h"><h2 id="ft-assign-h">Writing</h2><ol class="ft-assigns">{assign_html}</ol></section>
+    <section aria-labelledby="ft-assign-h"><h2 id="ft-assign-h">{e(course.get('assignmentsHeading', 'Writing'))}</h2><ol class="ft-assigns">{assign_html}</ol></section>
     <section class="ft-record" aria-labelledby="ft-rec-h"><h2 id="ft-rec-h">Course record</h2><dl>
       <div><dt>Instructor</dt><dd>{e(' · '.join(reg['instructors']))}</dd></div>
       <div><dt>Meets</dt><dd>{e(m['daysLabel'])}<br>{e(m['timeLabel'])} · {e(m['location'])}</dd></div>
@@ -701,6 +701,28 @@ def build_timeline_home(term, course):
 </html>
 """
     (ROOT / "courses" / f"{slug}.html").write_text(doc)
+
+
+def build_today_page(course):
+    """A fixed address for Canvas: opens the class page for today, or the next
+    class that has one; falls back to the course page. Built from the same
+    schedule materials labelled "Class page", so it never needs hand edits."""
+    pages = [{"date": s["date"], "href": m["href"].replace("../" + course["todayPage"].split("/")[0] + "/", "")}
+             for s in course["schedule"] for m in s.get("materials", []) if m.get("label") == "Class page"]
+    data = json.dumps(pages)
+    doc = f"""<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Today's class · {e(course['code'])}</title><link rel="icon" href="../favicon.svg">
+<noscript><meta http-equiv="refresh" content="0; url=../courses/{course['slug']}.html"></noscript></head>
+<body style="font:16px system-ui,sans-serif;padding:24px"><p><a id="go" href="../courses/{course['slug']}.html">Open today's class</a></p>
+<script>
+(function(){{var p={data};var t=new Date().toLocaleDateString('en-CA',{{timeZone:'America/Chicago'}});
+var h='../courses/{course['slug']}.html';for(var i=0;i<p.length;i++){{if(p[i].date>=t){{h=p[i].href;break;}}}}
+if(h==='../courses/{course['slug']}.html'&&p.length&&p[p.length-1].date<t){{h=p[p.length-1].href;}}
+document.getElementById('go').href=h;location.replace(h);}})();
+</script></body></html>
+"""
+    (ROOT / course["todayPage"]).write_text(doc)
 
 
 def build_course(term, course):
@@ -963,6 +985,8 @@ def main():
     atlases = []
     for c in courses:
         build_course(term, c)
+        if c.get("todayPage"):
+            build_today_page(c)
         if build_feature_page(term, c):
             atlases.append(c)
         for page in c.get("extraPages", []):

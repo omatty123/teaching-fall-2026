@@ -64,79 +64,356 @@
   "schedule": [
     {
       "date": "2026-09-15",
-      "topic": "Was East Asia a natural region—or historically made?"
+      "unit": "found",
+      "topic": "The Space and Time of East Asia: Geography and Pre-History",
+      "detail": "Ebrey 2–7, 8–11",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1EV5-1qOVa9Bge6JYkbVo3ONW3HYoQev8/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w1",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-09-17",
-      "topic": "What can objects and inscriptions establish?"
+      "unit": "found",
+      "topic": "Peoples, Things, Symbols: Archaeology and Writing Systems",
+      "detail": "Ebrey 12–15, 113, 155, 248",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1TQ5HRhdwjXFMlSuLIHnfPGKdMJFCQVFF/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w2",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-09-22",
-      "topic": "Why accept a conquering dynasty?"
+      "unit": "found",
+      "topic": "Tianming, Dao, De · House of RU: Kongzi",
+      "detail": "Ebrey 15–19, 20–27",
+      "materials": [
+        {
+          "label": "Annotated reader",
+          "href": "../hist-212-resources/0922-reader.html",
+          "kind": "guide"
+        },
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1emibfvbdqQzbkvP06jRgV9CKmIKAZbu8/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w3",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-09-24",
-      "topic": "Can moral formation overcome violence and inequality?"
+      "unit": "found",
+      "topic": "House of MO: Mozi, Challenging the RU",
+      "detail": "Ebrey 27–28",
+      "materials": [
+        {
+          "label": "Annotated reader",
+          "href": "../hist-212-resources/0924-reader.html",
+          "kind": "guide"
+        },
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1ZR_jv9bJUShgKZgy-WdSpjamrXIhXnkO/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w4",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-09-29",
-      "topic": "Are people the problem, or political institutions?"
+      "unit": "found",
+      "topic": "House of DAO: Laozi and Zhuangzi · House of RU 2.0: Mengzi",
+      "detail": "Ebrey 28–31",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1K_jfC8zaTjdB1VYEi4FXZO3yqAtY2Tj3/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w5",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-01",
-      "topic": "Why did Qin unification fail?"
+      "unit": "found",
+      "topic": "House of RU 3.0: Xunzi · House of FA: Lord Shang and Han Feizi",
+      "detail": "Ebrey 31–35",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1Y426EWeCiphSUSY-Phh9vrf3uR8wvu1L/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w6",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-06",
-      "topic": "Does an empire serve society or extract from it?"
+      "unit": "qinhan",
+      "topic": "Qin Unification and the Founding of the Han",
+      "detail": "Ebrey 36–48",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1ACIYT3pMGtXiJh_9zCCKl1RtxMqPoUpc/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w7",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-08",
-      "topic": "Why did empire fragment into durable political worlds?"
+      "unit": "qinhan",
+      "topic": "Han Empire and Dong Zhongshu's Synthesis",
+      "detail": "Ebrey 49–55, 100–102, 115–118",
+      "materials": [
+        {
+          "label": "Class page",
+          "href": "../hist-212-resources/class-2026-10-08.html",
+          "kind": "guide"
+        },
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/16mtYEgKFry8Ss7blZJmW6holWxDB8wbk/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w8",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-13",
-      "topic": "Why did Buddhism flourish amid political division?"
+      "unit": "fo",
+      "topic": "House of FO: Buddhism, Family, and Ruler in China and Korea",
+      "detail": "Ebrey 56–74, 103–105",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w9",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-15",
-      "topic": "Copying China—or creating new political worlds?"
+      "unit": "fo",
+      "topic": "Sui/Tang · Korean and Japanese Adaptations of Tang Models",
+      "detail": "Ebrey 75–90, 105–112, 120–123",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w10",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-20",
-      "topic": "馬大王之清談"
+      "unit": "fo",
+      "topic": "The Emperor's Great Debate",
+      "detail": "All six Scholar Exams and the dossier due Oct 19",
+      "event": true,
+      "materials": [
+        {
+          "label": "Great Debate guide",
+          "href": "https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit",
+          "kind": "guide"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w11",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-27",
-      "topic": "Was Tang cosmopolitanism strength or instability?"
+      "unit": "song",
+      "topic": "Song's Rise and Fall · Gender, Commerce, and Politics",
+      "detail": "Ebrey 91–92, 129–140",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1lEMcOolYcs7qdm-V6M2LcdTG34l2s0IP/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w12",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-10-29",
-      "topic": "Can regional order exist without universal empire?"
+      "unit": "song",
+      "topic": "Heian Court Culture and Early Goryeo Korea",
+      "detail": "Ebrey 148–161, 169–175",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1B4srkBeYlw4c8OnuNTGRbAoBjNitvOIB/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w13",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-11-03",
-      "topic": "Who gained from the Song transformation?"
+      "unit": "song",
+      "topic": "Final project workshop",
+      "event": true,
+      "materials": [
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w14",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-11-05",
-      "topic": "Why could the Mongols defeat richer states?"
+      "unit": "mongol",
+      "topic": "Steppe Nomads, Genghis Khan, Eurasian Empire · Goryeo",
+      "detail": "Ebrey 93–96, 162–168, 176–182",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w15",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-11-10",
-      "topic": "Did Mongol rule connect or harden East Asia?"
+      "unit": "mongol",
+      "topic": "Rise of the Samurai",
+      "detail": "Ebrey 183–197",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w16",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-11-12",
-      "topic": "Why describe innovation as restoration?"
+      "unit": "mongol",
+      "topic": "Yuan Dynasty · Muromachi Japan",
+      "detail": "Ebrey 198–210, 212–226",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1BQWDgbZZlv6QaHa8qMkYVv4XYXb0CZ4X/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w17",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-11-17",
-      "topic": "Was maritime prohibition really isolation?"
+      "unit": "mongol",
+      "topic": "Overcoming the Mongols · Ming Dynasty China",
+      "detail": "Ebrey 227–246",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/1yUET_JwjJPyt-12WMkeTEINmUoPq9fCC/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w18",
+          "kind": "page"
+        }
+      ]
     },
     {
       "date": "2026-11-19",
-      "topic": "Could governments control the markets they needed?"
+      "unit": "mongol",
+      "topic": "Joseon · Families and Women",
+      "detail": "Ebrey 247–264",
+      "materials": [
+        {
+          "label": "Reader PDF",
+          "href": "https://drive.google.com/file/d/12zB2p2FXOTFgopskz0spirPL065MuTwe/view",
+          "kind": "page"
+        },
+        {
+          "label": "Artwork",
+          "href": "hist-212-artwork.html#w19",
+          "kind": "page"
+        }
+      ]
     }
   ],
   "extraPages": [
@@ -191,100 +468,141 @@
       "href": "../hist-212-resources/history-notes.html"
     }
   ],
-  "materialsHome": {
-    "groups": [
-      {
-        "title": "Readings and sources",
-        "items": [
-          {
-            "label": "The Shi Exams",
-            "description": "How the six Scholar Exams work, and where to study for each.",
-            "href": "../hist-212-resources/shi-exams.html",
-            "action": "Read the guide"
-          },
-          {
-            "label": "Thought experiments & metaphors",
-            "description": "Kongzi, Mozi, Mengzi, Laozi, Zhuangzi, Xunzi, and Han Feizi: images, arguments, and references to the course readings.",
-            "href": "hist-212-thought-experiments.html",
-            "action": "Compare the thinkers"
-          },
-          {
-            "label": "September 22 annotated reader",
-            "description": "Tang’s declarations and Kongzi passages, with notes beside the text.",
-            "href": "../hist-212-resources/0922-reader.html",
-            "action": "Read the passages"
-          },
-          {
-            "label": "September 24 annotated reader",
-            "description": "The Mozi passages, with notes beside the text.",
-            "href": "../hist-212-resources/0924-reader.html",
-            "action": "Read the passages"
-          },
-          {
-            "label": "Ancient China timeline",
-            "description": "Rulers, dynasties, books, thinkers, and cities in one illustrated chart.",
-            "href": "../hist-212-resources/index.html",
-            "action": "Explore the timeline"
-          },
-          {
-            "label": "China history notes",
-            "description": "Xia, Shang, and Western Zhou compared, with portraits and English source excerpts.",
-            "href": "../hist-212-resources/history-notes.html",
-            "action": "Open the notes"
-          },
-          {
-            "label": "Primary-source reading links",
-            "description": "Go directly to the texts behind the timeline and dynasty stories.",
-            "href": "../hist-212-resources/history-notes.html#primary-sources",
-            "action": "Find a source"
-          }
-        ]
-      },
-      {
-        "title": "Practice and visual sources",
-        "items": [
-          {
-            "label": "Ancient China quiz",
-            "description": "24 questions on rulers, dynasties, dates, thinkers, books, and capitals.",
-            "href": "../hist-212-resources/quiz.html",
-            "action": "Start practicing"
-          },
-          {
-            "label": "East Asia map game",
-            "description": "Learn and practice the places on the course map.",
-            "href": "https://hist-212-map-game.omatty123.workers.dev/",
-            "action": "Open the map game"
-          },
-          {
-            "label": "Artwork of the day",
-            "description": "The course’s visual sources, with looking questions for each meeting.",
-            "href": "hist-212-artwork.html",
-            "action": "View the artworks"
-          }
-        ]
-      }
-    ],
-    "courseLinks": [
-      {
-        "label": "Class notes",
-        "description": "The shared 2026 course notes.",
-        "href": "https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit"
-      },
-      {
-        "label": "Canvas",
-        "description": "Assignments, submissions, announcements, and grades.",
-        "href": "https://lawrence.instructure.com/courses/13411"
-      },
-      {
-        "label": "Syllabus",
-        "description": "Readings, requirements, policies, and the term plan.",
-        "href": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing"
-      },
-      {
-        "label": "Great Debate guide",
-        "description": "The debate instructions and preparation requirements.",
-        "href": "https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit"
-      }
-    ]
-  }
+  "units": [
+    {
+      "key": "found",
+      "title": "Geography, archaeology & early thought",
+      "author": "",
+      "materials": [
+        {
+          "label": "Thought experiments chart",
+          "href": "hist-212-thought-experiments.html"
+        },
+        {
+          "label": "Ancient China timeline",
+          "href": "../hist-212-resources/index.html"
+        },
+        {
+          "label": "China history notes",
+          "href": "../hist-212-resources/history-notes.html"
+        },
+        {
+          "label": "Primary-source links",
+          "href": "../hist-212-resources/history-notes.html#primary-sources"
+        },
+        {
+          "label": "Ancient China quiz",
+          "href": "../hist-212-resources/quiz.html"
+        }
+      ]
+    },
+    {
+      "key": "qinhan",
+      "title": "Qin & Han empires",
+      "author": "",
+      "materials": []
+    },
+    {
+      "key": "fo",
+      "title": "Buddhism, Tang & the Great Debate",
+      "author": "",
+      "materials": [
+        {
+          "label": "Great Debate guide",
+          "href": "https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit"
+        },
+        {
+          "label": "The Shi Exams",
+          "href": "../hist-212-resources/shi-exams.html"
+        }
+      ]
+    },
+    {
+      "key": "song",
+      "title": "Song, Heian & Goryeo",
+      "author": "",
+      "materials": []
+    },
+    {
+      "key": "mongol",
+      "title": "Mongols, samurai, Ming & Joseon",
+      "author": "",
+      "materials": []
+    }
+  ],
+  "assignments": [
+    {
+      "label": "Scholar Exams (all six)",
+      "due": "2026-10-19T23:59",
+      "href": "../hist-212-resources/shi-exams.html",
+      "note": "Pass each before the debate"
+    },
+    {
+      "label": "Personal dossier",
+      "due": "2026-10-19T23:59",
+      "href": "https://lawrence.instructure.com/courses/13411/assignments/146028"
+    },
+    {
+      "label": "Great Debate",
+      "due": "2026-10-20T12:10",
+      "href": "https://lawrence.instructure.com/courses/13411/assignments/146029"
+    },
+    {
+      "label": "Self-assessment and debate assessment",
+      "due": "2026-10-27T23:59",
+      "href": "https://lawrence.instructure.com/courses/13411/assignments/146030"
+    },
+    {
+      "label": "Question and evidence",
+      "due": "2026-11-03T23:59",
+      "href": "https://lawrence.instructure.com/courses/13411/assignments/146031"
+    },
+    {
+      "label": "Working argument and conference",
+      "due": "2026-11-12T23:59",
+      "href": "https://lawrence.instructure.com/courses/13411/assignments/146032"
+    },
+    {
+      "label": "Final project",
+      "due": "2026-11-22T15:00",
+      "href": "https://lawrence.instructure.com/courses/13411/assignments/146033"
+    }
+  ],
+  "standingLinks": [
+    {
+      "label": "Canvas",
+      "href": "https://lawrence.instructure.com/courses/13411"
+    },
+    {
+      "label": "Syllabus",
+      "href": "https://docs.google.com/document/d/1xoUbWKkMmkmHGG9bTIdEqKdNdAvo3atujvqG58j-dqU/edit?usp=sharing"
+    },
+    {
+      "label": "Class notes",
+      "href": "https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit"
+    },
+    {
+      "label": "Great Debate guide",
+      "href": "https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit"
+    },
+    {
+      "label": "Shi Exams",
+      "href": "../hist-212-resources/shi-exams.html"
+    },
+    {
+      "label": "Artwork of the day",
+      "href": "hist-212-artwork.html"
+    },
+    {
+      "label": "Map game",
+      "href": "https://hist-212-map-game.omatty123.workers.dev/"
+    },
+    {
+      "label": "Timeline & notes",
+      "href": "../hist-212-resources/index.html"
+    }
+  ],
+  "heroLine": "HIST 212 · East Asia in the Premodern World",
+  "assignmentsHeading": "Assignments",
+  "todayPage": "hist-212-resources/today.html"
 }
