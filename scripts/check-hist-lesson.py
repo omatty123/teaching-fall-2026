@@ -19,6 +19,6 @@ for url in c.links:
  if not u.path:assert u.fragment in c.ids, url
  else:assert (page.parent/unquote(u.path)).is_file(), url
 assert c.marks>=10
-assert all(x in text for x in ('thirteen numbers','Li Si','Lu Jia','Jia Yi','Dong Zhongshu','Lady Dai','Salt and Iron'))
+assert all(x in text for x in ('thirteen numbers','Li Si','Lu Jia','Jia Yi','Dong Zhongshu','Lady Dai','Salt and Iron','People are the Root','People as Water','The ruler works for the people','The water can also overturn the boat.'))
 assert all(x not in text for x in ('/Users/','private-data','only you','Review this draft'))
 print('HIST lesson: anchors, local assets, highlights and public-content boundaries passed.')

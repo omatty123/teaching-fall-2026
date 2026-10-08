@@ -11,3 +11,10 @@ All excerpts checked against assigned course readers. No full source PDFs republ
 - Funeral banner of Lady Dai: existing course artwork entry for October 8; image ../images/artwork/08-mawangdui.jpg. Hunan Museum, Mawangdui tomb 1, Changsha; painted silk, 2nd century BCE. Existing public-domain source: https://commons.wikimedia.org/wiki/File:Bani%C3%A8re_fun%C3%A9raire,_peinture_sur_soie,_Chine.jpg ; contextual resource: https://smarthistory.org/funeral-banner-of-lady-dai-xin-zhui/ .
 
 Student questions and comparison headings are course framing, not source quotations. Highlighting is editorial. The page uses the established FRST dated lesson-page structure with HIST content and a burgundy course accent.
+
+## People: root, water, and the ruler’s duty — October 8 revision
+
+- Jia Yi’s full root/base argument: SCT p.291, October 8 reader PDF p.8. Reproduces the opening three sentences rather than only the later p.292 conclusion.
+- Xunzi’s boat/water saying and concluding recommendation: chapter 9, 9.88–101, Eric L. Hutton, Xunzi: The Complete Text (Princeton University Press, 2014), p.70. In assigned October 1 reader PDF p.2. Separate quotations omit the intervening “This expresses my meaning.”
+- Dong’s duty to benefit all-under-Heaven: SCT p.301, October 8 reader PDF p.11. “The ruler works for the people” is a clearly labeled teaching summary, not a translation quotation. The quoted agent sentence appears earlier on the same page than the duty sentence.
+- Original sections retained below the new leading comparison.
