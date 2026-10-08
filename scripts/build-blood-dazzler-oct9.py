@@ -171,12 +171,48 @@ body = f"""
 <li>On p. 75, why leave Katrina’s letter out of the list rather than give her a line?</li>
 </ul>
 <p>Write your own. These show the shape: “On p. __, why ___ rather than ___?”</p></section>
+<section id="author-questions"><header class="sec-head"><h2>“Why did you write this?” · Preparing to talk with Patricia Smith</h2></header>
+<p>That question can ask about an event, a purpose, a word, or a formal choice. Decide which you want to understand. These are familiar author-interview questions, not a measured ranking. The answers below paraphrase Smith’s published interviews; they do not predict what she will say on Monday.</p>
+<h3>Questions authors often receive—and what Smith has already said</h3>
+<dl>
+<dt><strong>Why did you write this book? What inspired you?</strong></dt>
+<dd><p>Smith says the deaths of the nursing-home residents stayed with her. Writing “34” led to more poems and eventually a book. <a href="https://knpr.org/show/knprs-state-of-nevada/2016-08-25/poet-patricia-smith-on-storytelling-in-a-controlled-space">KNPR interview</a></p><p><strong>Follow-up:</strong> What changed when “34” became part of a whole book rather than a poem on its own?</p></dd>
+<dt><strong>What did you want readers to understand?</strong></dt>
+<dd><p>She describes Katrina as a human catastrophe that exposed the country’s abandonment of poor, mostly brown people. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> In “34,” what can separate voices make us understand that the headnote’s number cannot?</p></dd>
+<dt><strong>Why is it called <cite>Blood Dazzler</cite>?</strong></dt>
+<dd><p>The phrase began as a placeholder in “Siblings.” By the end, she thought it could encompass the book without fixing its meaning. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> What did those words come to hold that they did not hold when you first wrote them?</p></dd>
+<dt><strong>Why make the hurricane speak?</strong></dt>
+<dd><p>Smith wanted an unexpected perspective. Katrina’s voice helped shape the collection and gave the storm a changing emotional life. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> How did you decide when we should hear Katrina and when we should hear someone suffering because of her?</p></dd>
+<dt><strong>Why use strict forms for such painful events?</strong></dt>
+<dd><p>She says the tanka’s syllable limits slowed her approach to death and helped her manage overwhelming emotion. <a href="https://thevoltablog.wordpress.com/2016/01/04/interview-dazzle-roll-call-patricia-smith/">The Volta interview</a></p><p><strong>Follow-up:</strong> In “Ethel’s Sestina,” p. 46, how did you decide that “Come” needed to interrupt the six-line pattern?</p></dd>
+</dl>
+<h3>Questions from our reading</h3>
+<p>These are interpretations to test with Smith, not answers we already know.</p>
+<ul>
+<li><strong>The unnamed verb:</strong> In “Tankas,” p. 38, did you have a particular verb in mind? We connected the unnamed word with “Come” in “Ethel’s Sestina,” p. 46. How did those passages develop?</li>
+<li><strong>Voices beyond death:</strong> When Ethel says “They don’t hear Come,” we read her as hearing something the living cannot. How did you decide what her voice could tell us?</li>
+<li><strong>Prayer and poetry:</strong> “34” includes prayer, and Ethel hears a summons. What relationship, if any, do you see between prayer and giving the dead a voice in these poems?</li>
+<li><strong>The title and the reader:</strong> In “Siblings,” p. 75, we read “blood” as both injury and family, and “dazzler” as both attraction and impaired sight. How does that reading compare with what you heard in the phrase?</li>
+<li><strong>Research and imagination:</strong> In writing Ethel’s voice, how did you decide what to research and what to imagine?</li>
+</ul>
+<h3>Listen to the answer before choosing the next question</h3>
+<ul>
+<li><strong>If she describes an event:</strong> ask which detail became the first line or image.</li>
+<li><strong>If she names a purpose:</strong> ask how one choice on the page serves it.</li>
+<li><strong>If she says the sound came first:</strong> ask what changed as she revised or read it aloud.</li>
+<li><strong>If she says she did not plan the connection:</strong> ask when she noticed it, if she did.</li>
+<li><strong>If her reading differs from ours:</strong> explain the line that led us there, then ask how she reads it. Her account of writing adds evidence; we still need to explain our textual evidence.</li>
+</ul>
+<p><strong>Prepare one main question and one follow-up.</strong> Keep the book open to the passage. Ask one question at a time. If another person asks yours, listen for what remains unanswered. You do not need a long introduction or specialist vocabulary.</p>
+<p class="source-note">Published answers: Jon Riccio, <cite>The Volta</cite>, January 4, 2016; Fred Wasser, KNPR, August 25, 2016. Text check: <a href="https://poets.org/poem/ethels-sestina">“Ethel’s Sestina,” Academy of American Poets</a>. <a href="blood-dazzler-come.html">Our reasoning about “come”</a>.</p>
+</section>
+
 """
 
 html = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Blood Dazzler · October 9 · FRST 110</title><link rel="icon" href="../favicon.svg" type="image/svg+xml"><meta name="description" content="Patricia Smith, pp. 50–77: forms and style, Smith performing “34,” St. Rita’s Nursing Home footage, search markings, the 2005 storm season, and word frequencies."><link rel="stylesheet" href="{versioned('_kit/blood-dazzler-1.css')}"><link rel="stylesheet" href="{versioned('_kit/blood-dazzler-words.css')}"><link rel="stylesheet" href="{versioned('_kit/blood-dazzler-oct7.css')}"><meta property="og:title" content="Blood Dazzler · October 9"><meta property="og:description" content="Forms and style in pp. 50–77, Smith performing “34,” St. Rita’s, search markings, and word frequencies."><meta property="og:type" content="website"><meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-oct-9.html"><meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-assets/oct9/2005-season-map.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blood-dazzler-assets/oct9/2005-season-map.jpg"><style>{style}</style></head>
 <body><a class="skip" href="#content">Skip to class materials</a><nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a class="crumb" href="../courses/frst-110.html">Course materials</a><a href="blood-dazzler-oct-7.html">October 7 · pp. 25–49</a></div></nav>
-<main id="content"><header><h1>Blood Dazzler</h1><p class="meta">Patricia Smith · Friday, October 9, 2026 · pp. 50–77 · Content notes: pp. 60–61 and 74 describe bodies; p. 73 prints a racial slur.</p><p class="cloud-links"><a href="https://lawrence.instructure.com/courses/14726/pages/song-of-the-day-do-you-know-what-it-means-to-miss-new-orleans-louis-armstrong">Song of the Day · Louis Armstrong, “Do You Know What It Means to Miss New Orleans”</a></p><nav class="section-nav" aria-label="Page sections"><a href="#katrina">Katrina film</a><a href="#chorus">Numbered chorus</a><a href="#storm">Persona</a><a href="#buried">Work chant</a><a href="#search">Search markings</a><a href="#sonnet">Sonnet</a><a href="#refrain">Refrain</a><a href="#siblings">Alphabet list</a><a href="#smith">Question for Smith</a><a href="#words-third">Word cloud</a><a href="#next-class">Monday and Wednesday</a></nav></header>
+<main id="content"><header><h1>Blood Dazzler</h1><p class="meta">Patricia Smith · Friday, October 9, 2026 · pp. 50–77 · Content notes: pp. 60–61 and 74 describe bodies; p. 73 prints a racial slur.</p><p class="cloud-links"><a href="https://lawrence.instructure.com/courses/14726/pages/song-of-the-day-do-you-know-what-it-means-to-miss-new-orleans-louis-armstrong">Song of the Day · Louis Armstrong, “Do You Know What It Means to Miss New Orleans”</a></p><nav class="section-nav" aria-label="Page sections"><a href="#katrina">Katrina film</a><a href="#chorus">Numbered chorus</a><a href="#storm">Persona</a><a href="#buried">Work chant</a><a href="#search">Search markings</a><a href="#sonnet">Sonnet</a><a href="#refrain">Refrain</a><a href="#siblings">Alphabet list</a><a href="#smith">Question for Smith</a><a href="#author-questions">Prepare for the conversation</a><a href="#words-third">Word cloud</a><a href="#next-class">Monday and Wednesday</a></nav></header>
 <section id="katrina"><header class="sec-head"><h2>Katrina · Clair de lune</h2></header>
 <figure>{player("katrina-clair-de-lune", "Hurricane Katrina satellite animation with Debussy’s Clair de lune", "katrina-caption")}
 <figcaption id="katrina-caption">1 minute 38 seconds · NOAA satellite imagery, set to Claude Debussy’s <cite>Clair de lune</cite>. <a href="https://www.nesdis.noaa.gov/news/hurricane-katrina-animation">NOAA source</a> · <a href="blood-dazzler-assets/oct9/katrina-clair-de-lune.mp4">Open video</a></figcaption></figure></section>
