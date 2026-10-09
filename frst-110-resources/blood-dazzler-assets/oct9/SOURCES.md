@@ -40,3 +40,7 @@ NOAA/NESDIS satellite animation: https://www.nesdis.noaa.gov/news/hurricane-katr
 - Words: Patricia Smith, *Blood Dazzler* (Coffee House Press, 2008), p. 76. On-screen attribution: KATRINA / words by Patricia Smith.
 - `katrina-recitation-final-poster.jpg`: frame from this film.
 - Final cut approved for publication by the instructor on October 9, 2026. Earlier music-only film retained.
+
+## Second line · class send-off
+
+WWOZ, Moving Day Second Line Parade, November 28, 2023. Official video embedded from https://www.youtube.com/watch?v=AGis2gXWvdw . Event and artist information: https://www.wwoz.org/blog/995201 (published January 1, 2024). No downloaded or rehosted video.
