@@ -32,3 +32,11 @@ All downloaded at 1280 px wide and stored locally.
 ## Katrina · Clair de lune
 
 NOAA/NESDIS satellite animation: https://www.nesdis.noaa.gov/news/hurricane-katrina-animation ; source MP4 https://www.nesdis.noaa.gov/s3/2021-07/104640_Katrina.mp4 . Music: Claude Debussy, Clair de lune; instructor-supplied recording, performer unconfirmed. 98.3-second classroom edit; coastal crossing visually aligned to the musical crescendo at 1:13. This alignment is editorial, not a meteorological timestamp. Published at the instructor’s request.
+
+
+## Katrina recitation film · October 9 revision
+
+- `katrina-recitation-final.mp4`: 1 minute 39 seconds. NOAA imagery and the supplied Clair de lune performance from the earlier film, with Teacher Ma’s new recitation and synchronized text supplied by the instructor.
+- Words: Patricia Smith, *Blood Dazzler* (Coffee House Press, 2008), p. 76. On-screen attribution: KATRINA / words by Patricia Smith.
+- `katrina-recitation-final-poster.jpg`: frame from this film.
+- Final cut approved for publication by the instructor on October 9, 2026. Earlier music-only film retained.

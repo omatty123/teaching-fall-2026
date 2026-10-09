@@ -221,8 +221,8 @@ html = f"""<!doctype html>
 <section id="winnebago"><header class="sec-head"><h2>Lake Winnebago</h2></header>
 <figure><iframe src="https://www.youtube-nocookie.com/embed/T3yc4W1na8M?start=760&amp;end=770&amp;rel=0" title="Lake Winnebago exchange at the October 2 FRST community event, 12:40–12:50" style="width:100%;aspect-ratio:16/9;border:0" loading="lazy" allow="encrypted-media;picture-in-picture;fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><figcaption><strong>Be the one who speaks.</strong><br>FRST community event · October 2, 2026 · 12:40–12:50 · <a href="https://www.youtube.com/watch?v=T3yc4W1na8M&amp;t=760s">Open at 12:40 on YouTube</a></figcaption></figure></section>
 <section id="katrina"><header class="sec-head"><h2>Katrina · Clair de lune</h2></header>
-<figure>{player("katrina-clair-de-lune", "Hurricane Katrina satellite animation with Debussy’s Clair de lune", "katrina-caption")}
-<figcaption id="katrina-caption">1 minute 38 seconds · NOAA satellite imagery, set to Claude Debussy’s <cite>Clair de lune</cite>. <a href="https://www.nesdis.noaa.gov/news/hurricane-katrina-animation">NOAA source</a> · <a href="blood-dazzler-assets/oct9/katrina-clair-de-lune.mp4">Open video</a></figcaption></figure></section>
+<figure>{player("katrina-recitation-final", "Katrina: Patricia Smith’s words recited over NOAA satellite imagery and Debussy’s Clair de lune", "katrina-caption")}
+<figcaption id="katrina-caption">1 minute 39 seconds · Words by Patricia Smith, read by Teacher Ma, with synchronized poem lines. NOAA satellite imagery, set to Claude Debussy’s <cite>Clair de lune</cite>. <a href="https://www.nesdis.noaa.gov/news/hurricane-katrina-animation">NOAA source</a> · <a href="blood-dazzler-assets/oct9/katrina-recitation-final.mp4">Open video</a></figcaption></figure></section>
 {body}
 {graph}
 <section id="next-class"><header class="sec-head"><h2>Monday’s community event · Wednesday’s listening</h2></header>
