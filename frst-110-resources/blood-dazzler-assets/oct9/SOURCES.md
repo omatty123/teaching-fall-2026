@@ -50,3 +50,6 @@ User-supplied personal video; user identifies his friend’s home in Dakar. User
 
 ## Second-line replacement, October 9
 User rejected the WWOZ montage audio. Player replaced with Olympia Brass Band, New Second Line, official label-distributed Topic upload: https://www.youtube.com/watch?v=oP044Y1K3cA . Album New Orleans Second Line Mardi Gras Party, Mardi Gras Records2008. Prior selection retained in Git history.
+
+## User-selected second line
+Final selection supplied directly by user: https://www.youtube.com/watch?v=g32nkf0Wi2U . YouTube oEmbed title: New Orleans Second Line | Hurricane Katrina 20 Years Later | Historical 9th Ward Memorial. Uploader: Subject Matter Experts. Replaces Olympia recording; earlier selections preserved in Git.
