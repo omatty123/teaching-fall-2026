@@ -47,3 +47,6 @@ WWOZ, Moving Day Second Line Parade, November 28, 2023. Official video embedded 
 
 ## Dakar · video from home
 User-supplied personal video; user identifies his friend’s home in Dakar. User instructed “push everything” after the explicit public-sharing approval question. Original video and audio preserved, 80.346 seconds. No recording date asserted.
+
+## Second-line replacement, October 9
+User rejected the WWOZ montage audio. Player replaced with Olympia Brass Band, New Second Line, official label-distributed Topic upload: https://www.youtube.com/watch?v=oP044Y1K3cA . Album New Orleans Second Line Mardi Gras Party, Mardi Gras Records2008. Prior selection retained in Git history.
