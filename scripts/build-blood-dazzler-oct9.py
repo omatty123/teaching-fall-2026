@@ -52,6 +52,42 @@ style += ("#storm{--c:#2f7a6b;--t:#e2f0ec}#smith{--c:#20303a;--t:#e9ecee}#search
           ".content-note{font-size:16px;color:var(--muted)}"
           "@media(max-width:600px){.chorus{grid-template-columns:repeat(9,minmax(0,1fr))}.abc{grid-template-columns:repeat(6,minmax(0,1fr))}.beats{font-size:20px}}")
 
+# Friday's reading surface: quiet rules instead of colored cards.
+style += """
+:root{--paper:#fafaf8;--ink:#243038;--rule:#d8dedf}
+body{font-size:20px;line-height:1.55}
+main{max-width:1040px;padding:28px 32px 56px}
+main>header{margin-bottom:28px}
+h1{font-weight:600;letter-spacing:-.025em}
+h2,h3{text-wrap:wrap}
+main>section{background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;box-shadow:none;padding:24px 0 0;margin:0 0 36px}
+.sec-head{background:transparent;border:0;margin:0 0 18px;padding:0}
+.sec-head h2{font-size:28px;font-weight:600;line-height:1.25;letter-spacing:-.015em;color:var(--ink);text-wrap:wrap}
+.sec-head .poem{font-size:17px;font-weight:400;margin-top:6px}
+main>section h3{font-size:22px;font-weight:600;line-height:1.35;color:var(--ink);border:0;padding:0;margin:28px 0 12px}
+main>section p{max-width:75ch}
+main>section .reading,main>section .excerpt{background:transparent;border-left:1px solid var(--rule);padding:4px 0 4px 18px}
+a{text-decoration-thickness:1px;text-underline-offset:.18em}
+a:hover{text-decoration-thickness:2px}
+.section-nav a{font-weight:500}
+#author-questions dl{margin:0}
+#author-questions dt{border-top:1px solid var(--rule);padding-top:18px;margin-top:20px;line-height:1.35}
+#author-questions dt strong{font-weight:600}
+#author-questions dd{margin:8px 0 0}
+#author-questions dd p{margin-bottom:10px}
+#author-questions dd p+p{font-size:18px;color:var(--muted)}
+#author-questions .source-note{border-top:1px solid var(--rule);padding-top:16px;margin-top:24px}
+@media(max-width:600px){
+ body{font-size:19px}
+ main{padding:20px 18px 40px}
+ main>section{padding:20px 0 0;margin-bottom:28px}
+ .sec-head{margin:0 0 14px;padding:0}
+ .sec-head h2{font-size:25px}
+ main>section h3{font-size:21px}
+ #author-questions dd p+p{font-size:18px}
+}
+"""
+
 # "34": which sections carry what (checked against scan pp. 50-57)
 PRAY = {14, 21, 32}
 LEAVE = {13, 27, 34}
