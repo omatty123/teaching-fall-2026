@@ -170,6 +170,7 @@ body = f"""
 <figure style="max-width:270px"><video style="aspect-ratio:9/16" controls playsinline preload="none" width="360" height="640" poster="blood-dazzler-assets/oct9/dakar-home-poster.jpg" aria-label="Water being scooped into buckets at a home in Dakar" aria-describedby="dakar-caption"><source src="blood-dazzler-assets/oct9/dakar-home.mp4" type="video/mp4"><a href="blood-dazzler-assets/oct9/dakar-home.mp4">Open video</a></video><figcaption id="dakar-caption">1 minute 20 seconds · Scooping standing water into buckets. <a href="blood-dazzler-assets/oct9/dakar-home.mp4">Open video</a></figcaption></figure></section>
 
 <section id="smith"><header class="sec-head"><h2>A question for Smith on Monday</h2></header>
+<p><a href="patricia-smith-oct-12.html">Before Monday: Patricia Smith, her life, her words, and your question.</a></p>
 <p>Patricia Smith joins us by Zoom on Monday, October 12. Bring one question about a choice she made, with its page. A strong one names what she did and what she could have done instead.</p>
 <ul>
 <li>On p. 54, why leave section 18 empty rather than give every number a voice?</li>
@@ -179,6 +180,7 @@ body = f"""
 </ul>
 <p>Write your own. These show the shape: “On p. __, why ___ rather than ___?”</p></section>
 <section id="author-questions"><header class="sec-head"><h2>“Why did you write this?” · Preparing to talk with Patricia Smith</h2></header>
+<p><a href="patricia-smith-oct-12.html">Before Monday: Patricia Smith, her life, her words, and your question.</a></p>
 <p>That question can ask about an event, a purpose, a word, or a formal choice. Decide which you want to understand. These are familiar author-interview questions, not a measured ranking. The answers below summarize and briefly quote Smith’s published interviews; they do not predict what she will say on Monday.</p>
 <h3>Questions authors often receive—and what Smith has already said</h3>
 <dl>
