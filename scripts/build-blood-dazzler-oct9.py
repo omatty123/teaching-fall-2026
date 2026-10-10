@@ -24,7 +24,7 @@ mobile_note = '<p class="bd-frequency-mobile-note">Scroll sideways to read every
 graph = graph.replace(mobile_note + "\n", "", 1).replace('<div class="bd-frequency-chart"', mobile_note + '\n<div class="bd-frequency-chart"', 1)
 top = frequency["words"]
 assert top[0]["word"] == "name" and top[1]["word"] == "left", top[:2]
-graph = graph.replace("</h2>", f'</h2>\n<p class="cloud-links">The most common word in these pages is <strong>name</strong> ({top[0]["count"]} times). Second is <strong>left</strong> ({top[1]["count"]}). Where do they come? · <a href="blood-dazzler-words.html">Word clouds by section and whole book</a></p>', 1)
+graph = graph.replace("</h2>", f'</h2>\n<p class="cloud-links">The most common word in these pages is <strong>name</strong> ({top[0]["count"]} times). Second is <strong>left</strong> ({top[1]["count"]}). · <a href="blood-dazzler-words.html">Word clouds by section and whole book</a></p>', 1)
 SRC = (ROOT / "frst-110-resources/blood-dazzler-form-style.html").read_text()
 style = SRC[SRC.index("<style>") + 7:SRC.index("</style>")]
 
@@ -132,7 +132,7 @@ body = f"""
 <li><strong>The prayer skips a line.</strong> Between “Hallowed be thy name” and “Thy will be done,” the prayer says “Thy kingdom come.” Smith leaves it out.</li>
 <li><strong>“Leave them.” comes three times,</strong> and it changes. 13: on its own line. 27: “And this scripture: <em>Leave them.</em>” 34: lowercase, split in two, the poem’s last words: “leave / them.”</li>
 </ul>
-<p class="reading"><strong>Ask:</strong> who says “Leave them”? The page never tells you. What does the poem gain by not naming the voice?</p>
+<p>The speaker of “Leave them” is not identified.</p>
 <h3>St. Rita’s Nursing Home, September 2005</h3>
 <p>The real place behind the headnote, in St. Bernard Parish. The footage shows the empty rooms after the bodies were removed: wheelchairs in mud, photographs still on the walls. It ends with FEMA’s medical commander: “As long as there is one body floating in that water we are not doing a good enough job.”</p>
 <figure>{player('st-ritas-ap', 'AP footage inside St. Rita’s Nursing Home, September 2005', 'st-ritas-caption')}
@@ -144,13 +144,13 @@ body = f"""
 <p><strong>A persona poem gives the “I” to someone who is not the poet.</strong> Here the “I” is Katrina, and she has been listening to “34.”</p>
 <div class="excerpt">Instead, I listened, bemused, to thirty-four<br>snotty pleas addressed to the idea of <em>Him</em></div>
 <p>The number comes back from the headnote on p. 50, but now the storm is counting. The prayer comes back too: “They called / <em>Lord, Lord, Lord</em>.” The only one who hears it is the one doing the killing.</p>
-<p class="reading"><strong>Ask:</strong> on p. 50 a wire report counts the dead. On p. 58 the storm counts them. What changes when the killer keeps the count?</p></section>
+<p>On p. 50 a wire report counts the dead. On p. 58 the storm counts them.</p></section>
 
 <section id="search"><header class="sec-head"><h2>Background: the search markings</h2><p class="poem">“Looking for Bodies” · pp. 60–61 · “Give Me My Name” · p. 74</p></header>
 <p>After the flood, search teams went house to house and spray-painted an X on each one they entered. The four corners of the X recorded the date, the team, any hazards, and how many people were found inside, living or dead. “Looking for Bodies” is written as instructions to the person opening that door: “Slowly push the door open with your foot.”</p>
 <div class="photo-pair"><figure><img src="blood-dazzler-assets/oct9/chalmette-search.jpg" alt="A search and rescue worker steps out of a mud-filled doorway; an orange X is painted beside the door." width="1280" height="853" loading="lazy" decoding="async"><figcaption>Chalmette, St. Bernard Parish, September 17, 2005. Bob McMillan/FEMA. <a href="https://commons.wikimedia.org/wiki/File:FEMA_-_15605_-_Photograph_by_Bob_McMillan_taken_on_09-17-2005_in_Louisiana.jpg">Photograph source</a></figcaption></figure>
 <figure><img src="blood-dazzler-assets/oct9/search-markings.jpg" alt="An orange search X painted on the siding of a house standing in floodwater, reflected in the water below." width="1280" height="1960" loading="lazy" decoding="async"><figcaption>Search markings on a flooded house, New Orleans, September 10, 2005. Jocelyn Augustino/FEMA. <a href="https://commons.wikimedia.org/wiki/File:FEMA_-_19427_-_Photograph_by_Jocelyn_Augustino_taken_on_09-10-2005_in_Louisiana.jpg">Photograph source</a></figcaption></figure></div>
-<p class="reading"><strong>Ask:</strong> the X turns a home into a record: a date, a team, a number. Which poems in these pages push back against being turned into a number?</p>
+<p>The search X records a date, a team, and a number at each home.</p>
 <p class="content-note">Content note: pp. 60–61 and 74 describe bodies.</p></section>
 
 <section id="buried"><header class="sec-head"><h2>A work chant: “Plunge. Push. Lift. Toss it.”</h2><p class="poem">“Buried” · pp. 63–64</p></header>
@@ -163,7 +163,7 @@ body = f"""
 <li><strong>The fourth time it breaks:</strong> “<em>Plunge. Push. Lift. Toss—</em>” Just before, the memory of his boy has come in: “Where are yoooou?”</li>
 <li><strong>The last line has no chant left:</strong> “I have to dig.”</li>
 </ul>
-<p class="reading"><strong>Ask:</strong> what keeps him digging, and what breaks the beat? Find the line where the chant stops working.</p>
+
 <p class="content-note">Content note: p. 64 is about a child.</p></section>
 
 
@@ -176,7 +176,7 @@ body = f"""
 <li><strong>But Smith prints it as one block,</strong> with no break before the last pair, and her sentences spill over the line ends: “Each day reveals / inane thoughts of dance.” Order on the outside, spill inside.</li>
 <li><strong>The rhyming pair lands the point:</strong> “to set chaos upright, scrub at the stain, / build our homes on rivers, waltz in the rain.”</li>
 </ul>
-<p class="reading"><strong>Ask:</strong> is that tidy ending hopeful, or foolish? Who builds a home on a river?</p></section>
+</section>
 
 <section id="refrain"><header class="sec-head"><h2>Refrain: “They keep touching him”</h2><p class="poem">“Golden Rule Days,” section I · p. 71</p></header>
 <p><strong>A refrain is a line that keeps coming back.</strong> “They keep touching him” comes four times in one stanza, and it is the stanza’s last sentence.</p>
@@ -186,7 +186,7 @@ body = f"""
 <li><strong>The repetition does to us what the hands do to him.</strong> It never stops. He is kept in “his role as child who drowns, again / and again.”</li>
 </ul>
 <p>On Wednesday the repeated “and” piled things up. Here repetition holds someone in place. The poem calls it “soft rescues.”</p>
-<p class="reading"><strong>Ask:</strong> what do the hands give him, and what don’t they? What would one sentence, said once, lose?</p>
+
 <p class="content-note">Content note: stay on p. 71. Section III of this poem (p. 73) prints a racial slur.</p></section>
 
 <section id="siblings"><header class="sec-head"><h2>An alphabet list: the storms of 2005</h2><p class="poem">“Siblings” · p. 75</p></header>
@@ -195,7 +195,7 @@ body = f"""
 <p>The list jumps from José to Lee. Katrina is left out of her own family, then named in the last three lines: “None of them talked about Katrina. / She was their odd sister, / the blood dazzler.” The book’s title arrives two poems before the end.</p>
 <figure><img src="blood-dazzler-assets/oct9/2005-season-map.jpg" alt="Map of the Atlantic Ocean crossed by the tracks of every 2005 storm, many converging on the Gulf of Mexico." width="1280" height="792" loading="lazy" decoding="async"><figcaption>Every storm track of the 2005 Atlantic season. NOAA, public domain. <a href="https://commons.wikimedia.org/wiki/File:2005_Atlantic_hurricane_season_summary_map.png">Map source</a></figcaption></figure>
 <p>2005 used up the whole list. After Wilma, six more storms were named with Greek letters, Alpha to Zeta. Smith’s list stops at Wilma.</p>
-<p class="reading"><strong>Ask:</strong> why keep her out of the list? What does it mean that her siblings won’t talk about her?</p></section>
+</section>
 
 <section id="katrina"><header class="sec-head"><h2>Katrina · Clair de lune</h2><p class="poem">“Weather is nothing until it reaches skin” · p. 76</p></header>
 <figure>{player("katrina-recitation-final", "Katrina: Patricia Smith’s words recited over NOAA satellite imagery and Debussy’s Clair de lune", "katrina-caption")}
@@ -207,14 +207,8 @@ body = f"""
 
 <section id="smith"><header class="sec-head"><h2>A question for Smith on Monday</h2></header>
 <p><a href="patricia-smith-oct-12.html">Before Monday: Patricia Smith, her life, her words, and your question.</a></p>
-<p>Patricia Smith joins us by Zoom on Monday, October 12. Bring one question about a choice she made, with its page. A strong one names what she did and what she could have done instead.</p>
-<ul>
-<li>On p. 54, why leave section 18 empty rather than give every number a voice?</li>
-<li>On pp. 53–57, why leave “Thy kingdom come” out of the prayer?</li>
-<li>On p. 70, why a sonnet, and why print it as one block?</li>
-<li>On p. 75, why leave Katrina’s letter out of the list rather than give her a line?</li>
-</ul>
-<p>Write your own. These show the shape: “On p. __, why ___ rather than ___?”</p></section>
+<p>Patricia Smith joins us by Zoom on Monday, October 12. Bring one question about a choice she made, with its page.</p>
+</section>
 <section id="author-questions"><header class="sec-head"><h2>“Why did you write this?” · Preparing to talk with Patricia Smith</h2></header>
 <p><a href="patricia-smith-oct-12.html">Before Monday: Patricia Smith, her life, her words, and your question.</a></p>
 <p>That question can ask about an event, a purpose, a word, or a formal choice. Decide which you want to understand. These are familiar author-interview questions, not a measured ranking. The answers below summarize and briefly quote Smith’s published interviews; they do not predict what she will say on Monday.</p>
