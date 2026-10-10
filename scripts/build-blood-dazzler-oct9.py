@@ -52,7 +52,7 @@ style += ("#storm{--c:#2f7a6b;--t:#e2f0ec}#smith{--c:#20303a;--t:#e9ecee}#search
           ".content-note{font-size:16px;color:var(--muted)}"
           "@media(max-width:600px){.chorus{grid-template-columns:repeat(9,minmax(0,1fr))}.abc{grid-template-columns:repeat(6,minmax(0,1fr))}.beats{font-size:20px}}")
 
-# Friday's reading surface: quiet rules instead of colored cards.
+# Friday's reading surface: compact colored section breaks, without rounded cards.
 style += """
 :root{--paper:#fafaf8;--ink:#243038;--rule:#d8dedf}
 body{font-size:20px;line-height:1.55}
@@ -60,9 +60,9 @@ main{max-width:1040px;padding:28px 32px 56px}
 main>header{margin-bottom:28px}
 h1{font-weight:600;letter-spacing:-.025em}
 h2,h3{text-wrap:wrap}
-main>section{background:transparent;border:0;border-top:1px solid var(--rule);border-radius:0;box-shadow:none;padding:24px 0 0;margin:0 0 36px}
-.sec-head{background:transparent;border:0;margin:0 0 18px;padding:0}
-.sec-head h2{font-size:28px;font-weight:600;line-height:1.25;letter-spacing:-.015em;color:var(--ink);text-wrap:wrap}
+main>section{background:transparent;border:0;border-top:2px solid var(--c);border-radius:0;box-shadow:none;padding:0;margin:0 0 36px}
+.sec-head{background:var(--t);border:0;margin:0 0 18px;padding:12px 16px}
+.sec-head h2{font-size:28px;font-weight:600;line-height:1.25;letter-spacing:-.015em;color:var(--c);text-wrap:wrap}
 .sec-head .poem{font-size:17px;font-weight:400;margin-top:6px}
 main>section h3{font-size:22px;font-weight:600;line-height:1.35;color:var(--ink);border:0;padding:0;margin:28px 0 12px}
 main>section p{max-width:75ch}
@@ -80,8 +80,8 @@ a:hover{text-decoration-thickness:2px}
 @media(max-width:600px){
  body{font-size:19px}
  main{padding:20px 18px 40px}
- main>section{padding:20px 0 0;margin-bottom:28px}
- .sec-head{margin:0 0 14px;padding:0}
+ main>section{padding:0;margin-bottom:28px}
+ .sec-head{margin:0 0 14px;padding:10px 12px}
  .sec-head h2{font-size:25px}
  main>section h3{font-size:21px}
  #author-questions dd p+p{font-size:18px}
