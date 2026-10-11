@@ -75,3 +75,11 @@ Cave285 date: https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700086742 (5
 
 ## Cave comparisons and vegetarianism — October 11
 Five-site comparison sourced to UNESCO Ajanta242, Yungang1039, Longmen1003, Maijishan tentative-list1631 and Met Kizil object60654. Kizil date describes the linked object, not a settled foundation date. Vegetarianism distinguishes earlier abstinence, MN55 meat permission, Fanwang third minor precept, and Liang imperial intervention. Source URLs are adjacent to each summary in day JSON. These are summaries, not added primary quotations. No claim of universal linear development or universal Chinese vegetarianism. Exact Liang edict chronology omitted because scholarship disputes it.
+
+## Cave photographs — October 11
+Web copies resized only, uncropped. Each links to its Commons record and license; click image for the large local image.
+- `yungang-cave.jpg`: https://commons.wikimedia.org/wiki/File:Yungang_Grottoes_Cave_20_1.jpg ; Thebrainchamber1 / thebrainchamber.com; CC BY-SA 4.0; Cave 20 · Northern Wei, 5th century. Historical source: https://whc.unesco.org/en/list/1039/.
+- `ajanta-cave.jpg`: https://commons.wikimedia.org/wiki/File:Ajanta_Caves%2C_India%2C_Interior_of_Ajanta_chaitya_%28stupa%29_worship_hall%2C_Cave_26.jpg ; Vyacheslav Argenberg; CC BY 4.0; Cave 26 · late 5th century. Historical source: https://whc.unesco.org/en/list/242/.
+- `kizil-cave.jpg`: https://commons.wikimedia.org/wiki/File:Kizil_Caves_Kuqa_Xinjiang_China_%E6%96%B0%E7%96%86_%E5%BA%93%E8%BD%A6_%E5%85%8B%E5%AD%9C%E5%B0%94%E5%8D%83%E4%BD%9B%E6%B4%9E_-_panoramio.jpg ; Hiroki Ogawa; CC BY 3.0; Central Asia · early chronology debated. Historical source: https://www.metmuseum.org/art/collection/search/60654.
+- `maijishan-cave.jpg`: https://commons.wikimedia.org/wiki/File:Maijishan_grottoes.jpg ; Tgasrio; CC0; Beginnings attributed to 384–417. Historical source: https://whc.unesco.org/en/tentativelists/1631/.
+- `longmen-cave.jpg`: https://commons.wikimedia.org/wiki/File:%E9%BE%99%E9%97%A8%E7%9F%B3%E7%AA%9F.jpg ; Shenshi0603; CC BY-SA 4.0; Fengxian Temple · Tang, 7th century. Historical source: https://whc.unesco.org/en/list/1003/.

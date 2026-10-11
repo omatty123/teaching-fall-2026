@@ -39,3 +39,14 @@ html:has(body.oct13){font-family:'Source Sans 3','PingFang TC',sans-serif;scroll
 .oct13 .dunhuang-jump{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:baseline;border-bottom:1px solid var(--rule);padding-bottom:12px}.oct13 .dunhuang-jump a{font-weight:700}.oct13 .dunhuang-jump span{font-size:18px;color:#505d62}
 .oct13 .dunhuang-study{display:grid;grid-template-columns:1.05fr 1fr;gap:32px;align-items:start}.oct13 .dunhuang-study img,.oct13 .dunhuang-futures img{width:100%;height:auto}.oct13 .dunhuang-reading h4{margin:24px 0 10px;font-size:30px}.oct13 .dunhuang-reading p{max-width:52ch}.oct13 .dunhuang-links{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:20px}.oct13 .dunhuang-links a{padding:6px 0}.oct13 .dunhuang-futures{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start;margin:20px 0 24px}.oct13 .dunhuang-futures figcaption strong{font-size:23px}.oct13 #dunhuang>h3,.oct13 #dunhuang-tang>h3{font-size:34px}
 @media(max-width:800px){.oct13 .dunhuang-study,.oct13 .dunhuang-futures{grid-template-columns:1fr;gap:24px}.oct13 #dunhuang>h3,.oct13 #dunhuang-tang>h3{font-size:28px}.oct13 .dunhuang-reading h4{font-size:26px}}
+
+/* Documentary cave photographs: natural proportions, projection-size feature. */
+.oct13 .cave-feature { margin: 16px 0 32px; }
+.oct13 .cave-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
+.oct13 .cave-photo { margin: 0; }
+.oct13 .cave-photo img { display: block; width: 100%; height: auto; max-height: none; border-radius: 0; }
+.oct13 .cave-photo figcaption { padding-top: 10px; font-size: 20px; }
+.oct13 .cave-photo h3 { margin: 0 0 4px; }
+.oct13 .cave-photo p { margin: 4px 0 8px; }
+.oct13 .cave-photo small { display: block; font-size: 15px; line-height: 1.4; }
+@media (max-width: 800px) { .oct13 .cave-gallery { grid-template-columns: 1fr; gap: 24px; } }
