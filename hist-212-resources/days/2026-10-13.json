@@ -61,6 +61,16 @@
       ]
     },
     {
+      "id": "cave-sites",
+      "title": "Buddhist cave sites across Asia",
+      "short": "Other early cave sites",
+      "body": [
+        {
+          "html": "<p>Cave temples connect Buddhist practice to travel, local materials, and patronage. These sites show related traditions across different regions—not a single proven route from one cave to the next.</p><dl class=\"course-connections\"><dt><a href=\"https://whc.unesco.org/en/list/242/\">Ajanta · India</a></dt><dd><strong>2nd–1st centuries BCE onward.</strong> Early rock-cut worship halls and monasteries; major later campaigns add richly painted interiors. Cave Buddhism has a long Indian history.</dd><dt><a href=\"https://www.metmuseum.org/art/collection/search/60654\">Kizil · near Kucha</a></dt><dd><strong>Central Asia; early dating debated.</strong> The linked mural dates to the 6th–7th centuries. Buddhist communities in what is now Xinjiang are part of the transmission story, not simply a space crossed on the way to China.</dd><dt><a href=\"https://whc.unesco.org/en/tentativelists/1631/\">Maijishan · Gansu</a></dt><dd><strong>Beginnings attributed to Later Qin, 384–417.</strong> Cliffside caves and modeled clay sculpture show how local materials shape Buddhist art.</dd><dt><a href=\"https://whc.unesco.org/en/list/1039/\">Yungang · Datong</a></dt><dd><strong>Major construction, 460–525.</strong> Northern Wei imperial sponsorship produces monumental Buddhist sculpture. The state actively builds religious institutions.</dd><dt><a href=\"https://whc.unesco.org/en/list/1003/\">Longmen · Luoyang</a></dt><dd><strong>Late 5th century onward.</strong> Northern Wei patronage continues near its new capital; the site develops further under the Tang.</dd></dl><p><strong>Yungang beside Huiyuan:</strong> imperial cave sponsorship and a monk’s refusal of royal homage reveal different relationships between religious and political authority.</p>"
+        }
+      ]
+    },
+    {
       "id": "teachings",
       "short": "Four Truths / Three Jewels",
       "title": "Three Jewels & Four Noble Truths",
@@ -419,6 +429,16 @@
       ]
     },
     {
+      "id": "vegetarianism",
+      "title": "From restrictions on killing to vegetarian practice",
+      "short": "Vegetarianism in China",
+      "body": [
+        {
+          "html": "<p><strong>A rule against killing does not always mean a rule against eating meat.</strong> Chinese Buddhist vegetarianism developed through debates about compassion, monastic discipline, and the authority to set religious rules.</p><dl class=\"course-connections\"><dt>Earlier Chinese restraint</dt><dd>Meat abstinence could express mourning or ritual discipline. Seasonal rules protected animals at particular times. Neither practice necessarily required lifelong vegetarianism. <a href=\"https://www.mdpi.com/2077-1444/10/4/279\">Historical study</a> · <a href=\"#seasonal-killing\">earlier Chinese passages</a>.</dd><dt>Early Buddhist permission</dt><dd>The <a href=\"https://www.dhammatalks.org/suttas/MN/MN55.html\">Jīvaka Sutta, MN 55</a>, permits meat when the recipient has not seen, heard, or suspected that the animal was killed specifically for them. Responsibility for killing matters; meat is not categorically forbidden.</dd><dt>A stronger Mahāyāna prohibition</dt><dd>The <a href=\"https://www.kalavinkapress.org/ebooks_NEW/Bodhisattva%20Moral%20Virtue_Bilingual_ebk_08-15-24.pdf\"><em>Fanwang Sutra</em>, third minor precept, p. 47</a>, prohibits eating meat and connects the prohibition to compassion. This is a supplement to the major precept against killing in our assigned excerpt—not the same passage.</dd><dt>Emperor Wu of Liang · r. 502–549</dt><dd><a href=\"https://journal.kci.go.kr/crbs/archive/articleView?artiId=ART002954761\">Emperor Wu pressed monks to abandon meat</a>, helping institutionalize vegetarianism in Chinese Buddhism. He did not invent abstinence or make the whole population vegetarian.</dd></dl><p><strong>Compare the scope:</strong> seasonal restraint limits <em>when</em> killing occurs; the early Buddhist permission concerns <em>who caused</em> the killing; the <em>Fanwang Sutra</em> restricts <em>eating meat itself</em>. Wŏn’gwang’s rules for laypeople combine loyalty and selective restraint. These positions overlap; they are not stages that every Buddhist community passed through.</p><p class=\"source-note\">Course synthesis; source links above. The Liang debates belong to the early sixth century. Their exact dating is disputed, so no single year is assigned here. Emperor Wu adds another contrast with Huiyuan: a ruler attempts to determine monastic conduct.</p>"
+        }
+      ]
+    },
+    {
       "id": "dunhuang-tang",
       "short": "Dunhuang into the Tang",
       "title": "Looking ahead: painted caves and printed scriptures",
@@ -501,7 +521,8 @@
     "Lu Jia": "class-2026-10-08.html#qin",
     "Dong Zhongshu": "class-2026-10-08.html#heaven",
     "Fuxi": "https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285",
-    "Nüwa": "https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285"
+    "Nüwa": "https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285",
+    "Emperor Wu of Liang": "https://journal.kci.go.kr/crbs/archive/articleView?artiId=ART002954761"
   },
   "overview": "<p class=\"dunhuang-jump\"><a href=\"#dunhuang\">Dunhuang · explore the cave paintings</a> <span>538–539 → Tang → 868</span></p><p class=\"lesson-argument\">Buddhism offers liberation from suffering and rebirth, and a community organized around that goal. In China and Korea, it creates new claims on people’s loyalties, labor, and wealth—alongside those of family and ruler.</p><div class=\"principal-figures\"><h2>Three voices in the readings</h2><dl><dt>Mouzi</dt><dd><a href=\"#mouzi\">Defends a foreign teaching</a> through Chinese precedents. The dialogue’s date and authorship are debated.</dd><dt>Huiyuan · 334–416</dt><dd><a href=\"#huiyuan\">Defends a distinct status for monks</a>: a ruler can sustain life but cannot end suffering.</dd><dt>Wŏn’gwang · early 7th century</dt><dd><a href=\"#petition\">Accepts obligations to Silla’s king</a>, even when royal service conflicts with a monk’s prohibition on killing.</dd></dl></div>",
   "parts": [
@@ -523,6 +544,7 @@
       "summary": "A teaching about suffering also creates communities, practices, and objects of devotion.",
       "sections": [
         "dunhuang",
+        "cave-sites",
         "teachings",
         "images",
         "art"
@@ -548,7 +570,8 @@
         "silla",
         "petition",
         "war-killing",
-        "seasonal-killing"
+        "seasonal-killing",
+        "vegetarianism"
       ]
     },
     {
