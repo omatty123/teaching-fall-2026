@@ -129,6 +129,8 @@ def main():
         ask = f'<p class="question">{s["ask"]}</p>' if s.get("ask") else ""
         secs.append(f'<section id="{e(s["id"])}"><h2>{e(s["title"])}</h2>{src}{"".join(block(b) for b in s["body"])}{ask}</section>')
     readings = "".join(f"<li>{r}</li>" for r in day.get("readings", []))
+    extra_css = "".join(f'<link rel="stylesheet" href="{kit(f)}">' for f in day.get("styles", []))
+    extra_js = "".join(f'<script src="{kit(f)}"></script>' for f in day.get("scripts", []))
     doc = f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(day["title"])} · {d.strftime("%B")} {d.day} · HIST 212</title><link rel="icon" href="../favicon.svg" type="image/svg+xml">
@@ -137,14 +139,14 @@ def main():
 <meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/images/hist-212-banner.jpg">
 <meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/hist-212-resources/class-{date}.html"><meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/hist-212-banner.jpg">
-<link rel="stylesheet" href="{kit("hist-212-lesson.css")}"></head>
-<body><a class="skip" href="#content">Skip to class materials</a><nav class="top">{"".join(nav)}<button id="highlights" aria-pressed="true">Highlights on</button><button id="project" aria-pressed="false">Large text</button></nav>
+<link rel="stylesheet" href="{kit("hist-212-lesson.css")}">{extra_css}</head>
+<body class="{e(day.get("bodyClass", ""))}"><a class="skip" href="#content">Skip to class materials</a><nav class="top">{"".join(nav)}<button id="highlights" aria-pressed="true">Highlights on</button><button id="project" aria-pressed="false">Large text</button></nav>
 <main id="content"><header><h1>{e(day["title"])}</h1><p class="meta">{when} · {e(day["meta"])}</p>
 <nav class="sections" aria-label="Lesson sections">{chips}<a href="#resources">Readings</a></nav></header>
 {"".join(secs)}
 <section id="resources"><h2>Today’s readings</h2><ul>{readings}</ul></section>
 <footer>{("<p>" + day["footnote"] + "</p>") if day.get("footnote") else ""}<p><a href="{CLASS_NOTES}">Class notes</a> · <a href="../courses/hist-212.html">All classes and readings</a></p></footer>
-</main><script src="{kit("hist-212-lesson.js")}"></script></body></html>
+</main><script src="{kit("hist-212-lesson.js")}"></script>{extra_js}</body></html>
 """
     out = ROOT / f"hist-212-resources/class-{date}.html"
     out.write_text(doc)

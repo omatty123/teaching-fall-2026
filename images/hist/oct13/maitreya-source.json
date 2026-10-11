@@ -1,0 +1,90 @@
+{
+  "objectID": 38474,
+  "isHighlight": false,
+  "accessionNumber": "1991.75",
+  "accessionYear": "1991",
+  "isPublicDomain": true,
+  "primaryImage": "https://images.metmuseum.org/CRDImages/as/original/DP123372.jpg",
+  "primaryImageSmall": "https://images.metmuseum.org/CRDImages/as/web-large/DP123372.jpg",
+  "additionalImages": [],
+  "constituents": null,
+  "department": "Asian Art",
+  "objectName": "Statue",
+  "title": "Standing Bodhisattva Maitreya (Buddha of the Future)",
+  "culture": "Pakistan (ancient region of Gandhara)",
+  "period": "",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "",
+  "artistPrefix": "",
+  "artistDisplayName": "",
+  "artistDisplayBio": "",
+  "artistSuffix": "",
+  "artistAlphaSort": "",
+  "artistNationality": "",
+  "artistBeginDate": "",
+  "artistEndDate": "",
+  "artistGender": "",
+  "artistWikidata_URL": "",
+  "artistULAN_URL": "",
+  "objectDate": "ca. 3rd century",
+  "objectBeginDate": 200,
+  "objectEndDate": 350,
+  "medium": "Gray schist",
+  "dimensions": "H. 64 1/4 in. (163.2 cm); W. 21 in. (53.3 cm); D. 8 in. (20.3 cm)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": {
+        "Depth": 20.3,
+        "Height": 163.2,
+        "Width": 53.3
+      }
+    }
+  ],
+  "creditLine": "Purchase, Lita Annenberg Hazen Charitable Trust Gift, 1991",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Sculpture",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2026-03-02T04:55:04.403Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/38474",
+  "tags": [
+    {
+      "term": "Gandhara",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300018889",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q213651"
+    },
+    {
+      "term": "Buddhism",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300073738",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q748"
+    },
+    {
+      "term": "Bodhisattvas",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300264360",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q178149"
+    },
+    {
+      "term": "Maitreya",
+      "AAT_URL": "http://vocab.getty.edu/page/ia/901000405",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q193461"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q116376783",
+  "isTimelineWork": false,
+  "GalleryNumber": "235"
+}
