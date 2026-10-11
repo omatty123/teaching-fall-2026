@@ -22,7 +22,7 @@ The page has a compact utility navigation, title, reading metadata, and wrapping
 
 Desktop pairs the opening object and definitions, source passages, petition explanation and chronology, and historical handwriting and printed characters. Museum objects use contained images to preserve their outlines and prevent cropping. The temple photograph supplies place context.
 
-At 650px and below, main padding becomes 16px and most comparisons stack. The five-date chronology becomes ruled date rows. The two museum objects remain side by side at 390px, then stack below 360px. Headings wrap naturally.
+At 650px and below, main padding becomes 16px and most comparisons stack. The graphic chronology becomes a readable vertical chronology with a thin line and event dots; its full-size SVG link remains available. The two museum objects remain side by side at 390px, then stack below 360px. Headings wrap naturally.
 
 ## Elevation & Depth
 
@@ -31,6 +31,7 @@ The surface is flat. Rules, spacing, and text hierarchy organize content. The wr
 ## Components
 
 - **Object opener:** The museum image links to its full file. The caption records object identity, collection, dimensions, and image source. Uncertain original provenance remains explicit.
+- **Graphic timeline (`#spread`):** A transparent SVG places China, people, and Silla / Sui on a shared 200–650 CE scale. Rust dots mark events; teal lines mark the overlapping lifespans of Wang Xizhi and Huiyuan. Dashed guides and short leaders align labels without filled panels. SVG text uses Arial/Helvetica sans-serif, with an accessible title and description. Mouzi’s debated date is explained separately, without a precise marker. The desktop legend identifies dots as events and lines as lifespans. At 650px and below, an eight-entry vertical chronology replaces the graphic, with an explicit note that spacing is not to scale; a full-size SVG link remains available at every width. Citations identify conventional lifespan dating and distinguish temporal alignment from causation.
 - **Museum comparison:** Buddha and Maitreya images have independent captions and Met collection links. The heading states that objects are not shown at the same scale. Clothing conventions are explained without presenting the sculptures as portraits of the reading's authors.
 - **People and passages:** Mouzi and Huiyuan have names, context, and assigned-source quotations. The Mouzi/Mozi distinction is explicit. The modern Donglin photograph is labeled as a present-day view.
 - **Foreign practices (`#foreign-affairs`):** Three PRO / CON paired rows distinguish residence among foreigners, learning from foreign teachings, and adopting foreign dress. They reuse the existing passage comparison layout, source citations, and compact explanatory notes. The dress pair identifies the king of Zhao and his uncle as an earlier reading; the residence note preserves the assigned translation and identifies its disputed status.
@@ -48,4 +49,4 @@ The surface is flat. Rules, spacing, and text hierarchy organize content. The wr
 - Don't imply that a later reproduction is an original autograph, a modern building is a surviving ancient view, or a historical reply is the lost petition itself.
 - Don't add oversized filled panels, decorative empty space, invented portraits, or unsolicited discussion questions.
 
-Documentation inspection: current `hist-212-resources/days/2026-10-13.json`, built HTML, scoped CSS/JavaScript, shared lesson CSS/JavaScript, and `PRODUCT.md`, October 11, 2026. This record describes implementation; screenshot review and deployment verification belong to the parent task's delivery checks.
+Documentation inspection: current `hist-212-resources/days/2026-10-13.json`, `images/hist/oct13/timeline.svg`, built HTML, scoped CSS/JavaScript, shared lesson CSS/JavaScript, and `PRODUCT.md`, October 11, 2026. This record describes implementation; screenshot review and deployment verification belong to the parent task's delivery checks.

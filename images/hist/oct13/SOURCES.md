@@ -27,3 +27,7 @@ Checked 2026-10-11. No generated historical likenesses.
 - Foreign dress: Ebrey & Walthall, p. 25, “The King of Zhao Convinces His Uncle to Wear Barbarian Dress”; J. I. Crump translation, modified in textbook. The uncle subsequently accepts the king’s policy.
 - Laozi 31: Philip J. Ivanhoe, Readings in Classical Chinese Philosophy, 3rd edition, p. 187, checked against the preserved full course PDF IVANHOE3-Laozi-171-210.pdf. Necessity lines omitted from the compact reader are explicitly labeled as restored from the full source. This full-source excerpt was added to the private derived quote-validation cache.
 - Wŏn’gwang’s existing two quotations (SKT pp. 45–46) were retained verbatim and relocated from #petition to #war-killing for side-by-side comparison. Petition has an explicit link. All earlier resources remain. No discussion questions added.
+
+## October 11 graphic timeline
+
+`timeline.svg` is an original geometric chronology, 200–650 CE, with a linear shared scale. Existing five events retained; 612 added from the already cited AKS petition entry. Wang Xizhi’s conventional 303–361 lifespan follows https://www.metmuseum.org/art/collection/search/39899 . Huiyuan 334–416 and essay 404 follow existing page sources (SCT 427–429; Lushan Huiyuan biography). Mouzi is not assigned an invented date; late-Han narrative setting and debated attribution are stated separately. Small screens receive a legible vertical chronology plus full SVG link. No portraits or historical illustrations were synthesized.

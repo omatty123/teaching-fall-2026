@@ -16,12 +16,14 @@
     },
     {
       "id": "spread",
-      "short": "Time & terms",
-      "title": "A divided political world",
-      "source": "Ebrey pp. 56–74 · dates give context, not a single chain of causes",
+      "short": "Graphic timeline",
+      "title": "People and events · 200–650 CE",
       "body": [
         {
-          "html": "<ol class=\"timeline\"><li><strong>220</strong><span>Han dynasty ends</span></li><li><strong>311</strong><span>Luoyang falls</span></li><li><strong>404</strong><span>Huiyuan’s essay</span></li><li><strong>527</strong><span>Ich’adon’s martyrdom in Silla’s conversion account</span></li><li><strong>608</strong><span>Wŏn’gwang drafts the petition</span></li></ol><div class=\"concept-row\"><div><h3>Karma</h3><p>Intentional action and its consequences.</p></div><div><h3>Saṃsāra</h3><p>The cycle of birth, death, and rebirth.</p></div><div><h3>Nirvana</h3><p>Liberation from craving and the cycle of rebirth.</p></div></div><p class=\"source-note\">Buddhist teaching travelled through people, translations, trade networks, and patronage. Political division is context for its growth, not its sole explanation.</p>"
+          "html": "<p class=\"meta chronology-legend\">China and Silla on one time scale · dots = events · lines = lifespans</p><p class=\"meta chronology-mobile-note\">Events and lifespans in chronological order · spacing is not to scale</p>"
+        },
+        {
+          "html": "<p class=\"timeline-context\"><strong>Mouzi belongs at the beginning of this story:</strong> the dialogue presents a late-Han setting. Its authorship and date are debated, so it has no precise marker here.</p><figure class=\"chronology-desktop\"><a href=\"../images/hist/oct13/timeline.svg\" aria-label=\"Open full-size graphic timeline\"><img src=\"../images/hist/oct13/timeline.svg\" width=\"1160\" height=\"500\" alt=\"Timeline from 200 to 650 CE. Wang Xizhi and Huiyuan overlap in the fourth century; Huiyuan’s 404 essay precedes Silla’s 527 conversion account and Wŏn’gwang’s 608 petition.\"></a></figure><ol class=\"chronology-mobile\"><li><strong>220</strong><span>Han dynasty ends.</span></li><li><strong>303–361</strong><span>Wang Xizhi’s life.</span></li><li><strong>311</strong><span>Luoyang falls.</span></li><li><strong>334–416</strong><span>Huiyuan’s life overlaps Wang Xizhi’s.</span></li><li><strong>404</strong><span>Huiyuan writes on monks and royal homage.</span></li><li><strong>527</strong><span>Ich’adon’s martyrdom in Silla’s conversion account.</span></li><li><strong>608</strong><span>Wŏn’gwang drafts the petition for troops.</span></li><li><strong>612</strong><span>Sui launches its major invasion of Koguryŏ.</span></li></ol><p class=\"citation\"><a href=\"../images/hist/oct13/timeline.svg\">Open full-size timeline</a> · Dates: Ebrey pp. 56–74; SCT pp. 427–429; SKT pp. 41–46; <a href=\"https://www.metmuseum.org/art/collection/search/39899\">The Met: Wang Xizhi</a>; <a href=\"https://encykorea.aks.ac.kr/Article/E0002050\">Academy of Korean Studies: petition and Sui war</a>. Wang’s lifespan follows the museum’s conventional dating. Dates align events; the lines do not imply causation.</p><div class=\"concept-row\"><div><h3>Karma</h3><p>Intentional action and its consequences.</p></div><div><h3>Saṃsāra</h3><p>The cycle of birth, death, and rebirth.</p></div><div><h3>Nirvana</h3><p>Liberation from craving and the cycle of rebirth.</p></div></div><p class=\"source-note\">Buddhist teaching travelled through people, translations, trade networks, and patronage. Political division is context for its growth, not its sole explanation.</p>"
         },
         {
           "passage": {
