@@ -20,3 +20,10 @@ Checked 2026-10-11. No generated historical likenesses.
 - Huiyuan: https://encyclopediaofbuddhism.org/wiki/Lushan_Huiyuan ; 334–416, Mount Lu, essay404, Huan Xuan.
 - Mouzi attribution: https://en.wikipedia.org/wiki/Mouzi_Lihuolun ; late-Han narrative setting distinguished from debated authorship/date.
 - Wang's precise lifespan omitted: Ebrey gives307–365, while museum convention often gives303–361. Both place him in fourth-century Eastern Jin.
+
+## October 11 addition: PRO / CON and killing in war
+
+- Foreign-practice quotations: Mouzi, SCT pp. 421–422 and 425, checked against the course text and reader corpus. Confucius citations are Analects 9.14 (Mouzi) and 3.5 (questioner); Mencius is Mengzi 3A4. The page identifies these as competing uses in Mouzi’s dialogue, and flags the disputed Analects 3.5 translation.
+- Foreign dress: Ebrey & Walthall, p. 25, “The King of Zhao Convinces His Uncle to Wear Barbarian Dress”; J. I. Crump translation, modified in textbook. The uncle subsequently accepts the king’s policy.
+- Laozi 31: Philip J. Ivanhoe, Readings in Classical Chinese Philosophy, 3rd edition, p. 187, checked against the preserved full course PDF IVANHOE3-Laozi-171-210.pdf. Necessity lines omitted from the compact reader are explicitly labeled as restored from the full source. This full-source excerpt was added to the private derived quote-validation cache.
+- Wŏn’gwang’s existing two quotations (SKT pp. 45–46) were retained verbatim and relocated from #petition to #war-killing for side-by-side comparison. Petition has an explicit link. All earlier resources remain. No discussion questions added.

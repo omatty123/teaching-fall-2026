@@ -107,6 +107,82 @@
       ]
     },
     {
+      "id": "foreign-affairs",
+      "short": "PRO / CON: foreign practices",
+      "title": "Gentlemen and “barbarian” practices: PRO / CON",
+      "source": "Mouzi’s debate · earlier precedent: the king of Zhao’s foreign dress",
+      "body": [
+        {
+          "p": "<strong>PRO:</strong> reasons to engage with foreign people, teachings, or practices. <strong>CON:</strong> reasons to resist. The sources address different actions: living among foreigners, learning from them, and adopting their dress."
+        },
+        {
+          "html": "<h3>Living among foreigners</h3>"
+        },
+        {
+          "pair": [
+            {
+              "who": "PRO · Mouzi cites Confucius",
+              "quote": "If a noble person dwells in their midst, what rudeness can there be among them?",
+              "cite": "SCT p. 425; Analects 9.14, quoted by Mouzi",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "October 13 reader"
+            },
+            {
+              "who": "CON · The questioner cites Confucius",
+              "quote": "The barbarians with a ruler are not so good as the Chinese without one.",
+              "cite": "SCT p. 425; Analects 3.5, quoted by the questioner",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "October 13 reader"
+            }
+          ]
+        },
+        {
+          "p": "<span class=\"source-note\">Mouzi invokes Confucius’s proposed residence among the “nine barbarian nations.” This supports living among outsiders; it does not itself say that all customs are equally good. The CON quotation follows the assigned translation of a disputed Analects passage.</span>"
+        },
+        {
+          "html": "<h3>Learning from foreign teachings</h3>"
+        },
+        {
+          "pair": [
+            {
+              "who": "PRO · Mouzi",
+              "quote": "What accords with rightness is to be followed, what heals the sick is good. <mark>The gentleman-scholar draws widely on all forms of good</mark> and thereby benefits his character.",
+              "cite": "SCT pp. 421–422",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "October 13 reader"
+            },
+            {
+              "who": "CON · The questioner cites Mencius",
+              "quote": "I have heard of using what is Chinese to change what is barbarian, but I have never heard of <mark>using what is barbarian to change what is Chinese</mark>.",
+              "cite": "SCT p. 425; Mengzi 3A4, quoted by the questioner",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "October 13 reader"
+            }
+          ]
+        },
+        {
+          "html": "<h3>Adopting foreign dress · earlier reading</h3>"
+        },
+        {
+          "pair": [
+            {
+              "who": "PRO · The king of Zhao",
+              "quote": "Clothes exist to be useful and manners respond to conditions.",
+              "cite": "“The King of Zhao Convinces His Uncle to Wear Barbarian Dress,” Ebrey & Walthall, p. 25; trans. J. I. Crump, modified"
+            },
+            {
+              "who": "CON · Gongzi Cheng, the king’s uncle",
+              "quote": "But now the king would discard all this and wear the habit of foreign regions.",
+              "cite": "Same passage, Ebrey & Walthall, p. 25"
+            }
+          ]
+        },
+        {
+          "p": "<span class=\"source-note\">The king connects Hu dress with mounted archery and border defense. His uncle initially treats the change as abandoning inherited civilization, then accepts the king’s argument.</span>"
+        }
+      ]
+    },
+    {
       "id": "huiyuan",
       "short": "Huiyuan",
       "title": "Huiyuan: monks and royal authority",
@@ -174,29 +250,66 @@
           "html": "<div class=\"petition-layout\"><div><p class=\"document-title\" lang=\"ko\">걸사표 <span lang=\"zh-Hant\">乞師表</span></p><h3>Geolsapyo · Petition Requesting Troops</h3><p><strong>Requested by:</strong> King Chinp’yŏng of Silla.<br><strong>Addressed to:</strong> the Sui court.<br><strong>Purpose:</strong> military help against Koguryŏ.</p><p><strong>The petition’s original wording does not survive.</strong> The passage below records the monk’s reply to his king, not the text sent to Sui.</p></div><ol class=\"petition-dates\"><li><strong>608</strong><span>The king commissions Wŏn’gwang to draft it.</span></li><li><strong>611</strong><span>Silla’s embassy requests troops, according to the historical account.</span></li><li><strong>612</strong><span>Sui launches its major invasion of Koguryŏ. Do not reduce the war’s causes to this petition.</span></li></ol></div><p class=\"citation\"><a href=\"https://encykorea.aks.ac.kr/Article/E0002050\">Academy of Korean Studies: petition, dates, and lost text</a> · <a href=\"https://db.history.go.kr/item/compareViewer.do?levelId=sg_004r_0060_0350\">Samguk sagi: the 608 entry</a>.</p>"
         },
         {
-          "passage": {
-            "who": "Wŏn’gwang’s reported reply to the king",
-            "quote": "To destroy others in order to preserve oneself is not the way of a monk. But since I, a poor monk, live in Your Majesty’s territory and waste Your Majesty’s clothes and food, I dare not disobey.",
-            "cite": "SKT p. 45",
-            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
-            "linkLabel": "Oct 13 reader · p. 7"
-          }
-        },
-        {
-          "html": "<p class=\"reading-point\">The tension is explicit: the monk opposes destroying others, yet acknowledges his dependence on the king’s territory and supplies.</p>"
-        },
-        {
-          "passage": {
-            "who": "Five Commandments for Laymen",
-            "quote": "serve your sovereign with loyalty; attend your parents with filial piety; treat your friends with sincerity; <mark>do not retreat from a battlefield</mark>; be discriminating about the taking of life.",
-            "cite": "SKT pp. 45–46",
-            "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
-            "linkLabel": "Oct 13 reader · p. 7",
-            "pageBreak": true
-          }
+          "p": "<a href=\"#war-killing\">Read Wŏn’gwang’s reply and lay commandments beside Laozi below ↓</a>"
         },
         {
           "html": "<details><summary>Names and institutions in the rest of the Silla reading</summary><dl class=\"vocabulary\"><div><dt>Chajang · Jajang <span lang=\"ko\">자장</span></dt><dd>A monk who studied in Tang China and became Silla’s national monastic overseer. SKT pp. 46–48.</dd></div><div><dt>Hwarang <span lang=\"ko\">화랑</span> · “flower youths”</dt><dd>Silla youth groups associated with elite cultivation, royal recruitment, and military service. SKT pp. 54–55.</dd></div><div><dt>Kwanch’ang · Gwanchang <span lang=\"ko\">관창</span></dt><dd>The young hwarang whose death in battle becomes an example of loyalty and courage. SKT pp. 55–56.</dd></div><div><dt>Chin’gol · jingol <span lang=\"ko\">진골</span> · “true bone”</dt><dd>A hereditary elite rank in Silla’s status hierarchy. Chajang’s biography names this background.</dd></div></dl></details>"
+        }
+      ]
+    },
+    {
+      "id": "war-killing",
+      "short": "Laozi: war & killing",
+      "title": "Laozi and Wŏn’gwang: killing in war",
+      "source": "Laozi, chapter 31 · Wŏn’gwang’s reply and Five Commandments for Laymen",
+      "body": [
+        {
+          "html": "<h3>Using force under constraint</h3>"
+        },
+        {
+          "pair": [
+            {
+              "who": "Laozi · Weapons and necessity",
+              "quote": "Weapons are inauspicious instruments, not the instruments of a cultivated person. But if given no other choice, the cultivated person will use them.",
+              "cite": "Laozi 31, trans. Philip J. Ivanhoe, Readings in Classical Chinese Philosophy, 3rd ed., p. 187"
+            },
+            {
+              "who": "Wŏn’gwang’s reported reply to the king",
+              "quote": "To destroy others in order to preserve oneself is not the way of a monk. But since I, a poor monk, live in Your Majesty’s territory and waste Your Majesty’s clothes and food, I dare not disobey.",
+              "cite": "SKT p. 45",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · p. 7"
+            }
+          ]
+        },
+        {
+          "p": "<span class=\"source-note\">Laozi allows the use of weapons when there is no other choice. Wŏn’gwang says destruction violates a monk’s way, but agrees to serve the king who sustains him.</span>"
+        },
+        {
+          "html": "<h3>Victory, mourning, and battlefield duty</h3>"
+        },
+        {
+          "pair": [
+            {
+              "who": "Laozi · Victory calls for mourning",
+              "quote": "A military victory is not a thing of beauty. To beautify victory is to delight in the slaughter of human beings. ... When great numbers of people have been killed, one weeps for them in grief and sorrow. <mark>Military victory is associated with the rites of mourning.</mark>",
+              "cite": "Laozi 31, trans. Philip J. Ivanhoe, p. 187"
+            },
+            {
+              "who": "Five Commandments for Laymen",
+              "quote": "serve your sovereign with loyalty; attend your parents with filial piety; treat your friends with sincerity; <mark>do not retreat from a battlefield</mark>; be discriminating about the taking of life.",
+              "cite": "SKT pp. 45–46",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "Oct 13 reader · p. 7",
+              "pageBreak": true
+            }
+          ]
+        },
+        {
+          "p": "<strong>Even victory does not justify delight in killing.</strong> Laozi prescribes grief and mourning. Wŏn’gwang’s lay precepts combine battlefield loyalty with restraint in taking life; they do not prescribe withdrawal from war."
+        },
+        {
+          "html": "<p class=\"source-note\">The first Laozi excerpt restores lines from the full assigned source that the compact reading omitted. The English quotations above retain Ivanhoe’s translation.</p>"
         }
       ]
     },
