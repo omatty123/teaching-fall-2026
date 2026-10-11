@@ -1,26 +1,14 @@
 {
-  "title": "Buddhism, authority & calligraphy",
-  "description": "Museum objects, Buddhist teachings, a graphic timeline, and paired passages from Mouzi, Huiyuan, Laozi and Wŏn’gwang.",
+  "title": "Buddhism in East Asia: family, kingship, and salvation",
+  "description": "From Han imperial order to Buddhist communities in China and Silla: the arguments of Mouzi, Huiyuan, and Wŏn’gwang, and their consequences for East Asia.",
   "meta": "Ebrey 56–74, 103–105 · Mouzi and Huiyuan (SCT) · Wŏn’gwang and the Silla conversion (SKT)",
   "sections": [
     {
-      "id": "art",
-      "short": "Buddhist images",
-      "title": "Bangasayusang · Pensive Bodhisattva",
-      "source": "Korea · Three Kingdoms period · early 7th century",
+      "id": "course-story",
+      "title": "What we bring from earlier classes",
       "body": [
         {
-          "html": "<div class=\"object-opening\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/pensive-83.jpg\"><img class=\"pensive\" src=\"../images/hist/oct13/pensive-83.jpg\" width=\"1228\" height=\"2048\" alt=\"Seated gilt-bronze pensive bodhisattva: right ankle on left knee, fingers touching cheek\"></a><figcaption><a href=\"../images/hist/oct13/pensive-83.jpg\">Enlarge photograph</a> · <a href=\"https://commons.wikimedia.org/wiki/File:Pensive_Bodhisattva_02.jpg\">National Museum of Korea image · KOGL Type 1</a></figcaption></figure><div class=\"object-text\"><dl class=\"object-facts\"><dt>Date</dt><dd>Early 7th century</dd><dt>Period</dt><dd>Korea’s Three Kingdoms</dd><dt>Material</dt><dd>Gilt bronze · bronze covered with gold</dd><dt>Height</dt><dd>93.5 cm</dd><dt>Collection</dt><dd>National Museum of Korea, Seoul<br>National Treasure 83 · Deoksu 3312</dd></dl><p>The three-peaked crown and bare upper body distinguish this sculpture from National Treasure 78. It is displayed in the museum’s <strong>Room of Quiet Contemplation</strong>.</p><p>Pensive bodhisattvas are often associated with <strong>Maitreya</strong>, the future Buddha, called <strong>Mireuk</strong> in Korean. The museum notes a close comparison with the wooden pensive image at Kōryūji in Japan.</p><p class=\"citation\"><a href=\"https://vcm.museum.go.kr/ENG/contents/E0403000000.do?relicId=1256&amp;schM=view&amp;searchId=represent\">Museum collection record</a> · <a href=\"https://www.museum.go.kr/ENG/contents/E0401000000.do?relicRecommendId=519715&amp;schM=view\">Museum’s historical comparison</a></p><p class=\"source-note\">The collection record gives the Three Kingdoms period; a specific kingdom or original temple is not established here.</p></div></div>"
-        }
-      ]
-    },
-    {
-      "id": "teachings",
-      "short": "Four Truths / Three Jewels",
-      "title": "Three Jewels & Four Noble Truths",
-      "body": [
-        {
-          "html": "<div class=\"sermon-teaching\"><figure><a href=\"../images/hist/oct13/first-sermon-met.jpg\"><img src=\"../images/hist/oct13/first-sermon-met.jpg\" width=\"1200\" height=\"1200\" alt=\"Gandharan stone relief: the Buddha sits at the center, a Dharma wheel is below his right hand at the viewer’s left, and five monks surround him. Vajrapani stands immediately to the viewer’s left of the Buddha.\" loading=\"lazy\"></a><figcaption><a href=\"https://www.metmuseum.org/art/collection/search/38118\">Vajrapani Attends the Buddha at His First Sermon</a> · Gandhara, ca. 2nd century · Schist · The Met, 1980.527.4 · Public domain. <a href=\"../images/hist/oct13/first-sermon-met.jpg\">Enlarge photograph</a></figcaption></figure><div class=\"sermon-key\"><h3>Three Jewels in the image</h3><dl><dt>Buddha · the teacher</dt><dd>The seated figure at the center.</dd><dt>Dharma · the teaching</dt><dd>The wheel below his right hand: “setting the wheel of Dharma in motion.”</dd><dt>Sangha · the community</dt><dd>The five monks gathered around him.</dd></dl><p class=\"citation\">The standing figure beside the Buddha is <a href=\"https://www.metmuseum.org/art/collection/search/38118\">Vajrapani</a>, a protector; he is not one of the monks.</p><h3>Four Noble Truths</h3><ol class=\"truths-reference\"><li><strong>Suffering</strong> — to understand.</li><li><strong>Craving, its origin</strong> — to abandon.</li><li><strong>Cessation</strong> — to realize.</li><li><strong>The Eightfold Path</strong> — to develop.</li></ol><p class=\"citation\">Teaching summary: <a href=\"https://www.dhammatalks.org/suttas/SN/SN56_11.html\">SN 56.11</a> · <a href=\"https://www.dhammatalks.org/suttas/KN/Khp/khp1.html\">The Three Refuges</a> · SCT, pp. 416–420.</p><p><a href=\"https://www.dharmabydesign.com/ben-lilagan-59pesquarespacecom/config/pages/59718cd117bffce69a2e26a2/2017/8/15/the-four-noble-truths\">Existing Four Noble Truths infographic — Ben Lilagan, Dharma by Design</a></p></div></div><details><summary>Brief reference: terms in the readings</summary><p><a href=\"../images/hist/oct13/buddhist-teachings.svg\">Text outline: Three Jewels, Four Truths and Eightfold Path</a></p><dl class=\"compact-terms\"><dt>Karma</dt><dd>Intentional action and its consequences.</dd><dt>Saṃsāra</dt><dd>The cycle of birth, death and rebirth.</dd><dt>Nirvana</dt><dd>Liberation from craving and rebirth.</dd><dt>Mahāyāna</dt><dd>“Great Vehicle”; traditions emphasizing the bodhisattva path.</dd><dt>Bodhisattva</dt><dd>A being on the path to Buddhahood; the Mahāyāna ideal joins wisdom and compassion.</dd><dt>No permanent self</dt><dd>No unchanging, independent self underlies a person’s changing parts.</dd><dt>Merit</dt><dd>Beneficial consequences of good deeds, including support for religious life.</dd><dt>Patronage</dt><dd>Material support: food, land, buildings, images or protection.</dd></dl></details>"
+          "html": "<dl class=\"course-connections\"><dt>Early traditions</dt><dd>We compared accounts of good order, ethical conduct, and rightful rule: Ru, Mo, Dao, and Fa.</dd><dt>Qin and Han</dt><dd>We then followed empire-building. Lu Jia and Dong Zhongshu made the ruler answerable to more than his own desires. <a href=\"class-2026-10-08.html\">October 8: Han rule</a>.</dd><dt>Today’s change</dt><dd>Family and government remain important. Buddhism introduces a further goal: release from suffering and rebirth, pursued through lay practice and monastic life.</dd></dl><p class=\"citation\">Course synthesis · Ebrey 20–74; SCT 416–429. The passages below show disagreements within Buddhism as well as objections to it.</p>"
         }
       ]
     },
@@ -29,6 +17,9 @@
       "short": "Graphic timeline",
       "title": "People and events · 200–650 CE",
       "body": [
+        {
+          "p": "The Han ends in <strong>220 CE</strong>. Rival states, migration, and changing elites reshape China. Buddhism had already arrived during the Han; its later expansion depends on travel, translation, patronage, and religious appeal—not political disorder alone. <a href=\"https://www.metmuseum.org/exhibitions/listings/2004/china-dawn-of-a-golden-age\">Historical overview</a> · <a href=\"https://www.metmuseum.org/exhibitions/listings/2012/buddhism\">Trade and Buddhist transmission</a>. Overland networks connected India through Central Asia to China; monk-emissaries from Chinese states helped carry Buddhism to the Korean kingdoms. <a href=\"https://www.metmuseum.org/fr/essays/korean-buddhist-sculpture-5th-9th-century\">Transmission to Korea</a>."
+        },
         {
           "html": "<p class=\"meta chronology-legend\">China and Silla on one time scale · dots = events · lines = lifespans</p><p class=\"meta chronology-mobile-note\">Events and lifespans in chronological order · spacing is not to scale</p>"
         },
@@ -45,13 +36,57 @@
       ]
     },
     {
+      "id": "calligraphy",
+      "short": "Master Wang",
+      "title": "Wang Xizhi: handwriting and printed type",
+      "source": "Wang Xizhi 王羲之 · Wáng Xīzhī · fourth-century Eastern Jin · Ebrey pp. 64, 70",
+      "body": [
+        {
+          "p": "<strong>Another development in the same world:</strong> Wang Xizhi represents elite calligraphic culture in Eastern Jin China. The letter makes writing a personal artistic practice as well as a means of record-keeping. <a href=\"https://www.metmuseum.org/essays/chinese-calligraphy\">Calligraphy’s cultural role</a>. His place here is a comparison within the period, not an illustration of Buddhist doctrine."
+        },
+        {
+          "html": "<p>Wang Xizhi was an Eastern Jin official and calligrapher. <em>Timely Clearing after Snowfall</em> survives as a <strong>Tang tracing copy</strong>; no autograph originals survive.</p><div class=\"writing-compare\"><figure class=\"writing-source\"><div class=\"letter-detail\"><img src=\"../images/hist/oct13/wang-snowfall-album.jpg\" alt=\"Enlarged right-hand leaf: the Tang tracing copy of Wang Xizhi’s letter, with later collectors’ seals\" loading=\"lazy\"><span id=\"glyph-focus\" class=\"glyph-focus\" hidden></span></div><figcaption>Letter detail · ink on paper · 23 × 14.8 cm. <a href=\"../images/hist/oct13/wang-snowfall-album.jpg\">Open full album image</a> · <a href=\"https://theme.npm.edu.tw/exh106/treasure/en/page-2.html\">National Palace Museum: history and attribution</a>.</figcaption></figure><div class=\"writing-type\"><h3>The same characters in print</h3><div class=\"glyph-buttons\" aria-label=\"Locate a character in the letter\"><button data-glyph=\"0\" aria-pressed=\"false\"><span lang=\"zh-Hant\">快</span><small>kuài</small><small>sudden</small></button><button data-glyph=\"1\" aria-pressed=\"false\"><span lang=\"zh-Hant\">雪</span><small>xuě</small><small>snow</small></button><button data-glyph=\"2\" aria-pressed=\"false\"><span lang=\"zh-Hant\">時</span><small>shí</small><small>time</small></button><button data-glyph=\"3\" aria-pressed=\"false\"><span lang=\"zh-Hant\">晴</span><small>qíng</small><small>clear</small></button></div><p><strong>快雪時晴 · Kuài xuě shí qíng</strong><br>“Clearing after sudden snow.”</p><p id=\"glyph-status\" class=\"source-note\" aria-live=\"polite\">Select a printed character to locate its brush form.</p><p><strong>Running script · xíngshū 行書:</strong> variable strokes and connected movement. The type beside it is modern sans-serif.</p><div class=\"activity\"><h3>Five-minute calligraphy comparison</h3><ol><li>Copy the four printed characters once.</li><li>Copy their forms from the historical model.</li><li>Circle differences in spacing, proportion and connections.</li></ol></div></div></div><details><summary>Whole album opening and image source</summary><a class=\"image-link\" href=\"../images/hist/oct13/wang-snowfall-album.jpg\"><img class=\"whole-album\" src=\"../images/hist/oct13/wang-snowfall-album.jpg\" alt=\"Full album opening: Wang’s letter is on darker paper at right, surrounded by later inscriptions and seals\" loading=\"lazy\"></a><p class=\"citation\">The National Palace Museum, Taipei · <a href=\"https://digitalarchive.npm.gov.tw/opendata/Pub/Detail?dep=P&amp;id=19&amp;mode=full\">Object record and open-image terms</a> · <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>. Enlarged letter detail shown above; the full image remains intact.</p><p class=\"source-note\"><a href=\"https://digitalarchive.npm.gov.tw/opendata/Pub/DetailEng/15977?dep=P&amp;mode=full\">Later modelbook rubbing</a> retained as an additional reference.</p></details>"
+        }
+      ]
+    },
+    {
+      "id": "teachings",
+      "short": "Four Truths / Three Jewels",
+      "title": "Three Jewels & Four Noble Truths",
+      "body": [
+        {
+          "p": "<strong>Buddhism</strong> is a religious tradition originating in India, centered on the Buddha’s awakening and teachings. <strong>Siddhartha Gautama</strong> is the historical Buddha; “Buddha” means an awakened one. Lay followers support and practice the teachings; monks and nuns leave household life for a disciplined religious community. <a href=\"https://afe.easia.columbia.edu/main_pop/ps/ps_china-mouzi-disposing-error.htm\">Introduction and source context</a> · SCT 416–420."
+        },
+        {
+          "html": "<div class=\"sermon-teaching\"><figure><a href=\"../images/hist/oct13/first-sermon-met.jpg\"><img src=\"../images/hist/oct13/first-sermon-met.jpg\" width=\"1200\" height=\"1200\" alt=\"Gandharan stone relief: the Buddha sits at the center, a Dharma wheel is below his right hand at the viewer’s left, and five monks surround him. Vajrapani stands immediately to the viewer’s left of the Buddha.\" loading=\"lazy\"></a><figcaption><a href=\"https://www.metmuseum.org/art/collection/search/38118\">Vajrapani Attends the Buddha at His First Sermon</a> · Gandhara, ca. 2nd century · Schist · The Met, 1980.527.4 · Public domain. <a href=\"../images/hist/oct13/first-sermon-met.jpg\">Enlarge photograph</a></figcaption></figure><div class=\"sermon-key\"><h3>Three Jewels in the image</h3><dl><dt>Buddha · the teacher</dt><dd>The seated figure at the center.</dd><dt>Dharma · the teaching</dt><dd>The wheel below his right hand: “setting the wheel of Dharma in motion.”</dd><dt>Sangha · the community</dt><dd>The five monks gathered around him.</dd></dl><p class=\"citation\">The standing figure beside the Buddha is <a href=\"https://www.metmuseum.org/art/collection/search/38118\">Vajrapani</a>, a protector; he is not one of the monks.</p><h3>Four Noble Truths</h3><ol class=\"truths-reference\"><li><strong>Suffering</strong> — to understand.</li><li><strong>Craving, its origin</strong> — to abandon.</li><li><strong>Cessation</strong> — to realize.</li><li><strong>The Eightfold Path</strong> — to develop.</li></ol><p class=\"citation\">Teaching summary: <a href=\"https://www.dhammatalks.org/suttas/SN/SN56_11.html\">SN 56.11</a> · <a href=\"https://www.dhammatalks.org/suttas/KN/Khp/khp1.html\">The Three Refuges</a> · SCT, pp. 416–420.</p><p><a href=\"https://www.dharmabydesign.com/ben-lilagan-59pesquarespacecom/config/pages/59718cd117bffce69a2e26a2/2017/8/15/the-four-noble-truths\">Existing Four Noble Truths infographic — Ben Lilagan, Dharma by Design</a></p></div></div><details><summary>Brief reference: terms in the readings</summary><p><a href=\"../images/hist/oct13/buddhist-teachings.svg\">Text outline: Three Jewels, Four Truths and Eightfold Path</a></p><dl class=\"compact-terms\"><dt>Karma</dt><dd>Intentional action and its consequences.</dd><dt>Saṃsāra</dt><dd>The cycle of birth, death and rebirth.</dd><dt>Nirvana</dt><dd>Liberation from craving and rebirth.</dd><dt>Mahāyāna</dt><dd>“Great Vehicle”; traditions emphasizing the bodhisattva path.</dd><dt>Bodhisattva</dt><dd>A being on the path to Buddhahood; the Mahāyāna ideal joins wisdom and compassion.</dd><dt>No permanent self</dt><dd>No unchanging, independent self underlies a person’s changing parts.</dd><dt>Merit</dt><dd>Beneficial consequences of good deeds, including support for religious life.</dd><dt>Patronage</dt><dd>Material support: food, land, buildings, images or protection.</dd></dl></details>"
+        }
+      ]
+    },
+    {
       "id": "images",
       "short": "Buddha / bodhisattva",
       "title": "Buddha and bodhisattva",
       "source": "Two sculptures from Gandhara, in present-day Pakistan · not shown at the same scale",
       "body": [
         {
+          "p": "<strong>Mahāyāna</strong> (“Great Vehicle”) gives special importance to the bodhisattva’s pursuit of awakening for the benefit of all beings. This helps explain why Buddhist devotion includes figures such as Maitreya, not only the historical Buddha. SCT 419–420."
+        },
+        {
           "html": "<div class=\"object-pair\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/buddha.jpg\"><img src=\"../images/hist/oct13/buddha.jpg\" alt=\"Standing Buddha in a deeply folded monastic robe\" loading=\"lazy\"></a><figcaption><h3>Buddha</h3><p>An awakened one. This image wears a <strong>monastic robe</strong>.</p><a href=\"https://www.metmuseum.org/art/collection/search/38820\">Standing Buddha, ca. 3rd–4th century</a> · The Met, 67.154.5. Public domain.</figcaption></figure><figure><a class=\"image-link\" href=\"../images/hist/oct13/maitreya.jpg\"><img src=\"../images/hist/oct13/maitreya.jpg\" alt=\"Standing bodhisattva Maitreya with jewelry, draped clothing, and a water flask\" loading=\"lazy\"></a><figcaption><h3>Bodhisattva Maitreya</h3><p>This image wears <strong>jewelry and princely dress</strong>. Maitreya is the Buddha of the future.</p><a href=\"https://www.metmuseum.org/art/collection/search/38474\">Standing Bodhisattva Maitreya, ca. 3rd century</a> · The Met, 1991.75. Public domain.</figcaption></figure></div>"
+        }
+      ]
+    },
+    {
+      "id": "art",
+      "short": "Buddhist images",
+      "title": "Bangasayusang · Pensive Bodhisattva",
+      "source": "Korea · Three Kingdoms period · early 7th century",
+      "body": [
+        {
+          "p": "<strong>What transmission produced:</strong> Buddhist images became objects of devotion in Korea. This seventh-century sculpture, and its Japanese comparison, give material evidence for a religious culture shared across political borders."
+        },
+        {
+          "html": "<div class=\"object-opening\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/pensive-83.jpg\"><img class=\"pensive\" src=\"../images/hist/oct13/pensive-83.jpg\" width=\"1228\" height=\"2048\" alt=\"Seated gilt-bronze pensive bodhisattva: right ankle on left knee, fingers touching cheek\"></a><figcaption><a href=\"../images/hist/oct13/pensive-83.jpg\">Enlarge photograph</a> · <a href=\"https://commons.wikimedia.org/wiki/File:Pensive_Bodhisattva_02.jpg\">National Museum of Korea image · KOGL Type 1</a></figcaption></figure><div class=\"object-text\"><dl class=\"object-facts\"><dt>Date</dt><dd>Early 7th century</dd><dt>Period</dt><dd>Korea’s Three Kingdoms</dd><dt>Material</dt><dd>Gilt bronze · bronze covered with gold</dd><dt>Height</dt><dd>93.5 cm</dd><dt>Collection</dt><dd>National Museum of Korea, Seoul<br>National Treasure 83 · Deoksu 3312</dd></dl><p>The three-peaked crown and bare upper body distinguish this sculpture from National Treasure 78. It is displayed in the museum’s <strong>Room of Quiet Contemplation</strong>.</p><p>Pensive bodhisattvas are often associated with <strong>Maitreya</strong>, the future Buddha, called <strong>Mireuk</strong> in Korean. The museum notes a close comparison with the wooden pensive image at Kōryūji in Japan.</p><p class=\"citation\"><a href=\"https://vcm.museum.go.kr/ENG/contents/E0403000000.do?relicId=1256&amp;schM=view&amp;searchId=represent\">Museum collection record</a> · <a href=\"https://www.museum.go.kr/ENG/contents/E0401000000.do?relicRecommendId=519715&amp;schM=view\">Museum’s historical comparison</a></p><p class=\"source-note\">The collection record gives the Three Kingdoms period; a specific kingdom or original temple is not established here.</p></div></div>"
         }
       ]
     },
@@ -61,6 +96,9 @@
       "title": "Mouzi: defending Buddhism with Chinese authorities",
       "source": "Mouzi 牟子 · “Master Mou” · Disposing of Error, SCT pp. 421–426",
       "body": [
+        {
+          "p": "<strong>The problem is belonging:</strong> shaving the head and remaining celibate challenge filial obligations. Mouzi answers with figures his opponents already respect. The defense works by interpreting Chinese tradition, not simply rejecting it."
+        },
         {
           "html": "<div class=\"identity\"><div class=\"name-script\" lang=\"zh-Hant\">牟子</div><div><h3>Mouzi · Móuzǐ</h3><p>The voice of a dialogue defending Buddhism against objections about the Classics, family duties, and foreign origins. The text presents a late-Han setting; its authorship and date remain debated.</p><p class=\"source-note\"><strong>Mouzi 牟子 is not Mozi 墨子</strong>, the earlier thinker studied in this course. <a href=\"https://en.wikipedia.org/wiki/Mouzi_Lihuolun\">Text and attribution</a>.</p></div></div>"
         },
@@ -201,6 +239,9 @@
       "source": "Huiyuan, A Monk Does Not Bow Down Before a King · SCT pp. 427–429",
       "body": [
         {
+          "p": "<strong>The institutional consequence:</strong> a monastery is a community with obligations distinct from the household. Huiyuan defends monks’ exemption from royal homage while affirming lay followers’ duties to parents and rulers. This is a claim about religious and ritual status, not modern separation of religion and state."
+        },
+        {
           "html": "<div class=\"place-profile\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/donglin.jpg\"><img src=\"../images/hist/oct13/donglin.jpg\" alt=\"Present-day Donglin Temple complex at Mount Lu, with tiled roofs and trees\" loading=\"lazy\"></a><figcaption>Donglin Temple at Mount Lu today. Modern buildings, not a surviving fourth-century view. Photo: 沈澄心, 2023, <a href=\"https://commons.wikimedia.org/wiki/File:Donglin_Temple,_Lushan_20231021_15.jpg\">CC0</a>.</figcaption></figure><div><h3>Huiyuan <span lang=\"zh-Hant\">慧遠</span> · Huìyuǎn</h3><p><strong>334–416 · Mount Lu, southern China</strong></p><p>A monk and community leader at Donglin Temple. His <em>A Monk Does Not Bow Down Before a King</em> dates to <strong>404</strong>, during the controversy over Huan Xuan’s demand for monastic obeisance.</p><p>His distinction: householders follow ordinary family and political duties; monastics serve a religious purpose that warrants a different ritual status.</p><p class=\"source-note\"><a href=\"https://encyclopediaofbuddhism.org/wiki/Lushan_Huiyuan\">Biographical background</a> · SCT pp. 427–429.</p></div></div>"
         },
         {
@@ -229,6 +270,9 @@
       "title": "Silla: conversion and royal patronage",
       "source": "Sources of Korean Tradition · pp. 41–46",
       "body": [
+        {
+          "p": "<strong>A different political setting:</strong> Silla is one of three competing Korean kingdoms. In this conversion narrative, Pŏphŭng seeks royal support for Buddhism while ministers resist. Ich’adon’s death legitimizes the king’s religious policy within the story. Ebrey 103–105; SKT 41–44."
+        },
         {
           "html": "<div class=\"concept-row\"><div><h3>Pŏphŭng · Beopheung</h3><p>The king associated with Silla’s official acceptance of Buddhism. The reading calls him <strong>Pŏpkong</strong>, his monastic name.</p></div><div><h3>Ich’adon</h3><p>The court official whose execution and miraculous death mark the conversion account, dated <strong>527</strong>.</p></div><div><h3>A later sacred biography</h3><p>The account survives in Kakhun’s <em>Lives of Eminent Korean Monks</em> (1215). Miracles are the narrative’s claims.</p></div></div>"
         },
@@ -364,24 +408,13 @@
       ]
     },
     {
-      "id": "calligraphy",
-      "short": "Master Wang",
-      "title": "Wang Xizhi: handwriting and printed type",
-      "source": "Wang Xizhi 王羲之 · Wáng Xīzhī · fourth-century Eastern Jin · Ebrey pp. 64, 70",
-      "body": [
-        {
-          "html": "<p>Wang Xizhi was an Eastern Jin official and calligrapher. <em>Timely Clearing after Snowfall</em> survives as a <strong>Tang tracing copy</strong>; no autograph originals survive.</p><div class=\"writing-compare\"><figure class=\"writing-source\"><div class=\"letter-detail\"><img src=\"../images/hist/oct13/wang-snowfall-album.jpg\" alt=\"Enlarged right-hand leaf: the Tang tracing copy of Wang Xizhi’s letter, with later collectors’ seals\" loading=\"lazy\"><span id=\"glyph-focus\" class=\"glyph-focus\" hidden></span></div><figcaption>Letter detail · ink on paper · 23 × 14.8 cm. <a href=\"../images/hist/oct13/wang-snowfall-album.jpg\">Open full album image</a> · <a href=\"https://theme.npm.edu.tw/exh106/treasure/en/page-2.html\">National Palace Museum: history and attribution</a>.</figcaption></figure><div class=\"writing-type\"><h3>The same characters in print</h3><div class=\"glyph-buttons\" aria-label=\"Locate a character in the letter\"><button data-glyph=\"0\" aria-pressed=\"false\"><span lang=\"zh-Hant\">快</span><small>kuài</small><small>sudden</small></button><button data-glyph=\"1\" aria-pressed=\"false\"><span lang=\"zh-Hant\">雪</span><small>xuě</small><small>snow</small></button><button data-glyph=\"2\" aria-pressed=\"false\"><span lang=\"zh-Hant\">時</span><small>shí</small><small>time</small></button><button data-glyph=\"3\" aria-pressed=\"false\"><span lang=\"zh-Hant\">晴</span><small>qíng</small><small>clear</small></button></div><p><strong>快雪時晴 · Kuài xuě shí qíng</strong><br>“Clearing after sudden snow.”</p><p id=\"glyph-status\" class=\"source-note\" aria-live=\"polite\">Select a printed character to locate its brush form.</p><p><strong>Running script · xíngshū 行書:</strong> variable strokes and connected movement. The type beside it is modern sans-serif.</p><div class=\"activity\"><h3>Five-minute calligraphy comparison</h3><ol><li>Copy the four printed characters once.</li><li>Copy their forms from the historical model.</li><li>Circle differences in spacing, proportion and connections.</li></ol></div></div></div><details><summary>Whole album opening and image source</summary><a class=\"image-link\" href=\"../images/hist/oct13/wang-snowfall-album.jpg\"><img class=\"whole-album\" src=\"../images/hist/oct13/wang-snowfall-album.jpg\" alt=\"Full album opening: Wang’s letter is on darker paper at right, surrounded by later inscriptions and seals\" loading=\"lazy\"></a><p class=\"citation\">The National Palace Museum, Taipei · <a href=\"https://digitalarchive.npm.gov.tw/opendata/Pub/Detail?dep=P&amp;id=19&amp;mode=full\">Object record and open-image terms</a> · <a href=\"https://creativecommons.org/licenses/by/4.0/\">CC BY 4.0</a>. Enlarged letter detail shown above; the full image remains intact.</p><p class=\"source-note\"><a href=\"https://digitalarchive.npm.gov.tw/opendata/Pub/DetailEng/15977?dep=P&amp;mode=full\">Later modelbook rubbing</a> retained as an additional reference.</p></details>"
-        }
-      ]
-    },
-    {
       "id": "close",
       "short": "State & monastery",
-      "title": "State authority and monastic life",
-      "source": "Ebrey p. 72",
+      "title": "What changes in East Asian history",
+      "source": "Course synthesis · Ebrey 56–74; SCT 421–429; SKT 41–48",
       "body": [
         {
-          "html": "<div class=\"comparison-summary\"><div><strong>Mouzi</strong><span>Defends Buddhist practice through Chinese precedents.</span></div><div><strong>Huiyuan</strong><span>Defends a distinct ritual status for monastics.</span></div><div><strong>Wŏn’gwang</strong><span>Negotiates religious obligations within service to a king.</span></div></div>"
+          "html": "<dl class=\"course-connections\"><dt>Family and community</dt><dd>Monastic life organizes a community outside marriage and descent. That makes celibacy, filial duty, and support for religious communities matters of public debate.</dd><dt>Political authority</dt><dd>Rulers gain religious allies, advisers, and institutions to sponsor. Huiyuan defends exemption from royal homage; Wŏn’gwang accepts royal service despite its conflict with monastic commitments.</dd><dt>A connected East Asia</dt><dd>Texts, monks, images, and practices move across borders. Local patrons and courts reshape them. Shared religion does not erase different kingdoms or competing interests.</dd></dl>"
         },
         {
           "passage": {
@@ -389,6 +422,9 @@
             "quote": "in China the governments successfully claimed the authority to regulate Buddhist clergy and monastic establishments.",
             "cite": "Ebrey & Walthall, Pre-Modern East Asia, p. 72"
           }
+        },
+        {
+          "html": "<h3>Next: Sui–Tang models, Korea, and Japan · October 15</h3><p>Imperial reunification will operate in a world already transformed by Buddhist institutions. Chajang’s work in Silla—monastic regulation and court adoption of Chinese practices—connects today’s readings to the next class on adapting continental models. SKT 46–48; <a href=\"https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view\">October 15 reader</a>.</p><h3>For the Great Debate · October 20</h3><p>The Fo position must explain what religious practice contributes to the realm and what it may refuse the ruler. Mouzi, Huiyuan, and Wŏn’gwang supply different arguments—not one unanimous Buddhist policy. <a href=\"https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit\">Great Debate guide</a>.</p>"
         }
       ]
     }
@@ -407,7 +443,7 @@
   ],
   "footnote": "Excerpts retain the assigned translations. SCT: Wm. Theodore de Bary and Irene Bloom, eds., <em>Sources of Chinese Tradition</em>, vol. 1, 2nd ed. SKT: Peter H. Lee and Wm. Theodore de Bary, eds., <em>Sources of Korean Tradition</em>, vol. 1 (1997). Object captions and modern explanations are background, not primary-source quotations.",
   "nameLinks": {
-    "Mouzi": "https://en.wikipedia.org/wiki/Mouzi_Lihuolun",
+    "Mouzi": "https://afe.easia.columbia.edu/main_pop/ps/ps_china-mouzi-disposing-error.htm",
     "Mozi": "https://plato.stanford.edu/entries/mohism/",
     "Huiyuan": "https://encyclopediaofbuddhism.org/wiki/Lushan_Huiyuan",
     "Huan Xuan": "https://en.wikipedia.org/wiki/Huan_Xuan",
@@ -439,6 +475,66 @@
     "Gongzi Cheng": "https://ctext.org/zhan-guo-ce/zhao-ce-er",
     "king of Zhao": "https://en.wikipedia.org/wiki/King_Wuling_of_Zhao",
     "King of Zhao": "https://en.wikipedia.org/wiki/King_Wuling_of_Zhao",
-    "Kōryūji": "https://vcm.museum.go.kr/ENG/contents/E0403000000.do?relicId=1256&schM=view&searchId=represent"
-  }
+    "Kōryūji": "https://vcm.museum.go.kr/ENG/contents/E0403000000.do?relicId=1256&schM=view&searchId=represent",
+    "Siddhartha Gautama": "https://www.metmuseum.org/essays/life-of-the-buddha",
+    "Lu Jia": "class-2026-10-08.html#qin",
+    "Dong Zhongshu": "class-2026-10-08.html#heaven"
+  },
+  "overview": "<p class=\"lesson-argument\">Buddhism offers liberation from suffering and rebirth, and a community organized around that goal. In China and Korea, it creates new claims on people’s loyalties, labor, and wealth—alongside those of family and ruler.</p><div class=\"principal-figures\"><h2>Three voices in the readings</h2><dl><dt>Mouzi</dt><dd><a href=\"#mouzi\">Defends a foreign teaching</a> through Chinese precedents. The dialogue’s date and authorship are debated.</dd><dt>Huiyuan · 334–416</dt><dd><a href=\"#huiyuan\">Defends a distinct status for monks</a>: a ruler can sustain life but cannot end suffering.</dd><dt>Wŏn’gwang · early 7th century</dt><dd><a href=\"#petition\">Accepts obligations to Silla’s king</a>, even when royal service conflicts with a monk’s prohibition on killing.</dd></dl></div>",
+  "parts": [
+    {
+      "id": "after-han",
+      "short": "1 · After the Han",
+      "title": "1. From Han empire to a divided, connected world",
+      "summary": "The political setting changes; older ethical traditions and elite culture continue.",
+      "sections": [
+        "course-story",
+        "spread",
+        "calligraphy"
+      ]
+    },
+    {
+      "id": "buddhist-tradition",
+      "short": "2 · Buddhism",
+      "title": "2. Buddhism: liberation, community, and sacred images",
+      "summary": "A teaching about suffering also creates communities, practices, and objects of devotion.",
+      "sections": [
+        "teachings",
+        "images",
+        "art"
+      ]
+    },
+    {
+      "id": "buddhism-china",
+      "short": "3 · China: family and ruler",
+      "title": "3. China: a foreign teaching confronts family and ruler",
+      "summary": "Mouzi argues for acceptance; Huiyuan argues that monastic life deserves a distinct ritual status.",
+      "sections": [
+        "mouzi",
+        "foreign-affairs",
+        "huiyuan"
+      ]
+    },
+    {
+      "id": "buddhism-silla",
+      "short": "4 · Silla: monks and kings",
+      "title": "4. Silla: royal patronage, monastic duty, and war",
+      "summary": "Buddhism can serve kingship as well as limit its claims. Silla’s sources make that tension concrete.",
+      "sections": [
+        "silla",
+        "petition",
+        "war-killing",
+        "seasonal-killing"
+      ]
+    },
+    {
+      "id": "consequences",
+      "short": "5 · Consequences and next steps",
+      "title": "5. A lasting change in communities, kingship, and culture",
+      "summary": "Buddhism becomes part of how East Asian societies organize authority and connect with one another.",
+      "sections": [
+        "close"
+      ]
+    }
+  ]
 }

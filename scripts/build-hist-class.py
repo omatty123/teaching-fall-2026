@@ -155,12 +155,30 @@ def main():
     if prev:
         p = datetime.date.fromisoformat(prev[0])
         nav.append(f'<a href="{e(prev[1])}">{p.strftime("%B")} {p.day} class</a>')
-    chips = "".join(f'<a href="#{e(s["id"])}">{e(s.get("short") or s["title"])}</a>' for s in day["sections"])
-    secs = []
+    parts = day.get("parts", [])
+    if parts:
+        members = [sid for part in parts for sid in part["sections"]]
+        expected = [s["id"] for s in day["sections"]]
+        if len(members) != len(set(members)) or set(members) != set(expected):
+            raise SystemExit("Lesson parts must include every section exactly once")
+    chips = "".join(f'<a href="#{e(s["id"])}">{e(s.get("short") or s["title"])}</a>' for s in (parts or day["sections"]))
+    rendered = {}
     for s in day["sections"]:
         src = f'<p class="meta">{e(s["source"])}</p>' if s.get("source") else ""
         ask = f'<p class="question">{s["ask"]}</p>' if s.get("ask") else ""
-        secs.append(f'<section id="{e(s["id"])}"><h2>{e(s["title"])}</h2>{src}{"".join(block(b) for b in s["body"])}{ask}</section>')
+        body = "".join(block(b) for b in s["body"])
+        level = 3 if parts else 2
+        if parts:
+            body = re.sub(r"<(/?)h3>", r"<\1h4>", body)
+        rendered[s["id"]] = f'<section id="{e(s["id"])}"><h{level}>{e(s["title"])}</h{level}>{src}{body}{ask}</section>'
+    if parts:
+        secs = []
+        for part in parts:
+            links = "".join(f'<a href="#{e(sid)}">{e(next(s.get("short") or s["title"] for s in day["sections"] if s["id"] == sid))}</a>' for sid in part["sections"])
+            summary = f'<p class="part-summary">{part["summary"]}</p>' if part.get("summary") else ""
+            secs.append(f'<section class="lesson-part" id="{e(part["id"])}"><h2>{e(part["title"])}</h2>{summary}<nav class="part-links" aria-label="{e(part["title"])}">{links}</nav>{"".join(rendered[sid] for sid in part["sections"])}</section>')
+    else:
+        secs = list(rendered.values())
     readings = "".join(f"<li>{r}</li>" for r in day.get("readings", []))
     extra_css = "".join(f'<link rel="stylesheet" href="{kit(f)}">' for f in day.get("styles", []))
     extra_js = "".join(f'<script src="{kit(f)}"></script>' for f in day.get("scripts", []))
@@ -175,7 +193,7 @@ def main():
 <link rel="stylesheet" href="{kit("hist-212-lesson.css")}">{extra_css}</head>
 <body class="{e(day.get("bodyClass", ""))}"><a class="skip" href="#content">Skip to class materials</a><nav class="top">{"".join(nav)}<button id="highlights" aria-pressed="true">Highlights on</button><button id="project" aria-pressed="false">Large text</button></nav>
 <main id="content"><header><h1>{e(day["title"])}</h1><p class="meta">{when} · {e(day["meta"])}</p>
-<nav class="sections" aria-label="Lesson sections">{chips}<a href="#resources">Readings</a></nav></header>
+<nav class="sections" aria-label="Lesson sections">{chips}<a href="#resources">Readings</a></nav>{day.get("overview", "")}</header>
 {"".join(secs)}
 <section id="resources"><h2>Today’s readings</h2><ul>{readings}</ul></section>
 <footer>{("<p>" + day["footnote"] + "</p>") if day.get("footnote") else ""}<p><a href="{CLASS_NOTES}">Class notes</a> · <a href="../courses/hist-212.html">All classes and readings</a></p></footer>
