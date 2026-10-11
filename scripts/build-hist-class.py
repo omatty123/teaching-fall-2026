@@ -13,6 +13,7 @@ after it has been read on the page).
 Usage: python3 scripts/build-hist-class.py 2026-10-13 [--no-site]
 """
 import datetime, hashlib, html, json, pathlib, re, subprocess, sys
+from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DAYS = ROOT / "hist-212-resources/days"
@@ -20,6 +21,38 @@ DATA = ROOT / "data/hist-212.json"
 CLASS_NOTES = "https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit"
 SOURCES = pathlib.Path.home() / "workspaces/teaching-fall-2026-roster/prep-agent/cache/hist212-sources.txt"
 e = html.escape
+
+
+def link_names(doc, names):
+    """Link a day's named references without changing text or existing links."""
+    if not names:
+        return doc
+    pattern = re.compile(r"(?<![\w])(" + "|".join(re.escape(n) for n in sorted(names, key=len, reverse=True)) + r")(?![\w])")
+    class Linker(HTMLParser):
+        def __init__(self):
+            super().__init__(convert_charrefs=False)
+            self.out, self.stack = [], []
+        def handle_starttag(self, tag, attrs):
+            self.out.append(self.get_starttag_text())
+            if tag not in {'img', 'meta', 'link', 'br', 'hr', 'input', 'source', 'wbr'}:
+                self.stack.append(tag)
+        def handle_startendtag(self, tag, attrs):
+            self.out.append(self.get_starttag_text())
+        def handle_endtag(self, tag):
+            self.out.append(f'</{tag}>')
+            if tag in self.stack:
+                self.stack = self.stack[:len(self.stack) - 1 - self.stack[::-1].index(tag)]
+        def handle_data(self, data):
+            if 'body' in self.stack and not any(t in self.stack for t in ('a', 'script', 'style', 'nav', 'svg', 'button')):
+                data = pattern.sub(lambda m: f'<a class="name-link" href="{e(names[m[0]], quote=True)}">{m[0]}</a>', data)
+            self.out.append(data)
+        def handle_entityref(self, name): self.out.append(f'&{name};')
+        def handle_charref(self, name): self.out.append(f'&#{name};')
+        def handle_decl(self, decl): self.out.append(f'<!{decl}>')
+        def handle_comment(self, data): self.out.append(f'<!--{data}-->')
+    parser = Linker()
+    parser.feed(doc)
+    return ''.join(parser.out)
 
 
 def norm(t):
@@ -149,7 +182,7 @@ def main():
 </main><script src="{kit("hist-212-lesson.js")}"></script>{extra_js}</body></html>
 """
     out = ROOT / f"hist-212-resources/class-{date}.html"
-    out.write_text(doc)
+    out.write_text(link_names(doc, day.get("nameLinks", {})))
     print("built", out.relative_to(ROOT))
     href = f"../hist-212-resources/class-{date}.html"
     mats = me.setdefault("materials", [])
