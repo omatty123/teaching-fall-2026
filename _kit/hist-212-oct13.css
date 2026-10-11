@@ -50,3 +50,14 @@ html:has(body.oct13){font-family:'Source Sans 3','PingFang TC',sans-serif;scroll
 .oct13 .cave-photo p { margin: 4px 0 8px; }
 .oct13 .cave-photo small { display: block; font-size: 15px; line-height: 1.4; }
 @media (max-width: 800px) { .oct13 .cave-gallery { grid-template-columns: 1fr; gap: 24px; } }
+
+/* Always-visible reading guide over the intact museum photograph. */
+.oct13 .glyph-mark { position:absolute; left:63%; width:19%; height:11%; border:3px solid #ffda55; outline:1px solid #202c30; pointer-events:none; box-sizing:border-box; }
+.oct13 .glyph-mark b { position:absolute; right:calc(100% + 7px); top:0; white-space:nowrap; padding:1px 5px; background:#ffda55; color:#202c30; font:700 20px/1.4 'Source Sans 3','PingFang TC',sans-serif; }
+.oct13 .glyph-mark.is-selected { border-color:#fff; outline:3px solid #075d96; }
+.oct13 .glyph-number { font-weight:700; }
+.oct13 .symbol-study { display:grid; grid-template-columns:1fr 1fr; gap:32px; margin:24px 0 36px; align-items:start; }
+.oct13 .symbol-study img { width:100%; height:auto; }
+.oct13 .symbol-study figcaption { font-size:20px; }
+.oct13 .symbol-study small { font-size:15px; }
+@media(max-width:800px) { .oct13 .symbol-study { grid-template-columns:1fr; } }
