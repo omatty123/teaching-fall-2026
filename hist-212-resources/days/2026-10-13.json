@@ -50,6 +50,17 @@
       ]
     },
     {
+      "id": "dunhuang",
+      "short": "Dunhuang · cave art",
+      "title": "Dunhuang: Buddhism in paint, stone, and space",
+      "source": "Mogao Grottoes · Dunhuang, Gansu · Cave 285, 538–539 CE",
+      "body": [
+        {
+          "html": "<div class=\"dunhuang-study\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/dunhuang-cave285.jpg\" aria-label=\"Enlarge: Painted figures with flowing blue and green garments, Cave 285\"><img src=\"../images/hist/oct13/dunhuang-cave285.jpg\" alt=\"Painted figures with flowing blue and green garments, Cave 285\" width=\"1024\" height=\"1179\" loading=\"lazy\"></a><figcaption><strong>Cave 285 · Western Wei, 538–539 CE.</strong> Wall-painting detail. Photograph courtesy Dunhuang Academy, via <a href=\"https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/gallery.html\">Getty</a>. Select the image to enlarge.</figcaption></figure><div class=\"dunhuang-reading\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/dunhuang-site.jpg\" aria-label=\"Enlarge: Mogao cave complex beneath the desert cliffs at Dunhuang\"><img src=\"../images/hist/oct13/dunhuang-site.jpg\" alt=\"Mogao cave complex beneath the desert cliffs at Dunhuang\" width=\"1024\" height=\"296\" loading=\"lazy\"></a><figcaption>Mogao, near Dunhuang in Gansu, northwest China. Photo: Sun Zhijun; courtesy Dunhuang Academy, via <a href=\"https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/gallery.html\">Getty</a>.</figcaption></figure><h4>Buddhism becomes a place</h4><p>At an oasis on the Silk Road, Buddhist worship takes architectural form: caves cut into cliffs, painted walls, sculptures, and spaces for meditation.</p><p><strong>Cave 285 belongs to the divided China on our timeline.</strong> Its paintings bring Buddhist figures together with Indian deities and Chinese mythological figures. Religious transmission produces new combinations of images as well as translated texts.</p><p class=\"source-note\">The cave’s inscriptions date it to 538–539. Its wider painted program includes Fuxi and Nüwa; the photograph at left is one detail, not the whole program.</p><div class=\"dunhuang-links\"><a href=\"https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285\">Explore Cave 285 · Dunhuang Academy</a><a href=\"https://www.youtube.com/watch?v=-LbyuIi9BYI\">Getty introduction · 5:31 video</a><a href=\"#dunhuang-tang\">Continue to Tang Dunhuang: cave and printed book</a></div></div></div>"
+        }
+      ]
+    },
+    {
       "id": "teachings",
       "short": "Four Truths / Three Jewels",
       "title": "Three Jewels & Four Noble Truths",
@@ -408,6 +419,16 @@
       ]
     },
     {
+      "id": "dunhuang-tang",
+      "short": "Dunhuang into the Tang",
+      "title": "Looking ahead: painted caves and printed scriptures",
+      "body": [
+        {
+          "html": "<p>The sixth-century cave is part of Tuesday’s world. These later works show what sustained Buddhist patronage and the circulation of texts will produce under the Tang.</p><div class=\"dunhuang-futures\"><figure><a class=\"image-link\" href=\"../images/hist/oct13/dunhuang-cave85.jpg\" aria-label=\"Enlarge: Interior of Mogao Cave 85 with painted ceiling, walls and seated Buddha\"><img src=\"../images/hist/oct13/dunhuang-cave85.jpg\" alt=\"Interior of Mogao Cave 85 with painted ceiling, walls and seated Buddha\" width=\"1024\" height=\"724\" loading=\"lazy\"></a><figcaption><strong>A complete sacred interior · Cave 85</strong><br>Late Tang, 848–907. Wall paintings, ceiling patterns, and sculpture surround the worshipper. Courtesy Dunhuang Academy, via <a href=\"https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/gallery.html\">Getty</a>.</figcaption></figure><figure><a class=\"image-link\" href=\"../images/hist/oct13/dunhuang-diamond-sutra.jpg\" aria-label=\"Enlarge: Diamond Sutra frontispiece showing the Buddha teaching an assembled audience\"><img src=\"../images/hist/oct13/dunhuang-diamond-sutra.jpg\" alt=\"Diamond Sutra frontispiece showing the Buddha teaching an assembled audience\" width=\"1024\" height=\"852\" loading=\"lazy\"></a><figcaption><strong>A teaching reproduced in print · 868 CE</strong><br>The <em>Diamond Sutra</em>, recovered from Mogao’s Library Cave. Frontispiece of the earliest surviving complete dated printed book. British Library, Or.8210/P.2. Image © British Library Board, via <a href=\"https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/gallery.html\">Getty</a>; <a href=\"https://idp.bl.uk/blog/the-diamond-sutra/\">collection context</a>.</figcaption></figure></div><p><strong>The larger story:</strong> Buddhism connects patrons, artisans, monasteries, and readers. A religious teaching becomes a lasting part of East Asia’s material and intellectual culture.</p>"
+        }
+      ]
+    },
+    {
       "id": "close",
       "short": "State & monastery",
       "title": "What changes in East Asian history",
@@ -478,9 +499,11 @@
     "Kōryūji": "https://vcm.museum.go.kr/ENG/contents/E0403000000.do?relicId=1256&schM=view&searchId=represent",
     "Siddhartha Gautama": "https://www.metmuseum.org/essays/life-of-the-buddha",
     "Lu Jia": "class-2026-10-08.html#qin",
-    "Dong Zhongshu": "class-2026-10-08.html#heaven"
+    "Dong Zhongshu": "class-2026-10-08.html#heaven",
+    "Fuxi": "https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285",
+    "Nüwa": "https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285"
   },
-  "overview": "<p class=\"lesson-argument\">Buddhism offers liberation from suffering and rebirth, and a community organized around that goal. In China and Korea, it creates new claims on people’s loyalties, labor, and wealth—alongside those of family and ruler.</p><div class=\"principal-figures\"><h2>Three voices in the readings</h2><dl><dt>Mouzi</dt><dd><a href=\"#mouzi\">Defends a foreign teaching</a> through Chinese precedents. The dialogue’s date and authorship are debated.</dd><dt>Huiyuan · 334–416</dt><dd><a href=\"#huiyuan\">Defends a distinct status for monks</a>: a ruler can sustain life but cannot end suffering.</dd><dt>Wŏn’gwang · early 7th century</dt><dd><a href=\"#petition\">Accepts obligations to Silla’s king</a>, even when royal service conflicts with a monk’s prohibition on killing.</dd></dl></div>",
+  "overview": "<p class=\"dunhuang-jump\"><a href=\"#dunhuang\">Dunhuang · explore the cave paintings</a> <span>538–539 → Tang → 868</span></p><p class=\"lesson-argument\">Buddhism offers liberation from suffering and rebirth, and a community organized around that goal. In China and Korea, it creates new claims on people’s loyalties, labor, and wealth—alongside those of family and ruler.</p><div class=\"principal-figures\"><h2>Three voices in the readings</h2><dl><dt>Mouzi</dt><dd><a href=\"#mouzi\">Defends a foreign teaching</a> through Chinese precedents. The dialogue’s date and authorship are debated.</dd><dt>Huiyuan · 334–416</dt><dd><a href=\"#huiyuan\">Defends a distinct status for monks</a>: a ruler can sustain life but cannot end suffering.</dd><dt>Wŏn’gwang · early 7th century</dt><dd><a href=\"#petition\">Accepts obligations to Silla’s king</a>, even when royal service conflicts with a monk’s prohibition on killing.</dd></dl></div>",
   "parts": [
     {
       "id": "after-han",
@@ -495,10 +518,11 @@
     },
     {
       "id": "buddhist-tradition",
-      "short": "2 · Buddhism",
+      "short": "2 · Buddhism & Dunhuang",
       "title": "2. Buddhism: liberation, community, and sacred images",
       "summary": "A teaching about suffering also creates communities, practices, and objects of devotion.",
       "sections": [
+        "dunhuang",
         "teachings",
         "images",
         "art"
@@ -533,6 +557,7 @@
       "title": "5. A lasting change in communities, kingship, and culture",
       "summary": "Buddhism becomes part of how East Asian societies organize authority and connect with one another.",
       "sections": [
+        "dunhuang-tang",
         "close"
       ]
     }

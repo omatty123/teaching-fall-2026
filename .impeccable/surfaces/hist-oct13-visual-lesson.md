@@ -55,3 +55,6 @@ The surface is flat. Rules, spacing, and text hierarchy organize content. The wr
 - Don't add oversized filled panels, decorative empty space, invented portraits, or unsolicited discussion questions.
 
 Documentation inspection: current `hist-212-resources/days/2026-10-13.json`, `images/hist/oct13/buddhist-teachings.svg`, scoped CSS/JavaScript, and `PRODUCT.md`, October 11, 2026. Updated after the parent task’s visual SHIP review for approved option 2 the subsequent narrow SHIP review of the First Sermon photograph and teaching key, and the final five-part framing review with both material fixes resolved. This scoped brief leaves global `DESIGN.md` unchanged. This record describes implementation; screenshot review and deployment verification belong to the parent task's delivery checks.
+
+### Dunhuang extension — October 11
+User requested a beautiful Dunhuang-led visual feature. Added Cave285 mural and site panorama in an asymmetric image/text spread under part2; a later Cave85 interior and Diamond Sutra spread opens part5 with explicit Tang dates. Four documentary images retain natural proportions, source credits and full-size links. Mobile stacks figures; compact jump link in overview. Existing content, timeline and23 quotations remain intact. No synthetic imagery or new discussion prompts.

@@ -62,3 +62,13 @@ User selected option 2, with larger teaching images and a full-width diagram. Al
 - Post-Han division/migration: https://www.metmuseum.org/exhibitions/listings/2004/china-dawn-of-a-golden-age . Indian/CentralAsian/Chinese transmission networks: https://www.metmuseum.org/exhibitions/listings/2012/buddhism . Monk-emissaries to Korean kingdoms: https://www.metmuseum.org/fr/essays/korean-buddhist-sculpture-5th-9th-century . These are connected networks, not one exclusive route or an automatic consequence of Han collapse.
 - Calligraphy context: https://www.metmuseum.org/essays/chinese-calligraphy . Wang’s activity remains a parallel development in post-Han elite culture, not Buddhist doctrine. Buddha biographical background: https://www.metmuseum.org/essays/life-of-the-buddha .
 - Preserved original 23 quotation strings and every section anchor. Grouping changes presentation and adds concise context; the source excerpts are not rewritten.
+
+## Dunhuang addition — 2026-10-11
+
+Four documentary photographs from Getty’s 2016 exhibition gallery: https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/gallery.html . Original institution credits retained next to each image; no open-license claim. Images stored at the supplied 1024px size, unaltered.
+- `dunhuang-cave285.jpg`: https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/images/10_1024_Cave285_cr2.jpg
+- `dunhuang-cave85.jpg`: https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/images/9_1024_cave85_interior.jpg
+- `dunhuang-diamond-sutra.jpg`: https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/images/7_1024_diamond_sutra.jpg
+- `dunhuang-site.jpg`: https://www.getty.edu/research/exhibitions_events/exhibitions/cave_temples_dunhuang/images/14_1024_panorama.jpg
+
+Cave285 date: https://www.getty.edu/cona/CONAFullSubject.aspx?subid=700086742 (538/539). Cave program: https://www.e-dunhuang.com/cave/10.0001/0001.0001.0285. Its English introductory date has a typo; Getty’s catalog and the academy’s stated fourth/fifth Datong years establish 538–539. Cave85 identified by Getty as Late Tang 848–907. Diamond Sutra: https://idp.bl.uk/blog/the-diamond-sutra/ . Later images are explicitly previews, not sixth-century evidence. Getty video ID -LbyuIi9BYI; gallery lists 5:31. Linked as supplemental viewing; full playback not yet verified. Original notes prompted Dunhuang inclusion.
