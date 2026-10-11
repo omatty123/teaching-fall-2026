@@ -31,3 +31,12 @@ Checked 2026-10-11. No generated historical likenesses.
 ## October 11 graphic timeline
 
 `timeline.svg` is an original geometric chronology, 200–650 CE, with a linear shared scale. Existing five events retained; 612 added from the already cited AKS petition entry. Wang Xizhi’s conventional 303–361 lifespan follows https://www.metmuseum.org/art/collection/search/39899 . Huiyuan 334–416 and essay 404 follow existing page sources (SCT 427–429; Lushan Huiyuan biography). Mouzi is not assigned an invented date; late-Han narrative setting and debated attribution are stated separately. Small screens receive a legible vertical chronology plus full SVG link. No portraits or historical illustrations were synthesized.
+
+## October 11: seasonal killing restrictions
+
+- Wŏn’gwang: assigned 10-wongwang.md and SKT p. 46. Exact rule says spring/summer plus six meatless feast days, not “birthing season.”
+- Liji, Yue Ling, first spring month §10, James Legge translation: https://ctext.org/liji/yue-ling/ens . Short excerpt checked against indexed full text; Chinese parallel https://zh.wikisource.org/zh-hant/禮記/月令 . Added verified excerpt to private derived checker corpus. Liji is not assigned a single invented pre-Qin composition date.
+- Xunzi ch. 9 Wangzhi §22: https://ctext.org/xunzi/wang-zhi/ens . Chinese 孕別之時, 罔罟毒藥不入澤, 不夭其生, 不絕其長 supports breeding-season restriction and growth rationale. English on page is explicitly a summary, not the site’s AI/user translation.
+- Lüshi chunqiu, Meng chun ji / first month §5: https://ctext.org/text.pl?if=gb&node=23115&remap=gb&show=parallel . Parallel list includes nests, unborn/young creatures, fawns, eggs. Compilation c.239 BCE: James D. Sellmann, Routledge Encyclopedia of Philosophy (241–238 BCE): https://www.rep.routledge.com/articles/thematic/lushi-chunqiu/v-1/sections/g057aentry .
+- Samguk yusa, Collected Works of Korean Buddhism vol.10, pp.473–474 note22, https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf : six poṣadha days are Buddhist observance days with antecedents in Indian custom.
+- Conclusion limited to clear earlier Chinese parallels, before Buddhism’s establishment in China. No direct textual borrowing or unique first origin claimed.

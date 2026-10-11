@@ -316,6 +316,44 @@
       ]
     },
     {
+      "id": "seasonal-killing",
+      "short": "Killing & the seasons",
+      "title": "Seasonal killing rules before Buddhism in China",
+      "source": "Earlier Chinese parallels · Wŏn’gwang’s rules for laypeople",
+      "body": [
+        {
+          "p": "<strong>Seasonal restrictions on killing already appear in Warring States Chinese texts.</strong> They precede Buddhism’s establishment in China. Wŏn’gwang’s rule combines a spring–summer restriction with Buddhist fasting days."
+        },
+        {
+          "pair": [
+            {
+              "who": "Earlier Chinese ritual rule · First month of spring",
+              "quote": "Nests should not be thrown down; unformed insects should not be killed, nor creatures in the Womb, nor very young creatures",
+              "cite": "Liji (Book of Rites), “Yue Ling” (Monthly Ordinances), §10; trans. James Legge",
+              "link": "https://ctext.org/liji/yue-ling/ens",
+              "linkLabel": "Read the source"
+            },
+            {
+              "who": "Wŏn’gwang · Choosing the time",
+              "quote": "Not to kill during the months of <mark>spring and summer</mark> nor during the six meatless feast days is to choose the time.",
+              "cite": "SKT p. 46",
+              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
+              "linkLabel": "October 13 reader · p. 7"
+            }
+          ]
+        },
+        {
+          "html": "<div class=\"concept-row\"><div><h3>Xunzi · 3rd century BCE</h3><p><em>Wangzhi</em> (“The Regulations of a King”), chapter 9, bars nets and poisons from marshes while aquatic animals breed. It explicitly protects their growth and links seasonal restraint to plentiful resources.</p><p class=\"citation\"><a href=\"https://ctext.org/xunzi/wang-zhi/ens\">Primary text · §22</a> · summary, not a quotation.</p></div><div><h3>Lüshi chunqiu · c. 239 BCE</h3><p>The first spring month’s ordinances prohibit destroying nests and killing unborn or young creatures. Fawns and eggs are protected too. Closely parallel wording appears in the <em>Liji</em>.</p><p class=\"citation\"><a href=\"https://ctext.org/text.pl?if=gb&amp;node=23115&amp;remap=gb&amp;show=parallel\">Text and parallel passages</a> · <a href=\"https://www.rep.routledge.com/articles/thematic/lushi-chunqiu/v-1/sections/g057aentry\">Compilation date</a>. Summary.</p></div><div><h3>Wŏn’gwang · Early 7th century CE</h3><p>The reported teaching adds six Buddhist observance days to the seasonal rule. It also selects which creatures may be killed and discourages killing often.</p><p class=\"citation\">SKT p. 46 · <a href=\"https://www.buddhistelibrary.org/en/albums/central/Dhamma_books/10_Culture_web.pdf\">Samguk yusa translation, pp. 473–474, note 22</a>. Summary.</p></div></div>"
+        },
+        {
+          "p": "<strong>The distinction:</strong> earlier Chinese rules protect reproduction and regulate taking animal life by season; Buddhist precepts supply a broader objection to killing. The resemblance is clear. <strong>Direct borrowing by Wŏn’gwang from a particular Chinese text is not established by these passages.</strong>"
+        },
+        {
+          "html": "<p class=\"source-note\">“Birthing season” is an explanation of the seasonal logic, not Wŏn’gwang’s wording in the assigned translation. His text says “spring and summer.” The account is preserved in later compilations, not a surviving contemporary transcript.</p>"
+        }
+      ]
+    },
+    {
       "id": "calligraphy",
       "short": "Master Wang",
       "title": "Wang Xizhi: handwriting and printed type",
