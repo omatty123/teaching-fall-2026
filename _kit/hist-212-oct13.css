@@ -140,3 +140,20 @@ html:has(body.oct13){font-family:'Source Sans 3','PingFang TC',sans-serif;scroll
 @media(max-width:760px){.oct13 .debate-columns{grid-template-columns:1fr;gap:24px}.oct13 .debate-position{grid-template-rows:auto auto auto auto;padding:16px 0}.oct13 #foreign-affairs blockquote{font-size:23px;max-width:none;margin:16px 0 24px}.oct13 #foreign-affairs>h3{font-size:25px}.oct13 .debate-switch{gap:24px;margin-bottom:24px}.oct13 .debate-switch button{font-size:17px}.oct13 #foreign-affairs .debate-speaker{margin-bottom:0}.oct13 #foreign-affairs .debate-subject{margin-bottom:20px}}
 @media print{.oct13 .debate-switch{display:none!important}.oct13 .debate-panel[hidden]{display:block!important}.oct13 .debate-panel{break-inside:avoid;margin-bottom:30px}}
 @media(min-width:761px){.oct13 .debate-columns{grid-template-rows:auto auto auto auto;row-gap:0}.oct13 .debate-position{grid-row:span 4;grid-template-rows:subgrid}.oct13 #foreign-affairs .debate-speaker{margin-bottom:12px}}
+
+/* Two institutional relationships; Ichadon's image and the assigned testimony. */
+.oct13 .state-comparison{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.oct13 .state-comparison article{min-width:0;border-top:1px solid var(--rule);padding-top:16px}
+.oct13 .state-comparison h4{font-size:22px;font-weight:600;margin:0 0 16px}
+.oct13.lesson-viewer .state-comparison figure img{width:100%;height:280px;object-fit:contain}
+.oct13 .state-comparison figure{margin-bottom:20px}
+.oct13 .state-comparison p{font-size:20px;line-height:1.45;margin:12px 0}
+.oct13 .state-takeaway{border-top:1px solid var(--rule);padding-top:18px;margin-top:24px}
+.oct13 .ichadon-study{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin:24px 0}
+.oct13.lesson-viewer .ichadon-study figure img{width:100%;height:620px;max-height:70vh;object-fit:contain}
+.oct13 .ichadon-passages .passage{padding:20px 0;margin:0;border-top:1px solid var(--rule)}
+.oct13 .ichadon-passages .passage h4{font-size:20px;font-weight:400;margin:0 0 16px}
+.oct13 .ichadon-passages blockquote{font-size:24px;line-height:1.45;margin:0 0 16px}
+.oct13 .ichadon-date{font-size:18px;color:#465859;margin:0 0 16px}
+@media(max-width:760px){.oct13 .state-comparison,.oct13 .ichadon-study{grid-template-columns:1fr;gap:28px}.oct13.lesson-viewer .state-comparison figure img{height:auto;max-height:350px}.oct13.lesson-viewer .ichadon-study figure img{height:auto;max-height:none}.oct13 .ichadon-passages blockquote{font-size:22px}}
+.oct13 .ichadon-passages .passage+.passage{border-left:0;padding-left:0}

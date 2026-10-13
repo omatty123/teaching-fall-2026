@@ -88,3 +88,10 @@ Web copies resized only, uncropped. Each links to its Commons record and license
 - Wang: four persistent numbered CSS outlines over 快雪時晴 on the Tang tracing copy, not over later colophons. Original photograph unchanged. Museum record/transcription already linked. Selected-state buttons are optional enhancement; all four outlines remain without interaction.
 - `three-jewels-temple.png`: user-supplied photograph, original photographer/site unidentified; no invented location or open-license claim. Interpretation checked against Jogye Order, Buddhist Thought of Korea, Samboryun explanation: https://www.buddhism.or.kr/board/file_down.php?baidx=290947 . Three circles represent the triad collectively; no invented assignment of particular dot positions.
 - `eightfold-path-britannica.png`: user-supplied complete graphic, © Encyclopædia Britannica, Inc.; credit preserved, not claimed open access. https://www.britannica.com/topic/Eightfold-Path ; path doctrine also https://www.dhammatalks.org/suttas/SN/SN56_11.html . Both supplied images retained unaltered.
+
+## Ichadon ink depiction — added October 13, 2026
+- File: `ichadon-from-class-slides.jpg` (441 × 768).
+- Extracted intact from the user-supplied Google Slides deck, slide `p18` (slide 11), image element `p18_i9220`, at the user's explicit request to use the Ichadon image on the class page.
+- Source: https://docs.google.com/presentation/d/16RmYAjesMLy426S5STC6iN3AE2nXWMVc2Lssl8UqbSQ/edit#slide=id.p18
+- Ink depiction of the martyrdom; artist, creation date, and original publication not identified in the supplied slide. No public-domain claim. Not the stone commemorative monument, nor a contemporary portrait. Caption states uncertainty.
+- Separate historical documentation: Gyeongju National Museum, Monument to the Martyrdom of Yi Cha-don, https://gyeongju.museum.go.kr/site/eng/html/sub02/0201.html?GotoPage=2&d_mng_no=10&mng_no=145&mode=V
