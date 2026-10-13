@@ -16,13 +16,13 @@
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Source Sans 3",-apple-system,"Helvetica Neue",Arial,sans-serif}
 a{color:var(--b)}
 .nav{border-bottom:1px solid var(--rule);background:var(--card)}
-.nav-inner{max-width:1100px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;flex-wrap:wrap;font-size:16px}
+.nav-inner{max-width:1440px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;flex-wrap:wrap;font-size:16px}
 .nav .brand{font-weight:700;text-decoration:none;color:var(--ink)}
-main{max-width:1100px;margin:0 auto;padding:22px 16px 48px}
+main{max-width:1440px;margin:0 auto;padding:22px 16px 48px}
 h1{font-size:30px;margin:0 0 4px;line-height:1.15}
 .meta{color:var(--muted);margin:0 0 18px;font-size:15px}
-section{background:var(--card);border:1px solid var(--rule);border-left:6px solid var(--c,var(--b));border-radius:6px;padding:16px 20px;margin:0 0 20px}
-section h2{margin:0 0 8px;font-size:22px;line-height:1.2}
+section,aside.route{background:var(--card);border:1px solid var(--rule);border-left:6px solid var(--c,var(--b));border-radius:6px;padding:16px 20px;margin:0 0 20px}
+section h2,aside.route h2{margin:0 0 8px;font-size:22px;line-height:1.2}
 section h3{margin:18px 0 6px;font-size:18px}
 .lead{font-size:17px;margin:0 0 10px}
 .parts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:12px 0 4px}
@@ -69,8 +69,10 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .src{font-size:14px;color:var(--muted)}
 .ask{font-size:16px}
 @media(max-width:820px){.stage{grid-template-columns:1fr}.parts{grid-template-columns:1fr}h1{font-size:26px}}
-.song{margin:0 0 20px}.song .stage{margin-top:6px}.patton .B2{background:var(--b-t);box-shadow:inset 4px 0 0 var(--b)}.days{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px}.days b{font-weight:700}.route{--c:var(--talk)}.route-wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
-#route-map{height:520px;border:1px solid var(--rule);border-radius:4px;background:#e9e9e6}
+.song{margin:0 0 20px}.song .stage{margin-top:6px}.patton .B2{background:var(--b-t);box-shadow:inset 4px 0 0 var(--b)}.days{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px}.days b{font-weight:700}.route{--c:var(--talk)}.layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(340px,430px);gap:20px;align-items:start}
+.route{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto;margin:0}
+.route #route-map{margin:0 0 14px}
+#route-map{height:52vh;min-height:340px;border:1px solid var(--rule);border-radius:4px;background:#e9e9e6}
 .route ol{margin:0;padding:0;list-style:none;font-size:15px}
 .route ol+h3{margin-top:16px}.route h3{margin:0 0 6px;font-size:16px}
 .route li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:4px 0;border-bottom:1px solid var(--off)}
@@ -82,7 +84,8 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .leaflet-tooltip.place:before{display:none}
 .leaflet-tooltip.ref{background:transparent;border:0;box-shadow:none;padding:0;font:italic 14px/1.2 "Source Sans 3",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--muted)}
 .leaflet-tooltip.ref:before{display:none}
-@media(max-width:820px){.route-wrap{grid-template-columns:1fr}#route-map{height:420px}}
+@media(max-width:1300px){.layout .stage{grid-template-columns:1fr}}
+@media(max-width:1000px){.layout{grid-template-columns:1fr}.route{position:static;max-height:none;order:-1}#route-map{height:420px}}
 </style>
 <link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css"></head>
 <body>
@@ -92,30 +95,8 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <p class="meta">Delta blues</p>
 <p class="days"><b>Wed Oct 14 · Flood</b> <a href="blues-oct-16.html">Fri Oct 16 · Displacement &amp; levee labor</a> <a href="blues-oct-19.html">Mon Oct 19 · Mississippi to Chicago</a></p>
 <p class="lead">Two musical responses to the Great Mississippi Flood of 1927, recorded within three years of it. Listen to both parts of “High Water Everywhere.”</p>
-<section class="route" id="route">
-<h2>Follow the flood</h2>
-<div class="route-wrap">
-<div id="route-map" role="img" aria-label="Map of the Mississippi Delta with the places Charley Patton names, numbered in the order he sings them"></div>
-<div>
-<h3>Part 1 · Mississippi</h3>
-<ol>
-<li><i class="pin p1">1</i><div>Sumner<span>“backwater done rose all around Sumner” · Tallahatchie County</span></div></li>
-<li><i class="pin p1">2</i><div>Leland<span>“look-a here now at Leland, river was risin’ high”</span></div></li>
-<li><i class="pin p1">3</i><div>Greenville<span>“I’m gonna move to Greenville” · on the Mississippi River</span></div></li>
-<li><i class="pin p1">4</i><div>Rosedale<span>“they tell me there’s water there” · on the Mississippi River</span></div></li>
-<li><i class="pin p1">5</i><div>Vicksburg<span>“I’m goin’ to Vicksburg” · a city on bluffs above the river</span></div></li>
-<li><i class="pin p1">6</i><div>Sharkey County<span>“hit Sharkey County and everything was down”</span></div></li>
-<li><i class="pin p1">7</i><div>Stovall<span>a plantation near Clarksdale, where Muddy Waters recorded in 1941</span></div></li>
-<li><i class="pin p1">8</i><div>Tallahatchie River<span>“leavin’ over that Tallahatchie shore”</span></div></li>
-</ol>
-<h3>Part 2 · Arkansas</h3>
-<ol>
-<li><i class="pin p2">9</i><div>Blytheville<span>“backwater at Blytheville” · Mississippi County, Arkansas</span></div></li>
-<li><i class="pin p2">10</i><div>Joiner<span>“done took Joiner town” · Mississippi County, Arkansas</span></div></li>
-</ol>
-</div>
-</div>
-</section>
+<div class="layout">
+<div class="songs">
 <section class="song" id="patton-1" style="--c:var(--a)">
 <h2>Charley Patton, “High Water Everywhere, Part 1”</h2>
 
@@ -161,11 +142,11 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 </section>
 <section class="song" id="patton-2" style="--c:var(--b)">
 <h2>Charley Patton, “High Water Everywhere, Part 2”</h2>
-<p>Part 2 crosses the river into Arkansas. Where the form breaks is marked on <a href="blues-form.html#patton">What are the blues?</a></p>
+<p>Part 2 crosses the river into Arkansas. How the form stretches is marked on <a href="blues-form.html#patton">What are the blues?</a></p>
 <div class="stage">
 <div><div class="video"><iframe src="https://www.youtube.com/embed/v99b1ky7mNA?rel=0" title="Charley Patton, High Water Everywhere, Part 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
 <p class="status">Paramount, recorded in Grafton, Wisconsin, late 1929 or early 1930</p>
-<div class="key"><span><i style="background:var(--a-t)"></i>A</span><span><i style="background:var(--a-t);box-shadow:inset 4px 0 0 var(--a2)"></i>A′, changed on the repeat</span><span><i style="background:var(--b-t)"></i>B</span><span><i style="background:var(--off)"></i>outside the pattern</span><span><i style="background:transparent"></i><em>spoken</em></span></div></div>
+<div class="key"><span><i style="background:var(--a-t)"></i>A</span><span><i style="background:var(--a-t);box-shadow:inset 4px 0 0 var(--a2)"></i>A′, changed on the repeat</span><span><i style="background:var(--b-t)"></i>B</span><span><i style="background:transparent"></i><em>spoken</em></span></div></div>
 <ul class="patton"><li class="A"><b>A</b>Backwater at Blytheville, backed up all around</li>
 <li class="A2"><b>A′</b>Backwater at Blytheville, done took Joiner town</li>
 <li class="B"><b>B</b>It was fifty families and children come to sink and drown</li>
@@ -178,22 +159,46 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <li class="A2"><b>A′</b>Lord, the water was rollin’, got up to my bed</li>
 <li class="B"><b>B</b>I thought I would take a trip, Lord, out on the big ice sled</li>
 <li class="gap"></li>
-<li class="X"><b></b>Oh, I can hear, Lord Lord, water upon my door</li>
+<li class="A"><b>A</b>Oh, I can hear, Lord Lord, water upon my door</li>
 <li class="T"><b></b>You know what I mean, look-a here</li>
-<li class="X"><b></b>I hear the ice, Lord Lord, was sinkin’ down</li>
-<li class="X"><b></b>I couldn’t get no boats there, Marion City gone down</li>
+<li class="A2"><b>A′</b>I hear the ice, Lord Lord, was sinkin’ down</li>
+<li class="B"><b>B</b>I couldn’t get no boats there, Marion City gone down</li>
 <li class="gap"></li>
-<li class="X"><b></b>So high the water was risin’ our men sinkin’ down</li>
-<li class="X"><b></b>Man, the water was risin’ at places all around</li>
+<li class="A"><b>A</b>So high the water was risin’ our men sinkin’ down</li>
+<li class="A2"><b>A′</b>Man, the water was risin’ at places all around</li>
 <li class="T"><b></b>Boy, they’s all around</li>
-<li class="X"><b></b>It was fifty men and children come to sink and drown</li>
+<li class="B"><b>B</b>It was fifty men and children come to sink and drown</li>
 <li class="gap"></li>
-<li class="X"><b></b>Oh, Lordy, women and grown men drown</li>
-<li class="X"><b></b>Oh, women and children sinkin’ down</li>
+<li class="A"><b>A</b>Oh, Lordy, women and grown men drown</li>
+<li class="A2"><b>A′</b>Oh, women and children sinkin’ down</li>
 <li class="T"><b></b>Lord, have mercy</li>
-<li class="X"><b></b>I couldn’t see nobody’s home and wasn’t no one to be found</li></ul>
+<li class="B"><b>B</b>I couldn’t see nobody’s home and wasn’t no one to be found</li></ul>
 </div>
 </section>
+</div>
+<aside class="route" id="route">
+<h2>Follow the flood</h2>
+<div id="route-map" role="img" aria-label="Map of the Mississippi Delta with the places Charley Patton names, numbered in the order he sings them"></div>
+<div>
+<h3>Part 1 · Mississippi</h3>
+<ol>
+<li><i class="pin p1">1</i><div>Sumner<span>“backwater done rose all around Sumner” · Tallahatchie County</span></div></li>
+<li><i class="pin p1">2</i><div>Leland<span>“look-a here now at Leland, river was risin’ high”</span></div></li>
+<li><i class="pin p1">3</i><div>Greenville<span>“I’m gonna move to Greenville” · on the Mississippi River</span></div></li>
+<li><i class="pin p1">4</i><div>Rosedale<span>“they tell me there’s water there” · on the Mississippi River</span></div></li>
+<li><i class="pin p1">5</i><div>Vicksburg<span>“I’m goin’ to Vicksburg” · a city on bluffs above the river</span></div></li>
+<li><i class="pin p1">6</i><div>Sharkey County<span>“hit Sharkey County and everything was down”</span></div></li>
+<li><i class="pin p1">7</i><div>Stovall<span>a plantation near Clarksdale, where Muddy Waters recorded in 1941</span></div></li>
+<li><i class="pin p1">8</i><div>Tallahatchie River<span>“leavin’ over that Tallahatchie shore”</span></div></li>
+</ol>
+<h3>Part 2 · Arkansas</h3>
+<ol>
+<li><i class="pin p2">9</i><div>Blytheville<span>“backwater at Blytheville” · Mississippi County, Arkansas</span></div></li>
+<li><i class="pin p2">10</i><div>Joiner<span>“done took Joiner town” · Mississippi County, Arkansas</span></div></li>
+</ol>
+</div>
+</aside>
+</div>
 <section class="song" id="levee-breaks" style="--c:var(--resp)">
 <h2>Kansas Joe McCoy &amp; Memphis Minnie, “When the Levee Breaks”</h2>
 
