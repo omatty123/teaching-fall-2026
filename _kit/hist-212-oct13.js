@@ -14,6 +14,7 @@ document.querySelectorAll('[data-glyph]').forEach(button => {
   const main = document.querySelector('main');
   const header = main.querySelector('header');
   const parts = [...main.querySelectorAll('.lesson-part')];
+  const colorKey = document.createElement('p'); colorKey.className = 'color-key'; colorKey.innerHTML = '<span class="key-china">China</span><span class="key-silla">Silla</span><span class="key-later">Later developments</span>'; header.append(colorKey);
   if (!parts.length) return;
   const overview = document.createElement('section');
   overview.id = 'overview';

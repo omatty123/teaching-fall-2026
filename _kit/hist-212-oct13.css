@@ -157,3 +157,35 @@ html:has(body.oct13){font-family:'Source Sans 3','PingFang TC',sans-serif;scroll
 .oct13 .ichadon-date{font-size:18px;color:#465859;margin:0 0 16px}
 @media(max-width:760px){.oct13 .state-comparison,.oct13 .ichadon-study{grid-template-columns:1fr;gap:28px}.oct13.lesson-viewer .state-comparison figure img{height:auto;max-height:350px}.oct13.lesson-viewer .ichadon-study figure img{height:auto;max-height:none}.oct13 .ichadon-passages blockquote{font-size:22px}}
 .oct13 .ichadon-passages .passage+.passage{border-left:0;padding-left:0}
+
+/* Color is location/time information, carried through navigation and context. */
+.oct13{--china:#087f83;--silla:#b44b2b;--later:#7052a0}
+.oct13 #after-han,.oct13 #buddhist-tradition,.oct13 #buddhism-china{--topic-color:var(--china)}
+.oct13 #buddhism-silla{--topic-color:var(--silla)}
+.oct13 #consequences{--topic-color:var(--later)}
+.oct13 .lesson-part>section>h3{border-bottom:2px solid var(--topic-color);padding-bottom:12px}
+.oct13 .topic-links a[href="#silla"],.oct13 .topic-links a[href="#petition"],.oct13 .topic-links a[href="#war-killing"],.oct13 .topic-links a[href="#seasonal-killing"],.oct13 .topic-links a[href="#vegetarianism"]{--nav-color:var(--silla)}
+.oct13 .topic-links a[href="#dunhuang-tang"],.oct13 .topic-links a[href="#close"]{--nav-color:var(--later)}
+.oct13 .topic-links a{--nav-color:var(--china);display:flex;gap:8px;align-items:baseline}
+.oct13 .topic-links a::before{content:'';width:6px;height:6px;flex:0 0 6px;border-radius:50%;background:var(--nav-color)}
+.oct13 .topic-links a[aria-current]{color:var(--nav-color);background:color-mix(in srgb,var(--nav-color) 9%,#faf9f5)}
+.oct13 .place-time{display:grid;grid-template-columns:310px 1fr;gap:28px;align-items:center;border-bottom:1px solid var(--rule);padding:0 0 18px;margin:0 0 24px}
+.oct13.lesson-viewer .place-time figure img{width:100%;height:auto;max-height:none;border-radius:6px}
+.oct13 .place-time figcaption{font-size:12px;line-height:1.4;margin-top:6px}
+.oct13 .time-context>p{font-size:17px;margin:0 0 24px}
+.oct13 .time-context>p span{display:block;font-size:13px;color:#586366;margin-top:4px}
+.oct13 .date-sequence{display:flex;list-style:none;margin:0;padding:0;gap:0}
+.oct13 .date-sequence li{flex:1;min-width:0;border-top:2px solid var(--date-color);position:relative;padding:14px 16px 0 0}
+.oct13 .date-sequence li::before{content:'';position:absolute;top:-6px;left:0;width:10px;height:10px;border-radius:50%;background:var(--date-color)}
+.oct13 .time-china{--date-color:var(--china)}.oct13 .time-silla{--date-color:var(--silla)}.oct13 .time-later{--date-color:var(--later)}
+.oct13 .date-sequence a{display:block;text-decoration:none;color:var(--ink)}
+.oct13 .date-sequence time{display:block;color:var(--date-color);font-size:23px;line-height:1.2;font-weight:600;margin-bottom:8px}
+.oct13 .date-sequence span{display:block;font-size:16px;line-height:1.35}
+.oct13 .date-sequence a:hover span{text-decoration:underline}
+.oct13 .state-comparison article:first-child{border-top-color:var(--china)}.oct13 .state-comparison article:last-child{border-top-color:var(--silla)}
+.oct13 .debate-label{color:var(--china)}.oct13 .debate-position:nth-child(2) .debate-label{color:var(--silla)}
+@media(max-width:1050px){.oct13 .place-time{grid-template-columns:240px 1fr;gap:20px}.oct13 .date-sequence{flex-wrap:wrap;gap:20px}.oct13 .date-sequence li{min-width:100px}}
+@media(max-width:760px){.oct13 .place-time{grid-template-columns:1fr;gap:20px}.oct13 .place-time figure{max-width:380px}.oct13 .date-sequence{flex-wrap:nowrap;gap:0}.oct13 .date-sequence li{min-width:0;padding-right:8px}.oct13 .date-sequence time{font-size:20px}.oct13 .date-sequence span{font-size:14px}.oct13 .time-context>p{margin-bottom:18px}}
+.oct13 .color-key{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;line-height:1.4;margin:12px 0 0}
+.oct13 .color-key span{display:flex;align-items:center;gap:6px}.oct13 .color-key span::before{content:'';height:7px;width:7px;border-radius:50%;background:currentColor}
+.oct13 .key-china{color:var(--china)}.oct13 .key-silla{color:var(--silla)}.oct13 .key-later{color:var(--later)}

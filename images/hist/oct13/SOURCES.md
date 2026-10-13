@@ -95,3 +95,10 @@ Web copies resized only, uncropped. Each links to its Commons record and license
 - Source: https://docs.google.com/presentation/d/16RmYAjesMLy426S5STC6iN3AE2nXWMVc2Lssl8UqbSQ/edit#slide=id.p18
 - Ink depiction of the martyrdom; artist, creation date, and original publication not identified in the supplied slide. No public-domain claim. Not the stone commemorative monument, nor a contemporary portrait. Caption states uncertainty.
 - Separate historical documentation: Gyeongju National Museum, Monument to the Martyrdom of Yi Cha-don, https://gyeongju.museum.go.kr/site/eng/html/sub02/0201.html?GotoPage=2&d_mng_no=10&mng_no=145&mode=V
+
+## Compact East Asia locators — October 13
+- Assets: locator-all.svg, locator-china.svg, locator-silla.svg, locator-dunhuang.svg. Generator: scripts/build-oct13-locators.py.
+- Land geometry: Natural Earth 1:110m land, public domain, retrieved 2026-10-13 from https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_110m_land.geojson ; retained as locator-land.geojson. Terms: https://www.naturalearthdata.com/about/terms-of-use/ . No national or historical borders, no routes.
+- Input coordinates are WGS84 longitude/latitude; north-up equirectangular rendering, standard parallel approximately 36.9°N. Scale bar 1,000 km at 35°N. Generalized coastline, regional orientation only.
+- Mogao/Dunhuang 94.81667,40.13333: UNESCO https://whc.unesco.org/en/list/440/ . Yungang 113.12222,40.10972: https://whc.unesco.org/en/list/1039/ . Mount Lu regional point 115.86667,29.43333: https://whc.unesco.org/en/list/778/ (park reference, not Donglin entrance). Gyeongju region approximately 129.2,35.8: https://whc.unesco.org/en/list/976/ (historic areas; approximate regional marker, not a building).
+- Markers checked geographically: Dunhuang far west of Yungang, Mount Lu south of Yungang, Gyeongju on southeastern Korean peninsula. No claim to reconstruct ancient shorelines.
