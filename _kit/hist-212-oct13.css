@@ -201,3 +201,13 @@ html:has(body.oct13){font-family:'Source Sans 3','PingFang TC',sans-serif;scroll
 .oct13 .topic-links a[href="#three-kingdoms-korea"]{--nav-color:var(--silla)}
 @media(max-width:900px){.oct13 .kingdom-study,.oct13 .china-kingdoms{grid-template-columns:1fr;gap:20px}.oct13.lesson-viewer .kingdom-study figure img{max-height:none}}
 .oct13 .kingdom-profiles article:nth-child(n){border-top-color:var(--topic-color)}
+.oct13 .three-kingdoms-animation{margin:0 0 28px}
+.oct13 .map-actions{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center;font-size:18px;margin:0 0 12px}
+.oct13 .map-actions span{font-size:15px;color:#536163}
+
+@media(max-width:760px){.oct13 .map-actions{font-size:17px}}
+
+
+.oct13 .china-map{margin:0}
+.oct13 .china-map img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.oct13 .china-map figcaption{font-size:14px;margin-top:8px}

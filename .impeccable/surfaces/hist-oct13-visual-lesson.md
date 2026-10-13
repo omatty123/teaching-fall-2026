@@ -73,3 +73,6 @@ Added compact real-coastline locators and short date sequences to Monastery & st
 
 ### Ebrey Three Kingdoms correction — October 13
 Added separate China and Korea Three Kingdoms topics, read against the local Ebrey text. China precedes the graphic chronology: compact 220/263/265 sequence, three regional profiles, and institutions. Korea precedes the Silla conversion narrative: supplied historical map at teaching size, three short profiles plus Gaya, and links connecting state-building to Ichadon and the petition. Clear page references and map uncertainty; existing material retained.
+
+### China maps — October 13
+Large existing 262 CE map leads the topic, with click-to-enlarge and author/license/source links. Prominent animation link opens the verified year-slider map at 229. Source blocks iframe embedding, so no broken iframe is shipped. Brief caption distinguishes inferred boundaries. Existing chronology and profiles retained.

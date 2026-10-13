@@ -105,3 +105,7 @@ Web copies resized only, uncropped. Each links to its Commons record and license
 
 ## Korean Three Kingdoms map — October 13
 `three-kingdoms-from-slides.jpg`: intact embedded map from the user-supplied deck, slide p13 (slide 8). https://docs.google.com/presentation/d/16RmYAjesMLy426S5STC6iN3AE2nXWMVc2Lssl8UqbSQ/edit#slide=id.p13 . Supplied labels include Goguryeo, Baekjae, Silla and underlying Kaya. Original cartographer/date/license not supplied; no public-domain claim. Caption identifies it as a schematic historical overview with unspecified boundary date. It is not used as precise territorial evidence. Ebrey pp. 103–105 support the adjacent regional/state-building summaries; the student is referred to Map 4.1 p.63 for China's dated territorial maps. No textbook page scans published.
+
+## China Three Kingdoms maps — October 13
+- Static map displayed unchanged from https://upload.wikimedia.org/wikipedia/commons/7/7b/Three_Kingdoms.png . SY (Seasonsinthesun), 2017, 1288×912. https://commons.wikimedia.org/wiki/File:Three_Kingdoms.png ; CC BY-SA 4.0. Approximate 262 CE territorial overview, not surveyed borders. Caption links author/source/license and Ebrey Map 4.1 p.63.
+- External animation linked: https://emperorstats.com/en/map/three-kingdoms?year=229 . Chinese Emperor Stats, 190–280. Play/Pause and progression tested. Site documents algorithmic territories inferred from city control. Native iframe blocked by source; omitted rather than shipping broken embed. Animation opens separately. Disputed Commons GIFs rejected.
