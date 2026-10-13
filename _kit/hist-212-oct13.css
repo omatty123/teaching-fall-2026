@@ -189,3 +189,15 @@ html:has(body.oct13){font-family:'Source Sans 3','PingFang TC',sans-serif;scroll
 .oct13 .color-key{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:13px;line-height:1.4;margin:12px 0 0}
 .oct13 .color-key span{display:flex;align-items:center;gap:6px}.oct13 .color-key span::before{content:'';height:7px;width:7px;border-radius:50%;background:currentColor}
 .oct13 .key-china{color:var(--china)}.oct13 .key-silla{color:var(--silla)}.oct13 .key-later{color:var(--later)}
+.oct13 .kingdom-study{display:grid;grid-template-columns:1.05fr 1fr;gap:36px;align-items:start}
+.oct13.lesson-viewer .kingdom-study figure img{width:100%;height:auto;max-height:66vh;object-fit:contain}
+.oct13 .kingdom-profiles article{padding:14px 0;border-top:1px solid var(--rule)}
+.oct13 .kingdom-profiles h4{font-size:21px;margin:0 0 8px;font-weight:600}
+.oct13 .kingdom-profiles p{font-size:19px;line-height:1.45;margin:0}
+.oct13 .kingdom-profiles article:nth-child(1){border-top-color:#7b63a2}.oct13 .kingdom-profiles article:nth-child(2){border-top-color:#087f83}.oct13 .kingdom-profiles article:nth-child(3){border-top-color:#b44b2b}
+.oct13 .kingdom-connection{border-top:1px solid var(--rule);margin-top:24px;padding-top:16px;max-width:80ch;font-size:19px}
+.oct13 .china-kingdoms{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:28px}
+.oct13 .china-kingdom-dates{margin-top:32px}
+.oct13 .topic-links a[href="#three-kingdoms-korea"]{--nav-color:var(--silla)}
+@media(max-width:900px){.oct13 .kingdom-study,.oct13 .china-kingdoms{grid-template-columns:1fr;gap:20px}.oct13.lesson-viewer .kingdom-study figure img{max-height:none}}
+.oct13 .kingdom-profiles article:nth-child(n){border-top-color:var(--topic-color)}

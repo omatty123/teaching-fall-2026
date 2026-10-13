@@ -70,3 +70,6 @@ Added a compact Monastery & state topic before Mouzi: two documentary photograph
 
 ### Geographic and chronological color framing — October 13
 Added compact real-coastline locators and short date sequences to Monastery & state, Silla, Huiyuan, and Dunhuang. Maps enlarge on click and source their geographic substrate and regional coordinates. Date sequences are explicitly not scaled; existing full scaled timeline remains available. Teal identifies China, rust Silla, violet later developments, with a visible legend, navigation dots, thin section rules, and colored date markers. No large filled framing panels. Desktop places the map beside the date sequence; mobile stacks them. Original photographs and 23 quotations retained.
+
+### Ebrey Three Kingdoms correction — October 13
+Added separate China and Korea Three Kingdoms topics, read against the local Ebrey text. China precedes the graphic chronology: compact 220/263/265 sequence, three regional profiles, and institutions. Korea precedes the Silla conversion narrative: supplied historical map at teaching size, three short profiles plus Gaya, and links connecting state-building to Ichadon and the petition. Clear page references and map uncertainty; existing material retained.

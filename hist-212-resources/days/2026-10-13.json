@@ -13,6 +13,17 @@
       ]
     },
     {
+      "id": "three-kingdoms-china",
+      "short": "China’s Three Kingdoms",
+      "title": "After the Han: Wei, Shu, and Wu",
+      "source": "Ebrey & Walthall, pp. 62–64 · China’s Three Kingdoms, not Korea’s",
+      "body": [
+        {
+          "html": "<ol class=\"date-sequence china-kingdom-dates\"><li class=\"time-china\"><time>220</time><span>Han ends; Wei proclaimed</span></li><li class=\"time-china\"><time>263</time><span>Wei defeats Shu</span></li><li class=\"time-china\"><time>265</time><span>Jin replaces Wei</span></li></ol><p class=\"citation\">CE · sequence, not scaled. Wu survives the replacement of Wei by Jin.</p><div class=\"kingdom-profiles china-kingdoms\"><article><h4><a href=\"https://en.wikipedia.org/wiki/Cao_Wei\">Wei · north China</a></h4><p><a href=\"https://en.wikipedia.org/wiki/Cao_Cao\">Cao Cao</a> builds northern power; his son <a href=\"https://en.wikipedia.org/wiki/Cao_Pi\">Cao Pei / Cao Pi</a> ends the Han. Wei is the largest of the three kingdoms.</p></article><article><h4><a href=\"https://en.wikipedia.org/wiki/Shu_Han\">Shu · Sichuan</a></h4><p><a href=\"https://en.wikipedia.org/wiki/Liu_Bei\">Liu Bei</a> claims Han imperial descent, supported by strategist <a href=\"https://en.wikipedia.org/wiki/Zhuge_Liang\">Zhuge Liang</a>.</p></article><article><h4><a href=\"https://en.wikipedia.org/wiki/Eastern_Wu\">Wu · the Yangzi region</a></h4><p>The <a href=\"https://en.wikipedia.org/wiki/Sun_Ce\">Sun Ce</a>–<a href=\"https://en.wikipedia.org/wiki/Sun_Quan\">Sun Quan</a> regime controls the central and lower Yangzi and lands farther south.</p></article></div><div class=\"kingdom-connection\"><p><strong>Institutions outlast the rivalry:</strong> military households make soldier status hereditary; state farms provision armies; Nine Rank recruitment favors powerful families.</p><p>Political division also frames the elite culture of <a href=\"#calligraphy\">Wang Xizhi</a> and the later religious communities of <a href=\"#huiyuan\">Huiyuan</a>. See Ebrey’s <strong>Map 4.1, p. 63</strong>, for changing territories.</p></div>"
+        }
+      ]
+    },
+    {
       "id": "spread",
       "short": "Graphic timeline",
       "title": "People and events · 200–650 CE",
@@ -240,6 +251,17 @@
               "linkLabel": "Oct 13 reader · p. 4"
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "three-kingdoms-korea",
+      "short": "Korea’s Three Kingdoms",
+      "title": "Korea’s Three Kingdoms: rival states, shared connections",
+      "source": "Ebrey & Walthall, pp. 103–105 · stop before “Unification by Silla”",
+      "body": [
+        {
+          "html": "<div class=\"kingdom-study\"><figure><a href=\"../images/hist/oct13/three-kingdoms-from-slides.jpg\"><img src=\"../images/hist/oct13/three-kingdoms-from-slides.jpg\" alt=\"Historical orientation map showing Goguryeo in the north, Baekje in the southwest, Silla in the southeast, and Gaya on the southern coast\"></a><figcaption><a href=\"https://docs.google.com/presentation/d/16RmYAjesMLy426S5STC6iN3AE2nXWMVc2Lssl8UqbSQ/edit#slide=id.p13\">Map from the class slides</a>. Schematic historical overview; the slide does not specify a boundary date. Enlarge to read the underlying labels.</figcaption></figure><div class=\"kingdom-profiles\"><article><h4><a href=\"https://en.wikipedia.org/wiki/Goguryeo\">Goguryeo · Koguryŏ</a></h4><p>Northern peninsula and southern Manchuria. A military power connected to Inner Asian conflicts; expansion southward puts pressure on its neighbors.</p></article><article><h4><a href=\"https://en.wikipedia.org/wiki/Baekje\">Baekje · Paekche</a></h4><p>Southwest. A maritime kingdom with Chinese and Japanese connections. Official ranks and local administration strengthen royal control.</p></article><article><h4><a href=\"https://en.wikipedia.org/wiki/Silla\">Silla</a></h4><p>Southeast. Tribal leadership develops into a stronger monarchy, with a law code, taxation, a war ministry, and state-sponsored Buddhism.</p></article><article class=\"gaya-note\"><h4><a href=\"https://en.wikipedia.org/wiki/Gaya_confederacy\">Also on the map: Gaya</a></h4><p>A southern confederation known for iron and trade with Japan. Silla absorbs its last remaining territory in <strong>562</strong>.</p></article></div></div><div class=\"kingdom-connection\"><p><strong>Ebrey’s political context:</strong> warfare, administrative borrowing, and control of labor help kings build states. Tombs and fortresses make elite power visible.</p><p><a href=\"#silla\">Ichadon and royal patronage</a> belong inside this process. <a href=\"#petition\">Wŏn’gwang’s petition</a> addresses conflict between these kingdoms.</p></div>"
         }
       ]
     },
@@ -479,6 +501,7 @@
       "summary": "The political setting changes; older ethical traditions and elite culture continue.",
       "sections": [
         "course-story",
+        "three-kingdoms-china",
         "spread",
         "calligraphy"
       ]
@@ -514,6 +537,7 @@
       "title": "4. Silla: royal patronage, monastic duty, and war",
       "summary": "Buddhism can serve kingship as well as limit its claims. Silla’s sources make that tension concrete.",
       "sections": [
+        "three-kingdoms-korea",
         "silla",
         "petition",
         "war-killing",
