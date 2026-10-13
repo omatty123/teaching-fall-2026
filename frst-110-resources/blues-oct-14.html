@@ -2,16 +2,16 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Flood · FRST 110</title>
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-<meta name="description" content="Two musical responses to the Great Mississippi Flood of 1927, recorded in 1929. Listen to both parts of “High Water Everywhere.”">
+<meta name="description" content="Two musical responses to the Great Mississippi Flood of 1927, recorded within three years of it. Listen to both parts of “High Water Everywhere.”">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Flood · FRST 110">
-<meta property="og:description" content="Two musical responses to the Great Mississippi Flood of 1927, recorded in 1929. Listen to both parts of “High Water Everywhere.”">
+<meta property="og:description" content="Two musical responses to the Great Mississippi Flood of 1927, recorded within three years of it. Listen to both parts of “High Water Everywhere.”">
 <meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/blues-oct-14.html">
 <meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst/delta-blues.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst/delta-blues.jpg">
 <style>
-:root{--paper:#fff;--ink:#202f35;--muted:#4a5c64;--rule:#cbd3d5;--card:#fff;--a:#d28a00;--a-t:#fbe6bf;--a2:#b8740a;--b:#245a8d;--b-t:#cfe3f7;--resp:#2f7a6b;--resp-t:#d5ece6;--talk:#8a817e;--off:#eceae4}
+:root{--paper:#fff;--ink:#202f35;--muted:#4a5c64;--rule:#cbd3d5;--card:#fff;--a:#d28a00;--a-t:#fbe6bf;--a2:#b8740a;--b:#245a8d;--b-t:#cfe3f7;--resp:#2f7a6b;--resp-t:#d5ece6;--talk:#6e6562;--off:#eceae4}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 "Source Sans 3",-apple-system,"Helvetica Neue",Arial,sans-serif}
 a{color:var(--b)}
@@ -69,20 +69,59 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .src{font-size:14px;color:var(--muted)}
 .ask{font-size:16px}
 @media(max-width:820px){.stage{grid-template-columns:1fr}.parts{grid-template-columns:1fr}h1{font-size:26px}}
-.song{margin:0 0 20px}.song .stage{margin-top:6px}.patton .B2{background:var(--b-t);box-shadow:inset 4px 0 0 var(--b)}.days{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px}.days b{font-weight:700}</style></head>
+.song{margin:0 0 20px}.song .stage{margin-top:6px}.patton .B2{background:var(--b-t);box-shadow:inset 4px 0 0 var(--b)}.days{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px}.days b{font-weight:700}.route{--c:var(--talk)}.route-wrap{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:20px;align-items:start}
+#route-map{height:520px;border:1px solid var(--rule);border-radius:4px;background:#e9e9e6}
+.route ol{margin:0;padding:0;list-style:none;font-size:15px}
+.route ol+h3{margin-top:16px}.route h3{margin:0 0 6px;font-size:16px}
+.route li{display:grid;grid-template-columns:26px 1fr;gap:8px;padding:4px 0;border-bottom:1px solid var(--off)}
+.route li span{color:var(--muted);display:block;font-size:14px}
+.pin{display:flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.35)}
+.pin.p1{background:var(--a2)}.pin.p2{background:var(--b)}
+.route li .pin{box-shadow:none;border:0}
+.leaflet-tooltip.place{background:#fff;border:1px solid var(--rule);box-shadow:none;padding:1px 6px;font:600 14px/1.3 "Source Sans 3",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--ink)}
+.leaflet-tooltip.place:before{display:none}
+.leaflet-tooltip.ref{background:transparent;border:0;box-shadow:none;padding:0;font:italic 14px/1.2 "Source Sans 3",-apple-system,"Helvetica Neue",Arial,sans-serif;color:var(--muted)}
+.leaflet-tooltip.ref:before{display:none}
+@media(max-width:820px){.route-wrap{grid-template-columns:1fr}#route-map{height:420px}}
+</style>
+<link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css"></head>
 <body>
-<nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a href="../courses/frst-110.html">← Course materials</a><a href="blues-form.html">What are the blues?</a></div></nav>
+<nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><span class="brand">FRST 110</span><a href="../courses/frst-110.html">← Course materials</a><a href="blues-form.html">What are the blues?</a></div></nav>
 <main>
 <h1>Flood</h1>
-<p class="meta">Delta blues · Wednesday, October 14</p>
+<p class="meta">Delta blues</p>
 <p class="days"><b>Wed Oct 14 · Flood</b> <a href="blues-oct-16.html">Fri Oct 16 · Displacement &amp; levee labor</a> <a href="blues-oct-19.html">Mon Oct 19 · Mississippi to Chicago</a></p>
-<p class="lead">Two musical responses to the Great Mississippi Flood of 1927, recorded in 1929. Listen to both parts of “High Water Everywhere.”</p>
+<p class="lead">Two musical responses to the Great Mississippi Flood of 1927, recorded within three years of it. Listen to both parts of “High Water Everywhere.”</p>
+<section class="route" id="route">
+<h2>Follow the flood</h2>
+<div class="route-wrap">
+<div id="route-map" role="img" aria-label="Map of the Mississippi Delta with the places Charley Patton names, numbered in the order he sings them"></div>
+<div>
+<h3>Part 1 · Mississippi</h3>
+<ol>
+<li><i class="pin p1">1</i><div>Sumner<span>“backwater done rose all around Sumner” · Tallahatchie County</span></div></li>
+<li><i class="pin p1">2</i><div>Leland<span>“look-a here now at Leland, river was risin’ high”</span></div></li>
+<li><i class="pin p1">3</i><div>Greenville<span>“I’m gonna move to Greenville” · on the Mississippi River</span></div></li>
+<li><i class="pin p1">4</i><div>Rosedale<span>“they tell me there’s water there” · on the Mississippi River</span></div></li>
+<li><i class="pin p1">5</i><div>Vicksburg<span>“I’m goin’ to Vicksburg” · a city on bluffs above the river</span></div></li>
+<li><i class="pin p1">6</i><div>Sharkey County<span>“hit Sharkey County and everything was down”</span></div></li>
+<li><i class="pin p1">7</i><div>Stovall<span>a plantation near Clarksdale, where Muddy Waters recorded in 1941</span></div></li>
+<li><i class="pin p1">8</i><div>Tallahatchie River<span>“leavin’ over that Tallahatchie shore”</span></div></li>
+</ol>
+<h3>Part 2 · Arkansas</h3>
+<ol>
+<li><i class="pin p2">9</i><div>Blytheville<span>“backwater at Blytheville” · Mississippi County, Arkansas</span></div></li>
+<li><i class="pin p2">10</i><div>Joiner<span>“done took Joiner town” · Mississippi County, Arkansas</span></div></li>
+</ol>
+</div>
+</div>
+</section>
 <section class="song" id="patton-1" style="--c:var(--a)">
 <h2>Charley Patton, “High Water Everywhere, Part 1”</h2>
 
 <div class="stage">
 <div><div class="video"><iframe src="https://www.youtube.com/embed/UeYlqEFRw4g?rel=0" title="Charley Patton, High Water Everywhere, Part 1" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-<p class="status">Paramount, recorded in Grafton, Wisconsin, 1929</p>
+<p class="status">Paramount, recorded in Grafton, Wisconsin, late 1929 or early 1930</p>
 <div class="key"><span><i style="background:var(--a-t)"></i>A</span><span><i style="background:var(--a-t);box-shadow:inset 4px 0 0 var(--a2)"></i>A′, changed on the repeat</span><span><i style="background:var(--b-t)"></i>B</span><span><i style="background:transparent"></i><em>spoken</em></span></div></div>
 <ul class="patton"><li class="A"><b>A</b>Well, backwater done rose all around Sumner now, drove me down the line</li>
 <li class="A2"><b>A′</b>Backwater done rose at Sumner, drove poor Charley down the line</li>
@@ -104,7 +143,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <li class="B"><b>B</b>I would go down to Rosedale, but they tell me there’s water there</li>
 <li class="gap"></li>
 <li class="A"><b>A</b>Now, the water now, mama, done took Charley’s town</li>
-<li class="A"><b>A</b>Well, they tell me the water done took Charley’s town</li>
+<li class="A2"><b>A′</b>Well, they tell me the water done took Charley’s town</li>
 <li class="T"><b></b>Boy, I’m goin’ to Vicksburg</li>
 <li class="B"><b>B</b>Well, I’m goin’ to Vicksburg, for that high of mine</li>
 <li class="gap"></li>
@@ -125,7 +164,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <p>Part 2 crosses the river into Arkansas. Where the form breaks is marked on <a href="blues-form.html#patton">What are the blues?</a></p>
 <div class="stage">
 <div><div class="video"><iframe src="https://www.youtube.com/embed/v99b1ky7mNA?rel=0" title="Charley Patton, High Water Everywhere, Part 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-<p class="status">Paramount, recorded in Grafton, Wisconsin, 1929</p>
+<p class="status">Paramount, recorded in Grafton, Wisconsin, late 1929 or early 1930</p>
 <div class="key"><span><i style="background:var(--a-t)"></i>A</span><span><i style="background:var(--a-t);box-shadow:inset 4px 0 0 var(--a2)"></i>A′, changed on the repeat</span><span><i style="background:var(--b-t)"></i>B</span><span><i style="background:var(--off)"></i>outside the pattern</span><span><i style="background:transparent"></i><em>spoken</em></span></div></div>
 <ul class="patton"><li class="A"><b>A</b>Backwater at Blytheville, backed up all around</li>
 <li class="A2"><b>A′</b>Backwater at Blytheville, done took Joiner town</li>
@@ -191,6 +230,31 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <li class="B"><b>B</b>I worked so hard to keep the water away</li></ul>
 </div>
 </section>
-<p class="src">Recordings from the artists’ YouTube topic channels. Words transcribed for the course. Form: <a href="blues-form.html">What are the blues?</a></p>
+<p class="src">Recordings from the artists’ YouTube topic channels. Words transcribed for the course. Form: <a href="blues-form.html">What are the blues?</a> Map: basemap and rivers © Esri; place coordinates from <a href="https://nominatim.openstreetmap.org/">OpenStreetMap Nominatim</a>.</p>
 </main>
+<script src="../_kit/vendor/leaflet/leaflet.js"></script>
+<script>
+(function(){
+  if(!window.L)return;
+  var places=[
+    [1,'Sumner',33.9709,-90.3687,'right',1],[2,'Leland',33.4044,-90.8987,'right',1],[3,'Greenville',33.4111,-91.0636,'left',1],
+    [4,'Rosedale',33.8551,-91.0266,'left',1],[5,'Vicksburg',32.3528,-90.8777,'left',1],[6,'Sharkey County',32.8743,-90.8478,'right',1],
+    [7,'Stovall',34.2968,-90.6448,'left',1],[8,'Tallahatchie River',33.7682,-90.1821,'right',1],
+    [9,'Blytheville',35.9283,-89.9046,'right',2],[10,'Joiner',35.5079,-90.1489,'left',2]];
+  var map=L.map('route-map',{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false,zoomSnap:.25});
+  L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'Basemap and rivers © Esri'}).addTo(map);
+  L.tileLayer('https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/Esri_Hydro_Reference_Overlay/MapServer/tile/{z}/{y}/{x}',{maxZoom:16}).addTo(map);
+  var pts=[];
+  places.forEach(function(p){
+    var m=L.marker([p[2],p[3]],{icon:L.divIcon({className:'',html:'<i class="pin p'+p[5]+'">'+p[0]+'</i>',iconSize:[24,24],iconAnchor:[12,12]}),keyboard:false}).addTo(map);
+    m.bindTooltip(p[1],{permanent:true,direction:p[4],offset:[p[4]=='left'?-12:12,0],className:'place'});
+    pts.push([p[2],p[3]]);
+  });
+  [['Memphis',35.1495,-90.049],['Jackson',32.2988,-90.1848],['Clarksdale',34.2001,-90.5709]].forEach(function(r){
+    L.circleMarker([r[1],r[2]],{radius:3,color:'#4a5c64',weight:1,fillColor:'#4a5c64',fillOpacity:1,interactive:false}).addTo(map)
+     .bindTooltip(r[0],{permanent:true,direction:'right',offset:[6,0],className:'ref'});
+  });
+  map.fitBounds(pts,{padding:[30,30]});
+})();
+</script>
 </body></html>
