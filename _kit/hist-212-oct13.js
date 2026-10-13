@@ -71,3 +71,16 @@ document.querySelectorAll('[data-glyph]').forEach(button => {
   document.body.classList.add('lesson-viewer');
   render();
 })();
+
+// Keep each debate's two positions together; show the next subject on request.
+const debateButtons = [...document.querySelectorAll('[data-debate]')];
+if (debateButtons.length) {
+  const debatePanels = [...document.querySelectorAll('.debate-panel')];
+  document.querySelector('.debate-switch').hidden = false;
+  function chooseDebate(index) {
+    debatePanels.forEach((panel,i) => { panel.hidden = i !== index; });
+    debateButtons.forEach((button,i) => button.setAttribute('aria-pressed',String(i === index)));
+  }
+  debateButtons.forEach(button => button.addEventListener('click',() => chooseDebate(Number(button.dataset.debate))));
+  chooseDebate(0);
+}

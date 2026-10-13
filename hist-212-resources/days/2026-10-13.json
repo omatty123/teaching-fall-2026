@@ -187,72 +187,7 @@
       "source": "Mouzi’s debate · earlier precedent: the king of Zhao’s foreign dress",
       "body": [
         {
-          "p": "<strong>PRO:</strong> reasons to engage with foreign people, teachings, or practices. <strong>CON:</strong> reasons to resist. The sources address different actions: living among foreigners, learning from them, and adopting their dress."
-        },
-        {
-          "html": "<h3>Living among foreigners</h3>"
-        },
-        {
-          "pair": [
-            {
-              "who": "PRO · Mouzi cites Confucius",
-              "quote": "If a noble person dwells in their midst, what rudeness can there be among them?",
-              "cite": "SCT p. 425; Analects 9.14, quoted by Mouzi",
-              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
-              "linkLabel": "October 13 reader"
-            },
-            {
-              "who": "CON · The questioner cites Confucius",
-              "quote": "The barbarians with a ruler are not so good as the Chinese without one.",
-              "cite": "SCT p. 425; Analects 3.5, quoted by the questioner",
-              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
-              "linkLabel": "October 13 reader"
-            }
-          ]
-        },
-        {
-          "p": "<span class=\"source-note\">Mouzi invokes Confucius’s proposed residence among the “nine barbarian nations.” This supports living among outsiders; it does not itself say that all customs are equally good. The CON quotation follows the assigned translation of a disputed Analects passage.</span>"
-        },
-        {
-          "html": "<h3>Learning from foreign teachings</h3>"
-        },
-        {
-          "pair": [
-            {
-              "who": "PRO · Mouzi",
-              "quote": "What accords with rightness is to be followed, what heals the sick is good. <mark>The gentleman-scholar draws widely on all forms of good</mark> and thereby benefits his character.",
-              "cite": "SCT pp. 421–422",
-              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
-              "linkLabel": "October 13 reader"
-            },
-            {
-              "who": "CON · The questioner cites Mencius",
-              "quote": "I have heard of using what is Chinese to change what is barbarian, but I have never heard of <mark>using what is barbarian to change what is Chinese</mark>.",
-              "cite": "SCT p. 425; Mengzi 3A4, quoted by the questioner",
-              "link": "https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view",
-              "linkLabel": "October 13 reader"
-            }
-          ]
-        },
-        {
-          "html": "<h3>Adopting foreign dress · earlier reading</h3>"
-        },
-        {
-          "pair": [
-            {
-              "who": "PRO · The king of Zhao",
-              "quote": "Clothes exist to be useful and manners respond to conditions.",
-              "cite": "“The King of Zhao Convinces His Uncle to Wear Barbarian Dress,” Ebrey & Walthall, p. 25; trans. J. I. Crump, modified"
-            },
-            {
-              "who": "CON · Gongzi Cheng, the king’s uncle",
-              "quote": "But now the king would discard all this and wear the habit of foreign regions.",
-              "cite": "Same passage, Ebrey & Walthall, p. 25"
-            }
-          ]
-        },
-        {
-          "p": "<span class=\"source-note\">The king connects Hu dress with mounted archery and border defense. His uncle initially treats the change as abandoning inherited civilization, then accepts the king’s argument.</span>"
+          "html": "<div class=\"debate-switch\" aria-label=\"Select a comparison\" hidden><button type=\"button\" data-debate=\"0\" aria-controls=\"debate-0\" aria-pressed=\"true\">Residence</button><button type=\"button\" data-debate=\"1\" aria-controls=\"debate-1\" aria-pressed=\"false\">Teachings</button><button type=\"button\" data-debate=\"2\" aria-controls=\"debate-2\" aria-pressed=\"false\">Dress</button></div><div class=\"debate-panel\" id=\"debate-0\"><h4 class=\"debate-subject\">Living among foreigners</h4><div class=\"debate-columns\"><article class=\"debate-position\"><div class=\"debate-label\">PRO</div><p class=\"debate-speaker\"><a class=\"name-link\" href=\"https://afe.easia.columbia.edu/main_pop/ps/ps_china-mouzi-disposing-error.htm\">Mouzi</a> cites <a class=\"name-link\" href=\"https://plato.stanford.edu/entries/confucius/\">Confucius</a></p><blockquote>“If a noble person dwells in their midst, what rudeness can there be among them?”</blockquote><p class=\"citation\">SCT p. 425; Analects 9.14, quoted by <a class=\"name-link\" href=\"https://afe.easia.columbia.edu/main_pop/ps/ps_china-mouzi-disposing-error.htm\">Mouzi</a>. <a href=\"https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view\">October 13 reader</a></p></article><article class=\"debate-position\"><div class=\"debate-label\">CON</div><p class=\"debate-speaker\">The questioner cites <a class=\"name-link\" href=\"https://plato.stanford.edu/entries/confucius/\">Confucius</a></p><blockquote>“The barbarians with a ruler are not so good as the Chinese without one.”</blockquote><p class=\"citation\">SCT p. 425; Analects 3.5, quoted by the questioner. <a href=\"https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view\">October 13 reader</a></p></article></div><details class=\"debate-context\"><summary>Passage context and translation note</summary><p><a class=\"name-link\" href=\"https://afe.easia.columbia.edu/main_pop/ps/ps_china-mouzi-disposing-error.htm\">Mouzi</a> invokes <a class=\"name-link\" href=\"https://plato.stanford.edu/entries/confucius/\">Confucius</a>’s proposed residence among the “nine barbarian nations.” This supports living among outsiders; it does not itself say that all customs are equally good. The CON quotation follows the assigned translation of a disputed Analects passage.</p></details></div><div class=\"debate-panel\" id=\"debate-1\"><h4 class=\"debate-subject\">Learning from foreign teachings</h4><div class=\"debate-columns\"><article class=\"debate-position\"><div class=\"debate-label\">PRO</div><p class=\"debate-speaker\"><a class=\"name-link\" href=\"https://afe.easia.columbia.edu/main_pop/ps/ps_china-mouzi-disposing-error.htm\">Mouzi</a></p><blockquote>“What accords with rightness is to be followed, what heals the sick is good. <mark>The gentleman-scholar draws widely on all forms of good</mark> and thereby benefits his character.”</blockquote><p class=\"citation\">SCT pp. 421–422. <a href=\"https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view\">October 13 reader</a></p></article><article class=\"debate-position\"><div class=\"debate-label\">CON</div><p class=\"debate-speaker\">The questioner cites <a class=\"name-link\" href=\"https://plato.stanford.edu/entries/mencius/\">Mencius</a></p><blockquote>“I have heard of using what is Chinese to change what is barbarian, but I have never heard of <mark>using what is barbarian to change what is Chinese</mark>.”</blockquote><p class=\"citation\">SCT p. 425; <a class=\"name-link\" href=\"https://plato.stanford.edu/entries/mencius/\">Mengzi</a> 3A4, quoted by the questioner. <a href=\"https://drive.google.com/file/d/1DgdxWmNkDr22Sze26MjL-juHOmhtmLPF/view\">October 13 reader</a></p></article></div></div><div class=\"debate-panel\" id=\"debate-2\"><h4 class=\"debate-subject\">Adopting foreign dress</h4><div class=\"debate-columns\"><article class=\"debate-position\"><div class=\"debate-label\">PRO</div><p class=\"debate-speaker\">The <a class=\"name-link\" href=\"https://en.wikipedia.org/wiki/King_Wuling_of_Zhao\">king of Zhao</a></p><blockquote>“Clothes exist to be useful and manners respond to conditions.”</blockquote><p class=\"citation\">“The <a class=\"name-link\" href=\"https://en.wikipedia.org/wiki/King_Wuling_of_Zhao\">King of Zhao</a> Convinces His Uncle to Wear Barbarian Dress,” Ebrey &amp; Walthall, p. 25; trans. J. I. Crump, modified.</p></article><article class=\"debate-position\"><div class=\"debate-label\">CON</div><p class=\"debate-speaker\"><a class=\"name-link\" href=\"https://ctext.org/zhan-guo-ce/zhao-ce-er\">Gongzi Cheng</a>, the king’s uncle</p><blockquote>“But now the king would discard all this and wear the habit of foreign regions.”</blockquote><p class=\"citation\">Same passage, Ebrey &amp; Walthall, p. 25.</p></article></div><details class=\"debate-context\"><summary>Passage context</summary><p>The king connects Hu dress with mounted archery and border defense. His uncle initially treats the change as abandoning inherited civilization, then accepts the king’s argument.</p></details></div><details class=\"debate-context debate-scope\"><summary>Scope of this comparison</summary><p><strong>PRO:</strong> reasons to engage with foreign people, teachings, or practices. <strong>CON:</strong> reasons to resist. The sources address different actions: living among foreigners, learning from them, and adopting their dress.</p></details>"
         }
       ]
     },
