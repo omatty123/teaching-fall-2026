@@ -4,6 +4,9 @@
 Lyrics data lives in frst-110-resources/blues-lyrics.json. Each line is [mark, text]:
 A, A2 (A changed on the repeat), B, X (outside the pattern), T (spoken), "" (verse break).
 """
+import sys
+sys.exit("RETIRED 2026-10-14 (Matty): blues-oct-14/16/19.html are hand-edited now (map column, A A′ B fixes,\n"
+         "verse/chorus colors). Running this would overwrite them. Edit the HTML pages directly.")
 import html, json, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
