@@ -16,7 +16,7 @@
       "source": "Ebrey 75–78, 105–106",
       "body": [
         {
-          "html": "<figure><a href=\"../images/hist/oct15/east-asia.svg\" aria-label=\"Enlarge: Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\"><img src=\"../images/hist/oct15/east-asia.svg\" alt=\"Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\" loading=\"lazy\"></a><figcaption>Four cities within a connected region. Balhae lay north of Silla; the labels do not indicate precise territorial extent. <a href=\"https://www.naturalearthdata.com/about/terms-of-use/\">Natural Earth · public-domain geographic data</a> · Select to enlarge.</figcaption></figure>"
+          "html": "<figure><a href=\"../images/hist/oct15/east-asia.svg\" aria-label=\"Enlarge: East Asia with the Yellow River, Yangzi, Wei, Huai, Liao and Yalu, and the capitals Chang’an, Luoyang, Gyeongju and Nara\"><img src=\"../images/hist/oct15/east-asia.svg\" alt=\"East Asia with the Yellow River, Yangzi, Wei, Huai, Liao and Yalu, and the capitals Chang’an, Luoyang, Gyeongju and Nara\" loading=\"lazy\"></a><figcaption>Capitals and major river systems. River courses and coastlines are modern reference geography; the lower Yellow River changed course over time. Regional labels do not mark territorial boundaries. <a href=\"https://www.naturalearthdata.com/about/terms-of-use/\">Natural Earth · public-domain geographic data</a> · Select to enlarge.</figcaption></figure>"
         },
         {
           "p": "<strong>589:</strong> Sui reunifies north and south China. <strong>618:</strong> Tang succeeds Sui. Reunification brings inherited institutions together: canals, land allocation, household registers, law and official recruitment."
@@ -113,7 +113,7 @@
           "html": "<figure><a href=\"../images/hist/oct15/silla-capital-source-slide.png\" aria-label=\"Enlarge: Silla capital: Gyeongju\"><img src=\"../images/hist/oct15/silla-capital-source-slide.png\" alt=\"Silla capital: Gyeongju: original course presentation slide\" loading=\"lazy\"></a><figcaption>Gyeongju reconstruction from the existing course presentation. Planned wards extend across a landscape shaped by hills and rivers. <a href=\"https://docs.google.com/presentation/d/1lBYGWuY8__S9YI5WSfsYSXYUq7kMsITtEvH0wAAHPTo/present?slide=id.p19\">Open original course slide</a> · Select image to enlarge.</figcaption></figure>"
         },
         {
-          "html": "<figure><a href=\"../images/hist/oct15/east-asia.svg\" aria-label=\"Enlarge: Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\"><img src=\"../images/hist/oct15/east-asia.svg\" alt=\"Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\" loading=\"lazy\"></a><figcaption>Four cities within a connected region. Balhae lay north of Silla; the labels do not indicate precise territorial extent. <a href=\"https://www.naturalearthdata.com/about/terms-of-use/\">Natural Earth · public-domain geographic data</a> · Select to enlarge.</figcaption></figure>"
+          "html": "<figure><a href=\"../images/hist/oct15/east-asia.svg\" aria-label=\"Enlarge: East Asia with the Yellow River, Yangzi, Wei, Huai, Liao and Yalu, and the capitals Chang’an, Luoyang, Gyeongju and Nara\"><img src=\"../images/hist/oct15/east-asia.svg\" alt=\"East Asia with the Yellow River, Yangzi, Wei, Huai, Liao and Yalu, and the capitals Chang’an, Luoyang, Gyeongju and Nara\" loading=\"lazy\"></a><figcaption>Capitals and major river systems. River courses and coastlines are modern reference geography; the lower Yellow River changed course over time. Regional labels do not mark territorial boundaries. <a href=\"https://www.naturalearthdata.com/about/terms-of-use/\">Natural Earth · public-domain geographic data</a> · Select to enlarge.</figcaption></figure>"
         },
         {
           "p": "<strong>660:</strong> Baekje falls to the Silla–Tang alliance. <strong>668:</strong> Goguryeo falls. <strong>676:</strong> Silla has pushed Tang forces out of its southern sphere. <strong>698:</strong> Balhae emerges to the north, with Goguryeo and diverse regional inheritances."
@@ -134,6 +134,16 @@
         },
         {
           "html": "<h3>Hyecho: a monk from Silla travels across Asia</h3><figure><a href=\"../images/hist/oct15/hyecho-map.jpg\" aria-label=\"Enlarge Hyecho’s route map\"><img src=\"../images/hist/oct15/hyecho-map.jpg\" alt=\"University of Michigan map of Hyecho’s journey, 724–727: known and presumed routes across Asia\" loading=\"lazy\"></a><figcaption>Known routes are solid; presumed routes are dashed. Borders are modern. <a href=\"https://hyecho-buddhist-pilgrim.asian.lsa.umich.edu/\">University of Michigan, Hyecho’s Journey</a> · Select to enlarge.</figcaption></figure>"
+        },
+        {
+          "passage": {
+            "who": "Hyecho · longing for home in South India",
+            "quote": "Staring at the road home on this moonlit night<br>Only the drifting clouds are floating back.<br>I want to send a letter along with them,<br>But the winds blow harshly and pay me no mind.<br>My country is at the far northern end of the sky<br>The lands of the others lie in the far western reaches.<br>Geese don’t come to these warm southern climes,<br>Who will fly to the forest, to deliver my news?",
+            "cite": "Translated by Matty Wegehaupt, Memoirs of a Pilgrimage to the Five Indian Kingdoms, in Collected Works of Korean Buddhism, vol. 10 (2012), pp. 100–101"
+          }
+        },
+        {
+          "p": "“The forest” may allude to Gyerim (“Rooster Forest”), at Silla’s capital, Gyeongju. The translation’s note identifies this as a possible allusion. The geese do not come to these southern lands, leaving Hyecho without a messenger to carry news home."
         },
         {
           "passage": {
