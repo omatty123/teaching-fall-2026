@@ -83,6 +83,16 @@ def passage(p):
 
 
 def block(b):
+    if "poets" in b:
+        poets = b["poets"]
+        controls = '<div class="poet-switch" hidden role="tablist" aria-label="Choose a poet">' + ''.join(
+            f'<button type="button" id="tab-{e(p["id"])}" role="tab" aria-controls="poet-{e(p["id"])}">{e(p["name"])}</button>' for p in poets) + '</div>'
+        panels = []
+        for p in poets:
+            verses = ''.join(f'<div class="poem-stanza">{q["quote"]}</div>' for q in p["passages"])
+            work = f'<p class="poem-work">{e(p["work"])}</p>' if p.get("work") else ''
+            panels.append(f'<article id="poet-{e(p["id"])}" class="poet-focus"><h3>{e(p["name"])}</h3><p class="poet-caption">{e(p["caption"])}</p>{work}<blockquote>{verses}</blockquote></article>')
+        return '<div class="poets">' + controls + ''.join(panels) + '</div>'
     if "html" in b:
         return b["html"]
     if "p" in b:
@@ -117,6 +127,8 @@ def check(day):
         ps = []
         for b in s["body"]:
             ps += [b["passage"]] if "passage" in b else b.get("pair", [])
+            for poet in b.get("poets", []):
+                ps += poet["passages"]
         for p in ps:
             k = norm(p["quote"])
             if k in seen:

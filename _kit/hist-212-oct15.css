@@ -1,3 +1,38 @@
 .oct15 main{max-width:1360px;padding:20px 32px}.oct15 h1{font-size:clamp(28px,3vw,40px);max-width:none}.oct15 h2{font-size:30px;margin-bottom:14px}.oct15 h3{margin-top:18px}.oct15 header .meta{margin:8px 0}.oct15 .sections{padding:12px 0;gap:6px 20px}.oct15 .sections a{font-size:17px;min-height:44px;display:flex;align-items:center}.oct15 section{padding-top:20px;margin:18px 0 32px}.oct15 figure{margin:0 0 20px;min-width:0}.oct15 figure img{display:block;width:100%;max-height:650px;object-fit:contain;height:auto}.oct15 figcaption{font-size:15px;line-height:1.4;margin-top:8px}.oct15 .study{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:start}.oct15 .study p{margin-top:0}.oct15 .passage{border-top:1px solid #cbd0d1;padding:16px 0;margin:16px 0}.oct15 blockquote{font-size:26px;line-height:1.4;white-space:pre-line;max-width:75ch}.oct15 .passage h3{font-size:20px;margin:0 0 10px}.oct15 .citation{margin:10px 0 0}.oct15 .sequence{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:24px 0}.oct15 .sequence span{border-top:2px solid #713744;padding-top:12px}.oct15 .sequence b{display:block}.oct15 table{border-collapse:collapse;width:100%;font-size:19px}.oct15 th,.oct15 td{text-align:left;border-bottom:1px solid #cbd0d1;padding:14px;vertical-align:top}.oct15 summary{cursor:pointer;min-height:44px;text-decoration:underline;color:#065da2}.oct15 .pager{display:flex;justify-content:space-between;gap:24px;border-top:1px solid #cbd0d1;padding:16px 0}.oct15 .pager a{min-height:44px}.oct15 .view-controls{display:flex;gap:20px;align-items:center;margin:10px 0}.oct15 select{font:inherit;padding:8px;max-width:100%;min-height:44px}.oct15 [aria-current=page]{font-weight:700;text-decoration-thickness:3px}.oct15 .large-text blockquote,.oct15.large-text blockquote{font-size:32px}.oct15 .topic-select{display:none}@media(min-width:1000px){.oct15.viewer{display:grid;grid-template-columns:250px minmax(0,1fr)}.oct15.viewer>.top{grid-column:1/-1}.oct15.viewer main{grid-column:2;width:100%;box-sizing:border-box}.oct15.viewer .sections{position:fixed;left:20px;top:120px;width:210px;display:flex;flex-direction:column;gap:2px;max-height:70vh;overflow:auto}.oct15.viewer .sections a{font-size:17px;line-height:1.25;padding:5px 0}.oct15.viewer .sections .all{margin-top:12px}}
 @media(max-width:760px){.oct15 main{padding:16px}.oct15 .study,.oct15 .sequence{grid-template-columns:1fr;gap:18px}.oct15 h2{font-size:26px}.oct15 blockquote{font-size:23px}.oct15 figure img{max-height:520px}.oct15 .topic-select{display:block;width:100%;margin:12px 0}.oct15.viewer .sections a{display:none}.oct15 .sections{padding:0}.oct15 th,.oct15 td{padding:8px;font-size:16px}.oct15 .top{gap:8px 16px}.oct15 .top a{font-size:16px}.oct15 .view-controls{flex-wrap:wrap}}
 @media print{.oct15.viewer{display:block}.oct15 .sections,.oct15 .pager,.oct15 .topic-select{display:none!important}.oct15 section[hidden]{display:block!important}.oct15 figure img{max-height:350px}.oct15 main{padding:0}.oct15 body{font-size:12pt}}
+
+/* Poetry: one author and one coherent verse sequence at a time. */
+.oct15 #tang-crisis>h2{font-size:22px;margin-bottom:4px}
+.oct15 #tang-crisis>.source{display:none}
+.oct15 .poetry-era{font-size:17px;color:#526065}
+.oct15 .poet-switch{display:flex;gap:32px;border-bottom:1px solid #cbd0d1;margin:24px 0 20px}
+.oct15 .poet-switch[hidden]{display:none}
+.oct15 .poet-switch button{font:700 clamp(26px,3.4vw,42px)/1.15 "Source Sans 3",Arial,sans-serif;background:none;border:0;border-radius:0;box-shadow:none;padding:8px 0 12px;color:#526065;min-height:56px;cursor:pointer}
+.oct15 .poet-switch button[aria-selected=true]{color:#713744;border-bottom:4px solid #713744}
+.oct15 .poet-switch button:hover{color:#713744}
+.oct15 .poet-switch button:focus-visible{outline:3px solid #065da2;outline-offset:5px}
+.oct15 .poets.enhanced .poet-focus>h3{display:none}
+.oct15 .poet-focus>h3{font-size:38px;margin-bottom:12px}
+.oct15 .poet-caption{font-size:19px;margin:0 0 24px;color:#526065}
+.oct15 .poem-work{font-size:19px;font-weight:600;margin:0 0 16px}
+.oct15 .poet-focus blockquote{font-size:clamp(23px,2.2vw,29px);line-height:1.45;white-space:normal;margin:0;padding:0;border:0}
+.oct15 .poem-stanza{white-space:pre-line;margin:0 0 24px}
+.oct15 .poem-stanza mark{background:none;color:inherit}
+.oct15 .poetry-notes{margin-top:28px;border-top:1px solid #cbd0d1;padding-top:10px}
+.oct15 .poetry-notes p{font-size:18px;line-height:1.5}
+.oct15 .poetry-notes h3{font-size:20px}
+.oct15.large-text .poet-focus blockquote{font-size:32px}
+@media(max-width:760px){.oct15 .poet-switch{gap:24px;margin-top:16px}.oct15 .poet-switch button{font-size:28px}.oct15 .poet-focus blockquote{font-size:23px}.oct15 .poet-caption{margin-bottom:20px}}
+@media print{.oct15 .poet-switch{display:none!important}.oct15 .poet-focus[hidden]{display:block!important}.oct15 .poets.enhanced .poet-focus>h3{display:block}}
+.oct15.poetry-view main>header h1{font-size:26px}
+.oct15.poetry-view main>header .meta{font-size:14px;margin:4px 0}
+.oct15.poetry-view #tang-crisis>h2{font-size:18px}
+.oct15.poetry-view #tang-crisis>p:empty{display:none}
+.oct15.poetry-view #tang-crisis>p{margin:8px 0}
+.oct15 .poet-switch{margin:16px 0}
+.oct15 .poet-caption{font-size:17px;margin-bottom:14px}
+.oct15 .poem-work{font-size:18px;margin-bottom:12px}
+.oct15 .poet-focus blockquote{font-size:26px;line-height:1.4}
+.oct15 .poem-stanza{margin-bottom:18px}
+@media(max-width:760px){.oct15 .poet-focus blockquote{font-size:23px}}
