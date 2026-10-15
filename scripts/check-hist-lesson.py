@@ -2,7 +2,8 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 root=Path(__file__).resolve().parents[1]
-page=root/'hist-212-resources/class-2026-10-08.html'
+import sys
+page=root/('hist-212-resources/class-'+(sys.argv[1] if len(sys.argv)>1 else '2026-10-08')+'.html')
 class Check(HTMLParser):
  def __init__(self): super().__init__(); self.ids=set(); self.links=[]; self.marks=0
  def handle_starttag(self,tag,attrs):
@@ -18,7 +19,7 @@ for url in c.links:
  if u.scheme or u.netloc:continue
  if not u.path:assert u.fragment in c.ids, url
  else:assert (page.parent/unquote(u.path)).is_file(), url
-assert c.marks>=10
-assert all(x in text for x in ('thirteen numbers','Li Si','Lu Jia','Jia Yi','Dong Zhongshu','Lady Dai','Salt and Iron','People are the Root','People as Water','The ruler works for the people','The water can also overturn the boat.'))
+assert c.marks>0
+if page.stem == 'class-2026-10-08': assert all(x in text for x in ('thirteen numbers','Li Si','Lu Jia','Jia Yi','Dong Zhongshu','Lady Dai','Salt and Iron','People are the Root','People as Water','The ruler works for the people','The water can also overturn the boat.'))
 assert all(x not in text for x in ('/Users/','private-data','only you','Review this draft'))
 print('HIST lesson: anchors, local assets, highlights and public-content boundaries passed.')

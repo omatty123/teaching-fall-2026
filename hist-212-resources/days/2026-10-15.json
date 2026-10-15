@@ -1,0 +1,244 @@
+{
+  "title": "Sui, Tang, Silla and Japan",
+  "description": "Empire, shared culture and different political orders: images and short passages for October 15.",
+  "meta": "Ebrey 75–90, 105–112, 120–123 · Tang Models · Wŏlmyŏng · Shōtoku · Shōmu",
+  "bodyClass": "oct15",
+  "styles": [
+    "hist-212-oct15.css"
+  ],
+  "scripts": [
+    "hist-212-oct15.js"
+  ],
+  "sections": [
+    {
+      "id": "region",
+      "title": "1 · Rebuilding empire",
+      "source": "Ebrey 75–78, 105–106",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/oct15/east-asia.svg\" aria-label=\"Enlarge: Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\"><img src=\"../images/hist/oct15/east-asia.svg\" alt=\"Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\" loading=\"lazy\"></a><figcaption>Four cities within a connected region. Balhae lay north of Silla; the labels do not indicate precise territorial extent. <a href=\"https://www.naturalearthdata.com/about/terms-of-use/\">Natural Earth · public-domain geographic data</a> · Select to enlarge.</figcaption></figure>"
+        },
+        {
+          "p": "<strong>589:</strong> Sui reunifies north and south China. <strong>618:</strong> Tang succeeds Sui. Reunification brings inherited institutions together: canals, land allocation, household registers, law and official recruitment."
+        },
+        {
+          "html": "<div class=\"study\"><figure><a href=\"../images/hist/oct15/canal.svg\" aria-label=\"Enlarge: Sui and Tang canal routes between north and south China\"><img src=\"../images/hist/oct15/canal.svg\" alt=\"Sui and Tang canal routes between north and south China\" loading=\"lazy\"></a><figcaption>Sui–Tang canal system. Modern reconstruction; routes distinguish the historical network from today’s canal. <a href=\"https://commons.wikimedia.org/wiki/File:China-Grand_canal,_Sui_and_Tang.svg\">Yug / Ksiom · CC BY-SA 3.0; sans-serif labels adapted</a> · Select to enlarge.</figcaption></figure><div><h3>Transport and government</h3><p>Grain, people and orders must move. The canal connected northern political centers with southern resources; its construction also required conscripted labor.</p><p>Sui’s campaigns against Goguryeo failed. Tang’s later alliance with Silla defeated Baekje and Goguryeo, but did not make Silla a lasting Tang possession.</p></div></div>"
+        },
+        {
+          "passage": {
+            "who": "Taizong · Plan for an Emperor, 648",
+            "quote": "<mark>The people are the origin of the state. The state is the foundation of the sovereign.</mark>",
+            "cite": "SJT 85–86 · Tang Models packet",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        }
+      ]
+    },
+    {
+      "id": "changan",
+      "title": "2 · Chang’an: governing a capital",
+      "source": "Ebrey 77–82 · SJT 86–88",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/oct15/changan.svg\" aria-label=\"Enlarge: Plan of Tang Chang’an showing palace, wards and markets\"><img src=\"../images/hist/oct15/changan.svg\" alt=\"Plan of Tang Chang’an showing palace, wards and markets\" loading=\"lazy\"></a><figcaption>Chang’an: palace precincts, walled wards and markets. Modern reconstruction, not a contemporary drawing. <a href=\"https://commons.wikimedia.org/wiki/File:Map_of_Chang%27an_in_Tang_Dynasty.svg\">LackOfInspiration1 · CC BY-SA 4.0; sans-serif labels adapted</a> · Select to enlarge.</figcaption></figure>"
+        },
+        {
+          "p": "The court stood within an organized city of wards, markets, religious establishments and visiting communities. Examinations expanded recruitment, but powerful families retained advantages."
+        },
+        {
+          "passage": {
+            "who": "Taizong · governing with officials",
+            "quote": "<mark>The far-extended empire cannot be controlled by the will of one man alone: thus the emperor must control it together with others.</mark>",
+            "cite": "SJT 86 · Tang Models packet",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "p": "<strong>Remonstrance</strong> means advising a ruler against an error. Taizong’s next passage says correct advice should be accepted even from people of low status. The passage states an ideal of government; it does not prove that officials always followed it."
+        },
+        {
+          "p": "<a href=\"https://docs.google.com/presentation/d/1lBYGWuY8__S9YI5WSfsYSXYUq7kMsITtEvH0wAAHPTo/present\">Course presentation: Chinese influence on Japan and Korea</a>. Its capital comparisons appear below with Silla and Japan."
+        }
+      ]
+    },
+    {
+      "id": "tang-culture",
+      "title": "3 · Tang culture and Buddhist patronage",
+      "source": "Ebrey 79–84",
+      "body": [
+        {
+          "html": "<div class=\"study\"><figure><a href=\"../images/artwork/10-tangcamel.jpg\" aria-label=\"Enlarge: Tang glazed earthenware camel carrying musicians\"><img src=\"../images/artwork/10-tangcamel.jpg\" alt=\"Tang glazed earthenware camel carrying musicians\" loading=\"lazy\"></a><figcaption>Camel with musicians · Tang dynasty, eighth century · glazed earthenware tomb figure. A manufactured image of music and movement, made for burial. <a href=\"https://commons.wikimedia.org/wiki/File:Tang_Sancai_Porcelain_with_Musicians_on_a_Camel.jpg\">Wikimedia Commons · CC0</a> · Select to enlarge.</figcaption></figure><div><h3>People, objects and performance</h3><p>Envoys, merchants, monks and musicians linked Tang cities with Central Asia, Korea, Japan and other regions. New instruments, fashions and entertainments became part of elite life.</p><p>The tomb figure records how those connections were represented. It cannot identify the ethnicity of every depicted performer by itself.</p><h3>Wu’s authority</h3><p>Wu became emperor of her Zhou dynasty in 690. Buddhist patronage and interpretations of Buddhist prophecy supported her claims alongside court ritual and official recruitment.</p></div></div>"
+        },
+        {
+          "html": "<figure><a href=\"../images/hist/oct13/longmen-cave.jpg\" aria-label=\"Enlarge: Vairocana and attendants at Longmen Fengxian Temple\"><img src=\"../images/hist/oct13/longmen-cave.jpg\" alt=\"Vairocana and attendants at Longmen Fengxian Temple\" loading=\"lazy\"></a><figcaption>Longmen, near Luoyang · Fengxian Temple, seventh century. Wu supported monumental Buddhist patronage. This is Vairocana, not a securely identified portrait of Wu. <a href=\"https://commons.wikimedia.org/wiki/File:%E9%BE%99%E9%97%A8%E7%9F%B3%E7%AA%9F.jpg\">Shenshi0603 · CC BY-SA 4.0</a> · Select to enlarge.</figcaption></figure>"
+        },
+        {
+          "p": "Buddhist monasteries also taught, lodged travelers, received donations and held property. Religious authority had institutional and economic consequences."
+        }
+      ]
+    },
+    {
+      "id": "tang-crisis",
+      "title": "4 · Military crisis and poetry",
+      "source": "Ebrey 84–90",
+      "body": [
+        {
+          "p": "<strong>755–763: the An Lushan rebellion.</strong> Powerful frontier armies turned against the court. Tang survived through outside military help and concessions to regional commanders; central control weakened."
+        },
+        {
+          "html": "<div class=\"sequence\"><span><b>Frontier armies</b>Professional forces and powerful commanders</span><span><b>Rebellion</b>Capitals taken; people displaced</span><span><b>Reorganized state</b>Regional power, new taxes, continued trade and culture</span></div>"
+        },
+        {
+          "passage": {
+            "who": "Du Fu · journey from the capital, 755",
+            "quote": "<mark>Then thoughts silently turn to those who have lost all livelihood\nAnd to the troops in far garrisons.</mark>",
+            "cite": "Ebrey 87 · trans. Stephen Owen",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "p": "Du Fu connects personal suffering to the conditions of other households and soldiers. Poetry is evidence of an educated writer’s moral and social commitments, not simply an ornament of court life."
+        },
+        {
+          "p": "Political weakening did not end cultural production. Late Tang trade and literature continued to develop. Dunhuang’s surviving documents also preserve ordinary transactions, registers and religious activity."
+        }
+      ]
+    },
+    {
+      "id": "silla",
+      "title": "5 · Silla and Balhae: learning and independence",
+      "source": "Ebrey 105–112 · SKT 63–69",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/oct15/silla-capital-source-slide.png\" aria-label=\"Enlarge: Silla capital: Gyeongju\"><img src=\"../images/hist/oct15/silla-capital-source-slide.png\" alt=\"Silla capital: Gyeongju: original course presentation slide\" loading=\"lazy\"></a><figcaption>Gyeongju reconstruction from the existing course presentation. Planned wards extend across a landscape shaped by hills and rivers. <a href=\"https://docs.google.com/presentation/d/1lBYGWuY8__S9YI5WSfsYSXYUq7kMsITtEvH0wAAHPTo/present?slide=id.p19\">Open original course slide</a> · Select image to enlarge.</figcaption></figure>"
+        },
+        {
+          "html": "<figure><a href=\"../images/hist/oct15/east-asia.svg\" aria-label=\"Enlarge: Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\"><img src=\"../images/hist/oct15/east-asia.svg\" alt=\"Locator of Chang’an, Luoyang, Gyeongju and Nara, with Tang, Tibet and Balhae labeled\" loading=\"lazy\"></a><figcaption>Four cities within a connected region. Balhae lay north of Silla; the labels do not indicate precise territorial extent. <a href=\"https://www.naturalearthdata.com/about/terms-of-use/\">Natural Earth · public-domain geographic data</a> · Select to enlarge.</figcaption></figure>"
+        },
+        {
+          "p": "<strong>660:</strong> Baekje falls to the Silla–Tang alliance. <strong>668:</strong> Goguryeo falls. <strong>676:</strong> Silla has pushed Tang forces out of its southern sphere. <strong>698:</strong> Balhae emerges to the north, with Goguryeo and diverse regional inheritances."
+        },
+        {
+          "p": "Silla adopted administrative forms, Chinese learning and aspects of capital planning while retaining hereditary <strong>bone rank</strong>, a system that limited access to high office. Cultural participation and political subordination were different things."
+        },
+        {
+          "passage": {
+            "who": "Kangsu · learning and conduct",
+            "quote": "<mark>To be poor and humble is not a thing to be ashamed of. What is shameful is to fail to put into practice what one has learned.</mark>",
+            "cite": "SKT 68 · Tang Models packet",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "p": "Kangsu’s command of written Chinese made him valuable in diplomacy. In the packet’s Muyŏl episode, Silla answers a Tang demand in deferential language while retaining its royal title. These are particular uses of shared learning."
+        }
+      ]
+    },
+    {
+      "id": "seokguram",
+      "title": "6 · Silla: Buddhist places and a personal loss",
+      "source": "Ebrey 108–110 · Wŏlmyŏng, trans. Kevin O’Rourke, p.17",
+      "body": [
+        {
+          "html": "<div class=\"study\"><figure><a href=\"../images/hist/oct15/seokguram.jpg\" aria-label=\"Enlarge: Seated Buddha in the granite chamber of Seokguram\"><img src=\"../images/hist/oct15/seokguram.jpg\" alt=\"Seated Buddha in the granite chamber of Seokguram\" loading=\"lazy\"></a><figcaption>Seokguram, near Gyeongju · eighth-century Silla. A constructed granite grotto, not a cave cut from a cliff. <a href=\"https://commons.wikimedia.org/wiki/File:Seokguram_Buddha.JPG\">Richardfabi · CC BY-SA 3.0</a> · Select to enlarge.</figcaption></figure><div><figure><a href=\"../images/hist/oct15/seokguram-model.jpg\" aria-label=\"Enlarge: Museum model showing the central Buddha and encircling figures\"><img src=\"../images/hist/oct15/seokguram-model.jpg\" alt=\"Museum model showing the central Buddha and encircling figures\" loading=\"lazy\"></a><figcaption>Modern museum model of Seokguram. The exposed arrangement makes the central figure and surrounding sculptures visible. <a href=\"https://commons.wikimedia.org/wiki/File:Korea-Gyeongju-Silla_Art_and_Science_Museum-Seokguram_grotto_model-05.jpg\">Junho Jung · CC BY-SA 3.0</a> · Select to enlarge.</figcaption></figure><p><strong>Seokguram:</strong> a central Buddha surrounded by other sacred figures. The architecture gives worshippers a spatial relationship to the image. <a href=\"https://whc.unesco.org/en/list/736/\">UNESCO site record</a>.</p></div></div>"
+        },
+        {
+          "passage": {
+            "who": "Wŏlmyŏng · Song for a Dead Sister",
+            "quote": "<mark>we are two leaves, torn\nby early autumn winds\nfrom a single tree,\nscattered who knows where.</mark>",
+            "cite": "Trans. Kevin O’Rourke, The Book of Korean Poetry (2006), 17",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "p": "The song moves from separation toward the hope of reunion in the Western Paradise. <strong>Hyangga</strong> are vernacular Korean songs transmitted using adapted Chinese characters. Shared Buddhist teachings could express a particular relationship and loss."
+        }
+      ]
+    },
+    {
+      "id": "japan",
+      "title": "7 · Japan: court, land and households",
+      "source": "Ebrey 120–123 · SJT 51–54, 74–81",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/oct15/nara-changan-source-slide.png\" aria-label=\"Enlarge: Nara and Chang’an\"><img src=\"../images/hist/oct15/nara-changan-source-slide.png\" alt=\"Nara and Chang’an: original course presentation slide\" loading=\"lazy\"></a><figcaption>Nara at left; Chang’an at right. Compare the street grid and northern palace precincts. The plans are not at the same scale. <a href=\"https://docs.google.com/presentation/d/1lBYGWuY8__S9YI5WSfsYSXYUq7kMsITtEvH0wAAHPTo/present?slide=id.p27\">Open original course slide</a> · Select image to enlarge.</figcaption></figure>"
+        },
+        {
+          "html": "<details><summary>Detailed Nara plan</summary><figure><a href=\"../images/hist/oct15/nara.svg\" aria-label=\"Enlarge: Plan of Nara showing the palace, city grid and temples\"><img src=\"../images/hist/oct15/nara.svg\" alt=\"Plan of Nara showing the palace, city grid and temples\" loading=\"lazy\"></a><figcaption>Heijō-kyō (Nara), major buildings at the end of the eighth century. Modern reconstruction; compare its grid and palace placement with Chang’an. Plans are not at the same scale. <a href=\"https://commons.wikimedia.org/wiki/File:Heijokyo_-_Map_of_major_buildings.svg\">Binabik155 · CC BY 3.0; sans-serif labels adapted</a> · Select to enlarge.</figcaption></figure></details>"
+        },
+        {
+          "p": "<strong>604:</strong> the date traditionally assigned to Shōtoku’s Seventeen-Article Constitution, before Tang began. Its Buddhist and Confucian language belongs to earlier continental connections. <strong>645–646:</strong> Taika reforms. <strong>710:</strong> the court moves to Nara."
+        },
+        {
+          "passage": {
+            "who": "Shōtoku · Article III",
+            "quote": "<mark>The lord is Heaven, the vassal is Earth.</mark>",
+            "cite": "SJT 51",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "passage": {
+            "who": "Reform edicts · 645",
+            "quote": "<mark>Take account also of the acreage of cultivated land.</mark>",
+            "cite": "SJT 77 · Tang Models packet",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "p": "The reforms claim authority over people, land and taxation that powerful lineages had controlled. A proclamation records what the court wanted; local power and implementation must be assessed separately."
+        },
+        {
+          "html": "<details><summary>Reading the court history</summary><p>The <em>Nihongi</em> was compiled in 720. Its account of the earlier ruler Nintoku uses Chinese literary models of benevolent kingship. The packet’s editors explicitly identify that construction (SJT 74–75).</p></details>"
+        }
+      ]
+    },
+    {
+      "id": "shomu",
+      "title": "8 · Shōmu: Buddhist sponsorship at Nara",
+      "source": "SJT 114–115 · Ebrey 121–123",
+      "body": [
+        {
+          "html": "<div class=\"study\"><figure><a href=\"../images/hist/oct15/todaiji-buddha.jpg\" aria-label=\"Enlarge: Great Buddha of Tōdai-ji in Nara\"><img src=\"../images/hist/oct15/todaiji-buddha.jpg\" alt=\"Great Buddha of Tōdai-ji in Nara\" loading=\"lazy\"></a><figcaption>Vairocana · dedicated 752; repeatedly repaired and recast. The present head dates to the Edo period. <a href=\"https://commons.wikimedia.org/wiki/File:Daibutsu_of_Todaiji_3.jpg\">beggs · CC BY 3.0</a> · Select to enlarge.</figcaption></figure><figure><a href=\"../images/hist/oct15/todaiji-hall.jpg\" aria-label=\"Enlarge: Present Great Buddha Hall at Tōdai-ji\"><img src=\"../images/hist/oct15/todaiji-hall.jpg\" alt=\"Present Great Buddha Hall at Tōdai-ji\" loading=\"lazy\"></a><figcaption>Great Buddha Hall · present building dedicated 1709, after fires in 1180 and 1567. The temple institution is older than this building. <a href=\"https://commons.wikimedia.org/wiki/File:Daibutsu-den_in_Todaiji_Nara01bs3200.jpg\">663highland · source and license</a> · Select to enlarge.</figcaption></figure></div>"
+        },
+        {
+          "passage": {
+            "who": "Shōmu · Great Buddha proclamation, 743",
+            "quote": "<mark>The provincial and county authorities are not to disturb and harass the people by making arbitrary demands on them in the name of this project.</mark>",
+            "cite": "SJT 115 · instruction to provincial and district officials",
+            "link": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view"
+          }
+        },
+        {
+          "p": "The proclamation mobilizes resources for a monumental Buddhist image while forbidding officials to harass the people. Small contributions are welcomed. The distinction between this declared ideal and the labor required matters."
+        },
+        {
+          "p": "<strong>What survives:</strong> the Buddha is a composite of original and later work; the hall shown is the 1709 rebuilding. Tōdai-ji remains an active temple. <a href=\"https://www.todaiji.or.jp/en/history/\">Temple history</a> · <a href=\"https://www.todaiji.or.jp/faq/\">Temple FAQ on the statue’s head</a>."
+        }
+      ]
+    },
+    {
+      "id": "close",
+      "title": "9 · Shared forms, different political orders",
+      "source": "Course synthesis · evidence for the Great Debate",
+      "body": [
+        {
+          "html": "<table><thead><tr><th>Setting</th><th>Shared resources</th><th>Specific political conditions</th></tr></thead><tbody><tr><td>Tang</td><td>Law, examinations, capital culture, Buddhist institutions</td><td>Elite families, frontier armies and changing central power</td></tr><tr><td>Silla and Balhae</td><td>Written Chinese, diplomacy, administration, Buddhist learning</td><td>Separate states; Silla’s hereditary rank; alliances and conflict</td></tr><tr><td>Japan</td><td>Continental learning, registers, city plans, Buddhist sponsorship</td><td>Court and lineage power; local authority; distinct imperial claims</td></tr></tbody></table>"
+        },
+        {
+          "p": "The readings connect authority to material administration, learned advice, religious support and obligations to people. Use these specific cases alongside the earlier thinkers when preparing the Great Debate."
+        },
+        {
+          "html": "<p><a href=\"https://docs.google.com/document/d/13BIfQl_sroVzHtvS5qOiQwQl_bwXq3hUxROFWcpKVpw/edit\">Great Debate guide</a> · Six Scholar Exams and dossier due October 19; debate October 20.</p>"
+        }
+      ]
+    }
+  ],
+  "readings": [
+    "Ebrey and Walthall, Pre-Modern East Asia: 75–90, 105–112, 120–123.",
+    "<a href=\"https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view\">October 15 reader</a>: Tang Models; Wŏlmyŏng; Shōtoku; Shōmu.",
+    "SJT: Sources of Japanese Tradition, vol.1, 2nd ed. SKT: Sources of Korean Tradition, vol.1.",
+    "<a href=\"../images/hist/oct15/SOURCES.md\">Image credits and source ledger</a>"
+  ],
+  "footnote": "Short quotations follow the assigned translations. Captions and connecting explanations are course synthesis. Modern plans, photographs and models are labeled as such."
+}

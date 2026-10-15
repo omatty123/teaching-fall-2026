@@ -251,6 +251,11 @@
       "detail": "Ebrey 75–90, 105–112, 120–123",
       "materials": [
         {
+          "label": "Class page",
+          "href": "../hist-212-resources/class-2026-10-15.html",
+          "kind": "guide"
+        },
+        {
           "label": "Reader PDF",
           "href": "https://drive.google.com/file/d/1VdnUTGaStYb1Sk6LWZ-mbJZeTigselsM/view",
           "kind": "page"
