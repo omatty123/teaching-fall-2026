@@ -33,5 +33,5 @@ Older Week 4–5 instructor notes informed the choice of infrastructure, cultura
 
 ## Hyecho and Ŭisang additions
 - `hyecho-map.jpg`: University of Michigan, Hyecho’s Journey, https://hyecho-buddhist-pilgrim.asian.lsa.umich.edu/graphics/map.jpg . Original map retained; solid/dashed routes and modern borders explicitly identified. ©2018 Regents of the University of Michigan; educational course excerpt, no open license asserted. Source typography preserved.
-- Hyecho: opening two lines (17 words) from the home-page translation, exact wording verified October15. Full poem linked at source.
+- Hyecho: full eight-line poem on meeting a Chinese envoy in Wakhān. Translation by Matty Wegehaupt, Memoirs of a Pilgrimage to the Five Indian Kingdoms, in Collected Works of Korean Buddhism, vol. 10 (Jogye Order, 2012), p. 158. Verified against the printed page; translator identified in the volume preface, p. xxii. Reproduced at the translator’s request. Replaces the Michigan excerpt; Michigan remains the map source.
 - `uisang-ocean-seal.png`: exact original diagram slide g11765e9eb15_0_4, user’s deck https://docs.google.com/presentation/d/1XVZGlfJKAKUfQIP-BWR00o4Ic2IwhHI8sugdaueAVq4/edit . Short passage transcribed from verse7 on slide p; translator not identified on supplied slide. Source slide inspected. Original preserved.
