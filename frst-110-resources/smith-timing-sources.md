@@ -17,6 +17,6 @@ All verse starts: 5.044, 33.384, 61.256, 88.564, 115.213, 142.327, 169.500. The 
 
 ## Voice and playback
 
-Existing word-derived vocal phrase timestamps are retained as approximate vocal indicators only. They do not determine bar boundaries. Smith can begin a lyric before the corresponding four-bar group. A separate message identifies a next-verse vocal entry while the previous verse’s last bar is still running.
+Existing word-derived vocal phrase timestamps are retained as approximate vocal indicators only. They do not determine bar boundaries. Smith can begin a lyric before the corresponding four-bar group. The lyric highlight and bar highlight remain independent.
 
-The display follows the YouTube media clock directly, including pause, seek and slower playback. Replay and Repeat selected verse start at the first musical bar, so they can omit a vocal lead-in. Play the recording normally to hear those lead-ins. Browser, output-device and Bluetooth latency can affect perceived synchronization.
+The display follows the YouTube media clock directly, including pause, seek and slower playback. Verse selection starts at the first musical bar, so it can omit a vocal lead-in. Play the recording normally to hear those lead-ins. Browser, output-device and Bluetooth latency can affect perceived synchronization.

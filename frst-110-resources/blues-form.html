@@ -78,9 +78,6 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .watch-dots{display:flex;gap:6px;margin-top:5px}.watch-dots i{width:9px;height:9px;border:1px solid var(--muted);border-radius:50%;display:block}.watch-dots i.on{background:var(--ink)}
 #watch .line{font-size:16px;min-height:0;padding:6px 8px;margin:0 0 6px;background:white;border:0;border-left:3px solid transparent;border-radius:0}
 #watch .line.sing{background:var(--a-t);border-left-color:var(--a);outline:none}#watch .line.rowB.sing{background:var(--b-t);border-left-color:var(--b)}
-.watch-controls{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}.watch-controls label{display:flex;gap:6px;align-items:center}.watch-controls select{font:inherit;padding:5px;border:1px solid var(--rule);background:white;color:var(--ink)}
-.watch-controls input{width:18px;height:18px;accent-color:var(--resp)}
-.pickup-note{font-size:14px;margin:6px 0;min-height:2.8em;color:var(--muted)}
 .verses li{padding:0;border:0}.verses button{width:100%;height:100%;text-align:left;border:1px solid var(--rule);font-size:14px;padding:8px}.verses li.live button{border:2px solid var(--ink)}.verses li.live{border:0}
 button:disabled{cursor:wait;opacity:.6}
 @media(min-width:821px){#watch .stage{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
@@ -105,26 +102,20 @@ button:disabled{cursor:wait;opacity:.6}
 
 <section id="watch" style="--c:var(--a)">
 <h2>Watch the form: Bessie Smith, “Back-Water Blues”</h2>
-<p>The outlined box follows the piano through twelve bars. The four dots count the beats in each bar. The colored lyric follows Smith’s voice: she often begins a line before its four-bar group starts.</p>
+<p>Press play to follow the twelve bars.</p>
 <div class="stage">
 <div>
 <div class="video"><div id="player"></div></div>
-<p class="status" id="status">Piano introduction · twelve-bar verse begins at 0:05</p>
-<div class="watch-controls">
-<button type="button" id="replay-verse" disabled>Play verse 1</button>
-<label><input type="checkbox" id="loop-verse"> Repeat selected verse</label>
-<label>Speed <select id="smith-speed" disabled><option value="1">Normal</option></select></label>
-</div>
-<p class="src" id="watch-help">Replay starts at the first bar. To hear the vocal lead-in, use the recording’s play button.</p>
+<p class="status" id="status">Piano introduction</p>
+
 </div>
 <div>
 <div class="grid" id="grid" aria-live="off"></div>
-<p id="pickup-note" class="pickup-note"></p>
-<div class="key"><span><i style="background:var(--a-t)"></i>singing, line A</span><span><i style="background:var(--b-t)"></i>singing, line B</span><span>Outline: current bar</span></div>
+
 </div>
 </div>
 <ol class="verses" id="verses"></ol>
-<p class="src">Select a verse to play its twelve bars. Uncheck Repeat selected verse to continue through the song.</p>
+<p class="src">Select a verse to jump to it.</p>
 </section>
 
 <section id="chords" style="--c:var(--resp)">
@@ -188,6 +179,6 @@ button:disabled{cursor:wait;opacity:.6}
 </main>
 
 <script src="smith-timing.js?v=1"></script>
-<script src="smith-form.js?v=1"></script>
+<script src="smith-form.js?v=2"></script>
 <script src="blues-audio.js?v=1"></script>
 </body></html>
