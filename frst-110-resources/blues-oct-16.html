@@ -85,6 +85,24 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .map-pin.context{background:#9b6200;box-shadow:0 0 0 1px #9b6200}
 #places .leaflet-container{font-family:Outfit,Arial,sans-serif}
 @media(max-width:600px){#places-map{height:430px}.map-places{grid-template-columns:1fr}.leaflet-tooltip.song-place{font-size:13px}}
+
+/* Keep the geography beside all three recordings, as on Wednesday. */
+main,.nav-inner{max-width:1600px}
+.listening-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,380px);gap:24px;align-items:start}
+.listening-songs{min-width:0}
+#places.map-sidebar{position:sticky;top:12px;max-height:calc(100vh - 24px);overflow-y:auto;margin:0;padding:10px 0 0}
+#places.map-sidebar h2{font-size:21px;line-height:1.25}
+#places.map-sidebar>p{font-size:15px}
+.map-sidebar #places-map{height:clamp(300px,46vh,460px)}
+.map-sidebar .map-places{grid-template-columns:1fr;font-size:15px;gap:6px;margin:10px 0}
+.map-sidebar .map-tools{gap:5px}
+.map-sidebar .map-tools button{font-size:14px;padding:6px 8px}
+.singer-bio{border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:12px 0;padding:10px 0}
+.singer-bio h3{font-size:17px;margin:0 0 5px}
+.singer-bio p{margin:0 0 6px;font-size:16px}
+.singer-bio .src{font-size:14px;margin:0}
+@media(max-width:1150px){.listening-layout .stage{grid-template-columns:1fr}}
+@media(max-width:1000px){.listening-layout{grid-template-columns:1fr}.map-sidebar{order:-1}#places.map-sidebar{position:static;max-height:none;overflow:visible;margin-bottom:16px}.map-sidebar #places-map{height:430px}}
 </style><link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css"></head>
 <body>
 <nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a href="../courses/frst-110.html">← Course materials</a><a href="blues-form.html">What are the blues?</a></div></nav>
@@ -97,22 +115,11 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <details style="margin-top:6px"><summary style="cursor:pointer">Play “Excursions”</summary><div class="video" style="max-width:640px;aspect-ratio:16/9;padding-bottom:0;height:auto;margin-top:8px"><iframe src="https://www.youtube.com/embed/qDKrJhNOygA?rel=0" title="A Tribe Called Quest, Excursions · official recording" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></details>
 </aside>
 <p class="lead">Flood displacement and levee labor, in voice, piano, and guitar. In Greenville, Mississippi, in 1927, Black families were told to stay on the levee and work. A refugee camp ran along the levee, the National Guard was called in, and officials would not let them evacuate. They worked without pay.</p>
-<section id="places" aria-labelledby="places-title">
-<h2 id="places-title">The Mississippi, the Ohio, and the Cumberland</h2>
-<p style="margin:0 0 8px">Greenville, Helena, and Cairo are named in today’s songs. Nashville provides the flood background for Bessie Smith’s “Back-Water Blues.”</p>
-<div class="map-tools" aria-label="Map views"><button type="button" id="map-region">All four places</button><button type="button" id="map-delta">Greenville and Helena</button><button type="button" id="map-us">Locate in the United States</button></div>
-<div id="places-map" role="region" aria-label="Interactive map of the Mississippi and Ohio rivers, with Greenville, Helena, Cairo, and Nashville marked"></div>
-<ol class="map-places">
-<li><b>Greenville, Mississippi · Alice Pearson</b>Flood displacement and the levee camp after the April 1927 Mound Landing break north of the city.</li>
-<li><b>Helena, Arkansas · Lonnie Johnson</b>A Mississippi River town on the Arkansas bank; the speaker wants to return here.</li>
-<li><b>Cairo, Illinois · Lonnie Johnson</b>Near the meeting of the Ohio and Mississippi rivers; named in the song’s account of policing.</li>
-<li><b>Nashville, Tennessee · Bessie Smith’s background</b>On the Cumberland River. David Evans connects the song to the December 1926 flood, before Smith’s February 1927 recording.</li>
-</ol>
-<p class="src">Blue markers: places named in the lyrics. Ochre marker: historical background. North is up. Modern river geography; city-center markers, not exact performance or camp sites. This is not a map of the 1927 flood extent or a reconstructed journey. Use +/− to zoom. Map dragging is disabled on phones so the page remains easy to scroll.</p>
-<details><summary>Map sources</summary><p class="src">Basemap and river overlay © Esri. City coordinates: <a href="blues-oct-16-map-sources.json">OpenStreetMap Nominatim coordinate record, October 15, 2026</a>. Historical and geographic context: <a href="https://mshistory.mdah.ms.gov/issue/the-flood-of-1927-and-its-impact-in-greenville-mississippi">Mississippi History Now</a>; <a href="https://encyclopediaofarkansas.net/entries/helena-west-helena-phillips-county-950/">Encyclopedia of Arkansas</a>; <a href="https://www.nps.gov/places/confluence-of-the-ohio-and-mississippi-rivers.htm">National Park Service</a>; <a href="https://www.weather.gov/ohx/greatfloodof1927">National Weather Service</a>; <a href="https://news.vanderbilt.edu/2004/02/13/nashville-flood-the-origin-of-bessie-smith-hit-scholar-reveals-david-evans-makes-revelation-during-blues-class-at-vanderbilt-59762/">David Evans’s research</a>.</p></details>
-</section>
+
+<div class="listening-layout"><div class="listening-songs">
 <section class="song" id="back-water" style="--c:var(--a)">
 <h2>Bessie Smith, “Back-Water Blues”</h2>
+<div class="singer-bio" id="bessie-smith-background"><h3>Bessie Smith · touring stage and recording star</h3><p>Raised in Chattanooga, Tennessee, Smith sang on street corners before joining a traveling show in 1912. She became a major theater performer and Columbia recording artist in the 1920s. Her shows combined song, comedy, and drama, and she recorded with musicians including Louis Armstrong and pianist James P. Johnson, who accompanies “Back-Water Blues.” Her career connects these songs to professional touring and jazz as well as the blues.</p><p class="src">Source: <a href="https://www.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm">National Park Service · Bessie Smith</a>.</p></div>
 <p>Smith recorded this before the major Mississippi flooding that spring. Watch the form light up bar by bar on <a href="blues-form.html#watch">What are the blues?</a></p>
 <div class="stage">
 <div><div class="video"><iframe src="https://www.youtube.com/embed/4EZ7mNG7tfM?rel=0" title="Bessie Smith, Back-Water Blues" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -149,6 +156,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 </section>
 <section class="song" id="greenville" style="--c:var(--b)">
 <h2>Alice Pearson, “Greenville Levee Blues”</h2>
+<div class="singer-bio" id="alice-pearson-background"><h3>Alice Pearson · a small surviving record</h3><p>Pearson recorded six blues for Paramount in Chicago around July 1927, accompanied by pianist Freddie Coates. David Evans identifies this as her only recording session. Three songs address recent disasters: “Memphis Earthquake,” “Greenville Levee Blues,” and “Water Bound Blues.” A later musician’s recollection associates a singer named Alice and a pianist named Freddy with Greenville. Details of her life remain uncertain; Evans’s reconstruction of her personal flood experience is an inference from songs and testimony.</p><p class="src">Source: <a href="https://sundayblues.org/wp-content/uploads/2021/05/High-Water.pdf#page=38">David Evans, “High Water Everywhere,” pp. 39–40</a>.</p></div>
 
 <div class="stage">
 <div><div class="video"><iframe src="https://www.youtube.com/embed/7f_Q9sijrUQ?rel=0" title="Alice Pearson, Greenville Levee Blues" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -181,6 +189,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 </section>
 <section class="song" id="broken-levee" style="--c:var(--resp)">
 <h2>Lonnie Johnson, “Broken Levee Blues”</h2>
+<div class="singer-bio" id="lonnie-johnson-background"><h3>Lonnie Johnson · blues and jazz instrumentalist</h3><p>Born in New Orleans into a musical family, Johnson played guitar and violin. He worked in St. Louis and on Mississippi riverboats, and began recording for OKeh in 1925. He recorded with Louis Armstrong and Duke Ellington and made guitar duets with Eddie Lang. In 1929 he toured with Bessie Smith’s revue. His career joined blues singing, jazz ensembles, and studio work; the speaker in “Broken Levee Blues” should not automatically be treated as Johnson recounting his own arrest.</p><p class="src">Source: <a href="https://missouriencyclopedia.org/people/johnson-alonzo-lonnie">Patrick Huber · Missouri Encyclopedia</a>.</p></div>
 <p>Helena is in Arkansas, on the Mississippi. Cairo, Illinois, is where the Ohio River meets the Mississippi.</p>
 <div class="stage">
 <div><div class="video"><iframe src="https://www.youtube.com/embed/u8CH6csp7wY?rel=0" title="Lonnie Johnson, Broken Levee Blues" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
@@ -207,6 +216,22 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <li class="B"><b>B</b>And I ain’t buildin’ no levee, the planks is on the ground and I ain’t drivin’ no nails</li></ul>
 </div>
 </section>
+</div>
+<aside class="map-sidebar" id="places" aria-labelledby="places-title">
+<h2 id="places-title">The Mississippi, the Ohio, and the Cumberland</h2>
+<p style="margin:0 0 8px">Greenville, Helena, and Cairo are named in today’s songs. Nashville provides the flood background for Bessie Smith’s “Back-Water Blues.”</p>
+<div class="map-tools" aria-label="Map views"><button type="button" id="map-region">All four places</button><button type="button" id="map-delta">Greenville and Helena</button><button type="button" id="map-us">Locate in the United States</button></div>
+<div id="places-map" role="region" aria-label="Interactive map of the Mississippi and Ohio rivers, with Greenville, Helena, Cairo, and Nashville marked"></div>
+<ol class="map-places">
+<li><b>Greenville, Mississippi · Alice Pearson</b>Flood displacement and the levee camp after the April 1927 Mound Landing break north of the city.</li>
+<li><b>Helena, Arkansas · Lonnie Johnson</b>A Mississippi River town on the Arkansas bank; the speaker wants to return here.</li>
+<li><b>Cairo, Illinois · Lonnie Johnson</b>Near the meeting of the Ohio and Mississippi rivers; named in the song’s account of policing.</li>
+<li><b>Nashville, Tennessee · Bessie Smith’s background</b>On the Cumberland River. David Evans connects the song to the December 1926 flood, before Smith’s February 1927 recording.</li>
+</ol>
+<p class="src">Blue markers: places named in the lyrics. Ochre marker: historical background. North is up. Modern river geography; city-center markers, not exact performance or camp sites. This is not a map of the 1927 flood extent or a reconstructed journey. Use +/− to zoom. Map dragging is disabled on phones so the page remains easy to scroll.</p>
+<details><summary>Map sources</summary><p class="src">Basemap and river overlay © Esri. City coordinates: <a href="blues-oct-16-map-sources.json">OpenStreetMap Nominatim coordinate record, October 15, 2026</a>. Historical and geographic context: <a href="https://mshistory.mdah.ms.gov/issue/the-flood-of-1927-and-its-impact-in-greenville-mississippi">Mississippi History Now</a>; <a href="https://encyclopediaofarkansas.net/entries/helena-west-helena-phillips-county-950/">Encyclopedia of Arkansas</a>; <a href="https://www.nps.gov/places/confluence-of-the-ohio-and-mississippi-rivers.htm">National Park Service</a>; <a href="https://www.weather.gov/ohx/greatfloodof1927">National Weather Service</a>; <a href="https://news.vanderbilt.edu/2004/02/13/nashville-flood-the-origin-of-bessie-smith-hit-scholar-reveals-david-evans-makes-revelation-during-blues-class-at-vanderbilt-59762/">David Evans’s research</a>.</p></details>
+</aside>
+</div>
 <p class="src">Greenville: Princella Wilkerson Nowell, <a href="https://mshistory.mdah.ms.gov/issue/the-flood-of-1927-and-its-impact-in-greenville-mississippi">“The Flood of 1927 and Its Impact in Greenville, Mississippi,”</a> Mississippi History Now. “Broken Levee Blues” date: <a href="https://adp.library.ucsb.edu/index.php/objects/detail/251740/OKeh_8618">Discography of American Historical Recordings, OKeh 8618</a>. Recordings from the artists’ YouTube channels. Words transcribed for the course.</p>
 </main>
 <script src="../_kit/vendor/leaflet/leaflet.js"></script>
