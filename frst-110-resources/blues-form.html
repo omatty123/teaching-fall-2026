@@ -63,7 +63,7 @@ section h3{margin:18px 0 6px;font-size:18px}
 .chords .lab{border:0;background:transparent}
 .chords span:not(.lab){flex-direction:column;line-height:1.2;padding:5px 0}.chords small{font-size:11px;letter-spacing:.04em}
 .hear [data-ch="I"]{background:var(--a-t)}.hear [data-ch="IV"]{background:var(--resp-t)}.hear [data-ch="V"]{background:var(--b-t)}
-.scale .home-label{font-size:10px;letter-spacing:.02em;font-weight:700;color:var(--ink)}
+.scale .home-label{font-size:9px;letter-spacing:0;font-weight:700;color:var(--ink)}
 button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
 .audio-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-top:14px}.audio-controls label{font-size:16px}.audio-controls input[type=range]{width:180px;max-width:100%;accent-color:var(--resp)}.loop-control{display:flex;align-items:center;gap:6px}.loop-control input{width:18px;height:18px;accent-color:var(--resp)}
 .patton{margin:10px 0 0;padding:0;list-style:none;max-width:760px}
@@ -84,7 +84,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .verses li{padding:0;border:0}.verses button{width:100%;height:100%;text-align:left;border:1px solid var(--rule);font-size:14px;padding:8px}.verses li.live button{border:2px solid var(--ink)}.verses li.live{border:0}
 button:disabled{cursor:wait;opacity:.6}
 @media(min-width:821px){#watch .stage{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}}
-@media(max-width:600px){.watch-bar{font-size:13px;padding:5px 3px}.watch-dots{gap:3px}.watch-dots i{width:6px;height:6px}}
+@media(max-width:600px){.scale{grid-template-columns:repeat(4,minmax(0,1fr))}.watch-bar{font-size:13px;padding:5px 3px}.watch-dots{gap:3px}.watch-dots i{width:6px;height:6px}}
 </style></head>
 <body>
 <nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a href="../courses/frst-110.html">← Course materials</a></div></nav>
@@ -97,8 +97,8 @@ button:disabled{cursor:wait;opacity:.6}
 <p>Under the words, the band usually moves through three chords. The names come from the scale: start on note 1 (E here) and count up. The chord built on note 1 is I, the chord on note 4 is IV, and the chord on note 5 is V. Roman numerals let the same plan work in any key.</p>
 <div class="scale" id="scale" aria-label="The E major scale, numbered 1 to 8, with notes 1, 4 and 5 marked"></div>
 <p class="src" style="margin:6px 0 10px">Shown in E, a common key for blues guitar: I is E, IV is A, V is B.</p>
-<p class="hear"><button type="button" data-ch="I">Hear I · HOME</button> <button type="button" data-ch="IV">Hear IV</button> <button type="button" data-ch="V">Hear V</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
-<p><strong>HOME = I</strong>, the main chord the music returns to. Gold marks I; green marks IV; blue marks V. The common twelve-bar plan:</p>
+<p class="hear"><button type="button" data-ch="I">Hear I · HOME</button> <button type="button" data-ch="IV">Hear IV · AWAY</button> <button type="button" data-ch="V">Hear V · TENSION</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
+<p><strong>I · HOME:</strong> the main chord. <strong>IV · AWAY:</strong> moves away from I. <strong>V · TENSION:</strong> creates a strong pull back to I. The colors match the scale, buttons, and twelve-bar plan.</p>
 <div class="chords" id="chordgrid"></div>
 <div class="audio-controls">
 <button id="playchords" type="button">Hear the pattern</button>
@@ -106,7 +106,7 @@ button:disabled{cursor:wait;opacity:.6}
 <input id="blues-tempo" type="range" min="60" max="140" step="5" value="100" aria-label="Tempo in beats per minute">
 <label class="loop-control"><input id="blues-loop" type="checkbox"> Loop twelve bars</label>
 </div>
-<p class="src" id="audio-status" role="status">Piano for the chord buttons; guitar shuffle for the pattern. Tempo changes take effect on the next beat.</p>
+<p class="src" id="audio-status" role="status">Piano for the chord buttons; sampled acoustic guitar for the pattern. Tempo changes take effect on the next beat.</p>
 <p>Players change the plan all the time: an early IV in bar 2, a V in bar 12 to lead into the next verse. Listen for the turn to IV at bar 5 and the pull of V at bar 9. That is where the B line lands.</p>
 </section>
 
@@ -180,10 +180,10 @@ button:disabled{cursor:wait;opacity:.6}
 </div>
 </section>
 
-<p class="src">Form: <a href="https://human.libretexts.org/Courses/Western_Washington_University/Popular_Music_(Smith)/01:_Readings/1.03:_The_Blues">“The Blues,” Popular Music (Western Washington University, LibreTexts)</a>. “Back-Water Blues”: Bessie Smith with James P. Johnson, piano, Columbia, February 17, 1927, <a href="https://www.youtube.com/watch?v=4EZ7mNG7tfM">provided to YouTube by Legacy/Columbia</a>; words transcribed from the recording. Beat timings use <a href="https://github.com/MTG/JAAH/blob/master/annotations/black_water_blues.json">JAAH’s performance annotation</a>, aligned to this recording’s piano attacks. Vocal phrase timings are approximate. <a href="smith-timing-sources.md">Timing method and sources</a>. “High Water Everywhere, Part 2”: Charley Patton, Paramount, Grafton, Wisconsin, 1929, <a href="https://www.youtube.com/watch?v=v99b1ky7mNA">Charley Patton topic channel</a>; words as transcribed for the course. Chord buttons use <a href="https://github.com/Tonejs/audio/tree/master/salamander">Salamander Grand Piano samples by Alexander Holm</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>), transposed for this demo. The guitar shuffle is synthesized. Neither demo is taken from the recordings.</p>
+<p class="src">Form: <a href="https://human.libretexts.org/Courses/Western_Washington_University/Popular_Music_(Smith)/01:_Readings/1.03:_The_Blues">“The Blues,” Popular Music (Western Washington University, LibreTexts)</a>. “Back-Water Blues”: Bessie Smith with James P. Johnson, piano, Columbia, February 17, 1927, <a href="https://www.youtube.com/watch?v=4EZ7mNG7tfM">provided to YouTube by Legacy/Columbia</a>; words transcribed from the recording. Beat timings use <a href="https://github.com/MTG/JAAH/blob/master/annotations/black_water_blues.json">JAAH’s performance annotation</a>, aligned to this recording’s piano attacks. Vocal phrase timings are approximate. <a href="smith-timing-sources.md">Timing method and sources</a>. “High Water Everywhere, Part 2”: Charley Patton, Paramount, Grafton, Wisconsin, 1929, <a href="https://www.youtube.com/watch?v=v99b1ky7mNA">Charley Patton topic channel</a>; words as transcribed for the course. Chord buttons use <a href="https://github.com/Tonejs/audio/tree/master/salamander">Salamander Grand Piano samples by Alexander Holm</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>), transposed for this demo. The pattern uses <a href="../audio/blues-guitar/CREDITS.md">acoustic-guitar recordings from N. Brosowsky’s instrument library (Iowa samples, CC BY 3.0)</a>. Neither demo is taken from the recordings.</p>
 </main>
 
 <script src="smith-timing.js?v=1"></script>
 <script src="smith-form.js?v=2"></script>
-<script src="blues-audio.js?v=2"></script>
+<script src="blues-audio.js?v=3"></script>
 </body></html>
