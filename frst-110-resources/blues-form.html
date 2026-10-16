@@ -89,6 +89,24 @@ button:disabled{cursor:wait;opacity:.6}
 <h1>What are the blues?</h1>
 <p class="meta">Delta blues · October 14, 16 and 19</p>
 
+<section id="chords" style="--c:var(--resp)">
+<h2>The usual chords: I, IV, V</h2>
+<p>Under the words, the band usually moves through three chords. The names come from the scale: start on the home note and count up. The chord built on note 1 is I, the chord on note 4 is IV, and the chord on note 5 is V. Roman numerals let the same plan work in any key.</p>
+<div class="scale" id="scale" aria-label="The E major scale, numbered 1 to 8, with notes 1, 4 and 5 marked"></div>
+<p class="src" style="margin:6px 0 10px">Shown in E, a common key for blues guitar: I is E, IV is A, V is B.</p>
+<p class="hear"><button type="button" data-ch="I">Hear I</button> <button type="button" data-ch="IV">Hear IV</button> <button type="button" data-ch="V">Hear V</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
+<p>I feels like home. IV moves a step away. V pulls hardest back home. The common twelve-bar plan:</p>
+<div class="chords" id="chordgrid"></div>
+<div class="audio-controls">
+<button id="playchords" type="button">Hear the pattern</button>
+<label for="blues-tempo">Tempo <output id="tempo-value" for="blues-tempo">100</output> BPM</label>
+<input id="blues-tempo" type="range" min="60" max="140" step="5" value="100" aria-label="Tempo in beats per minute">
+<label class="loop-control"><input id="blues-loop" type="checkbox"> Loop twelve bars</label>
+</div>
+<p class="src" id="audio-status" role="status">Piano for the chord buttons; guitar shuffle for the pattern. Tempo changes take effect on the next beat.</p>
+<p>Players change the plan all the time: an early IV in bar 2, a V in bar 12 to lead into the next verse. Listen for the turn to IV at bar 5 and the pull of V at bar 9. That is where the B line lands.</p>
+</section>
+
 <section style="--c:var(--a)">
 <h2>A verse is twelve bars and three lines</h2>
 <p class="lead">Count four beats to a bar. A blues verse runs twelve bars. The words come in three lines, four bars each:</p>
@@ -118,23 +136,7 @@ button:disabled{cursor:wait;opacity:.6}
 <p class="src">Select a verse to jump to it.</p>
 </section>
 
-<section id="chords" style="--c:var(--resp)">
-<h2>The usual chords: I, IV, V</h2>
-<p>Under the words, the band usually moves through three chords. The names come from the scale: start on the home note and count up. The chord built on note 1 is I, the chord on note 4 is IV, and the chord on note 5 is V. Roman numerals let the same plan work in any key.</p>
-<div class="scale" id="scale" aria-label="The E major scale, numbered 1 to 8, with notes 1, 4 and 5 marked"></div>
-<p class="src" style="margin:6px 0 10px">Shown in E, a common key for blues guitar: I is E, IV is A, V is B.</p>
-<p class="hear"><button type="button" data-ch="I">Hear I</button> <button type="button" data-ch="IV">Hear IV</button> <button type="button" data-ch="V">Hear V</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
-<p>I feels like home. IV moves a step away. V pulls hardest back home. The common twelve-bar plan:</p>
-<div class="chords" id="chordgrid"></div>
-<div class="audio-controls">
-<button id="playchords" type="button">Hear the pattern</button>
-<label for="blues-tempo">Tempo <output id="tempo-value" for="blues-tempo">100</output> BPM</label>
-<input id="blues-tempo" type="range" min="60" max="140" step="5" value="100" aria-label="Tempo in beats per minute">
-<label class="loop-control"><input id="blues-loop" type="checkbox"> Loop twelve bars</label>
-</div>
-<p class="src" id="audio-status" role="status">Piano for the chord buttons; guitar shuffle for the pattern. Tempo changes take effect on the next beat.</p>
-<p>Players change the plan all the time: an early IV in bar 2, a V in bar 12 to lead into the next verse. Listen for the turn to IV at bar 5 and the pull of V at bar 9. That is where the B line lands.</p>
-</section>
+
 
 <section id="patton" style="--c:var(--b)">
 <h2>Charley Patton bends it: “High Water Everywhere, Part 2”</h2>
