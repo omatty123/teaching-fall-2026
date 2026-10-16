@@ -14,14 +14,14 @@
     const label = document.createElement('span'); label.className='lab'; label.textContent=row; grid.append(label);
     for(let i=0;i<4;i++) {
       const cell=document.createElement('span'); const ch=PLAN[ri*4+i];
-      cell.className=ch; cell.textContent=ch; grid.append(cell); cells.push(cell);
+      cell.className=ch; cell.innerHTML=ch==='I'?'I<small>HOME</small>':ch; grid.append(cell); cells.push(cell);
     }
   });
   const scale=document.getElementById('scale');
   [['E',1],['F♯',2],['G♯',3],['A',4],['B',5],['C♯',6],['D♯',7],['E',1]].forEach(([note,degree]) => {
     const el=document.createElement('span'), chord={1:'I',4:'IV',5:'V'}[degree];
     if(chord)el.className=chord;
-    el.innerHTML=`<b>${degree}</b>${note}${chord?`<em>${chord}</em>`:''}`;
+    el.innerHTML=`<b>${degree}</b>${note}${chord?`<em>${chord}</em>${chord==='I'?'<small class="home-label">HOME</small>':''}`:''}`;
     scale.append(el); scaleCells.push(el);
   });
   let ac, master, guitarBus, outputLimiter, pianoPromise, mode=null, generation=0, interval=null;
@@ -137,8 +137,8 @@
       const item=visual.shift();mark(item.ch);
       if(item.bar!==undefined) {
         cells.forEach((el,i)=>el.classList.toggle('now',i===item.bar));
-        status.textContent=`Guitar · verse ${item.cycle} · bar ${item.bar+1} of 12 · ${item.ch}`;
-      } else status.textContent=`Piano · ${item.ch}`;
+        status.textContent=`Guitar · verse ${item.cycle} · bar ${item.bar+1} of 12 · ${item.ch}${item.ch==='I'?' · HOME':''}`;
+      } else status.textContent=`Piano · ${item.ch}${item.ch==='I'?' · HOME':''}`;
     }
     if(finishAt!==null && now>=finishAt)stop('Finished.');
   }

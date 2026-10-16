@@ -61,6 +61,9 @@ section h3{margin:18px 0 6px;font-size:18px}
 .hear{display:flex;flex-wrap:wrap;gap:8px}
 .chords span.now{outline:3px solid var(--ink);outline-offset:-1px}
 .chords .lab{border:0;background:transparent}
+.chords span:not(.lab){flex-direction:column;line-height:1.2;padding:5px 0}.chords small{font-size:11px;letter-spacing:.04em}
+.hear [data-ch="I"]{background:var(--a-t)}.hear [data-ch="IV"]{background:var(--resp-t)}.hear [data-ch="V"]{background:var(--b-t)}
+.scale .home-label{font-size:10px;letter-spacing:.02em;font-weight:700;color:var(--ink)}
 button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
 .audio-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-top:14px}.audio-controls label{font-size:16px}.audio-controls input[type=range]{width:180px;max-width:100%;accent-color:var(--resp)}.loop-control{display:flex;align-items:center;gap:6px}.loop-control input{width:18px;height:18px;accent-color:var(--resp)}
 .patton{margin:10px 0 0;padding:0;list-style:none;max-width:760px}
@@ -91,11 +94,11 @@ button:disabled{cursor:wait;opacity:.6}
 
 <section id="chords" style="--c:var(--resp)">
 <h2>The usual chords: I, IV, V</h2>
-<p>Under the words, the band usually moves through three chords. The names come from the scale: start on the home note and count up. The chord built on note 1 is I, the chord on note 4 is IV, and the chord on note 5 is V. Roman numerals let the same plan work in any key.</p>
+<p>Under the words, the band usually moves through three chords. The names come from the scale: start on note 1 (E here) and count up. The chord built on note 1 is I, the chord on note 4 is IV, and the chord on note 5 is V. Roman numerals let the same plan work in any key.</p>
 <div class="scale" id="scale" aria-label="The E major scale, numbered 1 to 8, with notes 1, 4 and 5 marked"></div>
 <p class="src" style="margin:6px 0 10px">Shown in E, a common key for blues guitar: I is E, IV is A, V is B.</p>
-<p class="hear"><button type="button" data-ch="I">Hear I</button> <button type="button" data-ch="IV">Hear IV</button> <button type="button" data-ch="V">Hear V</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
-<p>I feels like home. IV moves a step away. V pulls hardest back home. The common twelve-bar plan:</p>
+<p class="hear"><button type="button" data-ch="I">Hear I · HOME</button> <button type="button" data-ch="IV">Hear IV</button> <button type="button" data-ch="V">Hear V</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
+<p><strong>HOME = I</strong>, the main chord the music returns to. Gold marks I; green marks IV; blue marks V. The common twelve-bar plan:</p>
 <div class="chords" id="chordgrid"></div>
 <div class="audio-controls">
 <button id="playchords" type="button">Hear the pattern</button>
@@ -182,5 +185,5 @@ button:disabled{cursor:wait;opacity:.6}
 
 <script src="smith-timing.js?v=1"></script>
 <script src="smith-form.js?v=2"></script>
-<script src="blues-audio.js?v=1"></script>
+<script src="blues-audio.js?v=2"></script>
 </body></html>
