@@ -39,17 +39,9 @@ section h3{margin:18px 0 6px;font-size:18px}
 .grid{display:grid;grid-template-columns:34px repeat(4,minmax(0,1fr));gap:6px;align-items:stretch}
 .grid .lab{display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;border-radius:4px}
 .lab.A{color:var(--a2)}.lab.B{color:var(--b)}
-.bar{position:relative;min-height:58px;border-radius:5px;background:var(--off);border:1px solid var(--rule);display:flex;flex-direction:column;justify-content:space-between;padding:5px 7px;font-size:13px;color:var(--muted);transition:background .12s}
-.bar .n{font-weight:700}
-.bar .dots{display:flex;gap:5px}
-.bar .dots i{width:11px;height:11px;border-radius:50%;background:transparent;border:1.5px solid var(--muted);transition:transform .08s}
-.bar .dots i.on{background:var(--ink);border-color:var(--ink)}
-.bar .dots i.hit{transform:scale(1.45)}
-.bar.now{outline:3px solid var(--ink);outline-offset:-1px;color:var(--ink)}
-.bar.sing.rowA{background:var(--a-t)}.bar.sing.rowB{background:var(--b-t)}
-.bar.answer{background:var(--resp-t)}
-.line{grid-column:2 / span 4;font-size:15px;min-height:26px;margin:-2px 0 8px;color:var(--muted)}
-.line.live{color:var(--ink);font-weight:600}
+.line{grid-column:2 / span 4;font-size:17px;line-height:1.35;min-height:54px;display:flex;align-items:center;padding:10px 14px;border-radius:6px;background:var(--off);border:1px solid var(--rule);color:var(--muted);transition:background .15s}
+.line.live{color:var(--ink);font-weight:600;outline:3px solid var(--ink);outline-offset:-1px}
+.line.sing.rowA{background:var(--a-t)}.line.sing.rowB{background:var(--b-t)}.line.answer{background:var(--resp-t)}
 .key{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;margin:10px 0 0;color:var(--muted)}
 .key i{display:inline-block;width:15px;height:15px;border-radius:3px;vertical-align:-2px;margin-right:6px;border:1px solid var(--rule)}
 .verses{margin:16px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
@@ -59,10 +51,18 @@ section h3{margin:18px 0 6px;font-size:18px}
 .verses li .rep{color:var(--muted)}
 .chords{display:grid;grid-template-columns:34px repeat(4,minmax(0,1fr));gap:6px;max-width:560px}
 .chords span{display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:5px;font-weight:700;font-size:20px;border:1px solid var(--rule);background:var(--off)}
-.chords .I{background:var(--off)}.chords .IV{background:var(--resp-t)}.chords .V{background:var(--b-t)}
+.chords .I{background:var(--a-t)}.chords .IV{background:var(--resp-t)}.chords .V{background:var(--b-t)}
+.scale{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;max-width:560px;margin:8px 0 0}
+.scale span{display:flex;flex-direction:column;align-items:center;padding:6px 0;border:1px solid var(--rule);border-radius:5px;background:#fff;font-size:15px;color:var(--muted)}
+.scale span b{font-size:20px;color:var(--ink)}
+.scale span.I{background:var(--a-t)}.scale span.IV{background:var(--resp-t)}.scale span.V{background:var(--b-t)}
+.scale span em{font-style:normal;font-weight:700;font-size:13px;color:var(--ink)}
+.scale span.now,.hear button.now{outline:3px solid var(--ink);outline-offset:-1px}
+.hear{display:flex;flex-wrap:wrap;gap:8px}
 .chords span.now{outline:3px solid var(--ink);outline-offset:-1px}
 .chords .lab{border:0;background:transparent}
 button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
+.audio-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-top:14px}.audio-controls label{font-size:16px}.audio-controls input[type=range]{width:180px;max-width:100%;accent-color:var(--resp)}.loop-control{display:flex;align-items:center;gap:6px}.loop-control input{width:18px;height:18px;accent-color:var(--resp)}
 .patton{margin:10px 0 0;padding:0;list-style:none;max-width:760px}
 .patton li{display:grid;grid-template-columns:40px 1fr;gap:8px;padding:4px 8px;border-radius:4px;margin:2px 0;font-size:15px}
 .patton li b{font-size:13px}
@@ -92,7 +92,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 
 <section id="watch" style="--c:var(--a)">
 <h2>Watch the form: Bessie Smith, “Back-Water Blues”</h2>
-<p>Press play. The box moves bar by bar. Orange or blue: Smith is singing. Green: the piano answers (James P. Johnson). The dots count the four beats.</p>
+<p>Press play. Each verse has three lines: A, A again, then B. A line lights up while Smith sings it, orange for A and blue for B, and turns green when the piano answers (James P. Johnson).</p>
 <div class="stage">
 <div>
 <div class="video"><div id="player"></div></div>
@@ -109,9 +109,19 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 
 <section id="chords" style="--c:var(--resp)">
 <h2>The usual chords: I, IV, V</h2>
-<p>Under the words, the band usually moves through three chords. Call the home chord I. IV is a step away; V pulls hardest back home. The common twelve-bar plan:</p>
+<p>Under the words, the band usually moves through three chords. The names come from the scale: start on the home note and count up. The chord built on note 1 is I, the chord on note 4 is IV, and the chord on note 5 is V. Roman numerals let the same plan work in any key.</p>
+<div class="scale" id="scale" aria-label="The E major scale, numbered 1 to 8, with notes 1, 4 and 5 marked"></div>
+<p class="src" style="margin:6px 0 10px">Shown in E, a common key for blues guitar: I is E, IV is A, V is B.</p>
+<p class="hear"><button type="button" data-ch="I">Hear I</button> <button type="button" data-ch="IV">Hear IV</button> <button type="button" data-ch="V">Hear V</button> <button type="button" data-seq="1">Hear I, IV, V, then home to I</button></p>
+<p>I feels like home. IV moves a step away. V pulls hardest back home. The common twelve-bar plan:</p>
 <div class="chords" id="chordgrid"></div>
-<p style="margin-top:12px"><button id="playchords" type="button">Hear the pattern</button> <span class="src">Plain piano chords, one verse, with a click on each beat.</span></p>
+<div class="audio-controls">
+<button id="playchords" type="button">Hear the pattern</button>
+<label for="blues-tempo">Tempo <output id="tempo-value" for="blues-tempo">100</output> BPM</label>
+<input id="blues-tempo" type="range" min="60" max="140" step="5" value="100" aria-label="Tempo in beats per minute">
+<label class="loop-control"><input id="blues-loop" type="checkbox"> Loop twelve bars</label>
+</div>
+<p class="src" id="audio-status" role="status">Piano for the chord buttons; guitar shuffle for the pattern. Tempo changes take effect on the next beat.</p>
 <p>Players change the plan all the time: an early IV in bar 2, a V in bar 12 to lead into the next verse. Listen for the turn to IV at bar 5 and the pull of V at bar 9. That is where the B line lands.</p>
 </section>
 
@@ -154,7 +164,7 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 </div>
 </section>
 
-<p class="src">Form: <a href="https://human.libretexts.org/Courses/Western_Washington_University/Popular_Music_(Smith)/01:_Readings/1.03:_The_Blues">“The Blues,” Popular Music (Western Washington University, LibreTexts)</a>. “Back-Water Blues”: Bessie Smith with James P. Johnson, piano, Columbia, February 17, 1927, <a href="https://www.youtube.com/watch?v=4EZ7mNG7tfM">provided to YouTube by Legacy/Columbia</a>; words transcribed from the recording. Bar timings are measured from the recording and are approximate. “High Water Everywhere, Part 2”: Charley Patton, Paramount, Grafton, Wisconsin, 1929, <a href="https://www.youtube.com/watch?v=v99b1ky7mNA">Charley Patton topic channel</a>; words as transcribed for the course. Chord demo is a simple synthesized piano, not from either recording.</p>
+<p class="src">Form: <a href="https://human.libretexts.org/Courses/Western_Washington_University/Popular_Music_(Smith)/01:_Readings/1.03:_The_Blues">“The Blues,” Popular Music (Western Washington University, LibreTexts)</a>. “Back-Water Blues”: Bessie Smith with James P. Johnson, piano, Columbia, February 17, 1927, <a href="https://www.youtube.com/watch?v=4EZ7mNG7tfM">provided to YouTube by Legacy/Columbia</a>; words transcribed from the recording. Bar timings are measured from the recording and are approximate. “High Water Everywhere, Part 2”: Charley Patton, Paramount, Grafton, Wisconsin, 1929, <a href="https://www.youtube.com/watch?v=v99b1ky7mNA">Charley Patton topic channel</a>; words as transcribed for the course. Chord buttons use <a href="https://github.com/Tonejs/audio/tree/master/salamander">Salamander Grand Piano samples by Alexander Holm</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>), transposed for this demo. The guitar shuffle is synthesized. Neither demo is taken from the recordings.</p>
 </main>
 
 <script>
@@ -169,40 +179,29 @@ const VERSES=[
  {l:[[169.22,174.78],[177.32,183.58],[186.46,192.22]],t:["Mmm, I can’t move no more","Mmm, I can’t move no more","There ain’t no place for a poor old girl to go"]}
 ];
 const END=197.6;
-// Beats: each sung line (A, A, B) starts on a downbeat (bars 1, 5, 9). Space 16 even beats across each line,
-// timed from the measured line starts, so the pulse stays steady and locked to Smith's voice.
-const OFF=0.2;// she sings a hair ahead of the downbeat
-VERSES.forEach(v=>{const s=v.l.map(x=>x[0]+OFF),bars=[(s[1]-s[0])/4,(s[2]-s[1])/4,(s[2]-s[1])/4],b=[];
-  s.forEach((st,r)=>{for(let k=0;k<16;k++)b.push(st+k*bars[r]/4);});v.b=b;v.s=b[0];v.bar=bars[0];});
 
-const grid=document.getElementById('grid'),cells=[],lines=[];
+
+const grid=document.getElementById('grid'),lines=[];
 ['A','A','B'].forEach((r,ri)=>{
   const lab=document.createElement('div');lab.className='lab '+r;lab.textContent=r;grid.appendChild(lab);
-  for(let b=0;b<4;b++){const c=document.createElement('div');const n=ri*4+b+1;c.className='bar row'+r;
-    c.innerHTML='<span class="n">'+n+'</span><span class="dots"><i></i><i></i><i></i><i></i></span>';grid.appendChild(c);cells.push(c);}
-  const ln=document.createElement('div');ln.className='line';ln.textContent=' ';grid.appendChild(ln);lines.push(ln);
+  const ln=document.createElement('div');ln.className='line row'+r;ln.textContent=' ';grid.appendChild(ln);lines.push(ln);
 });
 const vl=document.getElementById('verses');
 VERSES.forEach((v,i)=>{const li=document.createElement('li');
   li.innerHTML='<span class="v">Verse '+(i+1)+'</span>'+v.t[0]+'<br><span class="rep">'+v.t[1]+'</span><br>'+v.t[2];
-  li.addEventListener('click',()=>{if(player&&player.seekTo){player.seekTo(Math.max(0,v.s-0.4),true);player.playVideo();}});vl.appendChild(li);v.li=li;});
+  li.addEventListener('click',()=>{if(player&&player.seekTo){player.seekTo(Math.max(0,v.l[0][0]-0.6),true);player.playVideo();}});vl.appendChild(li);v.li=li;});
 
 let player=null,last=-1;
 function render(t){
-  let vi=-1;for(let i=0;i<VERSES.length;i++){if(t>=VERSES[i].s-0.05)vi=i;}
-  cells.forEach(c=>{c.classList.remove('now','sing','answer');c.querySelectorAll('i').forEach(d=>d.classList.remove('on','hit'));});
-  VERSES.forEach(v=>v.li.classList.remove('live'));lines.forEach(l=>l.classList.remove('live'));
-  if(vi<0||t>END){lines.forEach(l=>l.textContent=' ');document.getElementById('status').textContent=t>END?'Done. Seven verses, each A A B.':'Seven verses · 3 minutes 18 seconds · Columbia, recorded February 17, 1927';return;}
+  let vi=-1;for(let i=0;i<VERSES.length;i++){if(t>=VERSES[i].l[0][0]-0.3)vi=i;}
+  VERSES.forEach(v=>v.li.classList.remove('live'));lines.forEach(l=>l.classList.remove('live','sing','answer'));
+  if(vi<0||t>END){lines.forEach(l=>l.textContent=' ');document.getElementById('status').textContent=t>END?'Done. Seven verses, each A A B.':'Seven verses · 3 minutes 18 seconds · Columbia, recorded February 17, 1927';return;}
   const v=VERSES[vi];v.li.classList.add('live');
   lines.forEach((l,i)=>l.textContent=v.t[i]);
-  let n=0;while(n<47&&t>=v.b[n+1])n++;
-  const k=Math.floor(n/4),beat=n%4;
-  const row=Math.floor(k/4),[ls,le]=v.l[row];
-  for(let j=0;j<=k;j++){const bs=v.b[j*4],be=j<11?v.b[j*4+4]:v.b[47]+(v.b[47]-v.b[46]),end=v.l[Math.floor(j/4)][1];cells[j].classList.add((bs+be)/2<end?'sing':'answer');if(j<k)cells[j].querySelectorAll('i').forEach(d=>d.classList.add('on'));}
-  const c=cells[k];c.classList.add('now');c.classList.remove('sing','answer');c.classList.add(t<le+0.15&&t>=ls-0.3?'sing':'answer');
-  c.querySelectorAll('i').forEach((d,i)=>{if(i<=beat)d.classList.add('on');if(i===beat)d.classList.add('hit');});
-  lines[row].classList.add('live');
-  document.getElementById('status').textContent='Verse '+(vi+1)+' of 7 · bar '+(k+1)+' of 12 · line '+['A','A','B'][row];
+  let row=0;for(let r=0;r<3;r++){if(t>=v.l[r][0]-0.3)row=r;}
+  const singing=t<=v.l[row][1]+0.3;
+  lines[row].classList.add('live',singing?'sing':'answer');
+  document.getElementById('status').textContent='Verse '+(vi+1)+' of 7 · line '+['A','A','B'][row]+(singing?' · Smith sings':' · the piano answers');
 }
 // YouTube reports the playhead in coarse steps; between reports, run on the clock so the beat dots move smoothly.
 let lastT=-1,lastW=0;
@@ -216,25 +215,6 @@ const s=document.createElement('script');s.src='https://www.youtube.com/iframe_a
 render(-1);
 requestAnimationFrame(tick);
 
-// Chord pattern demo
-const PLAN=['I','I','I','I','IV','IV','I','I','V','IV','I','I'];
-const cg=document.getElementById('chordgrid'),cc=[];
-['A','A','B'].forEach((r,ri)=>{const lab=document.createElement('span');lab.className='lab';lab.textContent=r;cg.appendChild(lab);
-  for(let b=0;b<4;b++){const x=document.createElement('span');const ch=PLAN[ri*4+b];x.className=ch;x.textContent=ch;cg.appendChild(x);cc.push(x);}});
-const ROOT={I:0,IV:5,V:7};let ac=null,playing=false;
-document.getElementById('playchords').addEventListener('click',()=>{
-  if(playing)return;playing=true;ac=ac||new (window.AudioContext||window.webkitAudioContext)();
-  const beat=0.55,t0=ac.currentTime+0.1,base=196;// G3 as home
-  PLAN.forEach((ch,i)=>{const r=ROOT[ch];const freqs=[0,4,7,10].map(s=>base*Math.pow(2,(r+s)/12));
-    for(let b=0;b<4;b++){const at=t0+(i*4+b)*beat;
-      freqs.forEach((f,fi)=>{if(fi===3&&ch==='I'&&i<4)return;const o=ac.createOscillator(),g=ac.createGain();o.type='triangle';o.frequency.value=f;
-        g.gain.setValueAtTime(0.0001,at);g.gain.exponentialRampToValueAtTime(0.09,at+0.02);g.gain.exponentialRampToValueAtTime(0.0001,at+beat*0.95);
-        o.connect(g).connect(ac.destination);o.start(at);o.stop(at+beat);});
-      const k=ac.createOscillator(),kg=ac.createGain();k.frequency.value=b===0?1400:1000;kg.gain.setValueAtTime(0.0001,at);kg.gain.exponentialRampToValueAtTime(0.08,at+0.003);kg.gain.exponentialRampToValueAtTime(0.0001,at+0.04);k.connect(kg).connect(ac.destination);k.start(at);k.stop(at+0.05);
-    }
-    setTimeout(()=>{cc.forEach(x=>x.classList.remove('now'));cc[i].classList.add('now');},(t0-ac.currentTime+i*4*beat)*1000);
-  });
-  setTimeout(()=>{cc.forEach(x=>x.classList.remove('now'));playing=false;},(t0-ac.currentTime+48*beat)*1000+200);
-});
 </script>
+<script src="blues-audio.js?v=1"></script>
 </body></html>
