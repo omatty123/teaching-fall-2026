@@ -65,7 +65,7 @@ section h3{margin:18px 0 6px;font-size:18px}
 .hear [data-ch="I"]{background:var(--a-t)}.hear [data-ch="IV"]{background:var(--resp-t)}.hear [data-ch="V"]{background:var(--b-t)}
 .scale .home-label{font-size:9px;letter-spacing:0;font-weight:700;color:var(--ink)}
 button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer}
-.audio-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-top:14px}.audio-controls label{font-size:16px}.audio-controls input[type=range]{width:180px;max-width:100%;accent-color:var(--resp)}.loop-control{display:flex;align-items:center;gap:6px}.loop-control input{width:18px;height:18px;accent-color:var(--resp)}
+.audio-controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px 14px;margin-top:14px}.audio-controls label{font-size:16px}.audio-controls select{font:inherit;color:var(--ink);background:white;border:1px solid var(--ink);border-radius:4px;padding:6px}.audio-controls input[type=range]{width:180px;max-width:100%;accent-color:var(--resp)}.loop-control{display:flex;align-items:center;gap:6px}.loop-control input{width:18px;height:18px;accent-color:var(--resp)}
 .patton{margin:10px 0 0;padding:0;list-style:none;max-width:760px}
 .patton li{display:grid;grid-template-columns:40px 1fr;gap:8px;padding:4px 8px;border-radius:4px;margin:2px 0;font-size:15px}
 .patton li b{font-size:13px}
@@ -102,11 +102,12 @@ button:disabled{cursor:wait;opacity:.6}
 <div class="chords" id="chordgrid"></div>
 <div class="audio-controls">
 <button id="playchords" type="button">Hear the pattern</button>
+<label for="pattern-sound">Sound <select id="pattern-sound"><option value="guitar">Acoustic guitar</option><option value="piano" selected>Piano</option></select></label>
 <label for="blues-tempo">Tempo <output id="tempo-value" for="blues-tempo">100</output> BPM</label>
 <input id="blues-tempo" type="range" min="60" max="140" step="5" value="100" aria-label="Tempo in beats per minute">
 <label class="loop-control"><input id="blues-loop" type="checkbox"> Loop twelve bars</label>
 </div>
-<p class="src" id="audio-status" role="status">Piano for the chord buttons; sampled acoustic guitar for the pattern. Tempo changes take effect on the next beat.</p>
+<p class="src" id="audio-status" role="status">Piano for the chord buttons; choose piano or acoustic guitar for the pattern. Tempo changes take effect on the next beat.</p>
 <p>Players change the plan all the time: an early IV in bar 2, a V in bar 12 to lead into the next verse. Listen for the turn to IV at bar 5 and the pull of V at bar 9. That is where the B line lands.</p>
 </section>
 
@@ -185,5 +186,5 @@ button:disabled{cursor:wait;opacity:.6}
 
 <script src="smith-timing.js?v=1"></script>
 <script src="smith-form.js?v=2"></script>
-<script src="blues-audio.js?v=3"></script>
+<script src="blues-audio.js?v=4"></script>
 </body></html>

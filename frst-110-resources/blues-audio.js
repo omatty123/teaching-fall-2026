@@ -5,8 +5,10 @@
   const LABEL = {I:'HOME', IV:'AWAY', V:'TENSION'};
   const GUITAR_NOTES = [40,45,47,49,52,54,56,57,59,61,62,63,64,66,67,69];
   const ROOT = {I:0, IV:5, V:7};
-  const NOTES = [[51,'Ds3'],[54,'Fs3'],[57,'A3'],[60,'C4'],[63,'Ds4'],[66,'Fs4'],[69,'A4']];
+  const NOTES = [[39,'Ds2'],[42,'Fs2'],[45,'A2'],[48,'C3'],[51,'Ds3'],[54,'Fs3'],[57,'A3'],[60,'C4'],[63,'Ds4'],[66,'Fs4'],[69,'A4']];
   const btn = document.getElementById('playchords');
+  const sound = document.getElementById('pattern-sound');
+  let patternSound='piano';
   const tempo = document.getElementById('blues-tempo');
   const loop = document.getElementById('blues-loop');
   const status = document.getElementById('audio-status');
@@ -99,11 +101,16 @@
     return guitarPromise;
   }
   function guitar(midi,at,duration,velocity) {
-    const source=ac.createBufferSource(),gain=ac.createGain();source.buffer=guitarSamples.get(midi);
+    const source=ac.createBufferSource(),gain=ac.createGain();
+    if(patternSound==='piano') {
+      const nearest=NOTES.reduce((best,n)=>Math.abs(n[0]-midi)<Math.abs(best[0]-midi)?n:best)[0];
+      source.buffer=samples.get(nearest);source.playbackRate.value=2**((midi-nearest)/12);
+      velocity*=0.70;
+    } else source.buffer=guitarSamples.get(midi);
     gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(velocity,at+0.003);
     gain.gain.setValueAtTime(velocity,at+duration*0.72);
     gain.gain.exponentialRampToValueAtTime(0.0001,at+duration);
-    track(source,gain,guitarBus,at,at+duration+0.02,0.04);
+    track(source,gain,patternSound==='piano'?master:guitarBus,at,at+duration+0.02,patternSound==='piano'?0:0.04);
   }
   function scheduleBeat(index,at,beat) {
     const bar=Math.floor(index/4),b=index%4,ch=PLAN[bar],root=40+ROOT[ch];
@@ -135,7 +142,7 @@
       const item=visual.shift();mark(item.ch);
       if(item.bar!==undefined) {
         cells.forEach((el,i)=>el.classList.toggle('now',i===item.bar));
-        status.textContent=`Guitar · verse ${item.cycle} · bar ${item.bar+1} of 12 · ${item.ch} · ${LABEL[item.ch]}`;
+        status.textContent=`${patternSound==='piano'?'Piano':'Guitar'} · verse ${item.cycle} · bar ${item.bar+1} of 12 · ${item.ch} · ${LABEL[item.ch]}`;
       } else status.textContent=`Piano · ${item.ch} · ${LABEL[item.ch]}`;
     }
     if(finishAt!==null && now>=finishAt)stop('Finished.');
@@ -145,10 +152,12 @@
     let token;
     try {
       token=await start('pattern');if(token===null)return;
-      status.textContent='Loading acoustic guitar…';await loadGuitar();if(token!==generation)return;
+      patternSound=sound.value;
+      status.textContent=patternSound==='piano'?'Loading piano…':'Loading acoustic guitar…';
+      await (patternSound==='piano'?loadPiano():loadGuitar());if(token!==generation)return;
       beatIndex=0;cycle=1;
       nextBeat=ac.currentTime+0.08;pump();interval=setInterval(pump,25);
-    }catch(_){if(token===undefined || token===generation)stop('Guitar could not load. Press Hear the pattern to retry.');}
+    }catch(_){if(token===undefined || token===generation)stop('Instrument could not load. Press Hear the pattern to retry.');}
   });
   document.querySelectorAll('.hear button').forEach(button=>button.addEventListener('click',async()=>{
     let token;
@@ -160,6 +169,7 @@
       finishAt=at+seq.length*1.6;pump();interval=setInterval(pump,25);
     }catch(_){if(token===undefined || token===generation)stop('Piano could not load. Press a chord button to retry.');}
   }));
+  sound.addEventListener('change',()=>{if(mode==='pattern')stop('Sound changed. Press Hear the pattern.');});
   tempo.addEventListener('input',()=>{document.getElementById('tempo-value').textContent=tempo.value;});
   document.addEventListener('visibilitychange',()=>{if(document.hidden && mode)stop('Stopped while the page was hidden.');});
   window.addEventListener('pagehide',()=>stop());
