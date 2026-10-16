@@ -72,7 +72,20 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 .src{font-size:14px;color:var(--muted)}
 .ask{font-size:16px}
 @media(max-width:820px){.stage{grid-template-columns:1fr}.parts{grid-template-columns:1fr}h1{font-size:26px}}
-.song{margin:0 0 20px}.song .stage{margin-top:6px}.patton .B2{background:var(--b-t);box-shadow:inset 4px 0 0 var(--b)}.days{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px}.days b{font-weight:700}</style></head>
+.song{margin:0 0 20px}.song .stage{margin-top:6px}.patton .B2{background:var(--b-t);box-shadow:inset 4px 0 0 var(--b)}.days{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:16px}.days b{font-weight:700}
+#places{border:0;border-top:2px solid var(--b);border-radius:0;padding:14px 0;margin:18px 0 24px}
+#places h2{font-size:23px;margin:0 0 6px}
+#places-map{height:490px;width:100%;border:1px solid var(--rule);z-index:0}
+.map-tools{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.map-tools button{font:inherit;background:white;color:var(--b);border:1px solid var(--rule);padding:7px 12px;cursor:pointer;border-radius:4px;min-height:44px}
+.map-places{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin:12px 0;padding-left:22px}
+.map-places li{padding:3px 0}.map-places b{display:block}
+.leaflet-tooltip.song-place{font:600 15px/1.3 Outfit,Arial,sans-serif;color:#202f35;background:white;border:1px solid #9aa9ad;box-shadow:none;padding:3px 6px}
+.map-pin{width:25px;height:25px;border:2px solid white;border-radius:50%;background:#245a8d;color:white;text-align:center;font:700 15px/21px Outfit,Arial,sans-serif;box-shadow:0 0 0 1px #245a8d}
+.map-pin.context{background:#9b6200;box-shadow:0 0 0 1px #9b6200}
+#places .leaflet-container{font-family:Outfit,Arial,sans-serif}
+@media(max-width:600px){#places-map{height:430px}.map-places{grid-template-columns:1fr}.leaflet-tooltip.song-place{font-size:13px}}
+</style><link rel="stylesheet" href="../_kit/vendor/leaflet/leaflet.css"></head>
 <body>
 <nav class="nav" aria-label="Breadcrumb"><div class="nav-inner"><a class="brand" href="../courses/frst-110.html">FRST 110</a><a href="../courses/frst-110.html">← Course materials</a><a href="blues-form.html">What are the blues?</a></div></nav>
 <main>
@@ -84,6 +97,20 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 <details style="margin-top:6px"><summary style="cursor:pointer">Play “Excursions”</summary><div class="video" style="max-width:640px;aspect-ratio:16/9;padding-bottom:0;height:auto;margin-top:8px"><iframe src="https://www.youtube.com/embed/qDKrJhNOygA?rel=0" title="A Tribe Called Quest, Excursions · official recording" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></details>
 </aside>
 <p class="lead">Flood displacement and levee labor, in voice, piano, and guitar. In Greenville, Mississippi, in 1927, Black families were told to stay on the levee and work. A refugee camp ran along the levee, the National Guard was called in, and officials would not let them evacuate. They worked without pay.</p>
+<section id="places" aria-labelledby="places-title">
+<h2 id="places-title">The Mississippi, the Ohio, and the Cumberland</h2>
+<p style="margin:0 0 8px">Greenville, Helena, and Cairo are named in today’s songs. Nashville provides the flood background for Bessie Smith’s “Back-Water Blues.”</p>
+<div class="map-tools" aria-label="Map views"><button type="button" id="map-region">All four places</button><button type="button" id="map-delta">Greenville and Helena</button><button type="button" id="map-us">Locate in the United States</button></div>
+<div id="places-map" role="region" aria-label="Interactive map of the Mississippi and Ohio rivers, with Greenville, Helena, Cairo, and Nashville marked"></div>
+<ol class="map-places">
+<li><b>Greenville, Mississippi · Alice Pearson</b>Flood displacement and the levee camp after the April 1927 Mound Landing break north of the city.</li>
+<li><b>Helena, Arkansas · Lonnie Johnson</b>A Mississippi River town on the Arkansas bank; the speaker wants to return here.</li>
+<li><b>Cairo, Illinois · Lonnie Johnson</b>Near the meeting of the Ohio and Mississippi rivers; named in the song’s account of policing.</li>
+<li><b>Nashville, Tennessee · Bessie Smith’s background</b>On the Cumberland River. David Evans connects the song to the December 1926 flood, before Smith’s February 1927 recording.</li>
+</ol>
+<p class="src">Blue markers: places named in the lyrics. Ochre marker: historical background. North is up. Modern river geography; city-center markers, not exact performance or camp sites. This is not a map of the 1927 flood extent or a reconstructed journey. Use +/− to zoom. Map dragging is disabled on phones so the page remains easy to scroll.</p>
+<details><summary>Map sources</summary><p class="src">Basemap and river overlay © Esri. City coordinates: <a href="blues-oct-16-map-sources.json">OpenStreetMap Nominatim coordinate record, October 15, 2026</a>. Historical and geographic context: <a href="https://mshistory.mdah.ms.gov/issue/the-flood-of-1927-and-its-impact-in-greenville-mississippi">Mississippi History Now</a>; <a href="https://encyclopediaofarkansas.net/entries/helena-west-helena-phillips-county-950/">Encyclopedia of Arkansas</a>; <a href="https://www.nps.gov/places/confluence-of-the-ohio-and-mississippi-rivers.htm">National Park Service</a>; <a href="https://www.weather.gov/ohx/greatfloodof1927">National Weather Service</a>; <a href="https://news.vanderbilt.edu/2004/02/13/nashville-flood-the-origin-of-bessie-smith-hit-scholar-reveals-david-evans-makes-revelation-during-blues-class-at-vanderbilt-59762/">David Evans’s research</a>.</p></details>
+</section>
 <section class="song" id="back-water" style="--c:var(--a)">
 <h2>Bessie Smith, “Back-Water Blues”</h2>
 <p>Smith recorded this before the major Mississippi flooding that spring. Watch the form light up bar by bar on <a href="blues-form.html#watch">What are the blues?</a></p>
@@ -182,4 +209,26 @@ button{font:inherit;font-size:16px;padding:7px 14px;border-radius:5px;border:1px
 </section>
 <p class="src">Greenville: Princella Wilkerson Nowell, <a href="https://mshistory.mdah.ms.gov/issue/the-flood-of-1927-and-its-impact-in-greenville-mississippi">“The Flood of 1927 and Its Impact in Greenville, Mississippi,”</a> Mississippi History Now. “Broken Levee Blues” date: <a href="https://adp.library.ucsb.edu/index.php/objects/detail/251740/OKeh_8618">Discography of American Historical Recordings, OKeh 8618</a>. Recordings from the artists’ YouTube channels. Words transcribed for the course.</p>
 </main>
+<script src="../_kit/vendor/leaflet/leaflet.js"></script>
+<script>
+(function(){
+if(!window.L){document.getElementById('places-map').textContent='Map unavailable. The place list below gives the locations and their connections to the songs.';return;}
+var points=[
+[1,'Greenville',33.4111051,-91.0635857,'right','Alice Pearson: Greenville Levee Blues. Mississippi River; 1927 flood displacement and levee camp.'],
+[2,'Helena',34.5266746,-90.5862740,'left','Lonnie Johnson: Broken Levee Blues. A Mississippi River town on the Arkansas bank.'],
+[3,'Cairo',37.0057958,-89.1772449,'left','Lonnie Johnson: Broken Levee Blues. The Ohio joins the Mississippi just south of the city.'],
+[4,'Nashville',36.1622767,-86.7742984,'left','Historical background for Bessie Smith. Cumberland River flood, December 1926; recorded February 17, 1927.']];
+var map=L.map('places-map',{scrollWheelZoom:false,dragging:!L.Browser.mobile,tap:false,zoomSnap:.25});
+L.tileLayer('https://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'Basemap © Esri; place coordinates © OpenStreetMap contributors'}).addTo(map);
+L.tileLayer('https://tiles.arcgis.com/tiles/P3ePLMYs2RVChkJx/arcgis/rest/services/Esri_Hydro_Reference_Overlay/MapServer/tile/{z}/{y}/{x}',{maxZoom:16,attribution:'River overlay © Esri'}).addTo(map);
+L.control.scale({imperial:true,metric:true}).addTo(map);
+var coords=points.map(function(p){return [p[2],p[3]];});
+points.forEach(function(p){L.marker([p[2],p[3]],{title:p[1],alt:p[1],icon:L.divIcon({className:'',html:'<div class="map-pin'+(p[0]===4?' context':'')+'">'+p[0]+'</div>',iconSize:[25,25],iconAnchor:[12,12]})}).addTo(map).bindTooltip(p[1],{permanent:true,direction:p[4],offset:[p[4]==='left'?-12:12,0],className:'song-place'}).bindPopup('<strong>'+p[1]+'</strong><p>'+p[5]+'</p>');});
+function region(){map.fitBounds(coords,{padding:[45,45]});}
+region();
+document.getElementById('map-region').addEventListener('click',region);
+document.getElementById('map-delta').addEventListener('click',function(){map.fitBounds(coords.slice(0,2),{padding:[65,55]});});
+document.getElementById('map-us').addEventListener('click',function(){map.setView([38,-96],3);});
+})();
+</script>
 </body></html>

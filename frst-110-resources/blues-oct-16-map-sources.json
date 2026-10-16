@@ -1,0 +1,113 @@
+{
+  "retrieved": "2026-10-15",
+  "coordinate_reference": "WGS84; Leaflet arrays use latitude, longitude",
+  "marker_scope": "City-center approximations, not historic site coordinates",
+  "geometry": "Modern Esri tiled basemap and hydrographic reference overlay; Web Mercator display. No flood polygons or inferred routes.",
+  "license": "OSM place data: ODbL; Esri attribution displayed on map.",
+  "places": {
+    "Greenville, Mississippi, USA": {
+      "source": "https://nominatim.openstreetmap.org/search?q=Greenville%2C+Mississippi%2C+USA&format=json&limit=1",
+      "result": [
+        {
+          "place_id": 334707047,
+          "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "relation",
+          "osm_id": 109925,
+          "lat": "33.4111051",
+          "lon": "-91.0635857",
+          "class": "boundary",
+          "type": "administrative",
+          "place_rank": 16,
+          "importance": 0.5321712867329288,
+          "addresstype": "city",
+          "name": "Greenville",
+          "display_name": "Greenville, Washington County, Mississippi, United States",
+          "boundingbox": [
+            "33.3358900",
+            "33.4511050",
+            "-91.1312290",
+            "-90.9890320"
+          ]
+        }
+      ]
+    },
+    "Helena, Arkansas, USA": {
+      "source": "https://nominatim.openstreetmap.org/search?q=Helena%2C+Arkansas%2C+USA&format=json&limit=1",
+      "result": [
+        {
+          "place_id": 336028490,
+          "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 151950268,
+          "lat": "34.5266746",
+          "lon": "-90.5862740",
+          "class": "place",
+          "type": "suburb",
+          "place_rank": 19,
+          "importance": 0.4323180864899549,
+          "addresstype": "suburb",
+          "name": "Helena",
+          "display_name": "Helena, Helena-West Helena, Phillips County, Arkansas, 72342, United States",
+          "boundingbox": [
+            "34.5066746",
+            "34.5466746",
+            "-90.6062740",
+            "-90.5662740"
+          ]
+        }
+      ]
+    },
+    "Cairo, Illinois, USA": {
+      "source": "https://nominatim.openstreetmap.org/search?q=Cairo%2C+Illinois%2C+USA&format=json&limit=1",
+      "result": [
+        {
+          "place_id": 338081647,
+          "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "relation",
+          "osm_id": 126071,
+          "lat": "37.0057958",
+          "lon": "-89.1772449",
+          "class": "boundary",
+          "type": "administrative",
+          "place_rank": 16,
+          "importance": 0.4946687743514333,
+          "addresstype": "village",
+          "name": "Cairo",
+          "display_name": "Cairo, Alexander County, Illinois, 62914, United States",
+          "boundingbox": [
+            "36.9702980",
+            "37.0888680",
+            "-89.2314580",
+            "-89.1329150"
+          ]
+        }
+      ]
+    },
+    "Nashville, Tennessee, USA": {
+      "source": "https://nominatim.openstreetmap.org/search?q=Nashville%2C+Tennessee%2C+USA&format=json&limit=1",
+      "result": [
+        {
+          "place_id": 340598441,
+          "licence": "Data \u00a9 OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "relation",
+          "osm_id": 197472,
+          "lat": "36.1622767",
+          "lon": "-86.7742984",
+          "class": "boundary",
+          "type": "administrative",
+          "place_rank": 16,
+          "importance": 0.7077241551979302,
+          "addresstype": "city",
+          "name": "Nashville",
+          "display_name": "Nashville, Davidson County, Middle Tennessee, Tennessee, United States",
+          "boundingbox": [
+            "35.9677850",
+            "36.4054960",
+            "-87.0547660",
+            "-86.5155880"
+          ]
+        }
+      ]
+    }
+  }
+}
