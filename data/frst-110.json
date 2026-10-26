@@ -10967,7 +10967,18 @@
       "unit": "equiano",
       "topic": "Equiano",
       "detail": "Parts I–II",
-      "materials": []
+      "materials": [
+        {
+          "label": "Synthesis: what to fix, with real examples",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/synthesis-fixes.html",
+          "kind": "guide"
+        },
+        {
+          "label": "Synthesis: what to fix (printout, 2 pages)",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/synthesis-fixes.pdf",
+          "kind": "handout"
+        }
+      ]
     },
     {
       "date": "2026-10-30",
