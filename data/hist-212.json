@@ -293,6 +293,11 @@
       "detail": "Ebrey 91–92, 129–140",
       "materials": [
         {
+          "label": "Class notes",
+          "href": "https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit#heading=h.b0itqp8fxnxq",
+          "kind": "page"
+        },
+        {
           "label": "Reader PDF",
           "href": "https://drive.google.com/file/d/1lEMcOolYcs7qdm-V6M2LcdTG34l2s0IP/view",
           "kind": "page"
@@ -300,6 +305,11 @@
         {
           "label": "Artwork",
           "href": "hist-212-artwork.html#w12",
+          "kind": "page"
+        },
+        {
+          "label": "Qingming scroll",
+          "href": "../hist-212-qingming/",
           "kind": "page"
         }
       ]
