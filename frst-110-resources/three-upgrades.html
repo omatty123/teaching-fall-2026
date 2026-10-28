@@ -40,8 +40,24 @@ mark{background:var(--hi);padding:0 3px;border-radius:3px}
 .mantra{margin:8px 0 0;padding-top:14px;border-top:2px solid var(--ink);font-size:1.1rem;font-weight:800}
 .foot{margin-top:12px;color:var(--ink-2);font-size:.82rem}
 .row>*,.pair>*{min-width:0}
-.first .pair{grid-template-columns:.7fr auto 1.6fr}
-.first .now{font-size:1.1rem}
+.stack .kind{padding:4px 0 14px;border-bottom:1px solid #e2dfd8;margin-bottom:12px}
+.stack .kind:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.brand{display:inline-block;background:var(--ink);color:#fff;font-weight:800;font-size:.85rem;padding:3px 10px;border-radius:999px;margin-right:8px}
+.what{color:var(--ink-2);font-size:.95rem}
+.stack .pair{margin-top:10px}
+.stack .now{font-size:1.1rem}
+.first .pair{grid-template-columns:1.25fr auto 1fr}
+.pics{margin-bottom:16px}
+.pages{display:flex;gap:8px}
+.pg{background:#fff;border:1px solid #cfccc4;border-radius:5px;padding:8px;width:84px}
+.pg span{display:block;height:6px;background:#e3e0d8;border-radius:3px;margin:5px 0;position:relative}
+.pg span.s{width:62%}
+.pg span.y{background:var(--hi);height:9px}
+.pg span.y b{position:absolute;left:-7px;top:-6px;width:17px;height:17px;border-radius:50%;background:var(--blue);color:#fff;font-size:.62rem;line-height:17px;text-align:center}
+.pg span.t{background:var(--blue);height:11px}
+.bits{list-style:none;margin:0;padding:0;font-size:.92rem;color:var(--ink-2)}
+.bits li{margin:0 0 7px;padding-left:26px;position:relative}
+.bits li b{position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:var(--blue);color:#fff;font-size:.66rem;line-height:18px;text-align:center}
 body{overflow-wrap:break-word}
 @media (max-width:760px){.row{grid-template-columns:1fr;gap:14px}.pair,.first .pair{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}}
 </style>
@@ -52,24 +68,35 @@ body{overflow-wrap:break-word}
 <h1>Three upgrades for your Synthesis revision</h1>
 
 <section class="row first">
-<h2><span class="n">1</span>Lead with your point.<small>Your real point is often in your conclusion. Start with it.</small></h2>
+<h2><span class="n">1</span>Don't bury the lede.<small>The lede is your main point. Don't scatter it. Gather it up front.</small></h2>
 <div class="show">
-<div class="pair">
-<div class="was"><span class="lab">YOUR OPENING</span>&ldquo;Disaster is inevitable.&rdquo;</div>
+<div class="pair pics">
+<div><span class="lab">ONE DRAFT, THREE PAGES</span><div class="pages"><div class="pg"><span class="y"><b>1</b></span><span></span><span class="y"><b>2</b></span><span></span><span></span><span class="s"></span><span></span><span></span><span class="s"></span></div><div class="pg"><span></span><span></span><span class="s"></span><span></span><span></span><span class="s"></span><span class="y"><b>3</b></span><span></span><span class="s"></span></div><div class="pg"><span></span><span></span><span class="s"></span><span></span><span class="y"><b>4</b></span><span class="s"></span><span></span><span></span><span class="s"></span></div></div></div>
 <div class="arrow">&rarr;</div>
-<div class="now"><span class="lab">YOUR REAL POINT, FROM YOUR CONCLUSION</span>&ldquo;The impact of the Great Lakes invasive species and the Hurricane Katrina aftermath <mark>could have been lessened had there been proper planning and action</mark>.&rdquo;</div>
+<div><span class="lab">THE REVISION</span><div class="pages"><div class="pg"><span class="t"></span><span></span><span></span><span class="s"></span><span></span><span></span><span class="s"></span><span></span><span></span></div></div></div>
+</div>
+<div class="pair">
+<ol class="bits">
+<li><b>1</b>Egan points to the degradation of the Great Lakes as a matter of misled and uninformed actions&hellip;</li>
+<li><b>2</b>it is important to understand the gravity of both outcomes and push for proper action.</li>
+<li><b>3</b>could have been prevented with proper precautions and extensive research</li>
+<li><b>4</b>could have been lessened had there been proper planning and action.</li>
+</ol>
+<div class="arrow">&rarr;</div>
+<div class="now"><span class="lab">ONE THESIS, UP FRONT</span>Egan's lakes were wrecked by ignorance and Smith's New Orleans by neglect, and the difference matters: better planning can prevent the first, but only holding people accountable can prevent the second.</div>
 </div>
 </div>
 </section>
 
 <section class="row">
-<h2><span class="n">2</span>Cut the throat-clearing.<small>The words you say before you get to your point.</small></h2>
-<div class="show">
-<div class="pair">
-<div class="was"><span class="lab">BEFORE</span><s>This quote demonstrates the effort and persistence that was expressed by Noah to keep his people safe but also their unwillingness to listen.</s></div>
-<div class="arrow">&rarr;</div>
-<div class="now"><span class="lab">AFTER</span>Noah tried, but nobody listened.</div>
-</div>
+<h2><span class="n">2</span>Cut the filler.<small>Three habits that keep a smart writer sounding ordinary.</small></h2>
+<div class="show stack">
+<div class="kind"><span class="brand">Throat-clearing</span><span class="what">A whole sentence that warms up instead of making the point.</span>
+<div class="pair"><div class="was"><s>While both storms are tragic, without a doubt, and the basis of both destructive elements is the water, there is still a key similarity.</s> Faith&hellip;</div><div class="arrow">&rarr;</div><div class="now">Both stories run on faith.</div></div></div>
+<div class="kind"><span class="brand">The sticker</span><span class="what">Slapping "interesting," "important," or "notable" on something instead of saying why. Keep the move, swap the sticker for the reason.</span>
+<div class="pair"><div class="was"><s>A notable case study in The Death and Life of the Great Lakes is the St. Lawrence Seaway&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">The St. Lawrence Seaway shows what uninformed action costs: its locks were obsolete "almost before the freshly poured concrete could dry" (Egan 24).</div></div></div>
+<div class="kind"><span class="brand">The grocery list</span><span class="what">Transitions that only add the next item: "Another," "Also," "On the other hand."</span>
+<div class="pair"><div class="was"><s>On the other hand, Blood Dazzler portrays the harm&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">Egan's harm came from ignorance. Smith's came from people who knew better.</div></div></div>
 </div>
 </section>
 
