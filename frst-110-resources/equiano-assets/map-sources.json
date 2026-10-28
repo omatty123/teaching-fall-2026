@@ -1,0 +1,159 @@
+{
+  "created": "2026-10-28",
+  "scope": "Locator for the narrative movement and geographic framework in chapters I-II, not an inventory of incidental comparison places and not a reconstructed historical itinerary.",
+  "crs": "WGS84; arrays use longitude, latitude",
+  "projections": [
+    {
+      "panel": "Atlantic",
+      "method": "north-up equirectangular",
+      "standard_parallel": 15,
+      "extent_lon_lat": [
+        -84,
+        -17,
+        19,
+        37
+      ]
+    },
+    {
+      "panel": "Southeast Nigeria",
+      "method": "north-up equirectangular",
+      "standard_parallel": 6,
+      "extent_lon_lat": [
+        1.4,
+        2.5,
+        11.8,
+        10.5
+      ]
+    },
+    {
+      "panel": "Barbados",
+      "method": "north-up equirectangular",
+      "standard_parallel": 13.2,
+      "extent_lon_lat": [
+        -59.82,
+        12.98,
+        -59.37,
+        13.37
+      ]
+    }
+  ],
+  "geometry": [
+    {
+      "file": "map-data/countries-50m.geojson",
+      "source": "https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/",
+      "provenance": "Subset of existing course public-domain Natural Earth cache. Original cache documentation accessed 2026-09-11. Current boundaries are orientation only. Source geometry preserved; unused properties removed.",
+      "license": "public domain",
+      "sha256": "00fa91ab97797afea71aa65a1577309500cf54fad3c2e5ec18f13e47b33c3f7c"
+    },
+    {
+      "file": "map-data/niger-benue-50m.geojson",
+      "source": "https://www.naturalearthdata.com/downloads/50m-physical-vectors/50m-rivers-lake-centerlines/",
+      "provenance": "Named Niger and Benue features from existing Natural Earth cache. Not equated with chapter II unnamed river.",
+      "license": "public domain",
+      "sha256": "f4e2c0a4ad747c3ed92bd7592dd08eb3e250e3ecf04d61e2e96a6b70e897c32b"
+    },
+    {
+      "file": "map-data/barbados-10m.geojson",
+      "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+      "provenance": "Barbados feature retrieved 2026-10-28. 1:10m generalized coastline, not cadastral detail.",
+      "license": "public domain",
+      "sha256": "52e1c51e2878291c66b51878533d23755bcde03d1a5964b34266f912d9518454"
+    }
+  ],
+  "markers": [
+    {
+      "name": "Bridgetown",
+      "longitude": -59.6167,
+      "latitude": 13.1,
+      "status": "city locator, approximate town-centre coordinate; no claim to locate historical ship anchorage or sale yard",
+      "source": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=7005936&nation=&place=&subjectid=1013028",
+      "crosscheck": "UNESCO Historic Bridgetown/Garrison coordinate 13.096667,-59.613889 lies about 0.5 km away and covers the larger heritage property; https://whc.unesco.org/en/list/1376/maps/"
+    },
+    {
+      "name": "Benin City",
+      "longitude": 5.6833,
+      "latitude": 6.3167,
+      "status": "historical-kingdom contextual city, not a narrative journey stop",
+      "source": "https://www.getty.edu/vow/TGNFullDisplay?english=Y&find=&nation=&place=&subjectid=1091899",
+      "context": "https://www.metmuseum.org/fr/essays/origins-and-empire-the-benin-owo-and-ijebu-kingdoms"
+    },
+    {
+      "name": "Igbo-speaking region",
+      "status": "broad illustrative regional symbol, not a surveyed ethnic boundary; no village pinned",
+      "symbol_extent_lon_lat": [
+        6.4,
+        4.8,
+        8.2,
+        7.1
+      ],
+      "source": "https://ehrafworldcultures.yale.edu/cultures/ff26/summary",
+      "limitation": "Igbo-speaking communities also extend beyond this illustrative region. Eboe is the narrative spelling. The oval is intentionally not a historical administrative polygon."
+    }
+  ],
+  "movement": {
+    "status": "schematic direction only",
+    "graphic_start_lon_lat": [
+      0,
+      2
+    ],
+    "graphic_end_lon_lat": [
+      -57,
+      12.8
+    ],
+    "warning": "Endpoints of arrow are layout locations offshore, not ports. No exact coast embarkation coordinate, date, duration, slave ship, inland track, or sailing track is asserted. Barbados dot is geographically located separately."
+  },
+  "primary_text": [
+    {
+      "chapter": "I",
+      "url": "https://history.hanover.edu/texts/Equiano/equiano_ch1_a.html",
+      "anchors": "Guinea from Senegal to Angola; kingdom of Benen/Benin; Eboe and Essaka (long-s OCR appears Effaka); reference to Abyssinia; brooks and springs."
+    },
+    {
+      "chapter": "II",
+      "url": "https://history.hanover.edu/texts/Equiano/equiano_ch2_a.html",
+      "anchors": "Tinmah and pond/rivulets; unnamed large river and canoes; six or seven months to unnamed sea coast; ship, Atlantic passage, Barbadoes and Bridge Town; sale and separation of captives."
+    }
+  ],
+  "uncertainty": [
+    {
+      "claim": "Essaka exact location",
+      "status": "disputed",
+      "evidence": "Paul E. Lovejoy argues Essaka=Usaka in Abia (2024 online; 2025 journal vol.46 no.2, pp.357-379). Earlier identifications include Isseke; birthplace itself is contested. This map does not adjudicate.",
+      "source": "https://doi.org/10.1080/0144039X.2024.2408129"
+    },
+    {
+      "claim": "Tinmah and departure port",
+      "status": "scholarly reconstruction, excluded as precise markers",
+      "evidence": "Paul Lovejoy, Equiano’s World, updated 2024-10-24, proposes Tinmah=Utumah and Calabar departure. Chapter II itself does not name Calabar or the large river.",
+      "source": "https://equianosworld.org/context.php?id=1"
+    },
+    {
+      "claim": "Abyssinia as eastern extent of Benin",
+      "status": "not a reliable historical boundary",
+      "evidence": "Chapter I repeats this geographic claim; map does not draw such a kingdom. Modern regional positioning and institutional histories of Benin contradict a transcontinental Benin empire.",
+      "source": "https://www.metmuseum.org/fr/essays/origins-and-empire-the-benin-owo-and-ijebu-kingdoms"
+    },
+    {
+      "claim": "Barbados sale",
+      "status": "sale scene, not claim Equiano was sold there",
+      "evidence": "Chapter II describes the sale and family separation; chapter III specifies Equiano was among those not sold in Barbados and then taken to Virginia. Virginia is out of scope."
+    }
+  ],
+  "qa": {
+    "rendered": "PNG from final PDF visually inspected at 1959 x 1268. No text collisions or clipping. Three detail PNGs allow full-resolution viewing.",
+    "fonts": "Arial and Arial-Bold embedded TrueType; all authored text sans-serif. Smallest text 11 pt on 17 x 11 inch PDF.",
+    "geography": "Map projection preserves original country/river geometry. Bridgetown southwest Barbados; Benin City west of Niger in Nigeria; Nigeria east of modern Republic of Benin; westward schematic Atlantic movement.",
+    "limitations": "Static large-format teaching map; scaled-to-letter printing reduces 11 pt labels and is not recommended. Use tabloid landscape or view at full size."
+  },
+  "interactive_web": {
+    "library": "Leaflet 1.9.4, locally hosted",
+    "projection": "Web Mercator, EPSG:3857; north up",
+    "sources": "Same Natural Earth country, Barbados and river geometry as the print maps. No live tile dependency.",
+    "views": {
+      "Atlantic": "Africa to Barbados, direction only",
+      "West Africa": "Modern regional context, Niger/Benue not identified with the unnamed river",
+      "Barbados": "Bridgetown approximate town-centre locator"
+    },
+    "limits": "Elliptical Igbo-region symbol is illustrative, not an ethnic or administrative boundary. No village, departure port, anchorage, or slave-market pin. No historical sailing track."
+  }
+}

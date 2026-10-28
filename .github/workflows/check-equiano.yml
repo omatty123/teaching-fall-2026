@@ -1,0 +1,36 @@
+name: Check Equiano reading page
+on:
+  push:
+    paths:
+      - 'frst-110-resources/equiano-chapters-1-2.html'
+      - 'frst-110-resources/equiano-assets/**'
+      - 'scripts/build-equiano.py'
+      - 'scripts/check-equiano.py'
+      - 'data/frst-110.json'
+      - '.github/workflows/check-equiano.yml'
+  pull_request:
+    paths:
+      - 'frst-110-resources/equiano-chapters-1-2.html'
+      - 'frst-110-resources/equiano-assets/**'
+      - 'scripts/build-equiano.py'
+      - 'scripts/check-equiano.py'
+      - 'data/frst-110.json'
+      - '.github/workflows/check-equiano.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Check reading page and course link
+        run: python scripts/check-equiano.py
+      - name: Check map script syntax
+        run: node --check frst-110-resources/equiano-assets/equiano.js
