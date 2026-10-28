@@ -2,25 +2,33 @@
   "checked": "2026-10-28",
   "images": [
     {
-      "file": "equiano-frontispiece.png",
+      "file": "equiano-frontispiece-smithsonian.jpg",
       "title": "Olaudah Equiano, or Gustavus Vassa, the African",
-      "object_type": "Frontispiece portrait, digital reproduction",
-      "object_date": "Original engraving published 1 March 1789; digital reproduction in Project Gutenberg edition",
+      "object_type": "Frontispiece portrait, photograph of the 1789 engraving in a bound volume",
+      "object_date": "1789; publication line dated 1 March 1789",
       "maker": "Daniel Orme, after W. Denton; original published by Olaudah Equiano (Gustavus Vassa)",
-      "source_url": "https://www.gutenberg.org/files/15399/15399-h/15399-h.htm",
-      "download_url": "https://www.gutenberg.org/files/15399/15399-h/images/001.png",
-      "provenance_url": "https://www.npg.org.uk/collections/search/portrait/mw42525/Olaudah-Equiano-Gustavus-Vassa",
-      "rights": "Public domain in the USA; faithful reproduction of a historical engraving. Project Gutenberg ebook 15399 is designated public domain.",
-      "rights_url": "https://www.gutenberg.org/ebooks/15399",
-      "credit": "Project Gutenberg; engraving by Daniel Orme after W. Denton",
+      "source_url": "https://npg.si.edu/object/npg_NPG.78.82",
+      "download_url": "https://ids.si.edu/ids/download?id=NPG-7800142B_1.jpg",
+      "provenance_url": "https://npg.si.edu/object/npg_NPG.78.82",
+      "rights": "CC0, as identified by the Smithsonian collection record. Underlying 1789 engraving is public domain.",
+      "rights_url": "https://npg.si.edu/object/npg_NPG.78.82",
+      "credit": "National Portrait Gallery, Smithsonian Institution, NPG.78.82; Daniel Orme after W. Denton; CC0",
       "caption": "Equiano’s frontispiece portrait. The original engraving was published on 1 March 1789. The caption displays both Olaudah Equiano and Gustavus Vassa.",
       "alt": "Engraved portrait of Equiano wearing a coat and neckcloth, holding an open book and looking at the viewer. Both names appear beneath the portrait.",
-      "width": 455,
-      "height": 700,
+      "width": 2451,
+      "height": 4000,
       "changes": "None. Downloaded original image bytes.",
-      "display_note": "Use at approximately 300–400px wide; source is 455px wide. The book is visible, but its text cannot be read confidently in this reproduction.",
-      "bytes": 50997,
-      "sha256": "1e16fa19dd2cb85cfbedda72d9071035e1454c826c8196bc29b51ec3af846130"
+      "display_note": "Full plate and book edges retained. Fine stipple, both names, artist signatures, publication line, and Acts chapter/verse reference are visible in the full-resolution scan. The Smithsonian download menu advertises 4903×8000; the served JPEG actually measures 2451×4000, which is recorded here.",
+      "bytes": 2943423,
+      "sha256": "f049816c6c3b100e540febd11b3a5093c4d39670fb600504fffa32ffa72fdca7",
+      "accession": "National Portrait Gallery, Smithsonian Institution, NPG.78.82",
+      "previous_asset": {
+        "file": "equiano-frontispiece.png",
+        "source_url": "https://www.gutenberg.org/files/15399/15399-h/15399-h.htm",
+        "width": 455,
+        "height": 700,
+        "note": "Retained unchanged as the previous reproduction; no longer displayed on the page."
+      }
     },
     {
       "file": "wedgwood-medallion.jpg",
@@ -70,6 +78,7 @@
     "No Getty-watermarked supplied portrait was republished.",
     "No supplied Word document was altered.",
     "A downloaded Library of Congress/Commons Brookes poster was considered but not retained, because current LOC and older catalog date fields conflict (1788? versus1884). The selected UVA plate has explicit1808 provenance.",
-    "All selected images were visually inspected. No image was cropped, enhanced, generated, or otherwise edited."
+    "All selected images were visually inspected. No image was cropped, enhanced, generated, or otherwise edited.",
+    "28 October quality correction: replaced the displayed Gutenberg portrait with the unaltered Smithsonian CC0 scan, verified at 2451×4000. British Library CC0 scan at 1071×1785 was compared; the Smithsonian file offers greater detail. Previous asset retained."
   ]
 }
