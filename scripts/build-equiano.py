@@ -10,6 +10,7 @@ def render():
     visuals = (ASSETS / 'images/visuals.fragment.html').read_text()
     portraits, ship = visuals.split('<figure class="brookes-figure">', 1)
     return (template.replace('{{CHAPTERS}}', (ASSETS / 'chapters.fragment.html').read_text())
+            .replace('{{FILMS}}', (ASSETS / 'films.fragment.html').read_text())
             .replace('{{PORTRAITS}}', portraits)
             .replace('{{SHIP}}', '<figure class="brookes-figure">' + ship))
 

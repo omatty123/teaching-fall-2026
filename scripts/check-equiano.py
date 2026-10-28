@@ -24,7 +24,7 @@ class Page(HTMLParser):
 text=PAGE.read_text(); parsed=Page(); parsed.feed(text)
 assert text==runpy.run_path(str(ROOT/'scripts/build-equiano.py'))['render'](), 'Generated page is stale'
 assert len(parsed.ids)==len(set(parsed.ids)), 'Duplicate page anchors'
-assert set(('maps','chapter-one','chapter-two','water','images','identity','context','vocabulary','sources'))<=set(parsed.ids)
+assert set(('maps','chapter-one','chapter-two','water','films','images','identity','context','vocabulary','sources'))<=set(parsed.ids)
 assert all(i.get('alt') and i.get('width') and i.get('height') for i in parsed.images), 'Images need descriptions and dimensions'
 for link in parsed.links:
     url=urlsplit(link)
@@ -34,7 +34,7 @@ for link in parsed.links:
     else:
         target=(PAGE.parent/unquote(url.path)).resolve()
         assert target.is_relative_to(ROOT) and target.exists(), f'Missing or non-public file: {link}'
-for forbidden in ('/Users/','127.0.0.1','teaching-notes/private','Mock-Filled','{{CHAPTERS}}','{{SHIP}}'):
+for forbidden in ('/Users/','127.0.0.1','teaching-notes/private','Mock-Filled','{{CHAPTERS}}','{{SHIP}}','{{FILMS}}'):
     assert forbidden not in text, f'Unexpected private path or build token: {forbidden}'
 assets=PAGE.parent/'equiano-assets'
 for file in (assets/'map-data').glob('*.geojson'):
