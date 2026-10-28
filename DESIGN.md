@@ -310,3 +310,69 @@ footer links to `courses/frst-110.html` and the companion
 paper, 12mm margins, smaller type, and hidden navigation/footer while retaining
 the explanation and sequence. Flat color fields and rules provide grouping;
 there are no shadows or rounded cards.
+
+
+## FRST 110 Narratives of Slavery · October 28, 2026
+
+### Overview
+
+`frst-110-resources/narratives-of-slavery.html` is a **Read** surface extending
+the Equiano materials. Its compact title, direct film links, ruled work entries,
+further reading, and sourced definitions keep the material visible. This
+addendum records this surface only; existing shared tokens and guidance remain
+unchanged. The scoped stylesheet is
+`frst-110-resources/narratives-of-slavery-assets/page.css`.
+
+### Colors
+
+White (`#fff`) supports dark ink (`#202f35`), muted text (`#4a5c64`), blue
+underlined links (`#245a8d`), and thin gray rules (`#cbd3d5`). Visible keyboard
+focus uses blue (`#0b63ce`).
+
+### Typography
+
+Self-hosted Source Sans 3 variable roman and italic fonts load from
+`_kit/fonts/SourceSans3VF-Upright.woff2` and `SourceSans3VF-Italic.woff2`.
+Fallbacks are Helvetica Neue, Arial, and sans-serif. Body text is 18px/1.5,
+becoming 17px on phones. The title is 38px/1.15 at weight 650, becoming 33px;
+section headings are 28px, becoming 26px. Titles wrap naturally, without forced
+line breaks. These values do not replace the shared Inter typography.
+
+### Layout
+
+Content centers within 1260px with 28px horizontal padding. Starting works use
+three columns for title/metadata, setting/story, and relation to evidence. At
+900px and below, the title occupies the first column while the two descriptions
+stack in the second. At 620px and below, all three blocks stack and gutters
+reduce to 16px. Definitions use two columns, becoming one at 620px. Further
+reading has a 190px image column, reduced to 155px below 900px; phones use a
+100px image beside its caption beneath the reading list.
+
+### Elevation & Depth
+
+Thin horizontal rules group the white reading surface. There are no shadows,
+filled decorative panels, or oversized title fields.
+
+### Shapes
+
+The layout uses square, unboxed rows. The small CC0 Smithsonian frontispiece
+retains its full aspect ratio without cropping or alteration.
+
+### Components
+
+Course and section links have 48px minimum heights; phone section links and
+footer links use 44px. A skip link, semantic headings, underlined source links,
+and visible keyboard focus support navigation. Source links remain beside
+entries, and the image credit stays visible. All content works without
+JavaScript. Print styles retain text while hiding navigation, footer, and image.
+
+### Do's and Don'ts
+
+- Preserve the single user-supplied discussion question; add no new prompts.
+- Keep the selected collection's scope and distinctions among testimony,
+  biography, dramatization, and fiction explicit.
+- Retain the image credit and `narratives-of-slavery-assets/sources.json` ledger.
+- Fresh independent review returned **ship**, with no fixes requested. Evidence
+  is in `.impeccable/review/narratives-of-slavery/desktop.png`, `mobile.png`, and
+  `user-374.png`; the implemented surface brief is
+  `.impeccable/surfaces/narratives-of-slavery.md`.

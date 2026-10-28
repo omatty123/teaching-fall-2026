@@ -1,0 +1,30 @@
+name: Check Narratives of Slavery
+on:
+  push:
+    paths:
+      - 'frst-110-resources/narratives-of-slavery.html'
+      - 'frst-110-resources/narratives-of-slavery-assets/**'
+      - 'scripts/check-narratives-of-slavery.py'
+      - '.github/workflows/check-narratives-of-slavery.yml'
+  pull_request:
+    paths:
+      - 'frst-110-resources/narratives-of-slavery.html'
+      - 'frst-110-resources/narratives-of-slavery-assets/**'
+      - 'scripts/check-narratives-of-slavery.py'
+      - '.github/workflows/check-narratives-of-slavery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - name: Check resource links, provenance, and public boundaries
+        run: python scripts/check-narratives-of-slavery.py
