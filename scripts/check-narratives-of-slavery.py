@@ -52,8 +52,9 @@ html = PAGE.read_text()
 doc = Document(html)
 visible = ' '.join(' '.join(doc.text).split())
 assert visible.count('?') == 1 and QUESTION in visible, 'Only the approved discussion question belongs here'
-assert all(x in doc.ids for x in ('starting','further','discussion','sources','roots','amistad','twelve-years','django','equiano','douglass','jacobs','blight','beloved'))
-assert len(doc.articles) == 9 and all(a['external'] for a in doc.articles), 'Every selected work needs adjacent evidence'
+assert all(x in doc.ids for x in ('starting','discussion','sources','roots','amistad','twelve-years','django'))
+assert {a['id'] for a in doc.articles} == {'roots','amistad','twelve-years','django'}, 'Additional examples are for students to find'
+assert all(a['external'] for a in doc.articles), 'Every selected work needs adjacent evidence'
 assert 'Life before capture' in visible or 'life before capture or enslavement' in visible
 assert 'not a complete inventory' in visible and 'not a ranking of whose suffering matters' in visible
 assert not re.search(r'/Users/|127\.0\.0\.1|localhost|teaching-notes/|private-data/|file://|\.config/|Bearer\s', html), 'Private/local material leaked into public page'
@@ -84,4 +85,4 @@ for article in doc.articles:
 for media in ledger['media']:
     assert (ASSETS / media['path']).resolve().is_file(), 'Missing cited image'
     assert media['license'] and media['source'].startswith('https://')
-print('Narratives of Slavery: 9 sourced works, approved discussion, local links/anchors, fonts and privacy checks passed.')
+print('Narratives of Slavery: 4 class-named works, approved discussion, local links/anchors, fonts and privacy checks passed.')

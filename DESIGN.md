@@ -344,9 +344,7 @@ Content centers within 1260px with 28px horizontal padding. Starting works use
 three columns for title/metadata, setting/story, and relation to evidence. At
 900px and below, the title occupies the first column while the two descriptions
 stack in the second. At 620px and below, all three blocks stack and gutters
-reduce to 16px. Definitions use two columns, becoming one at 620px. Further
-reading has a 190px image column, reduced to 155px below 900px; phones use a
-100px image beside its caption beneath the reading list.
+reduce to 16px. Definitions use two columns, becoming one at 620px.
 
 ### Elevation & Depth
 
@@ -355,23 +353,23 @@ filled decorative panels, or oversized title fields.
 
 ### Shapes
 
-The layout uses square, unboxed rows. The small CC0 Smithsonian frontispiece
-retains its full aspect ratio without cropping or alteration.
+The layout uses square, unboxed rows.
 
 ### Components
 
 Course and section links have 48px minimum heights; phone section links and
 footer links use 44px. A skip link, semantic headings, underlined source links,
 and visible keyboard focus support navigation. Source links remain beside
-entries, and the image credit stays visible. All content works without
-JavaScript. Print styles retain text while hiding navigation, footer, and image.
+entries. All content works without JavaScript. Print styles retain text while
+hiding navigation and footer.
 
 ### Do's and Don'ts
 
 - Preserve the single user-supplied discussion question; add no new prompts.
 - Keep the selected collection's scope and distinctions among testimony,
   biography, dramatization, and fiction explicit.
-- Retain the image credit and `narratives-of-slavery-assets/sources.json` ledger.
+- Keep only the four class-named works; students find additional examples.
+- Retain the `narratives-of-slavery-assets/sources.json` ledger.
 - Fresh independent review returned **ship**, with no fixes requested. Evidence
   is in `.impeccable/review/narratives-of-slavery/desktop.png`, `mobile.png`, and
   `user-374.png`; the implemented surface brief is

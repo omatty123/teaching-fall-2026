@@ -1,14 +1,15 @@
 {
   "title": "Narratives of Slavery",
   "checked": "2026-10-28",
-  "scope": "Selected starting collection: four user-named works and five further examples. Not a comprehensive bibliography or catalog inventory.",
+  "scope": "Only the four works already named in class. Finding additional examples is the students’ work.",
   "discussion_question": "Why does it matter to make distinctions between different types of slavery, especially comparing present to the past, and chattel slavery?",
   "editorial_limits": [
     "Preserve only the user-requested discussion question.",
     "No assignment, deadline or submission requirement added.",
     "Use life before capture or enslavement rather than implying that Africa had a uniform period before slavery.",
     "Django interpreted as Django Unchained2012; setting described as before the Civil War rather than using the inconsistent promotional two-years chronology.",
-    "Institutional/legal descriptions distinguish terminology, not comparative worth of people or suffering."
+    "Institutional/legal descriptions distinguish terminology, not comparative worth of people or suffering.",
+    "Do not supply additional narrative examples; students are to find them."
   ],
   "works": [
     {
@@ -83,71 +84,6 @@
           "supports": "2012 production and genre."
         }
       ]
-    },
-    {
-      "id": "equiano",
-      "title": "The Interesting Narrative",
-      "distinction": "Autobiography with disputed childhood birthplace/Atlantic-crossing testimony; existing course debate retained.",
-      "sources": [
-        {
-          "url": "https://english.web.ox.ac.uk/ten-minute-book-club/equiano-the-interesting-narrative",
-          "publisher": "University of Oxford",
-          "supports": "1789 narrative and literary context."
-        },
-        {
-          "url": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-chapters-1-2.html#identity",
-          "publisher": "Existing course source ledger and historical evidence",
-          "supports": "Birthplace debate and its evidentiary limits."
-        }
-      ]
-    },
-    {
-      "id": "douglass",
-      "title": "Narrative of the Life of Frederick Douglass, an American Slave",
-      "distinction": "Autobiography distinct from Blight’s later biography.",
-      "sources": [
-        {
-          "url": "https://www.loc.gov/collections/frederick-douglass-papers/articles-and-essays/in-his-own-words/",
-          "publisher": "Library of Congress",
-          "supports": "1845 autobiography, authorial claim, enslavement and escape; full texts."
-        }
-      ]
-    },
-    {
-      "id": "jacobs",
-      "title": "Incidents in the Life of a Slave Girl",
-      "distinction": "Autobiography published under Linda Brent.",
-      "sources": [
-        {
-          "url": "https://www.archives.gov/nhprc/projects/catalog/harriet-jacobs",
-          "publisher": "US National Archives",
-          "supports": "1861 book, pseudonym and sexual coercion/struggle for freedom."
-        }
-      ]
-    },
-    {
-      "id": "blight",
-      "title": "Frederick Douglass: Prophet of Freedom",
-      "distinction": "A historian’s biography, distinct from the subject’s own autobiographies.",
-      "sources": [
-        {
-          "url": "https://www.simonandschuster.com/books/Frederick-Douglass/David-W-Blight/9781416590316",
-          "publisher": "Simon & Schuster",
-          "supports": "2018 biography and documentary source base."
-        }
-      ]
-    },
-    {
-      "id": "beloved",
-      "title": "Beloved",
-      "distinction": "Novel; historical inspiration is distinct from a transcript of firsthand testimony.",
-      "sources": [
-        {
-          "url": "https://www.penguinrandomhouse.com/books/117647/beloved-by-toni-morrison-introduction-by-a-s-byatt/9780307264886/readers-guide/",
-          "publisher": "Penguin Random House",
-          "supports": "1987 novel, Sethe and the effects of enslavement after escape."
-        }
-      ]
     }
   ],
   "comparison_sources": [
@@ -177,18 +113,5 @@
       "supports": "Equiano chapter1 comparison of slavery, captive-taking, sale, kidnapping and unequal status."
     }
   ],
-  "media": [
-    {
-      "path": "../equiano-assets/images/equiano-frontispiece-smithsonian.jpg",
-      "source": "https://npg.si.edu/object/npg_NPG.78.82",
-      "publisher": "Smithsonian National Portrait Gallery",
-      "accession": "NPG.78.82",
-      "license": "CC0",
-      "transformation": "None; existing image reused, displayed at a smaller responsive size.",
-      "dimensions": [
-        2451,
-        4000
-      ]
-    }
-  ]
+  "media": []
 }
