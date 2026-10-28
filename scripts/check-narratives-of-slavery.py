@@ -19,6 +19,7 @@ class Document(HTMLParser):
         self.refs = []
         self.text = []
         self.articles = []
+        self.embeds = []
         self.headings = []
         self.article = None
         self.heading = None
@@ -28,7 +29,7 @@ class Document(HTMLParser):
         if 'id' in attrs:
             assert attrs['id'] not in self.ids, f'Duplicate id: {attrs["id"]}'
             self.ids.add(attrs['id'])
-        if tag == 'article':
+        if tag == 'article' and 'work' in attrs.get('class', '').split():
             self.article = {'id': attrs.get('id'), 'external': []}
             self.articles.append(self.article)
         if re.fullmatch(r'h[1-6]', tag):
@@ -39,7 +40,11 @@ class Document(HTMLParser):
                 self.refs.append(attrs[key])
                 if tag == 'a' and self.article is not None and attrs[key].startswith('https://'):
                     self.article['external'].append(attrs[key])
-        assert tag not in ('form', 'input', 'textarea', 'iframe', 'script'), f'Unexpected active/public collection element: {tag}'
+        if tag == 'iframe':
+            self.embeds.append(attrs['src'])
+            assert attrs.get('title') and attrs.get('loading') == 'lazy'
+            assert attrs['src'].startswith('https://www.youtube-nocookie.com/embed/')
+        assert tag not in ('form', 'input', 'textarea', 'script'), f'Unexpected active/public collection element: {tag}'
         assert not (tag == 'br' and self.heading is not None), 'Forced heading break'
     def handle_endtag(self, tag):
         if tag == 'article': self.article = None
@@ -52,9 +57,11 @@ html = PAGE.read_text()
 doc = Document(html)
 visible = ' '.join(' '.join(doc.text).split())
 assert visible.count('?') == 1 and QUESTION in visible, 'Only the approved discussion question belongs here'
-assert all(x in doc.ids for x in ('starting','discussion','sources','roots','amistad','twelve-years','django'))
+assert all(x in doc.ids for x in ('films','films-africa','films-ship','starting','discussion','sources','roots','amistad','twelve-years','django'))
 assert {a['id'] for a in doc.articles} == {'roots','amistad','twelve-years','django'}, 'Additional examples are for students to find'
 assert all(a['external'] for a in doc.articles), 'Every selected work needs adjacent evidence'
+assert {urlsplit(u).path.rsplit('/',1)[-1] for u in doc.embeds} == {'yeLZ7RKHg8M','93RjBzXz_Zo','0IJrhQE6DZk'}, 'Preserve the three approved playable clips'
+assert 'end=70' in next(u for u in doc.embeds if '93RjBzXz_Zo' in u), 'Preserve the selected Amistad passage'
 assert 'Life before capture' in visible or 'life before capture or enslavement' in visible
 assert 'not a complete inventory' in visible and 'not a ranking of whose suffering matters' in visible
 assert not re.search(r'/Users/|127\.0\.0\.1|localhost|teaching-notes/|private-data/|file://|\.config/|Bearer\s', html), 'Private/local material leaked into public page'
@@ -85,4 +92,4 @@ for article in doc.articles:
 for media in ledger['media']:
     assert (ASSETS / media['path']).resolve().is_file(), 'Missing cited image'
     assert media['license'] and media['source'].startswith('https://')
-print('Narratives of Slavery: 4 class-named works, approved discussion, local links/anchors, fonts and privacy checks passed.')
+print('Narratives of Slavery: 4 class-named works, 3 approved embedded videos, approved discussion, local links/anchors, fonts and privacy checks passed.')

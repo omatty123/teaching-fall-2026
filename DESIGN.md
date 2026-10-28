@@ -374,3 +374,6 @@ hiding navigation and footer.
   is in `.impeccable/review/narratives-of-slavery/desktop.png`, `mobile.png`, and
   `user-374.png`; the implemented surface brief is
   `.impeccable/surfaces/narratives-of-slavery.md`.
+
+### Narratives film playback · October 28
+The resource repeats the existing Equiano film clips before its four-work list. Responsive16:9 players use two columns, then one below900px. Age-restricted clips keep labeled external links. This adds no narrative examples beyond the four named works.

@@ -30,3 +30,6 @@ Fresh independent reviewer verdict: **ship**, with no fixes requested (October 2
 
 ## October 28 correction
 Removed the five assistant-supplied additional examples and their associated reading-section portrait. The four class-named works remain. Students will find further examples; do not fill in their work. Earlier screenshots record the superseded version.
+
+## Videos directly on the page · October 28
+The existing Equiano film section now precedes the four starting works. Three YouTube privacy-enhanced players are 16:9, lazy-loaded and titled; two age-restricted ship excerpts retain thumbnail/direct links and explicit YouTube sign-in notices. Two columns become one below900px. Videos are hidden in print while their links and context remain. No additional narrative works or questions.
