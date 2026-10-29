@@ -1,0 +1,44 @@
+@font-face{font-family:"Source Sans 3";src:url('../../_kit/fonts/SourceSans3VF-Upright.woff2') format('woff2');font-weight:200 900;font-display:swap}
+:root{--ink:#202d29;--muted:#52645c;--moss:#2d5a50;--rust:#8b432e;--blue:#285e73;--rule:#d3dbd6;--focus:#005fc4;--paper:#fdfcf9}
+*{box-sizing:border-box}
+html{scroll-padding-top:1.5rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:19px/1.55 "Source Sans 3","Segoe UI",Arial,sans-serif}
+main{width:min(100% - 4rem,1120px);margin:auto;padding:1rem 0 1.5rem}
+a{color:var(--moss);text-underline-offset:.2em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+a:focus-visible{outline:3px solid var(--focus);outline-offset:5px}
+::selection{background:#dcece4;color:#102a21}
+.breadcrumb{font-size:1rem;display:flex;align-items:center;border-bottom:1px solid var(--rule);padding-bottom:.45rem}
+.breadcrumb a{display:inline-flex;align-items:center;min-height:44px;gap:.5rem;text-decoration:none}
+.breadcrumb a::before{content:"";display:block;width:7px;height:7px;border-left:1.5px solid;border-bottom:1.5px solid;transform:rotate(45deg)}
+header{padding:1rem 0 0}
+h1{font-size:clamp(2rem,4vw,2.85rem);font-weight:720;letter-spacing:-.025em;line-height:1.12;margin:0 0 .45rem;color:#183f32}
+h2{font-size:clamp(1.55rem,2.5vw,2rem);font-weight:660;line-height:1.22;margin:0;letter-spacing:-.015em;color:var(--accent);grid-column:1/-1}
+p{margin:0 0 .85rem}
+.course{color:var(--muted);font-size:1rem;margin-bottom:.6rem}
+.intro{font-size:1.1rem;margin-bottom:1.2rem;max-width:76ch}
+.case-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.6rem}
+.case-nav a{--accent:var(--moss);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;border-top:1px solid var(--accent);padding:.7rem 0 .85rem;min-height:86px;text-decoration:none;color:var(--accent)}
+.case-nav a:nth-child(2){--accent:var(--rust)}
+.case-nav a:nth-child(3){--accent:var(--blue)}
+.case-nav a:hover .nav-title{text-decoration:underline;text-underline-offset:.18em}
+.nav-title{font-size:1.25rem;font-weight:650;line-height:1.22}
+.nav-context{font-size:.9rem;color:var(--muted);margin-top:.25rem}
+article{--accent:var(--moss);display:grid;grid-template-columns:280px minmax(0,1fr);column-gap:3rem;row-gap:1.1rem;border-top:1px solid var(--rule);padding:1.65rem 0 1.9rem;scroll-margin-top:1.5rem}
+article#scholarship-application{--accent:var(--rust)}
+article#gis-internship{--accent:var(--blue)}
+.case-art{margin:0;grid-column:1;grid-row:2/4;align-self:start}
+.case-art img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.case-art figcaption{margin-top:.55rem;color:var(--muted);font-size:.91rem;line-height:1.35}
+.case-text{grid-column:2;max-width:74ch}
+.case-text p:last-child{margin-bottom:0}
+.source{grid-column:2;font-size:.92rem;line-height:1.5;color:var(--muted);border-top:1px solid var(--rule);padding-top:.65rem;max-width:80ch}
+.source p{margin:0 0 .3rem}
+.source a{color:var(--accent)}
+.source-link{display:inline-flex;align-items:center;min-height:44px;font-weight:600;gap:.6rem}
+.source .source-link::after{content:"";width:7px;height:7px;border-top:1.5px solid;border-right:1.5px solid;transform:rotate(45deg);flex:none}
+footer{border-top:1px solid var(--rule);padding:.6rem 0 0;font-size:.95rem;display:flex;justify-content:space-between;gap:.7rem 2rem;align-items:center;flex-wrap:wrap}
+.art-note{color:var(--muted);font-size:.85rem;max-width:60ch;margin:0}
+@media(max-width:850px){main{width:calc(100% - 3rem)}article{grid-template-columns:210px minmax(0,1fr);column-gap:1.6rem}.case-nav{gap:1rem}}
+@media(max-width:650px){body{font-size:18px}main{width:calc(100% - 2rem);padding-top:.4rem}header{padding-top:.85rem}h1{font-size:2rem}.intro{font-size:1.05rem;margin-bottom:1rem}.case-nav{gap:.85rem}.case-nav a{padding:.65rem 0;min-height:84px;justify-content:flex-start}.nav-title{font-size:1.03rem}.nav-context{font-size:.83rem}article{display:block;padding:1.3rem 0 1.6rem}h2{margin-bottom:.9rem}.case-art{margin:0 0 1.05rem}.case-art img{height:170px;aspect-ratio:auto}.case-art figcaption{margin-top:.35rem;font-size:.86rem}.case-text{max-width:100%}.source{margin-top:1rem}.art-note{font-size:.83rem}}
+@media print{body{font-size:12pt;color:#111;background:#fff}.breadcrumb,.case-nav,footer{display:none}main{width:100%;padding:0}article{grid-template-columns:140px minmax(0,1fr);gap:1rem}h1,h2{break-after:avoid}p{orphans:3;widows:3}}

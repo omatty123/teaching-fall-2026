@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - 'buen-594-resources/internship-ethics-cases.html'
+      - 'buen-594-resources/ethics-assets/**'
       - 'data/buen-594.json'
       - 'courses/buen-594.html'
       - 'scripts/check-buen-ethics.py'
@@ -10,6 +11,7 @@ on:
   pull_request:
     paths:
       - 'buen-594-resources/internship-ethics-cases.html'
+      - 'buen-594-resources/ethics-assets/**'
       - 'data/buen-594.json'
       - 'courses/buen-594.html'
       - 'scripts/check-buen-ethics.py'

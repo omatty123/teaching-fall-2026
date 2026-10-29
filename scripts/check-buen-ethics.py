@@ -12,6 +12,7 @@ class Page(HTMLParser):
     def __init__(self):
         super().__init__()
         self.ids, self.links, self.cases = [], [], []
+        self.assets = []
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -21,6 +22,11 @@ class Page(HTMLParser):
             self.links.append(attrs.get("href", ""))
         if tag == "article":
             self.cases.append(attrs.get("id"))
+        if tag == "img":
+            assert attrs.get("alt"), "Illustration needs descriptive alt text"
+            self.assets.append(attrs["src"])
+        if tag == "link" and attrs.get("rel") == "stylesheet":
+            self.assets.append(attrs["href"])
 
 
 source = PAGE.read_text()
@@ -28,6 +34,8 @@ page = Page()
 page.feed(source)
 assert len(page.ids) == len(set(page.ids)), "Duplicate section IDs"
 assert page.cases == ["full-disclosure", "scholarship-application", "gis-internship"]
+for asset in page.assets:
+    assert (PAGE.parent / asset).is_file(), f"Missing page asset: {asset}"
 for link in page.links:
     assert link, "Empty link"
     parts = urlsplit(link)

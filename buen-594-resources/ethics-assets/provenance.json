@@ -1,0 +1,19 @@
+{
+  "generated_on": "2026-10-28",
+  "method": "Built-in image_gen",
+  "purpose": "Conceptual illustrations of settings; not documentary images or accurate geographic evidence.",
+  "assets": [
+    {
+      "file": "fundraising.webp",
+      "prompt": "Use case: illustration-story. Asset type: small editorial illustration beside a university reading, not a hero image. Create a refined, tactile painted still life with crisp confident forms, subtle gouache/print texture, strong natural light and rich but restrained colors. Landscape 4:3 composition. Contemporary editorial art for adults; beautiful and thoughtful, not cartoonish, no faces, no people, no scales of justice, no lettering, no logos, no watermark. Objects should fill the frame with almost no decorative blank space. This is a conceptual illustration, not a depiction of a documented event. Subject: the end of a nonprofit fundraising dinner. Close-up oblique view of a white linen table, two clear water glasses, an unmarked cream check envelope, a dark green dinner jacket draped over the back of a wooden chair, and a small warm brass table light. Deep moss green, warm cream and a restrained amber accent. Evoke an important conversation just after it ended; no luxury excess, no readable check or text."
+    },
+    {
+      "file": "scholarship.webp",
+      "prompt": "Use case: illustration-story. Asset type: small editorial illustration beside a university reading, not a hero image. Create a refined, tactile painted still life with crisp confident forms, subtle gouache/print texture, strong natural light and rich but restrained colors. Landscape 4:3 composition. Contemporary editorial art for adults; beautiful and thoughtful, not cartoonish, no faces, no people, no scales of justice, no lettering, no logos, no watermark. Objects should fill the frame with almost no decorative blank space. This is a conceptual illustration, not a depiction of a documented event. Subject: scholarship application work at a simple office desk. Close-up oblique view of two overlapping unmarked paper application forms with a few abstract gray lines, a fountain pen laid across one sheet, a plain open folder and the corner of a modest desk lamp. Warm ivory, deep burnt umber and restrained terracotta with a little dark green. Papers are the focus, no readable writing or words, no diplomas, no graduation caps, no fabricated institutional seals."
+    },
+    {
+      "file": "mapping.webp",
+      "prompt": "Use case: illustration-story. Asset type: small editorial illustration beside a university reading, not a hero image. Create a refined, tactile painted still life with crisp confident forms, subtle gouache/print texture, strong natural light and rich but restrained colors. Landscape 4:3 composition. Contemporary editorial art for adults; beautiful and thoughtful, not cartoonish, no faces, no people, no scales of justice, no lettering, no logos, no watermark. Objects should fill the frame with almost no decorative blank space. This is a conceptual illustration, not a depiction of a documented event. Subject: geographic information systems work at a local council. Close-up oblique view of a monitor showing a generalized aerial patchwork of green and gray city blocks and a coastline, with a small paper map and a computer mouse on the desk. Restrained slate blue, moss and cream. No recognizable real location, no labels or text, no prison plans, no maps presented as accurate geographic evidence. The monitor and patchwork image are the focus."
+    }
+  ]
+}
