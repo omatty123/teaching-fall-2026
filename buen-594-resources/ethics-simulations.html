@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Ethics simulations · BUEN 594</title>
+<meta name="description" content="Use CLEAR to examine an ethical situation. Choose an action, predict possible consequences, and reconsider when new information arrives.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-simulations.html">
+<meta property="og:title" content="Ethics simulations · BUEN 594">
+<meta property="og:description" content="Check facts. Listen to people. Examine obligations. Anticipate outcomes. Respond and review.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-simulations.html">
+<meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-assets/scholarship.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="ethics-assets/simulations.css">
+</head>
+<body>
+<a class="skip" href="#simulation">Skip to the simulation</a>
+<main>
+<nav class="breadcrumbs" aria-label="Course resources"><a href="../courses/buen-594.html">BUEN 594</a><a href="internship-ethics-cases.html">Published ethics cases</a><a href="#clear">CLEAR guide</a></nav>
+<header>
+<h1>Ethics simulations</h1>
+<p class="definition">Ethics asks how we should act, what we owe others, and who we become.</p>
+<p class="intro">Choose an action. Predict possible consequences. Reconsider when new information arrives. <a href="#simulation">Start a simulation</a>.</p>
+</header>
+<section class="clear-guide" id="clear" aria-labelledby="clear-title">
+<h2 id="clear-title">Examine the situation with CLEAR</h2>
+<ol class="clear-steps">
+<li><strong><span>C</span>Check facts</strong><p>Separate evidence from assumptions. Identify what you still need to know.</p></li>
+<li><strong><span>L</span>Listen to people</strong><p>Notice feelings, including your own. Check interpretations and differences in power.</p></li>
+<li><strong><span>E</span>Examine obligations</strong><p>Consider honesty, fairness, care, rights, and commitments. Repeated choices also shape character.</p></li>
+<li><strong><span>A</span>Anticipate outcomes</strong><p>Consider immediate and later effects, alternatives, and uncertainty.</p></li>
+<li><strong><span>R</span>Respond and review</strong><p>Act with reasons and support. Observe the results, then revise or repair.</p></li>
+</ol>
+</section>
+<div class="workbench">
+<aside class="scenario-index" aria-labelledby="scenario-index-title">
+<h2 id="scenario-index-title">Choose a situation</h2>
+<div id="scenario-list" class="scenario-list" role="group" aria-label="Scenarios"></div>
+<p class="small">These situations and outcomes are fictional. They do not describe particular students or workplaces.</p>
+<p class="small">Your notes stay in this page. Switching situations keeps them; reloading clears them. Nothing is submitted.</p>
+</aside>
+<section id="simulation" class="simulation" aria-labelledby="scenario-title">
+<p id="startup">The scenario controls are loading. If they do not appear, reload this page.</p>
+<noscript><p>JavaScript is needed for the choices and outcome reveals. The CLEAR guide and <a href="internship-ethics-cases.html">published cases</a> remain available.</p></noscript>
+<div id="activity" hidden>
+<ol class="progress" aria-label="Simulation stages"><li id="step-choose" aria-current="step">1 · Choose</li><li id="step-predict">2 · Predict</li><li id="step-review">3 · Compare and revise</li></ol>
+<p id="scenario-field" class="field"></p>
+<h2 id="scenario-title" tabindex="-1"></h2>
+<p id="scenario-role" class="role"></p>
+<div id="scenario-setup" class="prose"></div>
+<div class="evidence-columns"><section><h3>Known facts</h3><ul id="scenario-facts"></ul></section><section><h3>Still uncertain</h3><ul id="scenario-unknowns"></ul></section></div>
+<details class="people"><summary>People, feelings, and pressure</summary><ul id="scenario-people"></ul><p class="small">A possible feeling is an interpretation to check, not a fact about someone’s motives.</p></details>
+<fieldset id="choice-fieldset"><legend>Choose an initial action</legend><div id="choices"></div></fieldset>
+<form id="prediction-form">
+<h3>Predict before you reveal</h3>
+<p id="prediction-help" class="small">Choose an action and write both predictions to compare possible outcomes.</p>
+<label for="likely">Your most likely next outcome <span>(required)</span></label>
+<textarea id="likely" rows="2" maxlength="1200" required placeholder="Predict what happens soon and who is affected." disabled></textarea>
+<label for="alternative">A plausible alternative or later consequence <span>(required)</span></label>
+<textarea id="alternative" rows="2" maxlength="1200" required placeholder="Describe another response or an effect that takes longer." disabled></textarea>
+<label for="check">One feeling, obligation, or assumption to check <span>(optional)</span></label>
+<textarea id="check" rows="2" maxlength="1200" placeholder="Name something that could influence your judgment." disabled></textarea>
+<button id="reveal" class="primary" type="submit" disabled>Compare possible outcomes</button>
+</form>
+<section id="results" class="results" aria-labelledby="results-title" hidden>
+<h3 id="results-title" tabindex="-1">Compare your prediction</h3>
+<p id="chosen-action" class="chosen-action"></p>
+<div class="your-predictions"><div><h4>Your most likely outcome</h4><p id="predicted-likely"></p></div><div><h4>Your alternative or later consequence</h4><p id="predicted-alternative"></p></div></div>
+<p id="predicted-check" class="small"></p>
+<button id="edit-predictions" type="button" class="text-button">Revise your predictions</button>
+<h4>Two possible outcomes</h4>
+<p class="small">These are authored possibilities, not forecasts or a ranking of your character. Other outcomes are possible.</p>
+<div id="outcomes" class="outcomes"></div>
+<h4>Examine the obligations</h4><p id="analysis" class="prose"></p>
+<section class="new-information"><h4>Continue with a new development</h4><p class="small">The examples above are possibilities, not events that have occurred. For this next decision, assume the event below occurs.</p><p id="new-information" class="prose"></p></section>
+<fieldset><legend>Respond to the new information</legend><div id="followups"></div></fieldset>
+<section id="debrief" class="debrief" aria-labelledby="debrief-title" hidden><h4 id="debrief-title" tabindex="-1">Review your response</h4><p id="feedback" class="prose"></p><p class="small">Use CLEAR again: identify evidence to check, a person to hear, an obligation to protect, and a consequence to monitor. Repeating this response would also strengthen a habit.</p></section>
+<button id="another-action" type="button" class="secondary">Compare another initial action</button>
+</section>
+<div class="activity-footer"><button id="clear-scenario" type="button" class="text-button">Clear this scenario’s notes</button><span id="status" role="status" aria-live="polite"></span></div>
+</div>
+</section>
+</div>
+<footer>
+<details><summary>About CLEAR and these simulations</summary><p>CLEAR is a course mnemonic created for these exercises. It combines ethical scrutiny with emotional awareness and attention to possible consequences. It is not a validated assessment or a method for assigning an ethics score.</p><p>Background: <a href="https://www.scu.edu/ethics/ethics-resources/a-framework-for-ethical-decision-making/">Markkula Center’s framework for ethical decision-making</a> and <a href="https://rulerapproach.org/about/what-is-ruler/">RULER’s overview of emotional-intelligence skills</a>. The scenarios, choices, and outcome paths are original teaching fiction.</p></details>
+<a href="internship-ethics-cases.html">Return to the published cases</a>
+</footer>
+</main>
+<script type="module" src="ethics-assets/simulations.mjs"></script>
+</body>
+</html>
