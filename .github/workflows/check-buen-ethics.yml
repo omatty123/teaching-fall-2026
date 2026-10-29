@@ -1,0 +1,25 @@
+name: Check BUEN student ethics cases
+on:
+  push:
+    paths:
+      - 'buen-594-resources/internship-ethics-cases.html'
+      - 'data/buen-594.json'
+      - 'courses/buen-594.html'
+      - 'scripts/check-buen-ethics.py'
+      - '.github/workflows/check-buen-ethics.yml'
+  pull_request:
+    paths:
+      - 'buen-594-resources/internship-ethics-cases.html'
+      - 'data/buen-594.json'
+      - 'courses/buen-594.html'
+      - 'scripts/check-buen-ethics.py'
+      - '.github/workflows/check-buen-ethics.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check student content, sources, and navigation
+        run: python3 scripts/check-buen-ethics.py

@@ -102,5 +102,12 @@
       "date": "2026-11-17",
       "topic": "How do I enter an internship ready to learn?"
     }
+  ],
+  "readingGuides": [
+    {
+      "label": "Internship ethics cases",
+      "description": "Full Disclosure, Scholarship Application, and a GIS internship account.",
+      "href": "../buen-594-resources/internship-ethics-cases.html"
+    }
   ]
 }
