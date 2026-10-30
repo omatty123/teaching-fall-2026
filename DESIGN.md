@@ -387,3 +387,5 @@ The chapter page uses four selectable Leaflet maps with local NaturalEarth geome
 The detector ran once. Existing compact type and palette were retained to match the earlier guide. Its tight-leading flags do not match the rendered body typography. Author rules were reduced to 1px. Desktop 1280px and mobile 390px review corrected a narrow mobile caption/header and missing contextual coastlines. Geographic regression checks require Canada, Ireland, Italy, and North African countries in the appropriate data layers.
 
 Independent finish review: no blocking findings remain after the coastline corrections.
+
+The author introductions now pair the historical portraits of Equiano and Omar ibn Said. Omar’s original Arabic manuscript remains in its own linked section below the comparison. The portrait is the unchanged Yale collection image, with approximate date and attribution; desktop and phone review passed.

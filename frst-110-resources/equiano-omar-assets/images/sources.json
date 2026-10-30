@@ -18,5 +18,27 @@
     "reproduction_note": "Downloaded the Library of Congress full-resolution JPEG unchanged. No crop, enhancement, or generated image.",
     "retrieved": "2026-10-30",
     "sha256": "86913d22262a2e34a09fa6e8f0a437cf90b4498c39f130eb3f01109b4ce266fe"
+  },
+  {
+    "file": "omar-ibn-said-portrait-ca1850.jpg",
+    "title": "Half-length formal portrait of “Uncle Moreau” [Omar ibn Said]",
+    "creator": "Unknown photographer",
+    "date": "circa 1850",
+    "medium": "Ambrotype (photographic positive on glass), in a case",
+    "collection": "Beinecke Rare Book & Manuscript Library, Yale University; Randolph Linsly Simpson African-American Collection",
+    "object_number": "Yale catalog 2002060; image 1009308; JWJ MSS 54",
+    "record_url": "https://collections.library.yale.edu/catalog/2002060",
+    "identity_verification_url": "https://library.yale.edu/news/portrait-library-collection-featured-lavish-pulitzer-prize-winning-opera-omar",
+    "secondary_institutional_identification_url": "https://www.loc.gov/collections/omar-ibn-said-collection/about-this-collection/",
+    "image_url": "https://collections.library.yale.edu/iiif/2/1009308/full/full/0/default.jpg",
+    "image_info_url": "https://collections.library.yale.edu/iiif/2/1009308/info.json",
+    "rights": "Public-domain historical photograph; Yale open-access digital reproduction. Unknown photographer, circa 1850.",
+    "rights_url": "https://www.library.yale.edu/policies/reuse",
+    "width": 2529,
+    "height": 2825,
+    "alt": "Historical photographic portrait of Omar ibn Said seated in a suit and headwrap, holding a cane, within the original decorative case.",
+    "reproduction_note": "Original full-size JPEG from Yale’s IIIF service, downloaded unchanged. No crop, retouching, colorization, enhancement, or generated image. Not the restored and colorized Wikimedia derivative.",
+    "retrieved": "2026-10-30",
+    "sha256": "cb182a9d9ee032e5c8e39980cea67c85dbfb1c958f66956d9439cee85fd6e82b"
   }
 ]

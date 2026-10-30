@@ -15,7 +15,7 @@ class Page(HTMLParser):
   if tag=='img':self.images.append(a)
   if tag=='button' and a.get('data-view'):self.controls.append(a['data-view'])
  def handle_data(self,s):self.text.append(s)
-checks=[('equiano-chapters-3-4.html','build-equiano-3-4.py',{'maps','chapter-three','chapter-four','water','context','vocabulary','images','sources'}),('equiano-and-omar-ibn-said.html','build-equiano-omar.py',{'works','comparison','reading-links','sources'})]
+checks=[('equiano-chapters-3-4.html','build-equiano-3-4.py',{'maps','chapter-three','chapter-four','water','context','vocabulary','images','sources'}),('equiano-and-omar-ibn-said.html','build-equiano-omar.py',{'works','comparison','manuscript','reading-links','sources'})]
 urls=[]
 for name,builder,ids in checks:
  p=ROOT/'frst-110-resources'/name;s=p.read_text();c=Page();c.feed(s)
@@ -33,6 +33,7 @@ for name,builder,ids in checks:
  if name.startswith('equiano-chapters'):
   assert len(c.controls)==4 and len(set(c.controls))==4,'Four distinct map views required'
  else:
+  assert len(c.images)==3,'Both portraits and the Arabic manuscript image are required'
   assert 'data-label="Equiano"' in s and 'data-label="Omar ibn Said"' in s,'Mobile comparison labels required'
  urls.append('https://omatty123.github.io/teaching-fall-2026/frst-110-resources/'+name)
 for folder in ('equiano-3-4-assets','equiano-omar-assets'):

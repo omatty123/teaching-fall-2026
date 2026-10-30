@@ -5,7 +5,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / 'frst-110-resources/equiano-omar-assets'
 def render():
     text = (ASSETS / 'page.template.html').read_text()
-    for token, name in [('COMPARISON','comparison.fragment.html'), ('OMAR_IMAGE','images/visual.fragment.html')]:
+    for token, name in [('COMPARISON','comparison.fragment.html'), ('OMAR_IMAGE','images/visual.fragment.html'), ('OMAR_PORTRAIT','images/portrait.fragment.html')]:
         text = text.replace('{{' + token + '}}', (ASSETS / name).read_text())
     return text
 if __name__ == '__main__':
