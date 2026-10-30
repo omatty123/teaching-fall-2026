@@ -5,47 +5,58 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Writing Page · FRST 110</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f4f8a'/%3E%3Cpath d='M5 23c3.5 0 3.5-3 7-3s3.5 3 7 3 3.5-3 7-3' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M9 12l4 4 9-9' fill='none' stroke='%23e2bd5f' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<meta name="description" content="The Writing Page for FRST 110: intro, body, transitions, conclusion, sentences, and quotations, with examples from your own papers.">
+<meta name="description" content="The Writing Page for FRST 110: the biggest gains first, then intro, body, transitions, conclusion, and polish, with examples from your own papers.">
 <meta property="og:title" content="The Writing Page · FRST 110">
-<meta property="og:description" content="The Writing Page for FRST 110: intro, body, transitions, conclusion, sentences, and quotations, with examples from your own papers.">
+<meta property="og:description" content="The Writing Page for FRST 110: the biggest gains first, then intro, body, transitions, conclusion, and polish, with examples from your own papers.">
 <meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst-110-banner.jpg">
 <meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/writing.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Writing Page · FRST 110">
-<meta name="twitter:description" content="The Writing Page for FRST 110: intro, body, transitions, conclusion, sentences, and quotations, with examples from your own papers.">
+<meta name="twitter:description" content="The Writing Page for FRST 110: the biggest gains first, then intro, body, transitions, conclusion, and polish, with examples from your own papers.">
 <meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst-110-banner.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:light;--bg:#fff;--ink:#141413;--ink-2:#5c5a55;--rule:#e2dfd8;--blue:#1f4f8a;--red:#b3261e;--green:#0b6e2f;--pale:#f5f3ee;--hi:#fde68a}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 Inter,-apple-system,"Segoe UI",Arial,sans-serif}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.45 Inter,-apple-system,"Segoe UI",Arial,sans-serif;overflow-wrap:break-word}
 .crumb{font:600 14px/1.4 Inter,Arial,sans-serif;padding:10px 16px;border-bottom:1px solid var(--rule)}
 .crumb a{color:var(--blue)}
 .wrap{max-width:980px;margin:0 auto;padding:28px 16px 40px}
-h1{margin:0 0 20px;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;font-weight:800;letter-spacing:-.02em}
-.row{display:grid;grid-template-columns:240px 1fr;gap:26px;align-items:center;padding:20px 0;border-top:2px solid var(--ink)}
+h1{margin:0 0 16px;font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.1;font-weight:800;letter-spacing:-.02em}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.jump a{font-weight:700;font-size:.95rem;color:var(--blue);text-decoration:none;border:1.5px solid var(--blue);border-radius:999px;padding:4px 12px}
+.jump a.top{background:var(--blue);color:#fff}
+.gains{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 8px}
+.gain{display:block;background:var(--pale);border-top:5px solid var(--blue);border-radius:4px 4px 14px 14px;padding:14px 16px 16px;color:var(--ink);text-decoration:none}
+.gain .k{display:block;font-size:2.2rem;font-weight:900;line-height:1;color:var(--blue)}
+.gain b{display:block;margin:6px 0 4px;font-size:1.2rem;line-height:1.2;font-weight:900}
+.gain span.t{display:block;color:var(--ink-2);font-size:.95rem}
+.gain span.go{display:block;margin-top:8px;font-weight:700;font-size:.9rem;color:var(--blue)}
+.part{margin:46px 0 0;scroll-margin-top:12px}
+.part h2{margin:0;font-size:clamp(1.9rem,4vw,2.5rem);line-height:1.05;font-weight:900;letter-spacing:-.02em;color:var(--blue)}
+.part .job{margin:6px 0 14px;font-size:1.15rem;font-weight:600}
+.row{display:grid;grid-template-columns:240px 1fr;gap:26px;align-items:start;padding:20px 0;border-top:3px solid var(--blue)}
 .row h3{margin:0;font-size:1.7rem;line-height:1.1;font-weight:900;letter-spacing:-.02em}
-.row h3 .n{color:var(--blue);margin-right:.3em}
-.row h3 small{display:block;margin-top:8px;font-size:1rem;font-weight:500;color:var(--ink-2);letter-spacing:0}
+.row h3 small,.move small{display:block;margin-top:8px;font-size:1rem;font-weight:500;color:var(--ink-2);letter-spacing:0}
 .show{background:var(--pale);border-radius:14px;padding:20px 22px}
 .pair{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
 .arrow{font-size:1.6rem;color:var(--blue);font-weight:900}
 .lab{display:block;font-size:.78rem;font-weight:800;letter-spacing:.14em;margin-bottom:6px;color:var(--ink-2)}
 .was{color:var(--ink-2)}
 .was s{text-decoration:none;display:block;padding-left:10px;border-left:4px solid var(--red)}
-.now{font-size:1.25rem;font-weight:800;line-height:1.3}
+.now{font-size:1.2rem;font-weight:800;line-height:1.3}
 mark{background:var(--hi);padding:0 3px;border-radius:3px}
-.mantra{margin:8px 0 0;padding-top:14px;border-top:2px solid var(--ink);font-size:1.1rem;font-weight:800}
-.foot{margin-top:12px;color:var(--ink-2);font-size:.82rem}
 .row>*,.pair>*{min-width:0}
-.stack .kind{padding:4px 0 14px;border-bottom:1px solid #e2dfd8;margin-bottom:12px}
+.stack .kind{padding:4px 0 14px;border-bottom:1px solid var(--rule);margin-bottom:12px}
 .stack .kind:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
 .brand{display:inline-block;background:var(--ink);color:#fff;font-weight:800;font-size:.85rem;padding:3px 10px;border-radius:999px;margin-right:8px}
-.what{color:var(--ink-2);font-size:.95rem}
+.what{color:var(--ink-2);font-size:.95rem;margin:8px 0 0}
+.what a{color:var(--blue)}
 .stack .pair{margin-top:10px}
-.stack .now{font-size:1.1rem}
+.stack .now{font-size:1.08rem}
+.good{margin:10px 0 6px;padding-left:12px;border-left:4px solid var(--green);font-size:1.05rem;font-weight:600;line-height:1.45}
 .first .pair{grid-template-columns:1.25fr auto 1fr}
 .pics{margin-bottom:16px}
 .pages{display:flex;gap:8px}
@@ -58,46 +69,39 @@ mark{background:var(--hi);padding:0 3px;border-radius:3px}
 .bits{list-style:none;margin:0;padding:0;font-size:.92rem;color:var(--ink-2)}
 .bits li{margin:0 0 7px;padding-left:26px;position:relative}
 .bits li b{position:absolute;left:0;top:1px;width:18px;height:18px;border-radius:50%;background:var(--blue);color:#fff;font-size:.66rem;line-height:18px;text-align:center}
-body{overflow-wrap:break-word}
-@media (max-width:760px){.row{grid-template-columns:1fr;gap:14px}.pair,.first .pair{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}}
 .re{color:var(--ink);font-weight:600;font-size:.95rem}
-.good{margin:10px 0 6px;padding-left:12px;border-left:4px solid var(--green);font-size:1.08rem;font-weight:600;line-height:1.45}
-.jump{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
-.jump a{font-weight:700;font-size:.95rem;color:var(--blue);text-decoration:none;border:1.5px solid var(--blue);border-radius:999px;padding:4px 12px}
-.group{margin:30px 0 0;font-size:1rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);scroll-margin-top:12px}
-.group+.row{border-top:2px solid var(--ink)}
+.move{border-top:1px solid var(--rule)}
+.move>summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:28px 1fr;gap:6px;padding:14px 0}
+.move>summary::-webkit-details-marker{display:none}
+.move>summary::before{content:"+";font-size:1.5rem;font-weight:900;color:var(--blue);line-height:1}
+.move[open]>summary::before{content:"\2212"}
+.move>summary b{font-size:1.25rem;font-weight:900;letter-spacing:-.01em;line-height:1.15}
+.move>summary small{grid-column:2;margin-top:2px}
+.move>.show{margin:0 0 18px 34px;padding:14px 18px}
+.sub{margin:26px 0 0;font-size:1rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.mantra{margin:40px 0 0;padding-top:14px;border-top:2px solid var(--ink);font-size:1.1rem;font-weight:800}
+.foot{margin-top:12px;color:var(--ink-2);font-size:.82rem}
+@media (max-width:900px){.row{grid-template-columns:1fr;gap:14px}.pair,.first .pair{grid-template-columns:1fr}.arrow{transform:rotate(90deg);justify-self:center}.gains{grid-template-columns:1fr}.move>.show{margin-left:0}}
 </style>
 </head>
 <body>
 <nav class="crumb" aria-label="Breadcrumb"><a href="../courses/frst-110.html">&larr; Back to FRST 110</a></nav>
 <main class="wrap">
 <h1>The Writing Page</h1>
-<nav class="jump" aria-label="Sections"><a href="#intro">Intro</a><a href="#body">Body</a><a href="#transitions">Transitions</a><a href="#conclusion">Conclusion</a><a href="#sentences">Sentences</a><a href="#quotations">Quotations</a></nav>
-<h2 class="group" id="intro">Intro</h2>
+<nav class="jump" aria-label="Sections"><a class="top" href="#gains">Biggest gains</a><a href="#intro">Intro</a><a href="#body">Body</a><a href="#transitions">Transitions</a><a href="#conclusion">Conclusion</a><a href="#polish">Polish</a></nav>
 
-<section class="row">
-<h3><span class="n">1</span>Give your title a second half.<small>The title should tell us what&rsquo;s coming.</small></h3>
-<div class="show stack">
-<div class="kind"><div class="was"><s>Failure</s></div></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">A Disaster Within a Disaster: The Forgotten People of Katrina</p></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">The Visible and Invisible: How Humanity Reacts to Divinity During Disaster</p></div>
+<section id="gains" aria-label="Biggest gains">
+<div class="gains">
+<a class="gain" href="#intro"><span class="k">1</span><b>Put your best idea in the thesis.</b><span class="t">Your strongest sentence is often on page 3. Move it to page 1.</span><span class="go">Intro &darr;</span></a>
+<a class="gain" href="#transitions"><span class="k">2</span><b>Make each paragraph build on the last.</b><span class="t">Tell us how the next point grows out of the one before.</span><span class="go">Transitions &darr;</span></a>
+<a class="gain" href="#conclusion"><span class="k">3</span><b>Say what follows, here and now.</b><span class="t">If your thesis is true, something follows. End there.</span><span class="go">Conclusion &darr;</span></a>
 </div>
 </section>
 
-<section class="row">
-<h3><span class="n">2</span>Frame the start.<small>Before your first claim, give us one sentence that eases us into the story.</small></h3>
-<div class="show">
-<div class="pair">
-<div class="was"><span class="lab">NO FRAME</span>&ldquo;Patricia Smith, through the medium of poetry, writes about the many displaced and abandoned citizens of New Orleans&hellip;&rdquo;</div>
-<div class="arrow">&rarr;</div>
-<div class="now"><span class="lab">ONE FRAME SENTENCE</span><mark>In the days after Katrina, Ethel Freeman waited in her wheelchair outside the New Orleans Convention Center for help that never came.</mark> Patricia Smith, through the medium of poetry, writes about the many displaced and abandoned citizens of New Orleans&hellip;</div>
-</div>
-<p class="what">We meet a person before we meet an argument.</p>
-</div>
-</section>
+<header class="part" id="intro"><h2>Intro</h2><p class="job">Bring us in, then tell us what you&rsquo;re arguing.</p></header>
 
 <section class="row first">
-<h3><span class="n">3</span>Don't bury the lede.<small>The lede is your main point. Don't scatter it. Gather it up front.</small></h3>
+<h3>Don't bury the lede.<small>The lede is your main point. Don't scatter it. Gather it up front.</small></h3>
 <div class="show">
 <div class="pair pics">
 <div><span class="lab">ONE DRAFT, THREE PAGES</span><div class="pages"><div class="pg"><span class="y"><b>1</b></span><span></span><span class="y"><b>2</b></span><span></span><span></span><span class="s"></span><span></span><span></span><span class="s"></span></div><div class="pg"><span></span><span></span><span class="s"></span><span></span><span></span><span class="s"></span><span class="y"><b>3</b></span><span></span><span class="s"></span></div><div class="pg"><span></span><span></span><span class="s"></span><span></span><span class="y"><b>4</b></span><span class="s"></span><span></span><span></span><span class="s"></span></div></div></div>
@@ -112,92 +116,124 @@ body{overflow-wrap:break-word}
 <li><b>4</b>could have been lessened had there been proper planning and action.</li>
 </ol>
 <div class="arrow">&rarr;</div>
-<div class="now"><span class="lab">ONE THESIS, UP FRONT</span>Egan's lakes were wrecked by ignorance and Smith's New Orleans by neglect, and the difference matters: better planning can prevent the first, but only holding people accountable can prevent the second.</div>
+<div class="now"><span class="lab">ONE THESIS, UP FRONT</span>In Egan, the damage starts with ignorance and grows while governments sit on what they learn. In Smith, the people in charge knew from the start. Planning can fix the first. Only accountability reaches the second.</div>
 </div>
 </div>
 </section>
 
-<h2 class="group" id="body">Body</h2>
+<details class="move">
+<summary><b>Frame the start.</b><small>When your paper begins with a person or a place, one sentence can bring us in before your first claim.</small></summary>
+<div class="show">
+<div class="pair">
+<div class="was"><span class="lab">NO FRAME</span>&ldquo;Patricia Smith, through the medium of poetry, writes about the many displaced and abandoned citizens of New Orleans&hellip;&rdquo;</div>
+<div class="arrow">&rarr;</div>
+<div class="now"><span class="lab">ONE FRAME SENTENCE</span><mark>In the days after Katrina, Ethel Freeman waited in her wheelchair outside the New Orleans Convention Center for help that never came.</mark> Patricia Smith, through the medium of poetry, writes about the many displaced and abandoned citizens of New Orleans&hellip;</div>
+</div>
+<p class="what">We meet a person before we meet an argument.</p>
+</div>
+</details>
 
-<section class="row">
-<h3><span class="n">4</span>Let the two works differ.<small>Read each one fairly. Don&rsquo;t bend the older text until it matches Katrina. The differences are where the synthesis happens.</small></h3>
+<details class="move">
+<summary><b>Give your title a second half.</b><small>A one-word title names the topic. A second half names your argument.</small></summary>
 <div class="show stack">
-<div class="kind"><div class="was"><s>In the book of Genesis an entire group of people were attacked because of some people&rsquo;s wickedness.</s></div><p class="what">Genesis says &ldquo;all flesh had corrupted its ways upon the earth&rdquo; (6:12). Everyone, not some.</p></div>
-<div class="kind"><div class="was"><s>Gilgamesh acts as a representation of the average human</s></div><p class="what">He&rsquo;s a king, and that&rsquo;s why his failure lands.</p></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">&ldquo;While Egan points to the degradation of the Great Lakes as a matter of misled and uninformed actions, Smith describes the suffering in New Orleans as blatant dismissal and neglect of the people.&rdquo;</p></div>
+<div class="kind"><div class="was"><s>Failure</s></div></div>
+<div class="kind"><span class="lab">STRONGER</span><p class="good">A Disaster Within a Disaster: The Forgotten People of Katrina</p><p class="good">The Visible and Invisible: How Humanity Reacts to Divinity During Disaster</p></div>
+</div>
+</details>
+
+<header class="part" id="body"><h2>Body</h2><p class="job">Prove it, with both works read fairly and every claim backed up.</p></header>
+
+<section class="row">
+<h3>Let the two works differ.<small>The differences are where the synthesis happens. Don&rsquo;t bend one work until it matches the other.</small></h3>
+<div class="show stack">
+<div class="kind"><span class="brand">Bent to match</span>
+<div class="pair"><div class="was"><s>Both works provide direct, concise orders to evacuate, but the speakers are still met with hesitation and disregard.</s></div><div class="arrow">&rarr;</div><div class="now">Noah&rsquo;s people could act and refused. Smith&rsquo;s people heard the warning and had no way out: &ldquo;Like our bodies got wheels and gas&rdquo; (Smith 7).</div></div></div>
+<div class="kind"><span class="brand">The difference is the argument</span>
+<p class="good">&ldquo;Through personification, Egan presents water as a witness to human history and a graveyard for its consequences, while Smith depicts it as an unpredictable force that exposes human vulnerability.&rdquo;</p>
+<p class="what">Witness against force. Now there&rsquo;s something to argue about.</p></div>
 </div>
 </section>
 
-<section class="row">
-<h3><span class="n">5</span>Name who is speaking.<small>Smith writes in many voices: the storm, the Superdome, the president, people left behind. The poet isn&rsquo;t the speaker, and one speaker isn&rsquo;t all of them.</small></h3>
+<details class="move">
+<summary><b>Use more of your evidence.</b><small>One poem against one song is thin. The rest of the book often makes your point for you.</small></summary>
+<div class="show">
+<div class="pair"><div class="was"><s>For example, President Bush flew over the aftermath and floods, in the presidential aircraft while he could have been in office working on these issues instead of just viewing the horrors.</s></div><div class="arrow">&rarr;</div><div class="now">Smith puts us in his seat. In &ldquo;The President Flies Over,&rdquo; he says, &ldquo;I don&rsquo;t ever have to come down&rdquo; (Smith 36).</div></div>
+<p class="what">The paper had the point and left the poem that proves it on the shelf.</p>
+</div>
+</details>
+
+<details class="move">
+<summary><b>Name who is speaking.</b><small>Smith writes in many voices: the storm, the Superdome, the president, people left behind. The poet isn&rsquo;t the speaker, and one speaker isn&rsquo;t all of them.</small></summary>
 <div class="show stack">
 <div class="kind"><div class="was"><s>Patricia Smith (&ldquo;Man on the TV Say&rdquo;) and Charley Patton (&ldquo;High Water Everywhere, Part 1&rdquo;) both cannot leave.</s></div><p class="what">The poet and the singer aren&rsquo;t stuck; the people in their works are.</p></div>
-<div class="kind"><div class="was"><s>Marty continues on 26 saying &ldquo;tell them it&rsquo;s God&rdquo;.</s></div><p class="what">That line sits with the officials&rsquo; voice in &ldquo;What to Tweak,&rdquo; not Marty&rsquo;s.</p></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">&ldquo;Giving the storm a mind allows some of the blame to shift onto the storm itself, because the chaos created was due to the mind of the storm, rather than the Lord wanting to punish the people of Louisiana.&rdquo;</p></div>
+<div class="kind"><span class="lab">STRONGER</span><p class="good">&ldquo;Within the poem &lsquo;Ethel&rsquo;s Sestina&rsquo;, Patricia Smith uses the perspective of Ethel in which she writes, &lsquo;I trust his every word. Herbert my son.&rsquo;&rdquo;</p><p class="what">Smith writes the poem. Ethel speaks it. This writer keeps them apart.</p></div>
 </div>
-</section>
+</details>
 
-<section class="row">
-<h3><span class="n">6</span>Use more of your evidence.<small>One poem against one song is thin. The rest of the book often makes your point for you.</small></h3>
-<div class="show stack">
-<div class="kind"><div class="was"><s>One paper criticized the president&rsquo;s flyover and never used Smith&rsquo;s poem about it, &ldquo;The President Flies Over&rdquo; (36).</s></div></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">Another set Ethel Freeman&rsquo;s sestina beside the residents of St. Rita&rsquo;s nursing home, then brought in a second blues song.</p></div>
-</div>
-</section>
-
-<section class="row">
-<h3><span class="n">7</span>Back up big claims. Don&rsquo;t overstate.<small>Claims about the world need evidence, and they need limits.</small></h3>
+<details class="move">
+<summary><b>Back up big claims. Don&rsquo;t overstate.</b><small>Claims about the world need evidence, and they need limits.</small></summary>
 <div class="show stack">
 <div class="kind"><div class="was"><s>This was something commonly heard among these communities.</s></div><p class="what">Name your source, or cut the claim.</p></div>
-<div class="kind"><div class="was"><s>Hurricane Katrina destroyed the city of New Orleans in 2005.</s></div><p class="what">Much of the city, not all of it.</p></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">&ldquo;Despite warnings about the potential threat, &lsquo;The U.S. and Canadian governments did nothing with the information&rsquo; (Egan 113).&rdquo;</p></div>
+<div class="kind"><div class="pair"><div class="was"><s>Hurricane Katrina destroyed the city of New Orleans in 2005.</s></div><div class="arrow">&rarr;</div><div class="now">By August 31, 2005, about 80 percent of New Orleans was under water.</div></div><p class="what">The number is stronger than the exaggeration. Source: <a href="https://en.wikipedia.org/wiki/Effects_of_Hurricane_Katrina_in_New_Orleans">Effects of Hurricane Katrina in New Orleans</a>.</p></div>
 </div>
-</section>
+</details>
 
-<section class="row">
-<h3><span class="n">8</span>Hedge the link, not the fact.<small>&ldquo;Ma laoshi, you say hedge, then you say don&rsquo;t hedge!&rdquo; Both. Here&rsquo;s when.</small></h3>
+<details class="move">
+<summary><b>Hedge the link, not the fact.</b><small>&ldquo;Ma laoshi, you say hedge, then you say don&rsquo;t hedge!&rdquo; Both. Here&rsquo;s when.</small></summary>
 <div class="show stack">
-<div class="kind"><span class="brand">Hedge the link</span><span class="what">"Show" claims a direct connection with no gap, one nobody could see any other way. Putting two works together is your move, so "suggest" or "seem to show."</span>
+<div class="kind"><span class="brand">Hedge the link</span><span class="what">&ldquo;Show&rdquo; claims the connection is plain to anyone. Putting two works together is your move, so &ldquo;suggest&rdquo; or &ldquo;seem to show.&rdquo;</span>
 <div class="pair"><div class="was"><s>When these sources are read together, they show how the United States government takes priority of one social class over the other&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">Read together, these sources suggest that the government puts one social class ahead of another.</div></div></div>
-<div class="kind"><span class="brand">Don't hedge the fact</span><span class="what">When the text or the record says it plainly, say it plainly. "Probably," "may have," and "perhaps" make you sound unsure of what you know.</span>
-<div class="pair"><div class="was"><s>The United States government received heavy backlash after the events of Hurricane Katrina, probably because of the low effort recovery plan&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">The government took heavy backlash after Katrina because its recovery effort left people like Ethel to die.</div></div></div>
+<div class="kind"><span class="brand">Don't hedge the fact</span><span class="what">When the record says it plainly, say it plainly. &ldquo;Probably&rdquo; makes you sound unsure of what you know.</span>
+<div class="pair"><div class="was"><s>The United States government received heavy backlash after the events of Hurricane Katrina, probably because of the low effort recovery plan&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">The government took heavy backlash for its slow response. Ethel Freeman died in her wheelchair outside the Convention Center, waiting for help.</div></div></div>
 </div>
-</section>
+</details>
 
-<section class="row">
-<h3><span class="n">9</span>Bring your reader along.<small>Your reader is a companion who wants a good story while they learn something. Walk them through it.</small></h3>
+<details class="move">
+<summary><b>Bring your reader along.</b><small>Your reader is a companion who wants a good story while they learn something. Walk them through it.</small></summary>
 <div class="show stack">
 <div class="kind"><span class="brand">Make a claim, then turn it</span>
 <p class="good">&ldquo;Patricia Smith&rsquo;s Blood Dazzler is an angry book. &hellip; This anger is grief. It burns and burns from a well of anguish, forcing the reader to feel its rage and sadness.&rdquo;</p>
-<p class="what">A blunt claim, then four words that turn it: "This anger is grief." We feel the turn with her.</p></div>
+<p class="what">A blunt claim, then four words that turn it: &ldquo;This anger is grief.&rdquo; We feel the turn with her.</p></div>
 <div class="kind"><span class="brand">Take the second look together</span>
 <p class="good">&ldquo;At first glance, this passage is only about wealthy individuals ignoring a lower-class man with a following mostly of poor people, but it also touches on the complex relationship between humans and the divine.&rdquo;</p>
-<p class="what">"At first glance" admits what we'd all see first, then leads us somewhere deeper.</p></div>
+<p class="what">&ldquo;At first glance&rdquo; admits what we&rsquo;d all see first, then leads us somewhere deeper.</p></div>
+</div>
+</details>
+
+<header class="part" id="transitions"><h2>Transitions</h2><p class="job">Every paragraph builds on the one before it.</p></header>
+
+<section class="row">
+<h3>Make transitions build.<small>The first sentence of a paragraph tells us how it grows out of the last one.</small></h3>
+<div class="show">
+<span class="lab">END OF ONE PARAGRAPH</span>
+<p class="was">&ldquo;Here he is mocking the government and president George W. Bush for creating this narrative that this storm was God&rsquo;s doing, when in reality the Government is the real one to have abandoned them.&rdquo;</p>
+<div class="pair"><div class="was"><span class="lab">START OF THE NEXT</span><s>Another time when abandonment occurs in Blood Dazzler is in the poem 34.</s></div><div class="arrow">&rarr;</div><div class="now"><span class="lab">BUILT ON IT</span>In &ldquo;34,&rdquo; the abandonment comes closer. This time it&rsquo;s the caretakers who leave, and thirty-four people drown (Smith 50).</div></div>
+<p class="what">&ldquo;Another&rdquo; adds the next item. &ldquo;Comes closer&rdquo; tells us why this one matters more.</p>
 </div>
 </section>
 
-<h2 class="group" id="transitions">Transitions</h2>
+<details class="move">
+<summary><b>Only promise a contrast you deliver.</b><small>&ldquo;On the other hand&rdquo; promises the opposite. If the next point isn&rsquo;t one, it&rsquo;s just the next item.</small></summary>
+<div class="show">
+<div class="pair"><div class="was"><s>On the other hand, Blood Dazzler portrays the harm&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">Egan&rsquo;s harm built over decades. Smith&rsquo;s came in a single week.</div></div>
+</div>
+</details>
 
-<section class="row">
-<h3><span class="n">10</span>Make transitions build.<small>A transition tells us how the next point grows out of the last one. Don't just add the next item.</small></h3>
-<div class="show stack">
-<div class="kind"><span class="brand">The grocery list</span><span class="what">Transitions that only add the next item: "Another," "Also," "On the other hand."</span>
-<div class="pair"><div class="was"><s>On the other hand, Blood Dazzler portrays the harm&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">Egan's harm came from ignorance. Smith's came from people who knew better.</div></div></div>
-<div class="kind"><span class="brand">Build on the last point</span><span class="what">Say how the new example changes what we know.</span>
-<div class="pair"><div class="was"><s>Another time when abandonment occurs in Blood Dazzler is in the poem 34.</s></div><div class="arrow">&rarr;</div><div class="now">Worse still, in &ldquo;34&rdquo; abandonment turns deadly: thirty-four people drowned in a nursing home no one evacuated (Smith 50).</div></div></div>
-<div class="kind"><span class="brand">Raise the stakes</span>
+<details class="move">
+<summary><b>Raise the stakes.</b><small>Let the reader feel the next point is heavier than the last.</small></summary>
+<div class="show">
 <p class="good">&ldquo;Even worse may have been the human response to these invasions.&rdquo;</p>
-<p class="what">Two words, "Even worse," and we know the next paragraph will hit harder than the last.</p></div>
+<p class="what">Two words, &ldquo;Even worse,&rdquo; and we know the next paragraph will hit harder.</p>
 </div>
-</section>
+</details>
 
-<h2 class="group" id="conclusion">Conclusion</h2>
+<header class="part" id="conclusion"><h2>Conclusion</h2><p class="job">Say what follows from your argument, and why it matters now.</p></header>
 
 <section class="row">
-<h3><span class="n">11</span>Take your thesis seriously.<small>If it's true, something follows. Say what. Don't escape into "if only," a question, or a clich&eacute;.</small></h3>
+<h3>Take your thesis seriously.<small>If it's true, something follows. Say what. Don't escape into &ldquo;if only,&rdquo; a question, or a clich&eacute;.</small></h3>
 <div class="show stack">
-<div class="kind"><span class="brand">The "if only"</span><span class="what">"If only they knew." "If only they cared more." Our works show that is never enough.</span>
-<div class="pair"><div class="was"><span class="lab">THEY KNEW</span>Egan: "The U.S. and Canadian governments did nothing with the information" (113).<br>Smith: Brown got the report and asked, "Anything specific I need to do / or tweak?" (28)</div><div class="arrow">&rarr;</div><div class="now">So don't stop at knowing or caring. Say what it takes to act, and keep acting, or why people fail even when they care.</div></div></div>
+<div class="kind"><span class="brand">The &ldquo;if only&rdquo;</span><span class="what">&ldquo;If only they knew.&rdquo; &ldquo;If only they cared more.&rdquo; Our works show that is never enough.</span>
+<div class="pair"><div class="was"><span class="lab">THEY KNEW</span>Egan: &ldquo;The U.S. and Canadian governments did nothing with the information&rdquo; (113).<br>Smith: Brown got the report and asked, &ldquo;Anything specific I need to do / or tweak?&rdquo; (28)</div><div class="arrow">&rarr;</div><div class="now">So don't stop at knowing or caring. Say what it takes to act, and keep acting, or why people fail even when they care.</div></div></div>
 <div class="kind"><span class="brand">The question exit</span><span class="what">Ending on a question instead of an answer.</span>
 <div class="pair"><div class="was"><s>Seeing how these injustices have still been shown in recent years, when will the government truly step in?</s></div><div class="arrow">&rarr;</div><div class="now">If the system hasn't changed, the next Katrina will drown the same neighborhoods.</div></div></div>
 <div class="kind"><span class="brand">The safe clich&eacute;</span><span class="what">Ending on something nice that no one could disagree with.</span>
@@ -205,45 +241,46 @@ body{overflow-wrap:break-word}
 </div>
 </section>
 
+<details class="move">
+<summary><b>Bring it into the present.</b><small>When your works speak to now, end where we live.</small></summary>
+<div class="show">
+<div class="pair"><div class="was"><s>&hellip;they still deserve the same treatment that the United States government supposedly promised to everyone.</s></div><div class="arrow">&rarr;</div><div class="now">&hellip;promised to everyone. Our neighbors are still waiting on that promise. An EF-3 tornado hit Menasha on July 27, 2026; the federal disaster declaration came October 7, ten weeks later.</div></div>
+<p class="what">Katrina was 2005. Menasha was this summer, and the agency is the same: FEMA. Sources: <a href="https://fox11online.com/news/local/ef-3-tornado-menasha-appleton-fox-crossing-neenah-wisconsin-governor-tony-evers-fema-request-disaster-aid-damage-relief-recovery-trump-administration">Fox 11</a>, <a href="https://www.wbay.com/2026/10/16/fema-opens-disaster-recovery-center-menasha/">WBAY</a>.</p>
+</div>
+</details>
+
+<header class="part" id="polish"><h2>Polish</h2><p class="job">Every sentence earns its place, and every quotation is exact.</p></header>
+
+<p class="sub">Sentences</p>
+
 <section class="row">
-<h3><span class="n">12</span>Bring it into the present.<small>Your works happened then. Your reader lives now. Tell us what they mean for today.</small></h3>
-<div class="show stack">
-<div class="kind"><span class="brand">Switch to the present tense</span>
-<p class="good">&ldquo;The United States seems to believe, that only individuals that are of value to the nation deserve to be saved, when in reality, all those that call the United States home should be saved by the government that swore to protect them.&rdquo;</p>
-<p class="what">Katrina was 2005, but "seems to believe" is now. The paper ends in our country, not theirs.</p></div>
+<h3>Use verbs that do something.<small>&ldquo;Focus on,&rdquo; &ldquo;explore,&rdquo; &ldquo;showcase the theme of&rdquo;: these verbs say nothing. Name the action.</small></h3>
+<div class="show">
+<div class="pair"><div class="was"><s>Charley Patton&rsquo;s song and Patricia Smiths collection of poems both showcase the theme of systemic neglect.</s></div><div class="arrow">&rarr;</div><div class="now">Patton&rsquo;s song and Smith&rsquo;s poems both put that neglect on trial.</div></div>
+<p class="what">&ldquo;Suggest&rdquo; is for the link you draw between two works (see Hedge the link, in Body). Everywhere else, name what the writer does.</p>
 </div>
 </section>
 
-<h2 class="group" id="sentences">Sentences</h2>
-
-<section class="row">
-<h3><span class="n">13</span>Use verbs that do something.<small>&ldquo;Show,&rdquo; &ldquo;focus on,&rdquo; &ldquo;showcase the theme of&rdquo;: these verbs say nothing. Name the action.</small></h3>
-<div class="show stack">
-<div class="kind"><div class="was"><s>Charley Patton&rsquo;s song and Patricia Smiths collection of poems both showcase the theme of systemic neglect.</s></div><p class="what">&ldquo;Suggest&rdquo; is for the link you draw between two works (#8). Everywhere else, name what the writer does.</p></div>
-<div class="kind"><span class="lab">STRONGER</span><p class="good">&ldquo;This anger is grief. It burns and burns from a well of anguish, forcing the reader to feel its rage and sadness.&rdquo;</p></div>
-</div>
-</section>
-
-<section class="row">
-<h3><span class="n">14</span>Say who did what to whom.<small>&ldquo;Stuck,&rdquo; &ldquo;abandoned,&rdquo; &ldquo;they&rdquo;: someone did this. Put them in the sentence.</small></h3>
+<details class="move">
+<summary><b>Say who did what to whom.</b><small>&ldquo;Stuck,&rdquo; &ldquo;abandoned,&rdquo; &ldquo;they&rdquo;: someone did this. Put them in the sentence.</small></summary>
 <div class="show stack">
 <div class="kind"><div class="was"><s>In this song Charley Patton is singing about going to a desirable place while being stuck in the floods.</s></div><p class="what">He sings &ldquo;they got me barred.&rdquo; Someone barred him. Say who.</p></div>
 <div class="kind"><span class="lab">STRONGER</span><p class="good">&ldquo;In the middle of a disaster, the workers had to make the decision to leave without the elders, throwing all of their lives at Katrina&rsquo;s lethal hands.&rdquo;</p></div>
 </div>
-</section>
+</details>
 
-<section class="row">
-<h3><span class="n">15</span>Cut the filler.<small>Two habits that keep a smart writer sounding ordinary.</small></h3>
+<details class="move">
+<summary><b>Cut the filler.</b><small>Two habits that keep a smart writer sounding ordinary.</small></summary>
 <div class="show stack">
-<div class="kind"><span class="brand">Throat-clearing</span><span class="what">A whole sentence that warms up instead of making the point.</span>
+<div class="kind"><span class="brand">The warm-up sentence</span><span class="what">A whole sentence that gets ready instead of making the point.</span>
 <div class="pair"><div class="was"><s>While both storms are tragic, without a doubt, and the basis of both destructive elements is the water, there is still a key similarity.</s> Faith&hellip;</div><div class="arrow">&rarr;</div><div class="now">Both stories run on faith.</div></div></div>
-<div class="kind"><span class="brand">The sticker</span><span class="what">Slapping "interesting," "important," or "notable" on something instead of saying why. Keep the move, swap the sticker for the reason.</span>
-<div class="pair"><div class="was"><s>A notable case study in The Death and Life of the Great Lakes is the St. Lawrence Seaway&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">The St. Lawrence Seaway shows what uninformed action costs: its locks were obsolete "almost before the freshly poured concrete could dry" (Egan 24).</div></div></div>
+<div class="kind"><span class="brand">The empty label</span><span class="what">&ldquo;Interesting,&rdquo; &ldquo;important,&rdquo; or &ldquo;notable&rdquo; in place of the reason. Give the reason.</span>
+<div class="pair"><div class="was"><s>A notable case study in The Death and Life of the Great Lakes is the St. Lawrence Seaway&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">Uninformed action built the St. Lawrence Seaway: its locks were obsolete &ldquo;almost before the freshly poured concrete could dry&rdquo; (Egan 24).</div></div></div>
 </div>
-</section>
+</details>
 
-<section class="row">
-<h3><span class="n">16</span>Don't repeat yourself.<small>Same words, same sentence shape, same length, same tone: your reader tunes out.</small></h3>
+<details class="move">
+<summary><b>Don't repeat yourself.</b><small>Same words, same sentence shape, same length, same tone: your reader tunes out. Say it once, then build on it.</small></summary>
 <div class="show">
 <div class="pair">
 <div class="was"><span class="lab">ONE PAPER, THREE TIMES</span>
@@ -253,45 +290,46 @@ body{overflow-wrap:break-word}
 <li><b>3</b><mark>Although Egan</mark> focuses on ecological damage <mark>while Smith</mark> emphasizes human loss, <mark>both</mark> works portray water as a reminder of destruction and its lasting effects.</li>
 </ol></div>
 <div class="arrow">&rarr;</div>
-<div class="now"><span class="lab">SAME WORDS, NEW ORDER</span>
+<div class="now"><span class="lab">SAID ONCE, THEN BUILT ON</span>
 <ol class="bits re">
 <li><b>1</b>Although Egan focuses on environmental damage and Smith emphasizes human suffering, both portray water as more than a passive element of nature.</li>
-<li><b>2</b>Both writers use water to expose realities people often overlook: ecological consequences for Egan, human suffering for Smith.</li>
-<li><b>3</b>Water is a reminder of destruction and its lasting effects, whether the damage is ecological, as in Egan, or human, as in Smith.</li>
+<li><b>2</b>In Egan, water carries the invaders people let in.</li>
+<li><b>3</b>In Smith, water speaks for itself: Katrina tells her own story.</li>
 </ol></div>
 </div>
 </div>
-</section>
+</details>
 
-<section class="row">
-<h3><span class="n">17</span>No comma splices.<small>Two complete sentences joined by a comma make a comma splice. Use a period or a semicolon, or add a joining word.</small></h3>
-<div class="show stack">
+<details class="move">
+<summary><b>No comma splices.</b><small>Two complete sentences joined by a comma make a comma splice. Use a period or a semicolon, or add a joining word.</small></summary>
+<div class="show">
 <div class="pair"><div class="was"><s>He is no stranger to abandonment, his fellow FEMA employees are watching from afar while he is trying to work on site.</s></div><div class="arrow">&rarr;</div><div class="now">He is no stranger to abandonment. His fellow FEMA employees are watching from afar while he is trying to work on site.</div></div>
 </div>
-</section>
+</details>
 
-<h2 class="group" id="quotations">Quotations</h2>
+<p class="sub">Quotations</p>
 
 <section class="row">
-<h3><span class="n">18</span>Quote exactly.<small>One missing word changes the meaning.</small></h3>
+<h3>Quote exactly.<small>One extra word changes the line.</small></h3>
 <div class="show">
 <div class="pair">
-<div class="was"><span class="lab">THE PAPER</span>&ldquo;Anything I need to do or tweak?&rdquo;</div>
+<div class="was"><span class="lab">THE PAPER</span>&ldquo;makes you drink the rain&rdquo;</div>
 <div class="arrow">&rarr;</div>
-<div class="now"><span class="lab">SMITH, P. 28</span>&ldquo;Anything <mark>specific</mark> I need to do / or tweak?&rdquo;</div>
+<div class="now"><span class="lab">SMITH, P. VIII</span>&ldquo;makes you drink rain&rdquo;</div>
 </div>
+<p class="what">&ldquo;The rain&rdquo; is the storm we know. &ldquo;Rain&rdquo; is any rain, all of it.</p>
 </div>
 </section>
 
-<section class="row">
-<h3><span class="n">19</span>Commas and periods go inside.<small>In American English, a comma or period that ends a quotation goes inside the quotation marks.</small></h3>
+<details class="move">
+<summary><b>Commas and periods go inside.</b><small>In American English, a comma or period that ends a quotation goes inside the quotation marks.</small></summary>
 <div class="show stack">
 <div class="kind"><span class="brand">Inside the marks</span>
 <div class="pair"><div class="was"><s>If &ldquo;thy will&rdquo; was done &ldquo;on earth as it is in Heaven&rdquo;, then those people would have been saved&hellip;</s></div><div class="arrow">&rarr;</div><div class="now">If &ldquo;thy will&rdquo; was done &ldquo;on earth as it is in Heaven,&rdquo; then those people would have been saved&hellip;</div></div></div>
 <div class="kind"><span class="brand">After the citation</span><span class="what">When a page number follows the quotation, the period waits until after the parentheses.</span>
 <p class="good">The elders &ldquo;gaze upon the preacher with unquestioned reverence&rdquo; (Smith 17).</p></div>
 </div>
-</section>
+</details>
 
 <p class="mantra">What's your point? So what? Who cares?</p>
 <p class="foot">Quotations from student papers appear as written.</p>
