@@ -1,0 +1,278 @@
+{
+  "atlantic": {
+    "title": "Atlantic transfers and naval war",
+    "bounds": [
+      [
+        8,
+        -88
+      ],
+      [
+        57,
+        8
+      ]
+    ],
+    "image": "map-atlantic.svg",
+    "copy": "<p>Chapter III moves from <strong>Barbados to Virginia and then Falmouth</strong>. The river and plantation in Virginia are unnamed. The regional label is not an arrival point.</p><p>The later naval expedition calls at Halifax before the <strong>1758 siege of Louisbourg</strong>. Louisbourg marks the campaign on this overview; it is not part of the first crossing to England.</p><p>These are selected places, not a continuous voyage track. The reading includes repeated crossings and many additional calls.</p>",
+    "points": [
+      {
+        "name": "Barbados",
+        "lat": 13.1,
+        "lon": -59.6167,
+        "note": "Chapter III begins with those not sold in Barbados, including the narrator, being sent to Virginia. The dot locates Bridgetown, not a particular ship.",
+        "direction": "left",
+        "kind": "named",
+        "label": "Barbados"
+      },
+      {
+        "name": "Virginia region",
+        "lat": 37.5,
+        "lon": -78.5,
+        "note": "Broad regional label only. The text names no river, plantation, or landing place. The label is not a location claim.",
+        "direction": "right",
+        "kind": "region",
+        "label": "Virginia region"
+      },
+      {
+        "name": "Falmouth",
+        "lat": 50.154,
+        "lon": -5.071,
+        "note": "Named first arrival in England in the narrative. Town locator, not a known berth.",
+        "direction": "left",
+        "kind": "named",
+        "label": "Falmouth"
+      },
+      {
+        "name": "Louisbourg",
+        "lat": 45.893,
+        "lon": -59.987,
+        "note": "1758 siege near the harbour on Cape Breton Island. The locator represents the historic fortress vicinity, not a battle position.",
+        "direction": "right",
+        "kind": "named",
+        "label": "Louisbourg"
+      }
+    ],
+    "labels": [
+      {
+        "text": "NORTH ATLANTIC",
+        "lat": 31,
+        "lon": -34
+      },
+      {
+        "text": "AFRICA",
+        "lat": 22,
+        "lon": 0
+      },
+      {
+        "text": "NORTH AMERICA",
+        "lat": 49,
+        "lon": -79
+      }
+    ]
+  },
+  "channel": {
+    "title": "Channel ports and Belle-Île",
+    "bounds": [
+      [
+        46.55,
+        -6.4
+      ],
+      [
+        51.6,
+        1.4
+      ]
+    ],
+    "image": "map-channel.svg",
+    "copy": "<p><strong>Falmouth and Guernsey</strong> belong to the early English and Channel experiences in chapter III. <strong>Portsmouth and Spithead</strong> recur as naval departure and return places.</p><p>Chapter IV describes the <strong>1761 expedition against Belle-Île</strong> and a return in 1762. Belle-Île is off Brittany, France; Guernsey is a different island in the Channel.</p><p>Markers locate towns, islands, or anchorages approximately. They do not identify particular houses, ships, or landing beaches.</p>",
+    "points": [
+      {
+        "name": "Falmouth",
+        "lat": 50.154,
+        "lon": -5.071,
+        "note": "Town locator on the south coast of Cornwall.",
+        "direction": "right",
+        "kind": "named",
+        "label": "Falmouth"
+      },
+      {
+        "name": "Guernsey",
+        "lat": 49.46,
+        "lon": -2.58,
+        "note": "Island locator, not the house where he boarded with Pascal’s mate.",
+        "direction": "right",
+        "kind": "named",
+        "label": "Guernsey"
+      },
+      {
+        "name": "Portsmouth / Spithead",
+        "lat": 50.76,
+        "lon": -1.15,
+        "note": "Approximate Spithead anchorage off Portsmouth. The text distinguishes the roadstead from the town.",
+        "direction": "top",
+        "kind": "named",
+        "label": "Portsmouth / Spithead"
+      },
+      {
+        "name": "Belle-Île",
+        "lat": 47.32,
+        "lon": -3.2,
+        "note": "Island locator for the 1761 expedition and 1762 return. No landing beach is asserted.",
+        "direction": "left",
+        "kind": "named",
+        "label": "Belle-Île"
+      }
+    ],
+    "labels": [
+      {
+        "text": "ENGLAND",
+        "lat": 51.2,
+        "lon": -3.4
+      },
+      {
+        "text": "ENGLISH CHANNEL",
+        "lat": 49.4,
+        "lon": -4.8
+      },
+      {
+        "text": "FRANCE",
+        "lat": 48.5,
+        "lon": -1.3
+      }
+    ]
+  },
+  "mediterranean": {
+    "title": "The Mediterranean and the Portuguese coast",
+    "bounds": [
+      [
+        33.7,
+        -11.3
+      ],
+      [
+        45,
+        8
+      ]
+    ],
+    "image": "map-mediterranean.svg",
+    "copy": "<p>In chapter IV, the fleet reaches <strong>Gibraltar</strong>, takes on water at <strong>Barcelona</strong>, and cruises off <strong>Toulon</strong>. Gibraltar connects the Mediterranean with the Atlantic.</p><p>The action of August 1759 leads onto the Portuguese coast. The text’s “Cape Logas” belongs to the episode known as the <strong>Battle of Lagos</strong>. This is Portugal, not Lagos in Nigeria.</p><p>The Lagos marker locates the coastal town for orientation. It is not an exact battle or shipwreck position.</p>",
+    "points": [
+      {
+        "name": "Gibraltar",
+        "lat": 36.14,
+        "lon": -5.35,
+        "note": "Harbour and Mediterranean entrance. The chapter includes repeated visits.",
+        "direction": "bottom",
+        "kind": "named",
+        "label": "Gibraltar"
+      },
+      {
+        "name": "Barcelona",
+        "lat": 41.38,
+        "lon": 2.17,
+        "note": "City locator; the fleet takes on fresh water in the bay.",
+        "direction": "left",
+        "kind": "named",
+        "label": "Barcelona"
+      },
+      {
+        "name": "Toulon",
+        "lat": 43.124,
+        "lon": 5.93,
+        "note": "Port locator; the fleet cruises off the French naval base.",
+        "direction": "left",
+        "kind": "named",
+        "label": "Toulon"
+      },
+      {
+        "name": "Lagos coast",
+        "lat": 37.1,
+        "lon": -8.67,
+        "note": "Portuguese coastal context for the 1759 battle. No exact engagement or wreck site is plotted.",
+        "direction": "top",
+        "kind": "named",
+        "label": "Lagos coast"
+      }
+    ],
+    "labels": [
+      {
+        "text": "SPAIN",
+        "lat": 40,
+        "lon": -3.5
+      },
+      {
+        "text": "PORTUGAL",
+        "lat": 40.4,
+        "lon": -8.1
+      },
+      {
+        "text": "FRANCE",
+        "lat": 44.4,
+        "lon": 2.8
+      },
+      {
+        "text": "MEDITERRANEAN SEA",
+        "lat": 37.7,
+        "lon": 2.3
+      },
+      {
+        "text": "NORTH AFRICA",
+        "lat": 34.6,
+        "lon": -1
+      }
+    ]
+  },
+  "thames": {
+    "title": "Westminster, Deptford, and the lower Thames",
+    "bounds": [
+      [
+        51.39,
+        -0.19
+      ],
+      [
+        51.56,
+        0.49
+      ]
+    ],
+    "image": "map-thames.svg",
+    "copy": "<p><strong>Westminster:</strong> chapter IV places baptism at St Margaret’s and a near-drowning by Westminster Bridge. The marker locates the church-and-bridge area.</p><p><strong>Deptford:</strong> the narrator arrives on 10 December 1762. Pascal then forces him into a boat and takes him downstream.</p><p><strong>Below Gravesend:</strong> he is sold aboard the <em>Charming Sally</em>, bound for the West Indies. The town is shown as a reference; the ship’s anchorage is not known.</p><p>The river line is generalized modern geography. It shows the connection between these places, not a reconstructed 1762 shoreline or exact boat track.</p>",
+    "points": [
+      {
+        "name": "Westminster",
+        "lat": 51.4996,
+        "lon": -0.1276,
+        "note": "St Margaret’s church vicinity. Westminster Bridge is nearby to the northeast.",
+        "direction": "top",
+        "kind": "named",
+        "label": "Westminster"
+      },
+      {
+        "name": "Deptford",
+        "lat": 51.487,
+        "lon": -0.0286,
+        "note": "District locator near the former royal dockyard. No exact mooring or point of seizure is identified.",
+        "direction": "bottom",
+        "kind": "named",
+        "label": "Deptford"
+      },
+      {
+        "name": "Gravesend",
+        "lat": 51.443,
+        "lon": 0.37,
+        "note": "Town locator. The sale occurs aboard a ship a little downstream of Gravesend, not at this dot.",
+        "direction": "bottom",
+        "kind": "named",
+        "label": "Gravesend"
+      }
+    ],
+    "labels": [
+      {
+        "text": "LONDON",
+        "lat": 51.545,
+        "lon": 0.01
+      },
+      {
+        "text": "LOWER THAMES",
+        "lat": 51.53,
+        "lon": 0.265
+      }
+    ]
+  }
+}

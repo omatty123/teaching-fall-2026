@@ -11000,7 +11000,16 @@
       "unit": "equiano",
       "topic": "Equiano",
       "detail": "Parts III–IV",
-      "materials": []
+      "materials": [
+        {
+          "label": "Equiano III–IV: maps, reading, and historical images",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-chapters-3-4.html"
+        },
+        {
+          "label": "Equiano and Omar ibn Said: side-by-side comparison",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-and-omar-ibn-said.html"
+        }
+      ]
     },
     {
       "date": "2026-11-02",

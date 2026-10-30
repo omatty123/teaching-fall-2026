@@ -62,3 +62,11 @@ This is not a generic LMS dashboard. It is an evidence-aware teaching field desk
 ## Accessibility & Inclusion
 
 Meet WCAG 2.2 AA for contrast and interaction, use at least 44-by-44-pixel practical touch targets, retain visible keyboard focus and reduced-motion support, and keep student navigation understandable without familiarity with instructor terminology.
+
+## Equiano resources · October 30, 2026
+
+Two student-facing pages support FRST 110: `frst-110-resources/equiano-chapters-3-4.html` provides maps, passage-based reading, historical images, vocabulary, and primary texts; `frst-110-resources/equiano-and-omar-ibn-said.html` compares the whole works across ten aspects. Both are linked from the October 30 course entry and the protected Teaching HQ prep. The comparison links the 1831 Arabic manuscript, the complete modern Arabic–English edition, and the later Bird translation as distinct sources.
+
+Students retain responsibility for adding examples to the existing Narratives of Slavery collection. These pages add no assignments or discussion questions. Source fragments and ledgers live beside the pages. Build with `scripts/build-equiano-3-4.py` and `scripts/build-equiano-omar.py`; run `scripts/check-equiano-oct30.py`. The GitHub workflow checks generated content, links, geographic context, and public boundaries.
+
+Independent finish review: no blocking findings remain after the coastline corrections.

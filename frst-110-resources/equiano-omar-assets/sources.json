@@ -1,0 +1,58 @@
+{
+  "title": "Equiano and Omar ibn Said: comparison reading sources",
+  "checked": "2026-10-30",
+  "scope": "Student-facing comparison of Equiano's whole twelve-chapter Interesting Narrative and Omar ibn Said's 1831 autobiography. No claim that the works share the same production circumstances, political program, religion, or outcome.",
+  "sources": [
+    {
+      "id": "equiano-complete",
+      "title": "Olaudah Equiano, The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African",
+      "date": "First publication 1789",
+      "url": "https://www.gutenberg.org/files/15399/15399-h/15399-h.htm",
+      "type": "Primary text, public-domain English work; Project Gutenberg transcription",
+      "passages_used": ["Title, dedication to Parliament, subscriber list, contents", "Chapters I–II: narrated childhood and capture", "Chapters III–IV: language, literacy, baptism, sale", "Chapter VII: freedom purchase and reproduced manumission registered 11 July 1766", "Chapter VIII: attempted kidnapping after freedom", "Chapter IX: travel after manumission", "Chapter X: Christian conversion account", "Chapter XI: Irving's Mosquito Shore plantation with enslaved labor", "Chapter XII: abolition, Parliament, commerce, British manufacturing"],
+      "edition_limit": "No course-edition page numbers are asserted. References use verified chapter anchors. African childhood is described as the account's claim, not treated here as a resolved biographical controversy."
+    },
+    {
+      "id": "omar-original",
+      "title": "Omar ibn Said, Arabic autobiography manuscript",
+      "date": "1831",
+      "url": "https://www.loc.gov/item/2018371864/",
+      "type": "Original primary manuscript held by the Library of Congress",
+      "verification": "Catalog identity and manuscript characteristics cross-checked against the Lo and Ernst critical edition. Direct LOC item fetching returned HTTP 403 during research; no claim of inspecting each original manuscript image."
+    },
+    {
+      "id": "omar-bird-full",
+      "title": "Translation of the Life of Omar ibn Said: Manuscript No. 1, translated by Isaac Bird",
+      "date": "Undated nineteenth-century English translation of the 1831 Arabic manuscript; Project Gutenberg transcription updated 2024",
+      "url": "https://www.gutenberg.org/cache/epub/63635/pg63635-images.html",
+      "catalog_url": "https://www.gutenberg.org/ebooks/63635",
+      "manuscript_url": "https://www.loc.gov/item/2018662613/",
+      "type": "Complete public-domain English translation, transcribed from Library of Congress images",
+      "coverage": "Complete English text read, including prefatory religious passage, repeated addresses and enslavement narratives, and ending. Used for basic narrative details, checked against the full modern translation.",
+      "limits": "Bird's translation is a historical interpretation, not Omar's English wording. It mistranslates or obscures several terms and quotations. Do not use Gutenberg's automatically generated summary as evidence; its simple conversion framing is not adopted."
+    },
+    {
+      "id": "omar-lo-ernst",
+      "title": "Mbaye Lo and Carl W. Ernst, Document 4, Autobiography (Sira Dhatiyya), The Writings of Omar ibn Said",
+      "date": "2022; repository publication 26 November, last modified 6 December",
+      "url": "https://cdr.lib.unc.edu/concern/scholarly_works/pc289t564",
+      "doi": "https://doi.org/10.17615/6rgc-xf61",
+      "download_url": "https://cdr.lib.unc.edu/downloads/nk322q67g?locale=en",
+      "type": "Primary Arabic text and complete modern English translation with scholarly editorial notes, Carolina Digital Repository",
+      "rights": "In copyright. Link to the repository; do not republish its PDF. Comparison uses brief quotation and short paraphrase only.",
+      "coverage": "Complete English translation, editorial description, and all 27 notes read. Arabic text was available but independent Arabic translation is not claimed.",
+      "passages_used": ["Editorial description: repeated/revised sections and blank notebook pages", "B.1 and B.2: capture, escape, captivity, differing translation of harm", "D.1 and D.2 with notes 16–18 and 22–24: Gospel reading and Islamic theological quotations", "E.1 and E.2: religious language", "Preface description: Qur'an 67 in the same notebook"],
+      "limits": "The editors caution that whether Qur'an 67 is formally part of the autobiography is debatable. Wording therefore says that it precedes the account in the notebook. No claim of unrestricted consent, secure knowledge of inner belief, or author-controlled publication."
+    }
+  ],
+  "editorial_checks": [
+    "Original 1831 manuscript distinguished from later undated Bird translation and 2022 modern edition.",
+    "No death year supplied for Omar because catalog traditions differ.",
+    "No claim that Omar's manuscript is a public abolitionist book.",
+    "No claim that praise for the Owens establishes consent to enslavement.",
+    "No simple Christian-versus-Muslim binary or certainty about secret belief.",
+    "No additional narrative examples or assistant-written discussion questions.",
+    "Manumission distinguished from favorable treatment and from protection against later kidnapping.",
+    "Equiano's commercial abolition argument and participation in slave-worked plantation activity both retained."
+  ]
+}

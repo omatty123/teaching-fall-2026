@@ -1,0 +1,81 @@
+{
+  "checked": "2026-10-30",
+  "scope": "Complete Volume I, chapters III and IV read from Hanover transcription, with first-edition public-domain text. Student-facing analysis and glossary are editorial synthesis; no added discussion questions.",
+  "edition_note": "Hanover reproduces first-edition page numbers89–129 and130–179. Those locators differ from course editions, so the fragment uses chapter and passage anchors, not course page numbers.",
+  "sources": [
+    {
+      "title": "Equiano, The Interesting Narrative, VolumeI, chapterIII",
+      "url": "https://history.hanover.edu/texts/Equiano/equiano_ch3_a.html",
+      "type": "primary public-domain text",
+      "coverage": "Complete chapter read, 6430words in extracted transcription; includes all main movements from Barbados/Virginia to London after Louisbourg.",
+      "anchors": [
+        "In this place I was called Jacob",
+        "my captain and master named me Gustavus Vassa",
+        "Richard Baker",
+        "great curiosity to talk to the books",
+        "make my face of the same colour",
+        "Louisbourgh",
+        "by starting our water"
+      ],
+      "limits": [
+        "Virginia river and plantation location unnamed.",
+        "Narrative dates first arrival England spring1757, but chronology in this chapter is internally problematic; not used as independently verified date.",
+        "Chapter anticipates Dick’s death; chapterIV narrates learning the news."
+      ]
+    },
+    {
+      "title": "Equiano, The Interesting Narrative, VolumeI, chapterIV",
+      "url": "https://history.hanover.edu/texts/Equiano/equiano_ch4_a.html",
+      "type": "primary public-domain text",
+      "coverage": "Complete chapter read,7361words in extracted transcription; covers schooling/baptism,1759Mediterranean service, Aetna, Belle-Île/coastalservice, literacy and freedomclaim, forcedsale atThamesend.",
+      "anchors": [
+        "in that respect at least, almost an Englishman",
+        "baptized in St. Margaret’s church",
+        "ships were all to be watered",
+        "bring powder to the aftermost gun",
+        "interposition of Providence",
+        "Daniel Queen",
+        "my master had not promised it to me",
+        "a little below Gravesend"
+      ],
+      "limits": [
+        "Legal statements are Equiano’s reported claims, not a judicial determination or claim that baptism automatically emancipated him.",
+        "Boat seizure startsDeptford; saleoccursaboardCharmingSally belowGravesend.",
+        "Do notextendthisreadingtoMontserrat; thatoutcomeisinchapterV.",
+        "The text’s exact April collision/landingsequence has apparentchronologicaltension; avoiddaybydayroute reconstruction."
+      ]
+    },
+    {
+      "title": "National Army Museum: Seven Years War",
+      "url": "https://www.nam.ac.uk/explore/seven-years-war",
+      "type": "museum historical overview",
+      "supports": [
+        "War1756–1763; NorthAmerican fightingbegan1754; intercontinentalimperialconflict; Louisbourgcaptured1758."
+      ],
+      "derived_words_in_page": 70
+    },
+    {
+      "title": "Royal Museums Greenwich, The Defeat of a French Squadron…off Cape Lagos…18 August1759",
+      "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-138782",
+      "type": "museum collection record",
+      "supports": [
+        "Lagosnavalbattle1759, British/Frenchfleets,Namur flagship."
+      ]
+    },
+    {
+      "title": "Equiano, complete narrative and titlepage",
+      "url": "https://www.gutenberg.org/files/15399/15399-h/15399-h.htm",
+      "type": "primary public-domain text",
+      "supports": [
+        "Published title displays OlaudahEquiano andGustavusVassa."
+      ]
+    }
+  ],
+  "verification": {
+    "no_private_planning_prose": true,
+    "no_added_questions": true,
+    "no_course_page_numbers": true,
+    "primary_quote_policy": "Brief quotes from public-domain1789text; preserve sourcewording.",
+    "full_chapters_read": true
+  }
+}

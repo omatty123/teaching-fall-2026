@@ -1,0 +1,42 @@
+[
+  {
+    "file": "images/deptford-cleveley-ca1750.jpg",
+    "title": "Launch at Deptford Dockyard",
+    "creator": "John Cleveley the Elder",
+    "date": "circa 1750",
+    "collection": "Science Museum Group Collection",
+    "object_number": "1866-9",
+    "record_url": "https://collection.sciencemuseumgroup.org.uk/objects/co40731/launch-at-deptford-dockyard",
+    "image_url": "https://coimages.sciencemuseumgroup.org.uk/21/728/medium_1866_0009.jpg",
+    "rights": "CC BY-NC-SA 4.0",
+    "rights_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "credit": "Science Museum Group Collection / © The Board of Trustees of the Science Museum",
+    "width": 981,
+    "height": 576,
+    "alt": "Oil painting of Deptford Dockyard, with a warship at the dock on the left, ships at anchor, and small boats on the Thames.",
+    "chapter_connection": "Chapters III–IV: Equiano joins the Preston at Deptford and is later taken off the Aetna there and sold to Captain Doran. The painting is a view of the dockyard, not an illustration of either episode.",
+    "reproduction_note": "Downloaded museum-provided JPEG, unchanged; no crop or enhancement.",
+    "sha256": "55a50efc7245f4c871d2617a20e10401992efce1015de91dafaf6bcd99db46a0",
+    "retrieved": "2026-10-30"
+  },
+  {
+    "file": "images/louisbourg-ince-canot-1768.jpg",
+    "title": "A view of Louisburg in North America, taken near the light house when that city was besieged in 1758",
+    "creator": "Pierre Charles Canot, engraver, after Captain Ince of the 35th Regiment",
+    "date": "1768 (depicts the 1758 siege)",
+    "collection": "Library of Congress, Prints and Photographs Division",
+    "object_number": "2004671439; LC-USZ62-2771",
+    "record_url": "https://www.loc.gov/pictures/item/2004671439/",
+    "image_url": "https://cdn.loc.gov/service/pnp/cph/3a00000/3a06000/3a06300/3a06391r.jpg",
+    "rights": "No known restrictions on publication (Library of Congress rights advisory); eighteenth-century public-domain work.",
+    "rights_url": "https://www.loc.gov/pictures/item/2004671439/",
+    "credit": "Library of Congress, Prints and Photographs Division, LC-USZ62-2771",
+    "width": 640,
+    "height": 419,
+    "alt": "Black-and-white etching looking across Louisbourg harbor from rocky ground near a lighthouse, with sailing ships and the fortified town in the distance.",
+    "chapter_connection": "Chapter III: Equiano serves aboard the Namur in the 1758 expedition against Louisbourg. This is a later print of the setting, not a depiction of Equiano.",
+    "reproduction_note": "Downloaded library-provided JPEG, unchanged; scan from black-and-white film copy negative.",
+    "sha256": "b073da5b245d0dc94230e3203530a98ef40a57b685d43a5b27018231784a9f78",
+    "retrieved": "2026-10-30"
+  }
+]

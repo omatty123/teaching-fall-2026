@@ -1,0 +1,220 @@
+{
+  "checked": "2026-10-30",
+  "purpose": "Classroom locator maps for Volume I, chapters III–IV, with selected geographic contexts; not a navigation product or complete itinerary.",
+  "crs": "WGS84 longitude/latitude in GeoJSON; Leaflet projects to Web Mercator. map-config.json fields are named lat and lon.",
+  "geometry": [
+    {
+      "file": "map-data/atlantic-50m.geojson",
+      "source": "Natural Earth Admin 0 countries, 1:50m",
+      "url": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_50m_admin_0_countries.geojson",
+      "license": "Public domain",
+      "processing": "Individual whole polygons intersecting longitude -100 to 30 and latitude 0 to 75 retained without simplifying or clipping their coordinates. Includes Canada, Greenland, Iceland and northern Europe, absent from the chapters 1–2 regional subset. Modern borders are orientation only."
+    },
+    {
+      "file": "map-data/europe-islands-10m.geojson",
+      "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_admin_0_countries.geojson",
+      "license": "public domain",
+      "transformation": "Individual whole polygons intersecting longitude -18 to 30 and latitude 25 to 65 retained with original coordinates, plus Barbados. This generous regional margin supplies all surrounding land in the Channel, Mediterranean and Thames views across desktop/mobile aspect ratios. Properties reduced to NAME and ADM0_A3.",
+      "use": "Island and coastal detail; modern boundaries, not eighteenth-century jurisdictions",
+      "included_countries": [
+        "Albania",
+        "Algeria",
+        "Andorra",
+        "Austria",
+        "Barbados",
+        "Belarus",
+        "Belgium",
+        "Bosnia and Herz.",
+        "Bulgaria",
+        "Croatia",
+        "Czechia",
+        "Denmark",
+        "Egypt",
+        "Estonia",
+        "Faeroe Is.",
+        "Finland",
+        "France",
+        "Germany",
+        "Gibraltar",
+        "Greece",
+        "Greenland",
+        "Guernsey",
+        "Hungary",
+        "Iceland",
+        "Ireland",
+        "Isle of Man",
+        "Italy",
+        "Jersey",
+        "Kosovo",
+        "Latvia",
+        "Libya",
+        "Liechtenstein",
+        "Lithuania",
+        "Luxembourg",
+        "Malta",
+        "Mauritania",
+        "Moldova",
+        "Monaco",
+        "Montenegro",
+        "Morocco",
+        "Netherlands",
+        "North Macedonia",
+        "Norway",
+        "Poland",
+        "Portugal",
+        "Romania",
+        "Russia",
+        "San Marino",
+        "Serbia",
+        "Slovakia",
+        "Slovenia",
+        "Spain",
+        "Sweden",
+        "Switzerland",
+        "Tunisia",
+        "Turkey",
+        "Ukraine",
+        "United Kingdom",
+        "Vatican",
+        "W. Sahara",
+        "Åland"
+      ]
+    },
+    {
+      "file": "map-data/thames-natural-earth.geojson",
+      "source": "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/ne_10m_rivers_lake_centerlines.geojson",
+      "license": "public domain",
+      "transformation": "One feature selected by name Thames; original coordinates retained.",
+      "use": "Generalized Thames centerline for classroom orientation. Line ends near Gravesend; no exact lower-river anchorage or 1762 shoreline reconstructed."
+    }
+  ],
+  "primary_text": [
+    {
+      "chapter": "III",
+      "urls": [
+        "https://history.hanover.edu/texts/Equiano/equiano_ch3_a.html",
+        "https://history.hanover.edu/texts/Equiano/equiano_ch3_b.html"
+      ],
+      "coverage": "Barbados→unnamed Virginia river/plantation→Falmouth→Guernsey; naval expedition via Halifax to Louisbourg1758. Other chapter calls not all plotted."
+    },
+    {
+      "chapter": "IV",
+      "urls": [
+        "https://history.hanover.edu/texts/Equiano/equiano_ch4_a.html",
+        "https://history.hanover.edu/texts/Equiano/equiano_ch4_b.html"
+      ],
+      "coverage": "Westminster, Spithead, Gibraltar, Barcelona, Toulon, Cape Logas episode, Belle-Île1761/1762; forced transfer Deptford→ship below Gravesend in December1762."
+    }
+  ],
+  "locator_sources": [
+    {
+      "places": [
+        "Barbados"
+      ],
+      "source": "https://whc.unesco.org/en/list/1376/maps/",
+      "note": "Bridgetown vicinity as in previous chapter map; not a ship position."
+    },
+    {
+      "places": [
+        "Virginia region"
+      ],
+      "source": "https://www.census.gov/geographies/reference-maps/2020/geo/state-outline.html",
+      "note": "Broad regional label in eastern North America. Does not identify the unnamed river, plantation, or a surveyed colonial border."
+    },
+    {
+      "places": [
+        "Louisbourg"
+      ],
+      "source": "https://parks.canada.ca/voyage-travel",
+      "note": "ParksCanada lists Fortress of Louisbourg at45.892841,-59.986811; rounded to45.893,-59.987. Distinct from modern town locator in CGNDB."
+    },
+    {
+      "places": [
+        "Falmouth"
+      ],
+      "source": "https://www.falmouth.co.uk/wp-content/uploads/2021/02/Falmouth-Map.pdf",
+      "note": "Approximate town locator checked against official town-map orientation on the River Fal."
+    },
+    {
+      "places": [
+        "Guernsey"
+      ],
+      "source": "https://www.visitguernsey.com/experiences/hiking/hiking-routes/",
+      "note": "Island coordinate checked against NaturalEarthGuernsey polygon and official mapped island context."
+    },
+    {
+      "places": [
+        "Portsmouth / Spithead"
+      ],
+      "source": "https://portsmouth-port.co.uk/at-the-port/find-us/",
+      "note": "Roadstead south of Portsmouth; chosen as approximate anchorage locator rather than modern port entrance."
+    },
+    {
+      "places": [
+        "Belle-Île"
+      ],
+      "source": "https://www.belle-ile.com/app/uploads/belle-ile/2026/01/FR-Belle-Ile-a-la-journee.pdf",
+      "note": "Island centroid locator, southwest of Quiberon; checked against10m NaturalEarth polygon."
+    },
+    {
+      "places": [
+        "Gibraltar"
+      ],
+      "source": "https://www.geoportal.gov.gi/",
+      "note": "Approximate town/harbour locator at Mediterranean entrance."
+    },
+    {
+      "places": [
+        "Barcelona"
+      ],
+      "source": "https://geoportal.barcelona.cat/PlanolBCN/widget/Widget.aspx?lang=EN",
+      "note": "City locator on northeast Spanish coast, not a known watering site."
+    },
+    {
+      "places": [
+        "Toulon"
+      ],
+      "source": "https://www.var.gouv.fr/Actions-de-l-Etat/Risques-naturels-et-technologiques/Technologique/Incident-nucleaire-et-plan-particulier-d-intervention-PPI/Documentations-et-supports-d-information",
+      "note": "City/port locator, not a blockade position."
+    },
+    {
+      "places": [
+        "Lagos coast"
+      ],
+      "source": "https://www.visitportugal.com/pt-pt/content/lagos",
+      "note": "Lagos town as Portuguese coastal context only; never LagosNigeria or an exact shipwreck site."
+    },
+    {
+      "places": [
+        "Westminster"
+      ],
+      "source": "https://www.westminster-abbey.org/abbey-commemorations/commemorations/olaudah-equiano-gustavus-vassa",
+      "note": "StMargaret church and nearby bridge verified; only the baptism/place connection is used, not the biographical chronology on this page."
+    },
+    {
+      "places": [
+        "Deptford",
+        "Gravesend"
+      ],
+      "source": "https://equianosworld.org/context.php?id=6",
+      "note": "District/town-scale Thames locators checked against NaturalEarth river; historical claims grounded in chapterIV ending, not exactsitecoordinates."
+    }
+  ],
+  "movement": "No route lines or battle positions. Selected named places and a broad Virginia regional label. Narrative sequence appears in prose. Sea calls, islands and areas are not represented as equally precise coordinates.",
+  "limits": [
+    "Chapters include repeated voyages and additional calls; this is not a complete itinerary.",
+    "Barbados is a transfer point; the text specifies Equiano was not sold there.",
+    "Virginia river and plantation are unnamed and are not pinned.",
+    "First English arrival date is not independently asserted here.",
+    "Cape Logas belongs to the Portuguese battle episode; the Lagos marker is contextual.",
+    "Deptford is the beginning of forced boat transfer. Sale occurs aboard a ship below Gravesend; that anchorage is not pinned.",
+    "Thames geometry is generalized modern vector data, not a street-level, hydrographic or reconstructed eighteenth-century map.",
+    "No new PDF produced. Static SVG maps and an accessible place list provide fallback."
+  ],
+  "qa": {
+    "js_syntax": "node --check passed",
+    "place_coordinates": "All named locators fall within configured view bounds. Guernsey, Belle-Île, Falmouth, Barcelona and Lagos checked against their Natural Earth country/island polygons. Toulon uses the harbour vicinity.",
+    "static": "Four real-geometry SVG fallbacks generated from the same configuration; each uses sans-serif font and an approximate scale at map centre.",
+    "contextual_land": "The 10m regional dataset includes Morocco, Algeria, Tunisia, Libya, Italy, Sardinia, Ireland, and neighboring countries. View data is selected by a generous geographic bounding box, not by the narrative place list."
+  }
+}

@@ -377,3 +377,13 @@ hiding navigation and footer.
 
 ### Narratives film playback · October 28
 The resource repeats the existing Equiano film clips before its four-work list. Responsive16:9 players use two columns, then one below900px. Age-restricted clips keep labeled external links. This adds no narrative examples beyond the four named works.
+
+## Equiano III–IV and Omar comparison · October 30, 2026
+
+These pages inherit the requested chapters I–II resource style from `equiano-assets/equiano.css`: Outfit with sans-serif fallbacks, white background, blue links, compact natural headings, thin gray rules, and visible keyboard focus. Existing resource styles remain unchanged. Source-ledger links sit with the material they document.
+
+The chapter page uses four selectable Leaflet maps with local NaturalEarth geometry and static SVG fallbacks. Place markers open notes; a plain-text place list preserves access without map interaction. Map outlines provide context, and uncertainty is explicit. The comparison has two author introductions, then a semantic table with 10 paired rows. At 760px and below, each aspect keeps the two authors in labeled vertical blocks; table captions and row headings use the full available width. A thin blue rule identifies Equiano and a thin brown rule identifies Omar. Images retain their original proportions.
+
+The detector ran once. Existing compact type and palette were retained to match the earlier guide. Its tight-leading flags do not match the rendered body typography. Author rules were reduced to 1px. Desktop 1280px and mobile 390px review corrected a narrow mobile caption/header and missing contextual coastlines. Geographic regression checks require Canada, Ireland, Italy, and North African countries in the appropriate data layers.
+
+Independent finish review: no blocking findings remain after the coastline corrections.
