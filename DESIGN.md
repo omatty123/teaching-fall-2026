@@ -389,3 +389,6 @@ The detector ran once. Existing compact type and palette were retained to match 
 Independent finish review: no blocking findings remain after the coastline corrections.
 
 The author introductions now pair the historical portraits of Equiano and Omar ibn Said. Omar’s original Arabic manuscript remains in its own linked section below the comparison. The portrait is the unchanged Yale collection image, with approximate date and attribution; desktop and phone review passed.
+
+## Equiano V–VI vocabulary · November 2, 2026
+Read and practice modes on the existing compact Equiano resource style. A full, searchable glossary groups 168 senses into five categories; 59 emotional entries lead. Each definition has expandable chapter context and transcription-page references. The quiz uses 20-word randomized rounds, category selection, immediate explanations and local-only scores. Near-synonymous feelings do not compete as distractors. Semantic buttons, visible focus, status announcements, full glossary without JavaScript, and stacked phone rows support access.
