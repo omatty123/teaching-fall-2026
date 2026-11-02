@@ -339,6 +339,16 @@
       "event": true,
       "materials": [
         {
+          "label": "Project brainstorming · questions, philosophers, people & texts",
+          "href": "../hist-212-resources/project-brainstorm.html",
+          "kind": "page"
+        },
+        {
+          "label": "Classroom brainstorming handout · PDF",
+          "href": "../hist-212-resources/hist-212-project-brainstorm.pdf",
+          "kind": "pdf"
+        },
+        {
           "label": "Artwork",
           "href": "hist-212-artwork.html#w14",
           "kind": "page"
