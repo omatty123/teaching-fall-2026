@@ -339,13 +339,13 @@
       "event": true,
       "materials": [
         {
-          "label": "Project brainstorming · questions, philosophers, people & texts",
+          "label": "Choose a question · specific evidence · finish the homework",
           "href": "../hist-212-resources/project-brainstorm.html",
           "kind": "page"
         },
         {
-          "label": "Classroom brainstorming handout · PDF",
-          "href": "../hist-212-resources/hist-212-project-brainstorm.pdf",
+          "label": "One-page homework starter · black-and-white PDF",
+          "href": "../hist-212-resources/hist-212-project-starter.pdf",
           "kind": "pdf"
         },
         {
