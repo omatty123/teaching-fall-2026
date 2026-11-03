@@ -105,9 +105,14 @@
   ],
   "readingGuides": [
     {
-      "label": "Internship ethics cases",
-      "description": "Full Disclosure, Scholarship Application, and a GIS internship account.",
-      "href": "../buen-594-resources/internship-ethics-cases.html"
+      "label": "The Three Cs of Ethics",
+      "description": "The primer for the November 10 ethics panel, with everyday conundrums, fields in and out of favor, and faith at work.",
+      "href": "../buen-594-resources/ethics-primer.html"
+    },
+    {
+      "label": "Ethics at Work: Resources",
+      "description": "Handouts, words to say, and Ethics Unwrapped videos and cases.",
+      "href": "../buen-594-resources/ethics-resources.html"
     }
   ]
 }

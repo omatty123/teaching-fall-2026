@@ -73,3 +73,5 @@ svg.ev-art [fill="#e8dccb"],svg.ev-art [fill="#f4f1ea"]{fill:#fff}
 @media print{.cases.back{margin-top:0}.cases.back .section-heading{margin-top:0}.work{margin-top:16px;border-top:1px solid #c3c4bd;padding-top:10px}}
 @media print{.work{border-top:0;padding-top:4px}}
 p,li,.ev-list span,.quad .who,.cases p,.everyday p{text-wrap:pretty}
+
+.nw{white-space:nowrap}h1,h2,h3,.verb,.card>a:first-child,.fc>div>a:first-child,.quad b,.type b,.everyday h3,.ev-list b{text-wrap:balance}.card>a:first-child,.fc>div>a:first-child{display:block}
