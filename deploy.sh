@@ -79,7 +79,7 @@ for page in "${pages[@]}"; do
     [[ -z "$ref" ]] && continue
     ref="${ref%%\?*}"
     ref="${ref%%#*}"
-    [[ -f "$dir/$ref" ]] || { note "FAIL" "$page -> $ref not found"; missing=1; }
+    [[ -f "$dir/$ref" || -f "$dir/${ref%/}/index.html" ]] || { note "FAIL" "$page -> $ref not found"; missing=1; }
   done < <(grep -oE '(src|href)="[^":]+"' "$page" | sed 's/.*="//;s/"//' | grep -v '^#')
 done
 [[ $missing -eq 0 ]] && note "ok" "all local assets resolve" || fail=1

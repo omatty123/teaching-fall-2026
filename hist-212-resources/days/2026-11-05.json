@@ -1,0 +1,219 @@
+{
+  "title": "Mongols and Goryeo",
+  "description": "Mongol conquest, the letter to Changchun, the Tripitaka Koreana, and Goryeo’s resistance and submission. HIST 212 · November 5.",
+  "meta": "Ebrey 93–96, 162–168, 176–182 · Chinggis Khan · David Morgan · Koryŏ sa",
+  "bodyClass": "nov5",
+  "styles": [
+    "hist-212-nov5.css"
+  ],
+  "scripts": [
+    "hist-212-nov5.js"
+  ],
+  "sections": [
+    {
+      "id": "woodblocks",
+      "title": "Tripitaka Koreana",
+      "source": "Artwork of the day · Ebrey p.176",
+      "body": [
+        {
+          "html": "<div class=\"study\"><figure><a href=\"../images/artwork/15-tripitaka.jpg\"><img src=\"../images/artwork/15-tripitaka.jpg\" alt=\"Rows of wooden printing blocks stacked on open shelves at Haeinsa\" width=\"1357\" height=\"1163\"></a><figcaption>Haeinsa’s woodblocks. Photo: Arian Zwegers; derivative by MrPanyGoff. <a href=\"https://commons.wikimedia.org/wiki/File:Tripitaka_Koreana.jpg\">CC BY 2.0 · image source</a>.</figcaption></figure><div><p><strong>The Tripitaka Koreana is a collection of Buddhist scriptures carved onto wooden printing blocks.</strong> Ink applied to the carved surface produces pages on paper.</p><dl class=\"facts\"><div><dt>81,258 blocks</dt><dd>A Buddhist canon in classical Chinese, preserved at Haeinsa in southern Korea.</dd></div><div><dt>Carved during invasion</dt><dd>Goryeo commissioned the replacement collection after the earlier blocks burned in 1232. The work appealed to the Buddha’s protection against the Mongols.</dd></div><div><dt>Texts and buildings</dt><dd>The blocks are thirteenth century. The surviving storage buildings are fifteenth century, designed to regulate ventilation and humidity.</dd></div></dl><p class=\"citation\"><a href=\"https://www.unesco.org/en/memory-world/printing-woodblocks-tripitaka-koreana-and-miscellaneous-buddhist-scriptures\">UNESCO: the collection</a> · <a href=\"https://whc.unesco.org/en/list/737\">The storage buildings</a></p></div></div>"
+        },
+        {
+          "html": "<details><summary>Dates and location</summary><p>Ebrey p.176 dates the carving to 1237–1251; UNESCO’s World Heritage description gives 1237–1248. Both place it during the Mongol invasions. Haeinsa is the collection’s present home; its current storage halls were built later. <a href=\"#goryeo\">Locate Haeinsa, Ganghwa and Kuju on the map.</a></p></details>"
+        }
+      ],
+      "short": "Woodblocks"
+    },
+    {
+      "id": "steppe",
+      "title": "Temujin and the steppe",
+      "source": "Ebrey 162–164 · Map C4.1, p.166",
+      "body": [
+        {
+          "p": "<strong>Temujin became Chinggis Khan in 1206.</strong> “Genghis Khan” is another English spelling. His achievement was political as well as military: rival groups became a larger army and governing order."
+        },
+        {
+          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/eurasia-map.svg\"><img src=\"../images/hist/nov5/eurasia-map.svg\" alt=\"Eurasia locator showing Karakorum, north China, Central Asia and Goryeo with major rivers\" loading=\"lazy\"></a><figcaption>Places in the readings. Modern coastlines and rivers locate the historical sites; this is not a map of imperial borders. <a href=\"../images/hist/nov5/eurasia-map.svg\">Enlarge map</a></figcaption></figure>"
+        },
+        {
+          "html": "<ol class=\"timeline\"><li><b>1206</b><span>Temujin recognized as Chinggis Khan.</span></li><li><b>1215</b><span>Mongols capture the Jin capital at present-day Beijing.</span></li><li><b>1227</b><span>Chinggis dies; conquest continues under his successors.</span></li><li><b>1279</b><span>The Southern Song falls, decades after his death.</span></li></ol>"
+        },
+        {
+          "p": "<strong>Pastoral nomads</strong> move herds between grazing grounds. Steppe societies also traded, fought and negotiated with agricultural states. The Mongols inherited this long history; horses alone do not explain their new scale of conquest."
+        }
+      ],
+      "short": "Temujin and the steppe"
+    },
+    {
+      "id": "conquest",
+      "title": "How the Mongols won",
+      "source": "Ebrey 164–165, 167",
+      "body": [
+        {
+          "html": "<dl class=\"mechanisms\"><div><dt>Mobility</dt><dd>Mounted forces, spare horses and supplies from herds supported rapid movement over long distances.</dd></div><div><dt>Organization</dt><dd>Military units cut across older tribal divisions. Discipline and coordinated command made many groups act together.</dd></div><div><dt>Surrender and terror</dt><dd>Submission could preserve local rulers. Resistance risked mass killing. The offer and the threat worked together.</dd></div><div><dt>Borrowed expertise</dt><dd>Engineers, siege weapons, administrators and artisans expanded what the conquerors could do.</dd></div></dl>"
+        },
+        {
+          "p": "Taking a walled city required different skills from winning a cavalry battle. Governing its population required still others. Campaigns against Japan, Vietnam and Java also show the limits of Mongol success."
+        },
+        {
+          "p": "<strong>Wen and wu:</strong> <em>wén</em> means civil or cultural accomplishment; <em>wǔ</em> means martial power. The letter to Changchun shows a conqueror seeking authority and expertise beyond warfare."
+        }
+      ],
+      "short": "How the Mongols won"
+    },
+    {
+      "id": "letter",
+      "title": "Chinggis Khan invites a Daoist sage",
+      "source": "Letter dated May 15, 1219 · Bretschneider, vol. I, pp.37–39 · Reader PDF pp.2–4",
+      "body": [
+        {
+          "p": "<strong>Changchun, also known as Qiu Chuji, was a Daoist religious teacher.</strong> The letter asks him to travel to the khan. It presents the conqueror as simple, chosen by Heaven and in need of wise assistance."
+        },
+        {
+          "passage": {
+            "who": "Claiming Heaven’s favor",
+            "quote": "Heaven has abandoned China owing to its haughtiness and extravagant luxury.",
+            "cite": "Letter, Bretschneider p.37 · Reader PDF p.2",
+            "link": "https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view"
+          }
+        },
+        {
+          "passage": {
+            "who": "Seeking help to govern",
+            "quote": "To cross a river we make boats and rudders. Likewise we invite sage men, and choose out assistants for <mark>keeping the empire in good order</mark>.",
+            "cite": "Letter, Bretschneider p.38 · Reader PDF p.3",
+            "link": "https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view"
+          }
+        },
+        {
+          "p": "These are claims made in a Chinese-language letter issued in Chinggis’s name. They show how he sought to persuade a religious authority. They do not by themselves establish how he treated conquered people."
+        },
+        {
+          "html": "<details><summary>Translation, authorship and optional video</summary><p>E. Bretschneider, <cite>Mediæval Researches from Eastern Asiatic Sources</cite>, vol. I (1888), pp.37–39. Bretschneider suggests a Chinese adviser composed the wording, but his proposed identification of the writer is uncertain.</p><p><a href=\"https://www.youtube.com/watch?v=fQDNKP8L0Es\">Voices of the Past: reading of the letter</a> · 5:37. A modern performance of the source. The excerpts above and the Reader PDF provide the written version.</p></details>"
+        }
+      ],
+      "short": "Chinggis’s letter"
+    },
+    {
+      "id": "cost",
+      "title": "Destruction and the limits of the numbers",
+      "source": "David Morgan, The Mongols, pp.73–83 · Reader PDF pp.5–15",
+      "body": [
+        {
+          "p": "<strong>Morgan is a modern historian evaluating accounts of conquest.</strong> Reports of mass death are evidence, but their numbers need to be tested against population, genre and the writer’s situation."
+        },
+        {
+          "passage": {
+            "who": "Reading enormous death tolls",
+            "quote": "not as statistical information but as evidence of the state of mind",
+            "cite": "Morgan p.78 · Reader PDF p.10",
+            "link": "https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view"
+          }
+        },
+        {
+          "html": "<div class=\"contrast\"><div><h3>Immediate violence</h3><p>Killing, enslavement and forced relocation destroyed communities. An implausible total does not make the catastrophe imaginary.</p></div><div><h3>Longer damage</h3><p>A <strong>qanat</strong> is an underground channel that brings groundwater to farmland. It requires continual maintenance. The loss or displacement of farming communities could damage agriculture for generations.</p></div></div>"
+        },
+        {
+          "p": "Morgan also stresses variation: some places escaped destruction or later prospered. Neither universal ruin nor universal prosperity describes the whole empire."
+        }
+      ],
+      "short": "Conquest’s costs"
+    },
+    {
+      "id": "exchange",
+      "title": "Exchange under imperial rule",
+      "source": "Ebrey 93–96, 167–168",
+      "body": [
+        {
+          "html": "<div class=\"contrast\"><div><h3>Tang connections</h3><p>Chang’an attracted foreign residents, merchants and religious communities. Buddhism, goods and artistic forms crossed Eurasia long before Mongol conquest.</p></div><div><h3>Mongol connections</h3><p>A larger imperial network supported movement by merchants, envoys and specialists. Some traveled for opportunity; others were taken by force.</p></div></div>"
+        },
+        {
+          "html": "<dl class=\"facts\"><div><dt>Merchants and envoys</dt><dd>Political connections made some long journeys easier.</dd></div><div><dt>Artisans and captives</dt><dd>Imperial demand could relocate skilled people against their will.</dd></div><div><dt>Disease</dt><dd>Greater movement also helped disease travel.</dd></div></dl>"
+        },
+        {
+          "p": "<em>Pax Mongolica</em> means “Mongol peace.” The phrase describes conditions that facilitated exchange; it cannot describe every community’s experience of conquest."
+        }
+      ],
+      "short": "Exchange"
+    },
+    {
+      "id": "goryeo",
+      "title": "Goryeo: the court moves to Ganghwa",
+      "source": "Ebrey 177–178 · SKT p.201, editors’ introduction",
+      "body": [
+        {
+          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/goryeo-map.svg\"><img src=\"../images/hist/nov5/goryeo-map.svg\" alt=\"Korean peninsula with Kuju, Gaegyeong, Ganghwa and Haeinsa located along major rivers and coasts\" loading=\"lazy\"></a><figcaption>Ganghwa’s island position helped protect the court; much of the mainland remained exposed. Haeinsa locates the surviving woodblocks today. <a href=\"../images/hist/nov5/goryeo-map.svg\">Enlarge map</a></figcaption></figure>"
+        },
+        {
+          "html": "<ol class=\"timeline\"><li><b>1170</b><span>Military coup in Goryeo.</span></li><li><b>1196</b><span>Choe Chungheon establishes his family’s dominance.</span></li><li><b>1231</b><span>Mongol invasion; Kuju resists.</span></li><li><b>1232</b><span>The court moves from Gaegyeong to Ganghwa Island.</span></li></ol>"
+        },
+        {
+          "p": "The king remained, but the Choe military family controlled the government. Moving the court protected the ruling group while mainland communities bore repeated attacks. Resistance could defend the dynasty and impose severe costs on its people."
+        },
+        {
+          "p": "The explanation on SKT p.201 is the modern editors’ introduction. The following Kuju narrative is a translated passage from the <cite>Koryŏ sa</cite>, the later history of Goryeo."
+        }
+      ],
+      "short": "Goryeo and Ganghwa"
+    },
+    {
+      "id": "kuju",
+      "title": "Kuju: a town holds, the court orders surrender",
+      "source": "Koryŏ sa 103:23a–26a · SKT 202–203 · Reader PDF p.17",
+      "body": [
+        {
+          "p": "<strong>Pak Sŏ commanded the defense of Kuju in 1231.</strong> The account describes defenders answering successive siege methods with repairs and countermeasures."
+        },
+        {
+          "passage": {
+            "who": "Repairing breaches",
+            "quote": "chained iron links across the holes and repaired them",
+            "cite": "Koryŏ sa excerpt, SKT p.203 · Reader PDF p.17",
+            "link": "https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view"
+          }
+        },
+        {
+          "html": "<div class=\"contrast\"><div><h3>At the walls</h3><p>Pak Sŏ keeps resisting. Local military success gives him a reason to continue.</p></div><div><h3>At court</h3><p>The king orders surrender. The commander’s duty to defend the town now conflicts with obedience to his ruler.</p></div></div>"
+        },
+        {
+          "passage": {
+            "who": "The royal command",
+            "quote": "seriously violating the king’s orders",
+            "cite": "Koryŏ sa excerpt, SKT p.203 · Reader PDF p.17",
+            "link": "https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view"
+          }
+        },
+        {
+          "p": "Pak Sŏ finally yields to the order. The town’s defense and the state’s diplomatic settlement operate at different scales. This is a later historical account of the siege, not a transcript recorded at the walls."
+        }
+      ],
+      "short": "Kuju"
+    },
+    {
+      "id": "submission",
+      "title": "What Goryeo kept, and what it paid",
+      "source": "Ebrey 178–182 · SKT p.201",
+      "body": [
+        {
+          "html": "<div class=\"contrast\"><div><h3>The dynasty survives</h3><p>Peace in 1259 and the court’s return to the mainland in 1270 lead to a subordinate relationship. Goryeo keeps its royal dynasty, unlike the defeated Southern Song.</p></div><div><h3>Independence is limited</h3><p>Royal marriages tie Goryeo to the Mongol ruling house. Its rulers supply resources and ships for campaigns against Japan, while Mongol influence shapes aristocratic life.</p></div></div>"
+        },
+        {
+          "p": "<strong>Conquest did not produce one political arrangement everywhere.</strong> Goryeo’s surviving dynasty was compatible with dependence on the Mongol empire."
+        },
+        {
+          "html": "<div class=\"next-class\"><h3>Next class · Tuesday, November 10</h3><p>Rise of the Samurai · Ebrey 183–197 · <cite>The Way of the Warrior</cite>, SJT 265–283.</p><p><a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">November 10 Reader PDF</a></p><p>Final projects: <a href=\"https://lawrence.instructure.com/courses/13411/assignments/146032\">Working argument and conference</a> is due November 12. <a href=\"project-brainstorm.html\">Return to the question bank</a>.</p></div>"
+        }
+      ],
+      "short": "Submission"
+    }
+  ],
+  "readings": [
+    "<a href=\"https://drive.google.com/file/d/171KJHYOyHKLDY5VKwyrjKUkDT27DdXZY/view\">November 5 Reader PDF</a>: letter pp.2–4; Morgan pp.5–15; SKT spreads pp.16–18. The Kuju account is on PDF p.17 (printed SKT 202–203).",
+    "Patricia Buckley Ebrey and Anne Walthall, <cite>Pre-Modern East Asia: To 1800: A Cultural, Social, and Political History</cite>, third edition: pp.93–96, 162–168, 176–182.",
+    "E. Bretschneider, <cite>Mediæval Researches from Eastern Asiatic Sources</cite>, vol. I (1888), pp.37–39: letter issued in Chinggis Khan’s name.",
+    "David Morgan, <cite>The Mongols</cite>, pp.73–83, assigned scan: a modern historical interpretation.",
+    "Peter H. Lee and Wm. Theodore de Bary, eds., <cite>Sources of Korean Tradition</cite>, vol. I (Columbia University Press, 1997), pp.201–203. Kuju translation credited “HK AND ES” in the assigned extract.",
+    "<a href=\"../courses/hist-212-artwork.html#w15\">Artwork of the day</a> · <a href=\"../images/hist/nov5/SOURCES.md\">Source and image credits</a>"
+  ],
+  "footnote": "Quoted passages follow the assigned translations. Connecting explanations are course synthesis. Modern photographs and reference maps are labeled as such."
+}
