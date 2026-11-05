@@ -25,3 +25,9 @@ Student class page: [Mongols and Goryeo](../../../hist-212-resources/class-2026-
 [Voices of the Past: Letter from Genghis Khan](https://www.youtube.com/watch?v=fQDNKP8L0Es), 5:37. Modern performance linked in the assigned reading manifest. Written excerpts and the assigned PDF are available without video. The public page does not depend on playback.
 
 Prepared November 4, 2026. Quotes checked against the assigned local reader and the course quotation checker.
+
+## Chungji section images (added November 5, 2026)
+
+- `songgwangsa-daeungbojeon.jpg`: Songgwangsa main hall, photo by The Chosun Bimbo (2004), CC BY 2.0. https://commons.wikimedia.org/wiki/File:Korea-Songgwangsa-01.jpg
+- `moko-shurai-1281-boarding.jpg`: *Mōko shūrai ekotoba*, scroll 2, boarding scene (1281). Public domain. https://commons.wikimedia.org/wiki/File:M%C5%8Dko_Sh%C5%ABrai_Ekotoba,_Scroll_2,_Detail_Boarding.jpg
+- `moko-shurai-1274-suenaga.jpg`: *Mōko shūrai ekotoba*, scroll 1, Takezaki Suenaga and the invaders' archers (1274). Public domain. https://commons.wikimedia.org/wiki/File:M%C5%8Dko_Sh%C5%ABrai_Ekotoba.jpg
