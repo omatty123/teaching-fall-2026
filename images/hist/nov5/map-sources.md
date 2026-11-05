@@ -37,3 +37,7 @@ Both SVGs rendered to PNG with macOS `sips`, then visually inspected at full out
 
 - `ne_10m_lakes.geojson`: `2d036f53dedec578001c5c30c2959ee7d4eebc1306900fa4367c49929ec8f2d9`
 - `ne_10m_land.geojson`: `1ac90796408bc6ad6911d69448485d3c4dbf2190370080368a09976e1c9f7416`
+
+## Revision, November 5, 2026
+
+Both maps rebuilt to show every place named in the November 5 readings (letter to Changchun; Morgan pp.73–83; SKT 200–205) and the Chungji poems. Labels in Revised Romanization. Added locators (approximate, modern coordinates): Zhongxing (Yinchuan) 38.49N 106.23E; Chang’an (Xi’an) 34.34N 108.94E; Hangzhou 30.27N 120.16E; Balkh 36.76N 66.90E; Nishapur 36.21N 58.80E; Baghdad 33.31N 44.36E; Delhi 28.61N 77.21E; Uiju 40.20N 124.53E; Sakju 40.38N 125.05E; Cheolju (Cheolsan) 39.76N 124.64E; Taeju 39.90N 125.62E; Jeongju 39.69N 125.33E; Jukju (Juksan) 37.07N 127.43E; Songgwangsa 35.00N 127.28E; Happo (Masan) 35.20N 128.57E; Jindo 34.48N 126.26E; Jeju 33.43N 126.53E; Tsushima 34.42N 129.33E; Iki 33.79N 129.72E; Hakata Bay 33.59N 130.40E.

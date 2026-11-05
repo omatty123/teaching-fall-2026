@@ -33,7 +33,7 @@
           "p": "<strong>Temujin became Chinggis Khan in 1206.</strong> “Genghis Khan” is another English spelling. His achievement was political as well as military: rival groups became a larger army and governing order."
         },
         {
-          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/eurasia-map.svg\"><img src=\"../images/hist/nov5/eurasia-map.svg\" alt=\"Eurasia locator showing Karakorum, north China, Central Asia and Goryeo with major rivers\" loading=\"lazy\"></a><figcaption>Places in the readings. Modern coastlines and rivers locate the historical sites; this is not a map of imperial borders. <a href=\"../images/hist/nov5/eurasia-map.svg\">Enlarge map</a></figcaption></figure>"
+          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/eurasia-map.svg\"><img src=\"../images/hist/nov5/eurasia-map.svg?v=2\" alt=\"Eurasia locator: Karakorum, Zhongdu (Beijing), Zhongxing, Chang’an, Hangzhou, Shandong, the Uighur lands, Bukhara, Samarkand, Balkh, Herat, Nishapur, Baghdad and Delhi, with Transoxania, Khurasan, Persia and Iraq\" loading=\"lazy\"></a><figcaption>Every place named in today’s readings, from the letter to Changchun to Morgan’s ruined cities of Khurasan. Modern coastlines and rivers locate the sites; this is not a map of imperial borders. <a href=\"../images/hist/nov5/eurasia-map.svg\">Enlarge map</a></figcaption></figure>"
         },
         {
           "html": "<ol class=\"timeline\"><li><b>1206</b><span>Temujin recognized as Chinggis Khan.</span></li><li><b>1215</b><span>Mongols capture the Jin capital at present-day Beijing.</span></li><li><b>1227</b><span>Chinggis dies; conquest continues under his successors.</span></li><li><b>1279</b><span>The Southern Song falls, decades after his death.</span></li></ol>"
@@ -142,7 +142,7 @@
       "source": "Ebrey 177–178 · SKT p.201, editors’ introduction",
       "body": [
         {
-          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/goryeo-map.svg\"><img src=\"../images/hist/nov5/goryeo-map.svg\" alt=\"Korean peninsula with Guju, Gaegyeong, Ganghwa and Haeinsa located along major rivers and coasts\" loading=\"lazy\"></a><figcaption>Ganghwa’s island position helped protect the court; much of the mainland remained exposed. Haeinsa locates the surviving woodblocks today. <a href=\"../images/hist/nov5/goryeo-map.svg\">Enlarge map</a></figcaption></figure>"
+          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/goryeo-map.svg\"><img src=\"../images/hist/nov5/goryeo-map.svg?v=2\" alt=\"Korean peninsula and northern Kyushu: Uiju, Sakju, Cheolju, Guju, Taeju, Jeongju, Gaegyeong, Ganghwa Island, Jukju, Haeinsa, Songgwangsa, Happo, Jindo, Jeju, Tsushima, Iki and Hakata Bay\" loading=\"lazy\"></a><figcaption>Guju and the northern frontier towns of the 1231 siege; the court on Ganghwa; the Sambyeolcho’s last stands on Jindo and Jeju; Haeinsa, where the woodblocks are kept today. <a href=\"../images/hist/nov5/goryeo-map.svg\">Enlarge map</a></figcaption></figure>"
         },
         {
           "html": "<ol class=\"timeline\"><li><b>1170</b><span>Military coup in Goryeo.</span></li><li><b>1196</b><span>Choe Chungheon establishes his family’s dominance.</span></li><li><b>1231</b><span>Mongol invasion; Guju resists.</span></li><li><b>1232</b><span>The court moves from Gaegyeong to Ganghwa Island.</span></li></ol>"
@@ -210,6 +210,9 @@
       "body": [
         {
           "p": "<strong>Goryeo paid for the Mongol campaigns against Japan in grain, timber, and labor.</strong> Wongam Chungji, abbot of Suseonsa (today’s Songgwangsa), wrote poems about that cost while the Yuan prepared its fleets on Goryeo’s southern coast."
+        },
+        {
+          "html": "<figure class=\"map\"><a href=\"../images/hist/nov5/goryeo-map.svg\"><img src=\"../images/hist/nov5/goryeo-map.svg?v=2\" alt=\"Korean peninsula and northern Kyushu: Uiju, Sakju, Cheolju, Guju, Taeju, Jeongju, Gaegyeong, Ganghwa Island, Jukju, Haeinsa, Songgwangsa, Happo, Jindo, Jeju, Tsushima, Iki and Hakata Bay\" loading=\"lazy\"></a><figcaption>Chungji’s Goryeo: Suseonsa (Songgwangsa), the Yeongnam coast where the ships were built, Happo where the fleets sailed, and Tsushima, Iki and Hakata Bay across the strait. <a href=\"../images/hist/nov5/goryeo-map.svg\">Enlarge map</a></figcaption></figure>"
         },
         {
           "figure": {
