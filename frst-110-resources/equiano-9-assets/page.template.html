@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Equiano · Chapter 9 · FRST 110</title>
+<meta name="description" content="Equiano, Chapter IX: a map of his voyages from 1767 to 1773 and a seven-word vocabulary quiz.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23203136'/%3E%3Cpath d='M5 21c4-3 7 3 11 0s7 3 11 0' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M16 6v10M11 13h10' stroke='white' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:title" content="Equiano · Chapter 9 · FRST 110">
+<meta property="og:description" content="Equiano, Chapter IX: a map of his voyages from 1767 to 1773 and a seven-word vocabulary quiz.">
+<meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-assets/equiano-map-atlantic.png">
+<meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-chapter-9.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Equiano · Chapter 9 · FRST 110">
+<meta name="twitter:description" content="Equiano, Chapter IX: a map of his voyages from 1767 to 1773 and a seven-word vocabulary quiz.">
+<meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-assets/equiano-map-atlantic.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<style>
+body{font:17px/1.5 Arial,Helvetica,sans-serif;color:#203136;background:#fff;margin:0}
+main{max-width:1180px;margin:auto;padding:20px}
+h1{font-size:29px;margin:8px 0}h2{font-size:23px;margin:4px 0 8px}h3{font-size:18px;margin:14px 0 6px}
+p{margin:8px 0}a{color:#155b6b}
+nav{display:flex;gap:14px;flex-wrap:wrap;font-size:15px}
+section{border-top:1px solid #c4cecb;padding-top:10px;margin-top:20px}
+.meta{margin:0 0 4px}
+/* map */
+#voyage-map{height:640px;border:1px solid #c4cecb;background:#f2f3f3}
+.leaflet-container{font:inherit}.leaflet-control-attribution{font-size:10px!important;line-height:1.3}
+.lbl{background:#fff;border:1px solid #9aa5a4;border-radius:2px;box-shadow:none;color:#111;font:600 12.5px Arial,sans-serif;padding:1px 5px}
+.lbl::before{display:none}
+.vbadge{width:22px;height:22px;border:1.5px solid #111;border-radius:50%;background:#fff;color:#111;font:700 12px/19px Arial,sans-serif;text-align:center;box-sizing:border-box;cursor:pointer}
+.vbadge.on{background:#000;color:#fff}.vbadge.off{opacity:.35}
+.map-top{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:22px;align-items:start}
+.voyages{list-style:none;margin:0;padding:0}
+.voyages li{border-bottom:1px solid #dce2e0;padding:4px 0 6px}
+.voyages button{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0;padding:4px 0;cursor:pointer}
+.voyages button b{display:block;font-size:17px}
+.voyages .stops{display:block;font-size:14px;color:#4c5859}
+.voyages p{margin:2px 0 0 36px;font-size:15px;line-height:1.4}
+.num{flex:none;width:24px;height:24px;border:1.5px solid #111;border-radius:50%;font:700 13px/22px Arial,sans-serif;text-align:center;margin-top:1px}
+.voyages button[aria-pressed=true] .num{background:#000;color:#fff}
+.voyages button[aria-pressed=true] b{text-decoration:underline;text-underline-offset:3px}
+.voyages button:focus-visible,.letter:focus-visible,.actions button:focus-visible{outline:2px solid #155b6b;outline-offset:2px}
+.show-all{font:inherit;font-size:15px;background:none;border:1px solid #687c80;border-radius:3px;padding:4px 10px;margin:4px 0 8px;cursor:pointer}
+.between{font-size:15px;margin-top:10px}
+.caption{font-size:14px;color:#4c5859}
+/* quiz */
+.quiz{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
+.qlist{list-style:none;margin:0;padding:0;counter-reset:q}
+.qrow{display:grid;grid-template-columns:40px 1fr;gap:10px;padding:8px 0;border-bottom:1px solid #dce2e0;counter-increment:q}
+.qrow label{font-weight:700;font-size:18px}.qrow label::before{content:counter(q) ". "}
+.ctx{margin:2px 0 0;font-size:15px;line-height:1.4;color:#33464a}
+.letter{font:inherit;font-size:18px;width:36px;height:34px;text-align:center;text-transform:uppercase;border:1px solid #687c80;border-radius:3px;padding:0}
+.defs{margin:0;padding-left:28px;position:sticky;top:12px}
+.defs li{padding:6px 0 6px 4px;border-bottom:1px solid #dce2e0;font-size:16px;line-height:1.4}
+.defs li::marker{font-weight:700}
+.fb{margin:3px 0 0;font-size:14px}.fb:empty{display:none}.ok{color:#12602e}.no{color:#9d2c21}
+.actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0 10px}
+.actions button{font:inherit;font-size:15px;border:1px solid #687c80;border-radius:3px;background:#fff;color:#203136;padding:7px 12px;cursor:pointer}
+.actions button.primary{background:#203136;border-color:#203136;color:#fff}
+.status{font-weight:600;font-size:15px}
+.print-only{display:none}
+footer{font-size:13px;margin-top:24px;border-top:1px solid #c4cecb;padding-top:8px;color:#4c5859}
+@media(max-width:820px){.map-top,.quiz{grid-template-columns:minmax(0,1fr)}.defs{position:static}}
+@media(max-width:820px){#voyage-map{height:430px}}
+@media(max-width:600px){main{padding:14px 16px}h1{font-size:25px}h2{font-size:21px}.voyages p{margin-left:0}}
+@media print{
+ @page{margin:.45in}
+ body{font-size:12pt}main{max-width:none;padding:0}
+ nav,.actions,.show-all,footer,.fb{display:none!important}
+ section{break-inside:auto}
+ #voyage-map{height:520px}.leaflet-control-zoom{display:none}
+ body.quiz-only main>*:not(#words){display:none!important}
+ body.quiz-only #words{border:0;margin:0;padding:0}
+ body.quiz-only .print-only{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6pt}
+ body.quiz-only #words>h2{display:none}
+ .quiz{grid-template-columns:1.45fr 1fr;gap:18pt}
+ .qrow{padding:5pt 0;grid-template-columns:30pt 1fr}.letter{width:24pt;height:22pt;border:1px solid #000}
+ .ctx{font-size:10.5pt;color:#000}.qrow label{font-size:12.5pt}.defs li{font-size:11pt;padding:5pt 0 5pt 3pt}
+ .defs{position:static}
+}
+</style>
+</head>
+<body>
+<main>
+<nav>
+<a href="https://omatty123.github.io/teaching-fall-2026/courses/frst-110.html">← Back to FRST 110</a>
+<a href="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-chapters-5-6.html">Chapters 5–6</a>
+<a href="#map">Voyages</a>
+<a href="#words">Seven words</a>
+<a href="equiano-currency/">Money chart</a>
+<a href="equiano-currency/handout.html">Money handout</a>
+</nav>
+<h1>Equiano · Chapter 9</h1>
+<p class="meta">FRST 110 · Friday, November 6 · Volume II, Chapter IX</p>
+
+<section id="map">
+<h2>Where Chapter 9 goes, 1767–1773</h2>
+<p>Seven voyages, now as a free man. Select one to follow it on the map.</p>
+<div class="maps" id="maps">
+<div class="map-top">
+<div class="map-col"><div id="voyage-map" role="region" aria-label="Map of Equiano’s voyages in Chapter IX"></div></div>
+<div class="list-col">
+<button type="button" class="show-all" id="show-all">Show all voyages</button>
+<ol class="voyages">
+{{VOYAGES}}
+</ol>
+<p class="between"><b>In London between voyages</b> he trains as a hairdresser in Coventry Court, Haymarket, learns the French horn, studies arithmetic in an evening school, and works for Dr. Charles Irving, who is making sea water fresh.</p>
+</div>
+</div>
+</div>
+<p class="caption">Lines show the order of ports, not exact courses. Place names and dates are from Equiano’s text.</p>
+</section>
+
+<section id="words">
+<h2>Seven words</h2>
+<div class="print-only"><b>Equiano, Chapter 9 · Seven words</b><span>Name ______________________________</span></div>
+<p>Type the letter of the matching meaning. Use each letter once.</p>
+<div class="actions"><button type="button" class="primary" id="check">Check answers</button><button type="button" id="retry">Retry missed</button><button type="button" id="reset">Start over</button><button type="button" id="print">Print quiz</button><span class="status" id="score" role="status" aria-live="polite"></span></div>
+<div class="quiz">
+<ol class="qlist">
+{{QROWS}}
+</ol>
+<ol class="defs" type="A" aria-label="Meanings">{{DEFS}}</ol>
+</div>
+</section>
+
+<footer>Text: Olaudah Equiano, <i>The Interesting Narrative of the Life of Olaudah Equiano</i> (1789), Volume II, Chapter IX, <a href="https://www.gutenberg.org/ebooks/15399">Project Gutenberg</a>. Quotations follow the 1789 spelling.</footer>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(()=>{
+const D={{MAPDATA}};
+const btns=[...document.querySelectorAll('.voyages button')];
+const map=L.map('voyage-map',{scrollWheelZoom:false,worldCopyJump:false,zoomSnap:0.25});
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',
+ {maxZoom:10,attribution:'Base map: Esri, HERE, Garmin, © OpenStreetMap contributors'}).addTo(map);
+map.attributionControl.setPrefix(false);
+const lines={},badges={},labels=L.layerGroup().addTo(map);
+D.voyages.forEach(v=>{
+ lines[v.n]=L.polyline(v.line,{color:'#2f3b3d',weight:2,opacity:.9,lineJoin:'round'}).addTo(map).on('click',()=>pick(String(v.n)));
+ badges[v.n]=L.marker(v.badge,{icon:L.divIcon({className:'',html:`<div class="vbadge" data-v="${v.n}">${v.n}</div>`,iconSize:[22,22],iconAnchor:[11,11]}),keyboard:false}).addTo(map).on('click',()=>pick(String(v.n)));
+});
+const dots={};Object.entries(D.places).forEach(([n,ll])=>{dots[n]=L.circleMarker(ll,{radius:4,color:'#111',weight:1.5,fillColor:'#fff',fillOpacity:1}).bindTooltip(n,{className:'lbl',direction:'right',offset:[6,0]}).addTo(map)});
+const allBounds=L.latLngBounds(D.voyages.flatMap(v=>v.line));
+const DIR={'London':'left','Farthest north, 80°37′ (Spitsbergen)':'left','St. Eustatius':'left','Nevis':'right','the Grenades':'bottom','Kingston':'left','Savannah':'right','Shetland':'left','Sheerness':'bottom','Villefranche, Nice':'left','Genoa':'top'};
+const CLUSTERS=[{at:'Basseterre, St. Kitts',dir:'top',names:['St. Eustatius','Basseterre, St. Kitts','Nevis','Montserrat'],short:{'Basseterre, St. Kitts':'St. Kitts'}},
+ {at:'Kingston',dir:'top',names:['Kingston','Port Morant'],short:{}},{at:'London',dir:'left',names:['London','Sheerness'],short:{}}];
+let shown=[];
+const OFF={left:[-6,0],right:[6,0],top:[0,-8],bottom:[0,8]};
+function addTip(ll,text,dir){const make=d=>L.tooltip({permanent:true,className:'lbl',direction:d,offset:OFF[d]}).setLatLng(ll).setContent(text).addTo(labels);
+ let t=make(dir);const box=document.getElementById('voyage-map').getBoundingClientRect(),r=t.getElement().getBoundingClientRect();
+ if(r.left<box.left+2){labels.removeLayer(t);t=make('right')}else if(r.right>box.right-2){labels.removeLayer(t);t=make('left')}}
+function tip(k,dir){if(D.places[k])addTip(D.places[k],k,dir)}
+function label(names){shown=names;labels.clearLayers();let keys=names.map(n=>D.alias[n]||n);
+ if(map.getZoom()<6){CLUSTERS.forEach(c=>{const hit=c.names.filter(x=>keys.includes(x));if(hit.length>1){keys=keys.filter(x=>!hit.includes(x));addTip(D.places[c.at],hit.map(x=>c.short[x]||x).join(' · '),c.dir)}})}
+ keys.forEach(k=>tip(k,DIR[k]||'right'))}
+map.on('zoomend',()=>label(shown));
+let current=null;
+function pick(n){
+ if(n&&n===current)n=null;current=n;
+ btns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.v===n)));
+ Object.entries(lines).forEach(([k,l])=>{const on=k===n;l.setStyle(n?{color:on?'#000':'#b9c1c0',weight:on?4:1.5,opacity:on?1:.8}:{color:'#2f3b3d',weight:2,opacity:.9});if(on)l.bringToFront()});
+ document.querySelectorAll('.vbadge').forEach(b=>{b.classList.toggle('on',b.dataset.v===n);b.classList.toggle('off',!!n&&b.dataset.v!==n)});
+ if(n){const v=D.voyages.find(x=>String(x.n)===n);label(v.stops);map.flyToBounds(L.latLngBounds(v.line),{paddingTopLeft:[70,30],paddingBottomRight:[70,30],duration:.6})}
+ else{label(['London','Savannah','Smyrna','Farthest north']);map.flyToBounds(allBounds,{padding:[20,20],duration:.6})}
+}
+btns.forEach(b=>b.addEventListener('click',()=>pick(b.dataset.v)));
+document.getElementById('show-all').addEventListener('click',()=>{current=null;pick(null)});
+map.fitBounds(allBounds,{padding:[20,20]});label(['London','Savannah','Smyrna','Farthest north']);
+
+const KEY={{KEY}},MEAN={{MEANINGS}};
+const ins=[...document.querySelectorAll('.letter')],fbs=[...document.querySelectorAll('.fb')],score=document.getElementById('score');
+function count(){score.textContent=`${ins.filter(i=>i.value).length} of ${ins.length} answered`}
+ins.forEach((el,i)=>el.addEventListener('input',()=>{el.value=el.value.replace(/[^a-g]/gi,'').toUpperCase();fbs[i].textContent='';fbs[i].className='fb';if(el.value&&ins[i+1])ins[i+1].focus();count()}));
+document.getElementById('check').onclick=()=>{let r=0;ins.forEach((el,i)=>{const ok=el.value===KEY[i];r+=ok;const a=KEY[i];fbs[i].className='fb '+(ok?'ok':'no');fbs[i].textContent=ok?'Correct':`${el.value?'Not quite.':'Unanswered.'} Answer: ${a}. ${MEAN[a.charCodeAt(0)-65]}`});score.textContent=`${r} of ${ins.length} correct`};
+document.getElementById('retry').onclick=()=>{ins.forEach((el,i)=>{if(el.value!==KEY[i])el.value='';fbs[i].textContent='';fbs[i].className='fb'});count()};
+document.getElementById('reset').onclick=()=>{ins.forEach((el,i)=>{el.value='';fbs[i].textContent='';fbs[i].className='fb'});count()};
+document.getElementById('print').onclick=()=>{document.body.classList.add('quiz-only');window.print()};
+window.addEventListener('afterprint',()=>document.body.classList.remove('quiz-only'));
+count();
+})();
+</script>
+</body>
+</html>

@@ -11044,7 +11044,23 @@
       "unit": "equiano",
       "topic": "Equiano",
       "detail": "Parts IX–X",
-      "materials": []
+      "materials": [
+        {
+          "label": "Equiano IX: voyages map and seven-word quiz",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-chapter-9.html",
+          "kind": "guide"
+        },
+        {
+          "label": "Money in Equiano’s book: visual chart",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-currency/",
+          "kind": "guide"
+        },
+        {
+          "label": "Money in Equiano’s book: printable handout",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/equiano-currency/handout.html",
+          "kind": "guide"
+        }
+      ]
     },
     {
       "date": "2026-11-09",
