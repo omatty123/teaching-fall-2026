@@ -165,7 +165,7 @@ def main():
         f'<span><b>{v["year"]} · {v["title"]}</b><span class="stops">{v["stops"]}</span></span></button>'
         f'<p>{v["text"]}</p></li>' for v in VOYAGES)
     page = (HERE / "page.template.html").read_text()
-    page = (page.replace("{{MAPDATA}}", json.dumps(data, ensure_ascii=False, separators=(",", ":")))
+    page = (page.replace("{{CHAPTER10}}", (HERE / "chapter10.html").read_text()).replace("{{MAPDATA}}", json.dumps(data, ensure_ascii=False, separators=(",", ":")))
                 .replace("{{VOYAGES}}", vlist)
                 .replace("{{QROWS}}", "\n".join(rows)).replace("{{DEFS}}", defs)
                 .replace("{{KEY}}", json.dumps(key)).replace("{{MEANINGS}}", json.dumps([d for _, d in DEFS])))
