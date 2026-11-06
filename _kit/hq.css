@@ -1031,17 +1031,12 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
   justify-content: center;
   gap: 0;
   padding: 24px 32px 22px;
-  background: #fff;
-  border-bottom: 1px solid #d2d2d7;
-  color: #1d1d1f;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   text-align: center;
 }
-.hq-page .hq-launch-masthead .general-door,
-.hq-page .hq-launch-masthead .cabinet-door,
-.hq-page .hq-launch-masthead .stories-door { display: inline-block; margin: 0 8px 6px !important; }
 .hq-page .hq-launch-masthead > div > p:first-child {
   margin-bottom: 6px;
-  color: #6e6e73;
+  color: #c59a37;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -1054,7 +1049,7 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
 }
 .hq-page .hq-launch-masthead > div > p:last-child {
   margin-top: 7px;
-  color: #6e6e73;
+  color: rgba(255,255,255,.65);
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0;
@@ -1064,7 +1059,7 @@ body { font-family: "Outfit", "Source Sans 3", sans-serif; }
 .hq-page .hq-launch-masthead nav a {
   min-height: 0;
   padding: 5px 11px;
-  border: 1px solid #c7c7cc;
+  border: 1px solid rgba(255,255,255,.35);
   border-radius: 6px;
   font-size: 11px;
   font-weight: 500;

@@ -344,6 +344,7 @@ def build_hq(term, courses):
   <div>
     <p id="dateLabel">Loading date…</p>
     <h1>Today’s Prep</h1>
+    <p>Next class, prep queue, and the whole week</p>
   </div>
   <nav aria-label="Teaching HQ destinations">
     <a href="students.html">Student course index</a>
