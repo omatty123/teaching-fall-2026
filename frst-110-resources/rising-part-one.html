@@ -41,6 +41,24 @@ h2.band{color:var(--sea);font-size:30px;font-weight:800;font-stretch:75%;line-he
 .conn{display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px;font-size:15px;line-height:1.3}
 .conn b{display:block;font-size:17px;font-stretch:85%}
 .credit{font-size:12px;color:var(--mid);margin:9px 0 0}
+.rec{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:0 24px;margin-top:6px;align-items:start}#koch{display:block;width:100%;background:#eef5f8}.kl{display:flex;gap:10px;align-items:center;font-size:14px;margin-top:6px}.kl input{flex:1}.recn{font-size:14px;line-height:1.3;padding-top:30px}.recn p{margin:0 0 8px}.recn a{color:var(--sea)}
+@media(max-width:700px){.rec{grid-template-columns:1fr}.recn{padding-top:8px}}
+.rec3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 20px;margin-top:16px;font-size:14px;line-height:1.3}.rec3 h4{font-size:18px;font-weight:800;font-stretch:80%;margin:0 0 5px;color:var(--sea)}.rec3 canvas,.rec3 svg{display:block;width:100%;height:auto;background:#eef5f8}.rec3 p{margin:6px 0 0}.rec3 a{color:var(--sea)}.ctl{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--mid);margin-top:5px}.ctl button{font:600 13px Archivo,Arial,sans-serif;background:#fff;color:var(--sea);border:1.5px solid var(--sea);padding:2px 10px;cursor:pointer}
+@media(max-width:800px){.rec3{grid-template-columns:1fr;gap:14px}}
+@media print{.rec,.rec3{display:none}}
+.flow li.end{background:var(--p);color:#fff;font-weight:600}.tur .src{font-size:13px;color:var(--mid);margin:1px 0 7px}
+.tur-h{font-size:21px;font-weight:800;font-stretch:75%;color:var(--sea);margin:16px 0 6px}
+.tur{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 20px;font-size:14px;line-height:1.28}.tur b{display:block;font-size:16px;font-stretch:85%}.tur cite{display:inline;font-size:12px;color:var(--mid);font-style:normal}
+@media(max-width:900px){.tur{grid-template-columns:1fr 1fr}}
+.cyc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 20px}
+.cyc h3{color:var(--p);font-size:21px;font-weight:800;font-stretch:75%;margin:0;line-height:1.05}.cyc .src{font-size:13px;color:var(--mid);margin:1px 0 7px}
+.flow{list-style:none;margin:0;padding:0;position:relative;font-size:14px;line-height:1.2}
+.flow li{border:1.5px solid var(--p);padding:5px 7px;margin:0 0 15px;position:relative;background:#fff}
+.flow li:last-child{margin-bottom:0}
+.flow li:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-13px;margin-left:-5px;border:5px solid transparent;border-top:9px solid var(--p);border-bottom:0}
+.flow.loop{padding-right:18px}
+.flow.loop::after{content:"";position:absolute;right:0;top:14px;bottom:14px;width:18px;border:1.5px solid var(--p);border-left:0}
+.flow.loop::before{content:"";position:absolute;right:15px;top:9px;border:5px solid transparent;border-right:9px solid var(--p);border-left:0;z-index:1}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 28px}
 .side{border-left:3px solid var(--rule);padding:14px 0 14px 20px;font-size:15px;line-height:1.3}
 .side h2.band{font-size:26px;margin:0 0 6px}.side h2.sub{margin-top:18px;padding-top:12px;border-top:1px solid var(--hair)}
@@ -51,7 +69,7 @@ h2.band{color:var(--sea);font-size:30px;font-weight:800;font-stretch:75%;line-he
 .v{display:inline-block;font-weight:800;font-size:12px;padding:0 5px;color:#fff;margin-right:3px}.v.no{background:var(--b)}.v.wait{background:var(--mid)}
 .shores{grid-template-columns:repeat(2,1fr)}
 @media(max-width:1000px){.layout{grid-template-columns:1fr}.side{border-left:0;border-top:3px solid var(--rule);padding-left:0}}
-@media(max-width:900px){h1{font-size:68px}header{grid-template-columns:1fr}.shores,.good{grid-template-columns:1fr 1fr}.words{grid-template-columns:1fr 1fr}.conn{grid-template-columns:1fr;gap:9px}}
+@media(max-width:900px){h1{font-size:68px}header{grid-template-columns:1fr}.shores,.good,.cyc-grid{grid-template-columns:1fr 1fr}.cyc{margin-bottom:14px}.words{grid-template-columns:1fr 1fr}.conn{grid-template-columns:1fr;gap:9px}}
 @media(max-width:560px){main{padding:10px 14px 20px}.shores{grid-template-columns:1fr}.good{grid-template-columns:1fr;gap:9px}.kca th{font-size:13px}.kca td:first-child{font-size:14px}}
 @media print{
 @page{size:letter;margin:.42in}
@@ -66,12 +84,23 @@ h1{font-size:50pt}.meta{font-size:11pt;margin-top:3pt}
 .band-wrap{padding:7pt 0;break-inside:avoid}h2.band{font-size:16pt;margin-bottom:4pt}
 .words{gap:4pt 12pt}.words b{font-size:11pt}.words div{font-size:8.4pt}
 .good h3{font-size:13pt}.conn{font-size:8.8pt}.conn b{font-size:10pt}
-#kca{break-before:page;border-top:0}.kca th{font-size:11pt}.kca td{height:.82in}.kca tr.now td{background:none}.kca td:first-child{font-size:12pt}
+#kca{break-before:page;border-top:0}.kca th{font-size:11pt}.flow li.end{background:none;color:#000;font-weight:800}.tur .flow li{display:inline;border:0;padding:0!important;margin:0!important}.tur .flow li:not(:last-child)::after{content:" \2192  ";position:static;border:0;margin:0}.tur .src{font-size:7.6pt;margin:0 0 3pt}.kca td{height:.3in}.flow li{margin-bottom:6.5pt!important;padding:1.5pt 3pt!important}#cycles,#kca,#good,#conn{padding:4pt 0!important}.tur-h{font-size:12pt;margin:5pt 0 2pt}.tur{grid-template-columns:repeat(4,1fr);gap:0 10pt;font-size:8pt}.tur b{font-size:9pt}.tur cite{font-size:7pt}.kca tr.now td{background:none}.kca td:first-child{font-size:12pt}
 #good,#conn{break-inside:avoid}
-.layout{display:flex;flex-direction:column}.mainc{display:contents}.shores{order:1}#words{order:2}.side{order:3}#kca{order:4}#good{order:5}#conn{order:6}.side{border:0;border-bottom:2pt solid #000;padding:6pt 0;columns:3;column-gap:12pt;font-size:8.4pt}.side h2.band{font-size:12pt;margin:0 0 3pt}.side h2.sub{margin-top:5pt;padding-top:0;border:0;break-after:avoid}.side h3{font-size:9pt;margin:3pt 0 1pt}.stat{font-size:7.6pt}.stat b{font-size:20pt}.note,.chk{font-size:8pt}.note{margin:2pt 0}.side blockquote{font-size:8.4pt;margin:2pt 0}.chk{padding:2pt 0;break-inside:avoid}.v{font-size:7pt;color:#000;background:none!important;border:.6pt solid #000}.side a{color:#000}
+.layout{display:flex;flex-direction:column}.mainc{display:contents}.shores{order:1}#words{order:2}.side{order:3}#cycles{order:4;break-before:page}.cyc-grid{grid-template-columns:repeat(4,1fr);gap:0 10pt}.cyc{margin:0}.cyc h3{font-size:12pt}.cyc .src{font-size:7.6pt;margin:0 0 3pt}.flow{font-size:8pt}.flow li{padding:2pt 3pt;margin-bottom:8pt}.flow li:not(:last-child)::after{bottom:-8pt;border-width:3pt;border-top-width:6pt;border-bottom:0;margin-left:-3pt}.words{grid-template-columns:repeat(7,1fr)!important;gap:2pt 7pt}.words b{font-size:9.5pt!important}.words div{font-size:7.4pt!important}.shot img{aspect-ratio:2/1}#kca{order:5;break-before:auto!important}#good{order:6}#conn{order:7}.side{border:0;border-bottom:2pt solid #000;padding:6pt 0;columns:3;column-gap:12pt;font-size:8.4pt}.side h2.band{font-size:12pt;margin:0 0 3pt}.side h2.sub{margin-top:5pt;padding-top:0;border:0;break-after:avoid}.side h3{font-size:9pt;margin:3pt 0 1pt}.stat{font-size:7.6pt}.stat b{font-size:20pt}.note,.chk{font-size:8pt}.note{margin:2pt 0}.side blockquote{font-size:8.4pt;margin:2pt 0}.chk{padding:2pt 0;break-inside:avoid}.v{font-size:7pt;color:#000;background:none!important;border:.6pt solid #000}.side a{color:#000}
 .credit{font-size:7pt;margin-top:4pt}
 a{text-decoration:none}
 }
+
+.rush-jumps{display:flex;flex-wrap:wrap;gap:5px 20px;padding:8px 0;border-bottom:1px solid var(--hair);font-size:14px}
+.rush-reading{padding:16px 0 12px;border-top:2px solid var(--rule);scroll-margin-top:8px}
+.rush-reading h3{font-size:19px;line-height:1.2;margin:4px 0 8px}
+.rush-reading p{font-size:16px;line-height:1.5;margin:0 0 10px}
+.rush-reading a,.rush-jumps a{color:var(--sea);text-decoration:underline;text-underline-offset:2px}
+.rush-concepts,.rush-aud{display:grid;gap:16px 24px}.rush-concepts{grid-template-columns:repeat(3,minmax(0,1fr))}.rush-aud{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rush-aud p+h3{margin-top:18px}
+@media(max-width:800px){.rush-concepts{grid-template-columns:1fr}.rush-concepts article+article{border-top:1px solid var(--hair);padding-top:10px}}
+@media(max-width:650px){.rush-aud{grid-template-columns:1fr}}
+@media print{.rush-jumps{display:none}.rush-reading{padding-top:6pt}.rush-reading h2{break-after:avoid}.rush-reading h3{font-size:11pt;break-after:avoid}.rush-reading p{font-size:9.5pt;line-height:1.32}.rush-concepts{display:block;columns:2;column-gap:18pt}.rush-concepts article{break-inside:avoid}.rush-aud{display:block;columns:2;column-gap:18pt}#rush-primers{break-before:page}.rush-reading a{color:#222}}
 </style>
 <body><main>
 <a class="back" href="https://omatty123.github.io/teaching-fall-2026/courses/frst-110.html">← FRST 110</a>
@@ -79,6 +108,7 @@ a{text-decoration:none}
 <div><h1>Rising</h1><p class="meta">Part One, pp. 1–97 <span>· Elizabeth Rush · Monday, November 9</span></p></div>
 <img class="locator" src="rising-assets/part-one-map.png" alt="Map of the eastern and Gulf coasts of the United States with the four places numbered.">
 </header>
+<nav class="rush-jumps" aria-label="Part One reading notes"><a href="#rush-voiceover">Carrie Bradshaw and the royal “we”</a><a href="#rush-primers">Ecofascism, monkeywrenching, and Wendell Berry</a><a href="#rush-audience">Who is this written for?</a></nav>
 
 <div class="layout"><div class="mainc">
 <div class="shores">
@@ -121,16 +151,52 @@ a{text-decoration:none}
 
 </div>
 
-<section class="band-wrap" id="words"><h2 class="band">Eight words</h2>
+<section class="band-wrap" id="words"><h2 class="band">Words</h2>
 <div class="words">
 <div><b>tupelo</b>a swamp tree · p. 15</div>
 <div><b>rampike</b>a tree killed by salt, still standing · p. 5</div>
 <div><b>rhizome</b>an underground stem · p. 10</div>
+<div><b>accretion</b>land built up by sediment · p. 9</div>
+<div><b>mullet</b>a fish that leaps · p. 19</div>
+<div><b>pirogue</b>a flat-bottomed boat · p. 19</div>
+<div><b>bayou</b>a slow-moving stream · p. 20</div>
+<div><b>riparian</b>of a river’s banks · p. 20</div>
+<div><b>sweet water</b>fresh water · p. 24</div>
+<div><b>feedback loop</b>a result that feeds its own cause · p. 35</div>
+<div><b>mitigation</b>reducing the harm · p. 65</div>
+<div><b>infinite regression</b>each answer needs another behind it · p. 69</div>
 <div><b>subsidence</b>land slowly sinking · p. 21</div>
 <div><b>channelization</b>digging routes through marsh · p. 24</div>
 <div><b>sequester</b>to lock carbon away · p. 49</div>
 <div><b>calving</b>ice breaking off a glacier · p. 75</div>
 <div><b>equity</b>what you own of your house · p. 95</div>
+</div></section>
+
+<section class="band-wrap" id="cycles"><h2 class="band">Cycles</h2>
+<div class="cyc-grid">
+<div class="cyc" style="--p:var(--c)"><h3>The marsh</h3><p class="src">Loop · Rush, p. 63</p><ol class="flow loop"><li>Marsh rots, methane escapes</li><li>Air and ocean warm</li><li>Ice melts faster</li><li>Seas rise faster</li><li>Marsh cannot adapt</li></ol></div>
+<div class="cyc" style="--p:var(--b)"><h3>The drive to Houma</h3><p class="src">Loop · Rush, p. 35</p><ol class="flow loop"><li>Coastal land disappears</li><li>Islanders cannot grow their food</li><li>They drive to buy it</li><li>They burn fossil fuels</li></ol></div>
+<div class="cyc" style="--p:var(--a)"><h3>The ditch plug</h3><p class="src">Chain · Rush, p. 57</p><ol class="flow"><li>A plug blocks the tide</li><li>Salt water gets stuck</li><li>It evaporates, and the salt concentrates</li><li>Rhizomes rot, ground collapses</li><li>Stored gases escape</li></ol></div>
+<div class="cyc" style="--p:var(--d)"><h3>The dead birds</h3><p class="src">Chain · Egan, p. 130</p><ol class="flow"><li>Mussels clear the water</li><li>Algae bloom, die, use up oxygen</li><li>Botulism bacteria thrive</li><li>Mussels take them in, gobies eat mussels</li><li>Paralyzed gobies become easy prey</li><li>Birds die</li></ol></div>
+</div>
+<h3 class="tur-h">Why the turtles</h3>
+<div class="tur">
+<div class="cyc" style="--p:var(--d)"><b>Infinite regression</b><p class="src">The joke · p. 68</p><ol class="flow"><li>What supports the world? A tortoise.</li><li>What supports the tortoise? Another turtle.</li><li>And that turtle? “turtles all the way down.”</li><li class="end">No bottom. Nothing is explained.</li></ol></div>
+<div class="cyc" style="--p:var(--c)"><b>A chain that ends</b><p class="src">Rush’s gull · pp. 67, 69</p><ol class="flow"><li>The gull needs the clam.</li><li>The clam needs its shell.</li><li>The shell needs water that is not too acidic.</li><li class="end">The water absorbs carbon dioxide. There is a cause to name.</li></ol></div>
+<div><b>Her turn</b>“I don’t balk.” <cite>p. 69</cite> She treats the two as one idea. Only the second one leads anywhere you can act.<br><br><b>The comfort</b>“the world floods and the cycle starts again.” <cite>p. 69</cite> The loss becomes one more turn of a wheel.</div>
+<div><b>The problem</b>On p. 63 the same rot is a loop, which has to be broken. On p. 69 it is a cycle, which only has to be waited out.</div>
+</div>
+<div class="rec">
+<div><h3 class="tur-h">Recursion</h3><svg id="koch" viewBox="0 0 600 180" role="img" aria-label="A line that grows more jagged at each step, like a coastline."><path id="kp" fill="none" stroke="#0b6e8f" stroke-width="1.6"/></svg>
+<label class="kl">Steps <input id="kn" type="range" min="0" max="6" value="3"> <span id="kt"></span></label></div>
+<div class="recn"><p><b>A rule that calls itself.</b> Each step replaces every straight piece with a bent one. Stop at any step and you have a drawing. Never stop and you have an infinite regression.</p>
+<p><b>Coasts do this.</b> Measure a shore with a shorter ruler and <a href="https://en.wikipedia.org/wiki/Coastline_paradox">it comes out longer</a>.</p>
+<p><b>Two mirrors</b> facing each other. <a href="https://en.wikipedia.org/wiki/Indra%27s_net">Indra’s net</a>, where every jewel reflects every other jewel.</p></div>
+</div>
+<div class="rec3">
+<div><h4>Fractal</h4><canvas id="mb" width="420" height="280" aria-label="The Mandelbrot set. Click to zoom in."></canvas><div class="ctl"><button id="mbr">Reset</button><span>Click to zoom</span></div><p><b>z → z² + c.</b> <a href="https://tildesites.bowdoin.edu/~dfrancis/askanerd/mandelbrot/">One rule</a>, applied again to its own answer. Zoom as far as you like and it keeps going.</p></div>
+<div><h4>A recursive universe</h4><canvas id="life" width="420" height="280" aria-label="Conway's Game of Life, starting from five live cells."></canvas><div class="ctl"><button id="lg">Run</button><button id="lr">Restart</button></div><p><b>Five cells, Conway’s rules.</b> Each generation is made only from the one before. William Poundstone’s <a href="https://conwaylife.com/wiki/The_Recursive_Universe"><i>The Recursive Universe</i></a> (1985) builds on this.</p></div>
+<div><h4>A universe looking back</h4><svg viewBox="0 0 420 280" role="img" aria-label="John Wheeler's U diagram: a line that starts thin, swells as the universe grows, and ends with observers looking back at the beginning."><path d="M60 40 C 60 250, 300 280, 345 90" fill="none" stroke="#0b4f6c" stroke-width="3"/><path d="M345 90 C 330 215, 150 245, 90 40 Z" fill="#cfe3ec" stroke="none"/><path d="M322 66 L84 44" stroke="#b5451d" stroke-width="2.4" stroke-dasharray="7 5"/><path d="M84 44 l13 -6 l-1 12 z" fill="#b5451d"/><text x="22" y="28" font-size="15" fill="#16232b">Start of the universe</text><text x="248" y="52" font-size="15" fill="#16232b">Observers</text></svg><p><b>A “self-excited circuit.”</b> <a href="https://philsci-archive.pitt.edu/27412/1/PhilSciArchive_OGrady2025.pdf">John Wheeler’s proposal</a>: the universe produces observers, and observers give even its earliest days their reality. It is speculative and no one has completed it.</p></div>
 </div></section>
 
 <section class="band-wrap" id="kca"><h2 class="band">What stops utopia?</h2>
@@ -180,4 +246,88 @@ a{text-decoration:none}
 <p class="note">Thirty-seven homes opened inland at <a href="https://locd.la.gov/programs/isle-de-jean-charles-resettlement-project">Schriever in 2022</a>. The island is about 320 acres, down from more than 22,000. In 2023 the tribe <a href="https://www.wwno.org/coastal-desk/2023-12-23/jean-charles-choctaw-nation-challenges-state-resettlement-plan-in-legal-complaint-to-hud">filed a federal complaint</a> against the state’s plan.</p>
 </aside>
 </div>
-</main></body></html>
+<section id="rush-voiceover" class="rush-reading" aria-labelledby="rush-voiceover-heading">
+<h2 id="rush-voiceover-heading" class="band">Carrie Bradshaw and the royal “we”</h2>
+<div class="rush-aud">
+<div><h3>The oil companies and the islanders</h3>
+<p>In <i>Sex and the City</i>, something happens to one of Carrie Bradshaw’s friends. By the time Carrie sits down to write her column, she’s wondering what it means for all of us. Listen for that voice in <i>Rising</i>. On p. 24, oil companies cut channels through the marsh. People on Isle de Jean Charles live with the damage. By the end of the paragraph Rush is talking about “our very ideas of who we are.” The islander, the oil executive and the visiting writer now share a pronoun. Only the company had an obligation to fill in the channel. <a href="https://interviews.televisionacademy.com/shows/sex-and-the-city">Carrie’s column and voice-over</a> · <a href="https://milkweed.org/book/rising"><i>Rising</i>, p. 24</a></p></div>
+<div><h3>What Rush asks Hal Wanless</h3>
+<p>On p. 90, Rush asks Hal Wanless, “What comes next?” Then the voice-over starts. “If I believe you, will I be among the chosen?” Then she wonders whether the most vulnerable people will have the same chances. Hal is sitting right there. She could ask him who gets to leave, who gets to stay, and who decides. She lets the interview move on. The reader learns that Rush worried about those people. We still don’t know what Hal would have said. <a href="https://milkweed.org/book/rising"><i>Rising</i>, pp. 90–91</a></p></div>
+</div>
+</section>
+<section id="rush-primers" class="rush-reading" aria-labelledby="rush-primers-heading">
+<h2 id="rush-primers-heading" class="band">Ecofascism, monkeywrenching, and Wendell Berry</h2>
+<div class="rush-concepts">
+<article id="ecofascism"><h3>Ecofascism</h3>
+<p>Ecofascism uses the protection of land or nature to justify authoritarian rule and to decide who belongs on racial or national grounds. In Nazi Germany, the link between ancestry and land had legal force. The 1933 Hereditary Farm Law restricted who could own designated hereditary farms according to the regime’s racial definition of a German farmer. <a href="https://germanhistorydocs.org/en/nazi-germany-1933-1945/ghdi:document-1550">Read the law</a> · <a href="https://today.uconn.edu/2022/09/a-darker-shade-of-green/">History of the term</a></p>
+<p><b>Rush, pp. 35, 74, 90.</b> On p. 35, islanders driving for groceries become partly responsible for the loss of their land. On p. 74, Rush reads Genesis beside the growth of Florida’s population. The danger comes when an argument about what a coast can sustain becomes a judgment about which people should be allowed to live there. Rush herself worries about who will get into the ark.</p></article>
+<article id="monkeywrenching"><h3>Monkeywrenching</h3>
+<p>In environmental politics, <i>monkeywrenching</i> means deliberately interfering with or damaging property to stop work activists consider destructive. Edward Abbey’s 1975 novel <i>The Monkey Wrench Gang</i> helped popularize the term. Its characters see development in the American Southwest as a public wrong, even when the work has official approval. <a href="https://assets.cambridge.org/97811070/95298/excerpt/9781107095298_excerpt.pdf">Abbey and the history of environmental protest</a></p>
+<p><b>Rush, pp. 62–63.</b> Laura Sewall raises the possibility of acting directly over a ditch plug in the Maine marsh. She knows the place and names a particular intervention. Within a page, Rush has moved from Sewall’s proposal to her own uncertainty about marshes worldwide. Notice how the change in scale changes who gets the last word.</p></article>
+<article id="wendell-berry"><h3>Wendell Berry</h3>
+<p>Berry is a Kentucky farmer, poet, and essayist. In <i>The Unsettling of America</i> (1977), he argues that industrial agriculture changes who can earn a living on the land, who controls the work, and what a community knows how to do. That makes him useful on p. 35 as well. The drive for groceries has a history in how people lost the ability to grow food at home. <a href="https://www.counterpointpress.com/books/the-unsettling-of-america-50th-anniversary-edition/">Berry’s book on farming</a></p>
+<p><b>Rush, pp. 88–89.</b> After Robert says he wanted to leave his Miami house to his children, Rush quotes the opening of Berry’s second Sabbath poem of 1988. Read one sentence further in each writer. Berry turns to what people have been entrusted to care for. Rush turns to what happens inside the mind when we imagine destruction. <a href="https://www.saltproject.org/progressive-christian-blog/2020/3/29/wendell-berry-good-friday-and-earth-day">Read Berry’s poem</a></p></article>
+</div>
+</section>
+<section id="rush-audience" class="rush-reading" aria-labelledby="rush-audience-heading">
+<h2 id="rush-audience-heading" class="band">Who is this written for?</h2>
+<div class="rush-aud">
+<div><h3>The reader Rush pictured</h3>
+<p>When a college student asked whom she imagined reading <i>Rising</i>, Rush described a white weekend hiker with an REI membership who already read <i>Orion</i>. She included herself. She wanted that reader to take inequality seriously and to hear from people whose politics they might dismiss. She also wanted a place beside literary essayists such as Eula Biss and Maggie Nelson. The islanders are among the people she listens to. The reader she imagines persuading starts somewhere else. <a href="https://www.terrain.org/2022/interviews/elizabeth-rush/">Rush on her readers</a> · <a href="https://arkanamag.org/2022/05/02/interview-elizabeth-rush/">Rush on her literary ambitions</a></p>
+<h3>The route into a classroom</h3>
+<p>Rush earned a Master of Fine Arts in nonfiction at Southern New Hampshire University. <i>Guernica</i> published her Maine marsh reporting in 2017. Milkweed Editions published <i>Rising</i> in 2018. It became a 2019 Pulitzer finalist in General Nonfiction. UC Santa Barbara then selected it for a campus-wide reading program. Each institution made a choice about which account of the coast more people would read. Our class has made that choice, too. <a href="https://www.snhu.edu/about-us/newsroom/liberal-arts/elizabeth-rush-q-and-a">MFA</a> · <a href="https://www.guernicamag.com/the-marsh-at-the-end-of-the-world/">Magazine piece</a> · <a href="https://www.pulitzer.org/finalists/elizabeth-rush">Pulitzer citation</a> · <a href="https://news.ucsb.edu/2019/019665/rising">Campus selection</a></p></div>
+<div><h3>What the praise singles out</h3>
+<p>David Biello called <i>Rising</i> “a book about language, first and foremost” in <i>The New York Times Book Review</i>. He found the residents’ accounts the most intense parts of the book. Boston’s NPR member station WBUR interviewed Rush on <i>Radio Boston</i>. Its headline foregrounded retreat as unavoidable. <a href="https://www.nytimes.com/2018/08/17/books/review/rising-elizabeth-rush.html">Times review</a> · <a href="https://bookmarks.reviews/reviews/all/rising-dispatches-from-the-new-american-shore/">Review excerpt</a> · <a href="https://www.wbur.org/radioboston/2018/11/27/rising-new-american-shore">WBUR interview</a></p>
+<p>Milkweed quotes <i>The Nation</i> praising Rush’s “lyrical, deeply reported essays” and their attention to vulnerable communities. Even a magazine on the political left and the <i>Times</i> find common ground in the literary qualities they praise. On pp. 39–41, Edison Dardar explains why neighbors need one another. The chapter ends when Rush tastes his persimmon and feels she understands. A reader can share that discovery, feel open-minded for having listened, and still close the book unable to name one company that owed the island a cleanup. <a href="https://milkweed.org/book/rising">The publisher’s collection of praise</a></p></div>
+</div>
+</section>
+</main>
+<script>
+(function(){
+  var p=document.getElementById('kp'),n=document.getElementById('kn'),t=document.getElementById('kt');
+  function koch(a,b,d,out){
+    if(d===0){out.push(b);return;}
+    var dx=(b[0]-a[0])/3,dy=(b[1]-a[1])/3,
+        c=[a[0]+dx,a[1]+dy],e=[a[0]+2*dx,a[1]+2*dy],
+        s=Math.sqrt(3)/2,
+        tip=[c[0]+dx/2+s*dy,c[1]+dy/2-s*dx];
+    koch(a,c,d-1,out);koch(c,tip,d-1,out);koch(tip,e,d-1,out);koch(e,b,d-1,out);
+  }
+  function draw(){
+    var d=+n.value,a=[12,168],out=[a];koch(a,[588,168],d,out);
+    p.setAttribute('d','M'+out.map(function(q){return q[0].toFixed(1)+' '+q[1].toFixed(1);}).join('L'));
+    t.textContent='Step '+d+': '+Math.pow(4/3,d).toFixed(1)+' times as long';
+  }
+  n.addEventListener('input',draw);draw();
+})();
+(function(){
+  var c=document.getElementById('mb'),x=c.getContext('2d'),W=c.width,H=c.height,start={cx:-0.6,cy:0,s:3.2},v={cx:start.cx,cy:start.cy,s:start.s};
+  function paint(){
+    var img=x.createImageData(W,H),d=img.data,sc=v.s/W,max=Math.min(900,160+Math.floor(70*Math.log(3.2/v.s+1)));
+    for(var j=0;j<H;j++)for(var i=0;i<W;i++){
+      var a=v.cx+(i-W/2)*sc,b=v.cy+(j-H/2)*sc,zr=0,zi=0,k=0;
+      while(k<max&&zr*zr+zi*zi<4){var t=zr*zr-zi*zi+a;zi=2*zr*zi+b;zr=t;k++;}
+      var o=(i+j*W)*4;
+      if(k===max){d[o]=11;d[o+1]=47;d[o+2]=66;}
+      else{var f=0.5+0.5*Math.sin(k*0.16);d[o]=232-180*f;d[o+1]=242-120*f;d[o+2]=246-70*f;}
+      d[o+3]=255;
+    }
+    x.putImageData(img,0,0);
+  }
+  c.style.cursor='zoom-in';
+  c.addEventListener('click',function(e){var r=c.getBoundingClientRect(),sc=v.s/r.width;v.cx+=(e.clientX-r.left-r.width/2)*sc;v.cy+=(e.clientY-r.top-r.height/2)*sc;v.s/=3;paint();});
+  document.getElementById('mbr').addEventListener('click',function(){v.cx=start.cx;v.cy=start.cy;v.s=start.s;paint();});
+  paint();
+})();
+(function(){
+  var c=document.getElementById('life'),x=c.getContext('2d'),S=4,W=c.width/S,H=c.height/S,g,tm=null,b=document.getElementById('lg');
+  function seed(){g=new Uint8Array(W*H);var m=(H>>1)*W+(W>>1);[[0,-1],[1,-1],[-1,0],[0,0],[0,1]].forEach(function(q){g[(H/2+q[1]|0)*W+(W/2+q[0]|0)]=1;});show();}
+  function show(){x.fillStyle='#eef5f8';x.fillRect(0,0,c.width,c.height);x.fillStyle='#0b4f6c';for(var j=0;j<H;j++)for(var i=0;i<W;i++)if(g[j*W+i])x.fillRect(i*S,j*S,S-.5,S-.5);}
+  function step(){var n=new Uint8Array(W*H);for(var j=0;j<H;j++)for(var i=0;i<W;i++){var k=0;for(var dy=-1;dy<2;dy++)for(var dx=-1;dx<2;dx++)if(dx||dy)k+=g[((j+dy+H)%H)*W+(i+dx+W)%W];n[j*W+i]=(k===3||(k===2&&g[j*W+i]))?1:0;}g=n;show();}
+  function stop(){clearInterval(tm);tm=null;b.textContent='Run';}
+  b.addEventListener('click',function(){if(tm)stop();else{tm=setInterval(step,90);b.textContent='Pause';}});
+  document.getElementById('lr').addEventListener('click',function(){stop();seed();});
+  seed();
+})();
+</script>
+</body></html>
