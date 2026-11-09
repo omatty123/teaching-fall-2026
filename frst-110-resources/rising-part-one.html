@@ -1,238 +1,106 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rising · Part One · FRST 110</title><meta name="description" content="Elizabeth Rush, Rising, Part One: class passages, discussion notes, and sources."><meta property="og:title" content="Rising · Part One · FRST 110"><meta property="og:description" content="Elizabeth Rush, Rising, Part One: class passages, discussion notes, and sources."><meta property="og:type" content="article"><meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-part-one.html"><meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-assets/island.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-assets/island.jpg"><link rel="icon" href="../favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rising · Part One · FRST 110</title><meta name="description" content="Elizabeth Rush, Rising, Part One: who is we, four places, two loops, eight words."><meta property="og:title" content="Rising · Part One · FRST 110"><meta property="og:description" content="Elizabeth Rush, Rising, Part One: who is we, four places, two loops, eight words."><meta property="og:type" content="article"><meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-part-one.html"><meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-assets/island.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-assets/island.jpg"><link rel="icon" href="../favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&display=swap">
 <style>
-@font-face {
-  font-family: "Source Sans 3";
-  src: url("../_kit/fonts/SourceSans3VF-Upright.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 200 900;
-  font-display: swap;
+:root{--ink:#16232b;--mid:#566670;--rule:#0b4f6c;--hair:#c9d6dc;--sea:#0b4f6c;--a:#0b6e8f;--b:#b5451d;--c:#4c7a2e;--d:#7a3b8f}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:16px/1.4 Archivo,"Arial Narrow",Arial,sans-serif}
+main{max-width:1240px;margin:auto;padding:14px 20px 28px}
+a{color:inherit}
+.back{font-size:14px}
+header{display:grid;grid-template-columns:1fr 330px;gap:24px;align-items:end;border-bottom:3px solid var(--rule);padding:4px 0 12px}
+h1{color:var(--sea);font-size:92px;line-height:.9;font-weight:800;font-stretch:75%;letter-spacing:-.01em;margin:0}
+.meta{font-size:18px;font-weight:600;margin:8px 0 0}
+.meta span{font-weight:400;color:var(--mid)}
+.locator{width:100%;display:block}
+.we{display:grid;grid-template-columns:1.25fr 1fr;gap:28px;padding:16px 0;border-bottom:3px solid var(--rule);align-items:stretch}
+.crop{margin:0;overflow:hidden;min-height:380px;position:relative}
+.crop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 12%;transform:scale(1.7);transform-origin:62% 12%}
+.we h2{color:var(--b);font-size:84px;line-height:.92;font-weight:800;font-stretch:75%;margin:0 0 16px}
+.we blockquote{font-size:23px;line-height:1.2;margin-bottom:14px}
+.we cite{font-size:15px}
+.line{font-size:27px;line-height:1.1;font-weight:800;font-stretch:80%;color:var(--sea);margin:14px 0 0;padding-top:12px;border-top:3px solid var(--b)}
+.loops{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px}
+.loop{--l:var(--c)}.loop.h{--l:var(--b)}
+.loop h3{font-size:24px;font-weight:800;font-stretch:75%;color:var(--l);margin:0 0 7px}.loop h3 span{font-size:14px;font-weight:400;font-stretch:100%;color:var(--mid)}
+.loop ol{list-style:none;display:flex;gap:6px 20px;margin:0;padding:0}
+.loop li{position:relative;background:var(--l);color:#fff;font-size:15px;line-height:1.15;font-weight:700;padding:8px 8px;flex:1 1 0;min-width:0}
+.loop li:not(:last-child)::after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:var(--l);font-weight:800}
+.back2{font-size:14px;font-weight:700;color:var(--l);margin:6px 0 0;text-align:right}
+.back2::before{content:"↻ "}
+.shores{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 24px;padding:14px 0;border-bottom:3px solid var(--rule)}
+.shore{display:flex;flex-direction:column}
+.shore:nth-child(1){--p:var(--a)}.shore:nth-child(2){--p:var(--b)}.shore:nth-child(3){--p:var(--c)}.shore:nth-child(4){--p:var(--d)}
+.shot video{display:block;width:100%;aspect-ratio:1;object-fit:cover}.shot img.pr{display:none}
+.good div:nth-child(1) h3{color:var(--a)}.good div:nth-child(2) h3{color:var(--b)}.good div:nth-child(3) h3{color:var(--c)}.good div:nth-child(4) h3{color:var(--d)}
+.conn b a{color:var(--sea)}
+.shot{position:relative;margin:0}
+.shot img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.shot b{position:absolute;left:0;top:0;background:var(--p);color:#fff;font-size:22px;font-weight:800;width:36px;height:36px;line-height:36px;text-align:center}
+.place{font-size:14px;font-weight:700;margin:9px 0 0}
+.place span{font-weight:400;color:var(--mid)}
+h2.q{color:var(--p);font-size:29px;line-height:1.02;font-weight:800;font-stretch:75%;margin:5px 0 9px}
+blockquote{margin:0 0 8px;font-size:16px;line-height:1.28}
+cite{display:block;font-style:normal;font-size:13px;color:var(--mid);margin-top:1px}
+.who{margin:auto 0 0;padding-top:6px;border-top:1px solid var(--hair);font-size:14px;line-height:1.3}
+h2.band{color:var(--sea);font-size:30px;font-weight:800;font-stretch:75%;line-height:1;margin:0 0 9px}
+.band-wrap{padding:15px 0;border-bottom:3px solid var(--rule)}
+.words{display:grid;grid-template-columns:repeat(4,1fr);gap:9px 20px}
+.words div{font-size:14px;line-height:1.25;color:var(--mid)}
+.words b{display:block;font-size:19px;font-weight:800;font-stretch:85%;color:var(--ink)}
+.kca{width:100%;border-collapse:collapse;table-layout:fixed}
+.kca th{font-size:15px;font-weight:800;text-align:left;padding:5px 8px 5px 0;border-bottom:2px solid var(--rule)}
+.kca td{border-bottom:1px solid var(--hair);border-left:1px solid var(--hair);height:58px}
+.kca td:first-child{border-left:0;font-weight:800;font-size:17px;font-stretch:85%;vertical-align:top;padding:6px 8px 0 0}
+.kca tr.now td{background:#e8f2f6}.kca tr.now td:first-child{color:var(--sea);padding-left:6px}
+.good{display:grid;grid-template-columns:repeat(4,1fr);gap:0 24px}
+.good h3{font-size:24px;font-weight:800;font-stretch:75%;margin:0 0 4px}
+.conn{display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px;font-size:15px;line-height:1.3}
+.conn b{display:block;font-size:17px;font-stretch:85%}
+.credit{font-size:12px;color:var(--mid);margin:9px 0 0}
+@media(max-width:900px){h1{font-size:68px}header{grid-template-columns:1fr}.shores,.good{grid-template-columns:1fr 1fr}.words{grid-template-columns:1fr 1fr}.conn{grid-template-columns:1fr;gap:9px}.we{grid-template-columns:1fr}.crop{min-height:280px}.we h2{font-size:64px}.loops{grid-template-columns:1fr}}
+@media(max-width:560px){.loop ol{flex-direction:column}.loop li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-17px;transform:none}.loop ol{gap:16px}}
+@media(max-width:560px){main{padding:10px 14px 20px}.shores{grid-template-columns:1fr}.good{grid-template-columns:1fr;gap:9px}.kca th{font-size:13px}.kca td:first-child{font-size:14px}}
+@media print{
+.we{grid-template-columns:2.6in 1fr;gap:12pt;padding:7pt 0;border-bottom-width:2pt}.crop{min-height:1.9in}.we h2{font-size:30pt;margin-bottom:5pt}.we blockquote{font-size:11pt;margin-bottom:4pt}.we cite{font-size:8pt}.line{font-size:12pt;margin-top:4pt;padding-top:4pt;border-top-width:1pt}.loops{gap:0 14pt}.loop h3{font-size:13pt}.loop li{background:none;color:#000;border:1px solid #000;font-size:8.4pt;padding:3pt 4pt;flex-basis:60pt}.loop li:not(:last-child)::after{color:#000;right:-13pt}.back2{font-size:8pt;color:#000;margin-top:2pt}
+#loops,#words{break-inside:avoid}
+@page{size:letter;margin:.42in}
+body{font-size:9.5pt;line-height:1.25}
+main{max-width:none;padding:0}.back{display:none}
+header{grid-template-columns:1fr 2.2in;padding:0 0 5pt;border-bottom-width:2pt}
+h1{font-size:50pt}.meta{font-size:11pt;margin-top:3pt}
+:root{--ink:#000;--mid:#444;--rule:#000;--hair:#bbb;--sea:#000;--a:#000;--b:#000;--c:#000;--d:#000}img{filter:grayscale(1)}.shot video{display:none}.shot img.pr{display:block}
+.shores{grid-template-columns:repeat(4,1fr);gap:0 9pt;padding:7pt 0;border-bottom-width:2pt}.good,.words{grid-template-columns:repeat(4,1fr)}.conn{grid-template-columns:repeat(3,1fr);gap:0 12pt}.band-wrap{border-bottom-width:2pt}
+.shot b{font-size:12pt;width:20pt;height:20pt;line-height:20pt}
+.place{font-size:8.2pt;margin-top:4pt}h2.q{font-size:15pt;margin:2pt 0 4pt}blockquote{font-size:9.2pt;margin-bottom:4pt}cite{font-size:7.8pt}.who{font-size:8.2pt}
+.band-wrap{padding:7pt 0;break-inside:avoid}h2.band{font-size:16pt;margin-bottom:4pt}
+.words{gap:4pt 12pt}.words b{font-size:11pt}.words div{font-size:8.4pt}
+.good h3{font-size:13pt}.conn{font-size:8.8pt}.conn b{font-size:10pt}
+#kca{break-before:page;border-top:0}.kca th{font-size:11pt}.kca td{height:.82in}.kca tr.now td{background:none}.kca td:first-child{font-size:12pt}
+#good,#conn{break-inside:avoid}
+.credit{font-size:7pt;margin-top:4pt}
+a{text-decoration:none}
 }
-@font-face {
-  font-family: "Source Sans 3";
-  src: url("../_kit/fonts/SourceSans3VF-Italic.woff2") format("woff2");
-  font-style: italic;
-  font-weight: 200 900;
-  font-display: swap;
-}
-:root {
-  --ink:#192e35; --mid:#4f6268; --sea:#205568; --hair:#d2dcdd;
-  --a:#346374; --b:#8c472d; --c:#4c6746; --d:#665478;
-}
-* {box-sizing:border-box}
-body {margin:0; background:white; color:var(--ink); font:18px/1.48 "Source Sans 3",Arial,sans-serif}
-main {max-width:1100px; margin:auto; padding:19px clamp(18px,4vw,50px) 32px}
-a {color:var(--sea); text-decoration-thickness:1px; text-underline-offset:.14em}
-a:focus-visible, summary:focus-visible, button:focus-visible, input:focus-visible {outline:2px solid var(--sea); outline-offset:3px}
-.back, .date, figcaption, .page-ref, .range, cite, .credit {font-size:15px; color:var(--mid)}
-.topline, header, figcaption {display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:4px 16px}
-header {justify-content:flex-start; column-gap:20px; border-bottom:1px solid var(--ink); padding:10px 0 12px}
-h1, h2, h3, h4, p, figure, blockquote {margin:0}
-h1 {font-size:clamp(34px,3.3vw,44px); letter-spacing:-.035em; font-weight:660; line-height:1.1}
-.meta {font-size:18px; color:var(--mid)}
-.opening {display:grid; grid-template-columns:minmax(0,.93fr) minmax(0,1.07fr); align-items:center; gap:clamp(24px,4.5vw,64px); padding:20px 0 21px}
-.opening img {width:100%; height:clamp(195px,18vw,245px); display:block; object-fit:cover; object-position:50% 53%}
-figcaption {padding-top:5px; line-height:1.25}
-.excerpts {display:grid; gap:18px}
-.page-ref {display:block; margin-bottom:4px; font-weight:600}
-.excerpts blockquote {max-width:34ch; font-size:clamp(20px,2vw,26px); line-height:1.23; letter-spacing:-.012em}
-.topic-group {display:grid; grid-template-columns:minmax(125px,.29fr) minmax(0,1fr); gap:10px 24px; border-top:1px solid var(--ink); padding:0 0 10px}
-.topic-group > h2 {font-size:23px; font-weight:640; line-height:1.2; margin-top:13px}
-details {min-width:0}
-details+details {border-top:1px solid var(--hair)}
-summary {list-style:none; display:grid; grid-template-columns:minmax(0,1fr) auto 12px; align-items:center; column-gap:14px; min-height:47px; padding:9px 3px 9px 0; cursor:pointer; font-size:20px; line-height:1.24; font-weight:600}
-summary::-webkit-details-marker {display:none}
-summary::after {content:""; width:7px; height:7px; grid-column:3; border:solid var(--sea); border-width:0 1.5px 1.5px 0; transform:rotate(45deg); justify-self:end; margin-right:3px}
-details[open]>summary::after {transform:rotate(225deg)}
-summary:hover .topic-title {text-decoration:underline; text-underline-offset:3px}
-.range {font-weight:400; text-align:right; line-height:1.2}
-.detail-body {padding:4px 0 18px}
-.detail-body p, .detail-body blockquote {margin:0 0 10px}
-.detail-body p:last-child {margin-bottom:0}
-.detail-body h2, .detail-body h3 {font-size:21px; line-height:1.18; font-weight:650; margin:17px 0 7px}
-.detail-body h4 {font-size:18px; margin:8px 0 5px}
-.detail-body h3:first-child, .detail-body h2:first-child {margin-top:4px}
-.rush-aud, .rush-concepts {max-width:68ch}
-.rush-aud > div+div, .rush-concepts article+article {margin-top:18px}
-.locator {width:min(100%,360px); height:auto; display:block; margin:0 0 16px}
-.shores, .good, .words {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 24px}
-.shot {position:relative}
-.shot img, .shot video {width:100%; height:auto; aspect-ratio:2 / 1; object-fit:cover; display:block}
-.shot .pr {display:none}
-.shot b {position:absolute; top:5px; left:5px; padding:0 6px; background:white; color:var(--ink); font-size:15px}
-.place {font-weight:650; padding-top:6px}
-.place span, .who, .src {font-size:15px; color:var(--mid)}
-.place span {display:block; font-weight:400}
-cite {display:block; font-style:normal}
-.words b, .conn b, .stat b {display:block}
-.conn {display:grid; gap:10px}
-.good, .kca {margin-bottom:18px}
-.table-scroll {max-width:100%; overflow:auto}
-.kca {border-collapse:collapse; width:100%; min-width:540px; font-size:15px}
-.kca th, .kca td {padding:5px; text-align:left; border:1px solid var(--hair)}
-.kca td {height:28px}
-.stat {display:flex; gap:24px; margin-bottom:5px}
-.stat b {font-size:24px}
-.chk {padding:9px 0; border-top:1px solid var(--hair)}
-.chk p {margin-bottom:4px}
-.v {font-weight:650; margin-right:.35em}
-.claim {font-weight:600}
-.detail-body .band.sub {margin-top:18px}
-.cyc-grid,.tur,.rec,.rec3 {display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 22px}
-.cyc-grid,.tur,.rec {margin-bottom:18px}
-.flow {padding-left:23px; margin:0; font-size:16px}
-.flow li {padding:2px 0}
-.flow.loop {border-left:2px solid var(--p); margin-left:1px}
-.flow li.end {font-weight:650}
-.tur b, .recn b {font-weight:650}
-.rec canvas, .rec3 canvas, .rec svg, .rec3 svg {width:100%; height:auto; display:block; background:#f0f4f5}
-.kl,.ctl {display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin:5px 0; font-size:15px}
-.kl input {max-width:100%}
-button {font:inherit; color:var(--ink); background:white; border:1px solid var(--mid); padding:2px 9px; cursor:pointer}
-.credit {margin-top:10px}
-@media(max-width:700px) {
-  .topic-group {grid-template-columns:minmax(0,1fr); gap:3px}
-  .topic-group>h2 {margin-top:12px; font-size:21px}
-  .opening {gap:18px}
-  .range {font-size:14px}
-}
-@media(max-width:540px) {
-  main {padding:10px 16px 20px}
-  header {gap:3px 12px; padding:8px 0}
-  .meta {font-size:16px}
-  .opening {grid-template-columns:1fr; gap:12px; padding:14px 0}
-  .opening img {height:146px}
-  .excerpts {gap:11px}
-  .excerpts blockquote {font-size:21px}
-  summary {font-size:18px; column-gap:7px; min-height:45px}
-  .topic-group>h2 {font-size:20px}
-  .range {max-width:9em}
-  .range.secondary {display:none}
-  .shores,.good,.tur,.rec,.rec3 {grid-template-columns:1fr}
-  .detail-body {font-size:17px}
-  .detail-body h3 {font-size:19px}
-}
-@media print {
-  @page {size:letter; margin:.5in}
-  body {font:10.5pt/1.28 "Source Sans 3",Arial,sans-serif; color:#000}
-  main {max-width:none; padding:0}
-  .back,.ctl,.kl {display:none}
-  h1 {font-size:24pt}
-  .opening img {height:125px; filter:grayscale(1)}
-  .excerpts blockquote {font-size:13pt}
-  .topic-group {display:block; border-top:1px solid #555}
-  .topic-group>h2 {font-size:15pt}
-  summary {min-height:0; padding:5pt 0; font-size:13pt; break-after:avoid}
-  summary::after {display:none}
-  details::details-content {display:contents; content-visibility:visible}
-  .detail-body {padding:0 0 8pt}
-  .detail-body h2,.detail-body h3 {font-size:12pt; break-after:avoid}
-  .place,.detail-body h4 {break-after:avoid}
-  .opening, .shore, .cyc, .chk, .good>div {break-inside:avoid}
-  .shot video {display:none}
-  .shot .pr {display:block}
-  .table-scroll {overflow:visible}
-  .kca {min-width:0}
-  img {filter:grayscale(1)}
-  a, .range, cite {color:inherit}
-}
-/* The returning arrow distinguishes a feedback loop from a sequence. */
-.flow {list-style:none; padding:0; position:relative}
-.flow li {position:relative; border:1px solid #87999a; padding:4px 8px; margin-bottom:14px}
-.flow li:last-child {margin-bottom:0}
-.flow li:not(:last-child)::after {content:""; position:absolute; left:50%; bottom:-11px; border:4px solid transparent; border-top:7px solid var(--ink); border-bottom:0}
-.flow.loop {border:0; padding-right:16px}
-.flow.loop::after {content:""; position:absolute; top:13px; right:0; bottom:13px; width:15px; border:1px solid var(--mid); border-left:0}
-.flow.loop::before {content:""; position:absolute; top:9px; right:12px; border:4px solid transparent; border-right:6px solid var(--mid); border-left:0}
 </style>
 <body><main>
-<div class="topline"><a class="back" href="https://omatty123.github.io/teaching-fall-2026/courses/frst-110.html">← FRST 110</a><time class="date" datetime="2026-11-09">Monday, November 9</time></div>
-<header><h1>Rising</h1><p class="meta">Elizabeth Rush · Part One, pp. 1–97</p></header>
-<section class="opening" aria-label="Isle de Jean Charles, pp. 24 and 35">
-<figure><img src="rising-assets/island.jpg" width="640" height="640" alt="Satellite view of the narrow inhabited strip of Isle de Jean Charles amid marsh and open water."><figcaption><span>Isle de Jean Charles, Louisiana</span><span>Esri</span></figcaption></figure>
-<div class="excerpts">
-<div><span class="page-ref">p. 24 · Filling the channels after drilling</span><blockquote>“The oil companies were supposed to ‘rock’ each channel”</blockquote></div>
-<div><span class="page-ref">p. 35 · The drive for groceries</span><blockquote>“Every time the islanders drive to Houma they are, in some small way, accelerating the disappearance of this ecosystem.”</blockquote></div>
-</div>
-</section>
-<section class="topic-group"><h2>Discussion</h2>
-<div>
-<div class="detail-body" id="naquin">
-<h3>Rush gets a “we” for free. Naquin spent 20 years trying to build one.</h3>
-<p class="rush-aud">Chief Albert Naquin wanted the Army Corps of Engineers to pay for the islanders to move together. Chris Brunet wanted to know why the Corps had left the island outside the levee. On p. 32, Naquin tells Rush that people who lived off the island raised questions at the meeting with the government. I wanted to hear those questions and what it would have taken to get people to agree. Rush turns to the history of the wetlands just as Naquin gets to the hard part of organizing. <a href="https://www.reed.edu/reed-magazine/articles/2018/elizabeth-rush-rising-excerpt.html">Rush, pp. 31–33</a></p>
-</div>
-<details id="bengal-tebhaga">
-<summary><span class="topic-title">Bengal’s sharecroppers</span><span class="range">1946</span></summary>
-<div class="detail-body"><p class="rush-aud">In the Tebhaga movement, communist organizers and sharecroppers demanded two-thirds of the harvest for the grower and the right to thresh the grain on the grower’s own floor. That second demand mattered. Once the grain was on the landlord’s floor, he controlled the division. Farmers across caste and religious lines could agree on who should control the grain they grew. They pushed Bengal’s government to publish a bill protecting their share. The government never passed it, and police fired on the farmers. <a href="https://ras.org.in/articles/103/text/article.html">Benoy Konar on the two demands</a></p></div>
-</details>
-<details id="vietnam-viet-minh">
-<summary><span class="topic-title">Vietnam’s independence coalition</span><span class="range">1945</span></summary>
-<div class="detail-body"><p class="rush-aud">In August 1945, the communist-led Việt Minh brought delegates from political parties and religious organizations to Tân Trào. They agreed on what independence would mean for a tenant who owed rent, a farmer in debt, or a woman who wanted to vote. Their program called for lower rents, postponed debt payments, and universal suffrage. Later that month, several Việt Minh members gave up their seats in the provisional government so people outside the front could help govern. <a href="https://en.nhandan.vn/august-16-1945-congress-of-peoples-representatives-convenes-in-tan-trao-post151929.html">The congress and its program</a> · <a href="https://chinhphu.vn/giai-doan-1945-1954-khang-chien-va-kien-quoc/i-tu-uy-ban-dan-toc-giai-phong-den-chinh-phu-lam-thoi-nuoc-viet-nam-dan-chu-cong-hoa-10001588">Who joined the provisional government</a></p></div>
-</details>
-<details id="rush-voiceover">
-<summary><span class="topic-title" id="rush-voiceover-heading">Carrie Bradshaw and the royal “we”</span><span class="range">pp. 24, 90–91</span></summary>
-<div class="detail-body">
-<div class="rush-aud">
-<div><h3>The oil companies and the islanders</h3>
-<p>In <i>Sex and the City</i>, something happens to one of Carrie Bradshaw’s friends. By the time Carrie sits down to write her column, she’s wondering what it means for all of us. Listen for that voice in <i>Rising</i>. On p. 24, oil companies cut channels through the marsh. People on Isle de Jean Charles live with the damage. By the end of the paragraph Rush is talking about “our very ideas of who we are.” The islander, the oil executive and the visiting writer now share a pronoun. Only the company had an obligation to fill in the channel. <a href="https://interviews.televisionacademy.com/shows/sex-and-the-city">Carrie’s column and voice-over</a> · <a href="https://milkweed.org/book/rising"><i>Rising</i>, p. 24</a></p></div>
-<div><h3>What Rush asks Hal Wanless</h3>
-<p>On p. 90, Rush asks Hal Wanless, “What comes next?” Then the voice-over starts. “If I believe you, will I be among the chosen?” Then she wonders whether the most vulnerable people will have the same chances. Hal is sitting right there. She could ask him who gets to leave, who gets to stay, and who decides. She lets the interview move on. The reader learns that Rush worried about those people. We still don’t know what Hal would have said. <a href="https://milkweed.org/book/rising"><i>Rising</i>, pp. 90–91</a></p></div>
-</div>
-</div>
-</details>
-<details id="rush-audience">
-<summary><span class="topic-title" id="rush-audience-heading">Who is this written for?</span><span class="range secondary">Audience and reception</span></summary>
-<div class="detail-body">
-<div class="rush-aud">
-<div><h3>The reader Rush pictured</h3>
-<p>When a college student asked whom she imagined reading <i>Rising</i>, Rush described a white weekend hiker with an REI membership who already read <i>Orion</i>. She included herself. She wanted that reader to take inequality seriously and to hear from people whose politics they might dismiss. She also wanted a place beside literary essayists such as Eula Biss and Maggie Nelson. The islanders are among the people she listens to. The reader she imagines persuading starts somewhere else. <a href="https://www.terrain.org/2022/interviews/elizabeth-rush/">Rush on her readers</a> · <a href="https://arkanamag.org/2022/05/02/interview-elizabeth-rush/">Rush on her literary ambitions</a></p>
-<h3>The route into a classroom</h3>
-<p>Rush earned a Master of Fine Arts in nonfiction at Southern New Hampshire University. <i>Guernica</i> published her Maine marsh reporting in 2017. Milkweed Editions published <i>Rising</i> in 2018. It became a 2019 Pulitzer finalist in General Nonfiction. UC Santa Barbara then selected it for a campus-wide reading program. Each institution made a choice about which account of the coast more people would read. Our class has made that choice, too. <a href="https://www.snhu.edu/about-us/newsroom/liberal-arts/elizabeth-rush-q-and-a">MFA</a> · <a href="https://www.guernicamag.com/the-marsh-at-the-end-of-the-world/">Magazine piece</a> · <a href="https://www.pulitzer.org/finalists/elizabeth-rush">Pulitzer citation</a> · <a href="https://news.ucsb.edu/2019/019665/rising">Campus selection</a></p></div>
-<div><h3>What the praise singles out</h3>
-<p>David Biello called <i>Rising</i> “a book about language, first and foremost” in <i>The New York Times Book Review</i>. He found the residents’ accounts the most intense parts of the book. Boston’s NPR member station WBUR interviewed Rush on <i>Radio Boston</i>. Its headline foregrounded retreat as unavoidable. <a href="https://www.nytimes.com/2018/08/17/books/review/rising-elizabeth-rush.html">Times review</a> · <a href="https://bookmarks.reviews/reviews/all/rising-dispatches-from-the-new-american-shore/">Review excerpt</a> · <a href="https://www.wbur.org/radioboston/2018/11/27/rising-new-american-shore">WBUR interview</a></p>
-<p>Milkweed quotes <i>The Nation</i> praising Rush’s “lyrical, deeply reported essays” and their attention to vulnerable communities. Even a magazine on the political left and the <i>Times</i> find common ground in the literary qualities they praise. On pp. 39–41, Edison Dardar explains why neighbors need one another. The chapter ends when Rush tastes his persimmon and feels she understands. A reader can share that discovery, feel open-minded for having listened, and still close the book unable to name one company that owed the island a cleanup. <a href="https://milkweed.org/book/rising">The publisher’s collection of praise</a></p></div>
-</div>
-</div>
-</details>
-<details id="rush-primers">
-<summary><span class="topic-title" id="rush-primers-heading">Ecofascism, monkeywrenching, and Wendell Berry</span><span class="range">Three primers</span></summary>
-<div class="detail-body">
-<div class="rush-concepts">
-<article id="ecofascism"><h3>Ecofascism</h3>
-<p><b>The trouble with “we.”</b> The oil companies cut the channels on p. 24. By p. 35 Rush is wondering whether the islanders understand the harm they do by driving to buy groceries. That’s where I hear misanthropy creeping in. The company can agree that we’re all guilty and still walk away from the canal it was supposed to fill. <a href="https://murraybookchin.org/essays/society-and-ecology/">Murray Bookchin on blaming humanity</a></p>
-<p>I’d put these two ideas side by side: <strong>“We’re a scum species” and “someone should do something for the most vulnerable.”</strong> On pp. 53–54, nearly eight billion of us share the blame. On pp. 90–91, Rush wonders whether the most vulnerable will have the same chances. The reader gets to feel guilty for belonging to the species and decent for caring about its victims. Meanwhile, the people we’re feeling sorry for have demands of their own. Chief Albert Naquin named exactly who should do what. He wanted the Army Corps of Engineers to pay for the islanders to move together. <a href="#rush-voiceover">Rush’s interview, pp. 90–91</a> · <a href="#naquin">Naquin’s demand, pp. 31–33</a></p>
-<p><b>Fewer people.</b> On p. 74 Rush reads south Florida’s population figures alongside God’s judgment of human wickedness in Genesis, even as she rejects the idea that the flood is divine punishment. Having more neighbors starts to sound like a moral failure. Degrowth can mean cutting oil production in wealthy economies. Calling for fewer people takes us somewhere else. I see an ecofascist danger when someone claims the right to decide whose families may grow or who must leave to save the coast. <a href="https://www.nature.com/articles/d41586-022-04412-x">What degrowth advocates propose</a></p>
-<p><b>The “noble savage” stereotype.</b> On pp. 28–29 Rush introduces whole societies, then says “most” of their villages were camps people could move when the river rose. Three pages later she mentions Cahokia. People built a city there, with homes and monumental earthworks. In Louisiana, the Chitimacha describe how they governed their villages. Moving camp during a flood tells us how people handled a flood. The stereotype is the flattering story that Native people lived in harmony with nature because they could always pack up and leave. <a href="https://cahokiamounds.org/explore/">Cahokia Mounds</a> · <a href="https://www.chitimacha.gov/tribal-government">The Chitimacha on village government</a></p>
-<details id="rush-blame-and-movement">
-<summary><span class="topic-title">Blame, moving, and staying in <i>Rising</i></span><span class="range">Passages from Part One</span></summary>
-<div class="detail-body">
-<p><b>Rush’s “we,” pp. 7, 53–55.</b> On p. 7 we are making the sixth mass extinction. On p. 53 Rush compares the speed at which nearly eight billion people are changing the planet to the asteroid impact that killed the dinosaurs. Look at the list of what those people are doing. Getting fed, clothed, and housed goes in the same sentence as getting distracted. On p. 54 she names the <i>Capitalocene</i> and says “certain human beings” dominate. Within a few lines all of us are opening the earth’s veins. On p. 55 she imagines what would be left of us in the fossil record.</p>
-<p><b>Food and population, pp. 35, 39, 67, 71–74.</b> Chris drives to buy food his family used to grow. Edison says more neighbors make it easier to get what you need and recover after a storm. On p. 67 it is Laura Sewall who wonders whether being sure of food and civil order dulls our senses. In Florida, Rush puts population growth beside drained wetlands, strip malls, cheap labor, and plastic waste. She explicitly rejects the idea that the flood punishes human sin on p. 74. The sequence still makes having more neighbors sound like another kind of damage.</p>
-<p><b>Whose family gets a history, pp. 28–33, 39–41, 63–64, 95–96.</b> The Mississippi moves. It takes another step to turn that fact into a story about what Native people are like. On p. 29 whole societies appear through camps that could move. In Maine, Rush traces European settlement through Laura Sewall’s family and even gives us the beach that carries its name. Read Chris Brunet’s family history just as closely. His grandfather built a house to last. Chris raised it twice. Albert Naquin wanted neighbors to move together after the island was left outside the levee. Edison wanted to stay. On p. 41 his attachment to the island is precisely what Rush wants the reader to feel. In the space of a chapter Native people have come to stand for the wisdom of moving and then for the meaning of staying. In Florida Dan Kipnis can sell early and make a profit. Each can see the water rising. They have different things to lose. <a href="https://www.isledejeancharles.com/our-resettlement">The Tribal Council’s account</a></p>
-<p><b>Whose world, pp. 4, 52, 56, 68–69.</b> On p. 52 Rush says what “we” once knew about a changing earth, then identifies people who dated creation from the Bible as “Westerners.” On p. 56 a claim about Western fears of swamps becomes an explanation for why wetlands were overlooked. And yet Rush herself recounts a Hindu story of the earth’s renewal on a four-billion-year cycle. That is a different way of imagining deep time. Anyone raised with that story has a different starting point from the one Rush assigns to “us.” Faharul in Bangladesh also knows his own land is changing. His failing mustard crop gives him reason to consider leaving. On p. 71 Thailand enters the Florida story as a population statistic. Asian people and traditions appear in the book. They seldom get to define the “we.” <a href="https://milkweed.org/book/rising">Elizabeth Rush, <i>Rising</i></a></p>
-</div>
-</details>
-</article>
-<article id="monkeywrenching"><h3>Monkeywrenching</h3>
-<p>In environmental politics, <i>monkeywrenching</i> means deliberately interfering with or damaging property to stop work activists consider destructive. Edward Abbey’s 1975 novel <i>The Monkey Wrench Gang</i> helped popularize the term. Its characters see development in the American Southwest as a public wrong, even when the work has official approval. <a href="https://www.environmentandsociety.org/mml/monkey-wrench-gang">Abbey and the history of environmental protest</a></p>
-<p><b>Rush, pp. 62–63.</b> Laura Sewall raises the possibility of acting directly over a ditch plug in the Maine marsh. She knows the place and names a particular intervention. Within a page, Rush has moved from Sewall’s proposal to her own uncertainty about marshes worldwide. Notice how the change in scale changes who gets the last word.</p></article>
-<article id="wendell-berry"><h3>Wendell Berry</h3>
-<p>Berry is a Kentucky farmer, poet, and essayist. In <i>The Unsettling of America</i> (1977), he argues that industrial agriculture changes who can earn a living on the land, who controls the work, and what a community knows how to do. That makes him useful on p. 35 as well. The drive for groceries has a history in how people lost the ability to grow food at home. <a href="https://www.counterpointpress.com/books/the-unsettling-of-america-50th-anniversary-edition/">Berry’s book on farming</a></p>
-<p><b>Rush, pp. 88–89.</b> After Robert says he wanted to leave his Miami house to his children, Rush quotes the opening of Berry’s second Sabbath poem of 1988. Read one sentence further in each writer. Berry turns to what people have been entrusted to care for. Rush turns to what happens inside the mind when we imagine destruction. <a href="https://www.saltproject.org/progressive-christian-blog/2020/3/29/wendell-berry-good-friday-and-earth-day">Read Berry’s poem</a></p></article>
-</div>
-</div>
-</details>
-</div>
-</section>
-<section class="topic-group"><h2>Reference</h2>
-<div>
-<details id="places">
-<summary><span class="topic-title">Four places on the coast</span><span class="range secondary">Maps and passages</span></summary>
-<div class="detail-body">
+<a class="back" href="https://omatty123.github.io/teaching-fall-2026/courses/frst-110.html">← FRST 110</a>
+<header>
+<div><h1>Rising</h1><p class="meta">Part One, pp. 1–97 <span>· Elizabeth Rush · Monday, November 9</span></p></div>
 <img class="locator" src="rising-assets/part-one-map.png" alt="Map of the eastern and Gulf coasts of the United States with the four places numbered.">
+</header>
+
+<section class="we">
+<figure class="crop"><img src="rising-assets/island.jpg" alt="Close view of straight oil channels cut through the marsh around Isle de Jean Charles, Louisiana."></figure>
+<div class="wetext">
+<h2>Who is “we”?</h2>
+<blockquote>“The oil companies were supposed to ‘rock’ each channel”<cite>p. 24</cite></blockquote>
+<blockquote>“Every time the islanders drive to Houma they are, in some small way, accelerating the disappearance of this ecosystem.”<cite>p. 35</cite></blockquote>
+<p class="line">Rush gets a “we” for free. Naquin spent 20 years trying to build one.</p>
+</div>
+</section>
+
 <div class="shores">
 
 <article class="shore">
-<figure class="shot"><video src="rising-assets/jacobs-2014-2026.mp4" poster="rising-assets/jacobs.jpg" controls muted loop playsinline preload="none" aria-label="Time-lapse of satellite images of the marsh at Jacob's Point, 2014 to 2026."></video><img class="pr" src="rising-assets/jacobs.jpg" alt="Satellite view of the marsh at Jacob's Point, Rhode Island."><b>1</b></figure>
+<figure class="shot"><video src="rising-assets/jacobs-2014-2026.mp4" poster="rising-assets/jacobs.jpg" autoplay muted loop playsinline aria-label="Time-lapse of satellite images of the marsh at Jacob's Point, 2014 to 2026."></video><img class="pr" src="rising-assets/jacobs.jpg" alt="Satellite view of the marsh at Jacob's Point, Rhode Island."><b>1</b></figure>
 <p class="place">Jacob’s Point, Rhode Island <span>pp. 1–15</span></p>
 <h2 class="q">What does a name let you do?</h2>
 <blockquote>“Say: tupelo.”<cite>p. 15</cite></blockquote>
@@ -268,65 +136,21 @@ button {font:inherit; color:var(--ink); background:white; border:1px solid var(-
 </article>
 
 </div>
-</div>
-</details>
-<details id="words">
-<summary><span class="topic-title">Words</span><span class="range">17 terms</span></summary>
-<div class="detail-body">
+
+<section class="band-wrap" id="loops"><h2 class="band">Two loops</h2><div class="loops"><div class="loop m"><h3>The marsh <span>p. 63</span></h3><ol><li>Marsh rots, methane escapes</li><li>Air and ocean warm</li><li>Ice melts faster</li><li>Seas rise faster</li><li>Marsh cannot adapt</li></ol><p class="back2">and around again</p></div><div class="loop h"><h3>The drive to Houma <span>p. 35</span></h3><ol><li>Coastal land disappears</li><li>Islanders cannot grow their food</li><li>They drive to buy it</li><li>They burn fossil fuels</li></ol><p class="back2">and around again</p></div></div></section>
+
+<section class="band-wrap" id="words"><h2 class="band">Eight words</h2>
 <div class="words">
 <div><b>tupelo</b>a swamp tree · p. 15</div>
 <div><b>rampike</b>a tree killed by salt, still standing · p. 5</div>
 <div><b>rhizome</b>an underground stem · p. 10</div>
-<div><b>accretion</b>land built up by sediment · p. 9</div>
-<div><b>mullet</b>a fish that leaps · p. 19</div>
-<div><b>pirogue</b>a flat-bottomed boat · p. 19</div>
-<div><b>bayou</b>a slow-moving stream · p. 20</div>
-<div><b>riparian</b>of a river’s banks · p. 20</div>
-<div><b>sweet water</b>fresh water · p. 24</div>
-<div><b>feedback loop</b>a result that feeds its own cause · p. 35</div>
-<div><b>mitigation</b>reducing the harm · p. 65</div>
-<div><b>infinite regression</b>each answer needs another behind it · p. 69</div>
 <div><b>subsidence</b>land slowly sinking · p. 21</div>
 <div><b>channelization</b>digging routes through marsh · p. 24</div>
 <div><b>sequester</b>to lock carbon away · p. 49</div>
 <div><b>calving</b>ice breaking off a glacier · p. 75</div>
 <div><b>equity</b>what you own of your house · p. 95</div>
-</div>
-</div>
-</details>
-<details id="cycles">
-<summary><span class="topic-title">Cycles, feedback loops, and recursion</span><span class="range secondary">Diagrams</span></summary>
-<div class="detail-body">
-<div class="cyc-grid">
-<div class="cyc" style="--p:var(--c)"><h3>The marsh</h3><p class="src">Loop · Rush, p. 63</p><ol class="flow loop"><li>Marsh rots, methane escapes</li><li>Air and ocean warm</li><li>Ice melts faster</li><li>Seas rise faster</li><li>Marsh cannot adapt</li></ol></div>
-<div class="cyc" style="--p:var(--b)"><h3>The drive to Houma</h3><p class="src">Loop · Rush, p. 35</p><ol class="flow loop"><li>Coastal land disappears</li><li>Islanders cannot grow their food</li><li>They drive to buy it</li><li>They burn fossil fuels</li></ol></div>
-<div class="cyc" style="--p:var(--a)"><h3>The ditch plug</h3><p class="src">Chain · Rush, p. 57</p><ol class="flow"><li>A plug blocks the tide</li><li>Salt water gets stuck</li><li>It evaporates, and the salt concentrates</li><li>Rhizomes rot, ground collapses</li><li>Stored gases escape</li></ol></div>
-<div class="cyc" style="--p:var(--d)"><h3>The dead birds</h3><p class="src">Chain · Egan, p. 130</p><ol class="flow"><li>Mussels clear the water</li><li>Algae bloom, die, use up oxygen</li><li>Botulism bacteria thrive</li><li>Mussels take them in, gobies eat mussels</li><li>Paralyzed gobies become easy prey</li><li>Birds die</li></ol></div>
-</div>
-<h3 class="tur-h">Why the turtles</h3>
-<div class="tur">
-<div class="cyc" style="--p:var(--d)"><b>Infinite regression</b><p class="src">The joke · p. 68</p><ol class="flow"><li>What supports the world? A tortoise.</li><li>What supports the tortoise? Another turtle.</li><li>And that turtle? “turtles all the way down.”</li><li class="end">No bottom. Nothing is explained.</li></ol></div>
-<div class="cyc" style="--p:var(--c)"><b>A chain that ends</b><p class="src">Rush’s gull · pp. 67, 69</p><ol class="flow"><li>The gull needs the clam.</li><li>The clam needs its shell.</li><li>The shell needs water that is not too acidic.</li><li class="end">The water absorbs carbon dioxide. There is a cause to name.</li></ol></div>
-<div><b>Her turn</b>“I don’t balk.” <cite>p. 69</cite> She treats the two as one idea. Only the second one leads anywhere you can act.<br><br><b>The comfort</b>“the world floods and the cycle starts again.” <cite>p. 69</cite> The loss becomes one more turn of a wheel.</div>
-<div><b>The problem</b>On p. 63 the same rot is a loop, which has to be broken. On p. 69 it is a cycle, which only has to be waited out.</div>
-</div>
-<div class="rec">
-<div><h3 class="tur-h">Recursion</h3><svg id="koch" viewBox="0 0 600 180" role="img" aria-label="A line that grows more jagged at each step, like a coastline."><path id="kp" fill="none" stroke="#0b6e8f" stroke-width="1.6"/></svg>
-<label class="kl">Steps <input id="kn" type="range" min="0" max="6" value="3"> <span id="kt"></span></label></div>
-<div class="recn"><p><b>A rule that calls itself.</b> Each step replaces every straight piece with a bent one. Stop at any step and you have a drawing. Never stop and you have an infinite regression.</p>
-<p><b>Coasts do this.</b> Measure a shore with a shorter ruler and <a href="https://en.wikipedia.org/wiki/Coastline_paradox">it comes out longer</a>.</p>
-<p><b>Two mirrors</b> facing each other. <a href="https://en.wikipedia.org/wiki/Indra%27s_net">Indra’s net</a>, where every jewel reflects every other jewel.</p></div>
-</div>
-<div class="rec3">
-<div><h4>Fractal</h4><canvas id="mb" width="420" height="280" aria-label="The Mandelbrot set. Click to zoom in."></canvas><div class="ctl"><button id="mbr">Reset</button><span>Click to zoom</span></div><p><b>z → z² + c.</b> <a href="https://tildesites.bowdoin.edu/~dfrancis/askanerd/mandelbrot/">One rule</a>, applied again to its own answer. Zoom as far as you like and it keeps going.</p></div>
-<div><h4>A recursive universe</h4><canvas id="life" width="420" height="280" aria-label="Conway's Game of Life, starting from five live cells."></canvas><div class="ctl"><button id="lg">Run</button><button id="lr">Restart</button></div><p><b>Five cells, Conway’s rules.</b> Each generation is made only from the one before. William Poundstone’s <a href="https://conwaylife.com/wiki/The_Recursive_Universe"><i>The Recursive Universe</i></a> (1985) builds on this.</p></div>
-<div><h4>A universe looking back</h4><svg viewBox="0 0 420 280" role="img" aria-label="John Wheeler's U diagram: a line that starts thin, swells as the universe grows, and ends with observers looking back at the beginning."><path d="M60 40 C 60 250, 300 280, 345 90" fill="none" stroke="#0b4f6c" stroke-width="3"/><path d="M345 90 C 330 215, 150 245, 90 40 Z" fill="#cfe3ec" stroke="none"/><path d="M322 66 L84 44" stroke="#b5451d" stroke-width="2.4" stroke-dasharray="7 5"/><path d="M84 44 l13 -6 l-1 12 z" fill="#b5451d"/><text x="22" y="28" font-size="15" fill="#16232b">Start of the universe</text><text x="248" y="52" font-size="15" fill="#16232b">Observers</text></svg><p><b>A “self-excited circuit.”</b> <a href="https://philsci-archive.pitt.edu/27412/1/PhilSciArchive_OGrady2025.pdf">John Wheeler’s proposal</a>: the universe produces observers, and observers give even its earliest days their reality. It is speculative and no one has completed it.</p></div>
-</div>
-</div>
-</details>
-<details id="comparisons">
-<summary><span class="topic-title">Staying, leaving, and earlier readings</span><span class="range secondary">Comparisons</span></summary>
-<div class="detail-body">
+</div></section>
+
 <section class="band-wrap" id="good"><h2 class="band">What is good?</h2>
 <div class="good">
 <div><h3>Stay</h3><blockquote>“the more people on the island, the bigger the island.”<cite>Edison, p. 39</cite></blockquote></div>
@@ -334,8 +158,9 @@ button {font:inherit; color:var(--ink); background:white; border:1px solid var(-
 <div><h3>Go now</h3><blockquote>“we certainly can move somewhere nice.”<cite>Kipnis, p. 95</cite></blockquote></div>
 <div><h3>No difference</h3><blockquote>“there is no real difference between those who go and those who stay.”<cite>Chris, p. 26</cite></blockquote></div>
 </div></section>
+
 <section class="band-wrap" id="kca"><h2 class="band">What stops utopia?</h2>
-<div class="table-scroll" role="region" aria-label="What stops utopia? Comparison table" tabindex="0"><table class="kca">
+<table class="kca">
 <thead><tr><th></th><th>We don’t know</th><th>We don’t care</th><th>We don’t act</th><th>We don’t keep at it</th><th>Something else</th></tr></thead>
 <tbody>
 <tr><td>Egan</td><td></td><td></td><td></td><td></td><td></td></tr>
@@ -346,112 +171,6 @@ button {font:inherit; color:var(--ink); background:white; border:1px solid var(-
 <tr><td>The blues</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr><td>Equiano</td><td></td><td></td><td></td><td></td><td></td></tr>
 <tr class="now"><td>Rush</td><td></td><td></td><td></td><td></td><td></td></tr>
-</tbody></table></div></section>
-<section class="band-wrap" id="conn" style="border-bottom:0">
-<div class="conn">
-<div><b><a href="blues-oct-14.html">Blues, Oct 14</a></b>The levee that fails, and the levee plan that leaves the island out (p. 31).</div>
-<div><b><a href="equiano-chapters-7-8.html">Equiano, Nov 4</a></b>Forty pounds for freedom, and “a handsome profit” (p. 95).</div>
-<div><b><a href="https://omatty123.github.io/shui/">Gun and Yu</a></b>Rush’s marsh needs a way uphill (p. 10).</div>
-</div>
+</tbody></table></section>
 <p class="credit">Satellite images: Esri World Imagery and Wayback archive. Jacob’s Point shows archive editions, 2014–2026.</p>
-</section>
-</div>
-</details>
-<details id="check">
-<summary><span class="topic-title">Rush’s claims and sources</span><span class="range">2018 and 2026</span></summary>
-<div class="detail-body">
-<h2 class="band">Read her closely</h2>
-<h3>Who is in the frame</h3>
-<div class="stat"><div><b>34</b>Rush, pp. 1–15</div><div><b>1</b>Egan, pp. 1–15</div></div>
-<p class="note">I, me, my per 1,000 words. Count a page yourself.</p>
-<h3>Check the ground</h3>
-<blockquote>“In a hundred years none of these trees will be here.”<cite>p. 14</cite></blockquote>
-<p class="note">Local reporting calls Jacob’s Point <a href="https://ecori.org/2021-8-19-priceless-space-where-land-meets-sea-is-slowly-drowning/">“a relatively healthy example”</a> of a salt marsh and blames collapsed stone culverts for its damage. <a href="https://www.eastbayri.com/stories/jacobs-point-salt-marsh-restoration-project-nears-completion,139921">Restoration began in 2009.</a></p>
-<h2 class="band sub">2018, checked in 2026</h2>
-<div class="chk"><p class="claim">“doubling every seven years”<cite>Hal, p. 73</cite></p><p><span class="v no">Has not held</span> The rate <a href="https://www.jpl.nasa.gov/news/nasa-analysis-shows-la-nina-limited-sea-level-rise-in-2025/">“more than doubled”</a> in about 30 years.</p></div>
-<div class="chk"><p class="claim">“something like fifteen feet” by 2100<cite>Hal, p. 73</cite></p><p><span class="v no">Far above</span> NOAA: <a href="https://earth.gov/sealevel/us/resources/2022-sea-level-rise-technical-report/">3.5 to 7 feet</a> if emissions are not curbed.</p></div>
-<div class="chk"><p class="claim">“two hundred million” climate migrants by 2050<cite>p. 26</cite></p><p><span class="v wait">Too early</span> The World Bank models <a href="https://www.aljazeera.com/news/2021/9/14/climate-change-could-displace-216-million-by-2050-report">44 to 216 million</a>, within countries only.</p></div>
-<div class="chk"><p class="claim">“You lose your whole equity.”<cite>Kipnis, p. 95</cite></p><p><span class="v wait">Partly</span> <a href="https://www.wlrn.org/business/2026-03-17/south-florida-condo-market-prices">Miami-Dade condos are down, houses up</a> more than 4%.</p></div><h2 class="band sub">The island since</h2>
-<p class="note">Thirty-seven homes opened inland at <a href="https://locd.la.gov/programs/isle-de-jean-charles-resettlement-project">Schriever in 2022</a>. The island is about 320 acres, down from more than 22,000. In 2023 the tribe <a href="https://www.wwno.org/coastal-desk/2023-12-23/jean-charles-choctaw-nation-challenges-state-resettlement-plan-in-legal-complaint-to-hud">filed a federal complaint</a> against the state’s plan.</p>
-</div>
-</details>
-</div>
-</section>
-</main>
-
-<script>
-  function openLinkedSection() {
-    let id;
-    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
-    const target = document.getElementById(id);
-    if (!target) return;
-    for (let parent = target; parent; parent = parent.parentElement) {
-      if (parent.tagName === "DETAILS") parent.open = true;
-    }
-    requestAnimationFrame(() => target.scrollIntoView({block: "start"}));
-  }
-  window.addEventListener("hashchange", openLinkedSection);
-  openLinkedSection();
-  let closedForPrint = [];
-  window.addEventListener("beforeprint", () => {
-    if (closedForPrint.length) return;
-    closedForPrint = Array.from(document.querySelectorAll("details:not([open])"));
-    closedForPrint.forEach(item => {item.open = true;});
-  });
-  window.addEventListener("afterprint", () => {
-    closedForPrint.forEach(item => {item.open = false;});
-    closedForPrint = [];
-  });
-  document.getElementById("places").addEventListener("toggle", event => {
-    if (!event.currentTarget.open) event.currentTarget.querySelector("video").pause();
-  });
-</script>
-<script>
-(function(){
-  var p=document.getElementById('kp'),n=document.getElementById('kn'),t=document.getElementById('kt');
-  function koch(a,b,d,out){
-    if(d===0){out.push(b);return;}
-    var dx=(b[0]-a[0])/3,dy=(b[1]-a[1])/3,
-        c=[a[0]+dx,a[1]+dy],e=[a[0]+2*dx,a[1]+2*dy],
-        s=Math.sqrt(3)/2,
-        tip=[c[0]+dx/2+s*dy,c[1]+dy/2-s*dx];
-    koch(a,c,d-1,out);koch(c,tip,d-1,out);koch(tip,e,d-1,out);koch(e,b,d-1,out);
-  }
-  function draw(){
-    var d=+n.value,a=[12,168],out=[a];koch(a,[588,168],d,out);
-    p.setAttribute('d','M'+out.map(function(q){return q[0].toFixed(1)+' '+q[1].toFixed(1);}).join('L'));
-    t.textContent='Step '+d+': '+Math.pow(4/3,d).toFixed(1)+' times as long';
-  }
-  n.addEventListener('input',draw);draw();
-})();
-(function(){
-  var c=document.getElementById('mb'),x=c.getContext('2d'),W=c.width,H=c.height,start={cx:-0.6,cy:0,s:3.2},v={cx:start.cx,cy:start.cy,s:start.s};
-  function paint(){
-    var img=x.createImageData(W,H),d=img.data,sc=v.s/W,max=Math.min(900,160+Math.floor(70*Math.log(3.2/v.s+1)));
-    for(var j=0;j<H;j++)for(var i=0;i<W;i++){
-      var a=v.cx+(i-W/2)*sc,b=v.cy+(j-H/2)*sc,zr=0,zi=0,k=0;
-      while(k<max&&zr*zr+zi*zi<4){var t=zr*zr-zi*zi+a;zi=2*zr*zi+b;zr=t;k++;}
-      var o=(i+j*W)*4;
-      if(k===max){d[o]=11;d[o+1]=47;d[o+2]=66;}
-      else{var f=0.5+0.5*Math.sin(k*0.16);d[o]=232-180*f;d[o+1]=242-120*f;d[o+2]=246-70*f;}
-      d[o+3]=255;
-    }
-    x.putImageData(img,0,0);
-  }
-  c.style.cursor='zoom-in';
-  c.addEventListener('click',function(e){var r=c.getBoundingClientRect(),sc=v.s/r.width;v.cx+=(e.clientX-r.left-r.width/2)*sc;v.cy+=(e.clientY-r.top-r.height/2)*sc;v.s/=3;paint();});
-  document.getElementById('mbr').addEventListener('click',function(){v.cx=start.cx;v.cy=start.cy;v.s=start.s;paint();});
-  paint();
-})();
-(function(){
-  var c=document.getElementById('life'),x=c.getContext('2d'),S=4,W=c.width/S,H=c.height/S,g,tm=null,b=document.getElementById('lg');
-  function seed(){g=new Uint8Array(W*H);var m=(H>>1)*W+(W>>1);[[0,-1],[1,-1],[-1,0],[0,0],[0,1]].forEach(function(q){g[(H/2+q[1]|0)*W+(W/2+q[0]|0)]=1;});show();}
-  function show(){x.fillStyle='#eef5f8';x.fillRect(0,0,c.width,c.height);x.fillStyle='#0b4f6c';for(var j=0;j<H;j++)for(var i=0;i<W;i++)if(g[j*W+i])x.fillRect(i*S,j*S,S-.5,S-.5);}
-  function step(){var n=new Uint8Array(W*H);for(var j=0;j<H;j++)for(var i=0;i<W;i++){var k=0;for(var dy=-1;dy<2;dy++)for(var dx=-1;dx<2;dx++)if(dx||dy)k+=g[((j+dy+H)%H)*W+(i+dx+W)%W];n[j*W+i]=(k===3||(k===2&&g[j*W+i]))?1:0;}g=n;show();}
-  function stop(){clearInterval(tm);tm=null;b.textContent='Run';}
-  b.addEventListener('click',function(){if(tm)stop();else{tm=setInterval(step,90);b.textContent='Pause';}});
-  document.getElementById('lr').addEventListener('click',function(){stop();seed();});
-  seed();
-})();
-</script>
-</body></html>
+</main></body></html>
