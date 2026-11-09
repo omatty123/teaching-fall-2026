@@ -19,13 +19,22 @@ h1{color:var(--sea);font-size:92px;line-height:.9;font-weight:800;font-stretch:7
 .we cite{font-size:15px}
 .line{font-size:27px;line-height:1.1;font-weight:800;font-stretch:80%;color:var(--sea);margin:14px 0 0;padding-top:12px;border-top:3px solid var(--b)}
 .loops{display:grid;grid-template-columns:1fr 1fr;gap:18px 32px}
-.loop{--l:var(--c)}.loop.h{--l:var(--b)}
-.loop h3{font-size:24px;font-weight:800;font-stretch:75%;color:var(--l);margin:0 0 7px}.loop h3 span{font-size:14px;font-weight:400;font-stretch:100%;color:var(--mid)}
-.loop ol{list-style:none;display:flex;gap:6px 20px;margin:0;padding:0}
-.loop li{position:relative;background:var(--l);color:#fff;font-size:15px;line-height:1.15;font-weight:700;padding:8px 8px;flex:1 1 0;min-width:0}
-.loop li:not(:last-child)::after{content:"→";position:absolute;right:-18px;top:50%;transform:translateY(-50%);color:var(--l);font-weight:800}
-.back2{font-size:14px;font-weight:700;color:var(--l);margin:6px 0 0;text-align:right}
-.back2::before{content:"↻ "}
+.loop{--l:var(--c);position:relative;aspect-ratio:1;max-width:520px;width:100%;margin:auto}.loop.h{--l:var(--b)}
+.loop svg{position:absolute;inset:0;width:100%;height:100%}
+.track{fill:none;stroke:var(--l);stroke-opacity:.22;stroke-width:1.6}
+.flow{fill:none;stroke:var(--l);stroke-width:1.1;stroke-dasharray:3 3;animation:flow 1s linear infinite}
+.dot{fill:var(--l)}
+.orbit{transform-origin:50px 50px;animation:orbit 12s linear infinite}
+.mid{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:36%;text-align:center}
+.mid h3{font-size:30px;line-height:1;font-weight:800;font-stretch:75%;color:var(--l);margin:0}.mid span{font-size:14px;color:var(--mid)}
+.loop ol{list-style:none;margin:0;padding:0}
+.loop li{position:absolute;transform:translate(-50%,-50%);width:29%;background:#fff;color:var(--l);border:2px solid var(--l);font-size:16px;line-height:1.12;font-weight:700;padding:8px;text-align:center;animation:lit5 var(--t) linear infinite}
+.n4 li{width:31%;animation-name:lit4}
+@keyframes flow{to{stroke-dashoffset:-6}}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes lit5{0%,17%{background:var(--l);color:#fff}22%,95%{background:#fff;color:var(--l)}100%{background:var(--l);color:#fff}}
+@keyframes lit4{0%,22%{background:var(--l);color:#fff}27%,95%{background:#fff;color:var(--l)}100%{background:var(--l);color:#fff}}
+@media(prefers-reduced-motion:reduce){.flow,.orbit,.loop li{animation:none}}
 .shores{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 24px;padding:14px 0;border-bottom:3px solid var(--rule)}
 .shore{display:flex;flex-direction:column}
 .shore:nth-child(1){--p:var(--a)}.shore:nth-child(2){--p:var(--b)}.shore:nth-child(3){--p:var(--c)}.shore:nth-child(4){--p:var(--d)}
@@ -57,10 +66,10 @@ h2.band{color:var(--sea);font-size:30px;font-weight:800;font-stretch:75%;line-he
 .conn b{display:block;font-size:17px;font-stretch:85%}
 .credit{font-size:12px;color:var(--mid);margin:9px 0 0}
 @media(max-width:900px){h1{font-size:68px}header{grid-template-columns:1fr}.shores,.good{grid-template-columns:1fr 1fr}.words{grid-template-columns:1fr 1fr}.conn{grid-template-columns:1fr;gap:9px}.we{grid-template-columns:1fr}.crop{min-height:280px}.we h2{font-size:64px}.loops{grid-template-columns:1fr}}
-@media(max-width:560px){.loop ol{flex-direction:column}.loop li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-17px;transform:none}.loop ol{gap:16px}}
+@media(max-width:560px){.loop{width:84%}.loop li{font-size:13px;padding:5px;width:33%}.n4 li{width:35%}.mid h3{font-size:22px}.mid{width:30%}}
 @media(max-width:560px){main{padding:10px 14px 20px}.shores{grid-template-columns:1fr}.good{grid-template-columns:1fr;gap:9px}.kca th{font-size:13px}.kca td:first-child{font-size:14px}}
 @media print{
-.we{grid-template-columns:2.6in 1fr;gap:12pt;padding:7pt 0;border-bottom-width:2pt}.crop{min-height:1.9in}.we h2{font-size:30pt;margin-bottom:5pt}.we blockquote{font-size:11pt;margin-bottom:4pt}.we cite{font-size:8pt}.line{font-size:12pt;margin-top:4pt;padding-top:4pt;border-top-width:1pt}.loops{gap:0 14pt}.loop h3{font-size:13pt}.loop li{background:none;color:#000;border:1px solid #000;font-size:8.4pt;padding:3pt 4pt;flex-basis:60pt}.loop li:not(:last-child)::after{color:#000;right:-13pt}.back2{font-size:8pt;color:#000;margin-top:2pt}
+.we{grid-template-columns:2.6in 1fr;gap:12pt;padding:7pt 0;border-bottom-width:2pt}.crop{min-height:1.9in}.we h2{font-size:30pt;margin-bottom:5pt}.we blockquote{font-size:11pt;margin-bottom:4pt}.we cite{font-size:8pt}.line{font-size:12pt;margin-top:4pt;padding-top:4pt;border-top-width:1pt}.loops{gap:0 14pt}.loop{max-width:3.1in}.flow,.orbit,.loop li{animation:none}.flow,.dot{display:none}.track{stroke:#000;stroke-opacity:1;stroke-width:.6}.loop li{background:#fff;color:#000;border:1px solid #000;font-size:8pt;padding:3pt}.mid h3{font-size:12pt;color:#000}.mid span{font-size:8pt}
 #loops,#words{break-inside:avoid}
 @page{size:letter;margin:.42in}
 body{font-size:9.5pt;line-height:1.25}
@@ -137,7 +146,7 @@ a{text-decoration:none}
 
 </div>
 
-<section class="band-wrap" id="loops"><h2 class="band">Two loops</h2><div class="loops"><div class="loop m"><h3>The marsh <span>p. 63</span></h3><ol><li>Marsh rots, methane escapes</li><li>Air and ocean warm</li><li>Ice melts faster</li><li>Seas rise faster</li><li>Marsh cannot adapt</li></ol><p class="back2">and around again</p></div><div class="loop h"><h3>The drive to Houma <span>p. 35</span></h3><ol><li>Coastal land disappears</li><li>Islanders cannot grow their food</li><li>They drive to buy it</li><li>They burn fossil fuels</li></ol><p class="back2">and around again</p></div></div></section>
+<section class="band-wrap" id="loops"><h2 class="band">Two loops</h2><div class="loops"><div class="loop m n5" style="--t:12.0s"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="38"/><circle class="flow" cx="50" cy="50" r="38" style="animation-duration:2.0s"/><g class="orbit" style="animation-duration:12.0s"><circle class="dot" cx="50" cy="12" r="2.4"/></g></svg><div class="mid"><h3>The marsh</h3><span>p. 63</span></div><ol><li style="left:50.0%;top:12.0%;animation-delay:0.0s">Marsh rots, methane escapes</li><li style="left:86.1%;top:38.3%;animation-delay:2.4s">Air and ocean warm</li><li style="left:72.3%;top:80.7%;animation-delay:4.8s">Ice melts faster</li><li style="left:27.7%;top:80.7%;animation-delay:7.2s">Seas rise faster</li><li style="left:13.9%;top:38.3%;animation-delay:9.6s">Marsh cannot adapt</li></ol></div><div class="loop h n4" style="--t:9.6s"><svg viewBox="0 0 100 100" aria-hidden="true"><circle class="track" cx="50" cy="50" r="38"/><circle class="flow" cx="50" cy="50" r="38" style="animation-duration:1.6s"/><g class="orbit" style="animation-duration:9.6s"><circle class="dot" cx="50" cy="12" r="2.4"/></g></svg><div class="mid"><h3>The drive to Houma</h3><span>p. 35</span></div><ol><li style="left:50.0%;top:12.0%;animation-delay:0.0s">Coastal land disappears</li><li style="left:88.0%;top:50.0%;animation-delay:2.4s">Islanders cannot grow their food</li><li style="left:50.0%;top:88.0%;animation-delay:4.8s">They drive to buy it</li><li style="left:12.0%;top:50.0%;animation-delay:7.2s">They burn fossil fuels</li></ol></div></div></section>
 
 <section class="band-wrap" id="words"><h2 class="band">Eight words</h2>
 <div class="words">
