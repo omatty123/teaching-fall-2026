@@ -1,0 +1,151 @@
+{
+  "title": "Rise of the Samurai",
+  "meta": "HIST 212 · Meeting 16",
+  "description": "Kyoto and Kamakura, the Genpei War, and Takezaki Suenaga’s account of the Mongol invasions.",
+  "styles": [
+    "hist-212-nov10.css"
+  ],
+  "bodyClass": "samurai",
+  "sections": [
+    {
+      "id": "scroll",
+      "title": "Takezaki Suenaga’s account of Hakata Bay",
+      "short": "Mongol scroll",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/artwork/16-mokoshurai.jpg\" aria-label=\"Open full-size image: A wounded horse and rider face archers on foot. Arrows cross the space between them.\"><img src=\"../images/artwork/16-mokoshurai.jpg\" alt=\"A wounded horse and rider face archers on foot. Arrows cross the space between them.\"></a><figcaption>Illustrated Account of the Mongol Invasions, late thirteenth century. Suenaga commissioned the scrolls after serving in the defenses of 1274 and 1281. <a href=\"https://digital.princeton.edu/mongol-invasions/?a=scrolls\">Compare the surviving versions at Princeton</a>.</figcaption></figure>"
+        },
+        {
+          "p": "Start on the right with Suenaga’s wounded horse. In his account, Suenaga names the man who rode to his aid. Each agreed to testify that the other had fought. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 282–283</a>."
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "Kyoto, Kamakura and the western battlefields",
+      "short": "Map",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/nov10/warrior-centers.png\" aria-label=\"Open full-size image: Western and central Japan. From east to west: Kamakura, Kyoto, Dan-no-ura and Hakata Bay.\"><img src=\"../images/hist/nov10/warrior-centers.png\" alt=\"Western and central Japan. From east to west: Kamakura, Kyoto, Dan-no-ura and Hakata Bay.\"></a><figcaption>North up. Coastlines from Natural Earth, 1:50 million. Dots locate towns or the vicinity of a battle. <a href=\"#resources\">Ebrey 183–187, 195–196</a> and <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 280–283</a>.</figcaption></figure>"
+        },
+        {
+          "p": "<strong>Kyoto</strong> was the imperial capital. Court factions called warriors into the city in 1156 and 1159. <strong>Kamakura</strong>, far to the east, was where Yoritomo could guarantee land to men who swore to serve him. <a href=\"#resources\">Ebrey 183–187</a>."
+        },
+        {
+          "p": "<strong>Dan-no-ura</strong> marks the strait where Yoshitsune defeated the Taira in 1185. <strong>Hakata Bay</strong>, on northern Kyūshū, belongs to the next century: Suenaga fought there against the invasion from across the sea. <a href=\"#resources\">Ebrey 186, 195–196</a> and <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 282–283</a>."
+        }
+      ]
+    },
+    {
+      "id": "commanders",
+      "title": "Who fought for whom",
+      "short": "Commanders",
+      "body": [
+        {
+          "p": "<b>Minamoto = Genji 源氏. Taira = Heike 平家.</b> Genpei takes one character from each name, 源平. Two members of the same house could fight on opposite sides. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 270–271, 276–278</a>."
+        },
+        {
+          "html": "<h3>1156 · Hōgen conflict in Kyoto</h3>"
+        },
+        {
+          "html": "<dl class=\"cast\"><div><dt>Minamoto no Tametomo</dt><dd>Younger brother of Yoshitomo. Fights for retired emperor Sutoku. He urges a night attack. Fujiwara no Yorinaga, the minister on his side, rejects it.</dd></div><div><dt>Minamoto no Yoshitomo</dt><dd>Older brother. Fights for Emperor Go-Shirakawa alongside Taira no Kiyomori. His side carries out the night attack that Tametomo proposed.</dd></div><div><dt>Taira no Kiyomori</dt><dd>Yoshitomo’s ally in 1156. His greater reward at court helps explain why the alliance breaks. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 270–274</a>.</dd></div></dl>"
+        },
+        {
+          "html": "<h3>1159 · Heiji conflict in Kyoto</h3>"
+        },
+        {
+          "p": "<b>Yoshitomo changes allies.</b> He and the minister <b>Fujiwara no Nobuyori</b> attack Sanjō Palace while Kiyomori is away. Kiyomori returns and defeats them. Yorinaga belongs to the first conflict, Nobuyori to the second. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 273–276</a>."
+        },
+        {
+          "html": "<h3>1180–1185 · Genpei War</h3>"
+        },
+        {
+          "html": "<dl class=\"cast\"><div><dt>Minamoto no Yoritomo</dt><dd>Yoshitomo’s son. Organizes eastern warriors at Kamakura and sends his brothers west. He receives the title of shogun in 1192.</dd></div><div><dt>Minamoto no Yoshinaka</dt><dd>Yoritomo’s cousin and rival. Drives the Taira out of Kyoto. Go-Shirakawa then calls on Yoritomo for help against him.</dd></div><div><dt>Minamoto no Noriyori and Minamoto no Yoshitsune</dt><dd>Yoritomo’s younger half-brothers and field commanders. Yoshitsune defeats Yoshinaka and then the Taira at Dan-no-ura. Yoritomo controls appointments and rewards in the east.</dd></div><div><dt>Taira no Kiyomori and Emperor Antoku</dt><dd>Kiyomori builds Taira power through court offices and marriage. He dies in 1181. His grandson Antoku is the child emperor who drowns at Dan-no-ura in 1185. <a href=\"#resources\">Ebrey 185–188</a> and <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 276–280</a>.</dd></div></dl>"
+        },
+        {
+          "p": "<b>Shogun</b> is the title the court grants Yoritomo. <b>Hōjō Masako</b> is his widow. After the deaths of their sons, the Hōjō family retains power as regents for the shogun. <a href=\"#resources\">Ebrey 187–189</a>."
+        }
+      ]
+    },
+    {
+      "id": "sanjo",
+      "title": "The night attack on Sanjō Palace",
+      "short": "Palace scroll",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/nov10/sanjo-palace.jpg\" aria-label=\"Open full-size image: Flames above the palace roofs, mounted warriors in the courtyard and figures fleeing below.\"><img src=\"../images/hist/nov10/sanjo-palace.jpg\" alt=\"Flames above the palace roofs, mounted warriors in the courtyard and figures fleeing below.\"></a><figcaption>Night Attack on the Sanjō Palace, detail. A late thirteenth-century handscroll depicts the attack of 1159. Museum of Fine Arts, Boston, 11.4000. <a href=\"https://scrolls.uchicago.edu/view-scroll/141\">Unroll the whole painting, right to left</a>.</figcaption></figure>"
+        },
+        {
+          "p": "In the painting, the roofs divide the burning palace from the people caught outside. In the written account, the attackers first secure the gates. Read the escape scenes alongside the passage. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 274–276</a> · <a href=\"https://www.youtube.com/watch?v=-Nz7mDGTB7I\">Watch the MFA’s scroll film</a>."
+        }
+      ]
+    },
+    {
+      "id": "heike",
+      "title": "Atsumori’s flute",
+      "short": "The Heike",
+      "body": [
+        {
+          "p": "In <i>The Tale of the Heike</i>, <b>Saitō Sanemori</b> serves the Taira but knows the eastern warriors from his earlier service. His speech about eastern toughness is a character’s boast in a war tale. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 277–278</a>."
+        },
+        {
+          "p": "At Ichi-no-Tani, <b>Kumagai Naozane</b>, fighting for the Minamoto, calls a mounted Taira warrior back from the sea. When he removes the helmet, he sees a boy about his own son’s age. Only after killing him does he discover the flute and learn his name: <b>Taira no Atsumori</b>. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 279–280</a>."
+        },
+        {
+          "passage": {
+            "quote": "<mark>I would like to spare you</mark>",
+            "cite": "Naozane to Atsumori, The Tale of the Heike, SJT 279–280",
+            "link": "https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view"
+          }
+        },
+        {
+          "p": "Animated retelling: <a href=\"https://www.youtube.com/watch?v=cGM91-eepCc\">Atsumori and Naozane, episode 9</a> · <a href=\"https://www.youtube.com/watch?v=q6LHX-HmCNE\">Prayer to the Fallen of the Heike, episode 11</a>."
+        }
+      ]
+    },
+    {
+      "id": "kamakura",
+      "title": "Land, office and religious life at Kamakura",
+      "short": "Kamakura",
+      "body": [
+        {
+          "p": "A <b>jitō</b> (estate steward) could draw income from an estate in return for service. A <b>shugo</b> (provincial military governor) had responsibilities across a province. Yoritomo could confirm a warrior’s existing claim to office. The 1215 order confirming a widow as jitō shows what that promise meant for a household. <a href=\"#resources\">Ebrey 187–190</a>."
+        },
+        {
+          "p": "The war tales begin with impermanence. In Kamakura Japan, Pure Land teachers Hōnen and Shinran taught reliance on Amida. Eisai and Dōgen transmitted Zen lineages. Nichiren centered his teaching on the Lotus Sutra. Hōjō support for Zen was one part of that larger religious world. <a href=\"#resources\">Ebrey 192–195</a> and <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 276–277</a>."
+        }
+      ]
+    },
+    {
+      "id": "hakata",
+      "title": "The Mongol invasions and the witnesses at Hakata",
+      "short": "Hakata Bay",
+      "body": [
+        {
+          "html": "<figure><a href=\"../images/hist/nov10/invasion-routes.png\" aria-label=\"Open full-size image: Routes from Korea in 1274 and 1281 and from China in 1281 converge on northern Kyūshū. Inset shows Hakata and Dazaifu.\"><img src=\"../images/hist/nov10/invasion-routes.png\" alt=\"Routes from Korea in 1274 and 1281 and from China in 1281 converge on northern Kyūshū. Inset shows Hakata and Dazaifu.\"></a><figcaption>Dashed lines show approximate fleet routes. The first expedition sailed from Korea. In 1281 a second fleet sailed from China. Plate 16, after <a href=\"https://commons.wikimedia.org/wiki/File:Asia_under_the_Mongols_1290_AD.jpg\">Albert Herrmann’s historical atlas (1935)</a>; Natural Earth coastlines.</figcaption></figure>"
+        },
+        {
+          "p": "In 1274, warriors encountered an invading force at Hakata Bay. By 1281 the defenders had built a coastal wall and could strike at ships offshore. A typhoon struck the 1281 fleet after weeks of fighting. <a href=\"#resources\">Ebrey 195–196</a> and <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 280–281</a>."
+        },
+        {
+          "html": "<dl class=\"cast\"><div><dt>Shōni Kagesuke</dt><dd>Japanese commander on the day of the 1274 engagement. Takezaki Suenaga, a warrior from Higo, reports to him and rides out with four followers.</dd></div><div><dt>Kikuchi Takefusa</dt><dd>Already returning from fighting at Akasaka when Suenaga meets him. Suenaga calls out his own name so Takefusa can recognize him.</dd></div><div><dt>Togenda Sukemitsu</dt><dd>Suenaga’s retainer. Advises him to wait for reinforcements and a witness.</dd></div><div><dt>Shiroishi Michiyasu</dt><dd>Arrives with mounted men after Suenaga is wounded. Each agrees to witness the other’s service. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 282–283</a>.</dd></div></dl>"
+        },
+        {
+          "passage": {
+            "quote": "<mark>The way of the bow and arrow is to do what is worthy of reward. Charge!</mark>",
+            "cite": "Takezaki Suenaga, SJT 283",
+            "link": "https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view"
+          }
+        },
+        {
+          "p": "A witness could establish a claim. Victory still gave Kamakura little new land to distribute to the men who defended it. <a href=\"#resources\">Ebrey 196–197</a>."
+        }
+      ]
+    }
+  ],
+  "readings": [
+    "Ebrey and Walthall, <i>Pre-Modern East Asia</i>, pp. 183–197.",
+    "<a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">The Way of the Warrior, Parts 1 and 2 · Sources of Japanese Tradition, pp. 265–283</a>",
+    "<a href=\"https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit#heading=h.989vr7l8ef3\">November 10 Class Notes</a>"
+  ]
+}

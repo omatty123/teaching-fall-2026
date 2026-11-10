@@ -1,0 +1,15 @@
+body.samurai { background: white; color: #222; }
+.samurai main { max-width: 1080px; }
+.samurai h2 { color: #222; margin-bottom: .5em; }
+.samurai h3 { margin: 1em 0 .3em; }
+.samurai figure { margin: .7em 0; }
+.samurai figure img { display: block; width: 100%; height: auto; }
+.samurai figcaption { margin-top: .45em; max-width: 95ch; }
+.samurai .cast { margin: 0; }
+.samurai .cast div { display: grid; grid-template-columns: minmax(160px, 27%) 1fr; gap: 1em; border-top: 1px solid #bbb; padding: .55em 0; }
+.samurai .cast dt { font-weight: 700; }
+.samurai .cast dd { margin: 0; }
+.samurai .sections { padding: .3em 0; }
+.samurai .sections a { min-height: auto; }
+.samurai section { margin: 1.2em 0; padding-top: 1em; }
+@media(max-width: 640px) { .samurai .cast div { display: block; } .samurai .cast dt { margin-bottom: .2em; } }
