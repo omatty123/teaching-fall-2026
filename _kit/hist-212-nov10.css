@@ -159,3 +159,20 @@ body.samurai { background: white; color: #222; }
   .crest-index img { display: block; width: 48px; height: 48px; object-fit: contain; }
   .crest-index a[href="#house-fujiwara"] img { filter: invert(1); }
 }
+
+.house-entry.hojo { --house-ink: #306253; }
+.house-grid { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.house-name { flex-wrap: wrap; gap: 5px 10px; }
+.succession { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; }
+.succession > div { border: 1px solid #afb6b7; padding: 10px; }
+.succession > div > img { float: left; object-fit: contain; margin-right: 10px; }
+.succession strong,.succession span { display: block; }
+.marriage { font-size: .88rem; text-align: center; padding: 3px 9px; border-bottom: 2px solid #777c80; }
+@media (min-width:691px) and (max-width:950px) { .house-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width:690px) {
+  .house-grid { grid-template-columns: 1fr; }
+  .crest-index { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  .crest-index a { font-size: .77rem; }
+  .succession { grid-template-columns: 1fr; }
+  .marriage { justify-self: start; border: 0; border-left: 2px solid #777c80; margin-left: 30px; }
+}
