@@ -141,3 +141,21 @@ body.samurai { background: white; color: #222; }
 .samurai .family-key > p { margin-block: 12px; }
 @media (max-width: 690px) { .house-name .house-crest { width: 72px; height: 72px; } }
 .fujiwara .house-crest, .crest-repeat[src$="/fujiwara.svg"] { filter: invert(1); }
+
+.samurai #families { --edge: #344d68; }
+.crest-index { display: none; }
+.court-and-lines { display: grid; grid-template-columns: minmax(0, 1.72fr) minmax(225px, 1fr); align-items: start; gap: clamp(16px, 3vw, 30px); margin: 18px 0; }
+.line-guide { border-left: 3px solid #496278; background: #f2f5f6; padding: 12px 15px; font-size: .94rem; }
+.samurai .line-guide h3,.samurai .court-history h3 { margin-top: 0; }
+.line-guide dl { margin: 0; }
+.line-guide dl div { border-top: 1px solid #bdc6ca; padding: 8px 0; }
+.line-guide dt { font-weight: 700; }
+.line-guide dd { margin: 3px 0 0; }
+.samurai .family-key { border-bottom: 0; }
+@media (max-width: 690px) {
+  .court-and-lines { grid-template-columns: 1fr; }
+  .crest-index { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin: 8px 0; }
+  .crest-index a { display: grid; justify-items: center; padding: 6px 2px; border: 1px solid #c4c9c9; font-size: .85rem; font-weight: 700; }
+  .crest-index img { display: block; width: 48px; height: 48px; object-fit: contain; }
+  .crest-index a[href="#house-fujiwara"] img { filter: invert(1); }
+}
