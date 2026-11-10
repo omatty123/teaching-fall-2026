@@ -45,22 +45,31 @@
           "p": "<b>Minamoto = Genji 源氏. Taira = Heike 平家.</b> Genpei takes one character from each name, 源平. Two members of the same house could fight on opposite sides. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 270–271, 276–278</a>."
         },
         {
-          "html": "<h3>1156 · Hōgen conflict in Kyoto</h3>"
+          "html": "<div class=\"conflict hogen\"><h3>1156 · Hōgen conflict in Kyoto</h3>"
         },
         {
           "html": "<dl class=\"cast\"><div><dt>Minamoto no Tametomo</dt><dd>Younger brother of Yoshitomo. Fights for retired emperor Sutoku. He urges a night attack. Fujiwara no Yorinaga, the minister on his side, rejects it.</dd></div><div><dt>Minamoto no Yoshitomo</dt><dd>Older brother. Fights for Emperor Go-Shirakawa alongside Taira no Kiyomori. His side carries out the night attack that Tametomo proposed.</dd></div><div><dt>Taira no Kiyomori</dt><dd>Yoshitomo’s ally in 1156. His greater reward at court helps explain why the alliance breaks. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 270–274</a>.</dd></div></dl>"
         },
         {
-          "html": "<h3>1159 · Heiji conflict in Kyoto</h3>"
+          "html": "</div>"
+        },
+        {
+          "html": "<div class=\"conflict heiji\"><h3>1159 · Heiji conflict in Kyoto</h3>"
         },
         {
           "p": "<b>Yoshitomo changes allies.</b> He and the minister <b>Fujiwara no Nobuyori</b> attack Sanjō Palace while Kiyomori is away. Kiyomori returns and defeats them. Yorinaga belongs to the first conflict, Nobuyori to the second. <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 273–276</a>."
         },
         {
-          "html": "<h3>1180–1185 · Genpei War</h3>"
+          "html": "</div>"
+        },
+        {
+          "html": "<div class=\"conflict genpei\"><h3>1180–1185 · Genpei War</h3>"
         },
         {
           "html": "<dl class=\"cast\"><div><dt>Minamoto no Yoritomo</dt><dd>Yoshitomo’s son. Organizes eastern warriors at Kamakura and sends his brothers west. He receives the title of shogun in 1192.</dd></div><div><dt>Minamoto no Yoshinaka</dt><dd>Yoritomo’s cousin and rival. Drives the Taira out of Kyoto. Go-Shirakawa then calls on Yoritomo for help against him.</dd></div><div><dt>Minamoto no Noriyori and Minamoto no Yoshitsune</dt><dd>Yoritomo’s younger half-brothers and field commanders. Yoshitsune defeats Yoshinaka and then the Taira at Dan-no-ura. Yoritomo controls appointments and rewards in the east.</dd></div><div><dt>Taira no Kiyomori and Emperor Antoku</dt><dd>Kiyomori builds Taira power through court offices and marriage. He dies in 1181. His grandson Antoku is the child emperor who drowns at Dan-no-ura in 1185. <a href=\"#resources\">Ebrey 185–188</a> and <a href=\"https://drive.google.com/file/d/1e5q4Sg3mqH2Ug--xeLVHXasHL-AdVeGh/view\">SJT 276–280</a>.</dd></div></dl>"
+        },
+        {
+          "html": "</div>"
         },
         {
           "p": "<b>Shogun</b> is the title the court grants Yoritomo. <b>Hōjō Masako</b> is his widow. After the deaths of their sons, the Hōjō family retains power as regents for the shogun. <a href=\"#resources\">Ebrey 187–189</a>."
