@@ -118,3 +118,18 @@ body.samurai { background: white; color: #222; }
  .rel-hakata dl { margin: 0 0 0 15px; } .rel-hakata dl div { display: block; }
 }
 @media print { .rel-panel { break-inside: avoid; } .rel-node { border-color: #555; } }
+
+.family-key { border-bottom: 1px solid #a7afb1; padding-bottom: 10px; }
+.samurai .family-key h3 { margin: .45em 0; }
+.house-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+.house-entry { border: 1px solid #afb6b7; border-top: 3px solid var(--house-ink); padding: 12px; }
+.house-entry.taira { --house-ink: #8d4932; }
+.house-entry.fujiwara { --house-ink: #63517c; }
+.house-entry.minamoto { --house-ink: #305472; }
+.house-name { display: flex; align-items: center; gap: 10px; color: var(--house-ink); font-weight: 600; line-height: 1.15; }
+.house-name > span { font-size: 1.65rem; color: var(--house-ink); }
+.house-name h4 { margin: 0 0 3px; color: inherit; font-size: 1.22rem; }
+.house-name > div > div { font-size: .85rem; }
+.samurai .house-entry p { font-size: .93rem; line-height: 1.4; margin: 8px 0 0; }
+@media (max-width: 690px) { .house-grid { grid-template-columns: 1fr; } }
+@media print { .family-key { break-inside: avoid; } }
