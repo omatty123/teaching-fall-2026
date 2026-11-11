@@ -42,7 +42,7 @@
 .dot-chart>strong{display:block;margin:6px}
 .plot{display:grid;position:relative;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;height:240px;isolation:isolate}
 .plot>b{display:grid;place-items:center;font-size:clamp(18px,2.1vw,30px);background:#eaf2f7}.plot>b:nth-child(2){background:#fbefe5}.plot>b:nth-child(3){background:#eaf3ec}.plot>b:nth-child(4){background:#f4edf6}
-.plot:before,.plot:after{content:"";position:absolute;background:#53646b;pointer-events:none}.plot:before{width:1px;height:100%;left:50%}.plot:after{height:1px;width:100%;top:50%}
+.plot:before,.plot:after{content:"";position:absolute;background:#53646b;pointer-events:none}.plot:before{width:12px;height:100%;left:50%;transform:translateX(-50%);clip-path:polygon(50% 0,100% 10px,60% 10px,60% calc(100% - 10px),100% calc(100% - 10px),50% 100%,0 calc(100% - 10px),40% calc(100% - 10px),40% 10px,0 10px)}.plot:after{height:1px;width:100%;top:50%}
 .horizontal{position:absolute;top:50%;left:0;right:0;transform:translateY(-50%);z-index:1}.horizontal i{font-weight:bold;font-style:normal;background:white;padding:1px 4px}
 .position{position:absolute;width:18px;height:18px;border-radius:50%;background:#aa123b;border:3px solid white;box-shadow:0 0 0 2px #601329;transform:translate(-50%,-50%);z-index:2}
 #dot-reading{min-height:2.8em;text-align:center}
@@ -50,6 +50,10 @@
 @media print{html.deck #your-dot,.matrix-jump{display:none!important}}
 .paired-type.quad{display:block;text-align:left}.paired-type.quad p{margin:.45em 0;font-size:17px;line-height:1.32}.paired-type.quad b{font-size:28px}.paired-type.quad p strong{display:block;font-size:.92em}
 .person-example{display:grid;grid-template-columns:64px 1fr;gap:12px;margin-top:12px}.quad .person-example img{width:64px;height:80px;object-fit:cover}.person-example small,.person-example strong{display:block}.person-example small{font-size:14px;color:#425258}.paired-type.quad .person-example p{margin:3px 0;font-size:16px}.person-example a{white-space:nowrap}html.deck #name.on{zoom:1!important;width:auto!important}
+#your-dot .dot-layout{align-items:start;gap:clamp(28px,4vw,64px);margin-top:24px}
+#your-dot fieldset{margin:28px 0}#your-dot legend{margin-bottom:14px}#your-dot .scale{gap:8px;margin-top:14px}
+#your-dot .ends{gap:24px;line-height:1.45}#your-dot .plot{height:auto;aspect-ratio:1}
+@media(max-width:900px){#your-dot .dot-layout{grid-template-columns:1fr;max-width:600px;margin-inline:auto}#your-dot .plot{max-height:400px}body:has(#your-dot.on) .deckbar{position:static}body:has(#your-dot.on) main{padding-bottom:24px}}
 </style></head>
 <body><main>
 <div class="slide" id="three-cs" data-label="The Three Cs">
@@ -111,7 +115,7 @@
 <script>
 (function(){var S=[].slice.call(document.querySelectorAll('.slide'));if(!S.length)return;document.documentElement.classList.add('deck');var i=0,w=document.getElementById('where'),pv=document.getElementById('prev'),nx=document.getElementById('next');
 function go(n,push){i=Math.max(0,Math.min(S.length-1,n));S.forEach(function(x,k){x.classList.toggle('on',k===i)});w.textContent=(i+1)+' / '+S.length+' · '+S[i].dataset.label;pv.disabled=i===0;nx.disabled=i===S.length-1;fit();if(push!==false)try{history.replaceState(null,'','#'+S[i].id)}catch(e){}window.scrollTo(0,0)}
-function fit(){var sl=S[i];sl.style.zoom='';sl.style.width='';if(window.innerWidth<820)return;var par=sl.parentNode,cs=getComputedStyle(par),bar=document.querySelector('.deckbar').offsetHeight,avail=window.innerHeight-bar-parseFloat(cs.paddingTop)-14,cw=par.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);var lo=.5,hi=1.6;for(var k=0;k<14;k++){var z=(lo+hi)/2;sl.style.width=(cw/z)+'px';sl.style.zoom=z;if(sl.getBoundingClientRect().height<=avail)lo=z;else hi=z}sl.style.width=(cw/lo)+'px';sl.style.zoom=lo}
+function fit(){var sl=S[i];sl.style.zoom='';sl.style.width='';if(sl.id==='your-dot'||window.innerWidth<820)return;var par=sl.parentNode,cs=getComputedStyle(par),bar=document.querySelector('.deckbar').offsetHeight,avail=window.innerHeight-bar-parseFloat(cs.paddingTop)-14,cw=par.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);var lo=.5,hi=1.6;for(var k=0;k<14;k++){var z=(lo+hi)/2;sl.style.width=(cw/z)+'px';sl.style.zoom=z;if(sl.getBoundingClientRect().height<=avail)lo=z;else hi=z}sl.style.width=(cw/lo)+'px';sl.style.zoom=lo}
 function fromHash(){var h=location.hash.slice(1),k=S.findIndex(function(x){return x.id===h});go(k<0?0:k,false)}
 pv.onclick=function(){go(i-1)};nx.onclick=function(){go(i+1)};
 document.addEventListener('keydown',function(e){if(e.target.closest('input,textarea'))return;if(e.key==='ArrowRight'||e.key==='PageDown'){go(i+1);e.preventDefault()}if(e.key==='ArrowLeft'||e.key==='PageUp'){go(i-1);e.preventDefault()}});
