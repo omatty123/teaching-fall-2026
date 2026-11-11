@@ -408,6 +408,11 @@
       "detail": "Ebrey 198–210, 212–226",
       "materials": [
         {
+          "label": "Class page",
+          "href": "https://docs.google.com/document/d/1fTh1Ot139V6GaPa1appr1EyLq4vbwi2Oy_VPTUDr_Mo/edit#heading=h.xa0ouklr5f72",
+          "kind": "page"
+        },
+        {
           "label": "Reader PDF",
           "href": "https://drive.google.com/file/d/1bkaZ8ubQ5_FYqC4Bcjk4NvVNrI4x8ENU/view",
           "kind": "page"
