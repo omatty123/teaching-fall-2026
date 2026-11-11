@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Map Yourself | BUEN 594</title>
+<meta name="description" content="Sixteen work situations and sixteen short statements that place you on the ethics matrix and show when your orientation shifts.">
+<meta property="og:title" content="Map Yourself | BUEN 594">
+<meta property="og:description" content="Sixteen work situations and sixteen short statements that place you on the ethics matrix and show when your orientation shifts.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-map-yourself.html">
+<meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-assets/ethics-matrix.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-assets/ethics-matrix.png">
+<link rel="icon" href="../favicon.svg">
+<link rel="canonical" href="https://omatty123.github.io/teaching-fall-2026/buen-594-resources/ethics-map-yourself.html">
+<style>
+@font-face{font-family:Source Sans;src:url('../_kit/fonts/SourceSans3VF-Upright.woff2') format('woff2');font-weight:200 900;font-display:swap}
+*{box-sizing:border-box}
+html{font-family:'Source Sans',Arial,sans-serif}
+body{margin:0}
+main{margin:auto}
+a{color:#245a70;text-underline-offset:3px}a:hover{color:#8b402c}
+a:focus-visible,button:focus-visible{outline:3px solid #245a70;outline-offset:3px}
+h1,h2,h3{line-height:1.1;font-weight:750}
+h1{letter-spacing:-.025em}
+:root{--ink:#202d31;--mute:#52615d;--line:#c3c4bd;--soft:#f3f3f0;--dot:#aa123b}
+html,body{background:#fff;color:var(--ink)}
+main{max-width:1120px;padding:0 32px 110px}
+p{margin:0}
+button{font:inherit;color:inherit}
+
+/* top strip: where you are in the whole */
+.top{display:grid;grid-template-columns:auto 1fr;gap:10px 40px;align-items:end;padding:16px 0 14px;border-bottom:2px solid var(--ink)}
+.top .name{display:flex;flex-direction:column;gap:2px}
+.top .name a{font-size:14px}
+.top .name b{font-size:26px;font-weight:750;letter-spacing:-.015em;line-height:1.1}
+.path{display:grid;grid-template-columns:16fr 2.4fr 1.6fr;gap:14px;margin:0;padding:0;list-style:none}
+.path li{display:flex;flex-direction:column;gap:5px;min-width:0}
+.path .lab{font-size:13px;font-weight:650;color:var(--mute);white-space:nowrap}
+.path li.here .lab{color:var(--ink)}
+.pips{display:flex;gap:4px}
+.pips button{flex:1;height:14px;min-width:0;padding:0;border:1.5px solid var(--ink);background:#fff;cursor:pointer}
+.pips button.done{background:var(--ink)}
+.pips button.now{outline:3px solid var(--ink);outline-offset:2px}
+.pips button:disabled{border-color:var(--line);cursor:default}
+
+body.at-start .top .name b{display:none}
+body.at-start .bar{display:none}
+.step{display:none;padding-top:34px}
+.step.on{display:block}
+.step:focus{outline:0}
+
+/* intro */
+.intro{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:start}
+.intro h1{font-size:54px;margin:0 0 14px}
+.intro .lead{font-size:22px;line-height:1.35;margin-bottom:22px}
+.parts{list-style:none;margin:0 0 20px;padding:0;border-top:1px solid var(--line)}
+.parts li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.4}
+.parts b{font-size:18px}
+.fine{font-size:15px;line-height:1.45;color:var(--mute);max-width:44em}
+.go{display:inline-block;margin:0 0 20px;font-size:19px;font-weight:700;background:var(--ink);color:#fff;border:0;padding:13px 26px;cursor:pointer}
+.go:hover{background:#245a70}
+.intro figure{margin:0}
+.intro figcaption{font-size:15px;line-height:1.4;color:var(--mute);margin-top:8px}
+
+/* a situation */
+.sit{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.sit .num{font-size:15px;font-weight:700;color:var(--mute);margin-bottom:8px}
+.sit h2{font-size:28px;line-height:1.28;font-weight:650;letter-spacing:-.01em;margin:0}
+.tug{border:0;margin:0 0 30px;padding:0;min-width:0}
+.tug legend{padding:0;font-size:17px;font-weight:750;margin-bottom:10px}
+.poles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pole{border:1.5px solid var(--line);padding:12px 14px;font-size:17px;line-height:1.35;min-height:5.4em;transition:background .12s,border-color .12s}
+.dots{display:flex;justify-content:space-between;align-items:center;position:relative;margin:14px 6% 0}
+.dots::before{content:"";position:absolute;left:0;right:0;top:50%;height:1.5px;background:var(--ink)}
+.dots label{position:relative;display:grid;place-items:center;width:48px;height:48px;cursor:pointer}
+.dots input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.dots span{display:block;border-radius:50%;border:2px solid var(--ink);background:#fff}
+.dots label:nth-child(1) span,.dots label:nth-child(5) span{width:44px;height:44px}
+.dots label:nth-child(2) span,.dots label:nth-child(4) span{width:32px;height:32px}
+.dots label:nth-child(3) span{width:22px;height:22px}
+.dots input:checked+span{background:var(--ink);box-shadow:0 0 0 3px #fff,0 0 0 5px var(--ink)}
+.dots input:focus-visible+span{outline:3px solid #245a70;outline-offset:5px}
+.dots label:hover span{background:#d9dedb}
+.dots label:hover input:checked+span{background:var(--ink)}
+.ends{display:flex;justify-content:space-between;font-size:13px;color:var(--mute);margin:4px 2% 0}
+.tug:has(input[value="1"]:checked) .pole:first-child,.tug:has(input[value="5"]:checked) .pole:last-child{border-color:var(--ink);border-width:3px;padding:10.5px 12.5px;background:var(--soft);font-weight:650}
+.tug:has(input[value="2"]:checked) .pole:first-child,.tug:has(input[value="4"]:checked) .pole:last-child{border-color:var(--ink);background:var(--soft)}
+.tug:has(input[value="3"]:checked) .pole{border-color:var(--ink);border-style:dashed}
+
+/* part 2 */
+.past h2{font-size:28px;margin:0 0 4px;letter-spacing:-.01em}
+.past .sub{font-size:17px;line-height:1.4;margin-bottom:14px;color:var(--mute)}
+.freq{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:24px;align-items:center;border:0;border-top:1px solid var(--line);margin:0;padding:11px 0;min-width:0}
+.freq legend{float:left;padding:0;font-size:18px;line-height:1.35}
+.seg{display:grid;grid-template-columns:repeat(4,1fr)}
+.seg label{position:relative;display:grid;place-items:center;min-height:42px;padding:4px 6px;border:1.5px solid var(--ink);margin-left:-1.5px;font-size:14px;line-height:1.1;text-align:center;cursor:pointer}
+.seg label:first-child{margin-left:0}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg label:has(:checked){background:var(--ink);color:#fff;font-weight:700}
+.seg label:has(:focus-visible){outline:3px solid #245a70;outline-offset:2px;z-index:1}
+
+/* results */
+.report h2{font-size:15px;font-weight:700;color:var(--mute);margin:0 0 6px}
+.report section{margin-top:44px;padding-top:16px;border-top:2px solid var(--ink)}
+.report section>h2{font-size:26px;color:var(--ink);letter-spacing:-.01em;margin-bottom:4px}
+.report .sub{font-size:17px;line-height:1.4;max-width:46em;margin-bottom:16px}
+.hero{display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:48px;align-items:start}
+.hero svg,.intro svg{width:100%;height:auto;display:block}
+.who{font-size:50px;font-weight:750;line-height:1.02;letter-spacing:-.025em;margin:0 0 14px}
+.who.long{font-size:36px}
+.faces{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.faces div{display:grid;grid-template-columns:64px 1fr;gap:10px;align-items:center;font-size:15px;line-height:1.3}
+.faces img{width:64px;height:80px;object-fit:cover;object-position:center top;border:1px solid var(--ink)}
+.faces b{display:block;font-size:17px}
+.read{list-style:none;margin:0;padding:0}
+.read li{border-top:1px solid var(--line);padding:11px 0;font-size:17px;line-height:1.4}
+.read b{font-weight:750}
+.meter{display:grid;grid-template-columns:76px minmax(0,1fr) 76px;gap:10px;align-items:center;font-size:14px;font-weight:650;margin-top:7px}
+.meter span:last-child{text-align:right}
+.meter i{display:block;height:10px;background:var(--soft);border:1px solid var(--ink);position:relative}
+.meter i::before{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;width:1px;background:var(--ink)}
+.meter u{position:absolute;top:-6px;width:20px;height:20px;border-radius:50%;background:var(--dot);border:3px solid #fff;box-shadow:0 0 0 1.5px #601329;transform:translateX(-50%)}
+.conds{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.cond{border:1.5px solid var(--line);padding:14px}
+.cond.top-shift{border:3px solid var(--ink);padding:12.5px}
+.cond h3{font-size:20px;margin:0 0 10px}
+.cond svg{width:100%;height:auto;display:block;margin-bottom:10px}
+.cond p{font-size:15px;line-height:1.35;margin:3px 0}
+.cond .verdict{font-size:16px;font-weight:750;margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+.key{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--ink);vertical-align:-1px;margin-right:6px}
+.key.f{background:var(--ink)}
+.key.sq{border-radius:0}
+.cond .aside{font-size:14.5px;color:var(--mute);margin-top:6px}
+.asks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.ask{padding:14px;border:3px solid transparent}
+.ask.me{border-color:var(--ink)}
+.ask h3{font-size:20px;margin:0 0 6px}
+.ask p{font-size:15.5px;line-height:1.38}
+.ask .q{font-size:18px;font-weight:700;line-height:1.3;margin-top:10px;padding-top:10px;border-top:1.5px solid currentColor}
+.val{display:grid;gap:8px}
+.val .hd,.val .r{display:grid;grid-template-columns:minmax(0,1fr) 170px minmax(0,1fr);gap:12px;align-items:center}
+.val .hd{font-size:14px;font-weight:700;color:var(--mute)}
+.val .hd span:first-child{text-align:right}
+.val .r b{padding:10px 8px;text-align:center;font-size:18px;border:1.5px solid transparent}
+.val .r.me b{border-color:var(--ink);border-width:3px}
+.val .h,.val .g{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:650;white-space:nowrap}
+.val .h{flex-direction:row-reverse}
+.val .h i,.val .g i{display:block;height:22px;min-width:2px;border:1.5px solid var(--ink)}
+.val .h i{background:repeating-linear-gradient(45deg,var(--ink) 0 2px,#fff 2px 6px)}
+.note{font-size:17px;line-height:1.4;margin-top:14px;max-width:46em}
+.recap{list-style:none;margin:0;padding:0;columns:2;column-gap:40px}
+.recap li{display:grid;grid-template-columns:30px minmax(0,1fr) auto;gap:10px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:16px;break-inside:avoid}
+.recap .n{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--ink);font-size:13px;font-weight:700}
+.chip{font-size:14px;font-weight:700;padding:3px 9px;white-space:nowrap}
+.acts{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:34px;font-size:16px}
+.acts button{background:#fff;border:1.5px solid var(--ink);padding:9px 16px;font-size:16px;font-weight:650;cursor:pointer}
+
+/* bottom bar */
+.bar{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid var(--ink);z-index:5}
+.bar div{max-width:1120px;margin:auto;padding:10px 32px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.bar button{font-size:17px;font-weight:700;background:var(--ink);color:#fff;border:0;padding:11px 22px;cursor:pointer}
+.bar button:disabled{background:var(--line);cursor:default}
+.bar button[hidden]{display:block;visibility:hidden}
+.bar span{font-size:15px;color:var(--mute);text-align:center}
+
+@media(max-width:860px){
+ main{padding:0 16px 100px}
+ .top{grid-template-columns:1fr;gap:12px}
+ .top .name b{font-size:22px}
+ .path{gap:8px;grid-template-columns:9fr 3.4fr 2.6fr}.path .lab{font-size:11px}.pips{gap:2px}
+ .step{padding-top:22px}
+ .intro,.sit,.hero{grid-template-columns:1fr;gap:22px}
+ .intro h1{font-size:40px}.intro .lead{font-size:19px}
+ .parts li{grid-template-columns:1fr;gap:2px}
+ .sit h2{font-size:21px}
+ .pole{font-size:15.5px;padding:10px;min-height:0}
+ .dots{margin:12px 2% 0}
+ .freq{grid-template-columns:1fr;gap:8px}.freq legend{font-size:17px;margin-bottom:8px}
+ .who{font-size:38px}.who.long{font-size:28px}
+ .conds,.asks{grid-template-columns:1fr 1fr;gap:12px}.cond,.ask{padding:10px}.cond h3,.ask h3{font-size:17px}.ask .q{font-size:16px}
+ .val .hd,.val .r{grid-template-columns:minmax(0,1fr) 112px minmax(0,1fr);gap:8px}.val .r b{font-size:15px;padding:8px 4px}
+ .recap{columns:1}
+ .bar div{padding:8px 16px}.bar button{padding:10px 16px}
+}
+@media print{
+ .bar,.top .name a,.acts,.go{display:none!important}
+ main{max-width:none;padding:0}
+ .step{display:block;padding-top:12px}
+ .top{padding-top:0;display:block}.path{display:none}
+ .hero{grid-template-columns:300px minmax(0,1fr);gap:26px}
+ .who{font-size:32px;margin-bottom:8px}.who.long{font-size:24px}
+ .faces div{grid-template-columns:48px 1fr}.faces img{width:48px;height:60px}
+ .read li{font-size:10.5pt;padding:6px 0}
+ .report section{margin-top:16px;padding-top:10px}
+ .report section>h2{font-size:15pt}.report .sub,.note{font-size:10.5pt;margin-bottom:8px}
+ .conds{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.cond{padding:8px}.cond h3{font-size:12pt;margin-bottom:6px}.cond p{font-size:9pt}.cond .verdict{font-size:9.5pt}
+ .val{gap:4px}.val .r b{font-size:11pt;padding:5px}.val .h i,.val .g i{height:16px}
+ .recap{columns:2}.recap li{font-size:10pt;padding:4px 0}
+ .intro{grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:30px}.intro h1{font-size:30px}
+ .freq{grid-template-columns:minmax(0,1fr) 300px;padding:6px 0}.freq legend{font-size:10.5pt}.seg label{min-height:28px;font-size:8.5pt}
+ .sit{grid-template-columns:minmax(0,4fr) minmax(0,7fr);break-inside:avoid;padding-bottom:6px;border-bottom:1px solid var(--line)}
+ .dots label{height:34px}.dots label:nth-child(1) span,.dots label:nth-child(5) span{width:28px;height:28px}.dots label:nth-child(2) span,.dots label:nth-child(4) span{width:21px;height:21px}.dots label:nth-child(3) span{width:15px;height:15px}
+ .past{break-inside:avoid}
+ body.done .step:not(#results),body:not(.done) #results{display:none}
+ .sit{gap:24px}.sit h2{font-size:13pt}.pole{font-size:10.5pt;min-height:0}
+ .tug{margin-bottom:10px;break-inside:avoid}
+ .cond,.ask,.recap li,.val .r{break-inside:avoid}
+ .asks{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.ask{padding:8px}.ask h3{font-size:12pt}.ask p{font-size:9pt}.ask .q{font-size:10pt}
+ *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style></head>
+<body>
+<main>
+<div class="top">
+ <p class="name"><a href="ethics-primer.html#your-dot">← Back to The Three Cs of Ethics</a><b>Map Yourself</b></p>
+ <ol class="path" aria-label="Progress">
+  <li id="g1"><span class="lab">Sixteen situations</span><span class="pips" id="pips1"></span></li>
+  <li id="g2"><span class="lab">Your past year</span><span class="pips" id="pips2"></span></li>
+  <li id="g3"><span class="lab">Your map</span><span class="pips" id="pips3"></span></li>
+ </ol>
+</div>
+
+<form id="quiz">
+<div class="step" id="start" tabindex="-1">
+ <div class="intro">
+  <div>
+   <h1>Map Yourself</h1>
+   <p class="lead">One question can’t tell you much about your ethics. Sixteen situations and a look at your own past year can show where you sit on the matrix, how strongly, how steadily, and what moves you.</p>
+   <button type="button" class="go" id="begin">Start</button>
+   <ul class="parts">
+    <li><b>Sixteen situations</b><span>Each has two questions. Choose a circle. The larger the circle, the more that side outweighs the other. The small middle circle means both weigh equally.</span></li>
+    <li><b>Your past year</b><span>Sixteen statements about what you did and who bore the cost. Say how often each has been true of you.</span></li>
+    <li><b>Your map</b><span>Your place on the matrix, who and what shifts you, and how each type has shown up in you at its best and when it harms.</span></li>
+   </ul>
+   <p class="fine">Answer for what you would do, which may differ from what you think you should do. Your answers stay in this browser and are sent to no one. This is a tool for class discussion and has not been tested as a psychological measure.</p>
+  </div>
+  <figure><div id="preview"></div><figcaption>The matrix from the handout. About ten minutes from here to your dot.</figcaption></figure>
+ </div>
+</div>
+<div id="steps"></div>
+</form>
+
+<div class="step report" id="results" tabindex="-1">
+ <div class="hero">
+  <div id="plot"></div>
+  <div>
+   <h2>Your map</h2>
+   <p class="who" id="who"></p>
+   <div class="faces" id="faces"></div>
+   <ul class="read" id="read"></ul>
+  </div>
+ </div>
+ <section>
+  <h2>When you shift</h2>
+  <p class="sub">The sixteen situations differ in four ways. The first card splits them by who the other person is, four situations each. The other three compare eight situations with the other eight. The farther apart the marks, the more that condition moves you.</p>
+  <div class="conds" id="conds"></div>
+ </section>
+ <section>
+  <h2>At its best, when it harms</h2>
+  <p class="sub">Every type on the matrix has helped people and has hurt people. One way to tell the two apart is to ask who paid. These bars come from your answers about the past year.</p>
+  <div class="val" id="val"></div>
+  <p class="note" id="valnote"></p>
+ </section>
+ <section>
+  <h2>A question for each type</h2>
+  <p class="sub">Each type protects something. Each has a question that catches it before it harms.</p>
+  <div class="asks" id="asks"></div>
+ </section>
+ <section>
+  <h2>Situation by situation</h2>
+  <p class="sub">The numbers match the circles on your map.</p>
+  <ol class="recap" id="recap"></ol>
+ </section>
+ <p class="acts"><button type="button" id="print">Print my map</button><button type="button" id="clear">Clear my answers</button><a href="ethics-primer.html#name">See the eight people who stand for the four types</a></p>
+</div>
+</main>
+
+<div class="bar"><div><button type="button" id="prev">← Back</button><span id="where" role="status"></span><button type="button" id="next">Next →</button></div></div>
+
+<script id="logic">
+/* Sixteen situations. rel: who the person is (0 above you, 1 a friend or peer, 2 in your care, 3 a stranger), four situations each.
+   cost: something of yours is at risk. high: the stakes for others are high. rush: you must decide now.
+   costSide: in a cost situation, the side that would cost you (four situations each way). */
+const SITUATIONS = [
+ {id:1, title:'Rounding the hours', rel:0, cost:0, high:0, rush:0,
+  text:'Your supervisor asks you to round the hours on the team’s weekly timesheet so the totals look tidy. It changes nobody’s pay. The sheet is due Friday.',
+  people:'My supervisor asked, and it is their team to run.', principles:'A record should say what happened.',
+  process:'I handled it the way the office expects such things to be handled.', results:'Nobody was misled by the numbers.'},
+ {id:2, title:'Better numbers', rel:0, cost:0, high:1, rush:1,
+  text:'You are an intern on loan to another team for one day. An hour before a client presentation, its manager tells you to drop two unfavorable results from the chart.',
+  people:'The manager is relying on me to get this done now.', principles:'A report should show what the data shows.',
+  process:'I raised it with the right person before changing anything.', results:'The client ended up with an accurate picture.'},
+ {id:3, title:'Credit in the meeting', rel:0, cost:1, high:0, rush:1, costSide:'principles',
+  text:'In a team meeting, the supervisor who will write your reference takes credit for a slide a quiet teammate built. The meeting is about to move on. A correction would embarrass the person your reference depends on.',
+  people:'My supervisor has backed me, and I owe them my support in the room.', principles:'Credit should go to the person who did the work.',
+  process:'I raised it the way the team expects, in private.', results:'My teammate got the credit.'},
+ {id:4, title:'The sign-off', rel:0, cost:1, high:1, rush:0, costSide:'people',
+  text:'Your manager is short-staffed and asks you to sign as the checker on safety test results you did not check. Your name goes on the form, and you would be the one to answer for it. The audit is next month.',
+  people:'My manager is in a bind and is counting on me.', principles:'A signature should mean the check was done.',
+  process:'I followed the sign-off procedure as written.', results:'What went out the door was safe.'},
+ {id:5, title:'A head start', rel:1, cost:0, high:0, rush:0,
+  text:'You are an intern. You hear that a paid position will be posted next week. A close friend is job hunting.',
+  people:'My friend needs work, and I can help them.', principles:'Every applicant should hear about the opening at the same time.',
+  process:'The opening was filled through the posted steps.', results:'The position ended up with a good person in it.'},
+ {id:6, title:'A friend’s error', rel:1, cost:0, high:1, rush:1,
+  text:'You are an intern. A coworker who has become a friend made an error in a client report that has already gone out. Your supervisor is walking over, and your friend asks you, right now, not to mention it.',
+  people:'My friend is trusting me right now.', principles:'The client was given wrong information and should get it corrected.',
+  process:'The error was reported the way the office says errors should be.', results:'The client and my friend both came out all right.'},
+ {id:7, title:'Clocking in a friend', rel:1, cost:1, high:0, rush:1, costSide:'people',
+  text:'Ten minutes before a shift, a friend at work texts that they are running late and asks you to clock them in. If it is noticed, the write-up goes on your record too.',
+  people:'My friend has covered for me before.', principles:'The clock should show when people actually worked.',
+  process:'I stayed within what I am allowed to do.', results:'The shift was covered and nobody was shorted.'},
+ {id:8, title:'Hiring a friend', rel:1, cost:1, high:1, rush:0, costSide:'principles',
+  text:'You are on a hiring committee. A close friend who needs the job is a finalist, and another applicant is stronger on paper. Your friend knows you have a vote, and you doubt the friendship would survive a no. The vote is next week.',
+  people:'My friend is counting on me, and I know I can trust them.', principles:'We said the strongest applicant would get the job.',
+  process:'I followed the hiring steps as posted.', results:'The team got the person who will do it the most good.'},
+ {id:9, title:'A second extension', rel:2, cost:0, high:0, rush:0,
+  text:'You lead a student organization. A first-year member you have been mentoring asks for a second extension on a small task. You told everyone the deadlines were firm. You have a week to decide.',
+  people:'They are new, they are trying, and they asked me for help.', principles:'I told everyone the deadlines apply to all of us.',
+  process:'I handled the request the way I would for anyone.', results:'The task got done well in the end.'},
+ {id:10, title:'The reference call', rel:2, cost:0, high:1, rush:1,
+  text:'An employer calls you, with no warning, for a reference on a student worker you supervised and like. They badly need this job. Their work for you was uneven.',
+  people:'They are counting on me, and this job would change things for them.', principles:'A reference should say what I have actually seen.',
+  process:'I answered the way I would for any reference.', results:'It turned out well for them and for the employer.'},
+ {id:11, title:'Just the answers', rel:2, cost:1, high:0, rush:1, costSide:'principles',
+  text:'You tutor a student and are paid by the session. Their rating of you decides whether you get more sessions. Tonight they ask you to just give them the answers to a practice set so they can leave.',
+  people:'They are worn out and asked me for what they need tonight.', principles:'Tutoring means the student does the work.',
+  process:'I kept to what a tutor is supposed to do.', results:'They were ready for the next class.'},
+ {id:12, title:'The missing document', rel:2, cost:1, high:1, rush:0, costSide:'people',
+  text:'You run a small scholarship fund. An applicant you have advised all year left out a required document during a family emergency. The award decides whether they can stay enrolled. An exception is yours alone to defend to the board next month.',
+  people:'This student needs me to speak for them.', principles:'Every applicant was given the same requirements.',
+  process:'The fund followed its published rules.', results:'The money reached the student it would help most.'},
+ {id:13, title:'Interview questions', rel:3, cost:0, high:0, rush:0,
+  text:'You run interviews for a campus job. A week ahead, a candidate you don’t know emails to ask what the questions will be. No other candidate has asked.',
+  people:'They asked for help, and I am the one who can give it.', principles:'Every candidate should walk in with the same information.',
+  process:'I treated the request by the posted rules.', results:'The interviews found the best person.'},
+ {id:14, title:'After the cutoff', rel:3, cost:0, high:1, rush:1,
+  text:'You work the front desk at a clinic. A patient you have never seen arrives after the cutoff for the day’s last appointment and says they cannot get time off again. Only a manager can make an exception, and the manager has left. The doctor leaves in five minutes.',
+  people:'The person in front of me needs this today.', principles:'The cutoff applies to everyone the same.',
+  process:'I stayed within what I am allowed to do.', results:'The patient was seen and the day still ended in order.'},
+ {id:15, title:'The late fee', rel:3, cost:1, high:0, rush:1, costSide:'people',
+  text:'You work a front desk. A customer you have never seen asks you to waive a small late fee, and a line is forming. Only a manager can waive fees. If you waive it, the amount comes out of your drawer count and you answer for it.',
+  people:'The person in front of me has a reasonable story.', principles:'The fee applies to everyone the same.',
+  process:'I stayed within what I am allowed to do.', results:'The customer was treated fairly and the line kept moving.'},
+ {id:16, title:'The backdated order', rel:3, cost:1, high:1, rush:0, costSide:'principles',
+  text:'A customer you have never dealt with places the largest order of the year and asks you to backdate it so it qualifies for a discount that ended Friday. Your commission this quarter depends on the order. They want an answer next week.',
+  people:'The customer asked me, and looking after customers is my job.', principles:'The discount ended for everyone on Friday.',
+  process:'I stayed within what I am allowed to do.', results:'The customer stayed and nobody was treated unfairly.'}
+];
+const ORDER = [5,14,3,9,16,2,12,7,13,4,10,6,15,1,8,11];
+const QUESTION_A = 'Which obligation weighs more heavily on you?';
+const QUESTION_B = 'Afterward, which would you need to be able to say?';
+/* Half the rows on each axis print with the sides swapped, balanced inside every condition,
+   so one side of the screen is not always the same pole. */
+function flips(id){
+  const s = SITUATIONS.find(x => x.id === id);
+  return {a: (s.cost ^ (s.rel & 1)) === 1, b: (s.high ^ (s.rel >> 1)) === 1};
+}
+
+const TYPES = ['Loyal Soldier','Fixer','Referee','Advocate'];
+/* v 1: the cost fell on you. v -1: the cost fell on someone else. Two of each for every type. */
+const WATCH = [
+ {t:0,v:1,s:'I kept doing my part for people who depended on me when it cost me time, money, or standing.'},
+ {t:3,v:-1,s:'I pushed for what I believed was right in a way that ran over people who had no say.'},
+ {t:1,v:1,s:'I used my own time, favors, or position to get someone through a system that was failing them.'},
+ {t:2,v:-1,s:'I applied a rule evenly when I could see it was wrong for the person in front of me, and they paid for it.'},
+ {t:3,v:1,s:'I spoke up for something I believed when it cost me standing with people I needed.'},
+ {t:0,v:-1,s:'I kept doing what I was asked after I could see someone else was paying for it.'},
+ {t:2,v:1,s:'I held myself to a rule when breaking it would have helped me and nobody would have known.'},
+ {t:1,v:-1,s:'I bent a rule for someone, and people who followed the rule lost out.'},
+ {t:0,v:1,s:'I told someone I answer to something they did not want to hear, and stayed to help.'},
+ {t:3,v:-1,s:'I decided my goal mattered enough to skip steps, and others absorbed the cost.'},
+ {t:2,v:1,s:'I applied a rule to my own side, or to a friend, when it cost me.'},
+ {t:1,v:-1,s:'I solved a problem for someone in a way that left another person to deal with the consequences.'},
+ {t:3,v:1,s:'I kept pressing on a problem others preferred to ignore, and took the consequences myself.'},
+ {t:0,v:-1,s:'I stayed quiet about a problem out of loyalty, and someone outside the group was hurt by it.'},
+ {t:1,v:1,s:'I took a risk myself to get someone help that the normal channels would not give.'},
+ {t:2,v:-1,s:'I pointed to the procedure so that a hard call would land on someone else.'}
+];
+const RELS = ['Someone above you','A friend or peer','Someone in your care','A stranger'];
+const CONDITIONS = [
+ {key:'cost', name:'What it costs you', on:'Something of yours is at risk', off:'Little is at risk for you'},
+ {key:'high', name:'Stakes', on:'The stakes for others are high', off:'The stakes for others are low'},
+ {key:'rush', name:'Time', on:'You must decide now', off:'You have time to think'}
+];
+
+/* Scores run from -2 to +2. y: negative is People, positive is Principles. x: negative is Process, positive is Results. */
+function point(answers, id){
+  const f = flips(id);
+  const a = Number(answers['s'+id+'a']), b = Number(answers['s'+id+'b']);
+  if (!a || !b) return null;
+  return {id:id, y: f.a ? 3 - a : a - 3, x: f.b ? 3 - b : b - 3};
+}
+function mean(points){
+  const n = points.length;
+  return {x: points.reduce((s,p)=>s+p.x,0)/n, y: points.reduce((s,p)=>s+p.y,0)/n};
+}
+function quadrant(p, edge){
+  if (Math.abs(p.x) < edge || Math.abs(p.y) < edge) return -1;
+  return (p.y > 0 ? 2 : 0) + (p.x > 0 ? 1 : 0);
+}
+function strength(v){
+  const m = Math.abs(v);
+  return m < 0.25 ? 'even' : m < 0.75 ? 'slight' : m < 1.25 ? 'moderate' : 'strong';
+}
+function typeName(p){
+  const q = quadrant(p, 0.25);
+  if (q >= 0) return TYPES[q];
+  const ex = Math.abs(p.x) < 0.25, ey = Math.abs(p.y) < 0.25;
+  if (ex && ey) return 'Center of the matrix';
+  if (ey) return p.x < 0 ? 'Between Loyal Soldier and Referee' : 'Between Fixer and Advocate';
+  return p.y < 0 ? 'Between Loyal Soldier and Fixer' : 'Between Referee and Advocate';
+}
+function score(answers){
+  const points = SITUATIONS.map(s => point(answers, s.id)).filter(Boolean);
+  if (points.length < SITUATIONS.length) return {done:false, answered:points.length};
+  const sit = p => SITUATIONS.find(s => s.id === p.id);
+  const all = mean(points);
+  const counts = [0,0,0,0]; let onLine = 0;
+  points.forEach(p => { const q = quadrant(p, 0.5); if (q < 0) onLine++; else counts[q]++; });
+  const spread = Math.sqrt(points.reduce((s,p)=>s+(p.x-all.x)**2+(p.y-all.y)**2,0)/points.length);
+  const rel = RELS.map((r,g) => mean(points.filter(p => sit(p).rel === g)));
+  let relGap = 0, relPair = [0,1];
+  for (let i = 0; i < 4; i++) for (let j = i + 1; j < 4; j++){
+    const d = Math.hypot(rel[i].x-rel[j].x, rel[i].y-rel[j].y);
+    if (d > relGap){ relGap = d; relPair = [i,j]; }
+  }
+  const conditions = CONDITIONS.map(c => {
+    const on = mean(points.filter(p => sit(p)[c.key] === 1)), off = mean(points.filter(p => sit(p)[c.key] === 0));
+    return {key:c.key, on:on, off:off, gap: Math.hypot(on.x-off.x, on.y-off.y)};
+  });
+  /* How far the answers lean away from whichever side would cost you. 0 means the cost made no difference. */
+  const costly = points.filter(p => sit(p).cost === 1);
+  const costPull = -costly.reduce((s,p) => s + (sit(p).costSide === 'principles' ? 1 : -1) * p.y, 0) / costly.length;
+  const watch = TYPES.map(() => ({best:0, harm:0}));
+  let watched = 0;
+  WATCH.forEach((w,i) => {
+    const v = answers['w'+i];
+    if (v === undefined || v === null || v === '') return;
+    watched++;
+    watch[w.t][w.v > 0 ? 'best' : 'harm'] += Number(v);
+  });
+  return {done:true, points:points, all:all, counts:counts, onLine:onLine, spread:spread, rel:rel, relGap:relGap, relPair:relPair,
+          conditions:conditions, costPull:costPull, watch:watch, watchDone: watched === WATCH.length};
+}
+if (typeof module !== 'undefined') module.exports = {SITUATIONS, ORDER, WATCH, CONDITIONS, RELS, TYPES, flips, score, typeName, strength};
+</script>
+
+
+<script>
+(function(){
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');
+const STORE = 'buen594-map-yourself-v1';
+const TINT = ['#eaf2f7','#fbefe5','#eaf3ec','#f4edf6'];
+const ACC = ['#285f7c','#9b442c','#285b4c','#6b4a7c'];
+const FACES = [
+ [['webber','Bernard Webber'],['onoda','Hiroo Onoda']],
+ [['sugihara','Chiune Sugihara'],['cohen','Michael Cohen']],
+ [['jones','Bobby Jones'],['frankfurter','Felix Frankfurter']],
+ [['parks','Rosa Parks'],['laughlin','Harry Laughlin']]
+];
+const FREQ = ['Never','Once or twice','Several times','Often'];
+const HALF = WATCH.length / 2;
+const N = ORDER.length;
+const ASKS = [
+ ['People can count on you to do your part.','Is the person I’m loyal to still owed this?'],
+ ['The person in front of you gets through the system.','Who is not in the room?'],
+ ['The same rule holds for everyone, including you.','Does the rule still serve what it was made for?'],
+ ['The wrong gets named and changed.','What if I am wrong, and who can’t say no?']
+];
+
+/* ---------- build the question screens ---------- */
+function tug(name, question, left, right){
+  const words = ['Much more: '+left, 'Somewhat more: '+left, 'Both weigh equally', 'Somewhat more: '+right, 'Much more: '+right];
+  let h = '<fieldset class="tug"><legend>'+question+'</legend><div class="poles"><p class="pole">'+esc(left)+'</p><p class="pole">'+esc(right)+'</p></div><div class="dots">';
+  for (let v = 1; v <= 5; v++) h += '<label><input type="radio" name="'+name+'" value="'+v+'" aria-label="'+esc(words[v-1])+'"><span></span></label>';
+  return h + '</div><p class="ends" aria-hidden="true"><span>much more</span><span>equal</span><span>much more</span></p></fieldset>';
+}
+let html = ORDER.map((id,k) => {
+  const s = SITUATIONS.find(x => x.id === id), f = flips(id);
+  const a = f.a ? [s.principles, s.people] : [s.people, s.principles];
+  const b = f.b ? [s.results, s.process] : [s.process, s.results];
+  return '<div class="step" id="s'+(k+1)+'" tabindex="-1"><div class="sit"><div><p class="num">Situation '+(k+1)+' of '+ORDER.length+'</p><h2>'+esc(s.text)+'</h2></div><div>'
+   + tug('s'+id+'a', QUESTION_A, a[0], a[1]) + tug('s'+id+'b', QUESTION_B, b[0], b[1]) + '</div></div></div>';
+}).join('');
+for (let part = 0; part < 2; part++){
+  html += '<div class="step past" id="p'+(part+1)+'" tabindex="-1"><h2>Your past year</h2><p class="sub">Think of work, teams, clubs, classes, and family. How often has each been true of you?</p>';
+  for (let i = part * HALF; i < (part + 1) * HALF; i++){
+    html += '<fieldset class="freq"><legend>'+esc(WATCH[i].s)+'</legend><div class="seg">'
+      + FREQ.map((lab,v) => '<label><input type="radio" name="w'+i+'" value="'+v+'">'+lab+'</label>').join('') + '</div></fieldset>';
+  }
+  html += '</div>';
+}
+$('steps').innerHTML = html;
+
+const STEPS = ['start'].concat(ORDER.map((id,k) => 's'+(k+1)), ['p1','p2','results']);
+const LAST = STEPS.length - 1;
+$('pips1').innerHTML = ORDER.map((id,k) => '<button type="button" data-go="'+(k+1)+'" aria-label="Situation '+(k+1)+'"></button>').join('');
+$('pips2').innerHTML = '<button type="button" data-go="'+(N+1)+'" aria-label="Your past year, first half"></button><button type="button" data-go="'+(N+2)+'" aria-label="Your past year, second half"></button>';
+$('pips3').innerHTML = '<button type="button" data-go="'+LAST+'" aria-label="Your map"></button>';
+
+/* ---------- answers ---------- */
+const form = $('quiz');
+function read(){ const o = {}; new FormData(form).forEach((v,k) => { o[k] = v; }); return o; }
+function save(o){ try { localStorage.setItem(STORE, JSON.stringify(o)); } catch(e){} }
+function load(){ try { return JSON.parse(localStorage.getItem(STORE)) || {}; } catch(e){ return {}; } }
+const saved = load();
+Object.keys(saved).forEach(k => { const el = form.querySelector('input[name="'+k+'"][value="'+saved[k]+'"]'); if (el) el.checked = true; });
+
+function stepDone(i, a){
+  if (i === 0) return true;
+  if (i <= N){ const id = ORDER[i-1]; return !!(a['s'+id+'a'] && a['s'+id+'b']); }
+  if (i === N+1 || i === N+2){ for (let w = (i-N-1) * HALF; w < (i-N) * HALF; w++) if (a['w'+w] === undefined) return false; return true; }
+  return false;
+}
+function partOneDone(a){ for (let i = 1; i <= N; i++) if (!stepDone(i, a)) return false; return true; }
+
+/* ---------- drawing ---------- */
+function px(v, size, pad){ return pad + (v + 2) / 4 * (size - 2 * pad); }
+function matrix(r){
+  const S = 480, P = 40, I = S - 2 * P, D = P + 44;
+  let h = '<svg viewBox="0 0 '+S+' '+S+'" role="img" aria-label="'+(r ? 'Your sixteen answers and your average on the ethics matrix' : 'The ethics matrix: Loyal Soldier, Fixer, Referee, Advocate')+'">';
+  TYPES.forEach((t,q) => {
+    const x = P + (q % 2) * I / 2, y = P + (q > 1 ? I / 2 : 0);
+    h += '<rect x="'+x+'" y="'+y+'" width="'+I/2+'" height="'+I/2+'" fill="'+TINT[q]+'"/>'
+       + '<text x="'+(x + I/4)+'" y="'+(r ? y + (q > 1 ? I/2 - 12 : 25) : y + I/4 + 7)+'" text-anchor="middle" font-size="'+(r ? 18 : 23)+'" font-weight="750" fill="'+ACC[q]+'">'+t+'</text>';
+  });
+  h += '<rect x="'+P+'" y="'+P+'" width="'+I+'" height="'+I+'" fill="none" stroke="#202d31" stroke-width="2"/>'
+     + '<line x1="'+S/2+'" y1="'+P+'" x2="'+S/2+'" y2="'+(S-P)+'" stroke="#202d31" stroke-width="1.5"/><line x1="'+P+'" y1="'+S/2+'" x2="'+(S-P)+'" y2="'+S/2+'" stroke="#202d31" stroke-width="1.5"/>'
+     + '<text x="'+S/2+'" y="27" text-anchor="middle" font-size="22" font-weight="750" fill="#202d31">People</text>'
+     + '<text x="'+S/2+'" y="'+(S-13)+'" text-anchor="middle" font-size="22" font-weight="750" fill="#202d31">Principles</text>'
+     + '<text transform="translate(27 '+S/2+') rotate(-90)" text-anchor="middle" font-size="22" font-weight="750" fill="#202d31">Process</text>'
+     + '<text transform="translate('+(S-13)+' '+S/2+') rotate(-90)" text-anchor="middle" font-size="22" font-weight="750" fill="#202d31">Results</text>';
+  if (r){
+    const seen = {};
+    r.points.forEach(p => {
+      const key = p.x+','+p.y, n = seen[key] = (seen[key] || 0) + 1;
+      const cx = px(p.x, S, D) + (n - 1) * 15, cy = px(p.y, S, D) + (n - 1) * 9;
+      h += '<circle cx="'+cx+'" cy="'+cy+'" r="11" fill="#fff" stroke="#202d31" stroke-width="1.5"/>'
+         + '<text x="'+cx+'" y="'+(cy+4.5)+'" text-anchor="middle" font-size="12.5" font-weight="700" fill="#202d31">'+(ORDER.indexOf(p.id)+1)+'</text>';
+    });
+    const ax = px(r.all.x, S, D), ay = px(r.all.y, S, D);
+    h += '<circle cx="'+ax+'" cy="'+ay+'" r="17" fill="#601329"/><circle cx="'+ax+'" cy="'+ay+'" r="15" fill="#fff"/><circle cx="'+ax+'" cy="'+ay+'" r="12" fill="#aa123b"/>';
+  }
+  return h + '</svg>';
+}
+function miniBase(){
+  const S = 200, P = 6, I = S - 2 * P;
+  let h = '<svg viewBox="0 0 '+S+' '+S+'" aria-hidden="true">';
+  TYPES.forEach((t,q) => { h += '<rect x="'+(P + (q % 2) * I/2)+'" y="'+(P + (q > 1 ? I/2 : 0))+'" width="'+I/2+'" height="'+I/2+'" fill="'+TINT[q]+'"/>'; });
+  return h + '<rect x="'+P+'" y="'+P+'" width="'+I+'" height="'+I+'" fill="none" stroke="#202d31" stroke-width="1.5"/>'
+     + '<line x1="'+S/2+'" y1="'+P+'" x2="'+S/2+'" y2="'+(S-P)+'" stroke="#202d31"/><line x1="'+P+'" y1="'+S/2+'" x2="'+(S-P)+'" y2="'+S/2+'" stroke="#202d31"/>';
+}
+function mark(p, kind){
+  const x = px(p.x, 200, 26), y = px(p.y, 200, 26);
+  if (kind === 0) return '<circle cx="'+x+'" cy="'+y+'" r="10" fill="#202d31" stroke="#fff" stroke-width="2"/>';
+  if (kind === 1) return '<circle cx="'+x+'" cy="'+y+'" r="9" fill="#fff" stroke="#202d31" stroke-width="3"/>';
+  if (kind === 2) return '<rect x="'+(x-9)+'" y="'+(y-9)+'" width="18" height="18" fill="#202d31" stroke="#fff" stroke-width="2"/>';
+  return '<rect x="'+(x-8)+'" y="'+(y-8)+'" width="16" height="16" fill="#fff" stroke="#202d31" stroke-width="3"/>';
+}
+function mini(c){
+  const a = [px(c.on.x,200,26), px(c.on.y,200,26)], b = [px(c.off.x,200,26), px(c.off.y,200,26)];
+  return miniBase() + '<line x1="'+a[0]+'" y1="'+a[1]+'" x2="'+b[0]+'" y2="'+b[1]+'" stroke="#202d31" stroke-width="2"/>' + mark(c.off, 1) + mark(c.on, 0) + '</svg>';
+}
+function miniRel(rel){ return miniBase() + [3,2,1,0].map(g => mark(rel[g], g)).join('') + '</svg>'; }
+const KEYS = ['key f','key','key f sq','key sq'];
+function axisLine(v, neg, pos){
+  const s = strength(v);
+  return s === 'even' ? neg + ' and ' + pos.toLowerCase() + ' weigh about equally.' : s.charAt(0).toUpperCase() + s.slice(1) + ' pull toward ' + (v < 0 ? neg : pos).toLowerCase() + '.';
+}
+function meter(v, neg, pos){ return '<span class="meter"><span>'+neg+'</span><i><u style="left:'+((v + 2) / 4 * 100)+'%"></u></i><span>'+pos+'</span></span>'; }
+function moved(c){
+  const dx = c.on.x - c.off.x, dy = c.on.y - c.off.y, parts = [];
+  if (Math.abs(dy) >= 0.35) parts.push(dy > 0 ? 'toward principles' : 'toward people');
+  if (Math.abs(dx) >= 0.35) parts.push(dx > 0 ? 'toward results' : 'toward process');
+  return parts.join(' and ');
+}
+
+function report(a){
+  const r = score(a);
+  if (!r.done) return;
+  $('plot').innerHTML = matrix(r);
+  const name = typeName(r.all), q = TYPES.indexOf(name);
+  const who = $('who');
+  who.textContent = name; who.className = 'who' + (q < 0 ? ' long' : ''); who.style.color = q < 0 ? '' : ACC[q];
+  $('faces').innerHTML = q < 0 ? '' : FACES[q].map((f,i) => '<div><img src="ethics-assets/type-'+f[0]+'.jpg" alt="'+f[1]+'"><span>'+(i ? 'When it harms' : 'At its best')+'<b>'+f[1]+'</b></span></div>').join('');
+  const steady = r.spread < 1.1 ? 'Steady. Your answers stay close to your average from one situation to the next.'
+               : r.spread < 1.7 ? 'Mixed. You have a home position, and some situations pull you well away from it.'
+               : 'Situational. Your answers range across the matrix, so the situation decides more than a fixed type does.';
+  $('read').innerHTML =
+    '<li><b>People or principles.</b> '+axisLine(r.all.y,'People','Principles')+meter(r.all.y,'People','Principles')+'</li>'
+  + '<li><b>Process or results.</b> '+axisLine(r.all.x,'Process','Results')+meter(r.all.x,'Process','Results')+'</li>'
+  + '<li><b>How steady.</b> '+steady+'</li>'
+  + '<li><b>Your sixteen answers.</b> '+TYPES.map((t,i) => t+' '+r.counts[i]).join(' · ')+(r.onLine ? ' · on a line '+r.onLine : '')+'</li>';
+
+  const relShift = r.relGap >= 1 ? 'A clear shift' : r.relGap >= 0.5 ? 'A small shift' : 'About the same';
+  let cards = '<div class="cond"><h3>Who it is</h3>'+miniRel(r.rel)
+    + RELS.map((n,g) => '<p><span class="'+KEYS[g]+'"></span>'+n+': <b>'+typeName(r.rel[g])+'</b></p>').join('')
+    + '<p class="verdict">'+relShift+'.'+(relShift === 'About the same' ? '' : ' <span style="font-weight:400">You differ most between '+RELS[r.relPair[0]].toLowerCase()+' and '+RELS[r.relPair[1]].toLowerCase()+'.</span>')+'</p></div>';
+  const biggest = r.conditions.reduce((m,c) => c.gap > m.gap ? c : m);
+  cards += r.conditions.map((c,i) => {
+    const d = CONDITIONS[i], m = moved(c);
+    const shift = c.gap >= 0.7 && m ? 'A clear shift' : c.gap >= 0.35 && m ? 'A small shift' : 'About the same';
+    const big = c === biggest && shift !== 'About the same';
+    const aside = c.key !== 'cost' ? '' : '<p class="aside">'+(r.costPull >= 0.5 ? 'When one side would cost you, you lean away from that side.' : r.costPull <= -0.5 ? 'When one side would cost you, you lean toward it anyway.' : 'Which side carries the cost does not change your answer much.')+'</p>';
+    return '<div class="cond'+(big ? ' top-shift' : '')+'"><h3>'+d.name+'</h3>'+mini(c)
+      + '<p><span class="key f"></span>'+d.on+'</p><p><span class="key"></span>'+d.off+'</p>'
+      + '<p class="verdict">'+shift+(big ? ', the largest of these three' : '')+'.'+(shift === 'About the same' ? '' : ' <span style="font-weight:400">When '+d.on.charAt(0).toLowerCase()+d.on.slice(1)+', you move '+m+'.</span>')+'</p>'+aside+'</div>';
+  }).join('');
+  $('conds').innerHTML = cards;
+
+  const own = [0,1,2,3].filter(i => name === TYPES[i] || name.indexOf(TYPES[i]) > 0);
+  $('asks').innerHTML = TYPES.map((t,i) => '<div class="ask'+(own.indexOf(i) >= 0 ? ' me' : '')+'" style="background:'+TINT[i]+';color:'+ACC[i]+'"><h3>'+t+'</h3><p style="color:#202d31">'+ASKS[i][0]+'</p><p class="q">'+ASKS[i][1]+'</p></div>').join('');
+
+  if (r.watchDone){
+    const mine = [0,1,2,3].filter(i => name === TYPES[i] || name.indexOf(TYPES[i]) > 0);
+    $('val').innerHTML = '<div class="hd"><span>When it harms: someone else paid</span><span></span><span>At its best: you paid</span></div>' + TYPES.map((t,i) => {
+      const w = r.watch[i];
+      return '<div class="r'+(mine.indexOf(i) >= 0 ? ' me' : '')+'"><span class="h"><i style="width:'+(w.harm / 6 * 78)+'%"></i>'+w.harm+' of 6</span>'
+        + '<b style="background:'+TINT[i]+';color:'+ACC[i]+'">'+t+'</b>'
+        + '<span class="g"><i style="width:'+(w.best / 6 * 78)+'%;background:'+ACC[i]+'"></i>'+w.best+' of 6</span></div>';
+    }).join('');
+    const top = r.watch.map((w,i) => ({i:i, h:w.harm})).sort((x,y) => y.h - x.h)[0];
+    $('valnote').textContent = (mine.length ? 'The outlined '+(mine.length > 1 ? 'types match' : 'type matches')+' your place on the map. ' : '')
+      + (top.h >= 3 ? 'Your highest “when it harms” score is '+TYPES[top.i]+'. That is the harm you report doing most often, whichever type your map names.' : 'You report little harm of any of the four kinds this year.');
+  } else {
+    $('val').innerHTML = ''; $('valnote').innerHTML = 'Answer all sixteen statements in <a href="#p1">Your past year</a> to see this part.';
+  }
+  $('recap').innerHTML = ORDER.map((id,k) => {
+    const p = r.points.find(x => x.id === id), t = quadrant(p, 0.5), s = SITUATIONS.find(x => x.id === id);
+    return '<li><span class="n">'+(k+1)+'</span><a href="#s'+(k+1)+'">'+esc(s.title)+'</a>'
+      + (t < 0 ? '<span class="chip" style="background:#f3f3f0">On a line</span>' : '<span class="chip" style="background:'+TINT[t]+';color:'+ACC[t]+'">'+TYPES[t]+'</span>')+'</li>';
+  }).join('');
+}
+
+/* ---------- moving through the steps ---------- */
+let cur = 0;
+function paint(){
+  const a = read(), ready = partOneDone(a);
+  document.body.classList.toggle('done', ready && cur === LAST);
+  document.body.classList.toggle('at-start', cur === 0);
+  document.querySelectorAll('.pips button').forEach(b => {
+    const i = Number(b.dataset.go);
+    b.classList.toggle('done', i === LAST ? ready : stepDone(i, a));
+    b.classList.toggle('now', i === cur);
+    b.disabled = i === LAST && !ready;
+  });
+  $('g1').classList.toggle('here', cur >= 1 && cur <= N);
+  $('g2').classList.toggle('here', cur > N && cur < LAST);
+  $('g3').classList.toggle('here', cur === LAST);
+  $('prev').hidden = cur === 0;
+  $('next').hidden = cur === LAST;
+  $('next').textContent = cur === 0 ? 'Start →' : cur === LAST - 1 ? 'See my map →' : 'Next →';
+  $('next').disabled = !stepDone(cur, a) || (cur === LAST - 1 && !ready);
+  $('where').textContent = cur === 0 ? '' : cur <= N ? (stepDone(cur, a) ? '' : 'Answer both questions to go on.')
+    : cur < LAST ? (stepDone(cur, a) ? (ready ? '' : 'Some situations are still unanswered. Use the boxes at the top to find them.') : 'Answer all eight to go on.') : '';
+}
+function go(i, push){
+  const a = read();
+  i = Math.max(0, Math.min(LAST, i));
+  if (i === LAST && !partOneDone(a)) i = 1;
+  cur = i;
+  STEPS.forEach((id,k) => $(id).classList.toggle('on', k === cur));
+  if (cur === LAST) report(a);
+  paint();
+  if (push !== false){ try { history.replaceState(null, '', '#' + STEPS[cur]); } catch(e){} }
+  window.scrollTo(0, 0);
+}
+form.addEventListener('change', () => { save(read()); paint(); });
+$('prev').onclick = () => go(cur - 1);
+$('next').onclick = () => go(cur + 1);
+$('begin').onclick = () => go(1);
+document.querySelector('.path').addEventListener('click', e => { const b = e.target.closest('button'); if (b && !b.disabled) go(Number(b.dataset.go)); });
+$('print').onclick = () => window.print();
+$('clear').onclick = () => { form.reset(); try { localStorage.removeItem(STORE); } catch(e){} go(0); };
+document.addEventListener('keydown', e => {
+  if (e.target.closest('input,textarea,select')) return;
+  if (e.key === 'ArrowRight' && !$('next').disabled && !$('next').hidden) go(cur + 1);
+  if (e.key === 'ArrowLeft' && cur > 0) go(cur - 1);
+});
+function fromHash(){ const k = STEPS.indexOf(location.hash.slice(1)); return k < 0 ? null : k; }
+window.addEventListener('hashchange', () => { const k = fromHash(); if (k !== null && k !== cur) go(k, false); });
+
+$('preview').innerHTML = matrix(null);
+let first = fromHash();
+if (first === null){
+  const a = read();
+  first = 0;
+  if (Object.keys(a).length){ first = LAST; for (let i = 1; i < LAST; i++) if (!stepDone(i, a)){ first = i; break; } }
+}
+go(first, false);
+})();
+</script>
+</body></html>
