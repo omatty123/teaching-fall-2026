@@ -62,6 +62,12 @@
 #your-dot .dot-chart{padding-inline:0}
 .quiz-axis-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:center}
 .quiz-side{writing-mode:vertical-rl;text-orientation:upright;font-size:clamp(22px,2.4vw,32px);font-weight:750;line-height:1}
+
+.plot>b{align-content:center;gap:5px;min-width:0;line-height:1.1}
+.quiz-portraits{display:flex;justify-content:center;gap:4px;width:100%}
+.quiz-portraits img{width:44%;max-width:132px;aspect-ratio:4/5;object-fit:cover;object-position:center top}
+#your-dot .plot{width:100%;max-height:none}
+.selected-portrait{flex-direction:column;align-items:center}.selected-portrait img{height:auto;width:68%;max-width:180px;aspect-ratio:1.2}.selected-portrait small{font-size:clamp(12px,1.1vw,17px);font-weight:600}
 </style></head>
 <body><main>
 <div class="slide" id="three-cs" data-label="The Three Cs">
@@ -73,8 +79,9 @@
 </div>
 <div class="slide" id="your-dot" data-label="Your place on the matrix">
 <section><h2>Your place on the matrix</h2><p>You lead a team. Someone you’ve worked with for years asks for an exception to a rule you’ve promised to apply fairly.</p>
+<p><a id="quiz-version" href="?examples=four#your-dot">Compare helpful and harmful decisions</a></p>
 <div class="dot-layout"><form><p>Choose one number for each question. <b>3</b> means both weigh equally.</p><fieldset><legend>Which obligation weighs more heavily on you?</legend><div class="ends"><span><b>1</b> Keeping faith with the person who’s counting on me.</span><span><b>5</b> Keeping faith with the principle I’ve committed to.</span></div><div class="scale"><label><input type="radio" name="obligation" value="1"> 1</label><label><input type="radio" name="obligation" value="2"> 2</label><label><input type="radio" name="obligation" value="3"> 3</label><label><input type="radio" name="obligation" value="4"> 4</label><label><input type="radio" name="obligation" value="5"> 5</label></div></fieldset><fieldset><legend>What carries more weight in deciding whether to grant the exception?</legend><div class="ends"><span><b>1</b> Whether I can defend the process I used.</span><span><b>5</b> Whether I can defend the result I expect.</span></div><div class="scale"><label><input type="radio" name="decision" value="1"> 1</label><label><input type="radio" name="decision" value="2"> 2</label><label><input type="radio" name="decision" value="3"> 3</label><label><input type="radio" name="decision" value="4"> 4</label><label><input type="radio" name="decision" value="5"> 5</label></div></fieldset></form>
-<div><div class="dot-chart" aria-hidden="true"><strong>People</strong><div class="quiz-axis-row"><span class="quiz-side">Process</span><div class="plot"><b>Loyal Soldier</b><b>Fixer</b><b>Referee</b><b>Advocate</b><span class="position" hidden></span></div><span class="quiz-side">Results</span></div><strong>Principles</strong></div><p role="status" id="dot-reading">Answer both questions to place your dot.</p><a href="#name">See how each type can help or harm someone</a></div></div></section></div>
+<div><div class="dot-chart" aria-hidden="true"><strong>People</strong><div class="quiz-axis-row"><span class="quiz-side">Process</span><div class="plot"><b><span>Loyal Soldier</span><span class="quiz-portraits"><img src="ethics-assets/type-webber.jpg" alt="Bernard Webber"><img src="ethics-assets/type-onoda.jpg" alt="Hiroo Onoda"></span></b><b><span>Fixer</span><span class="quiz-portraits"><img src="ethics-assets/type-sugihara.jpg" alt="Chiune Sugihara"><img src="ethics-assets/type-cohen.jpg" alt="Michael Cohen"></span></b><b><span>Referee</span><span class="quiz-portraits"><img src="ethics-assets/type-jones.jpg" alt="Bobby Jones"><img src="ethics-assets/type-frankfurter.jpg" alt="Felix Frankfurter"></span></b><b><span>Advocate</span><span class="quiz-portraits"><img src="ethics-assets/type-parks.jpg" alt="Rosa Parks"><img src="ethics-assets/type-laughlin.jpg" alt="Harry Laughlin"></span></b><span class="position" hidden></span></div><span class="quiz-side">Results</span></div><strong>Principles</strong></div><p role="status" id="dot-reading">Answer both questions to place your dot.</p><a href="#name">See how each type can help or harm someone</a></div></div></section></div>
 <div class="slide" id="cases" data-label="Three ethics cases">
 <section class="cases back" aria-labelledby="case-title"><div class="section-heading"><h2 id="case-title">Three ethics cases</h2></div>
 <article><img src="ethics-assets/coaching.webp" alt="Painted basketball, coach’s clipboard, and whistle on a gym bench." width="1448" height="1086"><div><h3><a href="ethics-coaching.html"><span class="nw">The Coaching Intern</span></a></h3><p>You are interning with a youth basketball program. All season you have told your players that everyone gets fair playing time. Now, in close games, the head coach plays only the starters, and the kids you coached sit on the bench. What do you&nbsp;do?</p></div><a class="go" href="ethics-coaching.html" aria-hidden="true" tabindex="-1">Open the case →</a></article>
@@ -148,4 +155,64 @@ activity.querySelector('form').addEventListener('change',()=>{
     activity.querySelector('#dot-reading').append(' '+card.querySelector('b').textContent+'.');
   }
 });
-</script></body></html>
+</script><script>
+const version = new URLSearchParams(location.search).get('examples');
+{
+  const selected = [
+    ['Sully Sullenberger','sully','After landing on the Hudson, Sullenberger checked the cabin twice to make sure everyone had escaped.','https://www.govinfo.gov/content/pkg/CRECB-2009-pt1/html/CRECB-2009-pt1-Pg1502.htm','C.B._Sullenberger,_U.S._Representative_(cropped).jpg'],
+    ['Oskar Schindler','schindler','Schindler used his factory, his connections, and bribes to protect Jewish workers during the Holocaust.','https://encyclopedia.ushmm.org/content/en/article/oskar-schindler','Schindler,_Oskar_(3x4_cropped).jpg'],
+    ['John Roberts','roberts','Roberts wrote the majority opinion striking down the formula that required some jurisdictions to get federal approval before changing voting rules.','https://www.justice.gov/sites/default/files/crt/legacy/2013/06/27/shelbymeritsopinion.pdf','Official_roberts_CJ.jpg'],
+    ['Joseph McCarthy','mccarthy','During the televised Army hearings, McCarthy publicly singled out a young lawyer over his past membership in the National Lawyers Guild.','https://www.senate.gov/about/powers-procedures/investigations/mccarthy-hearings/have-you-no-sense-of-decency.htm','Joseph_McCarthy_US_senate_biography_photo.jpg']
+  ];
+  document.querySelectorAll('.quiz-portraits').forEach((pair, index) => {
+    const [name, slug, account, source, photo] = selected[index];
+    const portrait = new Image();
+    portrait.src = 'ethics-assets/quiz-' + slug + '.jpg';
+    portrait.alt = name;
+    const caption = document.createElement('small');
+    caption.textContent = name;
+    pair.replaceChildren(portrait, caption);
+    pair.classList.add('selected-portrait');
+    const cards = document.querySelectorAll('.paired-type')[index].querySelectorAll('.person-example');
+    const card = cards[index < 2 ? 0 : 1];
+    card.querySelector('img').replaceWith(portrait.cloneNode());
+    card.querySelector('strong').textContent = name;
+    card.querySelector('small').textContent = index < 2 ? 'At its best' : 'When it harms';
+    const links = ['Source', 'Photo'].map(label => {
+      const link = document.createElement('a');
+      link.textContent = label;
+      return link;
+    });
+    links[0].href = source;
+    links[1].href = new URL('/wiki/File:' + encodeURIComponent(photo), 'https://commons.wikimedia.org').href;
+    card.querySelector('p').replaceChildren(account + ' ', links[0], ' · ', links[1]);
+  });
+  const control = document.createElement('select');
+  const label = document.createElement('label');
+  label.append('Show examples where the decision ', control);
+  for (const [value, text] of [['help','helped people'], ['harm','caused harm']]) {
+    control.add(new Option(text, value));
+  }
+  function showExamples(mode) {
+    control.value = mode;
+    document.querySelectorAll('.paired-type').forEach((quadrant, index) => {
+      const cards = quadrant.querySelectorAll('.person-example');
+      const card = cards[mode === 'help' ? 0 : 1];
+      const pair = document.querySelectorAll('.quiz-portraits')[index];
+      pair.querySelector('img').replaceWith(card.querySelector('img').cloneNode());
+      pair.querySelector('small').textContent = card.querySelector('strong').textContent;
+    });
+  }
+  document.querySelector('#quiz-version').replaceWith(label);
+  const chart = document.querySelector('.dot-chart');
+  chart.removeAttribute('aria-hidden');
+  showExamples(version === 'harm' ? 'harm' : 'help');
+  control.addEventListener('change', () => {
+    showExamples(control.value);
+    const url = new URL(location.href);
+    url.searchParams.set('examples', control.value);
+    history.replaceState(null, '', url);
+  });
+}
+</script>
+</body></html>
