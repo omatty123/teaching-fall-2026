@@ -54,6 +54,14 @@
 #your-dot fieldset{margin:28px 0}#your-dot legend{margin-bottom:14px}#your-dot .scale{gap:8px;margin-top:14px}
 #your-dot .ends{gap:24px;line-height:1.45}#your-dot .plot{height:auto;aspect-ratio:1}
 @media(max-width:900px){#your-dot .dot-layout{grid-template-columns:1fr;max-width:600px;margin-inline:auto}#your-dot .plot{max-height:400px}body:has(#your-dot.on) .deckbar{position:static}body:has(#your-dot.on) main{padding-bottom:24px}}
+#your-dot .dot-chart{padding-inline:clamp(28px,3vw,44px)}
+#your-dot .horizontal i,#name .matrix2>.axl.left,#name .matrix2>.axl.right{writing-mode:vertical-rl;text-orientation:upright;line-height:1}
+#your-dot .horizontal i{position:absolute;top:50%;transform:translateY(-50%);background:transparent;padding:0}
+#your-dot .horizontal i:first-child{right:calc(100% + 4px)}#your-dot .horizontal i:last-child{left:calc(100% + 4px)}
+#name .matrix2>.axl.left,#name .matrix2>.axl.right{transform:none}
+#your-dot .dot-chart{padding-inline:0}
+.quiz-axis-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:center}
+.quiz-side{writing-mode:vertical-rl;text-orientation:upright;font-size:clamp(22px,2.4vw,32px);font-weight:750;line-height:1}
 </style></head>
 <body><main>
 <div class="slide" id="three-cs" data-label="The Three Cs">
@@ -66,7 +74,7 @@
 <div class="slide" id="your-dot" data-label="Your place on the matrix">
 <section><h2>Your place on the matrix</h2><p>You lead a team. Someone you’ve worked with for years asks for an exception to a rule you’ve promised to apply fairly.</p>
 <div class="dot-layout"><form><p>Choose one number for each question. <b>3</b> means both weigh equally.</p><fieldset><legend>Which obligation weighs more heavily on you?</legend><div class="ends"><span><b>1</b> Keeping faith with the person who’s counting on me.</span><span><b>5</b> Keeping faith with the principle I’ve committed to.</span></div><div class="scale"><label><input type="radio" name="obligation" value="1"> 1</label><label><input type="radio" name="obligation" value="2"> 2</label><label><input type="radio" name="obligation" value="3"> 3</label><label><input type="radio" name="obligation" value="4"> 4</label><label><input type="radio" name="obligation" value="5"> 5</label></div></fieldset><fieldset><legend>What carries more weight in deciding whether to grant the exception?</legend><div class="ends"><span><b>1</b> Whether I can defend the process I used.</span><span><b>5</b> Whether I can defend the result I expect.</span></div><div class="scale"><label><input type="radio" name="decision" value="1"> 1</label><label><input type="radio" name="decision" value="2"> 2</label><label><input type="radio" name="decision" value="3"> 3</label><label><input type="radio" name="decision" value="4"> 4</label><label><input type="radio" name="decision" value="5"> 5</label></div></fieldset></form>
-<div><div class="dot-chart" aria-hidden="true"><strong>People</strong><div class="plot"><b>Loyal Soldier</b><b>Fixer</b><b>Referee</b><b>Advocate</b><span class="horizontal"><i>Process</i><i>Results</i></span><span class="position" hidden></span></div><strong>Principles</strong></div><p role="status" id="dot-reading">Answer both questions to place your dot.</p><a href="#name">See how each type can help or harm someone</a></div></div></section></div>
+<div><div class="dot-chart" aria-hidden="true"><strong>People</strong><div class="quiz-axis-row"><span class="quiz-side">Process</span><div class="plot"><b>Loyal Soldier</b><b>Fixer</b><b>Referee</b><b>Advocate</b><span class="position" hidden></span></div><span class="quiz-side">Results</span></div><strong>Principles</strong></div><p role="status" id="dot-reading">Answer both questions to place your dot.</p><a href="#name">See how each type can help or harm someone</a></div></div></section></div>
 <div class="slide" id="cases" data-label="Three ethics cases">
 <section class="cases back" aria-labelledby="case-title"><div class="section-heading"><h2 id="case-title">Three ethics cases</h2></div>
 <article><img src="ethics-assets/coaching.webp" alt="Painted basketball, coach’s clipboard, and whistle on a gym bench." width="1448" height="1086"><div><h3><a href="ethics-coaching.html"><span class="nw">The Coaching Intern</span></a></h3><p>You are interning with a youth basketball program. All season you have told your players that everyone gets fair playing time. Now, in close games, the head coach plays only the starters, and the kids you coached sit on the bench. What do you&nbsp;do?</p></div><a class="go" href="ethics-coaching.html" aria-hidden="true" tabindex="-1">Open the case →</a></article>
