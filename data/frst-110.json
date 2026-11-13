@@ -11122,9 +11122,9 @@
     },
     {
       "date": "2026-11-18",
-      "unit": "rush",
-      "topic": "Rush, Rising",
-      "detail": "Part Three",
+      "unit": "review",
+      "topic": "Writing Workshop",
+      "detail": "Course Review",
       "materials": []
     }
   ],
@@ -11192,6 +11192,11 @@
       "key": "rush",
       "title": "Rising",
       "author": "Elizabeth Rush",
+      "materials": []
+    },
+    {
+      "key": "review",
+      "title": "Writing Workshop and Course Review",
       "materials": []
     }
   ],

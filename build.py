@@ -581,6 +581,8 @@ def _short_date(iso):
 def _range(a, b):
     """Sep 25 – Oct 2, or Oct 14–21 within one month"""
     x, y = datetime.date.fromisoformat(a), datetime.date.fromisoformat(b)
+    if x == y:
+        return f"{x.strftime('%b')} {x.day}"
     if x.month == y.month:
         return f"{x.strftime('%b')} {x.day}–{y.day}"
     return f"{x.strftime('%b')} {x.day} – {y.strftime('%b')} {y.day}"
