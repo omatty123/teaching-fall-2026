@@ -11083,7 +11083,7 @@
       "date": "2026-11-11",
       "unit": "rush",
       "topic": "Rush, Rising",
-      "detail": "Part Two through p. 164",
+      "detail": "Part Two to 161",
       "materials": [
         {
           "label": "Song: The Wreck of the Edmund Fitzgerald · Gordon Lightfoot",
@@ -11100,7 +11100,7 @@
       "date": "2026-11-13",
       "unit": "rush",
       "topic": "Rush, Rising",
-      "detail": "Part Two",
+      "detail": "Part Three to 205",
       "materials": [
         {
           "label": "Song: The Wreck of the Edmund Fitzgerald · Gordon Lightfoot",
@@ -11117,14 +11117,14 @@
       "date": "2026-11-16",
       "unit": "rush",
       "topic": "Rush, Rising",
-      "detail": "Part Three",
+      "detail": "Part Three to 264",
       "materials": []
     },
     {
       "date": "2026-11-18",
       "unit": "review",
-      "topic": "Writing Workshop",
-      "detail": "Course Review",
+      "topic": "Workshop and Review",
+      "detail": "",
       "materials": []
     }
   ],
@@ -11196,7 +11196,7 @@
     },
     {
       "key": "review",
-      "title": "Writing Workshop and Course Review",
+      "title": "Workshop and Review",
       "materials": []
     }
   ],
