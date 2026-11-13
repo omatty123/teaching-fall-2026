@@ -11101,7 +11101,12 @@
       "unit": "rush",
       "topic": "Rush, Rising",
       "detail": "Part Two",
-      "materials": []
+      "materials": [
+        {
+          "label": "Isle de Jean Charles · Rising, pp. 162–181",
+          "href": "https://omatty123.github.io/teaching-fall-2026/frst-110-resources/rising-part-two-nov13.html"
+        }
+      ]
     },
     {
       "date": "2026-11-16",
