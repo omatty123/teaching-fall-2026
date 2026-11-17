@@ -95,6 +95,16 @@ body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helveti
     .ebrey-ming .ming-wide { max-width: 5.5in; break-inside: avoid; }
 }
 
+.ebrey-ming .ming-empire-map { max-width: 820px; margin: 14px 0 16px; }
+.ming-empire-map img { display: block; width: 100%; height: auto; }
+.ming-empire-map figcaption { margin-top: 6px; }
+#ming-map li { margin: .4em 0; }
+@media print {
+    .ebrey-ming #ming-map { break-inside: auto; }
+    .ming-empire-map { break-inside: avoid; }
+    .ming-empire-map img { width: auto; max-width: 100%; max-height: 105mm; }
+}
+
 .ebrey-ming .envoy-heading { font-size: 1.1em; margin: 22px 0 4px; }
 .ebrey-ming .envoy-note { max-width: 79ch; margin: 0 0 10px; }
 .ebrey-ming .envoy-grid {

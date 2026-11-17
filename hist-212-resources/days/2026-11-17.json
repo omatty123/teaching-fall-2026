@@ -122,6 +122,30 @@
       ]
     },
     {
+      "id": "ming-map",
+      "title": "Nanjing, Beijing, and the Ming empire",
+      "short": "Ming map",
+      "body": [
+        {
+          "p": "<strong>Nanjing</strong>, on the lower Yangzi River, was Hongwu’s base and the first Ming capital. In 1421 the Yongle emperor moved the main capital north to <strong>Beijing</strong>. The court rebuilt the Grand Canal to supply Beijing with grain from the south. <a class=\"page-cite\" href=\"#resources\">Ebrey, pp. 228, 230</a> · <a href=\"https://static.artmuseum.princeton.edu/asian-art/china/timeline\">Princeton University Art Museum</a>"
+        },
+        {
+          "html": "<figure class=\"ming-empire-map\"><a href=\"assets/ming-1582.svg\" aria-label=\"Open the full-size map of the Ming empire\"><picture><source media=\"(max-width: 600px)\" srcset=\"assets/ming-1582-phone.svg\" width=\"400\" height=\"405\"><img src=\"assets/ming-1582.svg\" width=\"820\" height=\"620\" loading=\"lazy\" alt=\"Ming China in 1582. Nanjing and Suzhou lie near the mouth of the Yangzi. Beijing lies at the north end of the Grand Canal. Ningbo and Macao lie along the coast, and Jingdezhen is inland.\"></picture></a><figcaption>Shading shows Ming territory in 1582. Double rings mark the two capitals. The dashed line follows the Grand Canal corridor. <a href=\"assets/ming-1582.svg\">Open the full-size map</a></figcaption></figure>"
+        },
+        {
+          "list": [
+            "<strong>Shanhai Pass.</strong> The Great Wall reaches the coast east of Beijing. This was the pass held by Wu Sangui when Li Zicheng took Beijing in 1644. <a href=\"https://pages.ucsd.edu/~dkjordan/chin/chin/chinahistory/MingChingTransition.html\">The fall of Ming Beijing</a>",
+            "<strong>Suzhou and Jingdezhen.</strong> Hongwu names Suzhou in his proclamation, and Xia Chang came from the Suzhou region. Farther inland, Jingdezhen’s kilns produced porcelain for distant markets. <a href=\"https://drive.google.com/file/d/1yUET_JwjJPyt-12WMkeTEINmUoPq9fCC/view\">Proclamations, p. 207</a> · <a href=\"#xia-chang\">Xia Chang’s painting</a> · <a href=\"#resources\">Ebrey, p. 240</a>",
+            "<strong>Ningbo and Macao.</strong> The court directed Japanese envoys to Ningbo. Farther south, it permitted the Portuguese to establish a trading base at Macao in 1557. <a href=\"#resources\">Ebrey, p. 234</a>",
+            "<strong>Guizhou.</strong> The Ming expanded southwest into Yunnan and established the province of Guizhou to its east. <a href=\"#resources\">Ebrey, p. 229</a>"
+          ]
+        },
+        {
+          "html": "<p class=\"citation\">The historical boundary and the lower Yellow River follow the <a href=\"https://www.arcgis.com/home/item.html?id=71827987d2db4e20ab2f2b866ea1a1b7\">ChinaX Ming map</a>. The river then reached the sea south of Shandong. The canal line shows the main <a href=\"https://www.arcgis.com/home/item.html?id=6dc7626a492645c39edea238ad4aa053\">Yuan-era corridor</a> that the Ming renovated. Coastlines and upper rivers use <a href=\"https://www.naturalearthdata.com/downloads/50m-physical-vectors/\">Natural Earth</a> reference data.</p>"
+        }
+      ]
+    },
+    {
       "id": "empress-xu",
       "title": "Empress Xu and the Great Learning",
       "short": "Empress Xu",
