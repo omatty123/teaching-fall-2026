@@ -18,11 +18,52 @@ body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helveti
 .ebrey-ming.large-text main>section>h2{font-size:1.25em}
 @media(max-width:600px){.ebrey-ming main{padding:7px 16px 24px}.ebrey-ming .top{padding:7px 16px}.ebrey-ming main>section{margin:8px 0 18px;padding-top:14px}}
 @media print{body.ebrey-ming{font-size:11pt}.ebrey-ming main{max-width:none;padding:0}.ebrey-ming main>section{margin:9pt 0;padding-top:7pt;break-inside:avoid}.ebrey-ming main>section>h2{font-size:13pt}.ebrey-ming .page-cite{color:inherit}.ebrey-ming nav,.ebrey-ming footer{display:none}}
-.ebrey-ming .context{max-width:79ch;margin:3px 0 16px;font-size:.96em}
 
-.ebrey-ming .hongwu-portraits { margin: 1em 0; max-width: 52ch; }
-.ebrey-ming .hongwu-pair { display: flex; gap: 14px; align-items: end; }
-.ebrey-ming .hongwu-pair a { min-width: 0; }
-.ebrey-ming .hongwu-pair img { display: block; max-height: 240px; max-width: 100%; width: auto; height: auto; }
-.ebrey-ming .hongwu-portraits figcaption { margin-top: 7px; }
-@media print { .ebrey-ming .hongwu-portraits { break-inside: avoid; } .ebrey-ming .hongwu-pair img { max-height: 120px; } }
+.ebrey-ming .portrait-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 700px;
+    gap: clamp(12px, 3vw, 32px);
+    margin: 12px 0 16px;
+}
+.portrait-gallery figure { margin: 0; }
+.portrait-gallery a { display: block; width: fit-content; max-width: 100%; }
+.portrait-gallery img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: clamp(185px, 35vw, 370px);
+    object-fit: contain;
+    object-position: left bottom;
+}
+.portrait-gallery figcaption { margin-top: 6px; line-height: 1.35; }
+.ebrey-ming .comparison { gap: 22px; margin: 18px 0; }
+.ebrey-ming .comparison article + article { padding-left: 22px; }
+.ebrey-ming .comparison h3 { margin-bottom: 6px; }
+.ebrey-ming .comparison blockquote { font-size: 1.14em; line-height: 1.45; }
+.ebrey-ming .citation { margin: 8px 0; }
+.ebrey-ming .ming-poem {
+    max-width: 59ch;
+    margin: 15px 0;
+    padding-left: 18px;
+    border-left: 2px solid #a5aaae;
+    font-size: 1.1em;
+    line-height: 1.45;
+}
+.ebrey-ming .ming-poem p { margin: 0 0 .65em; }
+.ebrey-ming .book-question {
+    max-width: 62ch;
+    margin: 24px 0 8px;
+    font-size: 1.12em;
+    scroll-margin-top: 15px;
+}
+@media (max-width: 760px) {
+    .ebrey-ming .comparison { grid-template-columns: 1fr; gap: 12px; }
+    .ebrey-ming .comparison article + article { padding: 12px 0 0; border-left: 0; }
+}
+@media print {
+    .ebrey-ming .portrait-gallery img { max-height: 155px; }
+    .ebrey-ming .comparison { grid-template-columns: 1fr 1fr; }
+    .ebrey-ming #ebrey { break-inside: auto; }
+    .ebrey-ming .book-question { break-after: avoid; }
+}
