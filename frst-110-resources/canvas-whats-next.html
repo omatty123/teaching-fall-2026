@@ -1,0 +1,22 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>What’s next! · FRST 110</title><link rel="icon" href="https://omatty123.github.io/teaching-fall-2026/favicon.svg" type="image/svg+xml"><meta property="og:title" content="What’s next! · FRST 110"><meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst-110-banner.jpg"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst-110-banner.jpg">
+<style>
+*{box-sizing:border-box}body{margin:0;color:#202020;background:#fff;font:16px/1.38 Arial,Helvetica,sans-serif}main{max-width:56rem;margin:16px auto;padding:0 16px}
+h1{font-size:22px;margin:0 0 8px}h3{font-size:18px;line-height:1.25;margin:2px 0 4px}p{margin:0 0 4px}a{color:#174464;text-decoration:underline}.date,.following,footer{font-size:14px}.following{margin-top:7px;color:#454545}.embedded main{margin:0;padding:0}.embedded .standalone{display:none}section+section{margin-top:12px}section[hidden]{display:none}footer{margin-top:15px}
+</style><script>if(window.self!==window.top)document.documentElement.classList.add('embedded');</script>
+</head><body><main><h1 class="standalone">What’s next!</h1><div id="events"><section data-step="workshop" data-until="2026-11-18T12:20:00-06:00"><p class="date">Wednesday, November 18 · 11:10 a.m.–12:20 p.m.</p><h3>Final Synthesis workshop</h3><p>Bring your working thesis and a passage from each of your two works to Memorial Hall 114.</p><p class="following">Sunday, November 22 · <a href="https://lawrence.instructure.com/courses/14726/assignments/141260" target="_blank" rel="noopener">Final Synthesis</a> due at 5:00 p.m.</p></section><section data-step="synthesis" data-until="2026-11-22T23:00:00Z"><p class="date">Sunday, November 22 · 5:00 p.m.</p><h3><a href="https://lawrence.instructure.com/courses/14726/assignments/141260" target="_blank" rel="noopener">Submit your Final Synthesis</a></h3><p>Upload the same paper to the <a href="https://lawrence.instructure.com/courses/14849/assignments/140028" target="_blank" rel="noopener">Final Synthesis</a> turn-in in the Writing Portfolio.</p><p class="following"><a href="https://lawrence.instructure.com/courses/14726/assignments/143441" target="_blank" rel="noopener">Final Literacy Reflection</a> due at 11:30 p.m.</p></section><section data-step="reflection" data-until="2026-11-23T05:30:00Z"><p class="date">Sunday, November 22 · 11:30 p.m.</p><h3><a href="https://lawrence.instructure.com/courses/14726/assignments/143441" target="_blank" rel="noopener">Submit your Final Literacy Reflection</a></h3><p>Upload the same reflection to the <a href="https://lawrence.instructure.com/courses/14849/assignments/140027" target="_blank" rel="noopener">End-of-term Reflection</a> turn-in in the Writing Portfolio.</p><p class="following">Both portfolio copies due at 11:59 p.m.</p></section><section data-step="portfolio" data-until="2026-11-23T05:59:59Z"><p class="date">Sunday, November 22 · 11:59 p.m.</p><h3>Upload your two Writing Portfolio copies</h3><p><a href="https://lawrence.instructure.com/courses/14849/assignments/140028" target="_blank" rel="noopener">Final Synthesis</a> and <a href="https://lawrence.instructure.com/courses/14849/assignments/140027" target="_blank" rel="noopener">End-of-term Reflection</a>. Use the same files you submitted to FRST 110.</p></section><section data-step="done" hidden><p>The scheduled work for FRST 110 ended on November 22.</p></section></div><footer class="standalone"><a href="https://omatty123.github.io/teaching-fall-2026/courses/frst-110.html">← Back to FRST 110</a></footer></main>
+<script>
+const items = Array.from(document.querySelectorAll('[data-step]'));
+let timer;
+function showNext() {
+  clearTimeout(timer);
+  const time = Date.now();
+  const next = items.find(item => Date.parse(item.dataset.until) > time) || items[items.length - 1];
+  for (const item of items) item.hidden = item !== next;
+  const until = Date.parse(next.dataset.until);
+  if (Number.isFinite(until)) timer = setTimeout(showNext, Math.min(until - time, 2147483647));
+}
+showNext();
+window.addEventListener('pageshow', showNext);
+document.addEventListener('visibilitychange', () => { if (!document.hidden) showNext(); });
+</script></body></html>
