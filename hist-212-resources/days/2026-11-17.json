@@ -173,6 +173,28 @@
       ]
     },
     {
+      "id": "peony-pavilion",
+      "title": "The garden scene in The Peony Pavilion",
+      "short": "The Peony Pavilion",
+      "body": [
+        {
+          "p": "Tang Xianzu wrote <i>The Peony Pavilion</i> in 1598. In Ebrey’s excerpt, the maid Fragrance tells the tutor that Du Liniang wants to visit the garden. Du has been reading about the ospreys in the <i>Book of Songs</i>. She points out that even the birds have the freedom of their island. The tutor objects, then admits that in nearly sixty years he has never strolled in a garden himself. <a class=\"page-cite\" href=\"#resources\">Ebrey, pp. 242–243</a>"
+        },
+        {
+          "video": {
+            "id": "yaI6-XdI2SI",
+            "start": 280,
+            "end": 412,
+            "title": "Du Liniang in the garden · The Peony Pavilion, 4:40–6:52",
+            "caption": "4:40–6:52 (2:12) · Kunqu opera, sung in Chinese with Chinese and English subtitles. <a href=\"https://www.metmuseum.org/perspectives/the-peony-pavilion\">The Metropolitan Museum of Art, 2012</a>."
+          }
+        },
+        {
+          "p": "When Du Liniang finally enters the garden with Fragrance, she sings, “If I did not come to the garden, how could I know spring’s splendor?”"
+        }
+      ]
+    },
+    {
       "id": "xia-chang",
       "title": "Xia Chang from Suzhou",
       "short": "Xia Chang",
