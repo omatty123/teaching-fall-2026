@@ -1,0 +1,21 @@
+body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.5}
+.ebrey-ming main{max-width:940px;padding:14px 24px 30px}
+.ebrey-ming .top{padding:8px max(20px,calc((100% - 940px)/2));gap:6px 16px;font-size:15px}
+.ebrey-ming .top a:first-child::before{content:"← "}
+.ebrey-ming .top button{font-size:14px;min-height:32px;padding:4px 8px}
+.ebrey-ming .top button[aria-pressed=true]{background:#e9ebec;color:#25282a}
+.ebrey-ming h1{font-size:clamp(1.65rem,3.6vw,2.35rem);letter-spacing:-.02em;margin:10px 0 5px;color:#202427}
+.ebrey-ming header .meta{margin:0 0 7px}
+.ebrey-ming .sections{display:flex;gap:2px 16px;padding:4px 0 8px}
+.ebrey-ming .sections a{min-height:24px;font-size:15px}
+.ebrey-ming main>section{padding-top:18px;margin:12px 0 24px}
+.ebrey-ming main>section>h2{font-size:clamp(1.24rem,2.5vw,1.5rem);line-height:1.25;color:#242729;max-width:55ch;margin:0 0 10px;letter-spacing:-.012em}
+.ebrey-ming main>section>p{max-width:79ch;margin:8px 0 10px}
+.ebrey-ming mark{background:transparent;color:inherit;padding:0;font-weight:700}
+.ebrey-ming.no-highlights mark{font-weight:400}
+.ebrey-ming .page-cite{font-size:.87em;white-space:nowrap}
+.ebrey-ming.large-text main{max-width:1140px;font-size:1.4em}
+.ebrey-ming.large-text main>section>h2{font-size:1.25em}
+@media(max-width:600px){.ebrey-ming main{padding:7px 16px 24px}.ebrey-ming .top{padding:7px 16px}.ebrey-ming main>section{margin:8px 0 18px;padding-top:14px}}
+@media print{body.ebrey-ming{font-size:11pt}.ebrey-ming main{max-width:none;padding:0}.ebrey-ming main>section{margin:9pt 0;padding-top:7pt;break-inside:avoid}.ebrey-ming main>section>h2{font-size:13pt}.ebrey-ming .page-cite{color:inherit}.ebrey-ming nav,.ebrey-ming footer{display:none}}
+.ebrey-ming .context{max-width:79ch;margin:3px 0 16px;font-size:.96em}
