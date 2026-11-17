@@ -84,6 +84,31 @@
       ]
     },
     {
+      "id": "missions",
+      "title": "Diplomatic missions to Ming",
+      "short": "Missions",
+      "body": [
+        {
+          "p": "Envoys came to the Ming court from Korea, Japan, Annam, Tibet, Central Asia and the kingdoms of the Indian Ocean. They presented the goods of their countries as tribute and went home with silk and titles from the emperor. Court painters recorded the missions that served the emperor’s claim to rule."
+        },
+        {
+          "html": "<figure class=\"ming-scroll\"><a href=\"../images/artwork/18c-tribute-giraffe.jpg\" aria-label=\"Enlarge the tribute giraffe\"><img src=\"../images/artwork/18c-tribute-giraffe.jpg\" width=\"1100\" height=\"2184\" loading=\"lazy\" decoding=\"async\" alt=\"A tall giraffe with a patterned coat stands on a rope held by a bearded groom in a red robe. Columns of text fill the top of the hanging scroll.\"></a><figcaption><p><strong><i>Tribute giraffe with attendant</i></strong>. Ink and color on silk. A sixteenth-century copy of a painting Shen Du made at court in 1414.</p><p>Envoys from Bengal presented this giraffe to the Yongle emperor in September 1414. The label at left reads 麒麟 <i>qilin</i>, then “Presented as tribute by the kingdom of Bengal, ninth month of autumn, twelfth year of Yongle.” The text at top is titled 瑞應麒麟頌, “Eulogy of the auspicious <i>qilin</i>.” The court took the animal as a sign that Heaven approved of the emperor.</p><a href=\"https://philamuseum.org/collection/object/181783\">Philadelphia Museum of Art, 1977-42-1</a> · <a href=\"https://journals.sagepub.com/doi/10.1177/097194580400700101\">Sally K. Church, “The Giraffe of Bengal”</a></figcaption></figure>"
+        },
+        {
+          "html": "<figure class=\"ming-wide\"><a href=\"../images/artwork/18d-karmapa-scroll.jpg\" aria-label=\"Enlarge the opening of the Tshurpu Scroll\"><img src=\"../images/artwork/18d-karmapa-scroll.jpg\" width=\"2000\" height=\"888\" loading=\"lazy\" decoding=\"async\" alt=\"Rays of colored light fall from a blue sky onto clouds above a pagoda and a temple hall. To the right, columns of Chinese, Tibetan, Persian and Mongolian text.\"></a><figcaption><p><strong>The Tshurpu Scroll</strong>, 1407, opening section. Ink and color on silk, about 50 meters long. Tibet Museum, Lhasa.</p></figcaption></figure>"
+        },
+        {
+          "p": "In 1407 the Yongle emperor invited Deshin Shekpa, the Fifth Karmapa, from Tibet to Nanjing. At Linggu Temple the Karmapa performed a mass for the souls of the emperor’s parents, the Hongwu emperor and Empress Ma. Court painters recorded the mass and the omens seen each day in forty-nine scenes, each with an inscription in five languages. The Chinese inscription at right opens 大明皇帝迎請如來大寶法王, “The emperor of the Great Ming invited the Tathāgata, Great Treasure Dharma King,” the title Yongle gave the Karmapa. It records relics shining from the top of the pagoda on the first day. <a href=\"https://rubinmuseum.org/projecthimalayanart/related/detail-of-yongle-handscroll-delivering-the-soul-of-ming-taizu-at-lingusi-nanjing-with-inscriptions-in-chinese-persian-tay-tibetan-and-mongolian/\">Project Himalayan Art</a> · <a href=\"https://en.wikipedia.org/wiki/Tshurpu_Scroll\">Tshurpu Scroll</a>"
+        },
+        {
+          "html": "<figure class=\"ming-wide\"><a href=\"../images/artwork/18e-tribute-annam.jpg\" aria-label=\"Enlarge the Annam delegation\"><img src=\"../images/artwork/18e-tribute-annam.jpg\" width=\"1800\" height=\"1312\" loading=\"lazy\" decoding=\"async\" alt=\"A procession with banners leads white elephants, one carrying an ornate gilded howdah, toward a stone bridge.\"></a><figcaption><p>安南 Annam, with elephants and a gilded howdah</p></figcaption></figure><figure class=\"ming-wide\"><a href=\"../images/artwork/18f-tribute-korea.jpg\" aria-label=\"Enlarge the Korea delegation\"><img src=\"../images/artwork/18f-tribute-korea.jpg\" width=\"1800\" height=\"1334\" loading=\"lazy\" decoding=\"async\" alt=\"Porters carry a covered load on a pole through a mountain pass, followed by riders and a column of banners. Red seals and a signature at left.\"></a><figcaption><p>朝鮮國 Korea, the last delegation, beside Qiu Ying’s signature</p></figcaption></figure>"
+        },
+        {
+          "p": "Qiu Ying, a Suzhou painter of the 1500s, painted eleven delegations crossing the mountains toward the capital. The title, in seal script, reads 諸夷職貢, “Tribute from the many foreign peoples.” Some of the eleven, such as Bohai, the Khitan and Xi Xia, had disappeared centuries before Qiu Ying was born. The scroll pictures every people of Chinese history coming to court at once. Wen Zhengming wrote a colophon at the end. Palace Museum, Beijing. <a href=\"https://commons.wikimedia.org/wiki/File:%E8%81%8C%E8%B4%A1%E5%9B%BE%E5%8D%B7_-_%E6%98%8E%E4%BB%A3_-_%E5%8C%97%E4%BA%AC%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2%E8%97%8F.jpg\">Full scroll</a>"
+        }
+      ]
+    },
+    {
       "id": "ming-slides",
       "title": "Monuments of Ming",
       "short": "Ming slides",

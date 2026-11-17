@@ -86,3 +86,11 @@ body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helveti
 @media print {
     .ebrey-ming .ming-scroll { grid-template-columns: 135px 1fr; }
 }
+
+.ebrey-ming .ming-wide { max-width: 900px; margin: 14px 0; }
+.ming-wide img { display: block; width: 100%; height: auto; }
+.ming-wide figcaption { margin-top: 6px; line-height: 1.35; }
+.ming-wide figcaption p { margin: 0; }
+@media print {
+    .ebrey-ming .ming-wide { max-width: 5.5in; break-inside: avoid; }
+}
