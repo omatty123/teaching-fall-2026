@@ -94,3 +94,23 @@ body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helveti
 @media print {
     .ebrey-ming .ming-wide { max-width: 5.5in; break-inside: avoid; }
 }
+
+.ebrey-ming .envoy-heading { font-size: 1.1em; margin: 22px 0 4px; }
+.ebrey-ming .envoy-note { max-width: 79ch; margin: 0 0 10px; }
+.ebrey-ming .envoy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 18px;
+    max-width: 900px;
+    margin: 10px 0 16px;
+}
+.envoy-grid figure { margin: 0; }
+.envoy-grid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.envoy-grid figcaption { margin-top: 5px; font-size: .9em; line-height: 1.35; }
+@media (max-width: 600px) {
+    .ebrey-ming .envoy-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+}
+@media print {
+    .ebrey-ming .envoy-grid { grid-template-columns: repeat(3, 1fr); gap: 6pt; }
+    .envoy-grid figure { break-inside: avoid; }
+}
