@@ -124,3 +124,17 @@ body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helveti
     .ebrey-ming .envoy-grid { grid-template-columns: repeat(3, 1fr); gap: 6pt; }
     .envoy-grid figure { break-inside: avoid; }
 }
+
+.chongzhen-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px 24px;
+    max-width: 900px;
+    margin: 14px 0;
+}
+.chongzhen-pair figure { margin: 0; }
+.chongzhen-pair img { display: block; width: 100%; height: auto; }
+.chongzhen-pair figcaption { margin-top: 6px; line-height: 1.4; }
+@media screen and (max-width: 600px) {
+    .chongzhen-pair { grid-template-columns: 1fr; }
+}

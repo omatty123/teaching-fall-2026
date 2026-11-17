@@ -183,6 +183,19 @@
       ]
     },
     {
+      "id": "chongzhen",
+      "title": "Chongzhen and the fall of Beijing, 1644",
+      "short": "Chongzhen",
+      "body": [
+        {
+          "p": "In 1644, Li Zicheng’s army entered Beijing. The Chongzhen emperor took his own life. <a class=\"page-cite\" href=\"#resources\">Ebrey, p. 245</a>"
+        },
+        {
+          "html": "<div class=\"chongzhen-pair\"><figure><a href=\"../images/artwork/chongzhen-illustration.png\" aria-label=\"Enlarge the illustration of Chongzhen\"><img src=\"../images/artwork/chongzhen-illustration.png\" width=\"860\" height=\"697\" alt=\"Chongzhen in a yellow robe hangs from a tree. A figure in purple kneels, with the roofs of Beijing behind them.\" loading=\"lazy\"></a><figcaption>In the illustration, smoke rises over Beijing behind the kneeling figure.</figcaption></figure><figure><a href=\"../images/artwork/chongzhen-cartoon.png\" aria-label=\"Enlarge the Chongzhen cartoon\"><img src=\"../images/artwork/chongzhen-cartoon.png\" width=\"1284\" height=\"1085\" alt=\"A Family Guy parody shows Brian in the emperor’s robe and Peter kneeling beside him. A vertical inscription appears at the right.\" loading=\"lazy\"></a><figcaption>The <i>Family Guy</i> parody keeps the kneeling figure and the tree. Its inscription reads <span lang=\"zh-Hant\">崇禎自縊於煤山</span> (<i>Chóngzhēn zìyì yú Méishān</i>), “Chongzhen hanged himself on Coal Hill.”</figcaption></figure></div>"
+        }
+      ]
+    },
+    {
       "id": "ebrey",
       "title": "Ebrey and Walthall’s seven opening questions",
       "short": "Ebrey answers",
