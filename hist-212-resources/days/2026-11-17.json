@@ -1,7 +1,7 @@
 {
   "title": "The Hongwu Emperor and Ming China",
   "meta": "HIST 212 · Ming dynasty, 1368–1644",
-  "description": "Two portraits of Hongwu, his proclamations alongside the Analects, One Hundred Words of Praise, Monuments of Ming, and the seven questions from Ebrey and Walthall.",
+  "description": "Hongwu and Kongzi on government, Hongwu’s praise of Muhammad, Empress Xu and Ode 218, Xia Chang’s bamboo painting, and Ebrey and Walthall’s seven questions.",
   "bodyClass": "ebrey-ming",
   "styles": [
     "hist-212-nov17.css"
@@ -52,6 +52,19 @@
       ]
     },
     {
+      "id": "ming-questions",
+      "title": "Questions on Ming rule",
+      "short": "Ming questions",
+      "body": [
+        {
+          "list": [
+            "What was the ruling method of MING?",
+            "What were the power bases? How was that power wielded?"
+          ]
+        }
+      ]
+    },
+    {
       "id": "praise-of-muhammad",
       "title": "Hongwu’s praise of Muhammad",
       "short": "Praise of Muhammad",
@@ -77,6 +90,43 @@
       "body": [
         {
           "p": "<a href=\"https://docs.google.com/presentation/d/1WCskBiQXsf1mS-fpvI8471_csVg3EZZLIvG5wKVupAE/edit#slide=id.i0\">Open the four Ming slides</a> · The Forbidden City, the Temple of Heaven, the Great Wall, and the Ming tombs."
+        }
+      ]
+    },
+    {
+      "id": "empress-xu",
+      "title": "Empress Xu and the Great Learning",
+      "short": "Empress Xu",
+      "body": [
+        {
+          "board": "Eight steps to the DATONG"
+        },
+        {
+          "p": "investigating things → extending knowledge → making the will sincere → rectifying the mind → cultivating the person → regulating the family → governing the state → bringing world peace"
+        },
+        {
+          "p": "In <i>Instructions for the Inner Quarters</i>, Xu connects a woman’s conduct to the fortunes of her family and the state. She tells women they can become sages by following the example of the ancients, then quotes Ode 218. <a class=\"page-cite\" href=\"https://drive.google.com/file/d/1yUET_JwjJPyt-12WMkeTEINmUoPq9fCC/view\">SCT pp. 835–836 · reader pp. 6–7</a>"
+        },
+        {
+          "html": "<h3>Ode 218</h3><p lang=\"zh-Hant\">高山仰止、景行行止。</p>"
+        },
+        {
+          "passage": {
+            "quote": "The high mountain is to be looked up to. The great road is easy to be traveled on.",
+            "cite": "Ode 218, quoted by Empress Xu in Instructions for the Inner Quarters, SCT p. 836",
+            "link": "https://drive.google.com/file/d/1yUET_JwjJPyt-12WMkeTEINmUoPq9fCC/view",
+            "linkLabel": "November 17 reader, PDF p. 7"
+          }
+        }
+      ]
+    },
+    {
+      "id": "xia-chang",
+      "title": "Xia Chang from Suzhou",
+      "short": "Xia Chang",
+      "body": [
+        {
+          "html": "<figure class=\"ming-scroll\"><a href=\"../images/artwork/xia-chang-windblown-bamboo.jpg\" aria-label=\"Enlarge Xia Chang’s Windblown bamboo\"><img src=\"../images/artwork/xia-chang-windblown-bamboo.jpg\" width=\"1419\" height=\"2048\" loading=\"lazy\" decoding=\"async\" alt=\"Ink bamboo bends over a pierced rock. Inscriptions and red seals fill the top of the hanging scroll.\"></a><figcaption><p><strong><i>Windblown bamboo</i></strong>, ca. 1460. Ink on paper.</p><p>Xia Chang was a court official and a painter. He used the strokes of seal script for the upright stalks and cursive script for the fine twigs.</p><a href=\"https://www.metmuseum.org/art/collection/search/44590\">The Metropolitan Museum of Art, 1989.235.1</a></figcaption></figure>"
         }
       ]
     },
@@ -158,7 +208,7 @@
     }
   ],
   "readings": [
-    "<a href=\"https://drive.google.com/file/d/1yUET_JwjJPyt-12WMkeTEINmUoPq9fCC/view\">November 17 reader</a>. Hongwu’s proclamations, CC pp. 205–207 (PDF pp. 8–10), and <i>One Hundred Words of Praise</i>, trans. Brendan Newlon (PDF p. 11).",
+    "<a href=\"https://drive.google.com/file/d/1yUET_JwjJPyt-12WMkeTEINmUoPq9fCC/view\">November 17 reader</a>. Empress Xu’s <i>Instructions for the Inner Quarters</i>, SCT pp. 831–836 (PDF pp. 2–7), Hongwu’s proclamations, CC pp. 205–207 (PDF pp. 8–10), and <i>One Hundred Words of Praise</i>, trans. Brendan Newlon (PDF p. 11).",
     "<a href=\"0922-reader.html#b-k-12.19\"><i>Analects</i> 12.19</a>, trans. Edward Slingerland, in <i>Readings in Classical Chinese Philosophy</i>, 3rd ed., p. 36.",
     "Patricia Buckley Ebrey and Anne Walthall, <a href=\"https://books.google.com/books?id=6F2XLmIVAaYC\"><i>Pre-Modern East Asia: A Cultural, Social, and Political History</i></a>, vol. I, 3rd ed., chapter 14, “The Ming Empire in China (1368–1644),” pp. 227–246. The seven questions are from printed p. 227; page numbers after each answer refer to the textbook."
   ]

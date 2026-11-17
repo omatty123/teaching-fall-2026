@@ -67,3 +67,22 @@ body.ebrey-ming{background:#fff;color:#202427;margin:0;font-family:Arial,Helveti
     .ebrey-ming #ebrey { break-inside: auto; }
     .ebrey-ming .book-question { break-after: avoid; }
 }
+
+.ebrey-ming .ming-scroll {
+    display: grid;
+    grid-template-columns: minmax(0, 310px) minmax(0, 38ch);
+    align-items: start;
+    gap: 12px 24px;
+    margin: 12px 0;
+}
+.ming-scroll img { display: block; width: 100%; height: auto; }
+.ming-scroll figcaption { font-size: 1em; color: inherit; }
+.ming-scroll figcaption p { margin: 0 0 .65em; }
+#empress-xu [lang="zh-Hant"] { font-size: 1.2em; }
+@media (max-width: 600px) {
+    .ebrey-ming .ming-scroll { grid-template-columns: minmax(0, 1fr); }
+    .ming-scroll img { max-width: 290px; }
+}
+@media print {
+    .ebrey-ming .ming-scroll { grid-template-columns: 135px 1fr; }
+}
