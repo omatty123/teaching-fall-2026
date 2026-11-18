@@ -187,7 +187,8 @@ const works = [
  {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', title:'Genesis 6–9', x:.86, y:.73, scene:'God tells Noah the flood is coming and gives him the dimensions of the ark. Noah has time to build it and bring his family aboard.'},
  {id:'quran', href:'quran.html#q-11-42', name:'Quran', title:'Quran, Sura 11', x:.74, y:.59, scene:'Noah’s son hears his father call him aboard. He can accept the offer. He chooses a mountain, and a wave comes between them.'},
  {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', title:'Patricia Smith, Blood Dazzler', x:.84, y:.18, scene:'New Orleans residents hear the order to evacuate. Those without a car or a ride know the danger and still have no way to leave.'},
- {id:'blues', href:'blues-oct-16.html#broken-levee', name:'Delta blues', title:'Delta blues · “Broken Levee Blues”', x:.62, y:.34, scene:'In Lonnie Johnson’s song, the singer sees water at his door. He refuses to work on the levee, even as the police threaten him with jail.'},
+ {id:'blues', href:'blues-oct-14.html#levee-breaks', name:'Delta blues', title:'Delta blues · “When the Levee Breaks”', x:.94, y:.34,
+  scene:'On the recording with Memphis Minnie, Kansas Joe McCoy sings “If it keeps on rainin’, levee’s goin’ to break” twice in the first verse and twice in the third. He works on the levee knowing he may lose his home. In “Broken Levee Blues,” Johnson’s singer risks jail for refusing levee work.'},
  {id:'equiano', href:'equiano-chapters-1-2.html', name:'Equiano', title:'Olaudah Equiano, The Interesting Narrative', x:.14, y:.17, scene:'When Equiano first sees the slave ship, he fears for his life. He knows little about what lies ahead. His captors decide where he goes.'},
  {id:'rush', href:'rising-part-two-nov13.html', name:'Rising', title:'Elizabeth Rush, Rising', x:null, y:null}
 ];
@@ -224,7 +225,7 @@ function prepareWorksheet() {
  document.getElementById('paper-notes').append(notes);
 }
 const byId = new Map(works.map(work => [work.id,work]));
-const key = 'frst110.warning-and-power.v1';
+const key = 'frst110.warning-and-power.v2';
 const plot = document.getElementById('plot');
 const detail = document.getElementById('detail');
 const ideaInput = document.getElementById('idea');
@@ -245,13 +246,16 @@ function storageNotice() {
  document.getElementById('save').textContent = 'Browser saving is unavailable. Keep this tab open.';
 }
 try {
- const raw = localStorage.getItem(key);
+ const current = localStorage.getItem(key);
+ const raw = current ?? localStorage.getItem('frst110.warning-and-power.v1');
  if (raw) {
   const saved = JSON.parse(raw);
   if (Array.isArray(saved)) {
    const valid = saved.filter(p => p && ((coordinate(p.x) && coordinate(p.y)) || (p.x === null && p.y === null)));
    points = positions().map(work => {
     const found = valid.find(p => p.id === work.id);
+    // On older boards, update only the previous Delta blues starting position.
+    if (!current && work.id === 'blues' && found?.x === .62 && found.y === .34) return work;
     return found ? {...work,x:found.x,y:found.y} : work;
    });
    const seen = new Set();
