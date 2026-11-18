@@ -186,7 +186,7 @@ const works = [
  {id:'gilgamesh', href:'gilgamesh-xi.html#tablet', name:'Gilgamesh', title:'Gilgamesh, Tablet XI', x:.62, y:.87, scene:'After Enkidu dies, Gilgamesh knows what awaits him and crosses the Waters of Death to ask Uta-napishti how he can live forever. When Uta-napishti challenges him to stay awake for six days and seven nights, Gilgamesh falls asleep as soon as he sits down.'},
  {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', title:'Genesis 6–9', x:.86, y:.73, scene:'God tells Noah what’s coming and how to save his household, right down to the measurements of the ark. We know how much warning Noah had, but Genesis leaves open whether his neighbors heard any warning at all.'},
  {id:'quran', href:'quran.html#q-71-5', name:'Quran', title:'Quran, Suras 71 and 11', x:.74, y:.59, scene:'Nuh warns his people day and night, and they stick their fingers in their ears and pull their cloaks over their heads. As he builds the ship, some of their leaders mock him every time they pass.'},
- {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', title:'Patricia Smith, Blood Dazzler', x:.84, y:.18, scene:'New Orleans residents hear the order to evacuate. Those without a car or a ride know the danger and still have no way to leave.'},
+ {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', title:'Patricia Smith, Blood Dazzler', x:.5, y:.18, scene:'In “Man on the TV Say,” the speaker hears the order to leave, but how are you supposed to evacuate without a car? In “34,” the residents of St. Rita’s depend on others to get them out and never see the flood coming.'},
  {id:'blues', href:'blues-oct-14.html#levee-breaks', name:'Delta blues', title:'Delta blues · “When the Levee Breaks”', x:.94, y:.34,
   scene:'On the recording with Memphis Minnie, Kansas Joe McCoy sings “If it keeps on rainin’, levee’s goin’ to break” twice in the first verse and twice in the third. He works on the levee knowing he may lose his home. In “Broken Levee Blues,” Johnson’s singer risks jail for refusing levee work.'},
  {id:'equiano', href:'equiano-chapters-1-2.html', name:'Equiano', title:'Olaudah Equiano, The Interesting Narrative', x:.14, y:.17, scene:'When Equiano first sees the slave ship, he fears for his life. He knows little about what lies ahead. His captors decide where he goes.'},
@@ -225,7 +225,7 @@ function prepareWorksheet() {
  document.getElementById('paper-notes').append(notes);
 }
 const byId = new Map(works.map(work => [work.id,work]));
-const key = 'frst110.warning-and-power.v2';
+const key = 'frst110.warning-and-power.v3';
 const plot = document.getElementById('plot');
 const detail = document.getElementById('detail');
 const ideaInput = document.getElementById('idea');
@@ -247,15 +247,17 @@ function storageNotice() {
 }
 try {
  const current = localStorage.getItem(key);
- const raw = current ?? localStorage.getItem('frst110.warning-and-power.v1');
+ const previous = current ?? localStorage.getItem('frst110.warning-and-power.v2');
+ const raw = previous ?? localStorage.getItem('frst110.warning-and-power.v1');
  if (raw) {
   const saved = JSON.parse(raw);
   if (Array.isArray(saved)) {
    const valid = saved.filter(p => p && ((coordinate(p.x) && coordinate(p.y)) || (p.x === null && p.y === null)));
    points = positions().map(work => {
     const found = valid.find(p => p.id === work.id);
-    // On older boards, update only the previous Delta blues starting position.
-    if (!current && work.id === 'blues' && found?.x === .62 && found.y === .34) return work;
+    // Update old starting positions and preserve dots the class has moved.
+    if (!current && work.id === 'smith' && found?.x === .84 && found.y === .18) return work;
+    if (!previous && work.id === 'blues' && found?.x === .62 && found.y === .34) return work;
     return found ? {...work,x:found.x,y:found.y} : work;
    });
    const seen = new Set();
