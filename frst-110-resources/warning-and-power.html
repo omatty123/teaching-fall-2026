@@ -35,17 +35,23 @@ h2,.form-label{font-size:1.17rem;line-height:1.14;font-weight:700}
 .layout{display:grid;grid-template-columns:minmax(0,1fr) clamp(200px,19vw,310px);gap:clamp(16px,2.7vw,46px);margin-top:13px}
 .chart,.panel{min-width:0}
 .pole{font-size:clamp(.99rem,1.5vw,1.34rem);font-weight:650;line-height:1.1}
-.pole-y{text-align:center;padding:2px 0 6px}
-.bottom-y{padding:6px 0 2px}
-.poles-x{display:flex;justify-content:space-between;gap:6px;align-items:baseline;border-top:1px solid var(--rule);margin-top:4px;padding-top:6px}
-.plot{position:relative;isolation:isolate;border:1px solid #879298;background-color:white;height:clamp(350px,calc(100dvh - 287px),900px);color:var(--ink);
+.axis-frame{display:grid;grid-template-columns:minmax(5.1em,10.5%) minmax(0,1fr) minmax(5.1em,10.5%);grid-template-rows:auto auto auto;gap:5px 6px;align-items:center}
+.pole-y{grid-column:2;text-align:center}
+.top-y{grid-row:1}
+.bottom-y{grid-row:3}
+.pole-x{grid-row:2;line-height:1.08}
+.low-warning{grid-column:1;text-align:right}
+.high-warning{grid-column:3;text-align:left}
+.plot{grid-column:2;grid-row:2;position:relative;isolation:isolate;border:1px solid #879298;background-color:white;height:clamp(350px,calc(100dvh - 252px),900px);color:var(--ink);
 background-image:linear-gradient(to right,#e6e9e9 1px,transparent 1px),linear-gradient(to bottom,#e6e9e9 1px,transparent 1px);background-size:25% 25%}
-.line{position:absolute;pointer-events:none;background:#788388}
-.line.x{height:2px;left:0;right:0;top:calc(50% - 1px)}
-.line.y{width:2px;top:0;bottom:0;left:calc(50% - 1px)}
-.line:after{content:"";position:absolute;width:8px;height:8px;border:solid #626f75;border-width:2px 2px 0 0}
-.line.x:after{right:1px;top:-4px;transform:rotate(45deg)}
-.line.y:after{left:-4px;top:1px;transform:rotate(-45deg)}
+.line{position:absolute;pointer-events:none;color:#526067}
+.line.x{left:0;right:0;top:50%;border-top:2px solid currentColor;transform:translateY(-50%)}
+.line.y{top:0;bottom:0;left:50%;border-left:2px solid currentColor;transform:translateX(-50%)}
+.line::before,.line::after{content:"";position:absolute;width:10px;height:10px;box-sizing:border-box;border:solid currentColor;border-width:2px 2px 0 0}
+.line.x::before{left:1px;top:-6px;transform:rotate(-135deg)}
+.line.x::after{right:1px;top:-6px;transform:rotate(45deg)}
+.line.y::before{left:-6px;top:1px;transform:rotate(-45deg)}
+.line.y::after{left:-6px;bottom:1px;transform:rotate(135deg)}
 .plot.placing{cursor:crosshair}
 .point{position:absolute;z-index:1;display:grid;place-items:center;width:32px;height:36px;padding:0;border:0;background:transparent;transform:translate(-50%,-50%);touch-action:none;user-select:none;cursor:grab}
 .point:active{cursor:grabbing}
@@ -80,7 +86,14 @@ input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:
 #ideas .item{font-size:1rem}
 .save{font-size:.91rem;margin-top:8px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-@media(max-width:750px){
+#placements{margin-top:18px;border-top:1px solid var(--rule);padding-top:8px}
+#placements summary{width:fit-content;font-size:1.12rem;font-weight:650;cursor:pointer}
+.explanations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:2rem;margin:7px 0 0}
+.explanation{border-top:1px solid var(--rule);padding:6px 0;break-inside:avoid}
+.explanation dt{font-weight:700}.explanation dd{margin:2px 0 0;line-height:1.25}
+.explanation a{color:inherit;text-decoration-thickness:1px;text-underline-offset:2px}
+.paper-dot,.paper-only,.writing-lines{display:none}
+@media screen and (max-width:750px){
  main{padding:9px 12px 20px}
  .layout{grid-template-columns:minmax(0,1fr);gap:14px;margin-top:9px}
  .plot{height:clamp(300px,47dvh,530px)}
@@ -90,28 +103,63 @@ input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:
  .items .item{min-height:34px}.point .label{font-size:1rem}
  .hint{font-size:.94rem}.detail{margin-top:7px}
 }
-@media(max-width:490px){
+@media screen and (max-width:490px){
  h1{font-size:1.55rem}header{flex-wrap:wrap;gap:6px}.actions{margin-left:auto}
  .panel{display:flex;flex-direction:column;gap:15px}.panel form{order:-1}
  #works{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px}
  .pole{font-size:1rem}
+ .axis-frame{display:grid;grid-template-columns:1fr;gap:4px 0}
+ .axis-frame .pole-y,.axis-frame .plot,.axis-frame .pole-x{grid-column:1}
+ .pole-x{align-self:center;z-index:1;pointer-events:none;background:#fff;margin-top:0;padding:1px 2px;font-size:.83rem}
+ .low-warning{justify-self:start;margin-left:15px}.high-warning{justify-self:end;margin-right:15px}
+ .explanations{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+@page{size:letter portrait;margin:0}
+@media print{
+ :root{color:#151515;--ink:#151515;--rule:#b3b3b3}
+ body{margin:0;background:white;color:black}
+ main{width:100%;max-width:none;padding:.43in .52in .42in}
+ header{display:block;border:0;padding:0}
+ h1{margin:0 0 8pt;font-size:21pt;line-height:1.12}
+ nav,.actions,.panel,.detail,#placements, .point,.sr,noscript{display:none!important}
+ .layout{display:block;margin:0}
+ .axis-frame{grid-template-columns:.78in minmax(0,1fr) .78in;gap:3pt 5pt}
+ .pole{font-size:11pt;line-height:1.05;color:black}
+ .plot{height:3.45in;border:1px solid #aaa;background:none}
+ .line{color:#202020}
+ .paper-dot{position:absolute;z-index:1;display:block;width:0;height:0;font-size:11pt;font-weight:650}
+ .paper-dot::before{content:"";position:absolute;top:-2.6pt;left:-2.6pt;width:5.2pt;height:5.2pt;border:2.6pt solid black;border-radius:50%;box-sizing:border-box}
+ .paper-dot span{position:absolute;left:5pt;top:0;transform:translateY(-50%);white-space:nowrap;line-height:1.1}
+ .paper-dot.inward span{left:auto;right:5pt}
+ .paper-only{display:block}
+ .paper-heading{display:block;margin-top:12pt;font-size:14pt;margin-bottom:3pt}
+ .explanations{gap:0 18pt;margin:0;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .explanation{padding:5pt 0 6pt;font-size:11.5pt;border-color:#aaa}
+ .explanation dt{font-size:12pt;line-height:1.12}
+ .explanation dd{margin:2pt 0 0;line-height:1.18}
+ .explanation a{text-decoration:none}
+ .writing-lines{display:block}
+ .writing-lines span{display:block;height:21pt;border-bottom:.65pt solid #777}
+}
 </style>
 </head>
 <body>
 <main>
 <header>
  <div><nav aria-label="Breadcrumb"><a href="../courses/frst-110.html">← Back to FRST 110</a></nav><h1>Water, warning and power</h1></div>
- <div class="actions"><button class="action" id="undo" type="button" disabled>Undo</button><button class="action" id="fullscreen" type="button">Full screen</button></div>
+ <div class="actions"><button class="action" id="print" type="button">Print worksheet</button><button class="action" id="undo" type="button" disabled>Undo</button><button class="action" id="fullscreen" type="button">Full screen</button></div>
 </header>
 <noscript>This matrix needs JavaScript to move the dots.</noscript>
 <div class="layout">
  <section class="chart" aria-label="Water matrix">
-  <div class="pole pole-y">More power to act ↑</div>
-  <div class="plot" id="plot" role="group" aria-label="Water matrix. Warning increases to the right. Power to act increases upward." aria-describedby="controls"><span class="line x" aria-hidden="true"></span><span class="line y" aria-hidden="true"></span></div>
-  <div class="pole pole-y bottom-y">↓ Less power to act</div>
-  <div class="poles-x"><span class="pole">← Little or no warning</span><span class="pole">Clear warning →</span></div>
+  <div class="axis-frame">
+   <div class="pole pole-y top-y">More power to act</div>
+   <div class="pole pole-x low-warning">Little or no warning</div>
+   <div class="plot" id="plot" role="group" aria-label="Water matrix. Warning increases to the right. Power to act increases upward." aria-describedby="controls"><span class="line x" aria-hidden="true"></span><span class="line y" aria-hidden="true"></span></div>
+   <div class="pole pole-x high-warning">Clear warning</div>
+   <div class="pole pole-y bottom-y">Less power to act</div>
+  </div>
   <p class="detail" id="detail"></p>
  </section>
  <aside class="panel" aria-label="Matrix controls">
@@ -127,20 +175,54 @@ input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:
   </form>
  </aside>
 </div>
+<details id="placements"><summary>Why the works start here</summary><dl class="explanations" id="screen-notes"></dl></details>
+<section class="paper-only" aria-labelledby="paper-heading"><h2 class="paper-heading" id="paper-heading">Starting placements</h2><dl class="explanations" id="paper-notes"></dl></section>
 <p aria-live="polite" class="sr" id="announce"></p>
 </main>
 <script>
 'use strict';
 const works = [
- {id:'egan', href:'../courses/egan-reading-guide.html', name:'Egan', x:.16, y:.77, scene:'The Welland Canal opens a shipping route around Niagara Falls. Sea lampreys can use it too.'},
- {id:'gilgamesh', href:'gilgamesh-xi.html#tablet', name:'Gilgamesh', x:.62, y:.87, scene:'Ea speaks to a reed wall. Uta-napishti hears the warning and builds a boat.'},
- {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', x:.86, y:.73, scene:'God warns Noah and gives him instructions for building the ark.'},
- {id:'quran', href:'quran.html#q-11-42', name:'Quran', x:.74, y:.59, scene:'Noah calls his son aboard. His son chooses to seek safety on a mountain.'},
- {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', x:.84, y:.18, scene:'People in New Orleans hear the evacuation order. Getting out requires transportation.'},
- {id:'blues', href:'blues-oct-16.html#broken-levee', name:'Delta blues', x:.62, y:.34, scene:'In “Broken Levee Blues,” the singer sees the water rise. The police order him to work on the levee. He refuses.'},
- {id:'equiano', href:'equiano-chapters-1-2.html', name:'Equiano', x:.14, y:.17, scene:'Equiano arrives at the slave ship as a child. He has no say in the crossing or knowledge of his destination.'},
- {id:'rush', href:'rising-part-two-nov13.html', name:'Rising', x:null, y:null, scene:'Chris Brunet imagines staying on Isle de Jean Charles. He also pictures his niece and nephew living there when they reach his age.'}
+ {id:'egan', href:'../courses/egan-reading-guide.html', name:'Egan', title:'Dan Egan, The Death and Life of the Great Lakes', x:.16, y:.77, scene:'Engineers could open the Welland Canal to ships. The cost of giving sea lampreys a route around Niagara Falls became clear after the canal opened.'},
+ {id:'gilgamesh', href:'gilgamesh-xi.html#tablet', name:'Gilgamesh', title:'Gilgamesh, Tablet XI', x:.62, y:.87, scene:'Uta-napishti hears Ea’s warning through a reed wall. He has time to gather workers and build a boat before the flood.'},
+ {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', title:'Genesis 6–9', x:.86, y:.73, scene:'God tells Noah the flood is coming and gives him the dimensions of the ark. Noah has time to build it and bring his family aboard.'},
+ {id:'quran', href:'quran.html#q-11-42', name:'Quran', title:'Quran, Sura 11', x:.74, y:.59, scene:'Noah’s son hears his father call him aboard. He can accept the offer. He chooses a mountain, and a wave comes between them.'},
+ {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', title:'Patricia Smith, Blood Dazzler', x:.84, y:.18, scene:'New Orleans residents hear the order to evacuate. Those without a car or a ride know the danger and still have no way to leave.'},
+ {id:'blues', href:'blues-oct-16.html#broken-levee', name:'Delta blues', title:'Delta blues · “Broken Levee Blues”', x:.62, y:.34, scene:'In Lonnie Johnson’s song, the singer sees water at his door. He refuses to work on the levee, even as the police threaten him with jail.'},
+ {id:'equiano', href:'equiano-chapters-1-2.html', name:'Equiano', title:'Olaudah Equiano, The Interesting Narrative', x:.14, y:.17, scene:'When Equiano first sees the slave ship, he fears for his life. He knows little about what lies ahead. His captors decide where he goes.'},
+ {id:'rush', href:'rising-part-two-nov13.html', name:'Rising', title:'Elizabeth Rush, Rising', x:null, y:null}
 ];
+// The worksheet keeps the starting positions even after the class moves the board.
+function prepareWorksheet() {
+ const notes=document.createDocumentFragment();
+ for (const work of works) {
+  if (work.x !== null) {
+   const marker=document.createElement('span');
+   marker.className='paper-dot'+(work.x > .8 ? ' inward' : '');
+   marker.style.left=work.x*100+'%';
+   marker.style.top=(1-work.y)*100+'%';
+   marker.setAttribute('aria-hidden','true');
+   marker.append(span('',work.name));
+   plot.append(marker);
+  }
+  const entry=document.createElement('div');
+  entry.className='explanation';
+  const term=document.createElement('dt'), description=document.createElement('dd');
+  const link=document.createElement('a');
+  link.href=work.href; link.textContent=work.title;
+  term.append(link);
+  if (work.scene) description.textContent=work.scene;
+  else {
+   description.textContent='Mark your placement on the matrix and explain it here.';
+   const lines=span('writing-lines');
+   lines.setAttribute('aria-hidden','true');
+   lines.append(span(''),span(''),span(''),span(''));
+   description.append(lines);
+  }
+  entry.append(term,description);notes.append(entry);
+ }
+ document.getElementById('screen-notes').append(notes.cloneNode(true));
+ document.getElementById('paper-notes').append(notes);
+}
 const byId = new Map(works.map(work => [work.id,work]));
 const key = 'frst110.warning-and-power.v1';
 const plot = document.getElementById('plot');
@@ -222,9 +304,10 @@ function select(id) {
  if (!p) {detail.textContent='Select a dot to see the passage or idea.'; return;}
  const label = document.createElement('strong');
  label.textContent = byId.has(id) ? titleFor(p) : 'Student idea';
- const scene = byId.get(id)?.scene ?? p.text;
- detail.append(label,document.createTextNode(' · '+scene));
- if (p.x === null) detail.append(document.createTextNode(' Click the grid to place this work.'));
+ const scene = byId.has(id) ? byId.get(id).scene : p.text;
+ detail.append(label);
+ if (scene) detail.append(' · '+scene);
+ else detail.append(p.x === null ? ' · Click the grid to place Rising.' : ' · Class placement.');
  if (byId.has(id)) {
   const source=document.createElement('a');
   source.href=byId.get(id).href;
@@ -357,6 +440,8 @@ full.addEventListener('click',async () => {
  } catch {document.getElementById('save').textContent='Use your browser’s full-screen command to enlarge the board.';}
 });
 document.addEventListener('fullscreenchange',()=>{full.textContent=document.fullscreenElement?'Exit full screen':'Full screen';});
+document.getElementById('print').addEventListener('click',()=>window.print());
+prepareWorksheet();
 render();
 new ResizeObserver(()=>{for(const p of points) if(p.x!==null) positionDot(p);}).observe(plot);
 document.fonts.ready.then(()=>{for(const p of points) if(p.x!==null) positionDot(p);});
