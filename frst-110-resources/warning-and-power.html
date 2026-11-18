@@ -29,6 +29,7 @@ h1,h2,p{margin:0}
 h1{font-size:clamp(1.65rem,2.7vw,2.5rem);font-weight:670;line-height:1.1;letter-spacing:-.025em;margin-top:4px}
 h2,.form-label{font-size:1.17rem;line-height:1.14;font-weight:700}
 .actions,.add-row{display:flex;align-items:center;gap:7px}
+.actions{flex-wrap:wrap}.worksheet-pdf{padding:4px 3px;text-underline-offset:3px}
 .action{border:1px solid #8b969a;border-radius:4px;background:white;padding:6px 12px;line-height:1.2;min-height:36px;font-weight:600}
 .action:hover:enabled{background:#eef2f3}
 .action:disabled{opacity:.45;cursor:default}
@@ -149,7 +150,7 @@ input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:
 <main>
 <header>
  <div><nav aria-label="Breadcrumb"><a href="../courses/frst-110.html">← Back to FRST 110</a></nav><h1>Water, warning and power</h1></div>
- <div class="actions"><button class="action" id="print" type="button">Print worksheet</button><button class="action" id="undo" type="button" disabled>Undo</button><button class="action" id="fullscreen" type="button">Full screen</button></div>
+ <div class="actions"><button class="action" id="print" type="button">Print worksheet</button><a class="worksheet-pdf" href="warning-and-power.pdf" aria-label="Open printable worksheet PDF">PDF</a><button class="action" id="undo" type="button" disabled>Undo</button><button class="action" id="fullscreen" type="button">Full screen</button></div>
 </header>
 <noscript>This matrix needs JavaScript to move the dots.</noscript>
 <div class="layout">
