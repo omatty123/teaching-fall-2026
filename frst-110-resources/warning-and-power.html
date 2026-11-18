@@ -43,7 +43,7 @@ h2,.form-label{font-size:1.17rem;line-height:1.14;font-weight:700}
 .pole-x{grid-row:2;line-height:1.08}
 .low-warning{grid-column:1;text-align:right}
 .high-warning{grid-column:3;text-align:left}
-.plot{grid-column:2;grid-row:2;position:relative;isolation:isolate;border:1px solid #879298;background-color:white;height:clamp(350px,calc(100dvh - 252px),900px);color:var(--ink);
+.plot{container-type:inline-size;grid-column:2;grid-row:2;position:relative;isolation:isolate;border:1px solid #879298;background-color:white;height:clamp(350px,calc(100dvh - 252px),900px);color:var(--ink);
 background-image:linear-gradient(to right,#e6e9e9 1px,transparent 1px),linear-gradient(to bottom,#e6e9e9 1px,transparent 1px);background-size:25% 25%}
 .line{position:absolute;pointer-events:none;color:#526067}
 .line.x{left:0;right:0;top:50%;border-top:2px solid currentColor;transform:translateY(-50%)}
@@ -64,6 +64,11 @@ background-image:linear-gradient(to right,#e6e9e9 1px,transparent 1px),linear-gr
 .point .label{position:absolute;left:calc(50% + 12px);max-width:var(--label-max,200px);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;text-align:left;
 font-size:clamp(1rem,1.6vw,1.6rem);line-height:1.22;font-weight:650;padding:1px 4px;color:var(--ink);background:#fff;border-radius:2px}
 .map-note{display:block;font-size:.78em;font-weight:500;line-height:1.12}
+@container (max-width:600px){
+ .point .label:has(.map-note){width:max-content;max-width:min(var(--label-max),28cqw);white-space:normal;text-overflow:clip}
+ .point:is([data-id="smith"],[data-id="blues"]) .label:has(.map-note){max-width:min(var(--label-max),35cqw)}
+ .point .map-note{white-space:normal}
+}
 .point.idea .label{color:var(--blue)}
 .point.inward .label{left:auto;right:calc(50% + 12px);text-align:right}
 .detail{margin-top:10px;font-size:clamp(1rem,1.3vw,1.25rem);line-height:1.25;overflow-wrap:anywhere}
@@ -95,10 +100,10 @@ input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:
 .explanation dt{font-weight:700}.explanation dd{margin:2px 0 0;line-height:1.25}
 .explanation a{color:inherit;text-decoration-thickness:1px;text-underline-offset:2px}
 .paper-dot,.paper-only,.writing-lines{display:none}
-@media screen and (max-width:750px){
+@media screen and (max-width:900px){
  main{padding:9px 12px 20px}
  .layout{grid-template-columns:minmax(0,1fr);gap:14px;margin-top:9px}
- .plot{height:clamp(300px,47dvh,530px)}
+ .plot{height:clamp(420px,54dvh,530px)}
  .actions{gap:4px}.action{padding:5px 8px;font-size:.91rem}
  .panel{border-top:1px solid #929b9f;padding-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
  .panel form{margin:0}.panel section,.panel form{min-width:0}
@@ -184,14 +189,14 @@ input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:
 <script>
 'use strict';
 const works = [
- {id:'egan', href:'../courses/egan-reading-guide.html', name:'Egan', title:'Dan Egan, The Death and Life of the Great Lakes', x:.16, y:.77, scene:'Sometimes we know what to do and lack the will to act. Second-order effects are harder to predict and call for “adaptive management.”'},
+ {id:'egan', href:'../courses/egan-reading-guide.html', name:'Egan', title:'Dan Egan, The Death and Life of the Great Lakes', mapNote:'Can act on imperfect knowledge', x:.16, y:.77, scene:'Sometimes we know what to do and lack the will to act. Second-order effects are harder to predict and call for “adaptive management.”'},
  {id:'gilgamesh', href:'gilgamesh-xi.html#tablet', name:'Gilgamesh', title:'Gilgamesh, Tablet XI', mapNote:'Has power, lacks the will', x:.62, y:.87, scene:'After Enkidu dies, Gilgamesh knows what awaits him and crosses the Waters of Death to ask Uta-napishti how he can live forever. When Uta-napishti challenges him to stay awake for six days and seven nights, Gilgamesh falls asleep as soon as he sits down.'},
- {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', title:'Genesis 6–9', x:.86, y:.73, scene:'God tells Noah what’s coming and how to save his household, right down to the measurements of the ark. We know how much warning Noah had, but Genesis leaves open whether his neighbors heard any warning at all.'},
- {id:'quran', href:'quran.html#q-71-5', name:'Quran', title:'Quran, Suras 71 and 11', x:.74, y:.59, scene:'Nuh warns his people day and night, and they stick their fingers in their ears and pull their cloaks over their heads. As he builds the ship, some of their leaders mock him every time they pass.'},
- {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', title:'Patricia Smith, Blood Dazzler', x:.5, y:.18, scene:'In “Man on the TV Say,” the speaker hears the order to leave, but how are you supposed to evacuate without a car? In “34,” the residents of St. Rita’s depend on others to get them out and never see the flood coming.'},
- {id:'blues', href:'blues-oct-14.html#levee-breaks', name:'Delta blues', title:'Delta blues · “When the Levee Breaks”', x:.94, y:.34,
+ {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', title:'Genesis 6–9', mapNote:'Warned in time to build', x:.86, y:.73, scene:'God tells Noah what’s coming and how to save his household, right down to the measurements of the ark. We know how much warning Noah had, but Genesis leaves open whether his neighbors heard any warning at all.'},
+ {id:'quran', href:'quran.html#q-71-5', name:'Quran', title:'Quran, Suras 71 and 11', mapNote:'Hear Nuh, cover their ears', x:.74, y:.59, scene:'Nuh warns his people day and night, and they stick their fingers in their ears and pull their cloaks over their heads. As he builds the ship, some of their leaders mock him every time they pass.'},
+ {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', title:'Patricia Smith, Blood Dazzler', mapNote:'Different warnings, few ways out', x:.5, y:.18, scene:'In “Man on the TV Say,” the speaker hears the order to leave, but how are you supposed to evacuate without a car? In “34,” the residents of St. Rita’s depend on others to get them out and never see the flood coming.'},
+ {id:'blues', href:'blues-oct-14.html#levee-breaks', name:'Delta blues', title:'Delta blues · “When the Levee Breaks”', mapNote:'Work the levee, expect it to break', x:.94, y:.34,
   scene:'On the recording with Memphis Minnie, Kansas Joe McCoy sings “If it keeps on rainin’, levee’s goin’ to break” twice in the first verse and twice in the third. He works on the levee knowing he may lose his home. In “Broken Levee Blues,” Johnson’s singer risks jail for refusing levee work.'},
- {id:'equiano', href:'equiano-chapters-3-4.html#chapter-four', name:'Equiano', title:'Olaudah Equiano, The Interesting Narrative', x:.14, y:.17, scene:'When Equiano first sees the slave ship, he wonders if the crew is going to eat him. He learns to sail, but knowing his way around a ship can’t tell him who will own him tomorrow. After years at sea with Pascal, he expects his freedom just as Pascal is about to sell him to another captain.'},
+ {id:'equiano', href:'equiano-chapters-3-4.html#chapter-four', name:'Equiano', title:'Olaudah Equiano, The Interesting Narrative', mapNote:'Learns to sail, can still be sold', x:.14, y:.17, scene:'When Equiano first sees the slave ship, he wonders if the crew is going to eat him. He learns to sail, but knowing his way around a ship can’t tell him who will own him tomorrow. After years at sea with Pascal, he expects his freedom just as Pascal is about to sell him to another captain.'},
  {id:'rush', href:'rising-part-two-nov13.html', name:'Rising', title:'Elizabeth Rush, Rising', x:null, y:null}
 ];
 // The worksheet keeps the starting positions even after the class moves the board.
