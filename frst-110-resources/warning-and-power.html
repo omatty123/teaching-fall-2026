@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Water, warning and power · FRST 110</title>
+<meta name="description" content="Place eight works and your own ideas on a matrix of warning and power to act.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Water, warning and power · FRST 110">
+<meta property="og:description" content="An interactive matrix for the Water Makes Worlds workshop.">
+<meta property="og:url" content="https://omatty123.github.io/teaching-fall-2026/frst-110-resources/warning-and-power.html">
+<meta property="og:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst-110-banner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Water, warning and power · FRST 110">
+<meta name="twitter:image" content="https://omatty123.github.io/teaching-fall-2026/images/frst-110-banner.jpg">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Source;src:url('../_kit/fonts/SourceSans3VF-Upright.woff2') format('woff2');font-weight:200 900;font-display:swap}
+*{box-sizing:border-box}
+:root{font-family:Source,Arial,sans-serif;color:#20272a;background:white;--ink:#20272a;--blue:#245a79;--rule:#ccd1d2}
+body{margin:0}
+main{max-width:1700px;margin:auto;padding:14px clamp(13px,2.8vw,50px) 18px}
+a,button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #477b94;outline-offset:3px}
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--ink);padding-bottom:10px}
+nav a{font-size:.94rem;color:#45535b;text-underline-offset:3px}
+h1,h2,p{margin:0}
+h1{font-size:clamp(1.65rem,2.7vw,2.5rem);font-weight:670;line-height:1.1;letter-spacing:-.025em;margin-top:4px}
+h2,.form-label{font-size:1.17rem;line-height:1.14;font-weight:700}
+.actions,.add-row{display:flex;align-items:center;gap:7px}
+.action{border:1px solid #8b969a;border-radius:4px;background:white;padding:6px 12px;line-height:1.2;min-height:36px;font-weight:600}
+.action:hover:enabled{background:#eef2f3}
+.action:disabled{opacity:.45;cursor:default}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) clamp(200px,19vw,310px);gap:clamp(16px,2.7vw,46px);margin-top:13px}
+.chart,.panel{min-width:0}
+.pole{font-size:clamp(.99rem,1.5vw,1.34rem);font-weight:650;line-height:1.1}
+.pole-y{text-align:center;padding:2px 0 6px}
+.bottom-y{padding:6px 0 2px}
+.poles-x{display:flex;justify-content:space-between;gap:6px;align-items:baseline;border-top:1px solid var(--rule);margin-top:4px;padding-top:6px}
+.plot{position:relative;isolation:isolate;border:1px solid #879298;background-color:white;height:clamp(350px,calc(100dvh - 287px),900px);color:var(--ink);
+background-image:linear-gradient(to right,#e6e9e9 1px,transparent 1px),linear-gradient(to bottom,#e6e9e9 1px,transparent 1px);background-size:25% 25%}
+.line{position:absolute;pointer-events:none;background:#788388}
+.line.x{height:2px;left:0;right:0;top:calc(50% - 1px)}
+.line.y{width:2px;top:0;bottom:0;left:calc(50% - 1px)}
+.line:after{content:"";position:absolute;width:8px;height:8px;border:solid #626f75;border-width:2px 2px 0 0}
+.line.x:after{right:1px;top:-4px;transform:rotate(45deg)}
+.line.y:after{left:-4px;top:1px;transform:rotate(-45deg)}
+.plot.placing{cursor:crosshair}
+.point{position:absolute;z-index:1;display:grid;place-items:center;width:32px;height:36px;padding:0;border:0;background:transparent;transform:translate(-50%,-50%);touch-action:none;user-select:none;cursor:grab}
+.point:active{cursor:grabbing}
+.point.active,.point:focus-visible{z-index:3}
+.symbol{display:inline-block;width:13px;height:13px;flex:none;border:2px solid var(--ink);background:var(--ink);border-radius:50%}
+.point .symbol{box-shadow:0 0 0 3px white}
+.idea .symbol,.symbol.idea-mark{border-radius:2px;background:white;border:3px solid var(--blue);transform:rotate(45deg)}
+.point.active .symbol{outline:2px solid #5d7d8b;outline-offset:4px}
+.point .label{position:absolute;left:calc(50% + 12px);max-width:var(--label-max,200px);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:block;text-align:left;
+font-size:clamp(1rem,1.6vw,1.6rem);line-height:1.22;font-weight:650;padding:1px 4px;color:var(--ink);background:#fff;border-radius:2px}
+.point.idea .label{color:var(--blue)}
+.point.inward .label{left:auto;right:calc(50% + 12px);text-align:right}
+.detail{margin-top:10px;font-size:clamp(1rem,1.3vw,1.25rem);line-height:1.25;overflow-wrap:anywhere}
+.detail strong{font-weight:700}.detail a{font-size:.93em;color:var(--blue);text-underline-offset:3px;white-space:nowrap}
+.panel{padding:4px 0 0}
+.hint,.save{font-size:1rem;line-height:1.3;color:#4a5357}
+.hint{margin:5px 0 9px}
+.items{display:grid}
+.item{display:flex;align-items:center;gap:10px;border:0;border-top:1px solid var(--rule);padding:6px 6px;background:white;text-align:left;font-size:clamp(1rem,1.21vw,1.24rem);width:100%;line-height:1.15;min-height:32px}
+.item:hover,.item[aria-pressed=true]{background:#edf2f4}
+.item .symbol{width:9px;height:9px;border-width:2px}
+.item.waiting .symbol{background:white;border:2px dotted #54636a}
+.item .row-label{overflow-wrap:anywhere}
+.place{margin-left:auto;font-size:.9rem;color:var(--blue);font-weight:650;white-space:nowrap}
+form{margin-top:18px}
+.form-label{display:block;margin-bottom:7px}
+.add-row{align-items:stretch}
+input{width:100%;min-width:0;border:1px solid #89969b;border-radius:3px;padding:6px 8px;background:white;font-size:1rem}
+.add{background:var(--blue);color:white;border-color:var(--blue)}
+.add:hover:enabled{background:#17435c}
+#ideas:not(:empty){margin-top:8px;max-height:30vh;overflow-y:auto}
+#ideas .item{font-size:1rem}
+.save{font-size:.91rem;margin-top:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:750px){
+ main{padding:9px 12px 20px}
+ .layout{grid-template-columns:minmax(0,1fr);gap:14px;margin-top:9px}
+ .plot{height:clamp(300px,47dvh,530px)}
+ .actions{gap:4px}.action{padding:5px 8px;font-size:.91rem}
+ .panel{border-top:1px solid #929b9f;padding-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+ .panel form{margin:0}.panel section,.panel form{min-width:0}
+ .items .item{min-height:34px}.point .label{font-size:1rem}
+ .hint{font-size:.94rem}.detail{margin-top:7px}
+}
+@media(max-width:490px){
+ h1{font-size:1.55rem}header{flex-wrap:wrap;gap:6px}.actions{margin-left:auto}
+ .panel{display:flex;flex-direction:column;gap:15px}.panel form{order:-1}
+ #works{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px}
+ .pole{font-size:1rem}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<main>
+<header>
+ <div><nav aria-label="Breadcrumb"><a href="../courses/frst-110.html">← Back to FRST 110</a></nav><h1>Water, warning and power</h1></div>
+ <div class="actions"><button class="action" id="undo" type="button" disabled>Undo</button><button class="action" id="fullscreen" type="button">Full screen</button></div>
+</header>
+<noscript>This matrix needs JavaScript to move the dots.</noscript>
+<div class="layout">
+ <section class="chart" aria-label="Water matrix">
+  <div class="pole pole-y">More power to act ↑</div>
+  <div class="plot" id="plot" role="group" aria-label="Water matrix. Warning increases to the right. Power to act increases upward." aria-describedby="controls"><span class="line x" aria-hidden="true"></span><span class="line y" aria-hidden="true"></span></div>
+  <div class="pole pole-y bottom-y">↓ Less power to act</div>
+  <div class="poles-x"><span class="pole">← Little or no warning</span><span class="pole">Clear warning →</span></div>
+  <p class="detail" id="detail"></p>
+ </section>
+ <aside class="panel" aria-label="Matrix controls">
+  <section><h2>Course works</h2>
+   <p class="hint" id="controls">Drag a dot, or select a work and click the grid. Arrow keys move the selected dot.</p>
+   <div class="items" id="works"></div>
+  </section>
+  <form id="add-form">
+   <label class="form-label" for="idea">Student ideas</label>
+   <div class="add-row"><input id="idea" name="idea" type="text" required maxlength="200" autocomplete="off" placeholder="Type an idea"><button class="action add" type="submit">Add</button></div>
+   <div class="items" id="ideas"></div>
+   <p class="save" id="save">This board saves in this browser.</p>
+  </form>
+ </aside>
+</div>
+<p aria-live="polite" class="sr" id="announce"></p>
+</main>
+<script>
+'use strict';
+const works = [
+ {id:'egan', href:'../courses/egan-reading-guide.html', name:'Egan', x:.16, y:.77, scene:'The Welland Canal opens a shipping route around Niagara Falls. Sea lampreys can use it too.'},
+ {id:'gilgamesh', href:'gilgamesh-xi.html#tablet', name:'Gilgamesh', x:.62, y:.87, scene:'Ea speaks to a reed wall. Uta-napishti hears the warning and builds a boat.'},
+ {id:'genesis', href:'genesis.html#chapter-6', name:'Genesis', x:.86, y:.73, scene:'God warns Noah and gives him instructions for building the ark.'},
+ {id:'quran', href:'quran.html#q-11-42', name:'Quran', x:.74, y:.59, scene:'Noah calls his son aboard. His son chooses to seek safety on a mountain.'},
+ {id:'smith', href:'blood-dazzler-oct-7.html#evacuation', name:'Blood Dazzler', x:.84, y:.18, scene:'People in New Orleans hear the evacuation order. Getting out requires transportation.'},
+ {id:'blues', href:'blues-oct-16.html#broken-levee', name:'Delta blues', x:.62, y:.34, scene:'In “Broken Levee Blues,” the singer sees the water rise. The police order him to work on the levee. He refuses.'},
+ {id:'equiano', href:'equiano-chapters-1-2.html', name:'Equiano', x:.14, y:.17, scene:'Equiano arrives at the slave ship as a child. He has no say in the crossing or knowledge of his destination.'},
+ {id:'rush', href:'rising-part-two-nov13.html', name:'Rising', x:null, y:null, scene:'Chris Brunet imagines staying on Isle de Jean Charles. He also pictures his niece and nephew living there when they reach his age.'}
+];
+const byId = new Map(works.map(work => [work.id,work]));
+const key = 'frst110.warning-and-power.v1';
+const plot = document.getElementById('plot');
+const detail = document.getElementById('detail');
+const ideaInput = document.getElementById('idea');
+const announce = document.getElementById('announce');
+const undo = document.getElementById('undo');
+const positions = () => works.map(({id,x,y}) => ({id,x,y}));
+const clamp = value => Math.min(1,Math.max(0,value));
+const coordinate = value => Number.isFinite(value) && value >= 0 && value <= 1;
+let points = positions();
+let selected = 'rush';
+let history = [];
+let drag = null;
+const dots = new Map();
+const rows = new Map();
+const pointFor = id => points.find(point => point.id === id);
+const titleFor = point => byId.get(point.id)?.name ?? point.text;
+function storageNotice() {
+ document.getElementById('save').textContent = 'Browser saving is unavailable. Keep this tab open.';
+}
+try {
+ const raw = localStorage.getItem(key);
+ if (raw) {
+  const saved = JSON.parse(raw);
+  if (Array.isArray(saved)) {
+   const valid = saved.filter(p => p && ((coordinate(p.x) && coordinate(p.y)) || (p.x === null && p.y === null)));
+   points = positions().map(work => {
+    const found = valid.find(p => p.id === work.id);
+    return found ? {...work,x:found.x,y:found.y} : work;
+   });
+   const seen = new Set();
+   for (const p of valid) {
+    if (typeof p.id !== 'string' || !p.id.startsWith('idea-') || seen.has(p.id) ||
+        typeof p.text !== 'string' || !p.text.trim() || !coordinate(p.x)) continue;
+    points.push({id:p.id,text:p.text.slice(0,200),x:p.x,y:p.y});
+    seen.add(p.id);
+   }
+   selected = pointFor('rush').x === null ? 'rush' : null;
+  }
+ }
+} catch { storageNotice(); }
+function save() {
+ try {localStorage.setItem(key,JSON.stringify(points));} catch {storageNotice();}
+}
+function remember() {
+ history.push(points.map(p => ({...p})));
+ if (history.length > 100) history.shift();
+ undo.disabled = false;
+}
+function span(className,text) {
+ const element = document.createElement('span');
+ element.className = className;
+ if (text) element.textContent = text;
+ return element;
+}
+function say(message) {announce.textContent = message;}
+function positionDot(p) {
+ const dot = dots.get(p.id);
+ dot.style.left = (p.x*100) + '%';
+ dot.style.top = ((1-p.y)*100) + '%';
+ const width = plot.clientWidth;
+ const wideSide = Math.max(p.x,1-p.x)*width;
+ const limit = Math.max(60,Math.min(width*.46,wideSide-23,320));
+ dot.style.setProperty('--label-max',limit+'px');
+ const labelWidth = dot.lastElementChild.offsetWidth;
+ dot.classList.toggle('inward',(1-p.x)*width < labelWidth + 18);
+}
+function select(id) {
+ selected = id;
+ const p = pointFor(id);
+ for (const [key,row] of rows) row.setAttribute('aria-pressed',String(key===id));
+ for (const [key,dot] of dots) {
+  dot.classList.toggle('active',key===id);
+  dot.setAttribute('aria-pressed',String(key===id));
+ }
+ plot.classList.toggle('placing',Boolean(p));
+ detail.replaceChildren();
+ if (!p) {detail.textContent='Select a dot to see the passage or idea.'; return;}
+ const label = document.createElement('strong');
+ label.textContent = byId.has(id) ? titleFor(p) : 'Student idea';
+ const scene = byId.get(id)?.scene ?? p.text;
+ detail.append(label,document.createTextNode(' · '+scene));
+ if (p.x === null) detail.append(document.createTextNode(' Click the grid to place this work.'));
+ if (byId.has(id)) {
+  const source=document.createElement('a');
+  source.href=byId.get(id).href;
+  source.target='_blank';
+  source.rel='noopener';
+  source.textContent='Course reading ↗';
+  detail.append(' ',source);
+ }
+}
+function buildDot(p) {
+ const dot = document.createElement('button');
+ dot.type = 'button';
+ dot.className = byId.has(p.id) ? 'point' : 'point idea';
+ dot.dataset.id = p.id;
+ dot.setAttribute('aria-label',titleFor(p));
+ dot.title = titleFor(p);
+ dot.append(span('symbol'),span('label',titleFor(p)));
+ dot.addEventListener('click',() => select(p.id));
+ plot.append(dot);
+ dots.set(p.id,dot);
+ positionDot(p);
+}
+function render() {
+ for (const dot of dots.values()) dot.remove();
+ dots.clear(); rows.clear();
+ document.getElementById('works').replaceChildren();
+ document.getElementById('ideas').replaceChildren();
+ for (const p of points) {
+  const isWork = byId.has(p.id);
+  const placed = p.x !== null;
+  const row = document.createElement('button');
+  row.type = 'button';
+  row.className = 'item'+(placed?'':' waiting');
+  row.dataset.id = p.id;
+  row.append(span(isWork?'symbol':'symbol idea-mark'),span('row-label',titleFor(p)));
+  if (!placed) row.append(span('place','Place ↗'));
+  row.addEventListener('click',() => select(p.id));
+  rows.set(p.id,row);
+  document.getElementById(isWork?'works':'ideas').append(row);
+  if (placed) buildDot(p);
+ }
+ select(pointFor(selected)?selected:null);
+}
+function atPointer(event) {
+ const b = plot.getBoundingClientRect();
+ return {x:clamp((event.clientX-b.left)/b.width),y:clamp(1-(event.clientY-b.top)/b.height)};
+}
+function move(p,x,y) {
+ if (p.x===x && p.y===y) return;
+ remember();
+ const wasPlaced = p.x!==null;
+ p.x=x; p.y=y;
+ if (wasPlaced) positionDot(p);
+ else render();
+ save();
+}
+plot.addEventListener('pointerdown',event => {
+ if (event.button!==0 || !event.isPrimary) return;
+ const dot=event.target.closest('.point');
+ if (!dot) return;
+ select(dot.dataset.id);
+ const p=pointFor(selected);
+ const at=atPointer(event);
+ drag={id:p.id,pointer:event.pointerId,dx:p.x-at.x,dy:p.y-at.y,x:p.x,y:p.y,moved:false,startX:event.clientX,startY:event.clientY};
+ dot.setPointerCapture(event.pointerId);
+});
+plot.addEventListener('pointermove',event => {
+ if (!drag || drag.pointer!==event.pointerId) return;
+ if (!drag.moved && Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)<3) return;
+ drag.moved=true;
+ const at=atPointer(event);
+ drag.x=clamp(at.x+drag.dx); drag.y=clamp(at.y+drag.dy);
+ positionDot({id:drag.id,x:drag.x,y:drag.y});
+});
+function finishDrag(event) {
+ if (!drag || event.pointerId!==drag.pointer) return;
+ const p=pointFor(drag.id);
+ if (event.type==='pointerup' && drag.moved) move(p,drag.x,drag.y);
+ else positionDot(p);
+ drag=null;
+}
+plot.addEventListener('pointerup',finishDrag);
+plot.addEventListener('pointercancel',finishDrag);
+plot.addEventListener('lostpointercapture',finishDrag);
+plot.addEventListener('click',event => {
+ if (event.target.closest('.point') || !selected) return;
+ const at=atPointer(event), p=pointFor(selected);
+ move(p,at.x,at.y);
+ say(titleFor(p)+' placed.');
+});
+document.addEventListener('keydown',event => {
+ if (!event.target.closest('.item,.point') || !['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.key)) return;
+ const p=pointFor(event.target.closest('[data-id]').dataset.id);
+ event.preventDefault();
+ select(p.id);
+ const step=event.shiftKey ? .1 : .02;
+ const dx={ArrowLeft:-step,ArrowRight:step}[event.key]||0;
+ const dy={ArrowDown:-step,ArrowUp:step}[event.key]||0;
+ move(p,clamp((p.x??.5)+dx),clamp((p.y??.5)+dy));
+ rows.get(p.id)?.focus({preventScroll:true});
+ say(titleFor(p)+', warning '+Math.round(100*p.x)+' percent, power to act '+Math.round(100*p.y)+' percent.');
+});
+document.getElementById('add-form').addEventListener('submit',event => {
+ event.preventDefault();
+ const text=ideaInput.value.trim();
+ if (!text) { ideaInput.setCustomValidity('Type an idea first.'); ideaInput.reportValidity(); return; }
+ remember();
+ const id='idea-'+crypto.randomUUID();
+ points.push({id,text,x:.5,y:.5});
+ ideaInput.value='';
+ selected=id;
+ render();save();
+ dots.get(id).focus({preventScroll:true});
+ say('Idea added at the center. Drag it or click the grid to place it.');
+});
+ideaInput.addEventListener('input',()=>ideaInput.setCustomValidity(''));
+undo.addEventListener('click',() => {
+ if (!history.length) return;
+ points=history.pop();
+ undo.disabled=!history.length;
+ render();save();
+ say('Last change undone.');
+});
+const full=document.getElementById('fullscreen');
+if (!document.fullscreenEnabled) full.hidden=true;
+full.addEventListener('click',async () => {
+ try{
+  if (document.fullscreenElement) await document.exitFullscreen();
+  else await document.documentElement.requestFullscreen();
+ } catch {document.getElementById('save').textContent='Use your browser’s full-screen command to enlarge the board.';}
+});
+document.addEventListener('fullscreenchange',()=>{full.textContent=document.fullscreenElement?'Exit full screen':'Full screen';});
+render();
+new ResizeObserver(()=>{for(const p of points) if(p.x!==null) positionDot(p);}).observe(plot);
+document.fonts.ready.then(()=>{for(const p of points) if(p.x!==null) positionDot(p);});
+</script>
+</body>
+</html>

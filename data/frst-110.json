@@ -11127,7 +11127,9 @@
       "unit": "review",
       "topic": "Workshop and Review",
       "detail": "",
-      "materials": []
+      "materials": [
+        {"label": "Water, warning and power · class matrix", "href": "../frst-110-resources/warning-and-power.html"}
+      ]
     }
   ],
   "syllabusUrl": "https://docs.google.com/document/d/1d8I3q-VuBhClmQwXw0kC4DDju7ViL9V9w40C7kVJjYg/edit",
